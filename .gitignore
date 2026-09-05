@@ -9,3 +9,7 @@ coverage/
 
 # Local-only development controls and model selections
 .local-dev/
+
+# Generated Vercel PDF/OCR CDN assets and local project metadata
+public/_pdf/
+.vercel/
