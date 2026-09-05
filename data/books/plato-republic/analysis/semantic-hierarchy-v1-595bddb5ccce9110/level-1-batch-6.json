@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-26-3",
+          "n-26-5",
+          "n-27-1"
+        ],
+        "label": "Guardianship & Property Debates",
+        "summary": "Socrates establishes a strict boundary between older rulers and auxiliary soldiers, barring both from possessing private wealth and property. Adeimantus objects that denying personal possessions and standard comforts renders the defenders unhappy servants in their own city.",
+        "rationale": "Groups adjacent Book III and IV dialogue passages exploring guardian class restrictions and Adeimantus's objection to communal deprivation."
+      },
+      {
+        "childIds": [
+          "n-27-4",
+          "n-27-5"
+        ],
+        "label": "Virtues of the Ideal City",
+        "summary": "Socrates delineates civic wisdom in the small ruling council and courage in the educated warrior class. Temperance is identified as a comprehensive harmony across all civic strata where the superior principle directs the inferior.",
+        "rationale": "Combines consecutive Book IV analyses defining specific civic virtues and their structural distribution."
+      },
+      {
+        "childIds": [
+          "n-29-3",
+          "n-29-4",
+          "n-29-6",
+          "n-30-2",
+          "n-36-6"
+        ],
+        "label": "Civic Unity, Gender & Governance",
+        "summary": "Socrates argues that civic aptitudes are shared across sexes, affirming common education and female guardianship. He stresses collective solidarity over private interest, outlines restrained rules of conflict among Hellenic states, and proposes establishing the ideal city by educating youth under age ten.",
+        "rationale": "Gathers contiguous Book V through Book VII dialogue sections concerning natural gender capacities, social cohesion, warfare ethics, and the institution of the just state."
+      },
+      {
+        "childIds": [
+          "n-44-5",
+          "n-45-2",
+          "n-45-4",
+          "n-45-6",
+          "n-46-2",
+          "n-46-4"
+        ],
+        "label": "State Apparatus & Conceptual Index",
+        "summary": "Editorial and index entries catalogue references to guardian traits, philosopher-kings, civic organization, and the nature of virtue. Scholarly commentary details how the proposed republic synthesizes Spartan communal discipline with Athenian intellectual culture.",
+        "rationale": "Brings together thematic paratextual and analytical apparatus entries documenting governance, philosophical leadership, and political structure."
+      },
+      {
+        "childIds": [
+          "n-44-6"
+        ],
+        "label": "Critique of Homer and Poetry",
+        "summary": "Index entry citing Plato's critique of Homer and mimetic poetry as thrice removed from the truth, unsuitable for moral education, and portraying gods falsely.",
+        "rationale": "Maintains an isolated index entry focusing distinctively on literary and poetic criticism rather than political or textual mechanics."
+      },
+      {
+        "childIds": [
+          "n-46-5"
+        ],
+        "label": "Transcriber Editorial Notes",
+        "summary": "Editorial notes provide documentation of typographic corrections, collation details, and the structural markup used for marginal Stephanus numbers and Greek transliteration.",
+        "rationale": "Preserves a singleton entry addressing metadata, typography, and transcription conventions separate from conceptual index topics."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5NabarW1MrWc0ckP-4GV6AI",
+  "usage": {
+    "promptTokenCount": 15305,
+    "candidatesTokenCount": 804,
+    "totalTokenCount": 16109,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15305
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 804
+      }
+    ]
+  },
+  "durationMs": 8269,
+  "requestHash": "ef9cccb21aea39b858d0b9c1a00085c0371297cae7b0703e677bec539db1b234"
+}

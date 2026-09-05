@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-3-1",
+          "h-level-2-batch-4-2"
+        ],
+        "label": "Civic Order and Guardianship",
+        "summary": "These discussions define the institutional foundation of the ideal commonwealth through the strict selection, education, and communal living of the guardian class. They outline civic myths, division of functions, equal duties for women, and the psychological and legal disciplines required to maintain communal unity.",
+        "rationale": "Both clusters concentrate on the structural arrangement of the polis, guardian discipline, and communal living arrangements designed to ensure internal harmony."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-4",
+          "h-level-2-batch-3-2"
+        ],
+        "label": "The Philosopher and Civic Rule",
+        "summary": "This sequence addresses the paradox of philosopher-kings and the metaphysical distinction between eternal Being and shifting opinion. It confronts popular hostility and the perils of societal corruption, defending true philosophical rule and exploring the obligations of enlightened thinkers within the city.",
+        "rationale": "Both clusters explore the political and metaphysical role of philosophers, the paradox of philosopher-kings, and their relationship to political communities."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-3",
+          "h-level-2-batch-4-5",
+          "h-level-2-batch-3-3"
+        ],
+        "label": "Dialectic, Forms, and the Soul",
+        "summary": "These passages trace the soul's ascent from sensory illusions and bodily desires to the contemplation of unhypothetical reality and the supreme Good. Utilizing the allegories of the Sun, Cave, and Divided Line alongside higher mathematical curricula, they ground psychic harmony in the rule of reason over appetitive impulses.",
+        "rationale": "These clusters form an interconnected sequence examining Platonic epistemology, dialectic, the theory of Forms, and the internal harmony of the tripartite soul."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-6",
+          "h-level-2-batch-3-4",
+          "h-level-2-batch-4-8"
+        ],
+        "label": "Regimes, Degeneration, and Er",
+        "summary": "The dialogue charts the progressive moral and political decline from aristocracy to despotic tyranny, demonstrating the misery of the tyrannical soul in contrast to the just life. It concludes with the demonstration of the soul's immortality and the Myth of Er, which depicts cosmic judgment, the spindle of Necessity, and the cyclical choice of destiny.",
+        "rationale": "These clusters analyze the degeneration of constitutional regimes and souls, culminating in the eschatological vision of justice and the Myth of Er."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-7",
+          "h-level-2-batch-4-1",
+          "h-level-2-batch-3-5"
+        ],
+        "label": "Critique and Paratextual Index",
+        "summary": "This group encompasses comprehensive editorial overviews, detailed subject indices, and textual notes alongside the critique of mimetic art and poetry. It surveys Platonic metaphysics, psychology, and civic models while recording editorial collation and conventions.",
+        "rationale": "These nodes bring together the dialogue's critique of mimetic art with surrounding editorial commentary, apparatus, and thematic indexing."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "R9ebaryTIv6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 66952,
+    "candidatesTokenCount": 814,
+    "totalTokenCount": 67766,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 66952
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 814
+      }
+    ]
+  },
+  "durationMs": 9954,
+  "requestHash": "5a42cb47d1bfcc023ce1872e658d984d95d0e6f34cb5ca91a53beb7d25b92fc9"
+}

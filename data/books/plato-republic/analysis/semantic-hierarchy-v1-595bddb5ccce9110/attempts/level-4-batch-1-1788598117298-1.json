@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-3-batch-1-1",
+          "h-level-3-batch-1-2"
+        ],
+        "label": "Dialogue Framing and Justice",
+        "summary": "This sequence combines the introductory apparatus, historical context, and dramatic opening encounters with the foundational debates of Books I and II. It follows the inquiry from conventional maxims of justice through Thrasymachus's radical challenge and the demand by Glaucon and Adeimantus to defend justice as an intrinsic good.",
+        "rationale": "Merges the opening paratextual and structural overview of the work with the immediate dramatic debate and dialectical challenges on the definition of justice."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-3",
+          "h-level-3-batch-2-1"
+        ],
+        "label": "The Ideal City and Guardians",
+        "summary": "These passages detail the theoretical origin, structural hierarchy, and practical institutions of the ideal commonwealth. They address division of labour, guardian selection and discipline, communal property, the inclusion and role of women, and the civic unity needed to maintain an organic political body.",
+        "rationale": "Combines parallel and sequential treatments of the founding of the state, class specialization, guardian disciplines, and community arrangements."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-4",
+          "h-level-3-batch-2-5"
+        ],
+        "label": "Psychology, Culture, and Arts",
+        "summary": "This division unites discussions on early cultural education, the regulation of poetry and musical modes, and the tripartite psychological nature of the soul with retrospective critiques of mimetic art and comprehensive indices. It contrasts harmonic cultural formation with the severe philosophical censure of imitation.",
+        "rationale": "Brings together treatments of education, soul harmony, and the critique and indexation of poetry and the arts."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-5",
+          "h-level-3-batch-2-2",
+          "h-level-3-batch-2-3"
+        ],
+        "label": "Metaphysics and Philosopher-Kings",
+        "summary": "Focusing on the philosophical center of the Republic, this group examines the rule of philosopher-kings, the distinction between true knowledge and mere opinion, and the metaphysical allegories of the Sun, Divided Line, and Cave. It explores the higher dialectical curriculum, the contemplation of the Idea of the Good, and the political necessity and difficulty of descending back into civic governance.",
+        "rationale": "Synthesizes the core metaphysical, epistemological, and political doctrines centering on dialectic and the governance of philosophers."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-6",
+          "h-level-3-batch-2-4"
+        ],
+        "label": "Regime Decline and Destiny",
+        "summary": "Tracing the ethical and political degeneration of constitutions from aristocracy down through timocracy, oligarchy, democracy, and tyranny, these clusters contrast the disordered tyrannical soul with the happiness of the just life. They conclude with cosmological investigations, the demonstration of the immortality of the soul, and the Myth of Er's vision of cosmic necessity and moral choice.",
+        "rationale": "Groups the analytical and dramatic sequence tracing regime decay, psychic corruption, and the ultimate eschatological destiny of the soul."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "WdebatqMJMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 167909,
+    "candidatesTokenCount": 813,
+    "totalTokenCount": 168722,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 167909
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 813
+      }
+    ]
+  },
+  "durationMs": 14074,
+  "requestHash": "2ce31c094325f4191cff4b95e10537936ed86fc34d79874b2c5ebc238dd1918b"
+}

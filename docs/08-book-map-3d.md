@@ -1,5 +1,7 @@
 # 3D 整书地图契约
 
+> 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.
+
 > 2026-09-05 最新设计细化：[多层节点与语义缩放](14-semantic-zoom-hierarchy.md) 已确认、待实现。捏合跨阈值展开/聚合，按视口加载并限制同时显示数量；取消拖动自动缩放。LM 自底向上生成层级并提出层数，应用校验预算。聚合深度与本文件 Y 轴 structuralLevel 独立；下文 80 节点保护是历史实现记录，不是最终大图方案。
 
 > 决定日期：2026-09-05  

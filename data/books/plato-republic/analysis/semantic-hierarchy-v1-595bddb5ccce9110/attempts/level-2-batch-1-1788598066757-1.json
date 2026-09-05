@@ -1,0 +1,106 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-1-1",
+          "h-level-1-batch-2-1"
+        ],
+        "label": "Editorial Paratext and Context",
+        "summary": "Covers Jowett's front matter, dedications, acknowledgments, text revisions, and publishing arrangements for the translation of Plato's works.",
+        "rationale": "Both items represent introductory paratext and editorial apparatus by the translator."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-1",
+          "h-level-1-batch-2-2"
+        ],
+        "label": "Dialogue Framing and Structure",
+        "summary": "Surveys the literary structure of the Republic and Socrates' philosophical trajectory alongside introductory commentaries on early arguments concerning justice.",
+        "rationale": "Both entries address high-level textual organization and structural introductory analysis of justice in the Republic."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-1-4",
+          "h-level-1-batch-2-4",
+          "h-level-1-batch-2-5",
+          "h-level-1-batch-5-1"
+        ],
+        "label": "Definitions of Justice in Book I-II",
+        "summary": "Traces the dramatic dialogue debates over justice, encompassing Cephalus' view of wealth, Polemarchus and Thrasymachus' competing definitions, Socrates' defense of justice as excellence, and Glaucon's challenge via the Ring of Gyges.",
+        "rationale": "Direct textual dialogue sequence spanning Book I and early Book II examining foundational definitions and challenges to justice."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-3",
+          "h-level-1-batch-3-1"
+        ],
+        "label": "Ideal State and Guardian Order",
+        "summary": "Examines the genesis of political order, economic specialization, and the communal structure of the guardian class, including shared property and gender equality.",
+        "rationale": "Focuses specifically on the sociological construction of the ideal commonwealth and guardian lifestyle in the Republic."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-2",
+          "h-level-1-batch-3-3"
+        ],
+        "label": "Simplicity in Early Education",
+        "summary": "Details the principles of simplicity governing early habituation through music, gymnastic training, and physical care, extending these standards to medicine and civic legislation.",
+        "rationale": "Presents commentary on early cultural, physical, and institutional education grounded in the rule of simplicity."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-2",
+          "h-level-1-batch-3-4",
+          "h-level-1-batch-3-5",
+          "h-level-1-batch-3-6"
+        ],
+        "label": "Philosopher Soul and Education",
+        "summary": "Explores the soul's internal harmony, the corrupting pressures of public life, advanced dialectical training illustrated by the cave allegory, and lifelong self-education.",
+        "rationale": "Unifies themes regarding the psychic composition of the philosopher, intellectual ascent, and social vulnerability."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-4",
+          "h-level-1-batch-4-5",
+          "h-level-1-batch-4-6"
+        ],
+        "label": "Tyranny, Cosmology, and Destiny",
+        "summary": "Contrasts the psychological misery of tyranny with celestial order, moving into the cosmic myth of Er and philosophical reflections on historical progress versus divine faith.",
+        "rationale": "Covers the late speculative books and thematic commentary on tyranny, cosmic order, moral destiny, and philosophies of history."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-1-2",
+          "h-level-1-batch-1-3"
+        ],
+        "label": "Comparative Utopian Politics",
+        "summary": "Provides critical assessments of Plato's social engineering proposals and traces Platonic political influences across classical, medieval, and Renaissance utopian treatises.",
+        "rationale": "Both clusters consist of retrospective commentary comparing Plato's political models to subsequent historical and philosophical traditions."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "KdebasDWDtCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 52126,
+    "candidatesTokenCount": 1058,
+    "totalTokenCount": 53184,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52126
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1058
+      }
+    ]
+  },
+  "durationMs": 10106,
+  "requestHash": "a543d5503cfcd4e3522d0066cc99a5b3dcf06397ff7df8169bba729fd6be201a"
+}

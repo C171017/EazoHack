@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-3-3",
+          "n-3-4",
+          "n-3-7"
+        ],
+        "label": "Dialogue Structure and Socrates",
+        "summary": "Analyses explore the structural composition of the Republic, whether regarded as five thematic parts or two conflicting Hellenic and philosophical halves. Alongside these architectural shifts, Socrates evolves from an ironical interrogator into a constructive teacher of systematic doctrine.",
+        "rationale": "Combines commentary leaves examining the overarching architecture, unity, and central character development of the dialogue."
+      },
+      {
+        "childIds": [
+          "n-8-5",
+          "n-8-6"
+        ],
+        "label": "The Philosopher and Public Life",
+        "summary": "Through the allegory of the mutinous crew aboard a ship, the apparent uselessness of genuine philosophers in politics is attributed to society's unwillingness to employ them. Furthermore, noble philosophical natures are easily corrupted by widespread social flattery and public opinion.",
+        "rationale": "Pairs the parable of the ship with the analysis of societal corruption affecting philosophical natures."
+      },
+      {
+        "childIds": [
+          "n-11-2",
+          "n-11-3",
+          "n-11-4",
+          "n-11-5"
+        ],
+        "label": "Degeneration of Constitutions",
+        "summary": "Commentary traces the progressive descent of civic forms from timocracy's martial ambition to oligarchy's wealth divide, followed by democracy's lawless equality, and culminating in tyranny when extreme liberty inverts into autocratic servitude.",
+        "rationale": "Covers the sequential degradation of governments and corresponding soul types described across Book VIII."
+      },
+      {
+        "childIds": [
+          "n-12-2",
+          "n-12-3",
+          "n-12-5",
+          "n-12-7",
+          "n-13-1"
+        ],
+        "label": "Tyranny and the Heavenly Ideal",
+        "summary": "The genesis of the tyrannical character reveals an individual consumed by lawless appetites, resulting in complete internal enslavement and misery. Arithmetical calculations place the royal ruler 729 times happier than the tyrant, contrasting this extreme degradation with the celestial pattern by which the wise order their inner lives.",
+        "rationale": "Gathers analyses focused on the psychology and misery of the tyrant, the mathematical interval separating king from tyrant, and the contrasting ideal celestial city."
+      },
+      {
+        "childIds": [
+          "n-14-3",
+          "n-14-4"
+        ],
+        "label": "Cosmology and Moral Choice",
+        "summary": "The Vision of Er unites astronomical mechanisms with mythological imagery using the spindle of Necessity to portray the cosmic sphere. Within this cosmic determinism, human souls retain the moral freedom to choose their lives, achieving happiness when guided by philosophical knowledge.",
+        "rationale": "Unites the cosmological and ethical discussions surrounding the Myth of Er in Book X."
+      },
+      {
+        "childIds": [
+          "n-17-4",
+          "n-18-7"
+        ],
+        "label": "Historical Outlook and Faith",
+        "summary": "Ancient thought conceived history through cyclical destructions rather than linear progression, lacking the modern notion of secular improvement. Modern philosophy instead balances two ideals—earthly human progress and transcendent individual immortality—reconciled through faith in divine purpose.",
+        "rationale": "Brings together comparative reflections on ancient historical views versus modern perspectives on progress, eternity, and faith."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2dabavyBNayJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 20181,
+    "candidatesTokenCount": 783,
+    "totalTokenCount": 20964,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20181
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 783
+      }
+    ]
+  },
+  "durationMs": 9441,
+  "requestHash": "daeb36ae402f40feb8eb927e7d27b6a620638193012d7aaa9a804b1836a1735b"
+}

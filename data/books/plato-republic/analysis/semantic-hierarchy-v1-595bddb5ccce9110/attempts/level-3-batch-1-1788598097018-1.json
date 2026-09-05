@@ -1,0 +1,84 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-1-1",
+          "h-level-2-batch-1-2"
+        ],
+        "label": "Editorial and Dialogue Intro",
+        "summary": "Surveys the introductory apparatus of the Republic, bringing together editorial framing, publication details, and contextual overviews of Plato's dramatic structure. It also presents the initial character encounters that set up the broader inquiry into justice.",
+        "rationale": "Combines the paratextual and structural front matter clusters at the very beginning of the work into a coherent introductory overview."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-1",
+          "h-level-2-batch-1-3"
+        ],
+        "label": "Early Debates on Justice",
+        "summary": "Details the dramatic challenges and arguments regarding justice presented in Books I and II. These cover conventional views, Thrasymachus's cynical definitions of power, and Glaucon and Adeimantus's demand to prove justice desirable entirely for its own sake.",
+        "rationale": "Unites the dialogue and commentary nodes focusing directly on the foundational definitions and defenses of justice in Books I and II."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-4",
+          "h-level-2-batch-2-2",
+          "h-level-2-batch-1-8"
+        ],
+        "label": "The Ideal State and Polity",
+        "summary": "Explores the structural founding of the ideal city, tracing the progression from primitive association to specialized classes and guardian disciplines. It synthesizes discussions on social organization, property, and class roles with comparative and later utopian political thought.",
+        "rationale": "Groups the clusters dealing specifically with the constitutional design, guardian class, and broader utopian implications of the Republic."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-5",
+          "h-level-2-batch-2-3"
+        ],
+        "label": "Education, Arts, and the Soul",
+        "summary": "Examines early educational conditioning in music, poetry, and bodily discipline alongside the psychological division of the soul. The selections assess the moral influence of cultural censorship and the cultivation of temperance and psychic harmony.",
+        "rationale": "Merges adjacent thematic discussions centered on the role of arts, early pedagogical training, and internal psychic order."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-4",
+          "h-level-2-batch-1-6"
+        ],
+        "label": "Dialectic and Philosopher Rulers",
+        "summary": "Analyzes the philosophical apex of the dialogue, including the metaphysical allegories of the Cave, Sun, and Divided Line, alongside the advanced dialectical curriculum. It addresses the character, education, and civic obligations of the philosopher-king.",
+        "rationale": "Integrates the core metaphysical concepts with the higher educational program designed for the ruling philosophical intellect."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-5",
+          "h-level-2-batch-1-7"
+        ],
+        "label": "Regime Decline and Destiny",
+        "summary": "Follows the ethical and political degeneration of constitutions from timocracy down to tyranny, illustrating the corresponding misery of the tyrannical soul. The sequence concludes with cosmological reflections, the Myth of Er, and broader patterns of destiny and divine order.",
+        "rationale": "Pairs the degradation of political regimes and character types with the culminating mythical and cosmological visions of judgment and necessity."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "R9ebat7aGNCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 105490,
+    "candidatesTokenCount": 860,
+    "totalTokenCount": 106350,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 105490
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 860
+      }
+    ]
+  },
+  "durationMs": 10807,
+  "requestHash": "05062da7d9b6c168f710e1ed81a98bb7c6d991865b01f4e1b62380197c257b97"
+}

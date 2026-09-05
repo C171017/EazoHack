@@ -1,0 +1,42 @@
+{
+  "date": "2026-09-05T08:54:56.114Z",
+  "version": "semantic-hierarchy-v1-595bddb5ccce9110",
+  "environment": {
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4 Max",
+    "node": "v22.22.3"
+  },
+  "scope": "Node.js selector microbenchmark over real generated hierarchy; not browser frame time, cold-load latency, or baseline-device certification.",
+  "samples": 2000,
+  "selectorMs": {
+    "p50": 0.02483400000002689,
+    "p95": 0.07995800000000486,
+    "max": 0.30708400000000324
+  },
+  "maxVisibleNodes": 36,
+  "maxMissingRootRequests": 5,
+  "bootstrapBytes": 5395,
+  "fullGraphBytes": 1291445,
+  "leafCount": 288,
+  "clusterCount": 118,
+  "depth": 4,
+  "roots": 5,
+  "policy": {
+    "version": "zoom-v1",
+    "roots": 8,
+    "children": 8,
+    "maxDepth": 6,
+    "nodes": 36,
+    "transitions": 72,
+    "edges": 64,
+    "labels": 18,
+    "cachePages": 48,
+    "pageSize": 30,
+    "duration": 260,
+    "step": 1.8,
+    "hysteresis": 0.86,
+    "minZoom": 0.5,
+    "maxZoom": 48
+  }
+}

@@ -1,5 +1,7 @@
 # Scaffold implementation status
 
+> Latest delivery: [semantic zoom and local Gemini hierarchy](15-semantic-zoom-implementation.md) replaces spatial paging with five layers and bounded viewport requests. See that record for current tests, build, data, and device-test limits.
+
 ## PDF / whole-book documentation clarification · 2026-09-05
 
 TXT and PDF, complete supplied-source preservation, and the four-stage PDF text pipeline are now authorized scope; older entries below describing PDF/OCR as deferred refer to their recorded delivery stage. Reader work is proceeding separately. This documentation pass does not certify that implementation or automatic whole-book graph generation.

@@ -1,5 +1,7 @@
 # Text-only book analysis MVP
 
+> 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.
+
 > Design refinement, 2026-09-05 — pending implementation: the [semantic zoom hierarchy contract](14-semantic-zoom-hierarchy.md) adds bottom-up LM summarization of nearby, semantically compatible accepted leaves, automatic depth proposals, validated parent/child membership, and versioned subtree indexes for viewport loading. The stages and 24-occurrence paging below describe the current MVP; they do not yet produce or render this hierarchy. Display caps must not discard accepted leaves. Hierarchy generation/readiness is tracked separately from source coverage.
 
 The user authorized the Gemini pipeline, a live run on the complete Republic TXT, saved results, and replacement of the editorial map. For this MVP the analysis boundary accepts **plain text only**. PDF-to-text conversion is upstream future work; the existing PDF reader is independent of this pipeline.
@@ -43,7 +45,7 @@ Allowed directed links: `defines`, `supports`, `challenges`, `exemplifies`, `dev
 
 ## Map behavior
 
-The server loads the accepted graph and supplies it to the reader workspace; the editorial sample remains a test fixture. The map shows up to 12 occurrences per spatial page (fewer on small viewports), with all filtered occurrences available in Browse nodes. Theme and source-role filters, the page and camera state are saved with the view. Following a related occurrence reveals its page and clears conflicting filters when necessary. Paging and filtering do not move semantic coordinates; only edges with both endpoints on the spatial page are drawn, while the selected-node inspector exposes all related nodes and supporting passages.
+The server now supplies only the semantic-zoom bootstrap. Child summaries, source details, ancestor paths and filtered relation summaries load on demand; Browse returns 30 leaves per page. Spatial paging has been replaced by the hierarchy. See [semantic zoom implementation](15-semantic-zoom-implementation.md) for controls, limits, generation/resume commands and verification.
 
 Whole-source coverage is processing coverage, not an assertion that every idea was extracted. This is a selective navigation graph. Large-graph rendering, arbitrary book uploads, hosted job scheduling, multi-user isolation and cross-device storage remain outside this MVP.
 

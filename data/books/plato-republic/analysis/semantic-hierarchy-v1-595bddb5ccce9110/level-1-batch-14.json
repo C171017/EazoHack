@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-41-3",
+          "n-41-4",
+          "n-41-5",
+          "n-41-6"
+        ],
+        "label": "Critique of Mimetic Poetry",
+        "summary": "Socrates critiques imitation and poetry as removed from reality, lacking craft knowledge, and inflaming the irrational soul. Consequently, poetical works remain banished from the commonwealth unless defenders establish their moral utility.",
+        "rationale": "Consecutive Book X passages centered on the epistemological deficiency of imitation and the long-standing philosophical challenge against poetry."
+      },
+      {
+        "childIds": [
+          "n-28-5",
+          "n-38-3",
+          "n-39-4",
+          "n-39-6",
+          "n-40-1"
+        ],
+        "label": "Soul Divisions and True Pleasure",
+        "summary": "This sequence explores the tripartite soul, framing inner virtue as psychic health while categorizing desires into necessary and superfluous kinds. Socrates contrasts illusory relief from discomfort with authentic pleasures rooted in enduring truth.",
+        "rationale": "Passages from Books IV, VIII, and IX addressing moral health, psychological parts, and the differentiation between transient sensations and genuine pleasure."
+      },
+      {
+        "childIds": [
+          "n-40-3",
+          "n-40-4",
+          "n-40-6"
+        ],
+        "label": "Internal Order and Justice",
+        "summary": "Depicting the soul as a composite of beast, lion, and inner human, Socrates argues that justice consists in rational dominion over base appetites. The individual harmonizes desires according to a transcendent civic model.",
+        "rationale": "Closing discussions of Book IX illustrating the tripartite self through mythical imagery and advocating internal governance modelled on the ideal city."
+      },
+      {
+        "childIds": [
+          "n-30-4",
+          "n-31-2",
+          "n-31-4",
+          "n-31-7"
+        ],
+        "label": "Knowledge, Opinion, and Kingship",
+        "summary": "Introducing the paradox of philosopher-kings, Socrates distinguishes seekers of genuine forms from spectators absorbed in sensory particulars. Knowledge and opinion are shown to be completely separate faculties directed toward different realities.",
+        "rationale": "Core Book V arguments outlining why political authority must rest with philosophers who contemplate unchanging truth rather than shifting opinion."
+      },
+      {
+        "childIds": [
+          "n-32-1",
+          "n-32-5"
+        ],
+        "label": "Philosophic Rule and Corruption",
+        "summary": "Philosophers are established as uniquely qualified custodians of civic laws, possessing direct apprehension of eternal reality. However, gifted natures remain vulnerable to environmental corruption, flattery, and popular applause.",
+        "rationale": "Early Book VI sections detailing the fitness of philosophical natures to govern alongside the social forces that risk their moral downfall."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "E9ebauXRK-mp0ckPidKHEA",
+  "usage": {
+    "promptTokenCount": 10795,
+    "candidatesTokenCount": 705,
+    "totalTokenCount": 11500,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10795
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 705
+      }
+    ]
+  },
+  "durationMs": 7696,
+  "requestHash": "90b7e5423212828df7d9c791f408a1ce2a42824e24ac1e308853cfa2ddb86a4b"
+}

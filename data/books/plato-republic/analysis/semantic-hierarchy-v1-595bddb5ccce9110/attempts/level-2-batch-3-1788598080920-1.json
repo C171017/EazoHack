@@ -1,0 +1,85 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-5-2",
+          "h-level-1-batch-5-4",
+          "h-level-1-batch-7-1",
+          "h-level-1-batch-6-1",
+          "h-level-1-batch-8-1",
+          "h-level-1-batch-6-2"
+        ],
+        "label": "Civic Order and Soul Training",
+        "summary": "Socrates describes the formation, discipline, and communal living of the guardian class alongside the rigorous selection required for civic leadership. The discourse regulates music, poetry, medicine, and law to preserve internal harmony, invoking the principle of non-contradiction to ground civic virtues.",
+        "rationale": "These clusters focus on the practical institutions, ethical virtues, cultural regulation, and psychological foundations of the early ideal state."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-3",
+          "h-level-1-batch-7-2",
+          "h-level-1-batch-7-3",
+          "h-level-1-batch-7-4"
+        ],
+        "label": "The Philosopher and the City",
+        "summary": "Socrates establishes gender equality in civic governance and grounds the ruler's role in the metaphysical distinction between Being and fluctuating opinion. He confronts popular hostility toward philosophers, using the ship parable to defend genuine wisdom against pretenders and proposing gradual public reconciliation.",
+        "rationale": "Connects the civic role of philosophers, the definition of philosophical knowledge, and their troubled relationship with the political multitude."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-7-5",
+          "h-level-1-batch-15-3",
+          "n-39-7",
+          "h-level-1-batch-8-3"
+        ],
+        "label": "Forms, Curriculum & Dialectic",
+        "summary": "Through the Cave allegory and structured mathematical sciences, Socrates charts the soul's ascent from shadows to pure contemplation of the Good. The curriculum warns against premature dialectic, examines levels of reality through the Forms, and distinguishes pure pleasures like smell from bodily deficits.",
+        "rationale": "Brings together the higher curriculum, dialectical ascent, the metaphysical theory of Forms, and pure contemplative pleasures."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-15-4",
+          "h-level-1-batch-8-4",
+          "h-level-1-batch-8-5",
+          "n-42-5"
+        ],
+        "label": "Regimes, Tyranny & Cosmic Order",
+        "summary": "The dialogue outlines the degeneration of constitutions and individual souls from timocracy to despotic tyranny, calculating the extreme misery of the tyrant. It culminates in Er's myth of posthumous cosmic retribution and the harmonious spindle of Necessity.",
+        "rationale": "Traces political and moral decay from oligarchy down to tyranny, ending with the eschatological and cosmological resolution of justice."
+      },
+      {
+        "childIds": [
+          "n-44-6",
+          "h-level-1-batch-6-4",
+          "n-46-5"
+        ],
+        "label": "Index and Editorial Apparatus",
+        "summary": "This paratextual collection indexes references to poetry, the guardian constitution, virtue, and philosopher-rulers, comparing Platonic doctrine with historical Spartan and Athenian models. Editorial notes record textual collation, typographic revisions, and Stephanus numbering conventions.",
+        "rationale": "Groups all scholarly paratexts, including subject indices, historical commentaries, and editorial transcriber notes."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ONebauiVH6yJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 34577,
+    "candidatesTokenCount": 881,
+    "totalTokenCount": 35458,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 34577
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 881
+      }
+    ]
+  },
+  "durationMs": 9401,
+  "requestHash": "c54f6744de8d86cce20c8565702bc0a1a3d49d3161f81c2dbe16ba72429c9c25"
+}

@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-33-6",
+          "n-36-3"
+        ],
+        "label": "Dialectical Epistemology",
+        "summary": "Socrates establishes dialectic and philosophical cognition at the peak of understanding, contrasting mathematical hypothesis and sensible images with unhypothetical first principles and the essential Good.",
+        "rationale": "Both nodes share thematic focus on epistemology (theme-5) in Books VI and VII, detailing the Divided Line and dialectic as the summit of intellectual knowledge."
+      },
+      {
+        "childIds": [
+          "n-28-6",
+          "n-37-1",
+          "n-37-3",
+          "n-37-8"
+        ],
+        "label": "Decline of the State",
+        "summary": "Socrates outlines the five types of cities and corresponding soul constitutions, tracking the dissolution of the ideal city through civic discord and the subsequent decay from oligarchy into democracy.",
+        "rationale": "These entries chronologically chart the theoretical framework and progressive decline of political constitutions from the ideal state down to democracy."
+      },
+      {
+        "childIds": [
+          "n-38-4",
+          "n-38-5",
+          "n-38-7",
+          "n-39-1"
+        ],
+        "label": "Rise of Tyranny",
+        "summary": "Excessive liberty destabilizes the democratic character and state, paving the way for a demagogue to seize power and cultivate lawless, tyrannical appetites.",
+        "rationale": "Consecutive sections in Books VIII and IX tracing how unrestrained democratic indulgence evolves into political tyranny and internal soul disorder."
+      },
+      {
+        "childIds": [
+          "n-39-2",
+          "n-39-3",
+          "n-39-5"
+        ],
+        "label": "Tyrant's Misery vs True Joy",
+        "summary": "Socrates evaluates the misery and pervasive fear of public tyrants, proving that the truly just and philosophical life yields the highest pleasure and supreme happiness.",
+        "rationale": "These nodes from Book IX form the sequential argumentative proofs establishing the unhappiness of the tyrant relative to the philosophical ruler."
+      },
+      {
+        "childIds": [
+          "n-41-7",
+          "n-42-1",
+          "n-42-3"
+        ],
+        "label": "Immortality and Soul Rewards",
+        "summary": "Socrates argues that because the soul cannot be destroyed by internal or external evils, it is immortal, ensuring that virtue receives enduring honors from both gods and humanity.",
+        "rationale": "Book X arguments focusing on establishing the metaphysical indestructibility of the soul and the subsequent restoration of extrinsic rewards to justice."
+      },
+      {
+        "childIds": [
+          "n-42-6",
+          "n-42-7"
+        ],
+        "label": "The Myth of Er and Rebirth",
+        "summary": "Through the visionary Myth of Er, souls choose their next destinies based on philosophical wisdom, leading to the concluding exhortation to pursue righteousness through eternity.",
+        "rationale": "The closing apocalyptic narrative of Book X concerning the cosmic selection of lives, rebirth across the river of Forgetfulness, and final moral counsel."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "H9ebap_HAsuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 13762,
+    "candidatesTokenCount": 720,
+    "totalTokenCount": 14482,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13762
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 720
+      }
+    ]
+  },
+  "durationMs": 7188,
+  "requestHash": "34feefae4ec2ad912f6157547d6956b0b2db190797570e12e96152341bf12834"
+}

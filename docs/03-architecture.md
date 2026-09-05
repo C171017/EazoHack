@@ -1,5 +1,7 @@
 # 架构、数据流与出处锚点
 
+> 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.
+
 > 2026-09-05 最新架构细化（待实现）：整书分析在叶节点校验后增加自底向上的 LM 聚合、自动层数提议与应用预算校验，保存版本化父子层级、子树范围和按需分块索引。浏览器仅加载/渲染当前缩放档位与视口所需集合，边、标签、缓存和过渡共同受限；不在手势中调用模型。详见 [多层节点契约](14-semantic-zoom-hierarchy.md)，其中聚合层级不等于 Y 轴语义层级。
 
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.

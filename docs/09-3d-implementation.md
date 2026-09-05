@@ -1,5 +1,7 @@
 # 3D canvas implementation · 2026-09-05
 
+> 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.
+
 > Design update, 2026-09-05: [Semantic zoom and hierarchy](14-semantic-zoom-hierarchy.md) supersedes fixed spatial paging as the target large-map design. Pinch zoom will progressively shrink/merge nodes into meaningful parents and expand them again, with bounded viewport loading. Dragging must preserve zoom. This is pending implementation: the fixed-size-node and bounded-sample behavior below records the earlier delivery, not the new transition contract.
 
 The user authorized reading the revised contract, evaluating rendering technology, inspecting the local PoliMap meetings implementation and demo, and implementing the 2D → 3D change. This supersedes historical scaffold stop gates for this work. It does not choose live providers or authorize whole-book AI analysis.

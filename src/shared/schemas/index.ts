@@ -142,9 +142,9 @@ export const GraphSchema = z.object({
 });
 
 export const MapViewSchema = z.object({
-  graphVersion: Id, projection: z.enum(['3d','xy','xz','yz']),
+  graphVersion: Id, hierarchyVersion: Id.optional(), projection: z.enum(['3d','xy','xz','yz']),
   yaw: z.number().finite(), pitch: z.number().finite().min(-Math.PI/2).max(Math.PI/2),
-  x: z.number().finite(), y: z.number().finite(), zoom: z.number().min(0.5).max(2.5),
+  x: z.number().finite(), y: z.number().finite(), zoom: z.number().min(0.5).max(48),
   selectedNodeId: Id.nullable(), readerAnchorId: Id.nullable().default(null), sourceScope: z.enum(['excerpt','book']),
   themeFilter: Id.nullable().optional(), roleFilter: z.enum(['dialogue','commentary','paratext']).nullable().optional(),
   nodePage: z.number().int().nonnegative().optional(),

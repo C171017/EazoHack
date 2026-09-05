@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-5-4",
+          "n-6-4",
+          "n-7-5",
+          "n-8-1"
+        ],
+        "label": "Guardian Class and Discipline",
+        "summary": "The establishment of a specialized guardian order requires rigorous common discipline, the elimination of private property, and shared family life. Both men and women participate equally in civic defense and governance, bonded through communal living to preserve state unity.",
+        "rationale": "Gathers commentary and dialogue concerning the emergence, social organization, communal lifestyle, and gender parity of the guardian class."
+      },
+      {
+        "childIds": [
+          "n-5-7",
+          "n-5-8",
+          "n-6-1",
+          "n-6-5"
+        ],
+        "label": "Early Training and Bodily Care",
+        "summary": "Early habituation focuses on simple musical modes, rigorous gymnastics, and strict limits on poetic imitation to cultivate resilient character. This simplicity extends to medical treatments, though modern commentary critiques Plato's austere rejection of gradual healing and dietetics.",
+        "rationale": "Brings together sections covering the foundational cultural and physical regimen of the guardians, including poetic constraints and reflections on medicine."
+      },
+      {
+        "childIds": [
+          "n-16-7",
+          "n-17-1"
+        ],
+        "label": "Simplicity in Culture and Law",
+        "summary": "Education in music and gymnastics establishes temperance and mental strength through simplicity of form. Plato aligns this simplicity with medicine and legislation, advocating prevention and foundational habits over multiplying cures and legal codes.",
+        "rationale": "Covers the overarching principle of simplicity bridging character education with state administration and public health."
+      },
+      {
+        "childIds": [
+          "n-7-3",
+          "n-12-6"
+        ],
+        "label": "Internal Justice and the Soul",
+        "summary": "Justice is defined as internal functional harmony, where every constituent element performs its proper role without overstepping boundaries. This balance is allegorically illustrated by the tripartite soul, in which rational humanity governs both the spirited lion and the multiform appetitive beast.",
+        "rationale": "Combines discussions defining justice as psychic and civic order with its allegorical representation as a tripartite structure."
+      },
+      {
+        "childIds": [
+          "n-10-2",
+          "n-10-4",
+          "n-10-6",
+          "n-10-7"
+        ],
+        "label": "Dialectic and Cave Allegory",
+        "summary": "Philosophic rulers follow a structured mathematical curriculum culminating in dialectic, structured around careful age requirements to prevent ethical relativism. The cavern allegory reflects how transitions between theoretical ideals and political reality induce mutual misperceptions between theorists and practical citizens.",
+        "rationale": "Focuses on the higher educational curriculum for prospective rulers, the timing of philosophical questioning, and the allegorical tensions of political application."
+      },
+      {
+        "childIds": [
+          "n-16-6",
+          "n-17-3"
+        ],
+        "label": "Lifelong Education Scheme",
+        "summary": "Platonic education is conceived as a continuous, lifelong endeavor dedicated to orienting the soul toward enduring truth. Modern commentary notes that while institutional lifelong schooling is impractical, this ideal endures as purposeful self-cultivation throughout adult life.",
+        "rationale": "Pairs passages analyzing the philosophical concept of education as an ongoing lifetime endeavor with modern reflections on self-education."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2Nabar-cNsuZvdAP_dLD-AE",
+  "usage": {
+    "promptTokenCount": 21392,
+    "candidatesTokenCount": 630,
+    "totalTokenCount": 22022,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21392
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 630
+      }
+    ]
+  },
+  "durationMs": 7830,
+  "requestHash": "2c339dd30c57ad53cb6b5c1ff3793cd2b772d952e4544b3b763797b37514a8c3"
+}

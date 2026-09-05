@@ -1,0 +1,85 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-9-1",
+          "h-level-1-batch-10-2",
+          "h-level-1-batch-9-2",
+          "h-level-1-batch-10-3"
+        ],
+        "label": "Nature and Defense of Justice",
+        "summary": "Early dialectical encounters examine conventional definitions of justice and Thrasymachus's assertion of might, which Socrates counters via the analogy of the arts and the inherent harmony of virtue. Subsequently, Glaucon and Adeimantus demand an account of justice desired purely for its intrinsic effects within the soul, detached from external rewards or social contracts.",
+        "rationale": "Gathers Book I and Book II discussions and analyses regarding the definition, refutation, and intrinsic defense of justice."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-3",
+          "h-level-1-batch-10-1",
+          "h-level-1-batch-10-4",
+          "h-level-1-batch-9-5"
+        ],
+        "label": "The Ideal State and Polity",
+        "summary": "Socrates establishes the city-state analogy to detect justice on a larger canvas, tracing its expansion from rustic need to luxurious fever and detailing class structures anchored by the Myth of the Metals. Commentators examine these proposals as a theoretical paradigm blending historical Spartan discipline with philosophical ideals, contrasting the Republic's vision with later legalistic frameworks.",
+        "rationale": "Focuses on the foundation, structure, and theoretical status of the ideal city-state across dialogue and commentary."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-5-3",
+          "h-level-1-batch-11-2",
+          "h-level-1-batch-12-2",
+          "h-level-1-batch-12-3",
+          "n-13-7"
+        ],
+        "label": "Education, Art, and the Soul",
+        "summary": "These texts scrutinize the psychological division of the soul into rational, spirited, and appetitive faculties and outline educational programs to harmonize them. Strict civic and theological censorship regulates poetry and imitation, while commentary both explains Plato's suspicion of theatrical excess and proposes art's potential to convey higher ideal truths.",
+        "rationale": "Unites early civic education, poetic censorship, psychological tripartite theory, and aesthetic critiques."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-4",
+          "h-level-1-batch-11-5",
+          "h-level-1-batch-11-3",
+          "h-level-1-batch-12-4",
+          "n-3-1"
+        ],
+        "label": "Metaphysics and the Good",
+        "summary": "The dialogue and editorial assessments present the central metaphysical core of the Republic, including the Allegory of the Cave, the Divided Line, the Sun analogy, and the crowning science of dialectic. Modern commentary weighs Plato's speculative dialectic and mathematical abstraction against empirical induction, evaluating the governing role of transcendent ideals and philosopher-statesmen.",
+        "rationale": "Encompasses the epistemological and metaphysical core of Books V–VII and overarching assessments of Platonic logic."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-3",
+          "h-level-1-batch-12-1",
+          "n-11-1"
+        ],
+        "label": "Degeneration of Regimes",
+        "summary": "This sequence examines the downward trajectory of political constitutions and their corresponding soul types through timocracy, oligarchy, democracy, and tyranny. Commentators analyze this progression as an ethical gradation and intellectual model rather than a historical chronology, noting the esoteric role of the Platonic number of births.",
+        "rationale": "Brings together all Book VIII analyses and passages addressing constitutional decline and civic decay."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "KdebaqvyNemj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 61552,
+    "candidatesTokenCount": 950,
+    "totalTokenCount": 62502,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 61552
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 950
+      }
+    ]
+  },
+  "durationMs": 9861,
+  "requestHash": "bcc7ccf7def22c30e3aa6a48275c83e295e441dfaf4a99ccde197f921d28fdd5"
+}

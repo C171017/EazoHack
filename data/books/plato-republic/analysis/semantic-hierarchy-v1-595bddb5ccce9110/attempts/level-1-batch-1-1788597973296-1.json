@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-1-1",
+          "n-1-2"
+        ],
+        "label": "Front Matter and Paratext",
+        "summary": "Presents Jowett's third edition of Plato's Republic along with his dedication to former pupils at Balliol College and the University of Oxford.",
+        "rationale": "Consecutive paratext items at the beginning of the volume."
+      },
+      {
+        "childIds": [
+          "n-14-6",
+          "n-15-3",
+          "n-15-7",
+          "n-16-1",
+          "n-16-2",
+          "n-16-3"
+        ],
+        "label": "Critique of Social Engineering",
+        "summary": "Evaluates Pythagorean influences and the contingency of property alongside criticisms of Plato's proposals for selective breeding, the abolition of the family, and the Spartan suppression of individual genius.",
+        "rationale": "A cluster of editorial commentary analyzing and challenging Plato's radical social institutions and models."
+      },
+      {
+        "childIds": [
+          "n-17-6",
+          "n-17-7",
+          "n-18-1",
+          "n-18-2",
+          "n-18-3",
+          "n-18-4",
+          "n-18-5"
+        ],
+        "label": "Comparative Political Visions",
+        "summary": "Traces political ideals and Platonic influences through the Statesman, Cicero's De Republica, Augustine's heavenly city, Dante's universal empire, More's Utopia, and Campanella's City of the Sun.",
+        "rationale": "A continuous sequence of commentary surveying historical and literary adaptations of ideal commonwealths."
+      },
+      {
+        "childIds": [
+          "n-19-1",
+          "n-19-2",
+          "n-19-3"
+        ],
+        "label": "Cephalus on Wealth and Justice",
+        "summary": "Cephalus explains how character shapes old age and how wealth eases moral anxiety, prompting Socrates to challenge whether justice is merely telling the truth and paying debts.",
+        "rationale": "Opening dramatic dialogue of Book I between Cephalus and Socrates regarding age, wealth, and the definition of justice."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "z9abap_XGOmj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 15456,
+    "candidatesTokenCount": 566,
+    "totalTokenCount": 16022,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15456
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 566
+      }
+    ]
+  },
+  "durationMs": 7935,
+  "requestHash": "4f5cb33bec85225c6d37ebaf11f187ca9c5e50590b6b642da97178b5bdb6e13d"
+}

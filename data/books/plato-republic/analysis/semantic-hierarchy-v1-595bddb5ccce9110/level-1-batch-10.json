@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-15-6",
+          "n-17-5"
+        ],
+        "label": "Commentary on Plato's Works",
+        "summary": "These commentary passages evaluate Plato's theoretical proposals, contrasting the hopeful ideal constitution of the Republic with the practical legalism of the Laws, while also rejecting Platonic animal breeding for disregarding the spiritual dignity of human marriage and individuals.",
+        "rationale": "Both items are introductory commentary evaluating and critiquing overarching themes across Plato's works."
+      },
+      {
+        "childIds": [
+          "n-19-5",
+          "n-19-7",
+          "n-20-2",
+          "n-20-4",
+          "n-20-5",
+          "n-21-3",
+          "n-21-5"
+        ],
+        "label": "Book I: Refuting Thrasymachus",
+        "summary": "Socrates disputes Thrasymachus by arguing that justice never harms, that rulers err, that arts serve their subjects rather than the practitioner, and that craftsmen do not overreach. He further maintains that injustice undermines cooperation while justice is more profitable, though he concludes Book I in a state of aporia regarding the definition of justice itself.",
+        "rationale": "Consecutive sequence of dialogue occurrences in Book I containing Socrates' refutations of Thrasymachus leading to his aporia."
+      },
+      {
+        "childIds": [
+          "n-22-2",
+          "n-22-4",
+          "n-22-5"
+        ],
+        "label": "Book II: Glaucon and Adeimantus",
+        "summary": "Glaucon and Adeimantus outline the conventional praise of justice as an external compromise or pursuit of social reward, challenging Socrates to prove the intrinsic value of justice inside the soul apart from any reputational gains.",
+        "rationale": "Comprises the challenge issued to Socrates by the brothers in the early section of Book II."
+      },
+      {
+        "childIds": [
+          "n-22-6",
+          "n-23-1"
+        ],
+        "label": "Origins and Analogy of State",
+        "summary": "Socrates introduces the method of examining justice in the State first before inspecting the individual, and details how the demand for luxury expands the city and leads directly to war.",
+        "rationale": "Marks the pivot in Book II where Socrates shifts the investigation to the civic model and traces its expansion."
+      },
+      {
+        "childIds": [
+          "n-26-1",
+          "n-26-4",
+          "n-27-2",
+          "n-28-1"
+        ],
+        "label": "Books III–IV: Civic Order",
+        "summary": "Socrates establishes criteria for selecting guardian rulers and institutes the Myth of the Metals to fix civic roles, arguing that the city aims at the happiness of the whole rather than a single class and defining justice as each class attending strictly to its proper work.",
+        "rationale": "Covers the structural organization, civic foundation, and final definition of justice in the State across Books III and IV."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "-9abaoChFsuZvdAP_dLD-AE",
+  "usage": {
+    "promptTokenCount": 15046,
+    "candidatesTokenCount": 758,
+    "totalTokenCount": 15804,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15046
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 758
+      }
+    ]
+  },
+  "durationMs": 8023,
+  "requestHash": "3f2a1e96f83c2d0b7f66f8721106832ccd0d965651f036307923dd0ab74d89f2"
+}

@@ -1,0 +1,106 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-13-3",
+          "h-level-1-batch-13-4"
+        ],
+        "label": "Platonic Philosophy Overview",
+        "summary": "These editorial commentary sequences review Plato's foundational metaphysics, theology, and psychological faculties alongside his political theories of justice, civic unity, and constitutional degeneration.",
+        "rationale": "Combines adjacent paratextual and editorial summary clusters from batch 13 covering metaphysics, soul structure, and civic order."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-10-5",
+          "h-level-1-batch-13-1"
+        ],
+        "label": "Civic Unity and Class Order",
+        "summary": "Socrates details the organization of the ideal state through guardian selection, foundational civic myths, equal duties for female guardians, and communal family structures designed to achieve collective harmony.",
+        "rationale": "Brings together contiguous thematic discussions centered on the founding institutions, class structures, and communal legislation of the guardian class."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-5",
+          "h-level-1-batch-14-2",
+          "h-level-1-batch-14-3"
+        ],
+        "label": "Psychic Harmony and Desires",
+        "summary": "This sequence investigates the tripartite soul and psychic health, contrasting necessary appetites with true pleasures and demonstrating that justice entails reason governing the animal and spirited impulses.",
+        "rationale": "Groups discussions exploring the tripartite soul, the moral hierarchy of pleasures, and the definition of inward justice as psychological harmony."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-2",
+          "h-level-1-batch-14-4",
+          "h-level-1-batch-14-5",
+          "h-level-1-batch-15-1"
+        ],
+        "label": "The Philosopher and Civic Rule",
+        "summary": "These sections define the nature and virtues of true philosophers, address the paradox of philosopher-kings, and assess both the political obligations of enlightened thinkers and the perils of societal corruption.",
+        "rationale": "Unites contiguous clusters detailing the character of philosophers, their apprehension of immutable truth, and the requirements and difficulties of philosophic governance."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-15-2",
+          "h-level-1-batch-16-1"
+        ],
+        "label": "Intelligible Forms and Dialectic",
+        "summary": "Socrates contrasts sensory perception and hypothetical reasoning with dialectical ascent, using the Sun, Cave, and Divided Line analogies to demonstrate how intelligence grasps unhypothetical reality and the supreme Good.",
+        "rationale": "Pairs closely related treatments of epistemology, intelligible forms, and dialectic as the highest branch of understanding."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-16-2",
+          "h-level-1-batch-16-3",
+          "h-level-1-batch-16-4"
+        ],
+        "label": "Degeneration and Tyranny",
+        "summary": "This sequence charts the progressive decline of cities and soul types from aristocracy to tyranny, contrasting the lawless misery and fear of the public tyrant with the superior happiness of the philosophical life.",
+        "rationale": "Collects successive dialogue passages tracing constitutional decay, the emergence of tyranny from unbridled liberty, and the ultimate misery of unjust rulers."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-1",
+          "h-level-1-batch-13-2"
+        ],
+        "label": "Critique of Mimetic Art and Poetry",
+        "summary": "Socrates and paratextual commentaries critique imitative poetry and music as distant from reality and harmful to the irrational soul, mandating strict cultural censorship and the exclusion of poetical works from the commonwealth.",
+        "rationale": "Merges dialogue critique and paratextual analysis of mimetic art, musical education, and the censorship of poetry."
+      },
+      {
+        "childIds": [
+          "n-42-2",
+          "h-level-1-batch-16-5",
+          "h-level-1-batch-16-6"
+        ],
+        "label": "Soul Purity, Rebirth, and Er",
+        "summary": "These passages argue for the soul's imperishable nature when viewed in pristine purity, vindicate the enduring rewards of virtue, and culminate in the Myth of Er where souls choose their cyclical destinies through wisdom.",
+        "rationale": "Combines the concluding Book X treatments of the soul's immortality, original purity, post-mortem rewards, and the cosmic vision of rebirth."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "OdebaouBEcuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 40414,
+    "candidatesTokenCount": 1165,
+    "totalTokenCount": 41579,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40414
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1165
+      }
+    ]
+  },
+  "durationMs": 11372,
+  "requestHash": "6a19c2b73ab251565bad661bf2745ad29138057b9d513b2bce1f8f091a3584ad"
+}

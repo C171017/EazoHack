@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-32-8",
+          "n-33-3",
+          "n-35-5"
+        ],
+        "label": "The Philosopher and the State",
+        "summary": "These passages address the relationship between philosophic natures and political rule. While current states alienate philosophers, establishing an ideal polity is deemed possible if philosophers rule, and enlightened thinkers must be obliged to leave contemplation to govern the commonwealth.",
+        "rationale": "All three items center on political necessity and the philosopher's role in the city, detailing estrangement from current regimes, the feasibility of rule, and the duty to govern."
+      },
+      {
+        "childIds": [
+          "n-33-5",
+          "n-34-1",
+          "n-34-2",
+          "n-34-3",
+          "n-35-3"
+        ],
+        "label": "Forms, Good, and Epistemology",
+        "summary": "This collection examines the intelligible realm, contrasting dialectic with hypothetical arts and mapping the soul's ascent to truth. Key analogies, including the Sun and the Cave, illustrate how pure reason grasps the Idea of the Good and arranges the faculties of the soul.",
+        "rationale": "Coherent thematic cluster covering the central metaphysical and epistemological models in Books VI and VII (Sun, Divided Line, faculties, dialectical ascent, and the allegory of the Good)."
+      },
+      {
+        "childIds": [
+          "n-35-4",
+          "n-35-6",
+          "n-35-7",
+          "n-36-2",
+          "n-36-5"
+        ],
+        "label": "Curriculum for Contemplation",
+        "summary": "Education is defined as the reorientation of the soul's existing capacity toward true being. A progressive mathematical and philosophical curriculum—spanning arithmetic, geometry, pure astronomy, harmonics, dialectic, and civic duty—systematically draws the mind away from sensory particulars toward the Good.",
+        "rationale": "Sequential discussion from Book VII regarding the education of rulers, focusing on turning the soul and the specific mathematical sciences preceding dialectic."
+      },
+      {
+        "childIds": [
+          "n-37-2",
+          "n-37-5",
+          "n-37-6",
+          "n-38-1"
+        ],
+        "label": "Regimes and Social Decay",
+        "summary": "Political regimes reflect the character types of their citizens, degenerating through stages of internal division. Oligarchy elevates wealth and fosters a class of disenfranchised drones, which eventually leads to a popular revolution and the establishment of democracy.",
+        "rationale": "Consecutive sequence from Book VIII analyzing corrupted political constitutions, social stratification, and the structural slide into democracy."
+      },
+      {
+        "childIds": [
+          "n-42-2"
+        ],
+        "label": "The Soul in Original Purity",
+        "summary": "The soul's present condition is compared to the encrusted sea-god Glaucus; its genuine nature is revealed only when viewed in purity through its love of wisdom and kinship with the divine.",
+        "rationale": "Maintained as a singleton due to its distinct placement in Book X, focusing on eschatology and the soul's essential nature rather than political decline or curricular training."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "H9ebarO-GrWc0ckP-4GV6AI",
+  "usage": {
+    "promptTokenCount": 11184,
+    "candidatesTokenCount": 790,
+    "totalTokenCount": 11974,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11184
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 790
+      }
+    ]
+  },
+  "durationMs": 8108,
+  "requestHash": "560ac7519c3ba497ca02fea925abf750f08e32ae209d8809c2fb78549ff0d228"
+}

@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-3-1"
+        ],
+        "label": "Significance of the Republic",
+        "summary": "The Republic is celebrated as Plato's greatest dialogue, functioning as the center around which others group and containing seminal concepts of logic, psychology, and metaphysics.",
+        "rationale": "Stands alone as the opening global overview of the entire work's significance, preceding the textual analyses."
+      },
+      {
+        "childIds": [
+          "n-5-5",
+          "n-5-6",
+          "n-6-2",
+          "n-7-4"
+        ],
+        "label": "Education and Soul Faculties",
+        "summary": "Educational reform regulates poetic depictions of divinity and distinguishes internal spiritual falsehood from medicinal state myth. In tandem, physical and musical training balance passion with reason, reflecting the soul's division into rational, spirited, and appetitive elements.",
+        "rationale": "These entries focus on the internal balance of the individual psyche and early cultural training in the emerging just city."
+      },
+      {
+        "childIds": [
+          "n-8-3",
+          "n-8-4",
+          "n-8-7",
+          "n-9-1",
+          "n-9-2"
+        ],
+        "label": "Metaphysics and the Good",
+        "summary": "The realization of the ideal city necessitates philosopher-rulers who differentiate eternal being from opinionated becoming. Their training culminates in the Idea of the Good, illuminated through the sun analogy and the fourfold division of cognition along the Divided Line.",
+        "rationale": "Presents Plato's core epistemology and metaphysics anchoring the philosopher-king's vision."
+      },
+      {
+        "childIds": [
+          "n-9-3",
+          "n-9-4",
+          "n-10-5"
+        ],
+        "label": "Assessments of Platonic Logic",
+        "summary": "The commentator evaluates Plato's speculative dialectic against modern scientific methods and empirical induction. While praising his ability to disengage abstractions through mathematical study, the critique highlights his tendency to anticipate empirical science without observational facts.",
+        "rationale": "Brings together the external commentary passages evaluating the validity and historical limits of Platonic logic and dialectic."
+      },
+      {
+        "childIds": [
+          "n-9-5",
+          "n-9-6",
+          "n-10-1",
+          "n-10-3"
+        ],
+        "label": "The Cave and Higher Studies",
+        "summary": "The Allegory of the Cave illustrates the soul's conversion from darkness to intelligible light, after which enlightened guardians must return to serve the commonwealth. This ascent is facilitated by mathematics and crowned by dialectic, the supreme study that discards hypotheses to grasp being.",
+        "rationale": "Covers the allegorical ascent from the cave and the advanced curriculum of arithmetic and dialectic designed for future rulers."
+      },
+      {
+        "childIds": [
+          "n-11-1"
+        ],
+        "label": "Four Degenerate States and Men",
+        "summary": "Socrates resumes his argument by positing four inferior constitutions—timocracy, oligarchy, democracy, and tyranny—each corresponding to an individual human character type, to assess relative happiness and misery against the just State.",
+        "rationale": "Marks the distinct transition to Book VIII's political taxonomy and analysis of systemic decline."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Btebas7cLJqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 20367,
+    "candidatesTokenCount": 808,
+    "totalTokenCount": 21175,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20367
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 808
+      }
+    ]
+  },
+  "durationMs": 7962,
+  "requestHash": "45b667e975f291e47782e0e3eedb0b99a8f86427549c745045730a2e7499948b"
+}

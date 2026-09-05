@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-25-3",
+          "n-27-3",
+          "n-28-2"
+        ],
+        "label": "Education and Soul Order",
+        "summary": "Socrates establishes that musical simplicity and steadfast nurture protect civil character, while psychological distinctions rest on the formal principle of non-contradiction.",
+        "rationale": "These early foundational discussions in Books III and IV link cultural discipline and musical training to the structural harmony and consistency of the soul."
+      },
+      {
+        "childIds": [
+          "n-30-3",
+          "n-30-6",
+          "n-31-3",
+          "n-32-2",
+          "n-33-4"
+        ],
+        "label": "Philosophy and the Highest Good",
+        "summary": "Socrates outlines the nature of true philosophers as lovers of immutable truth, defining faculties by their operation, ideals as normative measures, and the idea of the good as supreme knowledge.",
+        "rationale": "A contiguous sequence from Books V and VI defining the epistemological standards, cognitive powers, and ultimate metaphysical object governing the philosopher."
+      },
+      {
+        "childIds": [
+          "n-36-4",
+          "n-40-5",
+          "n-41-2"
+        ],
+        "label": "Forms, Reason, and Dialectic",
+        "summary": "Socrates warns against premature exposure to dialectic, identifies divine reason or external law as the necessary governor of human character, and illustrates the degrees of reality through the three beds.",
+        "rationale": "These passages examine how humans engage metaphysical truth and divine order, from training in dialectic and internal rational governance to ontological hierarchies."
+      },
+      {
+        "childIds": [
+          "n-37-4",
+          "n-37-7",
+          "n-38-2",
+          "n-38-6",
+          "n-38-8"
+        ],
+        "label": "Degenerate Regimes and Souls",
+        "summary": "Socrates details the progressive decline of civic constitutions and individual souls through timocracy, oligarchy, democratic license, factional class divisions, and despotic tyranny.",
+        "rationale": "A unified sequence in Book VIII examining the systematic degeneration of character and state forms under spiraling appetites and passions."
+      },
+      {
+        "childIds": [
+          "n-40-2",
+          "n-42-4"
+        ],
+        "label": "Tyranny and Final Retribution",
+        "summary": "Socrates calculates the 729-fold misery separating the tyrant from the king and recounts Er's vision of posthumous rewards, tenfold penalties, and the eternal torment of tyrants.",
+        "rationale": "Both passages demonstrate the profound consequences of vice and tyranny, evaluating their wretchedness in mathematical measure and eschatological judgement."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "79abat6HBKyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 11834,
+    "candidatesTokenCount": 691,
+    "totalTokenCount": 12525,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11834
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 691
+      }
+    ]
+  },
+  "durationMs": 8759,
+  "requestHash": "ce551e357d8b1a06072f2ed71cdc523e396527b7087aaa9e57e1bb3476dc76fd"
+}

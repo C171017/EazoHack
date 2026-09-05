@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-21-4",
+          "n-22-1",
+          "n-22-3"
+        ],
+        "label": "Goods, Justice, and Gyges",
+        "summary": "An editorial note marks Socrates's dissatisfaction with the argument, leading into Glaucon's challenge. Glaucon categorizes goods into three classes and uses the Ring of Gyges myth to argue that individuals practice justice only under compulsion.",
+        "rationale": "Groups early Book II dialogue introducing Glaucon's challenge to Socrates alongside the adjacent editorial commentary concluding Book I."
+      },
+      {
+        "childIds": [
+          "n-22-7",
+          "n-22-8",
+          "n-23-2",
+          "n-23-3",
+          "n-26-2"
+        ],
+        "label": "Origins and Role of Guardians",
+        "summary": "Socrates traces the genesis of the state to mutual needs and the division of labor, extending this specialization to military defense. He argues that guardians must unite spirited ferocity with philosophical gentleness, and outlines rigorous trials of fear, toil, and temptation to select the most steadfast rulers.",
+        "rationale": "Covers the socioeconomic origin of the state and the selection, nature, and testing of the guardian class across Books II and III."
+      },
+      {
+        "childIds": [
+          "n-23-4",
+          "n-23-5",
+          "n-23-6",
+          "n-24-1",
+          "n-24-2"
+        ],
+        "label": "Theological and Civic Censorship",
+        "summary": "Socrates establishes theological standards for poetry, requiring that God be depicted solely as the author of good and incapable of change or deception. He censors frightening depictions of the underworld to instill courage and reserves the privilege of falsehood strictly to rulers acting for the public welfare.",
+        "rationale": "Combines Socrates's early regulations on theological content, myths of the afterlife, and truthfulness in civic education."
+      },
+      {
+        "childIds": [
+          "n-24-3",
+          "n-24-5",
+          "n-24-6",
+          "n-25-1",
+          "n-25-2"
+        ],
+        "label": "Poetic and Musical Reform",
+        "summary": "Socrates analyzes narrative styles, banishing versatile mimetic poets in favor of austere storytellers who portray virtue. He further regulates musical expression by proscribing mournful or complex harmonies and instruments, preserving only the austere Dorian and Phrygian modes alongside simple strings and pipes.",
+        "rationale": "Unites the aesthetic regulations of Book III regarding dramatic imitation, musical harmonies, and instrumentation."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5Nabar_4I5qdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 10401,
+    "candidatesTokenCount": 660,
+    "totalTokenCount": 11061,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10401
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 660
+      }
+    ]
+  },
+  "durationMs": 6994,
+  "requestHash": "99ea662209f15c62ace6a07b2948716b73da2efbc7f17e2766ff3ac56ea8bde3"
+}
