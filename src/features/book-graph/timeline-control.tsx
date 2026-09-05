@@ -1,0 +1,43 @@
+'use client';
+import {useEffect,useRef} from 'react';
+import {TimelineScroll,timelineWheelDelta} from './timeline-scroll';
+
+export function TimelineControl({x,y,progress,height,onScroll}:{x:number;y:number;progress:number;height:number;onScroll:(delta:number)=>void}) {
+  const target=useRef<HTMLDivElement>(null);
+  useEffect(()=>{
+    const element=target.current;if(!element)return;
+    const motion=new TimelineScroll();let frame:number|null=null,lastFrame=0;
+    const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+    const stop=()=>{if(frame!==null)cancelAnimationFrame(frame);frame=null;motion.reset();element.removeAttribute('data-scrolling');};
+    const animate=(now:number)=>{
+      onScroll(motion.step(now-lastFrame));lastFrame=now;
+      if(motion.pending)frame=requestAnimationFrame(animate);else{frame=null;element.removeAttribute('data-scrolling');}
+    };
+    const wheel=(event:WheelEvent)=>{
+      // The target owns only plain, vertical wheel input. Pinch and horizontal
+      // gestures cannot accidentally advance the book.
+      event.preventDefault();
+      const delta=timelineWheelDelta(event,height);if(!delta){stop();return;}
+      motion.push(delta,performance.now(),height);
+      if(reduced.matches){onScroll(motion.pending);motion.pending=0;return;}
+      element.setAttribute('data-scrolling','true');
+      if(frame===null){lastFrame=performance.now();frame=requestAnimationFrame(animate);}
+    };
+    const key=(event:KeyboardEvent)=>{
+      const delta=({ArrowDown:height*2,ArrowUp:-height*2,PageDown:height*8,PageUp:-height*8} as Record<string,number>)[event.key];
+      if(delta===undefined)return;
+      event.preventDefault();event.stopPropagation();stop();onScroll(delta);
+    };
+    element.addEventListener('wheel',wheel,{passive:false});
+    element.addEventListener('keydown',key);
+    element.addEventListener('pointerleave',stop);
+    element.addEventListener('blur',stop);
+    window.addEventListener('pointerdown',stop,true);
+    window.addEventListener('blur',stop);
+    return()=>{stop();element.removeEventListener('wheel',wheel);element.removeEventListener('keydown',key);element.removeEventListener('pointerleave',stop);element.removeEventListener('blur',stop);window.removeEventListener('pointerdown',stop,true);window.removeEventListener('blur',stop);};
+  },[onScroll,height]);
+  const percent=Math.max(0,Math.min(100,progress*100));
+  return <div ref={target} className="map-timeline-control" style={{left:x,top:y}} tabIndex={0} role="scrollbar" aria-label="Book timeline: scroll vertically" aria-orientation="vertical" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Number(percent.toFixed(1))} aria-valuetext={`${percent.toFixed(1)}% through the book`} aria-controls="book-source-scroll" onPointerDown={event=>{event.preventDefault();event.currentTarget.focus();}}>
+    <span className="map-timeline-rail" aria-hidden="true"><span/><i/><span/></span>
+  </div>;
+}

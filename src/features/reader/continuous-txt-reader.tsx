@@ -362,6 +362,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
 
   return <div
     ref={scroller}
+    id="book-source-scroll"
     className="txt-reader-scroll min-h-0 flex-1 overflow-y-auto"
     data-english-font={fonts.english}
     data-chinese-font={fonts.chinese}

@@ -23,7 +23,7 @@ Models and inference providers are separate choices. Each method may have its ow
 
 The TXT reader now reveals four colored SVG icon buttons beside the selected text: blue speech bubble (Explanation), green hierarchy (Diagram), purple clicking pointer (Interactive panel), and amber palette (Illustration). The floating picker uses feathered blur and staggered motion, with reduced-motion support. It dismisses on Escape, outside pointer input, scrolling, or resize. Mouse/pointer selection and keyboard Shift-arrow extension preserve canonical source offsets.
 
-Explanation and Diagram launch their existing providers directly, using the legacy `interactive_ui` and `concept_diagram` route IDs respectively. Interactive panel and Illustration remain visible with unavailable hints and cannot submit requests. No provider or saved-artifact schema migration is implied. Save and reopen controls live under Reading session, while generated results and retry controls remain attached to the original passage. The separate PDF workspace retains its existing controls.
+Explanation and Diagram launch their existing providers directly, using the legacy `interactive_ui` and `concept_diagram` route IDs respectively. Interactive panel and Illustration remain visible with unavailable hints and cannot submit requests. No provider or saved-artifact schema migration is implied. The text reader has no Reading session panel or checkpoint save/restore flow; generated results and retry controls remain attached to the original passage. Its reading and enhancement state lasts for the current mounted workspace. The separate PDF workspace retains its existing controls.
 
 ## Model research
 

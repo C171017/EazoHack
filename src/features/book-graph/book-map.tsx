@@ -3,7 +3,8 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
 import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, placeLabels, PROJECTIONS, project, type Point3 } from './projection';
-import { MapGrid } from './map-grid';
+import { MapGrid, ORIGIN } from './map-grid';
+import { TimelineControl } from './timeline-control';
 import { axisValue, axisRange } from '../../shared/book-axes';
 import { AxisDetails } from './axis-details';
 import { UnplacedNotes } from './unplaced-notes';
@@ -68,14 +69,15 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
   },[]);
   useEffect(()=>()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();},[]);
   // Native non-passive listener is required for trackpad pinch (ctrl+wheel).
-  // Plain scrolling moves the reader; its live source offset moves every node.
+  // Plain wheel input is owned exclusively by the origin timeline control.
   useEffect(()=>{
-    const element=svg.current;if(!element)return;
+    const element=stage.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
     const wheel=(event:WheelEvent)=>{
+      if(!(event.target instanceof Element)||!event.target.closest('svg,.map-timeline-control'))return;
       event.preventDefault();if(gesture)return;
       const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
-      if(!event.ctrlKey&&!event.metaKey){onScrollSource(event.deltaY*unit);return;}
+      if(!event.ctrlKey&&!event.metaKey)return;
       if(frame.current!==null)cancelAnimationFrame(frame.current);
       navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
@@ -92,7 +94,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
     element.addEventListener('wheel',wheel,{passive:false});
     element.addEventListener('gesturestart',gestureStart,{passive:false});element.addEventListener('gesturechange',gestureChange,{passive:false});element.addEventListener('gestureend',gestureEnd,{passive:false});
     return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);};
-  },[onViewChange,onScrollSource]);
+  },[onViewChange]);
   const cancelMotion=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
   const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch)setSourceActivation(null);cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:next};onViewChange(next);};
   function activateLeaf(id:string) {
@@ -157,7 +159,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
     if(e.key==='+'||e.key==='='){e.preventDefault();zoom(1.35);}if(e.key==='-'){e.preventDefault();zoom(1/1.35);}
   }}>
     <div ref={stage} className="map-stage">
-      <details className="map-axis-key"><summary>{graph.axisVersion?'X · Reasoning depth   /   Y · Generality':'Legacy map · Themes / Structure'}</summary><p>{graph.axisVersion?'Farther along X: more prior reasoning within this book. Farther along Y: a broader class of cases. Z spans the whole book: earlier passages above, later passages below. The horizontal plane is your current reading position. Scroll either pane to read onward. Colors identify topics. Ratings are interpretive; greater distance does not mean more important or more correct.':'This saved map uses the previous topic and structure coordinates. New meanings appear only after source review and rebuilding.'}</p></details>
+      <details className="map-axis-key"><summary>{graph.axisVersion?'X · Reasoning depth   /   Y · Generality':'Legacy map · Themes / Structure'}</summary><p>{graph.axisVersion?'Farther along X: more prior reasoning within this book. Farther along Y: a broader class of cases. Z spans the whole book: earlier passages above, later passages below. The horizontal plane is your current reading position. Scroll the text to read, or scroll over the Z origin to skim faster. Colors identify topics. Ratings are interpretive; greater distance does not mean more important or more correct.':'This saved map uses the previous topic and structure coordinates. New meanings appear only after source review and rebuilding.'}</p></details>
       {graph.unplaced>0&&<UnplacedNotes version={graph.version} count={graph.unplaced} onLocate={id=>void locate(id)}/>}
       <svg data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
         onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
@@ -183,7 +185,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
         onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Scroll to read onward in both panes. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to expand or group ideas. Drag to orbit within the three grid fences. Panning is disabled. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
+        <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to expand or group ideas. Drag to orbit within the three grid fences. Panning is disabled. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8ca996"/></marker></defs>
         <MapGrid screen={screen} modern={!!graph.axisVersion} readingProgress={readingProgress}/>
         <g aria-hidden="true" pointerEvents="none">{animatedEdges.map(({link:edge,opacity})=>{const a=points.find(p=>p.id===edge.source),b=points.find(p=>p.id===edge.target);return a&&b?<g key={edge.id} opacity={edgeVisibility(opacity,a,b)}><line data-edge-id={edge.id} data-edge-source={edge.source} data-edge-target={edge.target} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line></g>:null;})}</g>
@@ -198,6 +200,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
           </g>
         </g>;})}
       </svg>
+      <TimelineControl {...screen(ORIGIN)} progress={readingProgress} height={size.height} onScroll={onScrollSource}/>
       {(data.error||windowed.wanted.length>0||!windowed.nodes.length)&&<div className="map-layer-status" aria-live="polite">{data.error?<><span>{data.error}</span> <button onClick={data.retry}>Retry loading</button></>:windowed.wanted.length?'Opening this part of the book…':null} {!windowed.nodes.length&&!windowed.wanted.length&&<button onClick={()=>change({x:0,y:0,zoom:1})}>Return to overview</button>}</div>}
     </div>
     {restoredPath.error&&<p role="alert">{restoredPath.error} <button onClick={restoredPath.retry}>Retry</button></p>}{navigationError&&<p role="alert">{navigationError}</p>}{navigating&&<p role="status">Finding this note…</p>}

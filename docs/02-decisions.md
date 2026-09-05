@@ -2,6 +2,8 @@
 
 # 决策登记
 
+> 2026-09-05 color review: approved X `#D87970`, Y `#729AD5`, Z `#F2EEE5`, and 3D space `#121519`. Preserve the existing paper reader exactly. Theme accent and enhancement palettes remain open; no production recoloring in this review. See [color design decisions](23-color-design-decisions.md).
+
 > 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Illustration, and Interactive panel**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](19-enhancement-methods.md).
 
 > Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).

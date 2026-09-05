@@ -2,7 +2,7 @@ import { AXIS_LABELS, LEGACY_AXIS_LABELS } from '../../shared/book-axes';
 import { useId } from 'react';
 import { sourceHeight, type Point3 } from './projection';
 
-const ORIGIN: Point3 = {x:-250,y:-170,z:0};
+export const ORIGIN: Point3 = {x:-250,y:-170,z:0};
 const SPACING = 50;
 const EXTENT = 1000;
 const BACK_EXTENT = 150;

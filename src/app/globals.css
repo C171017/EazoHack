@@ -30,11 +30,11 @@
   --reader-surface: var(--reader-light), var(--reader-material);
   --reader-surface-size: 100% 100%, 600px 600px;
   color: var(--color-ink);
-  /* A narrow, quiet surround makes the sheet's thickness visible. */
-  padding: clamp(10px, 1.1vw, 18px) clamp(14px, 1.4vw, 23px)
-    clamp(14px, 1.4vw, 23px) clamp(10px, 1.1vw, 18px);
-  background: #252820;
-  border-color: #34382f;
+  position: relative;
+  isolation: isolate;
+  padding: 0;
+  background: var(--color-paper);
+  border-color: var(--color-line);
   color-scheme: light;
   height: 78vh;
   height: 78svh;
@@ -64,13 +64,8 @@
   background-repeat: no-repeat, repeat;
   /* The tile and lighting stay on the viewport-sized scroll surface, never
      on the full book. No filters, blend modes or scroll-driven effects. */
-  border: 1px solid #fffbeecc;
-  border-right-color: #c9bfa7;
-  border-radius: 1px;
-  box-shadow: inset 1px 0 #fffdf466, inset 0 -1px #b6a88e55,
-    2px 1px 0 #e2d9c4, 3px 2px 0 #a79b83,
-    4px 3px 0 #e9e0cc, 5px 4px 0 #8c806b,
-    4px 8px 14px #00000038;
+  border: 0;
+  border-radius: 0;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
@@ -187,16 +182,37 @@
   }
 }
 
-@media (max-width: 40rem) {
-  .txt-reader-pane {
-    padding: 7px 10px 11px 7px;
-  }
+/* A small lifted corner is painted inside the paper, without a surrounding
+   mat or offset sheet outlines. It never intercepts selection or scrolling. */
+.txt-reader-pane::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: clamp(42px, 5vw, 72px);
+  height: clamp(56px, 7vw, 100px);
+  z-index: 20;
+  pointer-events: none;
+  border-top-left-radius: 100% 100%;
+  background: linear-gradient(135deg,
+    transparent 46%, #78603e08 57%, #66503426 68%,
+    #fffdf3d9 73%, #ede4ceeb 84%, #c4b698a6 100%);
+  mask-image: radial-gradient(ellipse at bottom right, #000 30%, transparent 73%);
 }
 
 @media (forced-colors: active) {
+  .txt-reader-pane::after { display: none; }
   .txt-reader-scroll,
   .txt-reader-masthead {
     background-image: none;
     box-shadow: none;
   }
 }
+
+/* Book progress is controlled at the map origin when the map is available. */
+.txt-reader-pane[data-timeline-navigation='true'] .txt-reader-scroll {
+  scrollbar-width: none;
+  scrollbar-gutter: auto;
+  overflow-x: hidden;
+}
+.txt-reader-pane[data-timeline-navigation='true'] .txt-reader-scroll::-webkit-scrollbar { display: none; }
