@@ -17,7 +17,7 @@
   --color-ink: #302a23;
   --color-muted: #756b5e;
   --color-line: #ded6c6;
-  --color-highlight: #d5ddbe;
+  --color-highlight: #d9d6ce;
   --font-reading: Georgia, 'Noto Serif SC', 'Songti SC', SimSun, serif;
   /* A: generated warm book paper. One 600 CSS-pixel tile at every viewport
      width keeps the fibers the same size; only the source resolution changes.
@@ -168,7 +168,23 @@
 /* Assistance sits outside source spans so source offsets remain immutable. */
 .reader-artifact { margin: 1rem 0; font-family: sans-serif; line-height: 1.5; font-size: 14px; overflow-wrap: anywhere; }
 .reader-artifact button { cursor: pointer; }
-.reader-artifact button:focus-visible { outline: 2px solid var(--color-moss); outline-offset: 3px; }
+.reader-artifact button:focus-visible { outline: 2px solid var(--enhancement-color, var(--color-ink)); outline-offset: 3px; }
+
+/* Annotation colors are independent of the reader's material and typography. */
+.txt-passage-highlight {
+  color: var(--color-ink);
+  background-color: var(--color-highlight);
+  background-size: 100% 2px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+[data-enhancement] { --enhancement-color: var(--enhancement-dark); }
+.txt-reader-pane [data-enhancement] { --enhancement-color: var(--enhancement-ink); }
+.enhancement-heading { color: var(--enhancement-color, var(--color-ink)); }
+.enhancement-artifact { border-left: 3px solid var(--enhancement-color, var(--color-line)); }
+.enhancement-artifact input[type='range'] { accent-color: var(--enhancement-color); }
 
 .txt-source-block-continuation {
   margin-top: -1.5rem;
@@ -182,26 +198,7 @@
   }
 }
 
-/* A small lifted corner is painted inside the paper, without a surrounding
-   mat or offset sheet outlines. It never intercepts selection or scrolling. */
-.txt-reader-pane::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: clamp(42px, 5vw, 72px);
-  height: clamp(56px, 7vw, 100px);
-  z-index: 20;
-  pointer-events: none;
-  border-top-left-radius: 100% 100%;
-  background: linear-gradient(135deg,
-    transparent 46%, #78603e08 57%, #66503426 68%,
-    #fffdf3d9 73%, #ede4ceeb 84%, #c4b698a6 100%);
-  mask-image: radial-gradient(ellipse at bottom right, #000 30%, transparent 73%);
-}
-
 @media (forced-colors: active) {
-  .txt-reader-pane::after { display: none; }
   .txt-reader-scroll,
   .txt-reader-masthead {
     background-image: none;

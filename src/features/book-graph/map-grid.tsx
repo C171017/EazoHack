@@ -8,7 +8,7 @@ const EXTENT = 1000;
 const BACK_EXTENT = 150;
 const AXES = ['x','y','z'] as const;
 const PLANES = [['x','y'],['x','z'],['y','z']] as const;
-const COLORS = ['#caaf7c','#84b7ad','#a398cb'];
+const COLORS = ['#D87970','#729AD5','#F2EEE5'];
 const LABEL_DISTANCE = [530,365,430];
 const OFFSETS = Array.from({length:(EXTENT+BACK_EXTENT)/SPACING-1},(_,i)=>-BACK_EXTENT+(i+1)*SPACING).filter(n=>n!==0);
 const VERTICAL_OFFSETS = Array.from({length:39},(_,i)=>(i-19)*SPACING).filter(n=>n!==0);
@@ -33,7 +33,7 @@ export function MapGrid({screen,modern=false,readingProgress=.5}:{modern?:boolea
     const facing=Math.min(1,Math.abs(a.x*b.y-a.y*b.x)/scaleSquared*4);
     if(facing<.001)continue;
     for(const [axis,other] of [[u,v],[v,u]] as const)for(const offset of other==='z'?VERTICAL_OFFSETS:OFFSETS) {
-      lines.push({key:`${u}${v}-${axis}-${offset}`,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT,other,offset),b:point(axis,EXTENT,other,offset),color:'#8da999',opacity:.24*fade(other==='z'?Math.abs(offset):offset)*facing,vertical:axis==='z'});
+      lines.push({key:`${u}${v}-${axis}-${offset}`,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT,other,offset),b:point(axis,EXTENT,other,offset),color:'#9299A3',opacity:.24*fade(other==='z'?Math.abs(offset):offset)*facing,vertical:axis==='z'});
     }
   }
   AXES.forEach((axis,i)=>lines.push({key:axis,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT),b:point(axis,EXTENT),color:COLORS[i],opacity:.66,vertical:axis==='z'}));
@@ -55,8 +55,8 @@ export function MapGrid({screen,modern=false,readingProgress=.5}:{modern?:boolea
     })}
     {Math.hypot(directions[2].x,directions[2].y)>.01&&Array.from({length:11},(_,i)=>{
       const p=screen({...ORIGIN,z:sourceHeight(i/10,readingProgress)});
-      return <g key={`source-${i}`} className="map-axis-ticks"><line x1={p.x-4} x2={p.x+4} y1={p.y} y2={p.y} stroke="#a398cb"/><text x={p.x-9} y={p.y+3} textAnchor="end">{i*10}%</text></g>;
+      return <g key={`source-${i}`} className="map-axis-ticks"><line x1={p.x-4} x2={p.x+4} y1={p.y} y2={p.y} stroke={COLORS[2]}/><text x={p.x-9} y={p.y+3} textAnchor="end">{i*10}%</text></g>;
     })}
-    <circle data-reading-origin cx={origin.x} cy={origin.y} r="3" fill="#d3ddd5"/>
+    <circle data-reading-origin cx={origin.x} cy={origin.y} r="3" fill={COLORS[2]}/>
   </g>;
 }

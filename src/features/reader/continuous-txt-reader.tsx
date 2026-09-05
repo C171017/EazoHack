@@ -4,6 +4,8 @@ import { Fragment, forwardRef, memo, useEffect, useImperativeHandle, useLayoutEf
 import { readingLine, readingOffset } from './reading-position';
 import { splitSourceRange } from './artifact-placement';
 import { resolveTxtAnchor } from './source-anchor';
+import { highlightSegments, type EnhancementHighlight } from './enhancement-highlights';
+import { ENHANCEMENTS } from '@/shared/enhancements';
 import { snapSelectionToWords } from './word-selection';
 import { EnhancementPicker, type PickerPosition } from './enhancement-picker';
 import type { RouteKind, SourceAnchor } from '@/shared/schemas';
@@ -28,17 +30,20 @@ export type ContinuousTxtReaderHandle = {
 type HighlightRange = { startOffset: number; endOffset: number } | null;
 export type ReaderSlot = { id: string; offset: number; content: ReactNode };
 const EMPTY_SLOTS: ReaderSlot[] = [];
+const EMPTY_HIGHLIGHTS: EnhancementHighlight[] = [];
 
 const TxtChunk = memo(function TxtChunk({
   chunk,
   sourceText,
   highlight,
   slots,
+  enhancements,
 }: {
   chunk: TxtRenderChunk;
   sourceText: string;
   highlight: HighlightRange;
   slots: ReaderSlot[];
+  enhancements: EnhancementHighlight[];
 }) {
   return <section
     id={chunk.id}
@@ -50,17 +55,22 @@ const TxtChunk = memo(function TxtChunk({
   >
     {chunk.blocks.map(block => <div id={block.id} key={block.id} className={block.continuation ? 'txt-source-block txt-source-block-continuation' : 'txt-source-block'}>
       {splitSourceRange(block.startOffset, block.endOffset, slots.map(s=>s.offset)).map(part=>{
-      const text = sourceText.slice(part.startOffset, part.endOffset);
-      const from = highlight ? Math.max(0, highlight.startOffset - part.startOffset) : 0;
-      const to = highlight ? Math.min(text.length, highlight.endOffset - part.startOffset) : 0;
       return <Fragment key={part.startOffset}><span
         data-txt-block
         data-txt-start={part.startOffset}
         data-txt-end={part.endOffset}
       >
-        {highlight && to > from
-          ? <>{text.slice(0, from)}<mark className="rounded-sm bg-highlight text-ink">{text.slice(from, to)}</mark>{text.slice(to)}</>
-          : text}
+        {highlightSegments(part.startOffset, part.endOffset, enhancements, highlight).map(segment => {
+          const text = sourceText.slice(segment.startOffset, segment.endOffset);
+          if (!segment.kinds.length && !segment.active) return text;
+          const colors = segment.kinds.map(kind => ENHANCEMENTS[kind].ink);
+          const style = colors.length ? {
+            backgroundColor: colors.length === 1 ? `color-mix(in srgb, ${colors[0]} 24%, transparent)` : 'var(--color-highlight)',
+            backgroundImage: `linear-gradient(to right, ${colors.map((color,i) => `${color} ${i*100/colors.length}% ${(i+1)*100/colors.length}%`).join(', ')})`,
+          } : undefined;
+          return <mark key={segment.startOffset} className="txt-passage-highlight" data-enhancements={segment.kinds.join(' ') || undefined}
+            aria-label={segment.kinds.length ? segment.kinds.map(kind => ENHANCEMENTS[kind].label).join(' and ') : 'Selected passage'} style={style}>{text}</mark>;
+        })}
       </span>{slots.filter(s=>s.offset===part.endOffset).map(slot=><aside key={slot.id} data-reader-artifact={slot.id} className="reader-artifact" aria-label="Passage assistance">{slot.content}</aside>)}</Fragment>;
     })}</div>)}
   </section>;
@@ -134,11 +144,16 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   activeAnchor: SourceAnchor | null;
   onSelection: (selection: TxtSelectionRange) => void;
   slots?: ReaderSlot[];
+  enhancements?: EnhancementHighlight[];
   onReadingPosition?: (offset: number) => void;
   onEnhance: (route: RouteKind) => void;
   enhancementBusy: boolean;
-}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, onReadingPosition }, ref) {
+}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText), [sourceText]);
+  const chunkEnhancements = useMemo(() => chunks.map(chunk => {
+    const matches = enhancements.filter(h => h.startOffset < chunk.endOffset && h.endOffset > chunk.startOffset);
+    return matches.length ? matches : EMPTY_HIGHLIGHTS;
+  }), [chunks, enhancements]);
   const scroller = useRef<HTMLDivElement>(null);
   const documentRoot = useRef<HTMLDivElement>(null);
   const [pickerPosition, setPickerPosition] = useState<PickerPosition | null>(null);
@@ -368,7 +383,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     data-chinese-font={fonts.chinese}
     style={{ '--font-reading': `${englishFonts.find(font => font.id === fonts.english)!.family}, ${chineseFonts.find(font => font.id === fonts.chinese)!.family}, serif` } as CSSProperties}
   >
-    <EnhancementPicker position={pickerPosition} busy={enhancementBusy} onChoose={route=>{setPickerPosition(null);onEnhance(route);}}/>
+    <EnhancementPicker position={pickerPosition} busy={enhancementBusy} onChoose={route=>{setPickerPosition(null);nativeSelection.current=null;window.getSelection()?.removeAllRanges();onEnhance(route);}}/>
     <div className="txt-reader-masthead">
       <ReadingMenu fonts={fonts} onChange={changeFonts} onUpload={onUpload} onReset={onReset}/>
     </div>
@@ -388,14 +403,14 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       role="document"
       aria-label="Complete TXT source"
     >
-      {chunks.map(chunk => {
+      {chunks.map((chunk, index) => {
         const chunkHighlight = highlight
           && highlight.startOffset < chunk.endOffset
           && highlight.endOffset > chunk.startOffset
             ? highlight
             : null;
         const chunkSlots=slots.filter(s=>s.offset>chunk.startOffset&&s.offset<=chunk.endOffset);
-        return <TxtChunk key={chunk.id} chunk={chunk} sourceText={sourceText} highlight={chunkHighlight} slots={chunkSlots.length?chunkSlots:EMPTY_SLOTS}/>;
+        return <TxtChunk key={chunk.id} chunk={chunk} sourceText={sourceText} highlight={chunkHighlight} enhancements={chunkEnhancements[index]} slots={chunkSlots.length?chunkSlots:EMPTY_SLOTS}/>;
       })}
     </div>
     <div className="txt-reader-end">End of complete text</div>

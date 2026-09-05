@@ -2,13 +2,14 @@
 
 import { useEffect, type CSSProperties } from 'react';
 import type { RouteKind } from '@/shared/schemas';
+import { ENHANCEMENTS } from '@/shared/enhancements';
 import styles from './enhancement-picker.module.css';
 
 export const enhancementOptions = [
-  { id: 'explanation', label: 'Explanation', route: 'interactive_ui', color: '#3268ad' },
-  { id: 'diagram', label: 'Diagram', route: 'concept_diagram', color: '#287664' },
-  { id: 'interactive', label: 'Interactive panel', route: null, color: '#8053a8' },
-  { id: 'illustration', label: 'Illustration', route: null, color: '#ac581f' },
+  { id: 'explanation', label: ENHANCEMENTS.explanation.label, route: 'interactive_ui', color: ENHANCEMENTS.explanation.ink },
+  { id: 'diagram', label: ENHANCEMENTS.diagram.label, route: 'concept_diagram', color: ENHANCEMENTS.diagram.ink },
+  { id: 'interactive', label: ENHANCEMENTS.interactive.label, route: null, color: ENHANCEMENTS.interactive.ink },
+  { id: 'illustration', label: ENHANCEMENTS.illustration.label, route: null, color: ENHANCEMENTS.illustration.ink },
 ] as const;
 
 export type PickerPosition = { left: number; top: number };

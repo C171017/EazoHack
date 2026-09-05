@@ -3,9 +3,10 @@
   --color-ink: #f3f4f1;
   --color-muted: #969d98;
   --color-line: #292d2a;
-  --color-moss: #82a98a;
-  --color-mist: #121513;
-  --color-highlight: #405c45;
+  /* Compatibility token for existing controls; there is no brand accent. */
+  --color-moss: #bfc4ca;
+  --color-mist: #1e2228;
+  --color-highlight: #3d4249;
   --color-warning: #e0ad61;
   --font-sans: Arial, Helvetica, sans-serif;
   --font-reading: Georgia, 'Times New Roman', serif;

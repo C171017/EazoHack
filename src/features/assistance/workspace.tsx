@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type CSSProperties } from 'react';
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
 import { readUploadedBook, type UploadedBook } from '../reader/upload-book';
@@ -10,6 +10,8 @@ import type { WorkspaceSnapshot } from '../persistence';
 import { recordSelectionActivity, selectionTimestamp } from '../persistence/selection-activity';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
 import { resolveTxtAnchor } from '../reader/source-anchor';
+import { artifactEnhancement, routeEnhancement, enhancementStyle } from '@/shared/enhancements';
+import type { EnhancementHighlight } from '../reader/enhancement-highlights';
 import { enhancementHistoryReducer, emptyEnhancementHistory } from './enhancement-history';
 import { ArtifactView, artifactLabel } from './artifact-view';
 import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange, type ReaderSlot } from '../reader/continuous-txt-reader';
@@ -114,6 +116,30 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
     requestAnimationFrame(()=>{if(ticket===sourceRequest.current)reader.current?.scrollToOffset(locator.startOffset,window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth');});
   }
   const activeAnchor=mapAnchor??anchors.find(a=>selection?.anchorIds.includes(a.id));
+  const enhancements = useMemo(() => {
+    const marks: EnhancementHighlight[] = [];
+    for (const artifact of artifacts) {
+      const kind = artifactEnhancement(artifact);
+      if (!kind) continue;
+      for (const id of artifact.anchorIds) {
+        const range = resolveTxtAnchor(anchors.find(a => a.id === id), {...preview, bookId});
+        if (range) marks.push({...range, kind});
+      }
+    }
+    for (const [id, request] of Object.entries(requests)) {
+      if (request.failed) continue;
+      const selected = selections.find(s => s.id === id);
+      for (const anchorId of selected?.anchorIds ?? []) {
+        const range = resolveTxtAnchor(anchors.find(a => a.id === anchorId), {...preview, bookId});
+        if (!range) continue;
+        for (const route of request.routes) {
+          const kind = routeEnhancement(route);
+          if (kind) marks.push({...range, kind});
+        }
+      }
+    }
+    return marks;
+  }, [artifacts, anchors, preview, bookId, requests, selections]);
 
   // Camera updates must not rebuild reader props. Keep every assistance input
   // in the dependency list so selection, retry, collapse and undo stay current.
@@ -125,7 +151,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       const locator=resolveTxtAnchor(anchor,{...preview,bookId});
       if(!artifact||!locator||locator.endOffset!==placement.offset)continue;
       slots.push({id:artifact.id,offset:placement.offset,content:<>
-        <div className="mb-2 flex gap-3 text-xs"><button aria-expanded={!placement.collapsed} onClick={()=>setPlacements(current=>current.map(p=>p.artifactId===artifact.id?{...p,collapsed:!p.collapsed}:p))}>{placement.collapsed?'Expand':'Collapse'} {artifactLabel(artifact)}</button></div>
+        <div className="enhancement-heading mb-2 flex gap-3 text-xs" data-enhancement={artifactEnhancement(artifact) ?? undefined} style={enhancementStyle(artifactEnhancement(artifact)) as CSSProperties}><button aria-expanded={!placement.collapsed} onClick={()=>setPlacements(current=>current.map(p=>p.artifactId===artifact.id?{...p,collapsed:!p.collapsed}:p))}>{placement.collapsed?'Expand':'Collapse'} {artifactLabel(artifact)}</button></div>
         <div hidden={placement.collapsed}><ArtifactView artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/></div>
       </>});
     }
@@ -144,9 +170,9 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
-        <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots}/>
+        <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
-      <section className="relative min-h-[960px] flex-1 overflow-hidden bg-paper lg:min-h-0" aria-label="Exploration workspace">
+      <section className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
         <div className="absolute inset-0">{graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
 
       </section>
