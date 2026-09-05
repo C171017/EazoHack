@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-7-5",
+          "n-8-1"
+        ],
+        "label": "Guardian Social Order",
+        "summary": "Discussions on the guardian class proposing gender equality in education and military roles, alongside communal domestic arrangements and state-controlled reproduction to foster civic unity.",
+        "rationale": "Both entries address the social restructuring and communal regulations established for the guardian class in Book V."
+      },
+      {
+        "childIds": [
+          "n-8-5",
+          "n-9-3",
+          "n-9-4",
+          "n-10-2",
+          "n-10-4"
+        ],
+        "label": "Philosophic Method & Education",
+        "summary": "Commentary on the philosopher's role in society, Plato's dialectical logic compared to modern sciences, the mathematical curriculum leading toward the Good, and the lifelong training of rulers.",
+        "rationale": "A contiguous sequence of entries covering the nature of true philosophers, epistemological critiques, and the pedagogical stages of their development."
+      },
+      {
+        "childIds": [
+          "n-11-2",
+          "n-11-3",
+          "n-11-4"
+        ],
+        "label": "Decline of the State",
+        "summary": "An examination of constitutional degeneration tracing the transition from timocracy's martial ambition to oligarchy's wealth divide and democracy's lawless liberty.",
+        "rationale": "Traces the consecutive stages of political and psychological degeneration detailed in Book VIII."
+      },
+      {
+        "childIds": [
+          "n-11-5",
+          "n-12-2",
+          "n-12-3",
+          "n-12-5",
+          "n-13-1"
+        ],
+        "label": "Tyranny and the Tyrant",
+        "summary": "Analyses of the rise of tyranny from extreme liberty, the psychological genesis and misery of the tyrant, and mathematical evaluations contrasting tyrannical unhappiness with the royal ideal.",
+        "rationale": "Covers the emergence, soul, misery, and mathematical measurement of tyranny across Books VIII and IX."
+      },
+      {
+        "childIds": [
+          "n-18-1"
+        ],
+        "label": "Cicero's Imitations of Plato",
+        "summary": "Cicero adapts Platonic concepts such as the vision of Er in the Somnium Scipionis and grounds his ideal state in Roman history, but his rhetorical style and unoriginal philosophy fall short of Plato's art.",
+        "rationale": "A singleton entry focusing on later Roman reception and Cicero's imitation of Plato's dialogues, isolated in coordinate space and topic from internal Republic analysis."
+      },
+      {
+        "childIds": [
+          "n-23-2",
+          "n-24-2"
+        ],
+        "label": "Foundational Guardian Duties",
+        "summary": "Socrates establishes that guardianship requires strict specialization and continuous training, and identifies falsehood as a medicine reserved solely for rulers acting for the public welfare.",
+        "rationale": "Both entries represent early dialogue passages regarding the functional requirements and specific prerogatives of city guardians and rulers."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "cxicaqWzIOmj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 20390,
+    "candidatesTokenCount": 631,
+    "totalTokenCount": 21021,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20390
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 631
+      }
+    ]
+  },
+  "durationMs": 7399,
+  "requestHash": "ee52647ebb115f9f577c49d9e0f136c2bc809819addb0c026b1e9736e00346fc"
+}

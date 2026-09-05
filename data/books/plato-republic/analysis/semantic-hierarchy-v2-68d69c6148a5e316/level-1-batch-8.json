@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-32-1"
+        ],
+        "label": "Philosopher as Ideal Guardian",
+        "summary": "Socrates argues that those who know the eternal, unchanging truth of things with clear vision, while lacking nothing in experience or virtue, are the only fit guardians of the State.",
+        "rationale": "Carried as a standalone singleton because it represents the earlier Book VI discussion on the philosophical qualifications of the ideal ruler, separated from the detailed curriculum of Book VII and the degeneration sequence of Books VIII and IX."
+      },
+      {
+        "childIds": [
+          "n-35-7",
+          "n-36-2",
+          "n-36-4",
+          "n-36-5"
+        ],
+        "label": "Higher Curricular Training",
+        "summary": "Socrates outlines the higher mathematical and philosophical studies—including geometry, astronomy, and harmonics—designed to orient the soul toward absolute being, while cautioning against premature exposure to dialectic and establishing precise age-graded stages for education and public rule.",
+        "rationale": "These entries from Book VII share a focus on the advanced education, dialectical training, and civic timetable designed to cultivate philosopher-guardians."
+      },
+      {
+        "childIds": [
+          "n-37-3",
+          "n-37-4",
+          "n-37-6",
+          "n-37-7"
+        ],
+        "label": "Timocracy and Oligarchy",
+        "summary": "Socrates describes the decline of the ideal state into timocracy through flawed procreation and spirited ambition, followed by the descent into oligarchy where wealth accumulation breeds a divided city filled with productive paupers and criminal drones alongside avaricious character traits.",
+        "rationale": "These adjacent Book VIII passages chart the first two stages of systemic decline from aristocracy to timocracy and subsequently to oligarchy and its corresponding character types."
+      },
+      {
+        "childIds": [
+          "n-37-8",
+          "n-38-1",
+          "n-38-4"
+        ],
+        "label": "The Democratic Regime",
+        "summary": "The dialogue traces how the excessive pursuit of wealth destabilizes oligarchy, leading to a popular revolt that institutes democracy with equal liberty and office by lot, alongside the development of an indiscriminate democratic character ruled by transient desires.",
+        "rationale": "These sections detail the direct transition into democracy, the operational nature of democratic governance, and the psychology of the democratic individual."
+      },
+      {
+        "childIds": [
+          "n-38-7",
+          "n-38-8",
+          "n-39-1",
+          "n-39-2"
+        ],
+        "label": "Tyrannical Power and Soul",
+        "summary": "Socrates illustrates how a popular champion transforms into a tyrant who relies on purges, bodyguards, and constant war, paralleling this political degradation with the emergence of the tyrannical soul dominated by master passions and condemned to intense private and public misery.",
+        "rationale": "This group brings together the late Book VIII and early Book IX discussions detailing the rise of tyranny in the state and its psychic counterpart within the tyrannical individual."
+      },
+      {
+        "childIds": [
+          "n-39-5",
+          "n-40-2"
+        ],
+        "label": "Philosophic vs. Tyrannic Life",
+        "summary": "The philosopher's judgment that rational pleasure is superior is established through reasoned experience, culminating in a mathematical proof asserting that the lawful king lives 729 times more pleasantly than the enslaved tyrant.",
+        "rationale": "These two concluding Book IX passages establish the supreme happiness of the philosopher-king compared to the ultimate misery of the tyrant using comparative pleasure analysis and mathematical ratios."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "iRicaomeBayJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 11811,
+    "candidatesTokenCount": 755,
+    "totalTokenCount": 12566,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11811
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 755
+      }
+    ]
+  },
+  "durationMs": 7573,
+  "requestHash": "30f489d7c964030675aabc3631d183e94ab488cc3f08f6a07e57b79543ddfa88"
+}

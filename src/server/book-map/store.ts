@@ -22,6 +22,7 @@ export async function loadMapStore():Promise<MapStore> {
       const dir=path.join(root,version);
       const [g,h,preview]=await Promise.all([readFile(path.join(dir,'graph.json'),'utf8'),readFile(path.join(dir,'hierarchy.json'),'utf8'),getBookPreview()]);
       const graph=validateGraphSource(GraphSchema.parse(JSON.parse(g)),preview.sourceText,preview.fileHash);
+      if(graph.axisVersion&&!graph.axisAnalysis?.consistencyVersion)throw new Error('Map axes have not passed whole-book consistency review');
       const hierarchy=validateHierarchy(JSON.parse(h),graph);
       return createMapStore(graph,hierarchy);
     })();

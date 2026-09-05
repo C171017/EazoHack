@@ -28,6 +28,7 @@ export function spatialBatches(nodes:MapEntry[],limit=24):MapEntry[][] {
 async function writeJson(file:string,value:unknown){await mkdir(path.dirname(file),{recursive:true});const tmp=`${file}.${process.pid}.tmp`;await writeFile(tmp,JSON.stringify(value,null,2)+'\n');await rename(tmp,file);}
 async function readJson(file:string):Promise<unknown|null>{try{return JSON.parse(await readFile(file,'utf8'));}catch(e){if((e as NodeJS.ErrnoException).code==='ENOENT')return null;throw e;}}
 export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}}:{graph:Graph;outputRoot:string;generate:Generate;model:string;log?:(message:string)=>void}) {
+  if(graph.axisVersion&&!graph.axisAnalysis?.consistencyVersion)throw new Error('Complete the whole-book axis consistency review before building a published map');
   const fingerprint=createHash('sha256').update(JSON.stringify({graph,model,prompt:HIERARCHY_PROMPT_VERSION,system:HIERARCHY_SYSTEM,policy:ZOOM_POLICY.version})).digest('hex').slice(0,16);
   const version=`${HIERARCHY_PROMPT_VERSION}-${fingerprint}`,dir=path.join(outputRoot,version);
   const completed=await readJson(path.join(dir,'hierarchy.json'));

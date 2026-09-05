@@ -1,0 +1,73 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-13-1",
+        "reason": "The proposal assigns a reasoningDepth of 3.0 based on adding to n-12-5 (depth 2.5). In the catalog and whole-book ratings, n-13-1 is an editorial commentary node in the introduction analyzing Plato's computation from Book IX. Commentary summarizing or reflecting on a dialogue's mathematical figure is a meta-analytic step of depth 2.0 (or 1.0 within commentary), not an extended dialetical chain of depth 3.0 within the work's internal reasoning."
+      },
+      {
+        "nodeId": "n-14-2",
+        "reason": "The proposal assigns reasoningDepth 2.5 citing prerequisite n-14-1 (depth 2.0). In the accepted catalog and ratings, n-14-2 is an evaluative commentary reflection by Jowett proposing his own alternative aesthetic view (art mediating feeling and reason). As an interpretative commentary proposal rather than a chain inheriting multiple layers of dialectical proof across the dialogue, rating it 2.5 with cumulative whole-book depth inflation violates the calibration established in CURRENT WHOLE-BOOK RATINGS (where n-14-2 has depth 1.0)."
+      },
+      {
+        "nodeId": "n-15-1",
+        "reason": "The proposal assigns reasoningDepth 2.5 by treating n-14-7 (depth 2.0) as an inferential prerequisite that forces an increase. Jowett's reflection dismissing Niebuhr's question about Athenian loyalty is a direct historical/interpretive remark (depth 1.0 in whole-book ratings), not a multi-step deduction built on an extended argument chain."
+      },
+      {
+        "nodeId": "n-15-2",
+        "reason": "The proposal assigns depth 2.5 claiming that because n-6-4 has depth 2.0, this commentary reflection on property in antiquity must have greater depth. n-15-2 is a historical/comparative commentary passage surveying ancient property concepts and Christian communism; it does not depend on a 2.5-step cumulative proof chain."
+      },
+      {
+        "nodeId": "n-15-4",
+        "reason": "The proposal assigns reasoningDepth 2.5 by treating dialogue node n-7-5 (depth 2.0) as an inferential dependency that elevates Jowett's introductory commentary summary to 2.5. Editorial commentary summarizing Plato's arguments on women's education represents a direct expository/interpretive step (depth 1.0), not a deeper dialectical deduction extending the Book V chain."
+      },
+      {
+        "nodeId": "n-15-5",
+        "reason": "The proposal assigns reasoningDepth 2.5 based on inheriting n-8-1 (depth 2.0). n-15-5 is an expository introduction passage presenting the second paradox (community of wives/children), which is a direct thematic introduction/commentary step (depth 1.0), not an extended chain of depth 2.5."
+      },
+      {
+        "nodeId": "n-16-7",
+        "reason": "The proposal rates reasoningDepth at 2.5 by making it an inferential descendant of n-16-6 (depth 2.0). Jowett's commentary on early musical and gymnastic training in Books II-III directly examines Plato's educational framework and does not represent an extended chain depending on the lifelong education thesis of n-16-6; its established depth is 1.0."
+      },
+      {
+        "nodeId": "n-17-2",
+        "reason": "The proposal assigns reasoningDepth 2.5 as a dialectical advance over n-16-6. n-17-2 is an expository and critical commentary assessment of Plato's transition to dialectic and the Idea of the Good (depth 1.0), not an extended inference chain building cumulatively upon n-16-6."
+      },
+      {
+        "nodeId": "n-17-3",
+        "reason": "The proposal assigns reasoningDepth 2.5 by chaining it onto n-16-6. Jowett's evaluative remarks contrasting ancient lifelong education with modern self-education is a direct evaluative reflection (depth 1.0), not a multi-tier dialectical derivation."
+      },
+      {
+        "nodeId": "n-21-5",
+        "reason": "The proposal rates reasoningDepth at 3.5, claiming it inherits the chain leading to n-21-3 (depth 3.0). Socrates' confession of aporia ('the result of the whole discussion has been that I know nothing at all') is a retrospective self-assessment and dramatic conclusion of Book I recognizing the failure to define justice, not a 3.5-depth constructive derivation; it is calibrated at depth 1.0."
+      },
+      {
+        "nodeId": "n-23-3",
+        "reason": "The proposal assigns reasoningDepth 2.5 claiming Socrates advances a step beyond n-23-2 (depth 2.0). In Book II (p-686092, p-686977), resolving the tension between spirit and gentleness via the dog analogy is a single local analogical deduction directly addressing the guardian's temperament, calibrated at depth 1.0, not a 2.5-level chained argument."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "WhmcarWJFv6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 116683,
+    "candidatesTokenCount": 1258,
+    "totalTokenCount": 117941,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 116683
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1258
+      }
+    ]
+  },
+  "durationMs": 12822,
+  "requestHash": "0ea6966c009e210943136665194ffa45c819184a8f032a97e9a563d4e7d13a00"
+}

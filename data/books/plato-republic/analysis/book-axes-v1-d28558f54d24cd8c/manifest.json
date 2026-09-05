@@ -1,7 +1,609 @@
 {
-  "status": "running",
+  "status": "complete",
   "version": "book-axes-v1-d28558f54d24cd8c",
   "sourceGraphVersion": "text-graph-v1-19d6e62b3ceb-319034f3",
+  "axisVersion": "reasoning-generality-v1",
   "model": "gemini-3.8-flash",
-  "axisVersion": "reasoning-generality-v1"
+  "nodes": 288,
+  "unknown": 0,
+  "validatedCalls": [
+    {
+      "key": "axes-1",
+      "usage": {
+        "promptTokenCount": 49071,
+        "candidatesTokenCount": 3201,
+        "totalTokenCount": 52272,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 49071
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3201
+          }
+        ]
+      },
+      "durationMs": 20660,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-1-review-0",
+      "usage": {
+        "promptTokenCount": 51498,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 51507,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 51498
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 5452,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-2",
+      "usage": {
+        "promptTokenCount": 60899,
+        "candidatesTokenCount": 4952,
+        "totalTokenCount": 65851,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 60899
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4952
+          }
+        ]
+      },
+      "durationMs": 31351,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-2-review-0",
+      "usage": {
+        "promptTokenCount": 65609,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 65618,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 65609
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 6004,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-4",
+      "usage": {
+        "promptTokenCount": 46907,
+        "candidatesTokenCount": 5411,
+        "totalTokenCount": 52318,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 46907
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5411
+          }
+        ]
+      },
+      "durationMs": 31287,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-3",
+      "usage": {
+        "promptTokenCount": 51877,
+        "candidatesTokenCount": 5789,
+        "totalTokenCount": 57666,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 51877
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5789
+          }
+        ]
+      },
+      "durationMs": 31765,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-3-review-0",
+      "usage": {
+        "promptTokenCount": 71038,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 71047,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 71038
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 6855,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-4-review-0",
+      "usage": {
+        "promptTokenCount": 77751,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 77760,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 77751
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 9362,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-5",
+      "usage": {
+        "promptTokenCount": 49179,
+        "candidatesTokenCount": 4742,
+        "totalTokenCount": 53921,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 49179
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4742
+          }
+        ]
+      },
+      "durationMs": 27797,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-6",
+      "usage": {
+        "promptTokenCount": 43509,
+        "candidatesTokenCount": 5317,
+        "totalTokenCount": 48826,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 43509
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5317
+          }
+        ]
+      },
+      "durationMs": 31108,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-5-review-0",
+      "usage": {
+        "promptTokenCount": 53183,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 53192,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 53183
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3638,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-6-review-0",
+      "usage": {
+        "promptTokenCount": 46644,
+        "candidatesTokenCount": 117,
+        "totalTokenCount": 46761,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 46644
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 117
+          }
+        ]
+      },
+      "durationMs": 4847,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-6-revision-1",
+      "usage": {
+        "promptTokenCount": 47101,
+        "candidatesTokenCount": 4815,
+        "totalTokenCount": 51916,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 47101
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4815
+          }
+        ]
+      },
+      "durationMs": 25592,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-6-review-1",
+      "usage": {
+        "promptTokenCount": 46647,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 46656,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 46647
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3232,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-8",
+      "usage": {
+        "promptTokenCount": 41821,
+        "candidatesTokenCount": 4830,
+        "totalTokenCount": 46651,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 41821
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4830
+          }
+        ]
+      },
+      "durationMs": 29245,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-8-review-0",
+      "usage": {
+        "promptTokenCount": 50632,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 50641,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 50632
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3764,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-7",
+      "usage": {
+        "promptTokenCount": 44045,
+        "candidatesTokenCount": 4877,
+        "totalTokenCount": 48922,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 44045
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4877
+          }
+        ]
+      },
+      "durationMs": 54731,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-7-review-0",
+      "usage": {
+        "promptTokenCount": 51942,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 51951,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 51942
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4249,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-9",
+      "usage": {
+        "promptTokenCount": 39831,
+        "candidatesTokenCount": 4007,
+        "totalTokenCount": 43838,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 39831
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4007
+          }
+        ]
+      },
+      "durationMs": 24040,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-9-review-0",
+      "usage": {
+        "promptTokenCount": 48370,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 48379,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 48370
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3694,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-10",
+      "usage": {
+        "promptTokenCount": 37881,
+        "candidatesTokenCount": 5122,
+        "totalTokenCount": 43003,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 37881
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5122
+          }
+        ]
+      },
+      "durationMs": 29828,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-10-review-0",
+      "usage": {
+        "promptTokenCount": 54808,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 54817,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 54808
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3754,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-12",
+      "usage": {
+        "promptTokenCount": 49253,
+        "candidatesTokenCount": 4375,
+        "totalTokenCount": 53628,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 49253
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4375
+          }
+        ]
+      },
+      "durationMs": 26974,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-12-review-0",
+      "usage": {
+        "promptTokenCount": 51896,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 51905,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 51896
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3837,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-11",
+      "usage": {
+        "promptTokenCount": 39933,
+        "candidatesTokenCount": 5565,
+        "totalTokenCount": 45498,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 39933
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5565
+          }
+        ]
+      },
+      "durationMs": 34289,
+      "modelVersion": "gemini-3.8-flash"
+    },
+    {
+      "key": "axes-11-review-0",
+      "usage": {
+        "promptTokenCount": 64902,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 64911,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 64902
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4385,
+      "modelVersion": "gemini-3.8-flash"
+    }
+  ]
 }

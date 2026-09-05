@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-3-5",
+          "n-5-1",
+          "n-5-6"
+        ],
+        "label": "Foundations of Justice and Truth",
+        "summary": "Commentary establishes the structural unity of justice in the individual and the commonwealth, explores the conceptual purity of justice isolated from external reward, and contrasts supreme intellectual deception in the soul with permissible state fiction.",
+        "rationale": "Early commentary leaves (Z < 0.1) addressing fundamental definitions of justice, ethical ideals, and truth versus falsehood."
+      },
+      {
+        "childIds": [
+          "n-9-6",
+          "n-12-4",
+          "n-12-7",
+          "n-16-4"
+        ],
+        "label": "The Philosopher and Ideal Rule",
+        "summary": "These passages consider the nature and civic role of the philosopher, evaluating reason's superior pleasure, the mandatory descent to rule the cave, the paradox of the speculative statesman, and the ideal city as an internal celestial pattern.",
+        "rationale": "Coherent thematic focus on the philosophical character, pleasure hierarchy, and the dilemma of governance according to an ideal pattern."
+      },
+      {
+        "childIds": [
+          "n-14-1",
+          "n-14-7",
+          "n-16-5"
+        ],
+        "label": "Critique of Platonic Dialectic",
+        "summary": "Commentary analyzes Plato's hostility to the emotionalism of poetic imitation, his impossible amalgamation of historical reality with philosophical pattern, and his imperfect analogy between the single individual and the collective state.",
+        "rationale": "Critiques of Platonic theoretical methods, including his treatment of arts, the vision of the state, and political analogies."
+      },
+      {
+        "childIds": [
+          "n-15-3",
+          "n-15-6",
+          "n-15-7",
+          "n-16-2"
+        ],
+        "label": "Reappraisal of Social Order",
+        "summary": "This sequence interrogates Plato's radical social structures, exploring the contingent evolution of private property while condemning his state breeding schemes, the artificial selection of humans, and the dismantlement of the natural family.",
+        "rationale": "Tightly clustered commentary leaves (Z = 0.30–0.33) explicitly examining and critiquing Plato's social engineering (property, breeding, and family)."
+      },
+      {
+        "childIds": [
+          "n-18-7"
+        ],
+        "label": "Modern Dual Ideals and Faith",
+        "summary": "Modern thought centers on two great ideals: the future progress of humanity in this world and the eternal future of the individual, both harmonized when surrendered to divine will.",
+        "rationale": "Carried singleton reflecting an isolated modern philosophical synthesis bridging worldly progress and transcendent religious hope."
+      },
+      {
+        "childIds": [
+          "n-19-5",
+          "n-21-2",
+          "n-21-3"
+        ],
+        "label": "Socratic Defense of Justice",
+        "summary": "Socrates argues dialectically in Book I that justice intrinsically cannot harm anyone, that a just soul necessarily lives well and happily, and that justice remains fundamentally more profitable than misery.",
+        "rationale": "Direct Book I dialogue occurrences featuring Socrates's formal refutation of injustice and harm."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "oRicavWhJ9uTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 15366,
+    "candidatesTokenCount": 813,
+    "totalTokenCount": 16179,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15366
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 813
+      }
+    ]
+  },
+  "durationMs": 9066,
+  "requestHash": "5d324c2af29ed481a02e0b5108189cb91689350d5b255cb9a130d3af8e9ca3c2"
+}

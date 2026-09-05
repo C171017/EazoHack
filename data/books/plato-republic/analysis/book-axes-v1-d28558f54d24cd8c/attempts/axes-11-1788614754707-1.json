@@ -1,0 +1,636 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-39-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates extends the development of degenerate regimes into the individual psyche, building on the distinction between necessary and unnecessary desires (n-38-3) and the emergence of the democratic person to infer how an unchecked master passion captures the tyrannical soul.",
+            "anchorIds": [
+              "p-1160395",
+              "p-1160857",
+              "p-1163702"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "The claim characterizes the genesis and psychic profile of a specific constitutional personality type: the tyrannical individual.",
+            "anchorIds": [
+              "p-1160395",
+              "p-1163702"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Deduces from the psychic dysfunction of the tyrannical man (n-39-1) and the structural pressures of public rule that possessing absolute political power compounds his misery and enslavement to fear.",
+            "anchorIds": [
+              "p-1178274",
+              "p-1179542",
+              "p-1181204"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Covers the comparative condition of tyrannical individuals, specifically contrasting the private tyrant with the public ruler.",
+            "anchorIds": [
+              "p-1178274",
+              "p-1181204"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "This serves as the overarching verdict resolving the book-long challenge posed by Glaucon and Adeimantus, resting upon the detailed fivefold parallel between constitutions and human souls (n-28-6, n-37-1, n-39-2).",
+            "anchorIds": [
+              "p-1183000",
+              "p-1183667"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-6",
+              "n-37-1",
+              "n-39-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "States an expansive ethical principle comparing the happiness and misery of all human character types from the most just to the most unjust.",
+            "anchorIds": [
+              "p-1183000",
+              "p-1183667"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates recalls the tripartite division of the soul established in Book IV (n-28-3) and deduces that each part has its own distinctive appetite, pleasure, and corresponding class of human nature.",
+            "anchorIds": [
+              "p-1184369",
+              "p-1184738",
+              "p-1186191"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a comprehensive taxonomy of human drives, pleasures, and character classes applicable across human nature generally.",
+            "anchorIds": [
+              "p-1184369",
+              "p-1186191"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Builds directly upon the threefold division of pleasures (n-39-4) and the definition of the philosopher's nature (n-32-2) to infer that only the philosopher possesses both experience and reasoned judgment.",
+            "anchorIds": [
+              "p-1188142",
+              "p-1189548",
+              "p-1190528"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2",
+              "n-39-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Pertains specifically to the comparative evaluation and hierarchy among the three types of pleasure and their respective adherents.",
+            "anchorIds": [
+              "p-1188142",
+              "p-1190528"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Introduces an analytical distinction between true positive pleasure, pain, and neutral rest, showing through basic observation of states of consciousness that mere cessation of pain is illusory pleasure.",
+            "anchorIds": [
+              "p-1191748",
+              "p-1193308",
+              "p-1194224"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates a broad psychological and phenomenological principle governing the nature of pleasure and pain generally.",
+            "anchorIds": [
+              "p-1193308",
+              "p-1194224"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Cites the specific sensory experience of pleasant smells as an empirical counterexample to demonstrate that not all pleasures are preceded by pain.",
+            "anchorIds": [
+              "p-1194013"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Restricted to a single particular sensory class (olfactory pleasures) acting as an illustrative counterexample.",
+            "anchorIds": [
+              "p-1194013"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Synthesizes the phenomenological critique of illusory pleasure (n-39-6) with the metaphysical hierarchy of being versus becoming (n-31-5, n-31-6) to argue that satisfaction in eternal truths is more real than bodily replenishment.",
+            "anchorIds": [
+              "p-1195343",
+              "p-1196527",
+              "p-1197992"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-5",
+              "n-31-6",
+              "n-39-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a wide ontological standard defining what constitutes authentic versus illusory pleasure across all subjects.",
+            "anchorIds": [
+              "p-1196527",
+              "p-1197992"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Combines the regime hierarchy (n-37-1), the ranking of pleasures (n-39-5, n-40-1), and a geometric calculation of distances to compute a specific numerical ratio (729) between the king and the tyrant.",
+            "anchorIds": [
+              "p-1202114",
+              "p-1202883",
+              "p-1203397"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-1",
+              "n-39-5",
+              "n-40-1"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "A specialized quasi-mathematical calculation comparing two specific extreme lives on the constitutional spectrum.",
+            "anchorIds": [
+              "p-1202114",
+              "p-1203397"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Constructs an allegorical model visualizing the tripartite division of the soul established earlier (n-28-3, n-39-4), mapping beast, lion, and man onto appetite, spirit, and reason.",
+            "anchorIds": [
+              "p-1205019",
+              "p-1205276",
+              "p-1205630"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3",
+              "n-39-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Proposes a general structural image representing the internal psychological makeup of all human beings.",
+            "anchorIds": [
+              "p-1205019",
+              "p-1205630"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Applies the composite soul image (n-40-3) directly to refute Thrasymachus's and Glaucon's praise of injustice (n-20-3, n-22-3), deducing that injustice inherently enslaves the rational person to a wild monster.",
+            "anchorIds": [
+              "p-1206266",
+              "p-1206893",
+              "p-1207790"
+            ],
+            "prerequisiteNodeIds": [
+              "n-40-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A universal ethical refutation of the profitability of injustice versus justice for any moral agent.",
+            "anchorIds": [
+              "p-1206266",
+              "p-1207790"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Derives from the rule of reason in the individual (n-40-4) that individuals lacking internal rational governance must be directed by external authority and law, as exemplified in child-rearing.",
+            "anchorIds": [
+              "p-1210385",
+              "p-1210967"
+            ],
+            "prerequisiteNodeIds": [
+              "n-40-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Establishes a broad normative principle of moral and political governance applicable across society and developmental stages.",
+            "anchorIds": [
+              "p-1210385",
+              "p-1210967"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Concludes the ethical defense of justice by linking internal psychic attunement (n-28-4, n-40-4) with the ideal state pattern (n-30-3), affirming that the sage orders their life by the heavenly city regardless of earthly politics.",
+            "anchorIds": [
+              "p-1212681",
+              "p-1213437",
+              "p-1214526"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4",
+              "n-30-3",
+              "n-40-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Articulates a fundamental paradigm of life and moral self-governance for the philosophical individual.",
+            "anchorIds": [
+              "p-1213437",
+              "p-1214526"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates reopens the critique of poetry, explicitly noting that the banishment is confirmed more firmly now that the distinct parts of the soul have been established (n-28-3).",
+            "anchorIds": [
+              "p-1215142",
+              "p-1215403"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-4",
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Applies a normative judgment to the entire genre of imitative poetry and tragic drama in civic life.",
+            "anchorIds": [
+              "p-1215142",
+              "p-1215403"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Introduces the ontology of Forms (Idea, physical artifact, artistic depiction) using the three beds as an illustrative argument about degrees of reality.",
+            "anchorIds": [
+              "p-1219876",
+              "p-1220256",
+              "p-1221498"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates a general metaphysical hierarchy distinguishing between the Form, the sensible particular, and the mimetic image.",
+            "anchorIds": [
+              "p-1219876",
+              "p-1221498"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Directly deduces from the three-tiered model of reality (n-41-2) that mimetic artists and poets produce representations of appearances, remaining thrice removed from genuine truth.",
+            "anchorIds": [
+              "p-1221711",
+              "p-1222817",
+              "p-1229528"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-2"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Covers all imitative artists and poets, focusing prominently on the authority of Homer and tragedians.",
+            "anchorIds": [
+              "p-1221711",
+              "p-1229528"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Distinguishes three epistemological relations to any object (user, maker, imitator) and concludes that the imitator has neither knowledge nor correct opinion.",
+            "anchorIds": [
+              "p-1231661",
+              "p-1232714",
+              "p-1233259"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-4",
+              "n-41-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A general triadic framework covering all human artifacts and arts.",
+            "anchorIds": [
+              "p-1231661",
+              "p-1232714",
+              "p-1233259"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Couples the epistemological defect of imitation (n-41-3, n-41-4) with psychological analysis of the soul (n-28-3) to argue that poetic imitation feeds and strengthens the irrational appetites against reason.",
+            "anchorIds": [
+              "p-1236050",
+              "p-1241049",
+              "p-1245182"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3",
+              "n-41-3"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Applies across all emotional and imitative art forms regarding their psychological impact on audience virtue.",
+            "anchorIds": [
+              "p-1241049",
+              "p-1245182"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Reflects upon the longstanding rivalry between poetry and philosophy, synthesizing the dialogue's aesthetic critiques to offer conditions under which poetry could be permitted to return.",
+            "anchorIds": [
+              "p-1246643",
+              "p-1247974",
+              "p-1248462"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-1",
+              "n-41-5"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Pertains broadly to the cultural and philosophical standing of the entire discipline of poetry within a well-ordered state.",
+            "anchorIds": [
+              "p-1246643",
+              "p-1248462"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates abruptly introduces the claim that the soul is immortal into the conversation, startling Glaucon and initiating a new demonstration.",
+            "anchorIds": [
+              "p-1250336",
+              "p-1250672",
+              "p-1250751"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Proposes a universal metaphysical claim about the eternal, imperishable nature of all human souls.",
+            "anchorIds": [
+              "p-1250672",
+              "p-1250751"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Constructs a linked metaphysical argument: things are destroyed only by their specific inherent evil; the soul's evil is moral vice, which corrupts but does not destroy its existence; therefore, the soul is indestructible and immortal.",
+            "anchorIds": [
+              "p-1251856",
+              "p-1254311",
+              "p-1256444"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-7"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "A general ontological argument concerning the destruction of substances and the immortality of the soul.",
+            "anchorIds": [
+              "p-1251856",
+              "p-1256444"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Follows from the soul's immortality (n-42-1), contrasting the composite, encrusted state of the incarnate soul (Glaucus simile) with its true rational essence revealed through its love of wisdom.",
+            "anchorIds": [
+              "p-1257478",
+              "p-1258608"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Characterizes the essential, divine nature of the human soul prior to bodily contamination.",
+            "anchorIds": [
+              "p-1257478",
+              "p-1258608"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "With the internal value of justice settled (n-40-4) and the soul's immortality proven (n-42-1), Socrates formally lifts the initial restriction from Book II (n-22-5), restoring external reputational and divine rewards.",
+            "anchorIds": [
+              "p-1259504",
+              "p-1260719",
+              "p-1261823"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-5",
+              "n-40-4",
+              "n-42-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Asserts a general theological and social law regarding the consequences that attend just persons in life and death.",
+            "anchorIds": [
+              "p-1260719",
+              "p-1261823"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Introduces the eschatological Myth of Er as an illustrative narrative grounding post-mortem rewards and tenfold retributions for actions in life.",
+            "anchorIds": [
+              "p-1265362",
+              "p-1267558",
+              "p-1269757"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Presents a mythical narrative detailing specific post-mortem judgements, journey intervals, and the concrete punishment of tyrants like Ardiaeus.",
+            "anchorIds": [
+              "p-1265362",
+              "p-1267558",
+              "p-1269757"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "QBicatqUMr-Sx9gPmNDRsQI",
+  "usage": {
+    "promptTokenCount": 39933,
+    "candidatesTokenCount": 5565,
+    "totalTokenCount": 45498,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39933
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5565
+      }
+    ]
+  },
+  "durationMs": 34289,
+  "requestHash": "95edab7c5e573366e7adf22cbe902da0d97b7cbf12539482d3bb8a0a347ce838"
+}

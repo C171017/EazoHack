@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-24-4",
+          "n-25-5",
+          "n-26-5",
+          "n-27-4",
+          "n-28-1"
+        ],
+        "label": "Civic Order and Guardian Roles",
+        "summary": "Socrates establishes foundational civic disciplines by restricting dramatic imitation, rejecting lingering medical pampering, and barring guardians from private wealth. He subsequently defines civic wisdom, courage, and justice through specialized classes attending strictly to their designated functions.",
+        "rationale": "Consecutive Books III and IV passages defining the structure of the civic classes, their strict functional specialization, and the core virtues of the ideal state."
+      },
+      {
+        "childIds": [
+          "n-29-4",
+          "n-30-1",
+          "n-32-7",
+          "n-33-3",
+          "n-35-6"
+        ],
+        "label": "Philosophic Rule and Reform",
+        "summary": "The dialogue explores radical reforms including equal distribution of civic gifts to women, organic communal unity, and the rare emergence and rule of philosophers. It addresses the isolation of unaligned philosophers in corrupt regimes and prescribes mathematical calculation to orient the soul toward absolute being.",
+        "rationale": "Central dialogue arguments from Books V, VI, and VII detailing the radical communal institutions, the feasibility and plight of philosopher-rulers, and dialectical education."
+      },
+      {
+        "childIds": [
+          "n-42-4"
+        ],
+        "label": "Posthumous Judgement of Er",
+        "summary": "Socrates narrates the journey of Er, recounting the post-mortem judgement of souls, tenfold retributions or rewards for deeds, and the terrifying eternal fate of incurable tyrants like Ardiaeus.",
+        "rationale": "A solitary Book X eschatological narrative passage distinct in theme and position from the Books III–VII political discussions and the late editorial commentary."
+      },
+      {
+        "childIds": [
+          "n-43-4",
+          "n-44-2",
+          "n-45-1",
+          "n-45-3"
+        ],
+        "label": "Curriculum, Poetry, and Polities",
+        "summary": "Editorial analyses survey the two-tier educational curriculum, the role of ancient music, and the critique that leads to censoring or banishing poetry. They also trace Plato's degeneration of constitutions from aristocracy down to tyranny alongside the tripartite divisions of the soul.",
+        "rationale": "Paratextual and editorial apparatus entries synthesizing Plato's educational framework, cultural criticism of poetry and music, and psychological-constitutional taxonomy."
+      },
+      {
+        "childIds": [
+          "n-46-1",
+          "n-46-2",
+          "n-46-3"
+        ],
+        "label": "Historical and Ideal State Models",
+        "summary": "The commentary breaks down the Republic's commonwealth into its historical Spartan and Athenian roots alongside its unprecedented ideal innovations. It highlights communal property, the inclusion of women, and the unprecedented dominion of philosophers as visionary constructs beyond standard Greek antiquity.",
+        "rationale": "A cohesive sequence of editorial notes analyzing the dual historical grounding and theoretical innovations of Plato's ideal state."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "iBicaq_CIduTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 16057,
+    "candidatesTokenCount": 771,
+    "totalTokenCount": 16828,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16057
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 771
+      }
+    ]
+  },
+  "durationMs": 6358,
+  "requestHash": "06678434ead472377f51f517acadb4fe816200cb3a1f12a6418f1c27a5461e2a"
+}

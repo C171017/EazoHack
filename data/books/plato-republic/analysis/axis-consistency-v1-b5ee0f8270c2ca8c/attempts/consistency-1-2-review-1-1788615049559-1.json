@@ -1,0 +1,69 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-13-1",
+        "reason": "The proposed assignment lists n-12-5 as a prerequisite, but n-12-5 has a reasoning depth of 2.5, which contradicts assigning n-13-1 a reasoning depth of 2 (a node depending directly on a prerequisite at depth 2.5 cannot have a lower depth of 2)."
+      },
+      {
+        "nodeId": "n-15-1",
+        "reason": "The proposed assignment names n-14-7 as a prerequisite, but n-14-7 has a depth of 2, while n-15-1 is assigned a depth of 1, violating the monotonicity of reasoning depth across direct prerequisite dependencies."
+      },
+      {
+        "nodeId": "n-15-2",
+        "reason": "The proposal names n-6-4 as a prerequisite, which has depth 2, whereas n-15-2 is assigned depth 1, violating dependency depth ordering."
+      },
+      {
+        "nodeId": "n-15-4",
+        "reason": "The proposal names n-7-5 as a prerequisite, which has depth 2, but assigns n-15-4 a depth of 1, violating prerequisite depth consistency."
+      },
+      {
+        "nodeId": "n-15-5",
+        "reason": "The proposal names n-8-1 as a prerequisite, which has depth 2, but assigns n-15-5 a depth of 1, contradicting depth monotonicity."
+      },
+      {
+        "nodeId": "n-16-7",
+        "reason": "The proposal names n-16-6 as a prerequisite, which has depth 2, while n-16-7 is assigned depth 1, violating dependency depth ordering."
+      },
+      {
+        "nodeId": "n-17-2",
+        "reason": "The proposal lists n-16-6 as a prerequisite, which has depth 2, yet assigns n-17-2 a depth of 1, violating dependency depth ordering."
+      },
+      {
+        "nodeId": "n-17-3",
+        "reason": "The proposal designates n-16-6 as a prerequisite, which has depth 2, yet n-17-3 is assigned depth 1, violating depth consistency."
+      },
+      {
+        "nodeId": "n-21-5",
+        "reason": "The proposed prerequisite n-21-3 has depth 3, whereas n-21-5 is assigned depth 1, contradicting the requirement that dependent nodes cannot have a lower depth than their direct prerequisite."
+      },
+      {
+        "nodeId": "n-23-3",
+        "reason": "The proposal assigns n-23-3 a depth of 1 while citing n-23-2 as a prerequisite, but n-23-2 is rated at depth 2, creating an inconsistent and inverted depth relation."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "gRmcatHHIqyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 116371,
+    "candidatesTokenCount": 706,
+    "totalTokenCount": 117077,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 116371
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 706
+      }
+    ]
+  },
+  "durationMs": 8668,
+  "requestHash": "07599785b439104434e0448737cf804b8e6e92347b9c0857c1fba2dc10e72148"
+}

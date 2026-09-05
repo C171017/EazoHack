@@ -1,0 +1,65 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-5-5",
+        "reason": "prerequisiteNodeIds contains 'n-5-4' (reasoningDepth 2), but n-5-5 is assigned reasoningDepth 1, violating total-depth consistency where depth must reflect the cumulative reasoning chain rather than being less than or equal to a direct prerequisite."
+      },
+      {
+        "nodeId": "n-8-5",
+        "reason": "prerequisiteNodeIds contains 'n-8-3' (reasoningDepth 2), yet n-8-5 is assigned reasoningDepth 1, violating total-depth accumulation across prerequisite nodes."
+      },
+      {
+        "nodeId": "n-9-2",
+        "reason": "prerequisiteNodeIds contains 'n-9-1' (reasoningDepth 2), but n-9-2 is assigned reasoningDepth 1, violating total-depth monotonicity."
+      },
+      {
+        "nodeId": "n-9-5",
+        "reason": "prerequisiteNodeIds contains 'n-9-1' (depth 2) and 'n-9-2', but n-9-5 is assigned reasoningDepth 1, failing total-depth consistency."
+      },
+      {
+        "nodeId": "n-10-5",
+        "reason": "prerequisiteNodeIds contains 'n-10-1' (depth 1) and 'n-10-2' (depth 1.5), yet n-10-5 is assigned reasoningDepth 1, which fails to reflect the cumulative depth of its prerequisites."
+      },
+      {
+        "nodeId": "n-11-6",
+        "reason": "prerequisiteNodeIds contains 'n-11-1' (reasoningDepth 2), while n-11-6 is assigned reasoningDepth 1, contradicting the cumulative depth of its prerequisite."
+      },
+      {
+        "nodeId": "n-11-7",
+        "reason": "prerequisiteNodeIds contains 'n-11-1' (reasoningDepth 2), while n-11-7 is assigned reasoningDepth 1, violating total-depth consistency."
+      },
+      {
+        "nodeId": "n-12-2",
+        "reason": "prerequisiteNodeIds contains 'n-11-5' (reasoningDepth 2.5), but n-12-2 is assigned reasoningDepth 2, which is lower than its immediate prerequisite."
+      },
+      {
+        "nodeId": "n-12-6",
+        "reason": "prerequisiteNodeIds contains 'n-7-3' (reasoningDepth 3), but n-12-6 is assigned reasoningDepth 2, violating total-depth accumulation."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "dxmcavX3Av6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 120320,
+    "candidatesTokenCount": 646,
+    "totalTokenCount": 120966,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 120320
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 646
+      }
+    ]
+  },
+  "durationMs": 7847,
+  "requestHash": "26955d6084d3ded8ed453c8adfd19dd9441a9894bae94fb974572706191db9f7"
+}

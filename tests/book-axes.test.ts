@@ -11,6 +11,7 @@ import { createSampleGraph } from '../src/features/book-graph/sample-graph';
 import { getBookPreview } from '../src/features/reader/book-preview';
 import { clusterEntry, leafEntry, validateHierarchy } from '../src/shared/zoom-hierarchy';
 import { nodeDetail, createMapStore, unplacedNotes } from '../src/server/book-map/store';
+import { calibrateBookAxes, depthInconsistencies } from '../src/server/book-analysis/axis-calibration';
 
 test('axis reassessment preserves source, supports fractional/unknown values, reviews corrections, and resumes safely',async()=>{
   const graph=createSampleGraph(await getBookPreview()),dir=await mkdtemp(path.join(os.tmpdir(),'eazo-axes-'));
@@ -78,4 +79,37 @@ test('unaccepted or malformed axis responses never overwrite a published graph',
     await assert.rejects(assignBookAxes({graph,outputRoot:dir,model:'fixture',generate:async()=>({value:{assignments:[]},model:'fixture',modelVersion:'fixture',usage:{},durationMs:1})}));
     assert.equal(await readFile(path.join(dir,'current-graph.json'),'utf8'),'working graph');
   } finally {await rm(dir,{recursive:true,force:true});}
+});
+
+test('whole-book calibration catches cross-batch depth inversions and replays reviewed corrections',async()=>{
+  const legacy=createSampleGraph(await getBookPreview()),dir=await mkdtemp(path.join(os.tmpdir(),'eazo-axis-consistency-'));
+  const graph=GraphSchema.parse({...legacy,axisVersion:'reasoning-generality-v1',axisAnalysis:{model:'fixture',promptVersion:'book-axes-v1',sourceGraphVersion:legacy.graphVersion,reviewStatus:'model_reviewed',completedAt:new Date().toISOString()},nodes:legacy.nodes.map((n,i)=>{
+    const value=i===0?2:i===1?1:0;
+    return {...n,position:{...n.position,x:value/4,y:2},axisAssessment:{reasoningDepth:{value,rationale:'Fixture internal inference.',anchorIds:n.anchorIds,prerequisiteNodeIds:i===1?[legacy.nodes[0].id]:[]},generality:{value:2,rationale:'Fixture scope.',anchorIds:n.anchorIds}}};
+  })});
+  let calls=0;
+  const generate:Generate=async(_system,prompt,schema)=>{
+    calls++;let value:unknown={rejected:[]};
+    if(schema===AxisBatchSchema){
+      const data=JSON.parse(prompt.split('DATA:\n')[1]);
+      value={assignments:data.targets.map((nodeId:string)=>{
+        const assessment=structuredClone(data.currentRatings.find((r:{nodeId:string})=>r.nodeId===nodeId).assessment);
+        assessment.reasoningDepth.value=2;
+        return {nodeId,assessment};
+      })};
+    }
+    return {value,model:'fixture',modelVersion:'fixture',usage:{},durationMs:1};
+  };
+  try {
+    assert.equal(depthInconsistencies(graph).length,1);
+    const result=await calibrateBookAxes({graph,outputRoot:dir,model:'fixture',generate});
+    assert.equal(result.axisAnalysis?.consistencyVersion,'axis-consistency-v1');
+    assert.equal(depthInconsistencies(result).length,0);
+    assert.equal(result.nodes[1].axisAssessment!.reasoningDepth.value,2);
+    const before=calls;assert.deepEqual(await calibrateBookAxes({graph,outputRoot:dir,model:'fixture',generate}),result);assert.equal(calls,before);
+    const bad=structuredClone(result);bad.nodes[1].axisAssessment!.reasoningDepth.value=1;bad.nodes[1].position.x=.25;
+    assert.equal(GraphSchema.safeParse(bad).success,false);
+    const unknown=structuredClone(result);unknown.nodes[0].axisAssessment!.reasoningDepth.value=null;unknown.nodes[0].position.x=null;
+    assert.equal(GraphSchema.safeParse(unknown).success,false);
+  }finally{await rm(dir,{recursive:true,force:true});}
 });

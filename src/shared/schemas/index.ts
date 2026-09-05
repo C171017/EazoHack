@@ -97,7 +97,7 @@ const Evidence = z.object({ rationale: Text, ruleVersion: Id, confidence: Unit.n
 export const GraphSchema = z.object({
   id: Id, bookId: Id, graphVersion: Id, fileHash: Text, extractionVersion: Id,
   axisVersion: z.literal(BOOK_AXIS_VERSION).optional(),
-  axisAnalysis: z.object({model: ShortText, promptVersion: Id, sourceGraphVersion: Id, reviewStatus: z.literal('model_reviewed'), completedAt: IsoDate}).strict().optional(),
+  axisAnalysis: z.object({model: ShortText, promptVersion: Id, sourceGraphVersion: Id, reviewStatus: z.literal('model_reviewed'), consistencyVersion:z.literal('axis-consistency-v1').optional(), completedAt: IsoDate}).strict().optional(),
   sourceLength: z.number().int().positive(),
   analysis: z.object({
     status: z.literal('complete'), provider: z.literal('vertex_ai'), model: ShortText,
@@ -152,6 +152,10 @@ export const GraphSchema = z.object({
         }
         if(a.reasoningDepth.prerequisiteNodeIds.some(id => id === n.id || !nodes.has(id))) fail('Invalid reasoning prerequisite');
         if(a.reasoningDepth.value === 0 && a.reasoningDepth.prerequisiteNodeIds.length) fail('A starting point cannot also have reasoning prerequisites');
+        if(graph.axisAnalysis?.consistencyVersion && a.reasoningDepth.value!==null)for(const id of a.reasoningDepth.prerequisiteNodeIds) {
+          const prerequisite=nodes.get(id)?.axisAssessment?.reasoningDepth.value;
+          if(prerequisite===null || (prerequisite!==undefined && prerequisite>a.reasoningDepth.value))fail('Reasoning depth must include its prerequisite depth, including uncertainty');
+        }
       }
     } else {
       if(n.axisAssessment) fail('Axis assessments require an explicit version');

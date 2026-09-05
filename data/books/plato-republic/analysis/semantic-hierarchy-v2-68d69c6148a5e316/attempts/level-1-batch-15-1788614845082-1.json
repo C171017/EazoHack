@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-27-5",
+          "n-27-6",
+          "n-28-3",
+          "n-28-4",
+          "n-28-5",
+          "n-29-3"
+        ],
+        "label": "Civic and Psychic Harmony",
+        "summary": "Socrates formulates justice and temperance across both the polis and the soul, establishing that order arises when each natural part fulfills its distinct role under the governance of reason. This balance defines the health of the tripartite individual and guides civic division of labor regardless of incidental bodily differences.",
+        "rationale": "These Book IV and V passages develop the structural parallel between the classes in the commonwealth and the tripartite soul, defining internal justice and civic harmony."
+      },
+      {
+        "childIds": [
+          "n-30-4",
+          "n-31-2",
+          "n-31-4",
+          "n-31-5",
+          "n-31-7"
+        ],
+        "label": "Knowledge, Opinion, and Rule",
+        "summary": "The proposal of philosopher-kings prompts a strict distinction between true lovers of wisdom and lovers of opinion. While ordinary perception remains trapped in fluctuating particulars, genuine philosophers grasp eternal Forms, separating infallible knowledge from fallible opinion.",
+        "rationale": "A contiguous sequence from Book V analyzing the epistemic justification for philosopher-kings by contrasting being, knowledge, and Forms with becoming and opinion."
+      },
+      {
+        "childIds": [
+          "n-34-2",
+          "n-35-5",
+          "n-36-3"
+        ],
+        "label": "Dialectic and Civic Duty",
+        "summary": "Dialectic is exalted as the supreme inquiry that discards empirical hypotheses to reach the first principle of the Good. Having attained this contemplation, philosophers are obligated to descend back into the cave to govern the commonwealth.",
+        "rationale": "Connects the Books VI and VII discussion of dialectical education with the practical political imperative for enlightened thinkers to rule."
+      },
+      {
+        "childIds": [
+          "n-41-1",
+          "n-41-3",
+          "n-41-5",
+          "n-41-6"
+        ],
+        "label": "Critique of Mimetic Poetry",
+        "summary": "Imitative poetry is banned from the commonwealth because its products are thrice removed from truth and directly stimulate the irrational, appetitive soul. Socrates acknowledges poetry's enduring allure but insists that philosophy's ancient quarrel with mimesis demands its exclusion unless its civic utility is proven.",
+        "rationale": "These Book X sections form an integrated philosophical and psychological condemnation of imitative poetry and tragic art."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "txicapaYKNuTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 10627,
+    "candidatesTokenCount": 650,
+    "totalTokenCount": 11277,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10627
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 650
+      }
+    ]
+  },
+  "durationMs": 5766,
+  "requestHash": "5b4af22dc4813a15145eacaa2c9c03649f7d317913e88e3978b4733b8c334d80"
+}

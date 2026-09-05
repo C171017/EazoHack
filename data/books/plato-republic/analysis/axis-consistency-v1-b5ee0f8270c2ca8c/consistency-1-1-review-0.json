@@ -1,0 +1,61 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-8-5",
+        "reason": "The proposal assigns reasoningDepth value 3 to n-8-5 with prerequisite n-8-3, but n-8-5 is a self-contained allegorical defense (the parable of the ship of state) answering Adeimantus's specific objection that philosophers seem useless in practical politics, which does not constitute a depth 3 extended inferential chain across arguments relative to n-8-3 (which is depth 2 in the baseline ratings). It represents a single direct allegorical/inferential step (depth 1)."
+      },
+      {
+        "nodeId": "n-9-2",
+        "reason": "The proposal assigns reasoningDepth value 2 with prerequisite n-9-1. However, in the accepted whole-book ratings, n-9-2 has depth 1, directly following from the sun analogy as a single step mapping the visible and intelligible spheres onto a divided line without an additional linked chain of deduction."
+      },
+      {
+        "nodeId": "n-9-5",
+        "reason": "The proposal assigns reasoningDepth value 2 with prerequisites n-9-1 and n-9-2. In the accepted whole-book ratings, n-9-5 is rated at depth 1 because introducing the cave allegory is an immediate allegorical image and mapping of the preceding analogies rather than an extended two-step chain of inference beyond them."
+      },
+      {
+        "nodeId": "n-10-5",
+        "reason": "The proposal assigns reasoningDepth value 2 with prerequisites n-10-1 and n-10-2. However, n-10-5 is a commentary observation by Jowett directly abstracting two overarching aims of Platonic thought (realizing and connecting abstractions) across the mathematical curriculum, which is a single local inferential step (depth 1) from the cited curriculum."
+      },
+      {
+        "nodeId": "n-11-6",
+        "reason": "The proposal assigns reasoningDepth value 2 with prerequisite n-11-1. The commentary passage evaluates Plato's cycle of regimes against Greek historical facts in a single direct analytical step, concluding that the order is conceptual rather than chronological, which is depth 1 rather than depth 2."
+      },
+      {
+        "nodeId": "n-11-7",
+        "reason": "The proposal assigns reasoningDepth value 2 with prerequisite n-11-1 and generality 2.5. In the accepted framework, synthesizing the regimes into an ethical gradation is a single synthetic step (depth 1) directly from n-11-1, and fractional values like 2.5 are unwarranted here as it neatly spans the domain of Book VIII-IX degenerate soul types (generality 2)."
+      },
+      {
+        "nodeId": "n-12-2",
+        "reason": "The proposal assigns reasoningDepth value 2.5 with arbitrary precision (.5) and generality 1.5. Tracing the development of the tyrannical individual from the democratic soul and master passion is a standard linked deduction (depth 2) covering a specific regime character type (generality 1 or 2)."
+      },
+      {
+        "nodeId": "n-12-6",
+        "reason": "The proposal assigns reasoningDepth value 3 with prerequisites n-7-3 and n-7-4. The construction of the composite image of the soul (beast, lion, man) in Book IX relies on the tripartite soul (depth 2) as an immediate illustrative personification and refutation of injustice, representing depth 2, not depth 3."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "URmcat3wDqyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 120397,
+    "candidatesTokenCount": 823,
+    "totalTokenCount": 121220,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 120397
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 823
+      }
+    ]
+  },
+  "durationMs": 10228,
+  "requestHash": "00031891503fb373994204da058354bc88c78ee3917127af4d996ece808c8171"
+}

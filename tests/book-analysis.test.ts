@@ -75,7 +75,7 @@ test('text pipeline saves exact coordinates, excludes rejected claims, resumes c
       value = { summary: 'A reading unit.', nodes: [{ label: chunk.section, identityLabel: 'Justice', summary: chunk.passages[1].text, sourceRole: 'dialogue', speaker: null, reasoningHint: 'Directly introduced.', generalityHint: 'Reusable claim.', rationale: 'A claim.', passageIds: [chunk.passages[1].id] }], edges: [] };
     } else if (schema === AxisBatchSchema) {
       const data=JSON.parse(prompt.split('DATA:\n')[1]);
-      value={assignments:data.targets.map((id:string,i:number)=>{const n=data.catalog.find((n:{id:string})=>n.id===id);return {nodeId:id,assessment:{reasoningDepth:{value:i?1.5:0,rationale:'Fixture: local inference or directly introduced.',anchorIds:n.anchorIds,prerequisiteNodeIds:[]},generality:{value:2.75,rationale:'Fixture: broad scope.',anchorIds:n.anchorIds}}};})};
+      value={assignments:data.targets.map((id:string)=>{const n=data.catalog.find((n:{id:string})=>n.id===id);return {nodeId:id,assessment:{reasoningDepth:{value:id==='n-1-1'?0:1.5,rationale:'Fixture: local inference or directly introduced.',anchorIds:n.anchorIds,prerequisiteNodeIds:[]},generality:{value:2.75,rationale:'Fixture: broad scope.',anchorIds:n.anchorIds}}};})};
     } else if (schema === AxisReviewSchema) value={rejected:[]};
     else if (schema === ReviewSchema) value = { rejectedNodes: [{ id: 'n-3-1', reason: 'Test: unsupported classification.' }], rejectedEdges: [], notes: 'Model review fixture.' };
     else if (schema === IdentityRepairSchema) value = { assignments: [{ nodeId: 'n-3-1', identityIndex: 0 }] };

@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-5",
+          "n-24-3",
+          "n-25-3",
+          "n-25-4",
+          "n-25-7",
+          "n-27-3"
+        ],
+        "label": "Education and Poetic Regulation",
+        "summary": "Socrates establishes foundational principles for early upbringing, requiring theological representations to attribute only good to the divine and defining the allowable modes of poetic imitation and simple narration. He emphasizes that simplicity and harmony in musical training and gymnastics shape character, harmonize the soul's spirited and philosophic faculties, and preserve civic order against creeping lawlessness.",
+        "rationale": "These entries from Books II–IV all treat the early curriculum, the regulation of myth, poetry, and style, and the role of musical and gymnastic training in cultivating the soul and preserving the commonwealth."
+      },
+      {
+        "childIds": [
+          "n-28-2",
+          "n-29-6",
+          "n-30-3"
+        ],
+        "label": "Civic Unity and Ideal Forms",
+        "summary": "The dialogue advances theoretical criteria for analyzing the soul and city, introducing the principle of non-contradiction to differentiate conflicting internal impulses. Socrates identifies thoroughgoing civic unity through shared pleasures and pains as the supreme political good, defending ideal patterns of justice as valid normative standards regardless of complete empirical realization.",
+        "rationale": "Spanning late Book IV and early Book V, these items establish formal structural principles: logical non-contradiction, ideal constitutional unity, and the status of ideal models as evaluative standards."
+      },
+      {
+        "childIds": [
+          "n-31-1",
+          "n-31-3",
+          "n-31-6"
+        ],
+        "label": "Forms, Particulars, and Faculties",
+        "summary": "Socrates distinguishes between unitary, unchanging forms and fluctuating sensory particulars that ambiguously manifest contradictory qualities. To analyze cognitive relation to these realms, faculties are defined as internal capacities demarcated strictly by their distinct domains of operation and their respective outcomes.",
+        "rationale": "These three adjacent passages from Book V form a cohesive epistemological and ontological sequence analyzing the nature of the forms, the instability of sensory particulars, and the definition of cognitive faculties."
+      },
+      {
+        "childIds": [
+          "n-32-2",
+          "n-32-4",
+          "n-32-8",
+          "n-33-1"
+        ],
+        "label": "The Philosopher and the City",
+        "summary": "Socrates details the innate intellectual and moral virtues required of true philosophers, contrasting them with their disenfranchisement in current polities through the parable of the mutinous ship. He argues that existing constitutions inevitably corrupt philosophical natures and proposes a lifelong developmental regimen pairing youthful bodily conditioning with mature dialectical mastery.",
+        "rationale": "These entries from Book VI focus on the character of the true philosopher, the structural alienation between philosophical rulers and existing states, and the lifelong curriculum required to cultivate them."
+      },
+      {
+        "childIds": [
+          "n-33-4",
+          "n-35-1"
+        ],
+        "label": "The Good and the Cave Allegory",
+        "summary": "Socrates identifies the idea of the good as the supreme object of knowledge that imparts utility and value to all other virtues and cognitions. Through the allegory of the cave, he illustrates the unenlightened human condition as captivity among shadows and models the soul's ascent toward luminous metaphysical reality.",
+        "rationale": "These consecutive central texts from Books VI and VII present the dialogue's peak metaphysical imagery: the transcendent supremacy of the Idea of the Good and the corresponding allegory of the cave."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "rRicapS6G6yJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 10303,
+    "candidatesTokenCount": 871,
+    "totalTokenCount": 11174,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10303
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 871
+      }
+    ]
+  },
+  "durationMs": 8342,
+  "requestHash": "d648e283f47d2fb09b33d4613c8ebe1833d22c7941c2e2868410282ec71baf51"
+}

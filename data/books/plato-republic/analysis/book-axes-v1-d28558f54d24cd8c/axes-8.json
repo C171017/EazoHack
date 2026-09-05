@@ -1,0 +1,608 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-28-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates establishes that justice in the city occurs when each of the three functional orders performs its specific role, explicitly deducing this from the earlier founding principle of specialization and the elimination of wisdom, courage, and temperance.",
+            "anchorIds": [
+              "p-828602",
+              "p-831626",
+              "p-831955"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-27-4",
+              "n-27-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "This definition specifically targets the political domain and the functional class constitution of the city.",
+            "anchorIds": [
+              "p-831626",
+              "p-831955"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Introduced as an axiomatic baseline of reasoning and contradiction, illustrating through direct basic observations of bodies spinning or standing.",
+            "anchorIds": [
+              "p-836466",
+              "p-836892",
+              "p-837402"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Presents a universal metaphysical and logical law applying universally across all entities, actions, and states.",
+            "anchorIds": [
+              "p-836466"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Derives the three parts of the soul by applying the principle of non-contradiction to conflicting internal psychological impulses and illustrative cases.",
+            "anchorIds": [
+              "p-845386",
+              "p-846869",
+              "p-849077"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Articulates a fundamental model of human moral psychology governing the entire domain of human motivation and psychic action.",
+            "anchorIds": [
+              "p-845386",
+              "p-849077"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Synthesizes the tripartite division of the soul with the macro-definition of civic justice, showing that true justice is internal psychic harmony among the three parts.",
+            "anchorIds": [
+              "p-851513",
+              "p-854000",
+              "p-856473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-1",
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Provides a broadly applicable definition of individual virtue and ethical action for human conduct.",
+            "anchorIds": [
+              "p-856473"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Concludes that asking if injustice is profitable is absurd by linking the established definition of psychic harmony directly to the physical analogy of health and disease.",
+            "anchorIds": [
+              "p-858701",
+              "p-859615",
+              "p-860234"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Covers the general ethical evaluation of virtue versus vice regarding human flourishing and well-being.",
+            "anchorIds": [
+              "p-859615",
+              "p-860234"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Infers a fivefold structural classification of regimes and matching soul types directly from the correspondence between state and individual.",
+            "anchorIds": [
+              "p-861207",
+              "p-861665",
+              "p-861963"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Restricted specifically to the comparative framework of five constitutional types and their psychological counterparts.",
+            "anchorIds": [
+              "p-861665",
+              "p-861963"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "A conversational disruption where the interlocutors intervene to demand an account of earlier casual claims regarding common property in family life.",
+            "anchorIds": [
+              "p-862361",
+              "p-863503",
+              "p-863856"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Pertains to a concrete narrative interaction and immediate conversational demand in the dialogue.",
+            "anchorIds": [
+              "p-863503",
+              "p-863856"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Infers that women must receive equal education and civic tasks by applying the analogy of male and female watchdogs carrying out shared functions.",
+            "anchorIds": [
+              "p-869334",
+              "p-869966",
+              "p-870247"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Restricted to the governance, physical training, and military duties of the guardian class.",
+            "anchorIds": [
+              "p-869966",
+              "p-870247"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Addresses an apparent contradiction with division of labor by analyzing and distinguishing relevant vocational capacities from mere superficial or biological differences.",
+            "anchorIds": [
+              "p-875318",
+              "p-876701",
+              "p-877254"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-29-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a reusable methodological distinction between natural differences relevant to an art and incidental differences.",
+            "anchorIds": [
+              "p-875318",
+              "p-876701"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Deduces that governing abilities are found across both genders by evaluating human traits after separating civic aptitude from childbearing.",
+            "anchorIds": [
+              "p-879718",
+              "p-880643",
+              "p-880940"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Covers the distribution of social aptitudes and offices within the civic community.",
+            "anchorIds": [
+              "p-879718",
+              "p-880940"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Proposes the specific legislative program of shared unions, manipulated lotteries, and communal child-rearing deduced from the requirement to maintain animal-like breeding quality.",
+            "anchorIds": [
+              "p-884384",
+              "p-890415",
+              "p-895987"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-2"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies strictly to the domestic and reproductive arrangements of the guardian class.",
+            "anchorIds": [
+              "p-884384",
+              "p-890415"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Identifies civic unity and shared affect as the supreme good of a state through an evaluative inquiry into the legislator's primary objective.",
+            "anchorIds": [
+              "p-897132",
+              "p-897597",
+              "p-897765"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates an overarching normative principle of political philosophy regarding civic cohesion.",
+            "anchorIds": [
+              "p-897132",
+              "p-897597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Elaborates the organic body analogy to establish that the ideal commonwealth acts as a single organism where common ownership prevents factional division.",
+            "anchorIds": [
+              "p-898308",
+              "p-898569",
+              "p-902521"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-5",
+              "n-29-6"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Focuses on the civic structure and institutional order of the ideal state.",
+            "anchorIds": [
+              "p-898308",
+              "p-898569"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Deduces normative limitations on Greek warfare by drawing a distinction between internal faction among natural friends and war against barbarians.",
+            "anchorIds": [
+              "p-917134",
+              "p-919634",
+              "p-922157"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Governs the specific operational rules of warfare and inter-state relations among Greek poleis.",
+            "anchorIds": [
+              "p-919634",
+              "p-922157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Argues that an ideal model of justice retains absolute validity as a benchmark even if it cannot be fully actualized in matter, using the analogy of a painter's depiction.",
+            "anchorIds": [
+              "p-925041",
+              "p-925834",
+              "p-926473"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "A general methodological and epistemological principle regarding the nature and evaluative function of theoretical ideals.",
+            "anchorIds": [
+              "p-925041",
+              "p-925834"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Proposes the union of philosophical wisdom and political sovereignty as the singular necessary condition for realizing the ideal polity and relieving human misery.",
+            "anchorIds": [
+              "p-927555",
+              "p-927858",
+              "p-929473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Broad political principle addressing the fundamental condition for ending governance failures across human societies.",
+            "anchorIds": [
+              "p-927858"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Infers that the genuine philosopher seeks knowledge entirely and comprehensively by examining how lovers of beauty, wine, and honor embrace every variety of their passion.",
+            "anchorIds": [
+              "p-930486",
+              "p-932037",
+              "p-932216"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Defines the essential nature and disposition defining the character class of the philosopher.",
+            "anchorIds": [
+              "p-932037",
+              "p-932216"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Distinguishes authentic philosophers from aesthetic dilettantes, concluding that only those devoted to the vision of truth qualify.",
+            "anchorIds": [
+              "p-932976",
+              "p-933719",
+              "p-933820"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Demarcates genuine philosophic pursuit from lovers of sights, sounds, and superficial arts.",
+            "anchorIds": [
+              "p-932976",
+              "p-933820"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Asserts the unity of each Form and explains its apparent multiplicity through combination with material bodies and actions.",
+            "anchorIds": [
+              "p-934184",
+              "p-934256"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Articulates a foundational ontological principle of the Theory of Forms covering all abstract properties and physical manifestations.",
+            "anchorIds": [
+              "p-934256"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Deduces that those who mistake sensory particulars for true essence are dreaming, while those who grasp the Forms are awake, applying the ontology of Forms to cognitive states.",
+            "anchorIds": [
+              "p-934770",
+              "p-935097",
+              "p-935644"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Establishes a broad distinction across cognitive types and aesthetic perceptions of reality.",
+            "anchorIds": [
+              "p-935097",
+              "p-935644"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly stipulates an epistemological definition: a faculty is defined and differentiated solely by its domain of objects and its operational result.",
+            "anchorIds": [
+              "p-938038",
+              "p-938311"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "A general epistemological criterion governing the taxonomy of all cognitive capacities and powers.",
+            "anchorIds": [
+              "p-938311"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers that knowledge and opinion have separate objects because infallible knowledge cannot share the same sphere as fallible opinion under the established definition of faculties.",
+            "anchorIds": [
+              "p-939313",
+              "p-939534",
+              "p-939909"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Establishes a fundamental epistemological division between cognitive faculties and their correlating domains.",
+            "anchorIds": [
+              "p-939534",
+              "p-939909"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Correlates knowledge to being and ignorance to non-being, deducing that opinion must occupy the intermediate realm between being and nothingness.",
+            "anchorIds": [
+              "p-940803",
+              "p-941467",
+              "p-941587"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A core epistemological mapping structuring the entire relationship between cognitive modes and ontological levels.",
+            "anchorIds": [
+              "p-941587"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Demonstrates through dialectical examples that every sensible particular inevitably manifests opposite qualities, making them ambiguous entities.",
+            "anchorIds": [
+              "p-943069",
+              "p-943183",
+              "p-943638"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Governs the entire realm of sensory particulars and empirical objects of perception.",
+            "anchorIds": [
+              "p-943069",
+              "p-943638"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5Recau7EI7Wc0ckP-4GV6AI",
+  "usage": {
+    "promptTokenCount": 41821,
+    "candidatesTokenCount": 4830,
+    "totalTokenCount": 46651,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41821
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4830
+      }
+    ]
+  },
+  "durationMs": 29245,
+  "requestHash": "d76b4d7a3c6420c54e2a7638269907550cbd7090c1ebc75df6cc5fe364744940"
+}

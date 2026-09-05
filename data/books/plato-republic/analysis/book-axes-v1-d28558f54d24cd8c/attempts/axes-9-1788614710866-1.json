@@ -1,0 +1,614 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-31-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates builds directly on the previous distinction between faculties (knowledge of being vs. ignorance of not-being) and the fluctuating nature of sensory particulars to define lovers of opinion versus lovers of wisdom.",
+            "anchorIds": [
+              "p-945741",
+              "p-944871",
+              "p-945817"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-5",
+              "n-31-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The claim delineates two major types of mental orientations and persons—lovers of opinion versus philosophers—across all cognitive endeavors.",
+            "anchorIds": [
+              "p-944871",
+              "p-945817"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Infers that philosophers are the best guardians by combining the definition of the philosopher who knows eternal reality with civic requirements of virtue and practical experience.",
+            "anchorIds": [
+              "p-946665",
+              "p-947385",
+              "p-947917"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-7",
+              "n-30-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Formulates the specific ruling criterion and political governance standard for the ideal Platonic State.",
+            "anchorIds": [
+              "p-946665",
+              "p-947917"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Deduces the necessary personal and moral virtues (truthfulness, temperance, courage, capacity for learning) following from the primary definition of the philosopher's love of true being.",
+            "anchorIds": [
+              "p-948857",
+              "p-949401",
+              "p-953330"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-7"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Specifies the essential qualities characterizing any true philosophical nature.",
+            "anchorIds": [
+              "p-948857",
+              "p-949401",
+              "p-953330"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "Adeimantus introduces an empirical objection and dialectical hesitation based on common observation of existing practitioners of philosophy.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Addresses the observed standing and behavior of students and practitioners of philosophy in contemporary cities.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates deploys the allegorical figure of the ship and mutinous crew to directly address and resolve Adeimantus's objection regarding the apparent uselessness of the philosopher.",
+            "anchorIds": [
+              "p-956124",
+              "p-958319",
+              "p-959553"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-3"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "A structural parable illuminating the dysfunctional relationship between genuine expertise/philosophy and political leadership in existing states.",
+            "anchorIds": [
+              "p-956124",
+              "p-959553"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Explains how the fine qualities of the philosophical nature (and social flattery in public assemblies) ironically cause its deterioration under hostile civic environments.",
+            "anchorIds": [
+              "p-964763",
+              "p-966030",
+              "p-967421"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates a broad psychological and sociological principle regarding the corruption of superior natures by public pressure and praise.",
+            "anchorIds": [
+              "p-966030",
+              "p-967421"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Follows directly from the corruption and desertion of true philosophical candidates, explaining the filling of the void by base pretenders producing sophistry.",
+            "anchorIds": [
+              "p-975927",
+              "p-976512",
+              "p-977651"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies to the specific phenomenon of secondary crafts and pretenders encroaching into philosophy in actual cities.",
+            "anchorIds": [
+              "p-975927",
+              "p-977651"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Accounts for the rare individuals who remain uncorrupted by drawing upon the causes of corruption and explaining their quiet, sheltered withdrawal from corrupt public life.",
+            "anchorIds": [
+              "p-978272",
+              "p-980154"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Examines a small, bounded subset of actual individuals (e.g., Theages, Socrates himself) who escape general social corruption.",
+            "anchorIds": [
+              "p-978272"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Infers that none of the present constitutions are suitable for the philosophical soul, using the analogy of a seed degenerating in foreign soil.",
+            "anchorIds": [
+              "p-980766"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Characterizes the systemic incompatibility between all existing historical polities and philosophical nature.",
+            "anchorIds": [
+              "p-980766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Proposes a reformed educational timeline by contrasting the current premature study of dialectic with an age-graded developmental path.",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-8"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Sets forth a comprehensive normative lifespan model for philosophical and physical education.",
+            "anchorIds": [
+              "p-983785"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Argues that public hostility against philosophy can be dissipated by explaining the true nature of philosophers as contemplative and free of petty ambition.",
+            "anchorIds": [
+              "p-987917",
+              "p-989214",
+              "p-989720"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2",
+              "n-32-6"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Concerns the general psychological attitude of political multitudes toward genuine versus counterfeit philosophers.",
+            "anchorIds": [
+              "p-987917",
+              "p-989214"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Builds upon the possibility of persuading the multitude and the necessity of philosopher-rulers to argue that realizing the ideal constitution is not impossible if even one ruler obeys philosophy.",
+            "anchorIds": [
+              "p-986343",
+              "p-991184",
+              "p-994473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-4",
+              "n-33-2"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Pertains to the conditions of possibility for establishing the ideal commonwealth in human history.",
+            "anchorIds": [
+              "p-986343",
+              "p-994473"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "Introduces the Idea of the Good as the supreme object of knowledge and the condition that gives value to all other virtues and possessions.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1003684",
+              "p-1004174"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Identifies the ultimate ontological and ethical principle presiding over all knowledge, value, and action.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1003684"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Constructs an explicit structural analogy between the visible role of the sun and the intelligible role of the Good.",
+            "anchorIds": [
+              "p-1010240",
+              "p-1011533",
+              "p-1012839"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Encompasses the entire metaphysical order relating being, truth, knowledge, and visibility.",
+            "anchorIds": [
+              "p-1011533",
+              "p-1012839"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Divides a geometric line to represent the proportional correspondence between the visible and intelligible spheres, using the sun analogy as its foundation.",
+            "anchorIds": [
+              "p-1014039",
+              "p-1015203",
+              "p-1017137"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "A universal schema categorizing all levels of reality and cognitive access.",
+            "anchorIds": [
+              "p-1014039",
+              "p-1015203"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Elaborates the highest segment of the divided line, detailing how dialectic ascends above hypotheses to the first principle and then descends systematically through forms.",
+            "anchorIds": [
+              "p-1017742",
+              "p-1017669"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Formulates the universal methodology of dialectical reason across pure intelligible being.",
+            "anchorIds": [
+              "p-1017742"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Contrasts the operations of dialectic with the hypothetical methods of mathematical sciences/arts within the upper realm of the divided line.",
+            "anchorIds": [
+              "p-1018396",
+              "p-1018361"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6",
+              "n-34-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Distinguishes two primary modes of intellectual cognition (dialectic and hypothetical sciences).",
+            "anchorIds": [
+              "p-1018396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Synthesizes the four segments of the divided line with four distinct psychic faculties, establishing that each faculty has clarity in proportion to the truth of its object.",
+            "anchorIds": [
+              "p-1019319",
+              "p-1019237"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Provides a comprehensive taxonomy of the soul's four epistemic faculties.",
+            "anchorIds": [
+              "p-1019319"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "Represents the interlocutor's immediate agreement and acceptance of Socrates' fourfold schema without further independent deduction.",
+            "anchorIds": [
+              "p-1019743"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A conversational moment of personal assent within the dramatic exchange.",
+            "anchorIds": [
+              "p-1019743"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "Introduces the Allegory of the Cave as a fresh symbolic image depicting human enlightenment and unenlightenment.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1020773",
+              "p-1021956"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a universal narrative model of the human condition regarding ignorance and appearance.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1021956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Traces the sequential sensory adjustment and stages of the liberated prisoner ascending out of the cave up to direct contemplation of the sun.",
+            "anchorIds": [
+              "p-1023476",
+              "p-1023851",
+              "p-1024333"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-1"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Tracks the progressive stages of visual adaptation in the allegory, modeling the general path of enlightenment.",
+            "anchorIds": [
+              "p-1023851",
+              "p-1024333"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Maps the elements of the cave allegory directly onto the ontological and epistemological frameworks of the Sun and the Divided Line.",
+            "anchorIds": [
+              "p-1026827",
+              "p-1027792"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-5",
+              "n-33-6",
+              "n-35-1",
+              "n-35-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies to the entire journey of human knowledge toward the ultimate ground of truth and being.",
+            "anchorIds": [
+              "p-1026827"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers from the allegory that genuine education is not inserting external knowledge into the soul, but an art of reorienting the soul's native capacity from becoming to being.",
+            "anchorIds": [
+              "p-1029815",
+              "p-1030048",
+              "p-1030513"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-3"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "A general pedagogical and philosophical principle defining the true nature of education.",
+            "anchorIds": [
+              "p-1030048",
+              "p-1030513"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Combines the obligation of guardians to foster the happiness of the whole state with the cave allegory's descent to demonstrate why philosophers must be compelled to rule.",
+            "anchorIds": [
+              "p-1033301",
+              "p-1033624",
+              "p-1034256"
+            ],
+            "prerequisiteNodeIds": [
+              "n-27-2",
+              "n-35-3"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Establishes the governance rule for philosopher-rulers in the well-ordered polis.",
+            "anchorIds": [
+              "p-1033624",
+              "p-1034256"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "HxicatevNtuTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 39831,
+    "candidatesTokenCount": 4007,
+    "totalTokenCount": 43838,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39831
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4007
+      }
+    ]
+  },
+  "durationMs": 24040,
+  "requestHash": "919e7de4cd3fefe2ce5ae87f4649b3c6a860ecdda11537fc85d5eb8f9471d5ee"
+}

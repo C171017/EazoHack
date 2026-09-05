@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-34-1",
+          "n-34-3",
+          "n-35-3",
+          "n-35-4"
+        ],
+        "label": "Dialectic and Ascent of the Soul",
+        "summary": "Reason moves dialectically through hypotheses to the unhypothetical first principle, mapped across four distinct soul faculties corresponding to degrees of reality. In the allegory of the cave, this progress is explained as turning the soul's existing organ of vision away from the realm of becoming to behold the Idea of the Good.",
+        "rationale": "These Book VI–VII passages focus on the epistemology and metaphysics of the divided line, dialectical movement, and the soul's ascent to the Idea of the Good."
+      },
+      {
+        "childIds": [
+          "n-37-1",
+          "n-38-5",
+          "n-39-3"
+        ],
+        "label": "Regimes and Relative Happiness",
+        "summary": "Socrates reviews four declining constitutional forms and their corresponding personality types, noting specifically how an insatiable pursuit of freedom drives democracy into tyranny. Concluding the comparison, he delivers the first proof that the royal and just man is happiest, while the tyrannical man is the most wretched.",
+        "rationale": "These passages from Books VIII and IX trace the degeneration of political constitutions and psychological types leading directly to the comparative judgment between just and tyrannical happiness."
+      },
+      {
+        "childIds": [
+          "n-39-4",
+          "n-40-1"
+        ],
+        "label": "Soul Divisions and True Pleasure",
+        "summary": "The soul is analyzed into appetitive, spirited, and rational parts, each with its distinctive desires for gain, honor, or wisdom. Socrates contrasts bodily pleasures—which merely relieve pain—with the true, enduring pleasure achieved by filling the soul with invariable reality.",
+        "rationale": "Both passages from Book IX construct the second and third proofs concerning the soul's parts and the qualitative hierarchy of intellectual versus bodily pleasure."
+      },
+      {
+        "childIds": [
+          "n-40-3",
+          "n-40-4",
+          "n-40-5",
+          "n-40-6"
+        ],
+        "label": "Soul Harmony and Inner Rule",
+        "summary": "Socrates models the soul as an inner human figure joined with a lion and a multiform beast, showing that justice requires reason to tame and govern the appetitive nature. Order is secured either by internal divine reason or external law, guiding the wise individual to live in accordance with the pattern of the ideal city within.",
+        "rationale": "A contiguous sequence in Book IX developing the composite image of the soul, the moral refutation of injustice, and the cultivation of an internal heavenly city."
+      },
+      {
+        "childIds": [
+          "n-41-2",
+          "n-41-4"
+        ],
+        "label": "Forms, Making, and Imitation",
+        "summary": "Socrates analyzes reality across three levels using the example of beds made by God, the carpenter, and the painter. He pairs this with three capacities regarding instruments—the user who possesses knowledge, the artisan who holds correct belief, and the imitator who possesses neither.",
+        "rationale": "These Book X sections critique mimesis and art through the three degrees of reality and the hierarchy of using, making, and imitating."
+      },
+      {
+        "childIds": [
+          "n-42-1",
+          "n-42-2",
+          "n-42-3"
+        ],
+        "label": "Immortality and Just Rewards",
+        "summary": "Because moral vice harms the soul without dissolving it, the soul is demonstrated to be indestructible and immortal, though its true beauty is obscured like the encrusted sea-god Glaucus. Once justice has been proven advantageous in itself, Socrates reinstates the outward rewards, honors, and divine care accorded to the virtuous in life and death.",
+        "rationale": "The concluding dialectical sequence of Book X establishing the soul's immortality, its original uncontaminated condition, and the restored rewards of virtue."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "uBicapDaC7Wc0ckP-4GV6AI",
+  "usage": {
+    "promptTokenCount": 10118,
+    "candidatesTokenCount": 969,
+    "totalTokenCount": 11087,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10118
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 969
+      }
+    ]
+  },
+  "durationMs": 8571,
+  "requestHash": "63c00df1d0fc890f0e6735e42148ef8e6000cd7ad2a64803b892876720c8c674"
+}

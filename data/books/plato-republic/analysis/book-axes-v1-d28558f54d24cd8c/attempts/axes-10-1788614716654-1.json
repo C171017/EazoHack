@@ -1,0 +1,657 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-35-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates argues that arithmetic redirects thought toward being because perception of unity presents contradictions, requiring intellect rather than mere sensation to resolve.",
+            "anchorIds": [
+              "p-1042011",
+              "p-1046899",
+              "p-1049377"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Addresses the specific pedagogical role of arithmetic within the guardian curriculum.",
+            "anchorIds": [
+              "p-1042011",
+              "p-1046899",
+              "p-1049377"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers that geometry's true higher aim is apprehension of the eternal and unchanging rather than practical mensuration, building on the soul-turning objective.",
+            "anchorIds": [
+              "p-1052099",
+              "p-1053312",
+              "p-1053482"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-6"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Concerns the discipline of geometry within the educational ladder.",
+            "anchorIds": [
+              "p-1052099",
+              "p-1053312",
+              "p-1053482"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates corrects an oversight in the curricular progression, adding three-dimensional solid geometry directly after two-dimensional plane geometry.",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Specifies a particular curricular stage and sequence in the education of rulers.",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Argues that astronomy and harmonics must rely on abstract mathematical problems and reason rather than sensible perception of sights or sounds.",
+            "anchorIds": [
+              "p-1059579",
+              "p-1061383",
+              "p-1064015"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-7",
+              "n-36-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies to mathematical astronomy and harmonics as branches of knowledge.",
+            "anchorIds": [
+              "p-1059579",
+              "p-1061383",
+              "p-1064015"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Positions dialectic as the summit of the curriculum because it abandons hypotheses and uses pure reason to reach the Good, integrating the entire preparatory program.",
+            "anchorIds": [
+              "p-1066053",
+              "p-1070332",
+              "p-1073704"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-1",
+              "n-36-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Defines the supreme cognitive method and principle overseeing all sciences.",
+            "anchorIds": [
+              "p-1066053",
+              "p-1070332",
+              "p-1073704"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Outlines the precise lifecycle and age brackets for testing, dialectical study, civic governance, and philosophical contemplation.",
+            "anchorIds": [
+              "p-1079942",
+              "p-1080590",
+              "p-1087263"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "A structural scheme for guardian development across their lifespans.",
+            "anchorIds": [
+              "p-1079942",
+              "p-1080590",
+              "p-1087263"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Uses the supposititious son analogy to infer why premature dialectic produces lawlessness and skepticism when traditional beliefs are dismantled.",
+            "anchorIds": [
+              "p-1081658",
+              "p-1083717",
+              "p-1084954"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Describes a psychological and educational hazard specific to young dialecticians.",
+            "anchorIds": [
+              "p-1081658",
+              "p-1083717",
+              "p-1084954"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Proposes a drastic practical measure—sending away everyone over ten—to begin the ideal city unhindered by adult habits.",
+            "anchorIds": [
+              "p-1089513",
+              "p-1090167"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A single radical policy prescription for instituting the philosopher-led polity.",
+            "anchorIds": [
+              "p-1089513",
+              "p-1090167"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Resumes the comparative investigation from Book IV, classifying four inferior constitutions to contrast their happiness with the aristocratic standard.",
+            "anchorIds": [
+              "p-1091618",
+              "p-1093090",
+              "p-1094735"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Lays out the overarching taxonomy of all degenerate political regimes and matching souls.",
+            "anchorIds": [
+              "p-1091618",
+              "p-1093090",
+              "p-1094735"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Asserts the core thesis that states arise from human characters rather than inanimate material, justifying the fivefold state-soul mapping.",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416",
+              "p-1094497"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates the foundational principle relating political organization to psychic character.",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416",
+              "p-1094497"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Deduces the decay of the ideal city from sensory fallibility in calculating the nuptial number, leading to racial mixture, discord, and privatization.",
+            "anchorIds": [
+              "p-1097088",
+              "p-1099283",
+              "p-1101246"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-4",
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Describes the general causal mechanism for the dissolution of the perfect state.",
+            "anchorIds": [
+              "p-1097088",
+              "p-1099283",
+              "p-1101246"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Details how a youth caught between an unworldly father and worldly mother gives up reason to passion, producing the ambitious timocratic soul.",
+            "anchorIds": [
+              "p-1105610",
+              "p-1107246",
+              "p-1108104"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3",
+              "n-37-2"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Defines an entire psychological character type within the fivefold scheme.",
+            "anchorIds": [
+              "p-1105610",
+              "p-1107246",
+              "p-1108104"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Defines oligarchy as rule by property qualification and shows how it inevitably cleaves the state into rich and poor factions.",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Characterizes a specific constitution and its essential socio-political defect.",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers from unchecked property alienation the emergence of idle, disenfranchised citizens categorized as stinging (criminal) or stingless (pauper) drones.",
+            "anchorIds": [
+              "p-1114152",
+              "p-1115143",
+              "p-1115526"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies to the socioeconomic subclasses created under oligarchic conditions.",
+            "anchorIds": [
+              "p-1114152",
+              "p-1115143",
+              "p-1115526"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Traces how witnessing his father's ruin causes the son to enthrone money-making appetites and subordinate spirit and reason.",
+            "anchorIds": [
+              "p-1117342",
+              "p-1117831",
+              "p-1120318"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2",
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Describes the formation and internal psychic hierarchy of the oligarchical character.",
+            "anchorIds": [
+              "p-1117342",
+              "p-1117831",
+              "p-1120318"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Traces the structural dynamics whereby usury and impoverished armed citizens reveal the physical weakness of the ruling oligarchs, sparking revolt.",
+            "anchorIds": [
+              "p-1122228",
+              "p-1123213",
+              "p-1125219"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5",
+              "n-37-6"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Explains the transition mechanism between two specific constitutional regimes.",
+            "anchorIds": [
+              "p-1122228",
+              "p-1123213",
+              "p-1125219"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Concludes that democracy is established upon the victory of the poor, characterized by liberty, equality, and selection of magistrates by lot.",
+            "anchorIds": [
+              "p-1126806",
+              "p-1126863",
+              "p-1127144"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-8"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Defines the core institutional and constitutional nature of democracy.",
+            "anchorIds": [
+              "p-1126806",
+              "p-1126863",
+              "p-1127144"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Directly infers from democratic freedom and frankness that such a city becomes a bazaar containing every assortment of character and constitution.",
+            "anchorIds": [
+              "p-1127593",
+              "p-1127860",
+              "p-1128485"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Specifies the varied social and constitutional conditions within democratic cities.",
+            "anchorIds": [
+              "p-1127593",
+              "p-1127860",
+              "p-1128485"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Establishes a principled distinction dividing human desires into necessary (beneficial and unavoidable) and unnecessary (costly and injurious).",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878",
+              "p-1132748"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Provides a general taxonomy of desires relevant across moral psychology.",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878",
+              "p-1132748"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Explains how the democratic person develops when unnecessary desires overthrow thrift, treating all impulses with equal liberty and no order.",
+            "anchorIds": [
+              "p-1133716",
+              "p-1137553",
+              "p-1138837"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-7",
+              "n-38-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Defines a complete psychic profile within the classification of souls.",
+            "anchorIds": [
+              "p-1133716",
+              "p-1137553",
+              "p-1138837"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Applies the broader principle of cyclical overreaction to argue that an insatiable desire for freedom inevitably produces the most extreme tyranny.",
+            "anchorIds": [
+              "p-1141216",
+              "p-1144784",
+              "p-1145274"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a broad sociopolitical law concerning extremes producing opposite extremes.",
+            "anchorIds": [
+              "p-1141216",
+              "p-1144784",
+              "p-1145274"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Analyzes the internal class structure of democracy into demagogic drones, wealthy orderly citizens, and the manual-laboring multitude.",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147548",
+              "p-1147990"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-6",
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies specifically to the demographic and economic classes within a democracy.",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147548",
+              "p-1147990"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Traces how a champion of the multitude resorts to judicial murders, asks for an armed bodyguard, and turns into a tyrannical wolf.",
+            "anchorIds": [
+              "p-1149590",
+              "p-1150097",
+              "p-1151201"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-6"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Describes the general political pathway of demagogic transformation into a tyrant.",
+            "anchorIds": [
+              "p-1149590",
+              "p-1150097",
+              "p-1151201"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Traces the consolidation of tyranny through continuous war-making, purging the best citizens, hiring foreign guards, and enslaving the parent populace.",
+            "anchorIds": [
+              "p-1152816",
+              "p-1154020",
+              "p-1159089"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-7"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Covers the standard methods and operational characteristics of tyrannical rule.",
+            "anchorIds": [
+              "p-1152816",
+              "p-1154020",
+              "p-1159089"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IBicaq-HLqyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 37881,
+    "candidatesTokenCount": 5122,
+    "totalTokenCount": 43003,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 37881
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5122
+      }
+    ]
+  },
+  "durationMs": 29828,
+  "requestHash": "a2a6676cfe52c412a3abcf1d85bddf4a1b11ad70809059b4eae9286f2712afde"
+}

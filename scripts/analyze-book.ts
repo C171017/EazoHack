@@ -1,3 +1,4 @@
+import { calibrateBookAxes } from '../src/server/book-analysis/axis-calibration';
 import { assignBookAxes } from '../src/server/book-analysis/axis-run';
 import { writeJson } from '../src/server/book-analysis/json-store';
 import { createHash } from 'node:crypto';
@@ -34,6 +35,7 @@ async function main() {
     validateGraphSource(graph,raw.toString('utf8').replace(/\r\n?/g,'\n'),createHash('sha256').update(raw).digest('hex'));
     if(graph.bookId!==bookId)throw new Error('Graph book ID does not match the requested input.');
     graph=await assignBookAxes({graph,outputRoot,model:analysisModel(),generate:generateStructured,log:console.log});
+    graph=await calibrateBookAxes({graph,outputRoot,model:analysisModel(),generate:generateStructured,log:console.log});
     await buildHierarchy({graph,outputRoot,model:analysisModel(),generate:generateStructured,log:console.log});
     await writeJson(path.join(outputRoot,'current-graph.json'),graph);
   }

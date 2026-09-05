@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-6-2",
+          "n-6-5",
+          "n-7-3",
+          "n-7-4"
+        ],
+        "label": "Soul-Body Harmony & Justice",
+        "summary": "These passages explore the ordering of the tripartite human soul and the corresponding harmony between reason, passion, and bodily faculties. They examine the interplay of mental discipline and physical regimen, defining individual and civic justice as the condition where each constituent element fulfills its proper function.",
+        "rationale": "Gathers early Book III-IV discussions of psychological balance, medicine, and the definition of justice based on the soul's tripartite structure."
+      },
+      {
+        "childIds": [
+          "n-6-6",
+          "n-6-7",
+          "n-7-1",
+          "n-8-2"
+        ],
+        "label": "Civic Order, Law & Duty",
+        "summary": "This sequence investigates political foundation, emphasizing the organic unity and general welfare of the entire commonwealth over partisan advantage. It examines why foundational education and moral duty take precedence over detailed legal codes and utilitarian metrics.",
+        "rationale": "Covers the political theory of Books IV and V concerning state unity, civic education, and the grounding of political justice in duty rather than utility."
+      },
+      {
+        "childIds": [
+          "n-8-3",
+          "n-8-4",
+          "n-8-6",
+          "n-8-7",
+          "n-9-1"
+        ],
+        "label": "The Good & Philosophical Rule",
+        "summary": "These sections present the requirement of philosopher-rulers alongside the metaphysical distinction between transient opinion and immutable being. Socrates examines the vulnerabilities of philosophic talent, introducing the Idea of the Good and its illuminative nature through the Analogy of the Sun.",
+        "rationale": "Encompasses central Books V-VI metaphysical and political doctrine concerning philosopher-kings, epistemology, and the Good."
+      },
+      {
+        "childIds": [
+          "n-14-4",
+          "n-16-1",
+          "n-16-6",
+          "n-18-6",
+          "n-18-8"
+        ],
+        "label": "Human Will, Ideals & Destiny",
+        "summary": "These reflections evaluate the capacity of moral choice and personal effort to transcend heredity and necessity, framing education as an inward reorientation lasting through life. They further assess the transcendent role of ethical ideals and archetype figures in elevating human purpose.",
+        "rationale": "Brings together higher-level commentary addressing human agency against fate, long-term educational formation, and the function of ethical ideals."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "oxicauDJJ_6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 18868,
+    "candidatesTokenCount": 483,
+    "totalTokenCount": 19351,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18868
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 483
+      }
+    ]
+  },
+  "durationMs": 8426,
+  "requestHash": "320d2f82a8d7fd426d8fc66426f884c63e16983c656bc474182dfe0fb01a070c"
+}

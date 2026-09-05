@@ -1,0 +1,578 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-3-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Evaluative assessment derived from an internal critical step comparing the Republic's thematic breadth and stylistic mastery against the other Platonic dialogues.",
+            "anchorIds": [
+              "p-2409",
+              "p-4608"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Characterizes the relative position and philosophical significance of the Republic within the Platonic corpus.",
+            "anchorIds": [
+              "p-2409",
+              "p-4608"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A synthetic expository overview inferentially tracing the dialectical movement and overarching search for justice through the dialogue's narrative sequence.",
+            "anchorIds": [
+              "p-9220"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Encompasses the entire thematic scope and compositional progression of this specific dialogue.",
+            "anchorIds": [
+              "p-9220"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "An analytical division inferred from examining the shifts in subject matter and structure across the dialogue's ten books.",
+            "anchorIds": [
+              "p-11296"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Outlines a comprehensive structural framework covering the entirety of the Republic.",
+            "anchorIds": [
+              "p-11296"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Infers an alternative structural division between conventional Hellenic morality and ideal philosophical kingdom based on textual discrepancies.",
+            "anchorIds": [
+              "p-13021",
+              "p-15222"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Proposes a macro-level categorization for the architectural division of the dialogue as a whole.",
+            "anchorIds": [
+              "p-13021",
+              "p-15222"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Reconciles the scholarly debate over whether justice or statecraft is primary by showing through conceptual analysis that they form warp and woof of the same inquiry.",
+            "anchorIds": [
+              "p-16108"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates a broad hermeneutic principle explaining the core unity between political theory and moral psychology in Platonic philosophy.",
+            "anchorIds": [
+              "p-16108"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Infers a philosophical progression of morality from the sequential arrangement and distinct perspectives of the interlocutors.",
+            "anchorIds": [
+              "p-33934",
+              "p-23695"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Encompasses the dramatis personae and thematic stages of moral dialogue within the Republic.",
+            "anchorIds": [
+              "p-33934"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Contrasts Socrates' early elenctic demeanor with his later dogmatic role based on textual and stylistic shifts across the work.",
+            "anchorIds": [
+              "p-34602"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Characterizes the evolution of the main protagonist's dramatic and methodological role across the whole dialogue.",
+            "anchorIds": [
+              "p-34602"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Summarizes the traditional definitions of Cephalus and Polemarchus along with Socrates' local dialectical refutations (such as the weapon returned to a mad friend).",
+            "anchorIds": [
+              "p-43182",
+              "p-44042",
+              "p-47199"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Deals with traditional, popular Greek moral adages regarding fairness and duty.",
+            "anchorIds": [
+              "p-47199"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Glaucon and Adeimantus formulate their challenge by classifying goods and inferring that Socrates has not yet satisfactorily shown justice's intrinsic goodness.",
+            "anchorIds": [
+              "p-62348",
+              "p-69175"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Frames the central methodological demand defining the scope of inquiry for the remaining dialogue.",
+            "anchorIds": [
+              "p-62348",
+              "p-69175"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Constructs an argument that justice is an involuntary social compact of the weaker, utilizing the thought experiment of the Ring of Gyges.",
+            "anchorIds": [
+              "p-63705",
+              "p-64510",
+              "p-70000"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Proposes a general anthropological and sociological theory of the origin and observance of conventional law.",
+            "anchorIds": [
+              "p-63705",
+              "p-70000"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Synthesizes cultural and poetic representations to infer that conventional societal praise of virtue is motivated entirely by external consequences and rewards.",
+            "anchorIds": [
+              "p-65642",
+              "p-66716",
+              "p-69175"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Surveys the conventional Greek educational, religious, and literary discourse regarding virtue's rewards.",
+            "anchorIds": [
+              "p-65642",
+              "p-66716"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Builds upon the guardian's training requirements (n-5-4) by deducing canons for theological narratives from the premise that God is good and unchangeable.",
+            "anchorIds": [
+              "p-84489",
+              "p-86156",
+              "p-86915"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies directly to theological depictions and poetic tales within the educational program of the ideal commonwealth.",
+            "anchorIds": [
+              "p-84489",
+              "p-86156",
+              "p-86915"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Introduces the philosopher-king paradox as the singular condition for actualizing the just polity, incorporating the prior definitions of civic and psychic justice (n-7-3).",
+            "anchorIds": [
+              "p-188140",
+              "p-193592"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates a famous central political thesis on the necessity of uniting knowledge with ruling authority to remedy civic ills.",
+            "anchorIds": [
+              "p-188140",
+              "p-193592"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Directly depends on the philosopher-king paradox and definition (n-8-3), using an extended nautical allegory to resolve the objection that true philosophers are useless in practical politics.",
+            "anchorIds": [
+              "p-199165"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Explains specifically why genuine philosophers are marginalized within contemporary historical Greek polities.",
+            "anchorIds": [
+              "p-199165"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Directly develops the Divided Line by building on the sun analogy (n-9-1) to map visible and intelligible realms onto proportional cognitive states.",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The divided line provides a broad epistemological and ontological framework mapping all cognition from sensible perception to pure dialectical reason across the entire intelligible and visible cosmos.",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The commentator executes an inferential comparison contrasting Plato's contemplative philosophical ideal with modern empirical and specialized scientific division of labor.",
+            "anchorIds": [
+              "p-218184",
+              "p-220383"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "The claim evaluates two specific philosophical traditions and intellectual paradigms: the classical Greek speculative ideal versus modern inductive scientific division of labor.",
+            "anchorIds": [
+              "p-218184",
+              "p-220383"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Introduces the Cave allegory as the imagistic culmination and mapping of the Sun (n-9-1) and Divided Line (n-9-2) into an account of human education and conversion.",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1",
+              "n-9-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The allegory of the cave serves as an overarching model of human enlightenment, moral education, and philosophical conversion.",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Employs the parable of the supposititious son to infer why youthful exposure to ungrounded questioning leads to moral skepticism and abandonment of principles.",
+            "anchorIds": [
+              "p-263322",
+              "p-280675",
+              "p-282876"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Addresses a specific moral hazard of philosophical education affecting immature minds during transition from custom to dialectic.",
+            "anchorIds": [
+              "p-263322",
+              "p-280675",
+              "p-282876"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentator evaluates Plato's curriculum (n-10-1, n-10-2), inferring two overarching aims of his thought: realizing abstractions and connecting them.",
+            "anchorIds": [
+              "p-268244",
+              "p-272641"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-1",
+              "n-10-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Articulates an overarching characterization of Plato's theoretical approach to abstraction, metaphysics, and mathematics.",
+            "anchorIds": [
+              "p-268244",
+              "p-272641"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The editorial commentary evaluates Plato's succession of regimes (n-11-1) against historical Greek records, inferring that the sequence reflects an order of philosophical thought rather than actual history.",
+            "anchorIds": [
+              "p-308846",
+              "p-311475"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Evaluates the interpretive scope of Plato's cycle of regimes and its relationship to actual Greek political history.",
+            "anchorIds": [
+              "p-308846",
+              "p-311475"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Builds upon Plato's schema of four degenerate states (n-11-1), inferring a systematic ethical gradation of declining psychological control from reason to tyrannical passion.",
+            "anchorIds": [
+              "p-315664"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Provides an ethical formula organizing the entire chain of political and psychological degeneration in Books VIII and IX.",
+            "anchorIds": [
+              "p-315664"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The commentator analyzes the nuptial number passage through internal mathematical relations and Pythagorean proportions to infer the number 216.",
+            "anchorIds": [
+              "p-321015",
+              "p-320032",
+              "p-328363"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Solves and interprets a single mathematical puzzle and passage within Book VIII regarding the cycle of births.",
+            "anchorIds": [
+              "p-321015",
+              "p-320032",
+              "p-328363"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Deduces the genesis of the tyrannical man from the democratic individual (n-11-4) and the emergence of tyrannical excess (n-11-5), tracing how a master passion seizes the soul.",
+            "anchorIds": [
+              "p-332742",
+              "p-333925",
+              "p-335063"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-4",
+              "n-11-5"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Details the genesis and behavioral pathology of the tyrannical character type.",
+            "anchorIds": [
+              "p-332742",
+              "p-333925",
+              "p-335063"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Synthesizes the established definition of civic/psychic justice (n-7-3) and the tripartite soul (n-7-4) into an allegorical composite figure (beast, lion, man) to demonstrate why justice is inherently good.",
+            "anchorIds": [
+              "p-348394",
+              "p-349594"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-3",
+              "n-7-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "This model of psychic order purports to describe the moral psychology of all human souls, characterizing justice and injustice across human conduct.",
+            "anchorIds": [
+              "p-348394",
+              "p-349594"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ORmcavD5GP6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 117546,
+    "candidatesTokenCount": 4598,
+    "totalTokenCount": 122144,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 117546
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4598
+      }
+    ]
+  },
+  "durationMs": 24997,
+  "requestHash": "445066d91b954f5aa56375d73ced4a05fd87218b95851203067fc0d5bc10ae9a"
+}

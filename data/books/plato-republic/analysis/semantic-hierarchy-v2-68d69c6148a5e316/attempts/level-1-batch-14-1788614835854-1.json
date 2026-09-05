@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-6",
+          "n-27-2"
+        ],
+        "label": "Virtue, Divinity, and State Order",
+        "summary": "Socrates establishes theological principles regarding divine perfection and truthfulness in Book II, while in Book IV he explains that the city's legislation aims at the proportionate harmony and happiness of the entire commonwealth rather than any privileged class.",
+        "rationale": "Both occurrences represent Socrates' foundational ethical and structural prescriptions for the ideal community from Books II and IV."
+      },
+      {
+        "childIds": [
+          "n-32-5",
+          "n-33-2"
+        ],
+        "label": "Philosophers and Society",
+        "summary": "Socrates analyzes how superior intellectual natures are corrupted by public opinion and worldly praise, while arguing that public hostility toward philosophy can be alleviated by demonstrating the peaceful, orderly character of genuine lovers of wisdom.",
+        "rationale": "These adjacent Book VI occurrences address the relationship between philosophic individuals and public opinion."
+      },
+      {
+        "childIds": [
+          "n-33-5",
+          "n-33-6",
+          "n-35-2"
+        ],
+        "label": "Epistemology: Sun and Line",
+        "summary": "Through the analogies of the sun and the divided line, along with the allegorical ascent from the cave, Socrates contrasts sensory perception with intellectual vision and charts the soul's passage toward ultimate reality.",
+        "rationale": "These Book VI and VII passages form the core epistemological progression linking the sun metaphor, the divided line, and the ascent to light."
+      },
+      {
+        "childIds": [
+          "n-37-2",
+          "n-38-3",
+          "n-39-6"
+        ],
+        "label": "Psychology, Desire, and Pleasure",
+        "summary": "Socrates shows that political structures mirror human character, distinguishes between necessary and corruptive unnecessary desires, and exposes the intermediate state between pain and pleasure as a deceptive relief rather than genuine fulfillment.",
+        "rationale": "These middle-to-late dialogue occurrences examine the psychic faculties, classes of desire, and definitions of pleasure relative to personal and political order."
+      },
+      {
+        "childIds": [
+          "n-41-7",
+          "n-42-6",
+          "n-42-7"
+        ],
+        "label": "Immortality and the Myth of Er",
+        "summary": "In Book X, Socrates argues for the indestructible nature of the soul and presents the vision of Er, where souls choose their subsequent lives according to wisdom and pass through forgetfulness before rebirth, ending with a call to practice justice.",
+        "rationale": "These Book X occurrences center on the eschatological conclusion of the dialogue, tracing the soul's immortality, reincarnation choices, and moral consequence."
+      },
+      {
+        "childIds": [
+          "n-43-3",
+          "n-44-1",
+          "n-44-3",
+          "n-44-4",
+          "n-45-5"
+        ],
+        "label": "Editorial Synopses of Platonic Themes",
+        "summary": "Editorial notes synthesize Plato's core concepts across dialogues, covering dialectic as the summit of inquiry, theological canons of divine goodness, the metaphysical Idea of the Good, political and psychic justice, and the tripartite theory of the soul.",
+        "rationale": "These items all stem from the editorial paratext and apparatus, providing high-level thematic overviews of Platonic philosophy."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "rRicavvyF6Gdx9gP1MGDcA",
+  "usage": {
+    "promptTokenCount": 14670,
+    "candidatesTokenCount": 845,
+    "totalTokenCount": 15515,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14670
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 845
+      }
+    ]
+  },
+  "durationMs": 7503,
+  "requestHash": "67be80571680cbabfaa78bb23289095e3210ae500523bcbcc8abf78ee1f3287e"
+}

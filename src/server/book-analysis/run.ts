@@ -1,3 +1,4 @@
+import { calibrateBookAxes } from './axis-calibration';
 import { createHash } from 'node:crypto';
 import { readdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -126,7 +127,8 @@ export async function analyzeText(input: {
       });
     });
     const baseGraph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
-    const graph = await assignBookAxes({graph:baseGraph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
+    let graph = await assignBookAxes({graph:baseGraph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
+    graph = await calibrateBookAxes({graph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     await writeJson(path.join(root, 'graph.json'), graph);
     await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'complete', phase: 'complete', completedChunks: chunks.length, graph: { nodes: graph.nodes.length, identities: graph.identities.length, edges: graph.edges.length, themes: graph.territories.length }, validatedCalls: replies.map(r => ({ key: r.key, modelVersion: r.reply.modelVersion, responseId: r.reply.responseId, usage: r.reply.usage, durationMs: r.reply.durationMs })), completedAt: new Date().toISOString() });
     // Publish only a fully validated snapshot; failed runs never replace a working graph.

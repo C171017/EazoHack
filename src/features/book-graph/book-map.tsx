@@ -10,6 +10,7 @@ import { UnplacedNotes } from './unplaced-notes';
 import { baseScale, semanticWindow, toScreen, zoomAt, zoomCentered, zoomLevel } from './semantic-window';
 import { readMap, useMapPages, useMapRequest } from './map-data';
 import { useNodeTransition } from './node-transition';
+import { edgeVisibility, useEdgeTransition } from './edge-transition';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
 export function BookMap({graph,view,onViewChange,onSource}:{
   graph:MapBootstrap;view:MapView|null;
@@ -49,7 +50,8 @@ export function BookMap({graph,view,onViewChange,onSource}:{
     onViewChange({...current,readerAnchorId:anchor.id});
     onSource(anchor);
   },[sourceActivation,selected,current,onViewChange,onSource]);
-  const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,{kind:'edges',id:windowed.nodes.map(n=>n.id),start:'0',end:'1'},140);
+  const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,{kind:'edges',id:windowed.nodes.map(n=>n.id).sort(),start:'0',end:'1'},140);
+  const animatedEdges=useEdgeTransition(edges.data?.links);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
   const drag=useRef<{id:number;x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;pan:boolean;moved:boolean}|null>(null);
@@ -183,7 +185,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
           const a=toScreen({...selectedEntry.position!,[axis]:selectedEntry.bounds!.min[axis]},current,size,range),b=toScreen({...selectedEntry.position!,[axis]:selectedEntry.bounds!.max[axis]},current,size,range);
           return <line key={axis} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={COLORS[i]} strokeWidth="2" opacity=".55"/>;
         })}</g>}
-        <g aria-hidden="true">{edges.data?.links.map(edge=>{const a=points.find(p=>p.id===edge.source&&!p.exiting),b=points.find(p=>p.id===edge.target&&!p.exiting);return a&&b?<line key={edge.id} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line>:null;})}</g>
+        <g aria-hidden="true" pointerEvents="none">{animatedEdges.map(({link:edge,opacity})=>{const a=points.find(p=>p.id===edge.source),b=points.find(p=>p.id===edge.target);return a&&b?<g key={edge.id} opacity={edgeVisibility(opacity,a,b)}><line data-edge-id={edge.id} data-edge-source={edge.source} data-edge-target={edge.target} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line></g>:null;})}</g>
         {points.map(p=>{const color=COLORS[Math.max(0,graph.territories.findIndex(t=>t.id===p.node.themeIds[0]))%COLORS.length],label=labels.get(p.id),cluster=p.node.kind==='cluster';let depth=0,parent=p.node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}const radius=p.radius*Math.max(.75,Math.min(1.1,Math.sqrt(current.zoom/ZOOM_POLICY.step**depth)));return <g key={p.id} opacity={p.opacity} pointerEvents={p.exiting?'none':undefined} aria-hidden={p.exiting||undefined}>
           {label&&<line x1={p.x} y1={p.y} x2={label.labelX} y2={label.labelY+13} stroke={color} opacity=".25"/>}
           <g data-node-id={p.id} data-node-kind={p.node.kind} className={`map-node${current.selectedNodeId===p.id||selectedAncestors.has(p.id)?' is-selected':''}`} role="button" tabIndex={p.exiting?-1:0} aria-label={`${p.label}${cluster?`, group of ${p.node.leafCount} notes. Activate to expand`:`, ${p.node.sourceLabel}`}`} aria-pressed={current.selectedNodeId===p.id||selectedAncestors.has(p.id)} onClick={()=>cluster?openCluster(p.node):activateLeaf(p.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(cluster)openCluster(p.node);else activateLeaf(p.id);}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();e.stopPropagation();const direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const target=windowed.nodes[(windowed.nodes.findIndex(n=>n.id===p.id)+direction+windowed.nodes.length)%windowed.nodes.length];if(target)svg.current?.querySelector<SVGGElement>(`[data-node-id="${target.id}"]`)?.focus();}}}>

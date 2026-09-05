@@ -1,0 +1,590 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-13-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentary analyzes Plato's mathematical computation of 729 as the cubed distance between king and tyrant, showing how it arises from ranking constitutions and cubing dimensions.",
+            "anchorIds": [
+              "p-355014",
+              "p-356907"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on a specific numerical calculation and symbolic formula representing the gap between two particular regime/character extremes in the dialogue.",
+            "anchorIds": [
+              "p-355014",
+              "p-356907"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A critical commentary step contextualizing Plato's rejection of poetry by analyzing contemporary historical decay and contrasting Plato's view with modern views of aesthetic expression.",
+            "anchorIds": [
+              "p-385695",
+              "p-386611",
+              "p-389139"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Discusses the domain of Greek literary history, fourth-century Athenian theatrical decline, and the philosophical status of mimetic art.",
+            "anchorIds": [
+              "p-385695",
+              "p-386611",
+              "p-389139"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The commentator argues directly against Plato's blanket condemnation of art, proposing an alternative thesis where art mediates feeling and reason.",
+            "anchorIds": [
+              "p-396889",
+              "p-400904",
+              "p-403238"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Articulates a general aesthetic theory concerning the positive moral, philosophical, and expressive function of artistic representation.",
+            "anchorIds": [
+              "p-396889",
+              "p-400904",
+              "p-403238"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct textual analysis of the Vision of Er's astronomical imagery and the spindle of Necessity, noting its symbolic and inconsistent mechanical features.",
+            "anchorIds": [
+              "p-407907",
+              "p-407366",
+              "p-409722"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Analyzes a single specific mythic/cosmological narrative and its mechanics within Book X.",
+            "anchorIds": [
+              "p-407907",
+              "p-407366",
+              "p-409722"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A structural thesis introduced by the commentator classifying the Republic into two distinct strands: a historical Spartan/Hellenic state and a philosophical ideal realm.",
+            "anchorIds": [
+              "p-414656",
+              "p-415778"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Specifically characterizes the structural composition and political models within Plato's dialogue.",
+            "anchorIds": [
+              "p-414656",
+              "p-415778"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Refutes Niebuhr's historical critique by establishing that Plato regarded all existing empirical regimes as factional, framing an ideal city meant for all humanity.",
+            "anchorIds": [
+              "p-426038"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-7"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Focuses on Plato's personal relation to Athenian citizenship and the universal orientation of his political theory.",
+            "anchorIds": [
+              "p-426038"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Introduces the paradox of communal property and places it in comparative historical perspective alongside ancient practices, Aristotle's counter-arguments, and early Christianity.",
+            "anchorIds": [
+              "p-428590",
+              "p-428978"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Addresses the concept and historical mutability of property institutions in antiquity and early Christian thought.",
+            "anchorIds": [
+              "p-428590",
+              "p-428978"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Details Plato's arguments from animal analogies and civic capacity to advocate equal training and offices for women, noting its radical break with ancient customs.",
+            "anchorIds": [
+              "p-438568",
+              "p-439071",
+              "p-439894"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Asserts a general social and philosophical principle concerning gender equality in civic capabilities and education.",
+            "anchorIds": [
+              "p-438568",
+              "p-439071",
+              "p-439894"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Examines Plato's proposal to eliminate the nuclear family and institute controlled mating for state breeding, highlighting its underlying assumptions.",
+            "anchorIds": [
+              "p-442847"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Focuses on Plato's specific domestic and eugenic proposals for the guardian class.",
+            "anchorIds": [
+              "p-442847"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Jowett comments directly on Plato's educational framework in Books II-III, making a direct interpretative step about the harmonious unity of gymnastic and musical training directed towards character.",
+            "anchorIds": [
+              "p-491266",
+              "p-493540",
+              "p-494856"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates general principles regarding how early childhood education, combining physical discipline and aesthetic/musical exposure, shapes moral character.",
+            "anchorIds": [
+              "p-491266",
+              "p-493540",
+              "p-494856"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Synthesizes Plato's transition in the curriculum from mathematical sciences to dialectic and the ultimate vision of the Good in an expository assessment.",
+            "anchorIds": [
+              "p-500975",
+              "p-502683",
+              "p-504662"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Addresses the overarching role of dialectic and the Idea of the Good as foundational to all knowledge, science, and higher education.",
+            "anchorIds": [
+              "p-500975",
+              "p-502683",
+              "p-504662"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Directly develops an evaluative takeaway from Plato's conception of lifelong learning, contrasting its ancient formulation with the demands of modern adult self-education.",
+            "anchorIds": [
+              "p-511362",
+              "p-512253",
+              "p-513793"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Proposes a broad pedagogical claim about the nature and psychological obstacles of lifelong self-education for human life.",
+            "anchorIds": [
+              "p-511362",
+              "p-512253",
+              "p-513793"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Contrasts the classical worldview of Plato and Aristotle with the modern concept of historical progress, offering a direct historical-philosophical analysis.",
+            "anchorIds": [
+              "p-517209",
+              "p-521221"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Encompasses macro-historical paradigms, specifically the absence of the idea of progress in antiquity versus cyclical theories of history.",
+            "anchorIds": [
+              "p-517209",
+              "p-521221"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct comparative analysis juxtaposing the Republic and the Laws across style, political institutions, and Plato's differing stages of life.",
+            "anchorIds": [
+              "p-523059",
+              "p-525429",
+              "p-527093"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Specifically compares two individual texts within Plato's corpus (the Republic and the Laws).",
+            "anchorIds": [
+              "p-523059",
+              "p-525429",
+              "p-527093"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct analysis evaluating the dialogue Statesman (Politicus) on the question of the rule of law versus personal ruler and its relation to dialectic.",
+            "anchorIds": [
+              "p-528336"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Examines a specific Platonic dialogue (the Statesman) and its political-methodological claims.",
+            "anchorIds": [
+              "p-528336"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Provides a direct comparative critique of Cicero's De Republica in relation to Plato's work, examining rhetorical imitation and philosophical differences.",
+            "anchorIds": [
+              "p-529866"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on a specific historical work, Cicero's De Republica, and its particular adaptations of Plato.",
+            "anchorIds": [
+              "p-529866"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Directly analyzes Augustine's De Civitate Dei as a Christian utopian/theological response to historical crisis, contrasting it with Plato's ideal city.",
+            "anchorIds": [
+              "p-533514",
+              "p-535715"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Specifically assesses Augustine's work and its historical-polemical context.",
+            "anchorIds": [
+              "p-533514",
+              "p-535715"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct analysis of Dante's De Monarchia and its medieval political vision of universal empire independent of papal control.",
+            "anchorIds": [
+              "p-537204",
+              "p-539405"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focused specifically on Dante's treatise De Monarchia and its medieval context.",
+            "anchorIds": [
+              "p-537204",
+              "p-539405"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct critical exposition of More's Utopia, evaluating its reception and adaptation of Platonic communal ideals to sixteenth-century England.",
+            "anchorIds": [
+              "p-539533",
+              "p-544653",
+              "p-547094"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Evaluates a single work, Thomas More's Utopia, and its political proposals.",
+            "anchorIds": [
+              "p-539533",
+              "p-544653",
+              "p-547094"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct textual exposition and evaluation of Campanella's City of the Sun and its utopian elements drawn from Plato.",
+            "anchorIds": [
+              "p-553528",
+              "p-555938",
+              "p-556820"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Restricted to the specific utopian treatise by Campanella.",
+            "anchorIds": [
+              "p-553528",
+              "p-555938",
+              "p-556820"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates reasons that because injustice produces strife, sedition, and mutual destruction, even a band of criminals requires a baseline of justice to achieve collective action.",
+            "anchorIds": [
+              "p-631098",
+              "p-632005",
+              "p-633014"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The claim generalizes over any collective human body, including cities, armies, families, and criminal bands.",
+            "anchorIds": [
+              "p-632005",
+              "p-633014"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates reviews the sequence of their dialectical digressions and infers that because they never properly identified the definition of justice, their dependent conclusions are ungrounded.",
+            "anchorIds": [
+              "p-637924"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Reflects locally on Socrates' personal state of knowledge and the specific inquiry conducted in Book I.",
+            "anchorIds": [
+              "p-637924"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Glaucon articulates an account of how mutual experience of injury leads weaker individuals to form covenants, deriving justice as an intermediate compromise.",
+            "anchorIds": [
+              "p-643203",
+              "p-641273"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Proposes a general explanatory theory for the origin, nature, and enforceability of legal justice in human societies.",
+            "anchorIds": [
+              "p-643203"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Using the analogy of a well-bred dog that behaves gently toward acquaintances and fiercely toward strangers, Socrates deduces that spirit and gentleness can coexist via a philosophic nature.",
+            "anchorIds": [
+              "p-686092",
+              "p-686977",
+              "p-688126"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Specifies the natural psychological profile required for the guardian class of a commonwealth.",
+            "anchorIds": [
+              "p-686092",
+              "p-688126"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ZhmcarTTHOmj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 118202,
+    "candidatesTokenCount": 4824,
+    "totalTokenCount": 123026,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 118202
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4824
+      }
+    ]
+  },
+  "durationMs": 27250,
+  "requestHash": "46444ac8eda2889388e435095fcb9a7791e1aca986b473ed3da3573ea769da5c"
+}

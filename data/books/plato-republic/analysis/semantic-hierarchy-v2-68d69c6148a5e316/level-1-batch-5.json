@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-24-5",
+          "n-24-6",
+          "n-25-1"
+        ],
+        "label": "Poetic and Musical Reform",
+        "summary": "Socrates restricts acceptable poetic styles and musical modes, banishing imitative poets along with sorrowful and relaxed melodies. Only the austere storyteller and the Dorian and Phrygian modes are retained to foster courage and temperance.",
+        "rationale": "Consecutive Book III passages governing the strict censorship and moral utility of music and poetry."
+      },
+      {
+        "childIds": [
+          "n-27-1",
+          "n-29-1",
+          "n-32-3"
+        ],
+        "label": "Adeimantus's Critical Doubts",
+        "summary": "Adeimantus challenges Socrates regarding the practical reality of the ideal state. He objects that guardians are denied ordinary happiness, demands an explanation of the shared community of women and children, and argues that dedicated philosophers are perceived as useless rogues.",
+        "rationale": "Dialogic objections brought by Adeimantus against key political proposals in Books IV, V, and VI."
+      },
+      {
+        "childIds": [
+          "n-34-4",
+          "n-36-1",
+          "n-36-6",
+          "n-39-7"
+        ],
+        "label": "Curriculum, Soul, and State",
+        "summary": "These discussions span the interlocutor's assent to the fourfold cognitive schema, the curricular placement of solid geometry, the practical founding of the city through the education of the young, and the identification of pure pleasures like scent.",
+        "rationale": "Dialectical developments from Books VI to IX concerning education, psychological divisions, and the establishment of the state."
+      },
+      {
+        "childIds": [
+          "n-42-5"
+        ],
+        "label": "Cosmic Spindle of Necessity",
+        "summary": "Souls witness the cosmic structure turned by the spindle of Necessity, governed by eight rotating concentric whorls, the sirens' harmonies, and the three Fates who guide past, present, and future.",
+        "rationale": "A solitary mythic vision from the Myth of Er in Book X that remains thematically distinct from dialogue arguments and editorial paratext."
+      },
+      {
+        "childIds": [
+          "n-44-5",
+          "n-44-6",
+          "n-45-2",
+          "n-45-4",
+          "n-45-6",
+          "n-46-4"
+        ],
+        "label": "Topical Analytical Index",
+        "summary": "Index entries compile textual citations and thematic discussions across the dialogue concerning guardians, Homeric poetry, the character and education of philosophers and rulers, the structure of the state, and the nature of virtue.",
+        "rationale": "Paratextual subject index entries consolidating cross-cutting themes throughout the Republic."
+      },
+      {
+        "childIds": [
+          "n-46-5"
+        ],
+        "label": "Transcriber Editorial Notes",
+        "summary": "Editorial notes provide documentation of typographic corrections, collation details, and the structural markup used for marginal Stephanus numbers and Greek transliteration.",
+        "rationale": "Modern editorial and typographical paratext distinct from ancient conceptual index entries."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "fRicapfwGZ2Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 13505,
+    "candidatesTokenCount": 673,
+    "totalTokenCount": 14178,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13505
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 673
+      }
+    ]
+  },
+  "durationMs": 6251,
+  "requestHash": "7956d1527fd5a02e8ed84d0846c660d2d5bbf726a6c0929819a29323ed9b8cfd"
+}
