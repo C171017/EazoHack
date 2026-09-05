@@ -87,15 +87,16 @@ test('only intersecting subtrees request data and cache is bounded through repea
   const cache=new PageCache(3);for(const [id,nodes] of pages)cache.put(id,nodes);assert.equal(cache.pages.size,3);
   const keep=[...cache.pages.keys()][0];cache.put('new',[],new Set([keep]));assert.ok(cache.pages.has(keep));assert.equal(cache.pages.size,3);
 });
-test('reversible transition starts at current positions, converges on parents and respects total cap',()=>{
+test('reversible crossfade preserves fixed positions and respects total cap',()=>{
   const {h,index}=fixture(),parent=index.get(h.roots[0])!,children=h.children[parent.id].map(id=>index.get(id)!);
-  const expanded=transitionPlan([{node:parent,position:parent.position,opacity:1,radius:15,exiting:false}],children,index);
-  assert.deepEqual(expanded[0].from.position,parent.position);
+  const expanded=transitionPlan([{node:parent,position:parent.position,opacity:1,radius:15,exiting:false}],children);
+  assert.deepEqual(expanded[0].from.position,children[0].position);
+  assert.ok(expanded.every(p=>JSON.stringify(p.from.position)===JSON.stringify(p.to.position)));
   const mid=expanded.map(p=>({...p.to,opacity:.5,position:p.from.position}));
-  const reverse=transitionPlan(mid,[parent],index);assert.equal(reverse[0].from.opacity,.5);
-  assert.ok(reverse.filter(p=>p.to.exiting).every(p=>JSON.stringify(p.to.position)===JSON.stringify(parent.position)));
+  const reverse=transitionPlan(mid,[parent]);assert.equal(reverse[0].from.opacity,.5);
+  assert.ok(reverse.filter(p=>p.to.exiting).every(p=>JSON.stringify(p.to.position)===JSON.stringify(p.to.node.position)));
   const many=Array.from({length:100},(_,i)=>({...mid[0],node:{...mid[0].node,id:`exit-${i}`}}));
-  assert.ok(transitionPlan(many,graph.nodes.slice(0,36).map(leafEntry),index).length<=ZOOM_POLICY.transitions);
+  assert.ok(transitionPlan(many,graph.nodes.slice(0,36).map(leafEntry)).length<=ZOOM_POLICY.transitions);
 });
 test('lazy bootstrap has no full graph or source quotes and relations preserve direction/type/evidence',()=>{
   const {h}=fixture(),store=createMapStore(graph,h),bootstrap=mapBootstrap(store);

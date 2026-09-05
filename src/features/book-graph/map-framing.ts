@@ -2,6 +2,8 @@ import type { MapView } from '../../shared/schemas';
 import type { MapEntry } from '../../shared/zoom-hierarchy';
 import { project, sourceWorld, type Point3 } from './projection';
 
+import { GRID_PAN_BOUNDS } from './grid-bounds';
+
 export type Size = {width:number;height:number};
 export function baseScale(size:Size) { return Math.max(.08,Math.min((size.width-180)/660,(size.height-100)/500)); }
 
@@ -35,4 +37,22 @@ export function fitEntries(entries:MapEntry[],view:MapView,size:Size,progress:nu
   const pixels=Math.min(Math.max(80,size.width-260)/Math.max(120,Math.max(...xs)-Math.min(...xs)),Math.max(80,size.height-180-inspector)/Math.max(120,Math.max(...ys)-Math.min(...ys)));
   const scale=Math.max(.05,Math.min(20,pixels/baseScale(size)/view.zoom));
   return {...view,x:0,y:-inspector/2,framing:{center,scale}};
+}
+
+// Apply the same screen-space limits to gestures, restored views and resizing.
+export function confinePan(view:MapView,size:Size):MapView {
+  if(view.projection==='3d'||size.width<=0||size.height<=0)return view;
+  const {min,max}=GRID_PAN_BOUNDS;
+  const unpanned={...view,x:0,y:0};
+  const corners=[min.x,max.x].flatMap(x=>[min.y,max.y].flatMap(y=>[min.z,max.z].map(z=>screenWorld({x,y,z},unpanned,size))));
+  const limit=(offset:number,values:number[],length:number)=>{
+    const start=Math.min(...values),end=Math.max(...values);
+    const margin=Math.min(48,length*.08);
+    const lower=length-margin-end,upper=margin-start;
+    // When the whole grid is smaller than the viewport, keep it near centre.
+    const center=(length-start-end)/2;
+    return lower>upper?Math.max(center-margin,Math.min(center+margin,offset)):Math.max(lower,Math.min(upper,offset));
+  };
+  const x=limit(view.x,corners.map(p=>p.x),size.width),y=limit(view.y,corners.map(p=>p.y),size.height);
+  return x===view.x&&y===view.y?view:{...view,x,y};
 }

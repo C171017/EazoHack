@@ -2,10 +2,11 @@ import { AXIS_LABELS, LEGACY_AXIS_LABELS } from '../../shared/book-axes';
 import { useId } from 'react';
 import { sourceHeight, type Point3 } from './projection';
 
-export const ORIGIN: Point3 = {x:-250,y:-170,z:0};
+import { ORIGIN, GRID_EXTENT, GRID_BACK_EXTENT } from './grid-bounds';
+export { ORIGIN } from './grid-bounds';
 const SPACING = 50;
-const EXTENT = 1000;
-const BACK_EXTENT = 150;
+const EXTENT = GRID_EXTENT;
+const BACK_EXTENT = GRID_BACK_EXTENT;
 const AXES = ['x','y','z'] as const;
 const PLANES = [['x','y'],['x','z'],['y','z']] as const;
 const COLORS = ['#D87970','#729AD5','#F2EEE5'];

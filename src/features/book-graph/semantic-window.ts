@@ -1,7 +1,7 @@
 import type { MapView } from '../../shared/schemas';
 import { ZOOM_POLICY, type MapEntry, type Bounds } from '../../shared/zoom-hierarchy';
-import { sourceWorld, placeLabels, type Point3 } from './projection';
-import { screenWorld, mapObstacles, type Size } from './map-framing';
+import { sourceWorld, type Point3 } from './projection';
+import { screenWorld, type Size } from './map-framing';
 export { baseScale, type Size } from './map-framing';
 export const toWorld = sourceWorld;
 export function toScreen(p:Point3,view:MapView,size:Size,range:[number,number],readingProgress=.5) {
@@ -28,6 +28,15 @@ export function zoomLevel(zoom:number,previous:number,maxDepth:number) {
   while(level>0&&zoom<ZOOM_POLICY.step**level*ZOOM_POLICY.hysteresis)level--;
   return Math.min(level,maxDepth);
 }
+// Navigate through the existing world: never refit children, which would cancel
+// the magnification. The representative stays above the overlaid inspector.
+export function zoomIntoGroup(node:MapEntry,view:MapView,size:Size,depth:number,readingProgress:number):MapView {
+  const zoom=Math.min(ZOOM_POLICY.maxZoom,Math.max(view.zoom*ZOOM_POLICY.step,ZOOM_POLICY.step**(depth+1)*1.04));
+  const next={...view,zoom,selectedNodeId:node.id};
+  if(!node.position)return next;
+  const point=toScreen(node.position,next,size,[0,1],readingProgress);
+  return {...next,x:next.x+size.width/2-point.x,y:next.y+Math.max(60,(size.height-300)/2)-point.y};
+}
 function intersects(bounds:Bounds,view:MapView,size:Size,range:[number,number],pad=0,readingProgress=.5) {
   const corners=[bounds.min.x,bounds.max.x].flatMap(x=>[bounds.min.y,bounds.max.y].flatMap(y=>[bounds.min.z,bounds.max.z].map(z=>toScreen({x,y,z},view,size,range,readingProgress))));
   return Math.max(...corners.map(p=>p.x))>=-pad&&Math.min(...corners.map(p=>p.x))<=size.width+pad&&Math.max(...corners.map(p=>p.y))>=-pad&&Math.min(...corners.map(p=>p.y))<=size.height+pad;
@@ -37,7 +46,7 @@ export function matchesEntry(n:MapEntry,view:MapView,range:[number,number]) {
 }
 // Traverse cached intersecting branches only. The frontier is a non-overlapping cut:
 // budgets retain a parent instead of dropping siblings. Missing pages retain parents.
-export function semanticWindow(roots:MapEntry[],pages:ReadonlyMap<string,MapEntry[]>,view:MapView,size:Size,range:[number,number],level:number,readingProgress=.5,previousExpanded:ReadonlySet<string>=new Set()) {
+export function semanticWindow(roots:MapEntry[],pages:ReadonlyMap<string,MapEntry[]>,view:MapView,size:Size,range:[number,number],level:number,readingProgress=.5) {
   const cap=Math.min(ZOOM_POLICY.nodes,Math.max(8,Math.floor(size.width*size.height/18000)),level===0?12:level===1?20:36);
   const wanted:string[]=[], used:string[]=[],expanded:string[]=[];
   const visible=(n:MapEntry)=>matchesEntry(n,view,range)&&n.bounds!==null&&intersects(n.bounds,view,size,range,0,readingProgress);
@@ -50,26 +59,14 @@ export function semanticWindow(roots:MapEntry[],pages:ReadonlyMap<string,MapEntr
   const frontier=roots.filter(visible).sort(prioritize).map(node=>({node,depth:0}));
   for(let i=0;i<frontier.length;i++) {
     const {node,depth}=frontier[i];
-    // Look one layer ahead when there is room; use zoom as a detail ceiling,
-    // not as proof that the children will be legible in this projection.
-    if(node.kind!=='cluster'||depth>=level+1)continue;
+    // A fixed hierarchy cut follows camera scale. Selection, spare label space,
+    // and fetched pages must never reveal an additional level at the same zoom.
+    if(node.kind!=='cluster'||depth>=level)continue;
     const children=pages.get(node.id);
     if(!children){wanted.push(node.id);continue;}
     used.push(node.id);
     const next=children.filter(visible).sort(prioritize);
     if(frontier.length-1+next.length>cap)continue;
-    const explicit=selectedPath.has(node.id);
-    if(!explicit) {
-      const candidates=[...frontier.filter(f=>f.node.id!==node.id).map(f=>f.node),...next];
-      const points=candidates.flatMap(n=>n.position?[{id:n.id,label:n.label,...toScreen(n.position,view,size,range,readingProgress),radius:n.kind==='cluster'?18:7}]:[]);
-      const childIds=new Set(next.map(n=>n.id)),gap=previousExpanded.has(node.id)?6:14;
-      // Opportunistic expansion keeps every child on screen. At deeper zooms
-      // viewport clipping remains allowed, as in the existing lazy traversal.
-      if(depth>=level&&points.some(p=>childIds.has(p.id)&&(p.x<28||p.y<60||p.x>size.width-28||p.y>size.height-40)))continue;
-      if(points.some((a,i)=>points.slice(i+1).some(b=>(childIds.has(a.id)||childIds.has(b.id))&&Math.hypot(a.x-b.x,a.y-b.y)<a.radius+b.radius+gap)))continue;
-      const onScreen=points.filter(p=>p.x>=0&&p.y>=0&&p.x<=size.width&&p.y<=size.height);
-      if(placeLabels(onScreen,size.width,size.height,mapObstacles(view,size)).length<onScreen.length)continue;
-    }
     expanded.push(node.id);
     frontier.splice(i,1,...next.map(node=>({node,depth:depth+1})));i--;
   }

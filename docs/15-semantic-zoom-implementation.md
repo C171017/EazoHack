@@ -1,5 +1,7 @@
 > 2026-09-05 supersession: the user selected X = reasoning depth, Y = generality. The new reviewed axis stage and representative group placement supersede earlier topic/structure coordinates and bounds-center placement for new maps. Historical results below retain their original versions. See [axis redesign](22-map-axis-redesign.md).
 
+> 2026-09-06 navigation update: group activation now animates the camera into the group's saved representative position, preserving the existing framing scale. It increases magnification by at least one zoom step (up to the zoom limit), without fitting all children back into the pane. Disclosure follows the saved hierarchy depth and zoom thresholds; spare label space and selection no longer bypass a depth threshold. Children crossfade at their own immutable source positions instead of moving out from or collapsing into parents. Viewport pruning, bounded child-page loading, parent retention under the node budget, label collision handling, and leaf-to-source navigation remain. The earlier descriptions of moving-node transitions below are historical.
+
 # Semantic zoom implementation and local review
 
 Delivered 2026-09-05 against [the approved hierarchy design](14-semantic-zoom-hierarchy.md). This replaces spatial pagination in the book map. PDF extraction, passage assistance and the accepted source occurrences remain independent.

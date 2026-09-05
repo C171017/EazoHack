@@ -1,15 +1,15 @@
 'use client';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
 import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, placeLabels, placeClusterHandles, PROJECTIONS, type Point3 } from './projection';
-import { fitEntries, screenWorld, mapObstacles } from './map-framing';
+import { confinePan, fitEntries, screenWorld, mapObstacles } from './map-framing';
 import { MapGrid, ORIGIN } from './map-grid';
 import { TimelineControl } from './timeline-control';
 import { axisValue, axisRange } from '../../shared/book-axes';
 import { AxisDetails } from './axis-details';
 import { UnplacedNotes } from './unplaced-notes';
-import { semanticWindow, toScreen, zoomCentered, zoomLevel } from './semantic-window';
+import { semanticWindow, toScreen, zoomCentered, zoomIntoGroup, zoomLevel } from './semantic-window';
 import { readMap, useMapPages, useMapRequest } from './map-data';
 import { useNodeTransition } from './node-transition';
 import { edgeVisibility, useEdgeTransition } from './edge-transition';
@@ -18,12 +18,13 @@ import { heatCount } from './reading-heat';
 import { buildHeatVolume } from './heat-field';
 import { SpatialHeat } from './spatial-heat';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
-export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScrollSource,heat}:{
+export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgress,onScrollSource,heat}:{
   graph:MapBootstrap;view:MapView|null;readingProgress:number;onScrollSource:(delta:number)=>void;
   heat?:ReadingHeatData;
   onViewChange:(view:MapView)=>void;onSource:(anchor:SourceAnchor)=>void;
 }) {
   const [size,setSize]=useState({width:0,height:0});
+  const onViewChange=useCallback((next:MapView)=>saveView(confinePan(next,size)),[saveView,size]);
   const [heatSelection,setHeatSelection]=useState<string|null>(null);
   const heatPoints=heat?.points;
   const heatField=useMemo(()=>heatPoints?buildHeatVolume(heatPoints,'all'):null,[heatPoints]);
@@ -36,18 +37,16 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
     const migrated=view.axisConvention==='z-up-v1'?view:{...view,...orientation(view.projection),axisConvention:'z-up-v1' as const};
     return {...migrated,...confineCamera(migrated),themeFilter:null,roleFilter:null,sourceScope:'book',zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,migrated.zoom)),...(migrated.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!migrated.hierarchyVersion&&migrated.selectedNodeId?.startsWith('h-')?null:migrated.selectedNodeId};
   },[view,graph.graphVersion,graph.version]);
-  const current=useMemo(()=>saved.framing?saved:fitEntries(graph.roots,saved,size,readingProgress),[saved,graph.roots,size,readingProgress]);
+  const current=useMemo(()=>confinePan(saved.framing?saved:fitEntries(graph.roots,saved,size,readingProgress),size),[saved,graph.roots,size,readingProgress]);
   useEffect(()=>{if(!saved.framing&&size.width>0&&size.height>0)onViewChange(current);},[saved.framing,current,size,onViewChange]);
-  const previousExpanded=useRef<ReadonlySet<string>>(new Set());
   const [previousLevel,setPreviousLevel]=useState(0),[navigationError,setNavigationError]=useState<string|null>(null);
   const [navigating,setNavigating]=useState(false);
   const level=zoomLevel(current.zoom,previousLevel,graph.depth);
   const range:[number,number]=[0,1];
-  const data=useMapPages(graph.version,pages=>semanticWindow(graph.roots,pages,current,size,range,level,readingProgress,previousExpanded.current));
+  const data=useMapPages(graph.version,pages=>semanticWindow(graph.roots,pages,current,size,range,level,readingProgress));
   const {windowed,install}=data;
-  useEffect(()=>{previousExpanded.current=new Set(windowed.expanded);},[windowed.expanded]);
   const index=useMemo(()=>new Map([...graph.roots,...[...data.pages.values()].flat()].map(n=>[n.id,n])),[graph.roots,data.pages]);
-  const animated=useNodeTransition(windowed.nodes,index);
+  const animated=useNodeTransition(windowed.nodes);
   const restoredPath=useMapRequest<{node:MapEntry;pages:Record<string,MapEntry[]>}>(graph.version,current.selectedNodeId&&!index.has(current.selectedNodeId)?{kind:'locate',id:current.selectedNodeId}:null);
   useEffect(()=>{if(restoredPath.data)install(restoredPath.data.pages);},[restoredPath.data,install]);
   const selectedEntry=index.get(current.selectedNodeId??'')??restoredPath.data?.node;
@@ -101,21 +100,21 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
       const next=pinch
         ?zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size)
         :{...view,x:view.x-(event.shiftKey&&!event.deltaX?event.deltaY:event.deltaX)*unit,y:view.y-(event.shiftKey&&!event.deltaX?0:event.deltaY)*unit};
-      latest.current={current:next,size};onViewChange(next);
+      latest.current={current:confinePan(next,latest.current.size),size};onViewChange(next);
     };
     const gestureStart=(event:Event)=>{
       event.preventDefault();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
       gesture={view,size};
     };
-    const gestureChange=(event:Event)=>{event.preventDefault();if(!gesture)return;const scale=(event as Event&{scale:number}).scale;if(!Number.isFinite(scale)||scale<=0)return;const next=zoomCentered(gesture.view,gesture.view.zoom*scale,gesture.size);latest.current={current:next,size:gesture.size};onViewChange(next);};
+    const gestureChange=(event:Event)=>{event.preventDefault();if(!gesture)return;const scale=(event as Event&{scale:number}).scale;if(!Number.isFinite(scale)||scale<=0)return;const next=zoomCentered(gesture.view,gesture.view.zoom*scale,gesture.size);latest.current={current:confinePan(next,latest.current.size),size:gesture.size};onViewChange(next);};
     const gestureEnd=(event:Event)=>{event.preventDefault();gesture=null;};
     element.addEventListener('wheel',wheel,{passive:false});
     element.addEventListener('gesturestart',gestureStart,{passive:false});element.addEventListener('gesturechange',gestureChange,{passive:false});element.addEventListener('gestureend',gestureEnd,{passive:false});
     return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);};
   },[onViewChange]);
   const cancelMotion=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
-  const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch){setSourceActivation(null);if(patch.selectedNodeId)setHeatSelection(null);}cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:next};onViewChange(next);};
+  const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch){setSourceActivation(null);if(patch.selectedNodeId)setHeatSelection(null);}cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:confinePan(next,latest.current.size)};onViewChange(next);};
   function activateLeaf(id:string) {
     change({selectedNodeId:id});
     setSourceActivation({id,ticket:++sourceTicket.current});
@@ -148,8 +147,19 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
       if(controller.signal.aborted)return;
       install({[node.id]:children});
       let depth=0,parent=node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}
-      const next={...latest.current.current,zoom:Math.min(ZOOM_POLICY.maxZoom,Math.max(current.zoom,ZOOM_POLICY.step**(depth+1)*1.04)),selectedNodeId:node.id};
-      change(fitEntries(children,next,size,readingProgress));
+      const {current:from,size:viewport}=latest.current;
+      const next=zoomIntoGroup(node,from,viewport,depth,readingProgress);
+      setSourceActivation(null);setHeatSelection(null);
+      const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(next);return;}
+      let start:number|undefined;
+      const animate=(now:number)=>{
+        if(controller.signal.aborted)return;
+        start??=now;const t=Math.min(1,(now-start)/360),ease=t*t*(3-2*t);
+        publish({...next,zoom:from.zoom+(next.zoom-from.zoom)*ease,x:from.x+(next.x-from.x)*ease,y:from.y+(next.y-from.y)*ease});
+        if(t<1)frame.current=requestAnimationFrame(animate);else frame.current=null;
+      };
+      frame.current=requestAnimationFrame(animate);
     } catch(error){if(!controller.signal.aborted)setNavigationError(error instanceof Error?error.message:'Could not open this group');}
     finally{if(!controller.signal.aborted)setNavigating(false);}
   }
@@ -162,7 +172,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
       data.install(result.pages);
       const zoom=Math.max(1,ZOOM_POLICY.step**result.ancestors.length*1.06),next={...latest.current.current,selectedNodeId:id,...(result.node.position?{zoom,x:0,y:0}:{})};
       if(result.node.position){const p=toScreen(result.node.position,next,size,[0,1],result.node.kind==='occurrence'?result.node.position.z:readingProgress);next.x=size.width/2-p.x;next.y=size.height/2-p.y;}
-      latest.current={...latest.current,current:next};onViewChange(next);
+      latest.current={...latest.current,current:confinePan(next,latest.current.size)};onViewChange(next);
       if(result.node.kind==='occurrence')setSourceActivation({id,ticket:++sourceTicket.current});
     }catch(error){if(!controller.signal.aborted)setNavigationError(error instanceof Error?error.message:'Could not reveal node');}
     finally{if(!controller.signal.aborted)setNavigating(false);}
@@ -207,7 +217,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
           const dx=e.clientX-d.x,dy=e.clientY-d.y;
           if(Math.hypot(dx,dy)<3&&!d.moved)return;
           d.moved=true;
-          if(d.mode==='pan')d.latest={...d.view,x:d.view.x+dx,y:d.view.y+dy};
+          if(d.mode==='pan')d.latest=confinePan({...d.latest,x:d.latest.x+e.clientX-d.lastX,y:d.latest.y+e.clientY-d.lastY},latest.current.size);
           else {
             // Integrate incremental deltas so reversal at a pole responds immediately.
             d.motion=advanceOrbit(d.motion,e.clientX-d.lastX,e.clientY-d.lastY);
@@ -218,7 +228,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
         }}
         onContextMenu={e=>{if(current.projection!=='3d')e.preventDefault();}}
         onPointerUp={e=>{if(drag.current?.id!==e.pointerId)return;finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to expand or group ideas. In flat views, scroll with two fingers or drag to pan; mouse wheel scrolls vertically and Shift-wheel horizontally. Alt-drag or Alt-arrow keys orbit; in 3D, drag to orbit within the three grid fences. Arrow keys pan flat views. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
+        <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to zoom through the saved hierarchy. Activate a group to zoom into it; zoom out to return to broader groups. In flat views, scroll with two fingers or drag to pan; mouse wheel scrolls vertically and Shift-wheel horizontally. Alt-drag or Alt-arrow keys orbit; in 3D, drag to orbit within the three grid fences. Arrow keys pan flat views. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#ADB5C0"/></marker></defs>
         <MapGrid size={size} projection={current.projection} screen={screen} modern={!!graph.axisVersion} readingProgress={readingProgress}/>
         {heat&&<g data-heat-targets>{heatTargets.map(point=>{
@@ -235,7 +245,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
         {points.map(p=>{const color=COLORS[Math.max(0,graph.territories.findIndex(t=>t.id===p.node.themeIds[0]))%COLORS.length],label=labels.get(p.id),cluster=p.node.kind==='cluster';let depth=0,parent=p.node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}const radius=p.radius*Math.max(.75,Math.min(1.1,Math.sqrt(current.zoom/ZOOM_POLICY.step**depth)));return <g key={p.id} opacity={p.opacity} pointerEvents={p.exiting?'none':undefined} aria-hidden={p.exiting||undefined}>
           {Math.hypot(p.x-p.anchorX,p.y-p.anchorY)>1&&<g data-semantic-anchor={p.id} aria-hidden="true" pointerEvents="none"><circle cx={p.anchorX} cy={p.anchorY} r="2.5" fill={color}/><line x1={p.anchorX} y1={p.anchorY} x2={p.x} y2={p.y} stroke={color} opacity=".5"/></g>}
           {label&&<line x1={p.x} y1={p.y} x2={Math.max(label.labelX,Math.min(label.labelX+label.width,p.x))} y2={Math.max(label.labelY,Math.min(label.labelY+26,p.y))} stroke={color} opacity=".25"/>}
-          <g data-node-id={p.id} data-node-kind={p.node.kind} className={`map-node${current.selectedNodeId===p.id||selectedAncestors.has(p.id)?' is-selected':''}`} role="button" tabIndex={p.exiting?-1:0} aria-label={`${p.label}${cluster?`, group of ${p.node.leafCount} notes. Activate to expand`:`, ${p.node.sourceLabel}`}`} aria-pressed={current.selectedNodeId===p.id||selectedAncestors.has(p.id)} onClick={()=>cluster?openCluster(p.node):activateLeaf(p.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(cluster)void openCluster(p.node);else activateLeaf(p.id);}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();e.stopPropagation();const direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const target=windowed.nodes[(windowed.nodes.findIndex(n=>n.id===p.id)+direction+windowed.nodes.length)%windowed.nodes.length];if(target)svg.current?.querySelector<SVGGElement>(`[data-node-id="${target.id}"]`)?.focus();}}}>
+          <g data-node-id={p.id} data-node-kind={p.node.kind} className={`map-node${current.selectedNodeId===p.id||selectedAncestors.has(p.id)?' is-selected':''}`} role="button" tabIndex={p.exiting?-1:0} aria-label={`${p.label}${cluster?`, group of ${p.node.leafCount} notes. Activate to zoom in`:`, ${p.node.sourceLabel}`}`} aria-pressed={current.selectedNodeId===p.id||selectedAncestors.has(p.id)} onClick={()=>cluster?openCluster(p.node):activateLeaf(p.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(cluster)void openCluster(p.node);else activateLeaf(p.id);}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();e.stopPropagation();const direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const target=windowed.nodes[(windowed.nodes.findIndex(n=>n.id===p.id)+direction+windowed.nodes.length)%windowed.nodes.length];if(target)svg.current?.querySelector<SVGGElement>(`[data-node-id="${target.id}"]`)?.focus();}}}>
             <title>{p.label} · {cluster?`${p.node.leafCount} notes · ${p.node.summary}`:p.node.sourceLabel}</title>
             <circle cx={p.x} cy={p.y} r={radius+9} fill={color} opacity=".08"/>
             <circle cx={p.x} cy={p.y} r={radius} fill={cluster?'#252C35':color} stroke={color} strokeWidth="1.2"/>
