@@ -1,3 +1,5 @@
+> 2026-09-05 supersession: the user selected X = reasoning depth, Y = generality. The new reviewed axis stage and representative group placement supersede earlier topic/structure coordinates and bounds-center placement for new maps. Historical results below retain their original versions. See [axis redesign](22-map-axis-redesign.md).
+
 # Semantic zoom implementation and local review
 
 Delivered 2026-09-05 against [the approved hierarchy design](14-semantic-zoom-hierarchy.md). This replaces spatial pagination in the book map. PDF extraction, passage assistance and the accepted source occurrences remain independent.

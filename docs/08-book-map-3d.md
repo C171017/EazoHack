@@ -1,115 +1,55 @@
-# 3D 整书地图契约
+# Shared 3D book-map contract
 
-> 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.
+Updated 2026-09-05: the user selected **Reasoning depth × Generality**. This replaces the former X topic-territory / Y structural-level contract. Z remains source progress. Implementation and validation: [axis redesign](22-map-axis-redesign.md).
 
-> 2026-09-05 最新设计细化：[多层节点与语义缩放](14-semantic-zoom-hierarchy.md) 已确认、待实现。捏合跨阈值展开/聚合，按视口加载并限制同时显示数量；取消拖动自动缩放。LM 自底向上生成层级并提出层数，应用校验预算。聚合深度与本文件 Y 轴 structuralLevel 独立；下文 80 节点保护是历史实现记录，不是最终大图方案。
+## One coordinate system, three views
 
-> 决定日期：2026-09-05  
-> 状态：产品空间语义已确认；关系类型允许表、主题提取阈值、整书完整实现仍待验证；本轮已实现有界 React/SVG 三维投影样本。
-
-## 目标
-
-整书地图使用一个共享的三维坐标模型，帮助读者回答三个稳定问题：
-
-- **X — 这在谈什么？** 每本书动态生成主题疆域。
-- **Y — 这是具体材料，还是组织更多材料的结构？** 从具体细节走向组织性结构。
-- **Z — 它在书的哪里出现？** 从来源开头走向结尾。
-
-空间采用 **Z-up** 约定：Z（来源进度）是世界的垂直轴，X 是横轴，Y（结构层级）进入纵深。相机旋转只改变屏幕上的投影，不改变节点保存的 X/Y/Z 语义值。
-
-“动态”不表示模型可自由发明轴的种类。轴的问题、允许值、证据要求、失败状态和版本稳定规则由系统预先定义；每本书只动态填充主题名称、书型化层级显示名和具体坐标。
-
-## 一个 3D 空间，三个规范投影
-
-| 投影 | 用户问题 | 主要用途 |
+| Axis | Question | Increasing away from the origin |
 | --- | --- | --- |
-| X×Y | 这本书谈哪些主题？具体材料如何连到较大的结构？ | 默认概念地图 |
-| X×Z | 各主题何时出现、消失、重现或汇合？ | 主题发展 |
-| Y×Z | 作者如何在例子、模式、概念和框架之间推进？ | 结构发展 |
+| X — Reasoning depth | How much prior reasoning within this book does this occurrence depend on? | Introduced material → local inference → linked arguments → extended chains |
+| Y — Generality | How broad a class of cases does this particular claim purport to cover? | Specific instance → bounded cases → restricted class → broad principle |
+| Z — Source progress | Where does this occurrence appear in the source? | Beginning → end |
 
-相反观察方向只是同一投影的反向，不建立六份视图。自由 3D 视角用于保持空间连续性、总览和切换投影；它不能产生另一套节点事实、坐标或关系。三个投影和自由 3D 必须读取同一 graphVersion。
+World coordinates remain Z-up: source progress is vertical, generality extends into depth, reasoning is horizontal. Rotating the camera changes projection only. In the X×Y view, positive Y extends down the screen with the existing camera convention. "Further" refers to increasing position along each labeled axis; radial distance has no overall importance, quality or truth meaning.
 
-## X：主题疆域
+| Projection | Meaning |
+| --- | --- |
+| X×Y | Starting material and derived conclusions at different levels of generality |
+| X×Z | How reasoning depth changes through the source |
+| Y×Z | How the scope of claims changes through the source |
 
-X 是一维主题地理，不是好坏、强弱或立场刻度。靠近表示主题相似或有较强内容重叠；具体关系仍由边说明。
+All views use the same graphVersion and hierarchyVersion. No projection-specific regrouping, rescoring, force layout, or automatic zoom on rotation/pan is permitted.
 
-每本书通常生成 3–7 个顶层主题疆域。主题必须：
+## Rating rules
 
-1. 有一个或多个精确 SourceAnchor；
-2. 覆盖多个片段，除非它由用户明确保留；
-3. 与其他顶层主题可解释地区分；
-4. 合并同义或高度重叠的候选；
-5. 把较小主题作为子主题，而不是无限增加顶层疆域；
-6. 保存覆盖率、置信度和生成理由。
+Both semantic ratings use an ordered 0–4 rubric with source-supported intermediate values. These are interpretable anchors, not equal intervals of meaning and not five mandatory buckets. Code normalizes X to 0–1 for the existing geometry; saved Y remains 0–4. Neither axis is normalized to the observed min/max of a particular book. Honest clustering and ties remain visible; arbitrary decimal scores and forced uniform occupancy are disallowed.
 
-系统按语义相近程度排列疆域，使相近主题尽量相邻。因为一维轴无法保存所有多对多关系，距离只表示导航性组织；支持、反驳、定义、因果、举例或发展必须使用显式边。
+Reasoning anchors: 0 directly introduced observation/assumption/definition; 1 a local inference; 2 a short linked argument; 3 several linked results; 4 an extended chain across arguments. This is the author's within-book reasoning, not background knowledge required by a particular reader, difficulty, chronology, abstraction or importance. No extracted edge does not imply depth zero. Positive values need explained internal inference or evidenced prerequisite nodes.
 
-示例：哲学书可能得到“知识—教育—伦理—政治—正义”，生物书可能得到“细胞—遗传—进化—生态”，小说可能得到“家庭—爱情—战争—记忆—身份”。这些词不同，但 X 始终回答同一个问题。
+Generality anchors: 0 a specific instance/scene; 1 a small bounded set; 2 a restricted class/domain; 3 a broadly reusable claim; 4 a very general principle within the work's subject. This is the claimed scope, not the truth of the claim, physical size, abstraction, mention frequency or breadth of use in the book.
 
-## Y：具体细节到组织性结构
+An abstract starting definition may have X=0 and high Y. A model-derived prediction about one specific event may have high X and Y=0. Assess the actual occurrence's statement: a depicted story and its general interpretation are different units. Preserve speakers, opposed claims and editorial attribution. Explain a mixed unit's rated scope or leave the axis unknown instead of rewriting the source.
 
-Y 使用规范结构层级并沿空间纵深展开；更深的层级不表示更好、更正确或更重要，只表示它组织更多材料。
+Each axis stores its own rationale and source-anchor IDs. Reasoning can additionally cite accepted prerequisite node IDs. A separate source review inspects those prerequisites. Unknown coordinates remain null and unplaced; the original node and its source remain accessible. Uncertainty is not a zero or midpoint.
 
-| 规范层级 | 通用含义 | 可能的哲学显示名 | 可能的小说显示名 | 可能的科学显示名 |
-| ---: | --- | --- | --- | --- |
-| 0 | 可直接定位的具体材料 | 段落/例子 | 场景/物件 | 观察/实验 |
-| 1 | 对具体材料的概括 | 主张 | 事件模式 | 结果 |
-| 2 | 可复用的中层解释 | 概念 | 人物弧/母题 | 机制 |
-| 3 | 组织多个概念的结构 | 论证 | 主题结构 | 模型 |
-| 4 | 组织全书较大部分的问题或框架 | 原则/核心问题 | 核心主题/冲突 | 理论/框架 |
+## Topics and source identity
 
-书型化词语只是显示名称，存储值仍使用同一规范层级。一个节点若无法可靠分层，`structuralLevel` 保持 null 并显示未分类，不强制放到中线。
+Retain 3–7 sourced topic groups, with stable labels/order and topic colors. Their order and stored legacy centroid metadata no longer set X. Nearness in the map does not imply the same topic or a semantic relation. Relationships remain explicitly typed and source-grounded.
 
-## Z：来源进度
+Keep shared concept identity separate from occurrences. Coordinates assess an occurrence; repeated mentions may have different reasoning roles or scopes. Z is derived from its unchanged exact source anchor, never collapsed across occurrences or replaced by story chronology, publication date or reading history.
 
-Z 只表示来源顺序。优先使用 PDF outline、章节/小节、页码、段落和规范化文本偏移，并保存从坐标回到 SourceAnchor 的路径。建议内部归一化为 `0..1`，界面显示真实章节和页码。
+## Semantic zoom and groups
 
-Z 同时是地图的垂直轴：由下到上表示从来源开头走向结尾。
+Navigation grouping depth is independent of both semantic axes. A source leaf may be a general principle or a specific example. Large group markers represent multiple notes, not importance or correctness.
 
-Z 不表示故事内部年代、历史年代、发表年代或用户阅读时间。若需要这些时间维度，应作为过滤器、边属性或另一个明确命名的可选 lens。
+New groups use a stable representative child position, selected by weighted distance in normalized XYZ, and retain their complete descendant bounds. A group summary is not a new source occurrence or a fresh axis-rated claim. Its representative is a navigation handle; group details disclose the ranges rather than describing the group as an average claim. Older snapshots retain their original bounds-center rule and explicit legacy axis labels.
 
-## 概念身份与概念出现
+Bounds, node and label budgets, source navigation, camera limits, and asynchronous version checks remain governed by [semantic zoom](14-semantic-zoom-hierarchy.md). Label collision handling must not rewrite semantic coordinates. Unknown notes remain accessible independently of spatial placement.
 
-一个概念可以在书中多次出现。数据模型必须区分：
+## Versions and publication
 
-- **identity**：例如全书共享的“正义”概念；
-- **occurrence**：例如“正义”在第 1、4、10 章的三次具体出现。
+New maps require `axisVersion: reasoning-generality-v1`, reviewed axis metadata and an assessment for every accepted occurrence. Old graphs remain parseable and are displayed as legacy; never reinterpret old topic/structure numbers as new reasoning/generality numbers.
 
-occurrence 必须带 SourceAnchor，并由来源确定 Z。identity 连接各次 occurrence，用于聚合名称、摘要和跨章发展。不得为了给 identity 一个方便的位置而把多次出现压成一个虚假的 Z 坐标。
+Reassessment creates a separate staged graph, preserves accepted nodes, anchors, identities, original relations and Z, and rebuilds the hierarchy. Switch the published map only after source, coordinate and hierarchy validation pass. Changed graph/hierarchy versions invalidate saved camera mappings rather than silently restoring selections against incompatible spatial data. Keep prior snapshots and request-fingerprinted checkpoints for recovery.
 
-## 坐标证据与稳定性
-
-每个动态坐标保存生成理由、证据、模型/规则版本和置信度。规则如下：
-
-- 无来源证据的主题或关系不发布为书中事实；
-- 无法确定的值使用 null/unknown，不自动放在零点；
-- 接受一个 graphVersion 后锁定主题顺序和轴方向；
-- 增量处理尽量保留已有坐标，避免破坏空间记忆；
-- 大幅主题合并、拆分或换序必须生成新 graphVersion，并向用户说明变化；
-- 活动热度、停留时间和掌握程度不得改变语义坐标。
-
-## 交互与无障碍底线
-
-- 用户可直接进入任一规范二维投影，不必操作自由 3D 才能阅读内容；
-- 投影切换保留选中节点、书中位置和可理解的运动连续性；
-- 节点标签在规范投影中必须可读，不能依赖透视缩小猜测内容；
-- 键盘能够选择节点、沿关系移动并切换投影；
-- 支持减少动态效果，必要时即时切换而不旋转；
-- 低性能设备至少提供同数据的规范二维投影；这属于 3D 产品的无障碍/性能降级，不是另一套 2D 数据产品。
-
-## 语义决定当时尚未选择
-
-- CSS 3D、Canvas、WebGL 或具体渲染库；
-- 节点与边的最大同时显示数量；
-- 主题发现和合并的精确阈值；
-- 支持、反驳、定义、因果、举例、发展等关系类型的最终允许表；
-- 自由 3D 相机手势、吸附阈值和动画时长；
-- 活动层、颜色编码和节点大小的最终语义。
-
-这些实现选择必须保持本文件的轴语义、同一数据多投影、出处可回访和 unknown 不造值原则。
-
-## 后续实现记录
-
-用户随后授权技术评估与实现；当前选择 React/SVG 三维坐标投影，采用 520ms 可取消弹簧相机吸附过渡及降低动态效果的即时切换。已实现九个有出处的 Book I 编辑样本节点与三种投影，空间视图工程上限为 80，超出后完整列表可用。数据容量与大图性能未据此宣称通过。详见 [实现记录](09-3d-implementation.md)。
-
-用户后续选择手势驱动投影切换：移除四个视图按钮；靠近规范视角时磁性吸附，拖离时连续返回 3D。保留键盘快捷键与节点列表以满足无障碍底线。
+Hardware performance claims still require device measurements; model reasoning and structural validation cannot certify M1/M2 or other baseline hardware performance.

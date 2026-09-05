@@ -1,3 +1,4 @@
+import { AxisBatchSchema, AxisReviewSchema } from '../src/server/book-analysis/axis-prompts';
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
@@ -36,7 +37,7 @@ test('Republic text segmentation covers every character and preserves exact pass
 test('unknown source references, context-only occurrences and bad endpoints are rejected', () => {
   const chunks = prepareText('BOOK I\n\nJustice is discussed.\n\nBOOK II\n\nA challenge follows.');
   const chunk = chunks[0];
-  const node = { label: 'Justice', identityLabel: 'Justice', summary: 'Justice is discussed.', sourceRole: 'dialogue' as const, speaker: null, level: 2, rationale: 'Reusable concept.', passageIds: [chunk.passages[1].id] };
+  const node = { label: 'Justice', identityLabel: 'Justice', summary: 'Justice is discussed.', sourceRole: 'dialogue' as const, speaker: null, reasoningHint: 'Directly introduced.', generalityHint: 'Reusable claim.', rationale: 'Reusable concept.', passageIds: [chunk.passages[1].id] };
   const value = { summary: 'Justice discussion.', nodes: [node], edges: [] };
   assert.doesNotThrow(() => validateExtraction(ExtractSchema.parse(value), chunk));
   for (const id of ['invented', chunk.context[0].id]) assert.throws(() => validateExtraction({ ...value, nodes: [{ ...node, passageIds: [id] }] }, chunk));
@@ -55,6 +56,8 @@ test('Vertex schema avoids large grammar bounds while local validation still enf
   const wire = vertexSchema(SynthesisSchema) as { properties: { identities: { maxItems?: number }; themes: { maxItems?: number } } };
   assert.equal(wire.properties.identities.maxItems, undefined);
   assert.equal(wire.properties.themes.maxItems, 7);
+  const axisWire=JSON.stringify(vertexSchema(AxisBatchSchema));
+  assert.equal(axisWire.includes('maxItems'),false,'Nested axis grammar limits stay in local validation');
   const group = { label: 'Identity', nodeIds: ['a'] };
   assert.equal(SynthesisSchema.safeParse({ themes: Array.from({ length: 3 }, () => ({ ...group, rationale: 'Evidence.' })), identities: Array.from({ length: 501 }, () => group), crossEdges: [] }).success, false);
 });
@@ -69,8 +72,12 @@ test('text pipeline saves exact coordinates, excludes rejected claims, resumes c
     let value: unknown;
     if (schema === ExtractSchema) {
       const chunk = chunks.find(c => prompt.includes(`Source section hint: ${c.section}.`))!;
-      value = { summary: 'A reading unit.', nodes: [{ label: chunk.section, identityLabel: 'Justice', summary: chunk.passages[1].text, sourceRole: 'dialogue', speaker: null, level: 1, rationale: 'A claim.', passageIds: [chunk.passages[1].id] }], edges: [] };
-    } else if (schema === ReviewSchema) value = { rejectedNodes: [{ id: 'n-3-1', reason: 'Test: unsupported classification.' }], rejectedEdges: [], notes: 'Model review fixture.' };
+      value = { summary: 'A reading unit.', nodes: [{ label: chunk.section, identityLabel: 'Justice', summary: chunk.passages[1].text, sourceRole: 'dialogue', speaker: null, reasoningHint: 'Directly introduced.', generalityHint: 'Reusable claim.', rationale: 'A claim.', passageIds: [chunk.passages[1].id] }], edges: [] };
+    } else if (schema === AxisBatchSchema) {
+      const data=JSON.parse(prompt.split('DATA:\n')[1]);
+      value={assignments:data.targets.map((id:string,i:number)=>{const n=data.catalog.find((n:{id:string})=>n.id===id);return {nodeId:id,assessment:{reasoningDepth:{value:i?1.5:0,rationale:'Fixture: local inference or directly introduced.',anchorIds:n.anchorIds,prerequisiteNodeIds:[]},generality:{value:2.75,rationale:'Fixture: broad scope.',anchorIds:n.anchorIds}}};})};
+    } else if (schema === AxisReviewSchema) value={rejected:[]};
+    else if (schema === ReviewSchema) value = { rejectedNodes: [{ id: 'n-3-1', reason: 'Test: unsupported classification.' }], rejectedEdges: [], notes: 'Model review fixture.' };
     else if (schema === IdentityRepairSchema) value = { assignments: [{ nodeId: 'n-3-1', identityIndex: 0 }] };
     else value = { themes: chunks.map((c, i) => ({ label: c.section, rationale: 'Test theme rationale.', nodeIds: [`n-${i + 1}-1`] })), identities: [{ label: 'Justice', nodeIds: ['n-1-1', 'n-2-1'] }], crossEdges: [{ source: 'n-2-1', target: 'n-1-1', type: 'defines', rationale: 'Definition.' }] };
     return { value, model: 'fixture', modelVersion: 'fixture', usage: {}, durationMs: 1 };
@@ -84,7 +91,9 @@ test('text pipeline saves exact coordinates, excludes rejected claims, resumes c
     assert.equal(resolved.identities[0].nodeIds.length, 3, 'Targeted repair must retain every candidate before evidence review.');
     assert.equal(result.graph.analysis?.rejectedNodes, 1);
     assert.equal(result.graph.analysis?.processedCharacters, raw.length);
-    assert.ok(result.graph.nodes.every(n => n.position.y === n.structuralLevel));
+    assert.equal(result.graph.axisVersion,'reasoning-generality-v1');
+    assert.ok(result.graph.nodes.every(n => n.position.y === n.axisAssessment!.generality.value));
+    assert.equal(result.graph.nodes[1].position.x,1.5/4);
     assert.notEqual(result.graph.nodes[0].position.z, result.graph.nodes[1].position.z);
     const initialCalls = calls;
     await analyzeText(input);

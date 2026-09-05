@@ -5,7 +5,7 @@ export const ZOOM_POLICY = { version:'zoom-v1', roots:8, children:8, maxDepth:6,
 const Vec = z.object({x:z.number().finite(),y:z.number().finite(),z:z.number().finite()}).strict();
 export const MapEntrySchema = z.object({
   id:z.string(), parentId:z.string().nullable(), kind:z.enum(['cluster','occurrence']), label:z.string().min(1).max(500), summary:z.string().max(20_000),
-  position:Vec.nullable(), bounds:z.object({min:Vec,max:Vec}).strict().nullable(),
+  positionRule:z.literal('representative-v1').optional(), position:Vec.nullable(), bounds:z.object({min:Vec,max:Vec}).strict().nullable(),
   leafCount:z.number().int().positive(), childCount:z.number().int().min(0).max(ZOOM_POLICY.children), height:z.number().int().min(0).max(ZOOM_POLICY.maxDepth),
   themeIds:z.array(z.string()), roles:z.array(z.string()), sourceLabel:z.string(),
 }).strict();
@@ -18,7 +18,7 @@ export const HierarchySchema = z.object({
   rationale:z.string(),
 }).strict();
 export type Hierarchy = z.infer<typeof HierarchySchema>;
-export type MapBootstrap = Pick<Graph,'bookId'|'graphVersion'|'analysis'> & {
+export type MapBootstrap = Pick<Graph,'bookId'|'graphVersion'|'analysis'|'axisVersion'> & {
   version:string; roots:MapEntry[]; depth:number; totalNodes:number; unplaced:number; unavailable?:boolean;
   territories:Pick<Graph['territories'][number],'id'|'label'|'centroidX'>[];
 };
@@ -29,11 +29,16 @@ export function leafEntry(node:Graph['nodes'][number]):MapEntry {
   const position=x===null||y===null||z===null?null:{x,y,z};
   return {id:node.id,parentId:null,kind:'occurrence',label:node.label,summary:node.summary,position,bounds:position?{min:position,max:position}:null,leafCount:1,childCount:0,height:0,themeIds:node.themeTerritoryIds,roles:node.sourceRole?[node.sourceRole]:[],sourceLabel:node.sourceLabel};
 }
-export function clusterEntry(id:string,label:string,summary:string,children:MapEntry[]):MapEntry {
+export function clusterEntry(id:string,label:string,summary:string,children:MapEntry[],positionRule?:'representative-v1'):MapEntry {
   const boxes=children.flatMap(n=>n.bounds?[n.bounds]:[]);
   const bounds=boxes.length?{min:{x:Math.min(...boxes.map(b=>b.min.x)),y:Math.min(...boxes.map(b=>b.min.y)),z:Math.min(...boxes.map(b=>b.min.z))},max:{x:Math.max(...boxes.map(b=>b.max.x)),y:Math.max(...boxes.map(b=>b.max.y)),z:Math.max(...boxes.map(b=>b.max.z))}}:null;
-  const position=bounds?{x:(bounds.min.x+bounds.max.x)/2,y:(bounds.min.y+bounds.max.y)/2,z:(bounds.min.z+bounds.max.z)/2}:null;
-  return {id,parentId:null,kind:'cluster',label,summary,position,bounds,leafCount:children.reduce((sum,n)=>sum+n.leafCount,0),childCount:children.length,height:1+Math.max(...children.map(n=>n.height)),themeIds:[...new Set(children.flatMap(n=>n.themeIds))],roles:[...new Set(children.flatMap(n=>n.roles))],sourceLabel:'Summary of source occurrences'};
+  let position=bounds?{x:(bounds.min.x+bounds.max.x)/2,y:(bounds.min.y+bounds.max.y)/2,z:(bounds.min.z+bounds.max.z)/2}:null;
+  if(positionRule && bounds) {
+    const placed=children.filter(n=>n.position);
+    const distance=(a:MapEntry,b:MapEntry)=>Math.abs(a.position!.x-b.position!.x)+Math.abs(a.position!.y-b.position!.y)/4+Math.abs(a.position!.z-b.position!.z);
+    position=[...placed].sort((a,b)=>placed.reduce((sum,n)=>sum+(distance(a,n)-distance(b,n))*n.leafCount,0)||a.id.localeCompare(b.id))[0].position;
+  }
+  return {id,parentId:null,kind:'cluster',label,summary,...(positionRule?{positionRule}:{}),position,bounds,leafCount:children.reduce((sum,n)=>sum+n.leafCount,0),childCount:children.length,height:1+Math.max(...children.map(n=>n.height)),themeIds:[...new Set(children.flatMap(n=>n.themeIds))],roles:[...new Set(children.flatMap(n=>n.roles))],sourceLabel:'Summary of source occurrences'};
 }
 export function validateHierarchy(input:unknown,graph:Graph):Hierarchy {
   const h=HierarchySchema.parse(input), entries=new Map(h.entries.map(n=>[n.id,n]));
@@ -54,7 +59,7 @@ export function validateHierarchy(input:unknown,graph:Graph):Hierarchy {
     }
     const ids=h.children[id];if(!ids||ids.length!==n.childCount) return fail('child count mismatch');
     const height=1+Math.max(...ids.map(child=>visit(child,id)));
-    const expected=clusterEntry(n.id,n.label,n.summary,ids.map(id=>entries.get(id)!));
+    const expected=clusterEntry(n.id,n.label,n.summary,ids.map(id=>entries.get(id)!),n.positionRule);
     if(JSON.stringify({...n,parentId:null})!==JSON.stringify(expected)||height!==n.height)fail('derived bounds/count/height mismatch');
     return height;
   }

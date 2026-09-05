@@ -1,3 +1,5 @@
+> 2026-09-05 supersession: the user selected X = reasoning depth, Y = generality. The new reviewed axis stage and representative group placement supersede earlier topic/structure coordinates and bounds-center placement for new maps. Historical results below retain their original versions. See [axis redesign](22-map-axis-redesign.md).
+
 # Text-only book analysis MVP
 
 > 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.

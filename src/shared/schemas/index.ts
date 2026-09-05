@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { AxisAssessmentSchema, BOOK_AXIS_VERSION } from '../book-axes';
 
 const Id = z.string().min(1).max(160);
 const Text = z.string().min(1).max(20_000);
@@ -95,6 +96,8 @@ const Unit = z.number().finite().min(0).max(1);
 const Evidence = z.object({ rationale: Text, ruleVersion: Id, confidence: Unit.nullable(), anchorIds: UniqueIds.refine(ids => ids.length > 0, "Coordinate evidence required") }).strict();
 export const GraphSchema = z.object({
   id: Id, bookId: Id, graphVersion: Id, fileHash: Text, extractionVersion: Id,
+  axisVersion: z.literal(BOOK_AXIS_VERSION).optional(),
+  axisAnalysis: z.object({model: ShortText, promptVersion: Id, sourceGraphVersion: Id, reviewStatus: z.literal('model_reviewed'), completedAt: IsoDate}).strict().optional(),
   sourceLength: z.number().int().positive(),
   analysis: z.object({
     status: z.literal('complete'), provider: z.literal('vertex_ai'), model: ShortText,
@@ -110,7 +113,8 @@ export const GraphSchema = z.object({
     id: Id, identityId: Id, kind: z.literal('occurrence'), label: ShortText, summary: Text,
     anchorIds: UniqueIds.refine(ids => ids.length > 0), themeTerritoryIds: UniqueIds,
     structuralLevel: z.number().int().min(0).max(4).nullable(),
-    position: z.object({ x: Unit.nullable(), y: z.number().int().min(0).max(4).nullable(), z: Unit.nullable() }).strict(),
+    axisAssessment: AxisAssessmentSchema.optional(),
+    position: z.object({ x: Unit.nullable(), y: z.number().finite().min(0).max(4).nullable(), z: Unit.nullable() }).strict(),
     evidence: Evidence, sourceLabel: ShortText,
     sourceRole: z.enum(['dialogue', 'commentary', 'paratext']).optional(),
     speaker: ShortText.nullable().optional(),
@@ -126,6 +130,7 @@ export const GraphSchema = z.object({
   const ids = [...graph.anchors,...graph.nodes,...graph.identities,...graph.edges,...graph.territories].map(n => n.id);
   if(new Set(ids).size !== ids.length) fail('Graph IDs must be unique');
   const known = (ids: string[]) => ids.every(id => anchors.has(id));
+  if (!!graph.axisVersion !== !!graph.axisAnalysis) fail('Axis version and analysis must be present together');
   for(const a of graph.anchors) {
     if(a.bookId !== graph.bookId || a.fileHash !== graph.fileHash || a.extractionVersion !== graph.extractionVersion) fail('Anchor source version mismatch');
     if(a.locators.some(l => l.kind === 'txt' && l.endOffset > graph.sourceLength)) fail('Anchor exceeds source');
@@ -137,14 +142,39 @@ export const GraphSchema = z.object({
     if(!known(n.anchorIds) || !known(n.evidence.anchorIds)) fail('Node references unknown anchors');
     if(!identities.get(n.identityId)?.occurrenceIds.includes(n.id)) fail('Occurrence must link its identity');
     if(n.themeTerritoryIds.some(id => !themes.has(id))) fail('Unknown territory');
-    if(n.position.y !== n.structuralLevel) fail('Y must equal canonical structural level');
-    if(n.position.x !== null && !n.themeTerritoryIds.length) fail('Known X needs a territory');
+    if (graph.axisVersion) {
+      const a = n.axisAssessment;
+      if (!a) fail('New axes require a source-grounded assessment for every occurrence');
+      else {
+        if(n.position.x !== (a.reasoningDepth.value === null ? null : a.reasoningDepth.value / 4) || n.position.y !== a.generality.value) fail('X/Y must match reasoning depth and generality');
+        for (const rating of [a.reasoningDepth, a.generality]) {
+          if(!known(rating.anchorIds) || !rating.anchorIds.some(id => n.anchorIds.includes(id))) fail('Axis evidence must include the occurrence and reference known anchors');
+        }
+        if(a.reasoningDepth.prerequisiteNodeIds.some(id => id === n.id || !nodes.has(id))) fail('Invalid reasoning prerequisite');
+        if(a.reasoningDepth.value === 0 && a.reasoningDepth.prerequisiteNodeIds.length) fail('A starting point cannot also have reasoning prerequisites');
+      }
+    } else {
+      if(n.axisAssessment) fail('Axis assessments require an explicit version');
+      if(n.position.y !== n.structuralLevel) fail('Y must equal canonical structural level');
+      if(n.position.x !== null && !n.themeTerritoryIds.length) fail('Known X needs a territory');
+    }
     // TXT scaffold: source progress always derives from its first exact source anchor.
     const anchor = anchors.get(n.anchorIds[0]);
     const locator = anchor?.locators[0];
     if(n.position.z !== null && (anchor?.resolution !== 'exact' || locator?.kind !== 'txt' || Math.abs(n.position.z - locator.startOffset / graph.sourceLength) > 1e-10)) fail('Z must derive from an exact source anchor');
   }
   for(const e of graph.edges) if(!nodes.has(e.source) || !nodes.has(e.target) || !known(e.evidenceAnchorIds)) fail('Relation endpoints and evidence must exist');
+  if(graph.axisVersion) {
+    const visiting = new Set<string>(), done = new Set<string>();
+    const visit = (id:string):void => {
+      if(visiting.has(id)) { fail('Cyclic reasoning prerequisites'); return; }
+      if(done.has(id)) return;
+      visiting.add(id);
+      for(const prerequisite of nodes.get(id)?.axisAssessment?.reasoningDepth.prerequisiteNodeIds ?? []) visit(prerequisite);
+      visiting.delete(id); done.add(id);
+    };
+    for(const id of nodes.keys()) visit(id);
+  }
 });
 
 export const MapViewSchema = z.object({

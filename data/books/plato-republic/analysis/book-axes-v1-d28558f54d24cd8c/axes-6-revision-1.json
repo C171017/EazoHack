@@ -1,0 +1,599 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-20-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates builds directly on Thrasymachus's claim that a practitioner in the strict sense never errs, inferring through inductive examples of crafts that every art inherently aims at the advantage of its subject rather than the artist.",
+            "anchorIds": [
+              "p-606583",
+              "p-606062",
+              "p-607448"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The thesis applies across all true arts and forms of governance, establishing a general normative principle for what defines any craft or authority.",
+            "anchorIds": [
+              "p-606583",
+              "p-607448"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Thrasymachus directly asserts a substantive provocative stance, reframing injustice as wisdom and virtue rather than vice, without deriving it from Socrates' prior deductions.",
+            "anchorIds": [
+              "p-608406",
+              "p-622572"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The claim formulates a broad standard concerning the nature of justice, injustice, and human excellence across political and private domains.",
+            "anchorIds": [
+              "p-608406",
+              "p-622572"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates establishes through the example of musicians and physicians that skilled practitioners seek to outdo non-practitioners rather than other masters, locally deriving that the just man aligns with the wise and good.",
+            "anchorIds": [
+              "p-627871",
+              "p-625889",
+              "p-626881"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The argument establishes a general rule regarding the behavior of knowledge holders in any art or field in comparison with ignorance.",
+            "anchorIds": [
+              "p-627871",
+              "p-626881"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates reasons that because injustice produces strife, sedition, and mutual destruction, even a band of criminals requires a baseline of justice to achieve collective action.",
+            "anchorIds": [
+              "p-631098",
+              "p-632005",
+              "p-633014"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The claim generalizes over any collective human body, including cities, armies, families, and criminal bands.",
+            "anchorIds": [
+              "p-632005",
+              "p-633014"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Socrates lays down the foundational premise and definitions of function (ergon) and excellence (arete) using bodily organs and implements as direct introductory starting points.",
+            "anchorIds": [
+              "p-635411",
+              "p-636552"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "It posits an overarching philosophical framework linking the specific function of any thing or soul to its essential excellence.",
+            "anchorIds": [
+              "p-635411",
+              "p-636552"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "This node directly couples the earlier agreed premise on the soul's proper function with the identification of justice as the specific excellence enabling that function.",
+            "anchorIds": [
+              "p-637215",
+              "p-637319"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The definition covers the entire scope of the human soul's moral condition and functioning.",
+            "anchorIds": [
+              "p-637215"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Building on the soul having a function and justice being its virtue, Socrates infers that the just soul performs its work well, lives well, and consequently is happy.",
+            "anchorIds": [
+              "p-637344",
+              "p-637467",
+              "p-637574"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-6",
+              "n-21-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates an all-encompassing correlation between justice, living well, and happiness for all human beings.",
+            "anchorIds": [
+              "p-637344",
+              "p-637574"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Following the deduction that justice produces happiness and happiness is profitable, Socrates derives the conclusion refuting Thrasymachus's initial thesis that injustice is more profitable.",
+            "anchorIds": [
+              "p-637641",
+              "p-637698"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-3",
+              "n-21-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Concludes a universal normative assessment regarding the relative profitability of justice versus injustice.",
+            "anchorIds": [
+              "p-637698"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "An editorial side-note summarizing Socrates' affective and psychological reaction to the flow of the dialogue without constructing an argument.",
+            "anchorIds": [
+              "p-637852"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Pertains strictly to a single character's subjective state at one specific moment in the text.",
+            "anchorIds": [
+              "p-637852"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates reviews the sequence of their dialectical digressions and infers that because they never properly identified the definition of justice, their dependent conclusions are ungrounded.",
+            "anchorIds": [
+              "p-637924"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Reflects locally on Socrates' personal state of knowledge and the specific inquiry conducted in Book I.",
+            "anchorIds": [
+              "p-637924"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Glaucon introduces an explicit tripartite categorization of goods as a clean conceptual starting point for evaluating where justice belongs.",
+            "anchorIds": [
+              "p-639483",
+              "p-639849",
+              "p-640026"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Presents a comprehensive taxonomy encompassing every conceivable good pursued in human action.",
+            "anchorIds": [
+              "p-639483",
+              "p-639849",
+              "p-640026"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Glaucon articulates an account of how mutual experience of injury leads weaker individuals to form covenants, deriving justice as an intermediate compromise.",
+            "anchorIds": [
+              "p-643203",
+              "p-641273"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Proposes a general explanatory theory for the origin, nature, and enforceability of legal justice in human societies.",
+            "anchorIds": [
+              "p-643203"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Glaucon uses the mythical narrative of Gyges' ring to conduct a thought experiment, inferring that without fear of detection, just and unjust persons would follow identical selfish drives.",
+            "anchorIds": [
+              "p-644378",
+              "p-646576"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Asserts a broad psychological claim regarding human motivation and compliance with moral norms under impunity.",
+            "anchorIds": [
+              "p-644378",
+              "p-646576"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Adeimantus directly catalogs the cultural and poetic evidence showing that conventional praise of justice rests entirely on secondary reputational benefits.",
+            "anchorIds": [
+              "p-653380",
+              "p-656070"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Surveys the prevailing attitudes, religious appeals, and literary traditions of Greek society.",
+            "anchorIds": [
+              "p-653380",
+              "p-656070"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Building on Glaucon's categorization and the critique of external rewards, Adeimantus synthesizes the challenge demanding Socrates prove the internal worth of justice alone.",
+            "anchorIds": [
+              "p-663328",
+              "p-665524"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-1",
+              "n-22-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Defines the specific dialectical agenda and burden of proof governing the subsequent inquiry of the Republic.",
+            "anchorIds": [
+              "p-663328",
+              "p-665524"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates establishes a methodological move: because justice belongs to both a polis and an individual, he infers it will be larger and more easily detected by inspecting the city first.",
+            "anchorIds": [
+              "p-668093",
+              "p-669061",
+              "p-669400"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Introduces a foundational methodological correspondence between civic structures and individual psychology across political philosophy.",
+            "anchorIds": [
+              "p-669061",
+              "p-669400"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Socrates posits the self-evident axiom that individual human beings are not self-sufficient and naturally require cooperation to meet essential physical needs.",
+            "anchorIds": [
+              "p-670316",
+              "p-670512",
+              "p-671202"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Formulates a universal thesis regarding the foundational condition of all human association and society.",
+            "anchorIds": [
+              "p-670316",
+              "p-670512"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "From the premise of natural differences in talent and the demands of quality work, Socrates deduces the necessity of economic specialization and the division of labour.",
+            "anchorIds": [
+              "p-672509",
+              "p-673154",
+              "p-673568"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-7"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A broad economic and political principle specifying optimal production and societal organization.",
+            "anchorIds": [
+              "p-672509",
+              "p-673154"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates observes that once a state expands beyond basic necessity to satisfy endless luxury, territorial expansion becomes unavoidable, deducing that luxury is the primary source of war.",
+            "anchorIds": [
+              "p-679318",
+              "p-681589",
+              "p-681958"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-7"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a general explanatory account of the origins of warfare and territorial aggression in political communities.",
+            "anchorIds": [
+              "p-681589",
+              "p-681958"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Combining the principle of specialization with the outbreak of war, Socrates deduces that warfare is a distinct craft requiring dedicated, full-time guardians.",
+            "anchorIds": [
+              "p-682712",
+              "p-683143",
+              "p-684634"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-23-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies the principle of craft specialization specifically to the military defense and guardianship of the state.",
+            "anchorIds": [
+              "p-682712",
+              "p-683143"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Using the analogy of a well-bred dog that behaves gently toward acquaintances and fiercely toward strangers, Socrates deduces that spirit and gentleness can coexist via a philosophic nature.",
+            "anchorIds": [
+              "p-686092",
+              "p-686977",
+              "p-688126"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Specifies the natural psychological profile required for the guardian class of a commonwealth.",
+            "anchorIds": [
+              "p-686092",
+              "p-688126"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "From the observation that early impressions in childhood are indelible and form basic character, Socrates infers the necessity of institutional censorship over poetry and traditional tales.",
+            "anchorIds": [
+              "p-691325",
+              "p-690743",
+              "p-694303"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Sets out a general educational principle regarding early childhood development and the social regulation of culture.",
+            "anchorIds": [
+              "p-690743",
+              "p-691325"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates establishes through local deductive reasoning that what is good does not cause injury or harm; therefore God, being essentially good, cannot be the cause of evil, without depending on prior nodes as premises.",
+            "anchorIds": [
+              "p-697118",
+              "p-696375",
+              "p-699706"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Articulates an absolute theological canon concerning the essential nature and causality of divinity.",
+            "anchorIds": [
+              "p-697118",
+              "p-699706"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates reasons that an entity already in optimal perfection cannot change for the better and would not change for the worse, inferring that God neither assumes false disguises nor deceives.",
+            "anchorIds": [
+              "p-702060",
+              "p-706026",
+              "p-706291"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "States an overarching theological principle regarding the absolute immutability and veracity of God.",
+            "anchorIds": [
+              "p-702060",
+              "p-706026"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xxecarLnIJ2Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 47101,
+    "candidatesTokenCount": 4815,
+    "totalTokenCount": 51916,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47101
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4815
+      }
+    ]
+  },
+  "durationMs": 25592,
+  "requestHash": "0fa1284f12ab32d07e152110dd681f274e6b96893b177443609b53e52cad5802"
+}

@@ -1,3 +1,5 @@
+> 2026-09-05 supersession: the user selected X = reasoning depth, Y = generality. The new reviewed axis stage and representative group placement supersede earlier topic/structure coordinates and bounds-center placement for new maps. Historical results below retain their original versions. See [axis redesign](22-map-axis-redesign.md).
+
 # 决策登记
 
 > 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Illustration, and Interactive panel**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](19-enhancement-methods.md).

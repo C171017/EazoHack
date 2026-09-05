@@ -3,9 +3,9 @@ export type Point3 = {x:number;y:number;z:number};
 export const LEVELS = ['Detail / example','Claim','Concept','Argument','Core question'];
 export const PROJECTIONS = [
   {id:'3d',label:'3D space',hint:'Orbit the shared space'},
-  {id:'xy',label:'X × Y',hint:'Themes & structure'},
-  {id:'xz',label:'X × Z',hint:'Theme development'},
-  {id:'yz',label:'Y × Z',hint:'Structure development'},
+  {id:'xy',label:'X × Y',hint:'Reasoning depth & generality'},
+  {id:'xz',label:'X × Z',hint:'Reasoning through the source'},
+  {id:'yz',label:'Y × Z',hint:'Generality through the source'},
 ] as const;
 export const DEFAULT_CAMERA = {yaw:-0.58,pitch:0.36};
 // The default view looks into the positive XYZ octant bounded by the grids.
@@ -20,7 +20,7 @@ export function orientation(projection: MapView['projection']) {
   return projection === 'xz' ? {yaw:0,pitch:0} : projection === 'xy' ? {yaw:0,pitch:Math.PI/2} : projection === 'yz' ? {yaw:-Math.PI/2,pitch:0} : DEFAULT_CAMERA;
 }
 // Orthographic Z-up camera: X is horizontal, Z/source is vertical, and
-// Y/structure supplies depth. Semantic coordinates are never recalculated.
+// Y/generality supplies depth. Semantic coordinates are never recalculated.
 export function project(point: Point3, camera: Pick<MapView,'yaw'|'pitch'>) {
   const x = point.x*Math.cos(camera.yaw)+point.y*Math.sin(camera.yaw);
   const depth = -point.x*Math.sin(camera.yaw)+point.y*Math.cos(camera.yaw);

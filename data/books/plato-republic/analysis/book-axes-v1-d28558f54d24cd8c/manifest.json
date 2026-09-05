@@ -1,0 +1,7 @@
+{
+  "status": "running",
+  "version": "book-axes-v1-d28558f54d24cd8c",
+  "sourceGraphVersion": "text-graph-v1-19d6e62b3ceb-319034f3",
+  "model": "gemini-3.8-flash",
+  "axisVersion": "reasoning-generality-v1"
+}

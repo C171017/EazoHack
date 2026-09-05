@@ -52,16 +52,16 @@ export function assembleGraph(input: {
   const themeGroups = synthesis.themes.map(t => ({ ...t, nodeIds: t.nodeIds.filter(id => keptIds.has(id)) })).filter(t => t.nodeIds.length);
   const territories = themeGroups.map((t, i) => {
     const anchorIds = [...new Set(kept.filter(n => t.nodeIds.includes(n.id)).flatMap(n => n.passageIds))];
-    return { id: `theme-${i}`, label: t.label, centroidX: (i + 0.5) / themeGroups.length, anchorIds, coverage: t.nodeIds.length / kept.length, orderLocked: true, evidence: { anchorIds, rationale: `${t.rationale} Coverage is the fraction of retained occurrences, not source text. Theme distance is navigational.`, ruleVersion: PROMPT_VERSION, confidence: null } };
+    return { id: `theme-${i}`, label: t.label, centroidX: (i + 0.5) / themeGroups.length, anchorIds, coverage: t.nodeIds.length / kept.length, orderLocked: true, evidence: { anchorIds, rationale: `${t.rationale} Coverage is the fraction of retained occurrences, not source text. Topic order is display metadata, not an axis value.`, ruleVersion: PROMPT_VERSION, confidence: null } };
   });
   const identities = synthesis.identities.map((identity, i) => ({ id: `identity-${i}`, label: identity.label, summary: `Shared concept with separately anchored occurrences; individual claims and attribution remain distinct.`, occurrenceIds: identity.nodeIds.filter(id => keptIds.has(id)) })).filter(i => i.occurrenceIds.length);
   const nodes = kept.map(n => {
     const p = passages.get(n.passageIds[0])!;
     const themeIndex = themeGroups.findIndex(t => t.nodeIds.includes(n.id));
     return { id: n.id, identityId: identities.find(i => i.occurrenceIds.includes(n.id))!.id, kind: 'occurrence', label: n.label, summary: n.summary,
-      anchorIds: n.passageIds, themeTerritoryIds: [territories[themeIndex].id], structuralLevel: n.level,
-      position: { x: territories[themeIndex].centroidX, y: n.level, z: p.start / text.length },
-      evidence: { anchorIds: n.passageIds, rationale: `${n.rationale} X follows primary theme “${territories[themeIndex].label}”; Z derives from the first exact passage offset. Classification is a model interpretation.`, ruleVersion: PROMPT_VERSION, confidence: null },
+      anchorIds: n.passageIds, themeTerritoryIds: [territories[themeIndex].id], structuralLevel: null,
+      position: { x: null, y: null, z: p.start / text.length },
+      evidence: { anchorIds: n.passageIds, rationale: `${n.rationale} Reasoning hint: ${n.reasoningHint} Generality hint: ${n.generalityHint} X/Y await separate whole-book source review; Z derives from the first exact passage offset.`, ruleVersion: PROMPT_VERSION, confidence: null },
       sourceLabel: `${p.section} · ${n.sourceRole}${n.speaker ? ` · ${n.speaker}` : ''}`, sourceRole: n.sourceRole, speaker: n.speaker,
     };
   }).sort((a, b) => a.position.z - b.position.z || a.id.localeCompare(b.id));

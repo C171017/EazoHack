@@ -1,4 +1,4 @@
-import { loadMapStore, nodeDetail, visibleLinks } from '@/server/book-map/store';
+import { loadMapStore, nodeDetail, visibleLinks, unplacedNotes } from '@/server/book-map/store';
 import { ZOOM_POLICY } from '@/shared/zoom-hierarchy';
 export const runtime='nodejs';
 export async function GET(request:Request) {
@@ -8,6 +8,11 @@ export async function GET(request:Request) {
     if(q.get('version')!==hierarchy.version)return Response.json({error:'Map version changed. Reload to open the new version.'},{status:409});
     const json=(body:object)=>Response.json({version:hierarchy.version,...body},{headers:{'Cache-Control':'private, no-store'}});
     const id=q.get('id')??'',kind=q.get('kind');
+    if(kind==='unplaced') {
+      const offset=Number(q.get('offset')??0);
+      if(!Number.isInteger(offset)||offset<0)return Response.json({error:'Invalid unplaced offset'},{status:400});
+      return json(unplacedNotes(store,offset));
+    }
     if(kind==='children') {
       const ids=q.getAll('id');
       if(!ids.length||ids.length>12||ids.some(id=>!hierarchy.children[id]))return Response.json({error:'Invalid child request'},{status:400});

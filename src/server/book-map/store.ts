@@ -31,15 +31,20 @@ export async function loadMapStore():Promise<MapStore> {
   return cache.promise;
 }
 export function mapBootstrap({graph,hierarchy,entries}:MapStore):MapBootstrap {
-  return {bookId:graph.bookId,graphVersion:graph.graphVersion,analysis:graph.analysis,version:hierarchy.version,roots:hierarchy.roots.map(id=>entries.get(id)!),depth:hierarchy.depth,totalNodes:graph.nodes.length,unplaced:graph.nodes.filter(n=>Object.values(n.position).includes(null)).length,territories:graph.territories.map(({id,label,centroidX})=>({id,label,centroidX}))};
+  return {axisVersion:graph.axisVersion,bookId:graph.bookId,graphVersion:graph.graphVersion,analysis:graph.analysis,version:hierarchy.version,roots:hierarchy.roots.map(id=>entries.get(id)!),depth:hierarchy.depth,totalNodes:graph.nodes.length,unplaced:graph.nodes.filter(n=>Object.values(n.position).includes(null)).length,territories:graph.territories.map(({id,label,centroidX})=>({id,label,centroidX}))};
 }
 export function nodeDetail({graph}:MapStore,id:string):NodeDetail|null {
   const node=graph.nodes.find(n=>n.id===id);if(!node)return null;
   const identity=graph.identities.find(i=>i.id===node.identityId)!;
   const edges=graph.edges.filter(e=>e.source===id||e.target===id);
-  const ids=new Set([...identity.occurrenceIds,...edges.flatMap(e=>[e.source,e.target])]);
-  const anchors=new Set([...node.anchorIds,...edges.flatMap(e=>e.evidenceAnchorIds)]);
+  const ids=new Set([...(node.axisAssessment?.reasoningDepth.prerequisiteNodeIds??[]),...identity.occurrenceIds,...edges.flatMap(e=>[e.source,e.target])]);
+  const anchors=new Set([...(node.axisAssessment?.reasoningDepth.anchorIds??[]),...(node.axisAssessment?.generality.anchorIds??[]),...node.anchorIds,...edges.flatMap(e=>e.evidenceAnchorIds)]);
   return {node,identity,edges,anchors:graph.anchors.filter(a=>anchors.has(a.id)),neighbours:graph.nodes.filter(n=>ids.has(n.id)).map(({id,label})=>({id,label}))};
+}
+export function unplacedNotes({graph}:MapStore,offset=0) {
+  if(!Number.isInteger(offset)||offset<0)throw new Error('Invalid unplaced offset');
+  const nodes=graph.nodes.filter(n=>Object.values(n.position).includes(null));
+  return {total:nodes.length,offset,notes:nodes.slice(offset,offset+20).map(({id,label,sourceLabel})=>({id,label,sourceLabel}))};
 }
 export function visibleLinks(store:MapStore,ids:string[],filter:{theme?:string|null;role?:string|null;start?:number;end?:number}={}):MapLink[] {
   const matching=new Set(store.graph.nodes.filter(n=>(!filter.theme||n.themeTerritoryIds.includes(filter.theme))&&(!filter.role||n.sourceRole===filter.role)&&(n.position.z===null||n.position.z>=(filter.start??0)&&n.position.z<=(filter.end??1))).map(n=>n.id));

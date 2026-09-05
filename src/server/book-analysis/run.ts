@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, readdir, rename, writeFile } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { z } from 'zod';
 import { ExtractSchema, IdentityRepairSchema, PROMPT_VERSION, ReviewSchema, SynthesisSchema, type Candidate, type CandidateEdge, type Generate, type ModelReply, type Review } from './contracts';
@@ -8,16 +8,9 @@ import { extractionPrompt, reviewPrompt, synthesisPrompt, SYSTEM } from './promp
 import { prepareText, validateExtraction } from './source';
 import { ModelRequestError } from './vertex';
 
-export async function writeJson(file: string, value: unknown) {
-  await mkdir(path.dirname(file), { recursive: true });
-  const temp = `${file}.${process.pid}.${crypto.randomUUID()}.tmp`;
-  await writeFile(temp, JSON.stringify(value, null, 2) + '\n');
-  await rename(temp, file);
-}
-export async function readJson(file: string): Promise<unknown | null> {
-  try { return JSON.parse(await readFile(file, 'utf8')); }
-  catch (error) { if ((error as NodeJS.ErrnoException).code === 'ENOENT') return null; throw error; }
-}
+import { readJson, writeJson } from './json-store';
+import { assignBookAxes } from './axis-run';
+export { readJson, writeJson } from './json-store';
 
 export async function analyzeText(input: {
   raw: Buffer; bookId: string; outputRoot: string; model: string; generate: Generate;
@@ -132,7 +125,8 @@ export async function analyzeText(input: {
         return value;
       });
     });
-    const graph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
+    const baseGraph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
+    const graph = await assignBookAxes({graph:baseGraph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     await writeJson(path.join(root, 'graph.json'), graph);
     await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'complete', phase: 'complete', completedChunks: chunks.length, graph: { nodes: graph.nodes.length, identities: graph.identities.length, edges: graph.edges.length, themes: graph.territories.length }, validatedCalls: replies.map(r => ({ key: r.key, modelVersion: r.reply.modelVersion, responseId: r.reply.responseId, usage: r.reply.usage, durationMs: r.reply.durationMs })), completedAt: new Date().toISOString() });
     // Publish only a fully validated snapshot; failed runs never replace a working graph.

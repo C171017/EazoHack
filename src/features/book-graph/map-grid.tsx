@@ -1,3 +1,4 @@
+import { AXIS_LABELS, LEGACY_AXIS_LABELS } from '../../shared/book-axes';
 import { useId } from 'react';
 import type { Point3 } from './projection';
 
@@ -8,7 +9,6 @@ const BACK_EXTENT = 150;
 const AXES = ['x','y','z'] as const;
 const PLANES = [['x','y'],['x','z'],['y','z']] as const;
 const COLORS = ['#caaf7c','#84b7ad','#a398cb'];
-const LABELS = ['X · Themes','Y · Structure','Z · Source'];
 const LABEL_DISTANCE = [530,365,430];
 const OFFSETS = Array.from({length:(EXTENT+BACK_EXTENT)/SPACING-1},(_,i)=>-BACK_EXTENT+(i+1)*SPACING).filter(n=>n!==0);
 // A smooth finite envelope: fully transparent at the geometry's endpoints.
@@ -20,7 +20,7 @@ function point(axis:keyof Point3,distance:number,other?:keyof Point3,offset=0):P
   return {...ORIGIN,[axis]:ORIGIN[axis]+distance,...(other?{[other]:ORIGIN[other]+offset}:{})};
 }
 
-export function MapGrid({screen}:{screen:(point:Point3)=>{x:number;y:number}}) {
+export function MapGrid({screen,modern=false}:{modern?:boolean;screen:(point:Point3)=>{x:number;y:number}}) {
   const id=useId();
   const origin=screen(ORIGIN);
   const directions=AXES.map(axis=>{const p=screen(point(axis,1));return {x:p.x-origin.x,y:p.y-origin.y};});
@@ -50,7 +50,7 @@ export function MapGrid({screen}:{screen:(point:Point3)=>{x:number;y:number}}) {
     {AXES.map((axis,i)=>{
       const d=directions[i];if(Math.hypot(d.x,d.y)<.01)return null;
       const p=screen(point(axis,LABEL_DISTANCE[i]));
-      return <text key={axis} x={p.x+8} y={p.y-8} fill={COLORS[i]} className="map-axis-title">{LABELS[i]}</text>;
+      return <text key={axis} x={p.x+8} y={p.y-8} fill={COLORS[i]} className="map-axis-title">{(modern?AXIS_LABELS:LEGACY_AXIS_LABELS)[i]}</text>;
     })}
   </g>;
 }

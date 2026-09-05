@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-23-5",
+        "reason": "The assignment lists 'n-23-4' (censorship of early stories) as a direct reasoning prerequisite for the theological claim that God causes only good. While the pedagogical need to censor poetry provides the context for discussing theological standards, the deduction that God causes only good is grounded directly in the definition of divine goodness, not inferentially derived from the impressionability of youth or censorship itself."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "wxecapL4I5mdx9gP8fnjmQE",
+  "usage": {
+    "promptTokenCount": 46644,
+    "candidatesTokenCount": 117,
+    "totalTokenCount": 46761,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46644
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 117
+      }
+    ]
+  },
+  "durationMs": 4847,
+  "requestHash": "38f1f7300e25da86e2f24111f727bc560b314bb290b25404ad1160788d5d42a4"
+}

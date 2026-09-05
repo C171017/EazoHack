@@ -67,7 +67,7 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset }: { fonts: Rea
         <button type="button" className={styles.option} style={{ '--item-index': 0 } as CSSProperties} aria-expanded={section === 'upload'} aria-controls={`${panelId}-upload`} onClick={event => setSection(event.detail > 0 && window.matchMedia('(hover: hover) and (pointer: fine)').matches ? 'upload' : section === 'upload' ? null : 'upload')}><span className={styles.label}>Upload <span aria-hidden="true">⌄</span></span></button>
         <div id={`${panelId}-upload`} className={styles.submenu} inert={section !== 'upload'} aria-hidden={section !== 'upload'}><div className={styles.subcontent}>
           <button type="button" className={styles.option} style={{ '--item-index': 0 } as CSSProperties} disabled={busy} onClick={() => fileInput.current?.click()}><span className={styles.label}>{busy ? 'Opening…' : 'Choose a book'}</span></button>
-          <p className={styles.hint}>TXT · up to 20 MB<br/>PDF · up to 100 MB<br/>Opened on this device. Reopen the same file after a refresh to restore saved passages.</p>
+          <p className={styles.hint}>TXT · up to 20 MB<br/>PDF · up to 100 MB</p>
           {onReset && <button type="button" className={styles.option} style={{ '--item-index': 1 } as CSSProperties} onClick={onReset}><span className={styles.label}>Open Republic</span></button>}
         </div></div>
       </div>

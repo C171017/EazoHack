@@ -77,7 +77,7 @@ export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}
           for(const [i,g] of groups.entries()) {
             if(g.childIds.length===1){next.push(entries.get(g.childIds[0])!);continue;}
             const id=`h-${key}-${i+1}`,members=g.childIds.map(id=>entries.get(id)!);
-            const parent=clusterEntry(id,g.label,g.summary,members);
+            const parent=clusterEntry(id,g.label,g.summary,members,graph.axisVersion?'representative-v1':undefined);
             for(const child of members)child.parentId=id;
             entries.set(id,parent);children[id]=g.childIds;leafIds.set(id,g.childIds.flatMap(id=>leafIds.get(id)!));next.push(parent);
           }

@@ -1,0 +1,605 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-12-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The passage constructs an allegorical figure (many-headed beast, lion, inner human) building upon the earlier definitions of the tripartite soul and justice to refute the claim that injustice is profitable.",
+            "anchorIds": [
+              "p-348394",
+              "p-349594"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-3",
+              "n-7-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "This model of psychic order purports to describe the moral psychology of all human souls, characterizing justice and injustice across human conduct.",
+            "anchorIds": [
+              "p-348394",
+              "p-349594"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates concludes that even if the ideal city cannot exist on earth, it stands as an intelligible celestial pattern for an individual ordering their own soul, relying on the preceding arguments connecting the just soul to the just city.",
+            "anchorIds": [
+              "p-351123"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Provides a broadly applicable principle for any wise person seeking to order their internal character, independent of external political realities.",
+            "anchorIds": [
+              "p-351123"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentary analyzes Plato's mathematical computation of 729 as the cubed distance between king and tyrant, showing how it arises from ranking constitutions and cubing dimensions.",
+            "anchorIds": [
+              "p-355014",
+              "p-356907"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on a specific numerical calculation and symbolic formula representing the gap between two particular regime/character extremes in the dialogue.",
+            "anchorIds": [
+              "p-355014",
+              "p-356907"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A critical commentary step contextualizing Plato's rejection of poetry by analyzing contemporary historical decay and contrasting Plato's view with modern views of aesthetic expression.",
+            "anchorIds": [
+              "p-385695",
+              "p-386611",
+              "p-389139"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Discusses the domain of Greek literary history, fourth-century Athenian theatrical decline, and the philosophical status of mimetic art.",
+            "anchorIds": [
+              "p-385695",
+              "p-386611",
+              "p-389139"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Analyzes the philosophical grounds of Plato's critique, linking Book X's banishment of poets to the tripartite soul and the ontological distinction between universals and sensory particulars.",
+            "anchorIds": [
+              "p-390516",
+              "p-391799",
+              "p-394015"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-4",
+              "n-8-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Applies broadly to the classification of poetry, art, and the psychological impact of mimetic representation on human reason.",
+            "anchorIds": [
+              "p-390516",
+              "p-391799",
+              "p-394015"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The commentator argues directly against Plato's blanket condemnation of art, proposing an alternative thesis where art mediates feeling and reason.",
+            "anchorIds": [
+              "p-396889",
+              "p-400904",
+              "p-403238"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Articulates a general aesthetic theory concerning the positive moral, philosophical, and expressive function of artistic representation.",
+            "anchorIds": [
+              "p-396889",
+              "p-400904",
+              "p-403238"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct textual analysis of the Vision of Er's astronomical imagery and the spindle of Necessity, noting its symbolic and inconsistent mechanical features.",
+            "anchorIds": [
+              "p-407907",
+              "p-407366",
+              "p-409722"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Analyzes a single specific mythic/cosmological narrative and its mechanics within Book X.",
+            "anchorIds": [
+              "p-407907",
+              "p-407366",
+              "p-409722"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Derives the doctrine of moral responsibility by interpreting the mythic lot-casting and spindle imagery, showing that freedom of choice operates within external necessity when guided by philosophy.",
+            "anchorIds": [
+              "p-411382",
+              "p-412779"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Formulates a universal principle regarding free will, human moral accountability, and the role of philosophical knowledge across all human lives.",
+            "anchorIds": [
+              "p-411382",
+              "p-412779"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A structural thesis introduced by the commentator classifying the Republic into two distinct strands: a historical Spartan/Hellenic state and a philosophical ideal realm.",
+            "anchorIds": [
+              "p-414656",
+              "p-415778"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Specifically characterizes the structural composition and political models within Plato's dialogue.",
+            "anchorIds": [
+              "p-414656",
+              "p-415778"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Traces historical and philosophical parallels between the institutions of the Republic and the Pythagorean league's way of life and mathematical curriculum.",
+            "anchorIds": [
+              "p-422200"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Examines the historical influence of Pythagorean traditions on Plato's political and philosophical system.",
+            "anchorIds": [
+              "p-422200"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Concludes from Plato's concessions and ironies across multiple passages that the ideal republic was designed as a philosophical vision and standard of evaluation rather than an actual historical program.",
+            "anchorIds": [
+              "p-424275"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-7",
+              "n-14-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a general interpretative thesis on the nature, intention, and status of Plato's political ideal.",
+            "anchorIds": [
+              "p-424275"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Refutes Niebuhr's historical critique by establishing that Plato regarded all existing empirical regimes as factional, framing an ideal city meant for all humanity.",
+            "anchorIds": [
+              "p-426038"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-7"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Focuses on Plato's personal relation to Athenian citizenship and the universal orientation of his political theory.",
+            "anchorIds": [
+              "p-426038"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Introduces the paradox of communal property and places it in comparative historical perspective alongside ancient practices, Aristotle's counter-arguments, and early Christianity.",
+            "anchorIds": [
+              "p-428590",
+              "p-428978"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Addresses the concept and historical mutability of property institutions in antiquity and early Christian thought.",
+            "anchorIds": [
+              "p-428590",
+              "p-428978"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Extends the historical analysis of property to argue that property rights rest purely on social utility, inferring that future societies may adopt more collective forms.",
+            "anchorIds": [
+              "p-430833",
+              "p-431608",
+              "p-433800"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Proposes a broad claim about the evolutionary nature, legitimacy, and future trajectory of property institutions in human civilization.",
+            "anchorIds": [
+              "p-430833",
+              "p-431608",
+              "p-433800"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Details Plato's arguments from animal analogies and civic capacity to advocate equal training and offices for women, noting its radical break with ancient customs.",
+            "anchorIds": [
+              "p-438568",
+              "p-439071",
+              "p-439894"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Asserts a general social and philosophical principle concerning gender equality in civic capabilities and education.",
+            "anchorIds": [
+              "p-438568",
+              "p-439071",
+              "p-439894"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Examines Plato's proposal to eliminate the nuclear family and institute controlled mating for state breeding, highlighting its underlying assumptions.",
+            "anchorIds": [
+              "p-442847"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Focuses on Plato's specific domestic and eugenic proposals for the guardian class.",
+            "anchorIds": [
+              "p-442847"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Argues against Plato's breeding scheme by contending that treating humans like animal stock ignores the essential psychological, spiritual, and moral dimensions of human life.",
+            "anchorIds": [
+              "p-445022",
+              "p-446538",
+              "p-448187"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A broad claim about the moral distinction between human consciousness and brute animal breeding.",
+            "anchorIds": [
+              "p-445022",
+              "p-446538",
+              "p-448187"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Draws on biological and historical observations regarding parentage and genius to infer that human traits cannot be reliably engineered by selective mating.",
+            "anchorIds": [
+              "p-458923",
+              "p-459661"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-6"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Asserts a general empirical and biological claim regarding the limits of artificial selection in predicting complex human genius and character.",
+            "anchorIds": [
+              "p-458923",
+              "p-459661"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Synthesizes the limits of hereditary determination with the creative power of the human will and deliberate moral education.",
+            "anchorIds": [
+              "p-461405"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-7"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Articulates a fundamental philosophical principle on the interplay of heredity, necessity, and human moral agency for all individuals.",
+            "anchorIds": [
+              "p-461405"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers that Plato's collective nursery would lead to infant mortality based on the psychological necessity of maternal sympathy demonstrated by historical foundling systems.",
+            "anchorIds": [
+              "p-463334"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "States a universal developmental truth regarding the requirement of family care for child survival and emotional well-being.",
+            "anchorIds": [
+              "p-463334"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Evaluates Plato's adoption of Spartan institutions, pointing out that Sparta stifled genius, literature, and the individual spontaneity necessary for historical progress.",
+            "anchorIds": [
+              "p-464139"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Assesses the historical regime of Sparta and its inadequacy as an educational/political model for civilized society.",
+            "anchorIds": [
+              "p-464139"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Reflects on the paradox of the philosopher-king, analyzing why practical politics mistrusts thinkers while arguing that high statesmanship still requires philosophical breadth.",
+            "anchorIds": [
+              "p-474971",
+              "p-481326",
+              "p-483526"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-3",
+              "n-8-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A widely applicable analysis of statesmanship, governance, and the recurring friction between speculative thought and political action.",
+            "anchorIds": [
+              "p-474971",
+              "p-481326",
+              "p-483526"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Critiques Plato's core premise equating the soul to the city, exposing the fallacy of treating collective decision-making as identical to individual psychology while acknowledging its moral utility.",
+            "anchorIds": [
+              "p-484962",
+              "p-487160",
+              "p-487285"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates a methodological and conceptual critique of analogies linking individual ethics to political philosophy.",
+            "anchorIds": [
+              "p-484962",
+              "p-487160",
+              "p-487285"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Examines Plato's doctrine of education as turning the soul's vision toward the Good rather than implanting external knowledge, tracing its continuity across early and late life.",
+            "anchorIds": [
+              "p-488839",
+              "p-489391"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "States an overarching philosophical principle defining the true nature and ultimate aim of education for all human beings.",
+            "anchorIds": [
+              "p-488839",
+              "p-489391"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "fRecaqS-DtuTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 46907,
+    "candidatesTokenCount": 5411,
+    "totalTokenCount": 52318,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46907
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5411
+      }
+    ]
+  },
+  "durationMs": 31287,
+  "requestHash": "cc31288b6f45d6de73a8fc7b164bb087584b59cc845904a68ef285b620a6d1ad"
+}

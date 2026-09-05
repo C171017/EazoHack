@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const PROMPT_VERSION = 'text-graph-v1';
+export const PROMPT_VERSION = 'text-graph-v2';
 export const RELATIONS = ['defines', 'supports', 'challenges', 'exemplifies', 'develops'] as const;
 const Label = z.string().min(1).max(180);
 const Note = z.string().min(1).max(1500);
@@ -10,7 +10,7 @@ export const ExtractSchema = z.object({
   summary: Note,
   nodes: z.array(z.object({
     label: Label, identityLabel: Label, summary: Note, sourceRole: Role,
-    speaker: Label.nullable(), level: z.number().int().min(0).max(4).nullable(),
+    speaker: Label.nullable(), reasoningHint: Note, generalityHint: Note,
     rationale: Note, passageIds: Ids.min(1).max(3),
   }).strict()).max(8),
   edges: z.array(z.object({

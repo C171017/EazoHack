@@ -9,20 +9,21 @@ export class ModelRequestError extends Error {
 
 // Vertex's documented responseSchema subset; local Zod remains the full validator.
 export function vertexSchema(schema: z.ZodType): unknown {
-  const convert = (input: unknown): unknown => {
-    if (Array.isArray(input)) return input.map(convert);
+  const convert = (input: unknown, depth = 0): unknown => {
+    if (Array.isArray(input)) return input.map(item => convert(item, depth + 1));
     if (input === null || typeof input !== 'object') return input;
     const value = input as Record<string, unknown>;
     if (Array.isArray(value.anyOf)) {
       const members = value.anyOf as { type?: string }[];
       const actual = members.filter(m => m.type !== 'null');
-      if (actual.length === 1 && actual.length !== members.length) return { ...(convert(actual[0]) as object), nullable: true };
+      if (actual.length === 1 && actual.length !== members.length) return { ...(convert(actual[0], depth + 1) as object), nullable: true };
     }
     return Object.fromEntries(Object.entries(value)
       // Large bounded arrays can exceed Vertex's schema grammar complexity budget.
-      // Enforce those upper bounds locally instead of compiling hundreds of states.
-      .filter(([key, entry]) => !['$schema', 'additionalProperties', 'minLength', 'maxLength'].includes(key) && !(key === 'maxItems' && typeof entry === 'number' && entry > 50))
-      .map(([key, entry]) => [key, key === 'type' && typeof entry === 'string' ? entry.toUpperCase() : convert(entry)]));
+      // Nested bounds also multiply grammar states (axis ratings contain several
+      // evidence arrays). Keep all limits in local Zod validation.
+      .filter(([key, entry]) => !['$schema', 'additionalProperties', 'minLength', 'maxLength'].includes(key) && !(key === 'maxItems' && typeof entry === 'number' && (entry > 12 || depth > 4)))
+      .map(([key, entry]) => [key, key === 'type' && typeof entry === 'string' ? entry.toUpperCase() : convert(entry, depth + 1)]));
   };
   return convert(z.toJSONSchema(schema));
 }
