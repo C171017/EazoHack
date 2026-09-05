@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-1-1",
+          "n-1-2",
+          "n-2-1",
+          "n-2-2",
+          "n-2-3",
+          "n-2-4"
+        ],
+        "label": "Front Matter and Revision Notes",
+        "summary": "Jowett presents the third edition of the translation with extensive alterations affecting roughly one-third of the text, accompanied by dedications, contributor acknowledgments, an exchange plan for previous owners, and plans for future dialogue publications.",
+        "rationale": "These entries form a tightly clustered sequence of publication metadata, preface notes, and personal translator acknowledgments at the beginning of the volume."
+      },
+      {
+        "childIds": [
+          "n-3-3",
+          "n-3-6",
+          "n-3-7"
+        ],
+        "label": "Structural and Dialectic Evolution",
+        "summary": "Commentary outlines the five natural structural movements of the Republic, tracing how the interlocutors represent developing stages of morality and how Socrates evolves from an ironical inquirer into a constructive teacher.",
+        "rationale": "All three items provide macro-level editorial commentary on the overarching compositional layout, character functions, and dialectical progression of the dialogue."
+      },
+      {
+        "childIds": [
+          "n-4-1",
+          "n-19-2",
+          "n-21-4"
+        ],
+        "label": "Book I Notions of Justice",
+        "summary": "Discussions analyze early definitions of justice, including Cephalus's perspective on wealth alleviating fear of divine retribution and Socrates's examination and subsequent displeasure with the conversational outcome.",
+        "rationale": "Focuses directly on Book I dialogues and related commentary concerning Cephalus, early moral maxims, and the initial impasse of the argument."
+      },
+      {
+        "childIds": [
+          "n-12-1",
+          "n-14-3",
+          "n-14-6"
+        ],
+        "label": "Pythagorean and Cosmic Motifs",
+        "summary": "Analyses explore Platonic cosmology and metaphysics, highlighting the calculation of the cyclical number of births, the celestial mechanics of the Myth of Er, and the institutional influences of the Pythagorean league.",
+        "rationale": "Binds together analyses of esoteric mathematical, astronomical, and Pythagorean elements embedded throughout the Republic's commentary."
+      },
+      {
+        "childIds": [
+          "n-17-6",
+          "n-17-7",
+          "n-18-3"
+        ],
+        "label": "Comparative Political Ideals",
+        "summary": "The commentary surveys related political works, comparing Plato's Statesman, Cicero's De Republica, and Dante's vision of universal empire against Platonic philosophical governance.",
+        "rationale": "Brings together comparative political commentary evaluating outside philosophical and political works alongside Plato's model state."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "sFGcaqqQE8WDncoP6suG-AU",
+  "usage": {
+    "promptTokenCount": 12301,
+    "candidatesTokenCount": 641,
+    "totalTokenCount": 12942,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12301
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 641
+      }
+    ]
+  },
+  "durationMs": 5723,
+  "requestHash": "912fa76f852a4faef81c4eb8cbf3ad5cf11a1e06f7a24173041901d9e416274f"
+}

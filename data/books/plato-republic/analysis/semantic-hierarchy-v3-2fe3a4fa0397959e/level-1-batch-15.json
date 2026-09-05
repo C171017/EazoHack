@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-27-2",
+          "n-27-5",
+          "n-27-6"
+        ],
+        "label": "Virtue and Order in the State",
+        "summary": "Socrates establishes that the city is founded for the greatest happiness of the whole rather than a single group. Within this whole, temperance harmonizes the superior and inferior elements, while justice consists of each citizen performing their own proper function.",
+        "rationale": "All three nodes originate from Book IV and examine the structural definition and harmony of civic virtue in the commonwealth."
+      },
+      {
+        "childIds": [
+          "n-30-4",
+          "n-33-4",
+          "n-33-5",
+          "n-33-6"
+        ],
+        "label": "Philosophic Rule and Goodness",
+        "summary": "Political evils can only cease if philosophers obtain sovereign rule, an authority grounded in knowledge of the supreme Idea of the Good. This highest principle is elucidated through the analogy of the sun and the ontological and epistemological divisions of the line.",
+        "rationale": "Nodes from Books V and VI detailing the philosopher-king doctrine and the metaphysical framework of the Good and divided knowledge."
+      },
+      {
+        "childIds": [
+          "n-39-4",
+          "n-39-5",
+          "n-40-3",
+          "n-40-4"
+        ],
+        "label": "Tripartite Soul and Justice",
+        "summary": "The soul is analyzed into appetitive, spirited, and rational parts, each with characteristic desires, among which the philosopher's judgment identifies the pleasure of truth as supreme. Socrates reinforces this tripartite structure through the composite image of the beast, lion, and inner man, demonstrating that justice subjects the lower impulses to reason.",
+        "rationale": "All four nodes derive from Book IX and investigate the internal parts of the soul, their respective pleasures, and the proof that justice is profitable."
+      },
+      {
+        "childIds": [
+          "n-41-1",
+          "n-41-2"
+        ],
+        "label": "Critique of Mimetic Art",
+        "summary": "Socrates excludes imitative poetry from the ideal city because of its corrupting influence on the soul. To explain imitation's remove from reality, he distinguishes between the essential Form made by God, the physical object made by a craftsman, and the painter's shadow-like depiction.",
+        "rationale": "Book X opening arguments concerning the nature of mimesis and the three levels of production."
+      },
+      {
+        "childIds": [
+          "n-42-1",
+          "n-42-2"
+        ],
+        "label": "Immortality and Soul's Purity",
+        "summary": "Socrates demonstrates the soul's immortality by arguing that it cannot be destroyed by external or internal evil. He further explains that its true nature is obscured in mortal life, resembling the encrusted sea-god Glaucus until contemplated in its divine purity through the love of wisdom.",
+        "rationale": "Book X theoretical proofs regarding the soul's indestructible nature and genuine essence."
+      },
+      {
+        "childIds": [
+          "n-42-4",
+          "n-42-5",
+          "n-42-6"
+        ],
+        "label": "Eschatology and the Myth of Er",
+        "summary": "The Myth of Er recounts the post-mortem judgement and retribution of souls before detailing the cosmic structure guided by the spindle of Necessity and the Fates. Souls are then required to choose their next earthly incarnations, a process where philosophic discernment proves vital to avoiding disaster.",
+        "rationale": "Book X concluding eschatological narrative detailing the journey of Er, cosmic mechanics, and the reincarnation of souls."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "B1Gcaq3aN9yCncoPo7vS-Qg",
+  "usage": {
+    "promptTokenCount": 13996,
+    "candidatesTokenCount": 899,
+    "totalTokenCount": 14895,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13996
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 899
+      }
+    ]
+  },
+  "durationMs": 7261,
+  "requestHash": "71e5180ee5dcffb569475d1b8d143292beeda0e6f59f6667c231647c7c13b0a9"
+}

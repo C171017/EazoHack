@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-7-1",
+          "n-7-3",
+          "n-7-4"
+        ],
+        "label": "Virtue, Duty, and the Soul",
+        "summary": "These passages establish the moral psychology of Book IV, arguing that duty and moral right take precedence over utilitarian calculations. Justice is defined as an internal harmony where the rational, spirited, and concupiscent faculties of the soul fulfill their proper functions.",
+        "rationale": "All three occurrences share early Book IV commentary and dialogue concerning the internal constitution of the soul, ethical priorities of duty, and the tripartite nature of justice."
+      },
+      {
+        "childIds": [
+          "n-8-4",
+          "n-8-7",
+          "n-9-1",
+          "n-9-5"
+        ],
+        "label": "Epistemology and the Good",
+        "summary": "This sequence traces the central metaphysics and epistemology of Books V–VII, contrasting unerring knowledge of real being with opinion of contingent objects. It culminates in the Idea of the Good, illuminated through the analogy of the sun and the allegory of the cave's ascent from shadows to intellectual light.",
+        "rationale": "These entries form a continuous thematic and textual cluster in Books V–VII focused on the metaphysical ascent from opinion to the supreme Idea of the Good."
+      },
+      {
+        "childIds": [
+          "n-12-7",
+          "n-16-4",
+          "n-16-5",
+          "n-17-1"
+        ],
+        "label": "Ideal Governance and Analogy",
+        "summary": "These sections examine the practical and theoretical challenges of political order, contrasting the celestial pattern of the ideal city with the distrust faced by philosopher-statesmen. Commentary critiques Plato's assimilation of state to individual while evaluating his calls for simplicity in law, medicine, and preventive social governance.",
+        "rationale": "Each child addresses the structural ideals, analogies, and practical frictions of Platonic political governance and institutional design."
+      },
+      {
+        "childIds": [
+          "n-15-6",
+          "n-16-1"
+        ],
+        "label": "Heredity and Human Value",
+        "summary": "These texts critique Platonic biological engineering for reducing human relationships to animal breeding while ignoring spiritual affection and individual worth. They emphasize that while heredity transmits traits, human agency and moral will retain the power of prevention and character formation.",
+        "rationale": "Both passages focus on biological inheritance, animal analogies, and moral arguments asserting human will and distinct dignity over physical breeding schemes."
+      },
+      {
+        "childIds": [
+          "n-16-6",
+          "n-17-2",
+          "n-18-6",
+          "n-18-7",
+          "n-18-8"
+        ],
+        "label": "Education and Transcendent Ideals",
+        "summary": "These reflections examine education as an ongoing conversion of the soul through dialectic toward transcendent principles. They explore how philosophical ideals—including the Idea of the Good, modern dual aspirations of progress and eternal life, and the Christian Divine Man—elevate human conduct above routine existence.",
+        "rationale": "This group unites late commentary reflecting on the lifelong purpose of dialectical education and the transformative, transcendent role of ethical and spiritual ideals."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "4lGcaomyIIKDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 20877,
+    "candidatesTokenCount": 788,
+    "totalTokenCount": 21665,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20877
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 788
+      }
+    ]
+  },
+  "durationMs": 8908,
+  "requestHash": "92216d5b85f08979d99dfcfc7bbca9c304e7e506f54a5e16c77c5751fed4b06b"
+}

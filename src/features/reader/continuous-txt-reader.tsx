@@ -141,8 +141,6 @@ function restoreSourceSelection(root: HTMLElement, saved: NativeSourceSelection)
 const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   title?: string;
   bookId?: string;
-  onUpload: (file: File) => Promise<void>;
-  onReset?: () => void;
   onLibrary: () => void;
   sourceText: string;
   fileHash: string;
@@ -154,7 +152,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   onReadingPosition?: (offset: number) => void;
   onEnhance: (route: RouteKind) => void;
   enhancementBusy: boolean;
-}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, onLibrary, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
+}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onLibrary, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText, undefined, title), [sourceText, title]);
   const chunkEnhancements = useMemo(() => chunks.map(chunk => {
     const matches = enhancements.filter(h => h.startOffset < chunk.endOffset && h.endOffset > chunk.startOffset);
@@ -391,13 +389,13 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   >
     <EnhancementPicker position={pickerPosition} busy={enhancementBusy} onChoose={route=>{setPickerPosition(null);nativeSelection.current=null;window.getSelection()?.removeAllRanges();onEnhance(route);}}/>
     <div className="txt-reader-masthead">
-      <ReadingMenu fonts={fonts} onChange={changeFonts} onUpload={onUpload} onReset={onReset} onLibrary={onLibrary}/>
+      <ReadingMenu fonts={fonts} onChange={changeFonts} onLibrary={onLibrary}/>
     </div>
     <div className="txt-reader-page">
     <header className="txt-reader-heading">
       <p className="txt-reader-eyebrow">{bookId === "plato-republic" ? "Plato · Translated by Benjamin Jowett" : "Your uploaded book"}</p>
       <h1>{title}</h1>
-      <p className="txt-reader-edition">{bookId === "plato-republic" ? "Third edition · Complete text" : "Complete text"}</p>
+      <p className="txt-reader-edition">{bookId === "plato-republic" ? "Third edition · Complete text" : bookId.startsWith('pdf-text:') ? 'Extracted text · Original PDF saved' : "Complete text"}</p>
       <p className="txt-reader-hint">Select a passage to explore it.</p>
     </header>
     <div
@@ -419,7 +417,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
         return <TxtChunk key={chunk.id} chunk={chunk} sourceText={sourceText} highlight={chunkHighlight} enhancements={chunkEnhancements[index]} slots={chunkSlots.length?chunkSlots:EMPTY_SLOTS}/>;
       })}
     </div>
-    <div className="txt-reader-end">End of complete text</div>
+    <div className="txt-reader-end">{bookId.startsWith('pdf-text:') ? 'End of extracted text' : 'End of complete text'}</div>
     </div>
   </div>;
 });

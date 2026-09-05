@@ -1,0 +1,68 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-1-1",
+          "h-level-3-batch-2-5"
+        ],
+        "label": "Editorial Frames and Indexes",
+        "summary": "These clusters compile the overarching editorial framework of the edition, containing Jowett's structural preface, acknowledgments, textual revision histories, and extensive thematic indexes and transcription notes.",
+        "rationale": "Groups the foundational editorial framing and scholarship apparatus located at the outer edges of the work."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-2",
+          "h-level-3-batch-1-3",
+          "h-level-3-batch-2-1"
+        ],
+        "label": "Early Debates and Civic Design",
+        "summary": "This sequence moves from early dialectical inquiries into justice through foundational civic architecture, detailing guardian selection, censorship, education, and the psychological harmony of the state and individual.",
+        "rationale": "Combines the initial inquiry into justice with the early constructive phases of the city and its civic training."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-4",
+          "h-level-3-batch-1-6",
+          "h-level-3-batch-2-2"
+        ],
+        "label": "Metaphysics and Utopian Ideals",
+        "summary": "These discussions center on the philosopher-king paradox, the ascent to the Idea of the Good via the Sun, Line, and Cave allegories, and the institutional evaluation of Platonic utopianism against historical and later models.",
+        "rationale": "Brings together the core philosophical, dialectical, and utopian proposals of the middle books."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-5",
+          "h-level-3-batch-2-3",
+          "h-level-2-batch-4-5"
+        ],
+        "label": "Regime Decline, Art, and Er",
+        "summary": "These sections examine the progressive devolution of polities and the soul from timocracy to tyranny, concluding with the repudiation of mimesis, the proof of the soul's immortality, and the eschatological vision of the Myth of Er.",
+        "rationale": "Unites the later stages of constitutional decay and psychological degradation with Book X's final treatment of mimesis and destiny."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MlKcapvREsWDncoP6suG-AU",
+  "usage": {
+    "promptTokenCount": 167928,
+    "candidatesTokenCount": 589,
+    "totalTokenCount": 168517,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 167928
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 589
+      }
+    ]
+  },
+  "durationMs": 12275,
+  "requestHash": "aafa1fbc975993cae4c424be47c54ca577508d3f155977a61412764453651f40"
+}

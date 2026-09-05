@@ -1,0 +1,609 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-5-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Socrates establishes foundational principles of theology (God is only good, unchangeable) by simple deductions about divine perfection to justify censoring poetry for guardians.",
+            "anchorIds": [
+              "p-84489",
+              "p-86156",
+              "p-86915"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-4"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Applies directly to religious poetry, narratives, and civic theology taught to prospective guardians within the state.",
+            "anchorIds": [
+              "p-84489",
+              "p-86156"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Explores the philosophical distinction between false belief in the soul and verbal falsehood, building upon the theological requirements and medicinal lie discussions.",
+            "anchorIds": [
+              "p-96168",
+              "p-100446"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-5"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates an ontological and moral definition of falsehood in the human soul versus superficial verbal deception.",
+            "anchorIds": [
+              "p-96168"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Deduces that guardian character would be corrupted by theatrical and poetic mimesis from the core rule of specialization (one person, one job).",
+            "anchorIds": [
+              "p-103088",
+              "p-105278"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3",
+              "n-5-4"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Constrains poetic styles, dramatic representation, and recitation for the warrior-guardian class in the commonwealth.",
+            "anchorIds": [
+              "p-103088"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Directly deduces the retention of Dorian and Phrygian modes from the psychological need to foster courage and temperate obedience.",
+            "anchorIds": [
+              "p-106127"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-4"
+            ]
+          },
+          "generality": {
+            "value": 4.6,
+            "rationale": "Applies to musical metres, scales, and instruments allowed in civic education and state culture.",
+            "anchorIds": [
+              "p-106127"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Derives the simplicity of bodily training and condemnation of valetudinarian medicine from the soul's supremacy over the body and citizen civic duties.",
+            "anchorIds": [
+              "p-109585",
+              "p-111783"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-4"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Governs bodily care, physical regimen, and medical practice within the community of citizens and guardians.",
+            "anchorIds": [
+              "p-109585",
+              "p-111783"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Synthesizes the dual curricula of music and gymnastic, showing both are not divided between mind and body but target the harmonizing of passion and reason in the soul.",
+            "anchorIds": [
+              "p-113721",
+              "p-115915"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-8",
+              "n-6-1"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "A general pedagogical and psychological principle balancing spirited and philosophical impulses in human character.",
+            "anchorIds": [
+              "p-115915"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Develops a noble civic fiction (the metals) as an educational instrument derived from the necessity to preserve natural specialization and hierarchy without faction.",
+            "anchorIds": [
+              "p-117557",
+              "p-128607",
+              "p-130805"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3",
+              "n-5-6"
+            ]
+          },
+          "generality": {
+            "value": 4.7,
+            "rationale": "Defines social stratification, civic myth, and meritocratic mobility for the classes in the ideal commonwealth.",
+            "anchorIds": [
+              "p-117557",
+              "p-128607"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Infers that to prevent guardians from preying like wolves on citizens, private wealth, houses, and money must be completely forbidden to them.",
+            "anchorIds": [
+              "p-119083"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-4",
+              "n-6-3"
+            ]
+          },
+          "generality": {
+            "value": 4.3,
+            "rationale": "Specific institutional regime governing auxiliary soldiers and rulers in the republic.",
+            "anchorIds": [
+              "p-119083"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Editorial critique evaluating Plato's strict rejection of dietetics and gradual medicine against broader concepts of mind-body interaction and human health.",
+            "anchorIds": [
+              "p-135971",
+              "p-133897"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-1"
+            ]
+          },
+          "generality": {
+            "value": 6.3,
+            "rationale": "Pertains to philosophical principles of health, psychosomatic interaction, and voluntary habit across human life.",
+            "anchorIds": [
+              "p-133897",
+              "p-135971"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "Answers Adeimantus's objection that guardians lack happiness by establishing the foundational aim of the constitution as the welfare of the whole, supported by the statue analogy.",
+            "anchorIds": [
+              "p-137785",
+              "p-139980"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-4"
+            ]
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "A general political and ethical principle that organic civic welfare supersedes the isolated privilege of any constituent class.",
+            "anchorIds": [
+              "p-137785"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Argues that legislation cannot fix corrupt civic habits and is unnecessary in an educated state, establishing the primacy of education over statute law.",
+            "anchorIds": [
+              "p-140763",
+              "p-142482"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-2",
+              "n-6-6"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Broad institutional thesis concerning the limits of statutory jurisprudence compared to civic nurture and ethos.",
+            "anchorIds": [
+              "p-140763",
+              "p-142482"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Commentator reflects on Book IV's subordination of class happiness, analyzing whether deontological duty precedes utilitarian happiness in ethical philosophy.",
+            "anchorIds": [
+              "p-144671",
+              "p-144159",
+              "p-146982"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-6"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Philosophical assessment spanning universal moral theories, comparing deontological duty and utilitarian happiness.",
+            "anchorIds": [
+              "p-144671",
+              "p-146982"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "Locates the four virtues in the constructed commonwealth by assigning wisdom to guardians, courage to auxiliaries, temperance to harmonious order, and isolating justice by elimination.",
+            "anchorIds": [
+              "p-150162",
+              "p-150738",
+              "p-151285"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3",
+              "n-5-4",
+              "n-6-6"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Maps the cardinal virtues across civic political classes in the model city.",
+            "anchorIds": [
+              "p-150162",
+              "p-150738"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.8,
+            "rationale": "Culminates the search for justice by linking civic specialization ('doing one's own business') to the inner health and harmony of classes and soul faculties.",
+            "anchorIds": [
+              "p-153193",
+              "p-154946",
+              "p-162170"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3",
+              "n-7-2"
+            ]
+          },
+          "generality": {
+            "value": 7.3,
+            "rationale": "A comprehensive definition of justice applying equally to social organizations and the psychological constitution of individuals.",
+            "anchorIds": [
+              "p-153193",
+              "p-162170"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "Constructs an argument using the principle of non-contradiction and psychological conflicts (e.g. Leontius) to divide the soul into rational, spirited, and appetitive parts.",
+            "anchorIds": [
+              "p-157875",
+              "p-160069",
+              "p-165017"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-2"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "Formulates a general model of human moral psychology and motivation across all individuals.",
+            "anchorIds": [
+              "p-157875",
+              "p-165017"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.5,
+            "rationale": "Resolves the apparent tension with the specialization principle by showing sexual difference is irrelevant to the capacity for rule and defense, mandating equal education for women.",
+            "anchorIds": [
+              "p-175141",
+              "p-173414",
+              "p-174485"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3",
+              "n-5-4"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Addresses the civil and military role of women across social classes, particularly within the guardian order.",
+            "anchorIds": [
+              "p-175141"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.7,
+            "rationale": "Builds upon the equality of women and community of property to institute state-controlled breeding, rigged lotteries, and communal child-rearing.",
+            "anchorIds": [
+              "p-177804",
+              "p-180118"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-4",
+              "n-7-5"
+            ]
+          },
+          "generality": {
+            "value": 4.4,
+            "rationale": "Strictly limited to the institutional regulation of reproduction and family life for the guardian class.",
+            "anchorIds": [
+              "p-177804",
+              "p-180118"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.9,
+            "rationale": "Synthesizes the abolition of private family and property to deduce that maximal civic unity occurs when the state responds like a single bodily organism to joy and pain.",
+            "anchorIds": [
+              "p-181163",
+              "p-182674"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-6",
+              "n-8-1"
+            ]
+          },
+          "generality": {
+            "value": 6.9,
+            "rationale": "Formulates a general normative doctrine of civic cohesion and political community using an organic bodily metaphor.",
+            "anchorIds": [
+              "p-181163"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Deduces the philosopher-king paradox as the single necessary condition for actualizing the ideal state, following the established arguments on civic justice and the three waves.",
+            "anchorIds": [
+              "p-188140",
+              "p-193592"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-3",
+              "n-8-2"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "States an overarching condition for ending political ills in cities and the entire human race.",
+            "anchorIds": [
+              "p-188140"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "To justify philosopher rule, Socrates constructs an ontological and epistemological argument distinguishing faculties by their objects: knowledge of being, opinion of becoming, and ignorance of non-being.",
+            "anchorIds": [
+              "p-190451",
+              "p-195798"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-3"
+            ]
+          },
+          "generality": {
+            "value": 8.5,
+            "rationale": "A fundamental epistemological and metaphysical classification dividing all objects of thought, sensation, and cognitive faculties.",
+            "anchorIds": [
+              "p-190451"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "Constructs the parable of the ship to explain why true philosophers seem useless, building on the distinction between true knowledge and political demagogy.",
+            "anchorIds": [
+              "p-199165"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-3",
+              "n-8-4"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Explains the systemic friction between authentic theoretical knowledge and democratic or existing political regimes.",
+            "anchorIds": [
+              "p-199165"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.4,
+            "rationale": "Accounts for the corruption of philosophic natures by applying the principle that the best natures suffer the worst degradation when exposed to toxic public opinion.",
+            "anchorIds": [
+              "p-201434"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-5"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "A general sociological and psychological principle regarding the corruption of superior individuals by social flattery and public opinion.",
+            "anchorIds": [
+              "p-201434"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.5,
+            "rationale": "Argues that guardian training cannot stop at civic virtues but must advance along a 'longer road' to the idea of the good, the highest source of value.",
+            "anchorIds": [
+              "p-211000"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-2",
+              "n-8-3"
+            ]
+          },
+          "generality": {
+            "value": 9.2,
+            "rationale": "Asserts the supreme ontological and axiological principle underwriting all reality, truth, and virtue.",
+            "anchorIds": [
+              "p-211000"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Employs the analogy of the visible sun illuminates sight and objects to elucidate how the Idea of the Good causes truth and intelligible reality.",
+            "anchorIds": [
+              "p-213198",
+              "p-215396"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-4",
+              "n-8-7"
+            ]
+          },
+          "generality": {
+            "value": 9,
+            "rationale": "Unifies the visible and intelligible cosmos under the generative power of the sun and the Idea of the Good.",
+            "anchorIds": [
+              "p-213198",
+              "p-215396"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "u06caqCZEsuZvdAP_dLD-AE",
+  "usage": {
+    "promptTokenCount": 61244,
+    "candidatesTokenCount": 4731,
+    "totalTokenCount": 65975,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 61244
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4731
+      }
+    ]
+  },
+  "durationMs": 23505,
+  "requestHash": "716d65d910a6eb6cffcda42dae8859871a55ad79f9f6775f55f34e63ea18e490"
+}

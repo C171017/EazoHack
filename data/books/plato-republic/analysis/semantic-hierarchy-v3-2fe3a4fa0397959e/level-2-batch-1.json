@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-2-1",
+          "h-level-1-batch-2-2"
+        ],
+        "label": "Editorial Framework and Overview",
+        "summary": "These introductory items provide the editorial background of Benjamin Jowett's third edition translation alongside an analytical overview of the Republic's thematic divisions and structure.",
+        "rationale": "Combines paratextual front-matter and general commentary outlining the design of the translation and dialogue."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-1",
+          "h-level-1-batch-3-2",
+          "h-level-1-batch-4-1"
+        ],
+        "label": "Justice and Guardian Foundation",
+        "summary": "These sections examine the initial moral search for justice, tracing the educational regimen and civic structures that culminate in the communal lifestyle and virtues of the guardian class.",
+        "rationale": "Covers the constructive phase of Books I–V focusing on early education, civic justice, and guardian communal discipline."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-1-1",
+          "h-level-1-batch-1-2",
+          "h-level-1-batch-1-3",
+          "h-level-1-batch-4-2",
+          "h-level-1-batch-11-3"
+        ],
+        "label": "Ascent and Philosophic Training",
+        "summary": "This sequence addresses the cognitive turn from sensible perception to abstract being through the allegory of the cave, mathematical disciplines, and dialectic, detailing the lifelong curricular duties and compelled political return of philosophic rulers.",
+        "rationale": "Unites core epistemological and educational passages of Books VI–VII concerning dialectic, the curriculum, and the ascent from the cave."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-1-4",
+          "h-level-1-batch-2-3",
+          "h-level-1-batch-2-4",
+          "h-level-1-batch-4-3",
+          "h-level-1-batch-11-4",
+          "h-level-1-batch-4-4"
+        ],
+        "label": "Regime Decay and Tyranny",
+        "summary": "These clusters trace the constitutional and psychological degeneration of cities and souls from timocracy and oligarchy to democracy and tyranny, demonstrating the misery of the tyrannical ruler and calculating his distance from the happiness of the just king.",
+        "rationale": "Encompasses Books VIII and IX discussions on corrupt polities, the rise of democratic license, and the wretched nature of tyranny."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-5",
+          "h-level-1-batch-3-3"
+        ],
+        "label": "Poetics, Cosmology, and Precedents",
+        "summary": "These texts critique traditional poetry and evaluate art's moral function while exploring broader cosmic, mathematical, and historical frameworks, including the myth of Er and Pythagorean precedents.",
+        "rationale": "Brings together concluding thematic analyses covering Book X poetry censorship, cosmological models, and historical analogues."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ElGcariVFZqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 55855,
+    "candidatesTokenCount": 787,
+    "totalTokenCount": 56642,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 55855
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 787
+      }
+    ]
+  },
+  "durationMs": 6602,
+  "requestHash": "9fc3f8878d4f8e96eba6285678a879020c666a53732e11341fe0ca0fffbf89d5"
+}

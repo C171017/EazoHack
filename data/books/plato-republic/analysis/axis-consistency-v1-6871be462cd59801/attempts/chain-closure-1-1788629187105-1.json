@@ -1,0 +1,65 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-10-4",
+        "reason": "Internal contradiction in reasoning depth assessment: the assessment assigns value 6.8 and states reviewed depth sets a lower bound of 6.8, but then states 'Because its prerequisite n-9-6 is calibrated at 6.4, incorporating that prior chain raises n-10-4 to 6.6' and cites n-10-3 at depth 6.0 (when n-10-3 was previously calibrated at 6.8)."
+      },
+      {
+        "nodeId": "n-34-4",
+        "reason": "Internal contradiction in reasoning depth assessment: the assessment value is set to 6.3 with a stated lower bound of 6.3, but the rationale concludes 'As an immediate conversational ratification dependent on the complete prior derivation, it is rated at 5.6', citing prerequisite n-34-3 at depth 5.5 instead of its calibrated depth 6.3."
+      },
+      {
+        "nodeId": "n-35-2",
+        "reason": "Internal contradiction in reasoning depth assessment: the assigned value is 6.0 with a stated lower bound of 6.0, yet the rationale states 'Building directly upon the setup of the underground den in the Allegory of the Cave (n-35-1, depth 4.8), incorporating this prerequisite chain places it at 5.0'."
+      },
+      {
+        "nodeId": "n-36-4",
+        "reason": "Internal contradiction in reasoning depth assessment: the assigned value is 7.3 with a stated lower bound of 7.3, but the rationale concludes 'Incorporating n-36-3, this local argument is calibrated at 6.6', while citing n-36-3 at depth 6.3 instead of 7.3."
+      },
+      {
+        "nodeId": "n-37-6",
+        "reason": "Internal contradiction in reasoning depth assessment: the assigned value is 6.7 with a stated lower bound of 6.7, but the rationale concludes 'Incorporating that prerequisite chain, the inference that alienation of property inevitably generates an idle class of paupers and criminals is rated at 6.3', citing n-37-5 at depth 6.1 instead of 6.7."
+      },
+      {
+        "nodeId": "n-37-8",
+        "reason": "Internal contradiction in reasoning depth assessment: the assigned value is 6.7 with a stated lower bound of 6.7, but the rationale concludes 'Incorporating the prior chain through n-37-6, this linked causal argument reaches 6.5', citing n-37-5 at 6.1 and n-37-6 at 6.3."
+      },
+      {
+        "nodeId": "n-38-4",
+        "reason": "Internal contradiction in reasoning depth assessment: the assigned value is 6.9 with a stated lower bound of 6.9, but the rationale concludes 'Incorporating the prerequisite chain through n-37-2 (depth 6.5) requires depth >= 6.5, calibrated here to 6.6'."
+      },
+      {
+        "nodeId": "n-39-1",
+        "reason": "Internal contradiction in reasoning depth assessment: the assigned value is 6.9 with a stated lower bound of 6.9, but the rationale asserts 'Incorporating the prerequisite chain through n-38-4 (depth 6.6) requires depth >= 6.6, calibrated here to 6.8'."
+      },
+      {
+        "nodeId": "n-39-2",
+        "reason": "Internal contradiction in reasoning depth assessment: the assigned value is 6.9 with a stated lower bound of 6.9, but the rationale concludes 'incorporating that prerequisite chain places it at 6.5', citing prerequisite n-39-1 at depth 6.3."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "vFCcat64CNCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 120958,
+    "candidatesTokenCount": 917,
+    "totalTokenCount": 121875,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 120958
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 917
+      }
+    ]
+  },
+  "durationMs": 7335,
+  "requestHash": "8667ca486ff3a2b5df539b03d9b659f236868ec24fb90807691a583c862c442a"
+}

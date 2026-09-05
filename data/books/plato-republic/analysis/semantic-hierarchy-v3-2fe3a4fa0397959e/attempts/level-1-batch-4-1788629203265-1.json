@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-6-4",
+          "n-7-2",
+          "n-8-1",
+          "n-15-2",
+          "n-15-5"
+        ],
+        "label": "Virtue and Guardian Communism",
+        "summary": "Socrates establishes civic virtues through functional classes and subjects the guardians to rigorous communal disciplines, including the elimination of private property and family structures. Later commentary analyzes these measures as radical paradoxes designed to supersede faction and unify the state.",
+        "rationale": "These nodes all address the internal social and constitutional blueprint of the ideal republic: class virtues, elimination of private property, and communal family life, alongside commentator analyses of these paradoxes."
+      },
+      {
+        "childIds": [
+          "n-9-6",
+          "n-10-1",
+          "n-10-2",
+          "n-10-7",
+          "n-15-1"
+        ],
+        "label": "Education and Civic Purpose",
+        "summary": "Philosophic rulers are drawn from sensible phenomena to abstract contemplation through mathematics and solid geometry, yet are compelled to return to civic administration despite the risks of early dialectic questioning. Commentator analysis frames this ideal state as transcending local Athenian citizenship to construct an eternal model.",
+        "rationale": "These entries center on the higher intellectual education of philosopher-rulers, the timing and duties of their philosophical descent into governance, and the ideal nature of Plato's statecraft."
+      },
+      {
+        "childIds": [
+          "n-11-2",
+          "n-11-3",
+          "n-11-4",
+          "n-11-5"
+        ],
+        "label": "Degeneration of the State",
+        "summary": "The ideal polity degenerates progressively into timocracy, oligarchy, democracy, and tyranny as rulers prioritize honor, wealth, unrestrained liberty, and demagogy. Each constitutional decline simultaneously reshapes individual psychology, culminating in lawlessness and despotism.",
+        "rationale": "Covers the sequential descent through imperfect constitutions (timocracy, oligarchy, democracy, tyranny) and their matching psychological portraits in Book VIII."
+      },
+      {
+        "childIds": [
+          "n-12-2",
+          "n-12-3",
+          "n-12-5",
+          "n-13-1"
+        ],
+        "label": "Tyrannical Misery and Kingly Contrast",
+        "summary": "The tyrannical soul is examined as an enslaved and tormented existence driven by lawless appetite and fear, proving the public tyrant to be the most wretched of men. This misery is contrasted with the royal man's happiness through a mathematical calculation measuring the interval between them as 729 to 1.",
+        "rationale": "Focuses on Book IX's assessment of the tyrannical individual's internal misery, the enslavement of power, and the specific mathematical calculation of the interval separating king from tyrant."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "zVCcaoSoFJqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 20646,
+    "candidatesTokenCount": 700,
+    "totalTokenCount": 21346,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20646
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 700
+      }
+    ]
+  },
+  "durationMs": 6816,
+  "requestHash": "5d80b9f8828bf07eacd975dfbfa6af4d9d3d5594ddd6e7b271b94d6c3368befa"
+}

@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-27-6",
+          "n-28-4",
+          "n-39-4",
+          "n-40-4"
+        ],
+        "label": "Civic and Psychic Harmony",
+        "summary": "Justice is defined at both civic and personal levels as each element performing its natural function without overstepping. When the tripartite soul is ordered under reason rather than unruly desires, internal harmony replaces the destructive effects of injustice.",
+        "rationale": "These passages from Books IV and IX define justice and internal order across the city and the tripartite soul, contrasting rational harmony with the ravages of uncontrolled desires."
+      },
+      {
+        "childIds": [
+          "n-30-4",
+          "n-32-8"
+        ],
+        "label": "Philosopher and the State",
+        "summary": "Socrates argues that political suffering cannot end until philosophical wisdom and governance unite in the philosopher-king. However, existing cities fail to nurture this philosophic nature, leaving it estranged and degenerate without a matching ideal commonwealth.",
+        "rationale": "Both items articulate the essential role of philosophical rule alongside the alienation and corruption philosophers face within existing imperfect political systems."
+      },
+      {
+        "childIds": [
+          "n-33-4",
+          "n-33-5",
+          "n-33-6",
+          "n-34-1",
+          "n-34-2"
+        ],
+        "label": "The Good and Epistemic Levels",
+        "summary": "The Idea of the Good is presented as the supreme source of truth and being, illustrated through the analogy of the sun. Epistemic reality is mapped via the Divided Line, showing dialectic ascending beyond ungrounded hypotheses to first principles, surpassing ordinary arts and mathematical sciences.",
+        "rationale": "A contiguous sequence in Book VI outlining the ontological supremacy of the Good and the corresponding cognitive ascent through the Divided Line and dialectic."
+      },
+      {
+        "childIds": [
+          "n-35-1",
+          "n-35-2"
+        ],
+        "label": "Allegory of the Cave",
+        "summary": "Chained prisoners mistake fire-cast shadows on a subterranean wall for true reality until one is dragged into the open daylight. Gradually adapting from reflections to celestial bodies, the freed individual ultimately perceives the sun itself as the supreme cause of the visible realm.",
+        "rationale": "These consecutive leaves form the opening exposition of the Cave allegory in Book VII, describing the entrapment of ignorance and the painful transition toward true enlightenment."
+      },
+      {
+        "childIds": [
+          "n-39-5",
+          "n-41-1",
+          "n-41-3"
+        ],
+        "label": "Knowledge, Pleasure, and Mimēsis",
+        "summary": "Because the philosopher commands experience alongside reason, his judgment prioritizing intellectual pleasure stands as uniquely valid. Conversely, imitative poets and artists lack true knowledge, producing works thrice removed from reality that deceive the senses and corrupt the soul.",
+        "rationale": "Contrasts the epistemically grounded discernment of the philosopher with the superficial, knowledge-lacking crafts of imitative artists."
+      },
+      {
+        "childIds": [
+          "n-42-2",
+          "n-42-6"
+        ],
+        "label": "Soul Purity and Afterlife Choice",
+        "summary": "The soul's true nature is obscured in bodily existence like the encrusted sea-god Glaucus, becoming evident only through its philosophical kinship with the divine. In the afterlife, souls choose their subsequent incarnations freely, where a foundation in wisdom is critical to avoid catastrophic moral error.",
+        "rationale": "These Book X passages address the immortal essence of the soul, contrasting its earthly encrustation with its rational purity and the ethical responsibility required during post-mortem judgment."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "-VGcau7SKeuBncoPjarP6AU",
+  "usage": {
+    "promptTokenCount": 11815,
+    "candidatesTokenCount": 901,
+    "totalTokenCount": 12716,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11815
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 901
+      }
+    ]
+  },
+  "durationMs": 8518,
+  "requestHash": "ccb17f229da38aea75a65b460e41c596de9ad9c74c9130caeccc9052d2c7669f"
+}

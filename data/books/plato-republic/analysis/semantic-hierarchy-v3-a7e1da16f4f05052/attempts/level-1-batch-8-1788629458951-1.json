@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-32-2",
+          "n-32-5",
+          "n-33-1",
+          "n-33-2"
+        ],
+        "label": "The Philosopher and Society",
+        "summary": "Socrates examines the virtues inherent to true philosophers and the societal corruptions that divert gifted souls. He proposes a rigorous lifelong education to protect their nature and suggests the multitude will respect philosophy when its true, tranquil pursuit is revealed.",
+        "rationale": "All four items from Book VI address the nature, education, societal perils, and public reconciliation of genuine philosophical souls."
+      },
+      {
+        "childIds": [
+          "n-35-6",
+          "n-35-7",
+          "n-36-2"
+        ],
+        "label": "Mathematical Sciences of Being",
+        "summary": "Arithmetic, geometry, astronomy, and harmonics are presented as disciplines designed to elevate the intellect above sensory perception. Rather than serving purely practical or empirical aims, these studies compel the soul toward abstract truth, unchanging order, and eternal being.",
+        "rationale": "Consecutive passages in Book VII outlining the mathematical curriculum that turns the soul away from visible appearances to pure reason."
+      },
+      {
+        "childIds": [
+          "n-37-3",
+          "n-37-5",
+          "n-37-6",
+          "n-37-8"
+        ],
+        "label": "Decay into Oligarchy",
+        "summary": "The breakdown of the ideal commonwealth stems from breeding miscalculations, leading to factionalism and property division. As wealth becomes paramount, an oligarchy forms, breeding an impoverished and disenfranchised class of drones who eventually threaten the stability of the state.",
+        "rationale": "Chronological sequence in Book VIII covering the fall of the guardian state and the socioeconomic instability of oligarchical rule."
+      },
+      {
+        "childIds": [
+          "n-38-1",
+          "n-38-2",
+          "n-38-6",
+          "n-38-7",
+          "n-38-8"
+        ],
+        "label": "Democracy and Rise of Tyranny",
+        "summary": "Democracy emerges through popular rebellion, establishing widespread freedom, varied characters, and a tripartite social structure. Unchecked liberty ultimately gives rise to a demagogic champion who purges opponents, institutes martial rule, and subjugates the populace as a tyrant.",
+        "rationale": "A thematic continuum in Book VIII detailing the democratic constitution and its inevitable devolution into tyranny."
+      },
+      {
+        "childIds": [
+          "n-40-3",
+          "n-41-2"
+        ],
+        "label": "Forms, Souls, and Imitation",
+        "summary": "Socrates depicts the soul's tripartite structure using a mythological composite figure and examines degrees of reality through the metaphor of three beds. Both accounts contrast true, rational essence with intermediate physical representations and base imitations.",
+        "rationale": "Adjacent passages across Books IX and X using allegorical and metaphysical models to delineate internal psychic order and external ontologies."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "zVGcaov3Dp2AktwPl_yY2Q8",
+  "usage": {
+    "promptTokenCount": 10958,
+    "candidatesTokenCount": 684,
+    "totalTokenCount": 11642,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10958
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 684
+      }
+    ]
+  },
+  "durationMs": 6059,
+  "requestHash": "cb37020ab134a666396936ea8b478e4faedf613d3717c86188c34ef1c8993bed"
+}

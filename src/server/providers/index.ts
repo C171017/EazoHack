@@ -5,13 +5,16 @@ import {
   type Selection,
 } from "../../shared/schemas";
 import { makeMockArtifact } from "../../shared/fixtures";
-import { createFalImageProvider } from "./fal-z-image";
 import { createIncoProvider } from "./inco";
+import { devModelChoice } from "./dev-models";
+import { createBflImageProvider } from "./bfl-klein";
+import { createFalImageProvider } from "./fal-z-image";
+import { createVertexGeminiProvider } from "./vertex-gemini";
 
 export type ProviderMode = "mock" | "real";
 export type ProviderError = RunError;
 export type ProviderResult<T> = {
-  provenance: { provider: "mock" | "vertex_ai" | "inco" | "fal" | "not_configured"; label: string };
+  provenance: { provider: "mock" | "vertex_ai" | "inco" | "fal" | "bfl" | "not_configured"; label: string };
   timing: { startedAt: string; durationMs: number };
 } & ({ ok: true; payload: T } | { ok: false; error: ProviderError });
 
@@ -30,7 +33,7 @@ export function createProvider(
   kind: RouteKind,
   mode: ProviderMode,
 ): Provider<Selection, Artifact> {
-  if (mode === "real") return kind === "generated_image" ? createFalImageProvider() : createIncoProvider(kind);
+  if (mode === "real") return kind === "generated_image" ? (imageProviderName() === "bfl" ? createBflImageProvider() : createFalImageProvider()) : (routeProviderName(kind) === "inco" ? createIncoProvider(kind) : createVertexGeminiProvider(kind));
   return {
     async run(selection, context) {
       const startedAt = new Date().toISOString();
@@ -56,8 +59,19 @@ export function createProvider(
 }
 
 /** A dispatch may combine independent text and image providers. */
-export function dispatchProvider(mode: ProviderMode, routes: RouteKind[]): "mock" | "vertex_ai" | "inco" | "fal" | "mixed" {
+export function dispatchProvider(mode: ProviderMode, routes: RouteKind[]): "mock" | "vertex_ai" | "inco" | "fal" | "bfl" | "mixed" {
   if (mode === "mock") return "mock";
-  if (!routes.includes("generated_image")) return "inco";
-  return routes.length === 1 ? "fal" : "mixed";
+  const providers = new Set(routes.map(routeProviderName));
+  return providers.size === 1 ? [...providers][0] : "mixed";
+}
+
+/** Server-only switch for model comparisons; existing installs retain fal. */
+export function imageProviderName(): "fal" | "bfl" {
+  const override = devModelChoice("generated_image");
+  return (override ?? process.env.IMAGE_PROVIDER) === "bfl" ? "bfl" : "fal";
+}
+
+export function routeProviderName(kind: RouteKind): "vertex_ai" | "inco" | "bfl" | "fal" {
+  if (kind === "generated_image") return imageProviderName();
+  return devModelChoice(kind) === "inco" ? "inco" : "vertex_ai";
 }

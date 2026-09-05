@@ -1,0 +1,601 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-18-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "In p-539533, p-544653, and p-547094, Jowett conducts an internal comparative analysis of More's Utopia, developing a short sequence of inferences (anchor 3) tracing how More applies Platonic communal principles, tolerance, and critique of contemporary European institutions, without depending on a prior chain in the volume.",
+            "anchorIds": [
+              "p-539533",
+              "p-544653",
+              "p-547094"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.9,
+            "rationale": "Restricted to the philosophical architecture, reforms, and social critique of More's Utopia (anchor 4).",
+            "anchorIds": [
+              "p-539533",
+              "p-544653",
+              "p-547094"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "In p-553528, p-555938, and p-556820, Jowett analyzes Campanella's City of the Sun as an adaptation of Platonic communal life and natural education, developing a local comparative inference with its justification (anchor 2 to 3) without prerequisite dependency on preceding nodes.",
+            "anchorIds": [
+              "p-553528",
+              "p-555938",
+              "p-556820"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Focuses on the specific constitution and utopian narrative of Campanella's City of the Sun (anchor 3 to 4).",
+            "anchorIds": [
+              "p-553528",
+              "p-555938",
+              "p-556820"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.4,
+            "rationale": "In p-561988, Jowett builds directly upon the established account of the function of ideals in elevating human life (n-18-6, depth 6.2), developing a further linked argument that synthesizes the dual modern ideals (earthly collective progress and eternal individual existence) under the divine will (anchor 6).",
+            "anchorIds": [
+              "p-561988"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-6"
+            ]
+          },
+          "generality": {
+            "value": 7.6,
+            "rationale": "Formulates a broad religious and existential principle addressing the primary motivational poles of human life (anchor 7 to 8).",
+            "anchorIds": [
+              "p-561988"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.1,
+            "rationale": "In p-564220, Jowett synthesizes the metaphysical overview of the Idea of Good (n-17-2, depth 6.8) and the elevated function of ideals (n-18-6, depth 6.2) into a culminating theological synthesis uniting Christian incarnation and Platonic metaphysics (anchor 7).",
+            "anchorIds": [
+              "p-564220"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-2",
+              "n-18-6"
+            ]
+          },
+          "generality": {
+            "value": 8.4,
+            "rationale": "Proposes a cross-domain metaphysical and religious synthesis linking transcendent philosophical ontology with spiritual and moral experience (anchor 8).",
+            "anchorIds": [
+              "p-564220"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Cephalus makes an immediate practical inference from personal observation and Sophocles' testimony, concluding that contentment in old age is caused by character rather than bodily age itself (anchor 1).",
+            "anchorIds": [
+              "p-570737",
+              "p-572998"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Applies to the class of aging individuals, stating an ethical and psychological rule governing peace of mind in later life (anchor 4 to 5).",
+            "anchorIds": [
+              "p-570737",
+              "p-572998"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Socrates executes a direct refutation via counterexample (the madman demanding his weapons), demonstrating that defining justice simply as truth-telling and debt repayment yields absurd and harmful outcomes (anchor 2).",
+            "anchorIds": [
+              "p-577089",
+              "p-577644",
+              "p-578427"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Constitutes a critical negative test refuting a general definition of justice across ethical duties of property and speech (anchor 4 to 5).",
+            "anchorIds": [
+              "p-577089",
+              "p-577644",
+              "p-578427"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Polemarchus adopts and interprets Simonides' traditional poetic maxim, deducing that justice gives what is fitting, which he specifies as doing good to friends and harm to enemies (anchor 1 to 2).",
+            "anchorIds": [
+              "p-579425",
+              "p-579592",
+              "p-580244"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "Purports to serve as a comprehensive definition of justice governing all interpersonal obligations between friends and foes (anchor 5).",
+            "anchorIds": [
+              "p-579425",
+              "p-579592",
+              "p-580244"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "Thrasymachus bursts into the dialogue and asserts his foundational definition with minimal immediate inferential deduction from legislative self-interest (anchor 0 to 1).",
+            "anchorIds": [
+              "p-595396",
+              "p-596481"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8.7,
+            "rationale": "Asserts an overarching political and legal doctrine meant to explain the nature of all laws, regimes, and civic justice across all societies (anchor 8 to 9).",
+            "anchorIds": [
+              "p-595396",
+              "p-596481"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Thrasymachus responds directly to Socrates' refutation (n-19-7, depth 2.3) by establishing the precise definition of the craftsman or ruler in the strict sense (qua ruler unerring), developing a refined local argument (anchor 2 to 3).",
+            "anchorIds": [
+              "p-601283",
+              "p-603190"
+            ],
+            "prerequisiteNodeIds": [
+              "n-19-7"
+            ]
+          },
+          "generality": {
+            "value": 6.1,
+            "rationale": "Applies across all arts and sciences (grammarians, doctors, rulers) to define the formal nature of expertise in the strict sense (anchor 6).",
+            "anchorIds": [
+              "p-601283",
+              "p-603190"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "In p-608406, p-611557, and p-622572, Thrasymachus breaks away from Socrates' art analogy with a bold rhetorical assertion and sheep/shepherd analogy, stating a fresh starting position that injustice is strength and virtue. Because this is an external reassertion rather than a required logical deduction from n-20-2, the prerequisite is removed and it is rated as an immediate local inference (anchor 1).",
+            "anchorIds": [
+              "p-608406",
+              "p-611557",
+              "p-622572"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Applies domain-wide to the nature of justice and injustice in political and private conduct, especially focusing on grand tyranny (anchor 5).",
+            "anchorIds": [
+              "p-608406",
+              "p-622572"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Socrates directly introduces the teleological premise that whatever has a function also has an excellence, using immediate analogies of eyes and pruning hooks (anchor 1: immediate inference from an explicit starting point).",
+            "anchorIds": [
+              "p-634569",
+              "p-635411",
+              "p-636552"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7.3,
+            "rationale": "Posits a broadly reusable principle across all entities, bodily organs, instruments, and souls that each has a characteristic function and virtue (anchor 7).",
+            "anchorIds": [
+              "p-635411",
+              "p-636552"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "In p-637924, Socrates reflects upon the entire dialectical chain of Book I, concluding in aporia specifically because they jumped to whether justice is profitable (n-21-3, depth 3.4) before defining justice itself. Incorporates the prior chain of inquiry (anchor 3 to 4).",
+            "anchorIds": [
+              "p-637924"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-3"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Pertains specifically to Socrates' personal epistemological status and self-assessment regarding the preceding dialogue (anchor 1).",
+            "anchorIds": [
+              "p-637924"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Adeimantus introduces an observational catalog of how poets, parents, and prose writers consistently praise justice merely for its extrinsic rewards (anchor 1: immediate inference from cultural evidence).",
+            "anchorIds": [
+              "p-653380",
+              "p-656070",
+              "p-663328"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "Surveys the conventional cultural discourse and literature regarding morality in Greek society (anchor 5).",
+            "anchorIds": [
+              "p-653380",
+              "p-656070"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "In response to the challenge to defend justice itself (n-22-5, depth 2.1), Socrates formulates the large letters analogy, inferring that justice will be more discernible in the larger entity (the city) before the individual (anchor 2).",
+            "anchorIds": [
+              "p-668093",
+              "p-669061",
+              "p-669400"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-5"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "A structural methodology governing the inquiry into justice across political and individual levels (anchor 4 to 5).",
+            "anchorIds": [
+              "p-668093",
+              "p-669400"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Directly posited starting point of political theory: a state arises from human material needs and lack of individual self-sufficiency (anchor 0).",
+            "anchorIds": [
+              "p-670316",
+              "p-670512",
+              "p-671202"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "Asserts a general foundational principle for the origin and existence of any political society or commonwealth (anchor 6 to 7).",
+            "anchorIds": [
+              "p-670316",
+              "p-670512"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Infers from the impressionability of youth and the requirement of harmonious guardians (n-23-3, depth 2.3) that early stories and myths must be strictly regulated and censored (anchor 2 to 3).",
+            "anchorIds": [
+              "p-691325",
+              "p-690743",
+              "p-694303"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3"
+            ]
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "Governs the domain of juvenile education and storytelling in the state (anchor 5).",
+            "anchorIds": [
+              "p-691325",
+              "p-694303"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A structural classification dividing poetic narration into simple description, imitation, and mixed style, established with immediate explanatory illustrations (anchor 1).",
+            "anchorIds": [
+              "p-725915",
+              "p-727574",
+              "p-730025"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Covers all forms of poetic narration and literature across genres including tragedy, comedy, and epic (anchor 6).",
+            "anchorIds": [
+              "p-725915",
+              "p-727574",
+              "p-730025"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Deduces the elimination of lamenting and soft musical harmonies from the requirement that musical modes must express courage in danger, building directly on the censorship of underworld terrors (n-24-1, depth 3.0; anchor 3).",
+            "anchorIds": [
+              "p-741569",
+              "p-741958",
+              "p-742459"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies to the regulation of musical modes and melodies within the civic educational scheme (anchor 4).",
+            "anchorIds": [
+              "p-741569",
+              "p-741958",
+              "p-742459"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Contrasts medical training with judicial qualification by developing an internal inference in p-769929, p-770667, and p-771417: because the judge's mind governs other minds rather than the body, it must remain pure and free from contamination by evil habits (anchor 2 to 3).",
+            "anchorIds": [
+              "p-769929",
+              "p-770667",
+              "p-771417"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Specific to the epistemological requirements and character profile of judicial officers (anchor 4 to 5).",
+            "anchorIds": [
+              "p-769929",
+              "p-770667",
+              "p-771417"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "In p-792835 and p-793697, Adeimantus raises an objection directly grounded in the rigorous communal prohibitions against guardian property and gold just established in n-26-5 (depth 4.0). Incorporates the required prior reasoning chain (anchor 4).",
+            "anchorIds": [
+              "p-792835",
+              "p-793697"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Examines the personal plight and happiness of the guardian class under communal restrictions (anchor 4).",
+            "anchorIds": [
+              "p-792835",
+              "p-793697"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "Socrates establishes civic justice by utilizing the three previously defined virtues (wisdom, courage, temperance) and the foundational principle of division of labour, completing the residue argument (n-27-6, depth 5.2). A result that uses earlier established arguments (anchor 5).",
+            "anchorIds": [
+              "p-831955",
+              "p-828602",
+              "p-831626"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-27-4",
+              "n-27-5",
+              "n-27-6"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "The definition directly governs the structural classes (trader, auxiliary, guardian) within the restricted setting of the ideal civic state (anchor 4).",
+            "anchorIds": [
+              "p-831955",
+              "p-831626"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "This is introduced as an axiomatic logical definition/starting claim (anchor 0), followed immediately by illustrative qualifications (a man standing and moving, spinning tops) to establish precision (anchoring close to 0 with minimal local inference, 0.3).",
+            "anchorIds": [
+              "p-836466",
+              "p-836892",
+              "p-837402"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 10,
+            "rationale": "The principle of non-contradiction is stated as a maximally general ontological and logical principle applying to any entity acting or being acted upon across all domains (anchor 10).",
+            "anchorIds": [
+              "p-836466"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "Socrates draws an immediate inference from the established harmony of individual justice (n-28-4, depth 6.0) using the analogy of somatic health and disease, concluding that asking whether injustice profits is ridiculous. Incorporates the prior chain (anchor 6).",
+            "anchorIds": [
+              "p-859615",
+              "p-858701",
+              "p-860234"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Defines virtue and vice across the entire domain of psychic states in human beings (anchor 6).",
+            "anchorIds": [
+              "p-859615",
+              "p-858701"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.1,
+            "rationale": "In p-861665, p-861207, and p-861963, Socrates directly infers from the established correspondence between the just city (n-28-1, depth 5.4) and the just soul (n-28-4, depth 6.0) that the four remaining forms of regime correspond to four remaining defective psychic states. Incorporates the prior chain (anchor 6).",
+            "anchorIds": [
+              "p-861665",
+              "p-861207",
+              "p-861963"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-1",
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Applies domain-wide across political regimes and psychological types, setting out the fivefold typology (anchor 5).",
+            "anchorIds": [
+              "p-861665",
+              "p-861207"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xU-caoKdB8uZvdAP_dLD-AE",
+  "usage": {
+    "promptTokenCount": 112113,
+    "candidatesTokenCount": 6292,
+    "totalTokenCount": 118405,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 112113
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6292
+      }
+    ]
+  },
+  "durationMs": 32833,
+  "requestHash": "2cc0ec875b3dd0e28a69fee2167d60ff27d785efe72e48f27f65d258e71b589b"
+}

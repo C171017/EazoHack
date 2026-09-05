@@ -1,0 +1,623 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-31-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "At p-945741, p-944871, and p-945817, Socrates culminates the Book V sequence of arguments distinguishing faculties (p-938311, p-939909, p-941587) and fluctuating particulars (p-943069) by formally concluding who is a lover of opinion versus a lover of wisdom (philodoxus vs philosophus). This completes a local multi-step dialectical deduction.",
+            "anchorIds": [
+              "p-945741",
+              "p-944871",
+              "p-945817"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-4",
+              "n-31-5",
+              "n-31-6"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "The conclusion formulates a categorical division spanning human cognitive types and orientations towards reality (episteme vs doxa), articulating a domain-wide philosophical typology.",
+            "anchorIds": [
+              "p-944871",
+              "p-945817"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Socrates directly derives the philosopher's fitness to rule the city (p-946665, p-947385, p-947917) from the conclusion just established at the close of Book V distinguishing those who grasp the unchanging truth from those who wander among particulars (n-31-7, n-30-4).",
+            "anchorIds": [
+              "p-946665",
+              "p-947385",
+              "p-947917"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-4",
+              "n-31-7"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Applies the metaphysical distinction between lovers of opinion and wisdom to the political office of the guardian class in the ideal city.",
+            "anchorIds": [
+              "p-946665",
+              "p-947917"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Building from the definition of philosophers as lovers of true being (p-948857), Socrates deduces their natural virtues: truthfulness, temperance, lack of meanness, justice, courage, and intellectual quickness (p-949401, p-953330). It is a coherent local deduction from nature to psychological traits.",
+            "anchorIds": [
+              "p-948857",
+              "p-949401",
+              "p-953330"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Outlines a comprehensive character profile defining the entire class of genuine philosophic natures.",
+            "anchorIds": [
+              "p-948857",
+              "p-953330"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Adeimantus introduces an empirical observation and objection directly challenging Socrates' portrait (p-953959, p-955558), observing that philosophers in actual experience are seen as rogues or useless.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Refers to the perceived condition of practitioners of philosophy within typical existing political states.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates develops the parable of the ship (p-956124, p-958319, p-959553) as an explanatory sequence accounting for Adeimantus's objection: mutinous sailors misjudge the true pilot, explaining why the philosopher's uselessness is the fault of the city rather than the art.",
+            "anchorIds": [
+              "p-956124",
+              "p-958319",
+              "p-959553"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "An allegory characterizing the structural relationship between intellectual experts/philosophers and the democratic or popular polity.",
+            "anchorIds": [
+              "p-956124",
+              "p-959553"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Socrates explains the roguishness charge by analyzing how corruptive social assemblies and flattery divert the finest, most gifted souls into ruin (p-964763, p-966030, p-967421). This is a developed psychological and sociological explanation.",
+            "anchorIds": [
+              "p-964763",
+              "p-966030",
+              "p-967421"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2",
+              "n-32-3"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Formulates a general principle about how fine natures deteriorate in adverse social environments.",
+            "anchorIds": [
+              "p-966030",
+              "p-967421"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Following the corruption of noble natures (p-966030), Socrates infers what happens next: philosophy is left desolate, and unworthy artisans invade the discipline, producing base sophisms (p-975927, p-976512, p-977651).",
+            "anchorIds": [
+              "p-975927",
+              "p-976512",
+              "p-977651"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Describes the social phenomenon of counterfeit intellectual pursuits and sophistry in degenerate cities.",
+            "anchorIds": [
+              "p-975927",
+              "p-977651"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Deducing from the madness of the public and the danger of destruction, Socrates argues why the few uncorrupted philosophers must withdraw behind a wall to live quietly and keep pure (p-978272, p-980154).",
+            "anchorIds": [
+              "p-978272",
+              "p-980154"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-4",
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "A narrow tactical and ethical stance specifically for the small, exceptional remnant of true philosophers trapped in corrupt societies.",
+            "anchorIds": [
+              "p-978272"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Socrates synthesizes the findings on corruption and withdrawal into a general political diagnosis: no existing constitution is adequate to the philosophic nature, causing it to degenerate like an alien seed (p-980766).",
+            "anchorIds": [
+              "p-980766"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5",
+              "n-32-7"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Encompasses all existing contemporary forms of political governance and their relation to the philosophic character.",
+            "anchorIds": [
+              "p-980766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Critiques contemporary educational practice and argues for a restructured lifespan curriculum where philosophical dialectic is deferred to intellectual maturity rather than early youth (p-982910, p-983785).",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-8"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Sets a normative curricular standard for the education of philosophers over human life stages.",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "Argues that popular hostility towards philosophy will vanish if the multitude is gently presented with authentic philosophers whose minds are fixed on eternal and divine order rather than petty rivalries (p-987917, p-989214, p-989720), drawing directly on the definition of authentic philosophical contemplation (n-32-2) and the distinction from pretenders (n-32-6).",
+            "anchorIds": [
+              "p-987917",
+              "p-989214",
+              "p-989720"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2",
+              "n-32-6"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Addresses the general disposition and potential reconciliation between the populace and authentic philosophical governance.",
+            "anchorIds": [
+              "p-987917",
+              "p-989720"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Revisiting the feasibility of the philosopher-king (p-986343, p-991184, p-994473), Socrates combines the necessity of compulsion (n-30-4) with the possibility of winning over the city (n-33-2), showing that a single philosopher-ruler wiping the slate clean is difficult but not impossible.",
+            "anchorIds": [
+              "p-986343",
+              "p-991184",
+              "p-994473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-4",
+              "n-33-2"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Asserts a political possibility theorem for realizing ideal states in human history.",
+            "anchorIds": [
+              "p-986343",
+              "p-994473"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates introduces the Idea of the Good as the highest object of knowledge (megiston mathema), without which virtues and possessions are useless (p-1001463, p-1003684, p-1004174). It builds on the prerequisite that guardians must know eternal truth (n-32-1) and elevates it to its teleological summit.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1003684",
+              "p-1004174"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 9.5,
+            "rationale": "Characterizes the supreme ontological and epistemological principle upon which all other knowledge, utility, and virtue depend.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1004174"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Develops a systematic metaphysical analogy: just as the sun illuminates the visible world and causes vision/growth, the Idea of the Good causes truth, intelligibility, and essence in the intelligible realm (p-1010240, p-1011533, p-1012839).",
+            "anchorIds": [
+              "p-1010240",
+              "p-1011533",
+              "p-1012839"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-4"
+            ]
+          },
+          "generality": {
+            "value": 9.5,
+            "rationale": "Spans the totality of reality across visible and intelligible cosmos, establishing their unifying source.",
+            "anchorIds": [
+              "p-1010240",
+              "p-1012839"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.5,
+            "rationale": "Socrates sets out the Divided Line (p-1014039, p-1015203, p-1017137) to formalize the proportion between the visible and intelligible realms established in the Sun analogy, dividing each into two subsections according to clearness and obscurity.",
+            "anchorIds": [
+              "p-1014039",
+              "p-1015203",
+              "p-1017137"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-5"
+            ]
+          },
+          "generality": {
+            "value": 9,
+            "rationale": "A comprehensive epistemological and ontological model mapping all objects of cognition and their corresponding levels of reality.",
+            "anchorIds": [
+              "p-1014039",
+              "p-1015203"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Explains the higher intelligible subsection of the Divided Line: dialectic treats hypotheses as stepping stones to ascend to an unhypothetical first principle and then descends purely through ideas (p-1017742, p-1017669).",
+            "anchorIds": [
+              "p-1017742",
+              "p-1017669"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Formulates the universal operational method of dialectical reasoning across all intelligible ideas.",
+            "anchorIds": [
+              "p-1017742"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Glaucon reformulates Socrates' distinction, contrasting dialectic's direct knowledge with the subordinate mathematical arts that depend on unexamined hypotheses and do not reach the first principle (p-1018396, p-1018361).",
+            "anchorIds": [
+              "p-1018396",
+              "p-1018361"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-1"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "Applies the Divided Line's intelligible distinction specifically to geometry, mathematics, and dialectic.",
+            "anchorIds": [
+              "p-1018396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.5,
+            "rationale": "Socrates establishes the four psychic faculties corresponding to the four segments of the Line: reason (noesis), understanding (dianoia), faith (pistis), and perception of shadows/imagination (eikasia), scaled by clearness and truth (p-1019319, p-1019237).",
+            "anchorIds": [
+              "p-1019319",
+              "p-1019237"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6",
+              "n-34-2"
+            ]
+          },
+          "generality": {
+            "value": 9,
+            "rationale": "Defines the full classification of cognitive capacities across all human intellectual and perceptual experience.",
+            "anchorIds": [
+              "p-1019319"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A brief interlocutory acceptance where Glaucon assents to the fourfold schema of faculties laid down by Socrates (p-1019743).",
+            "anchorIds": [
+              "p-1019743"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "A specific conversational agreement by an interlocutor to a proposed categorization in the dialogue.",
+            "anchorIds": [
+              "p-1019743"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates directly presents a figurative narrative (the cave allegory, chained prisoners, shadows, puppeteers) to depict unenlightened human existence (p-1019944, p-1020773, p-1021956). As an introduced image/parable, its immediate inferential depth is modest.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1020773",
+              "p-1021956"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Presents a universal figure depicting the initial condition of all human knowledge and perception before education.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1021956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Traces the sequential stages of the released prisoner's upward journey, from dazzled vision and water reflections to celestial viewing and direct contemplation of the sun (p-1023476, p-1023851, p-1024333).",
+            "anchorIds": [
+              "p-1023476",
+              "p-1023851",
+              "p-1024333"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-1"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Depicts the stages of epistemic ascent from sensory particulars to direct insight into ultimate reality.",
+            "anchorIds": [
+              "p-1023476",
+              "p-1024333"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Socrates explicitly unites the Cave allegory with the Sun and Divided Line doctrines: the cave corresponds to the visible realm, the fire to the sun, and the ascent to the intellectual climb toward the Idea of the Good (p-1026827, p-1027792). This synthesizes earlier major doctrines.",
+            "anchorIds": [
+              "p-1026827",
+              "p-1027792"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-5",
+              "n-33-6",
+              "n-35-2"
+            ]
+          },
+          "generality": {
+            "value": 9,
+            "rationale": "Unifies the comprehensive metaphysical and psychological model of human enlightenment and reality.",
+            "anchorIds": [
+              "p-1026827"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.5,
+            "rationale": "From the allegorical ascent and the nature of the eye's turning, Socrates deduces a foundational theory of education: learning is not inserting sight into blind eyes, but turning the existing soul away from becoming toward being and the Good (p-1029815, p-1030048, p-1030513).",
+            "anchorIds": [
+              "p-1029815",
+              "p-1030048",
+              "p-1030513"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-3"
+            ]
+          },
+          "generality": {
+            "value": 8.5,
+            "rationale": "A general philosophy of education (periagoge / conversion) governing all pedagogical disciplines in the work.",
+            "anchorIds": [
+              "p-1030048",
+              "p-1030513"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7,
+            "rationale": "Combines the ascent to the Good (n-35-3) and the foundational political principle from Book IV that the legislator aims at the happiness of the whole state rather than any single class (n-27-2) to prove that philosophers must be compelled to descend back to govern the cave (p-1033301, p-1033624, p-1034256).",
+            "anchorIds": [
+              "p-1033301",
+              "p-1033624",
+              "p-1034256"
+            ],
+            "prerequisiteNodeIds": [
+              "n-27-2",
+              "n-35-3"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Defines the civic and moral obligation binding philosopher-rulers in the ideal state.",
+            "anchorIds": [
+              "p-1033624",
+              "p-1034256"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Wk-caqztGJqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 40176,
+    "candidatesTokenCount": 6534,
+    "totalTokenCount": 46710,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40176
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6534
+      }
+    ]
+  },
+  "durationMs": 31353,
+  "requestHash": "272cfcb67d1ea8fa8aeb64b4b013c630680b2bbffce629ee24f3879a278ec389"
+}

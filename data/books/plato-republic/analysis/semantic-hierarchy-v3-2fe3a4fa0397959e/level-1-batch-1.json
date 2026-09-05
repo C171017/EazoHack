@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-10-4",
+          "n-17-3",
+          "n-36-4",
+          "n-36-5"
+        ],
+        "label": "Curricular Stages and Lifespan",
+        "summary": "These texts examine the staged curriculum of guardians across life, detailing physical preparation, the proper timing and dangers of dialectic, periods of practical civic duty, and the modern interpretation of lifelong self-education.",
+        "rationale": "All four entries address the developmental timeline, specific age milestones, and ethical cautions of education spanning youth to mature governance."
+      },
+      {
+        "childIds": [
+          "n-34-4",
+          "n-35-2",
+          "n-35-3",
+          "n-35-4",
+          "n-35-5"
+        ],
+        "label": "The Cave and Soul's Conversion",
+        "summary": "Covering the allegory of the cave, these passages describe the assent to cognitive schemas, the ascent to the sun representing the Good, the turning of the soul's inner vision toward true being, and the philosopher's obligatory return to rule.",
+        "rationale": "These entries form a continuous thematic block from the end of Book VI into Book VII detailing the cave allegory, enlightenment, and political obligation."
+      },
+      {
+        "childIds": [
+          "n-35-6",
+          "n-35-7",
+          "n-36-1",
+          "n-36-2",
+          "n-36-3"
+        ],
+        "label": "Mathematical Propedeutic",
+        "summary": "This sequence defines the mathematical disciplines—arithmetic, plane and solid geometry, astronomy, and harmonics—designed to turn the soul away from sensible perception toward abstract being, culminating in dialectic as the coping-stone.",
+        "rationale": "These five entries constitute Socrates' dedicated curriculum of mathematical and dialectical sciences in Book VII."
+      },
+      {
+        "childIds": [
+          "n-36-6",
+          "n-37-6",
+          "n-37-8",
+          "n-38-1"
+        ],
+        "label": "Civic Regimes and Decay",
+        "summary": "These passages contrast the drastic founding mechanism of the ideal city with the internal decline of oligarchies, where the emergence of drone classes and armed paupers inevitably gives birth to democracy.",
+        "rationale": "Connects the practical founding of the philosophical city at the end of Book VII with the Book VIII analysis of economic stratification, political factions, and constitutional revolution."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "w1CcarW_NMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 10432,
+    "candidatesTokenCount": 575,
+    "totalTokenCount": 11007,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10432
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 575
+      }
+    ]
+  },
+  "durationMs": 5632,
+  "requestHash": "4a780a57d0c3a795440c4d1ed3dea8db57e9a1bd3298017fbab644422f72ff59"
+}

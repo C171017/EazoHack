@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-38-3",
+          "n-39-6",
+          "n-41-4",
+          "n-41-7"
+        ],
+        "label": "Socratic Psychological Inquiries",
+        "summary": "In dialogue passages from Books VIII through X, Socrates analyzes necessary and unnecessary desires, questions whether the cessation of pain constitutes genuine pleasure, divides engagement with instruments into using, making, and imitating, and asserts the soul's immortality.",
+        "rationale": "Gathers the direct Socratic dialogue leaves from Books VIII–X that address distinct philosophical inquiries regarding desire, pleasure, imitation, and the soul's immortality."
+      },
+      {
+        "childIds": [
+          "n-43-1",
+          "n-43-4",
+          "n-45-1",
+          "n-45-3"
+        ],
+        "label": "Aesthetics, Poetry, and Education",
+        "summary": "Editorial notes examine Plato's regulation of art, music, and poetry within education, emphasizing standards of simplicity, the division between civic and philosophical schooling, and the justification for poetic censorship.",
+        "rationale": "Combines editorial and paratextual analyses that focus specifically on Plato's pedagogical curriculum and strict censorship of music, poetry, and the arts."
+      },
+      {
+        "childIds": [
+          "n-43-3",
+          "n-44-1",
+          "n-44-3",
+          "n-44-4",
+          "n-45-5"
+        ],
+        "label": "Metaphysics, Theology, and Soul",
+        "summary": "Commentary entries outline core Platonic metaphysical concepts, including the ascent of dialectic over eristic, the immutable perfection of God, the Idea of the Good, the harmony of justice, and the tripartite psychology and transmigration of the soul.",
+        "rationale": "Brings together commentary entries outlining Plato's core theoretical philosophy: theology, metaphysics, dialectical method, justice, and psychology."
+      },
+      {
+        "childIds": [
+          "n-43-2",
+          "n-44-2",
+          "n-46-1",
+          "n-46-2",
+          "n-46-3"
+        ],
+        "label": "Constitutions and the State",
+        "summary": "Editorial commentary synthesizes Plato's political theories, exploring the decline of regimes from aristocracy to tyranny, the synthesis of Spartan and Athenian customs, and radical proposals such as communal property and philosopher-rulers.",
+        "rationale": "Clusters the editorial commentary leaves that examine constitutional forms, civic governance, Spartan-Athenian precedents, and ideal communal institutions."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "_1CcasPHA52AktwPl_yY2Q8",
+  "usage": {
+    "promptTokenCount": 17585,
+    "candidatesTokenCount": 646,
+    "totalTokenCount": 18231,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 17585
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 646
+      }
+    ]
+  },
+  "durationMs": 5762,
+  "requestHash": "a9563dd0057ef5350c8702a47f7a0a1a91d682461a15244df880f983d8c1ff70"
+}

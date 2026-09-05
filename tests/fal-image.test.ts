@@ -89,7 +89,7 @@ test('mixed text/image dispatch and retry retain each route provider identity', 
     ? createFalImageProvider({key:()=> 'key',fetch:async()=> failImage ? Response.json({}, {status:429}) : Response.json(response())})
     : {async run(selection: typeof fixtureSelection, ctx:typeof context) {
       const artifact=makeMockArtifact('interactive_ui',selection,ctx.routeRunId);
-      artifact.provider='inco';artifact.provenance={provider:'inco',label:'Test Inco'};
+      artifact.provider='vertex_ai';artifact.provenance={provider:'vertex_ai',label:'Test Vertex AI'};
       return {ok:true as const,payload:artifact,provenance:artifact.provenance,timing:{startedAt:new Date().toISOString(),durationMs:0}};
     }} };
   const first=await dispatchRoutePlan(request,options);
@@ -99,7 +99,7 @@ test('mixed text/image dispatch and retry retain each route provider identity', 
   const retried=await retryRoutePlan(request,first,['generated_image'],options);
   assert.equal(retried.artifacts.length,2);
   assert.equal(retried.artifacts[0].id,first.artifacts[0].id);
-  assert.deepEqual(retried.artifacts.map(a=>a.provider),['inco','fal']);
+  assert.deepEqual(retried.artifacts.map(a=>a.provider),['vertex_ai','fal']);
   const onlyImage=await dispatchRoutePlan({...request,plan:createRoutePlan({selection:fixtureSelection,routes:['generated_image'],mode:'real'})},options);
   assert.equal(onlyImage.provider,'fal');
 });

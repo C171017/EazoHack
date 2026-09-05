@@ -1,0 +1,562 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-1-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct bibliographic statement and title page matter presenting Plato's Republic in Jowett's translation, containing no argumentative inference (anchor 0).",
+            "anchorIds": [
+              "p-161",
+              "p-209",
+              "p-418"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Covers only the specific bibliographic edition and title of this single volume (anchor 0).",
+            "anchorIds": [
+              "p-161",
+              "p-209",
+              "p-418"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct dedication statement from the translator to his former pupils without inferential reasoning (anchor 0).",
+            "anchorIds": [
+              "p-548"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Refers to a specific named group of individuals (Jowett's former pupils at Balliol College and Oxford over forty-six years) (anchor 1).",
+            "anchorIds": [
+              "p-548"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct statement of editorial acknowledgments to named assistants without logical deduction (anchor 0).",
+            "anchorIds": [
+              "p-784"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Specifies named collaborators (Knight, Fletcher, Mackail) and their specific editorial contributions (anchor 1).",
+            "anchorIds": [
+              "p-784"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct factual assertion regarding the empirical extent of textual and introductory revisions across the volume (anchor 0).",
+            "anchorIds": [
+              "p-1470"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Applies strictly to this particular physical text and translation, slightly broader than a single line item (anchor 0).",
+            "anchorIds": [
+              "p-1470"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "An immediate practical inference from the large extent of revisions (n-2-2) to the practical arrangement of an exchange mechanism for owners of the 1881 edition (anchor 1).",
+            "anchorIds": [
+              "p-1580",
+              "p-1470"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-2"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Pertains to a specific bounded collection of book buyers who purchased the 1881 edition of Jowett's Republic (anchor 1 to anchor 2).",
+            "anchorIds": [
+              "p-1580"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct declaration of future authorial intention without argumentative steps (anchor 0).",
+            "anchorIds": [
+              "p-2244"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Specific to Jowett's own planned publication of the remaining Platonic dialogues within a year (anchor 1).",
+            "anchorIds": [
+              "p-2244"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "An evaluative judgment directly characterizing the Republic's central status among Plato's works and its foundational role in philosophical history (anchor 1).",
+            "anchorIds": [
+              "p-2409",
+              "p-4608"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Makes a broad claim across the entire corpus of Platonic philosophy and the genesis of foundational sciences like logic and psychology (anchor 5).",
+            "anchorIds": [
+              "p-2409"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "An analytical overview drawing a direct structural synthesis of the overarching search for justice throughout the dialogue (anchor 1 to anchor 2).",
+            "anchorIds": [
+              "p-9220"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Applies across the whole compositional scope of the Republic as a single work and its trajectory (anchor 4 to anchor 5).",
+            "anchorIds": [
+              "p-9220"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Direct structural classification of the text of the Republic into five thematic parts based on textual content (anchor 1).",
+            "anchorIds": [
+              "p-11296"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies to the internal textual organization and subdivisions of the Republic as an entire text (anchor 4).",
+            "anchorIds": [
+              "p-11296"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Develops an inference contrasting two halves of the work to explain potential compositional history and literary inconsistencies (anchor 2).",
+            "anchorIds": [
+              "p-13021",
+              "p-15222"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.2,
+            "rationale": "Concerns the thematic structure and composition of the Republic, with illustrative analogies to early literature (anchor 4).",
+            "anchorIds": [
+              "p-13021",
+              "p-15222"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Synthesizes the competing interpretations of the dialogue's central subject, deducing that political justice and individual justice are inextricably united as soul and body (anchor 2 to anchor 3).",
+            "anchorIds": [
+              "p-16108"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Articulates a broad interpretive and philosophical principle regarding the identity of ethics and politics spanning human society and Platonic thought (anchor 6).",
+            "anchorIds": [
+              "p-16108"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Develops a local interpretative inference from the sequence of characters in Book I and II to historical stages of moral philosophy (anchor 2).",
+            "anchorIds": [
+              "p-33934",
+              "p-23695"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Pertains to the defined set of interlocutors in the Republic and how they typify stages of moral thought (anchor 4).",
+            "anchorIds": [
+              "p-33934"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Traces the shift in Socrates' role across books from an ironical interrogator to a constructive dogmatic theorist, justifying it through comparison with historical Socratic evidence (anchor 2).",
+            "anchorIds": [
+              "p-34602"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Covers the characterization and philosophical method of Socrates across the books of the Republic (anchor 3 to anchor 4).",
+            "anchorIds": [
+              "p-34602"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates tests traditional definitions with counterexamples (such as the mad friend) and infers their philosophical inadequacy (anchor 2).",
+            "anchorIds": [
+              "p-43182",
+              "p-44042",
+              "p-47199"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Pertains to specific popular definitions of justice (paying debts, helping friends/harming enemies) in conventional Greek ethics (anchor 3).",
+            "anchorIds": [
+              "p-43182",
+              "p-47199"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Thrasymachus introduces his thesis by immediate deduction from how political rulers establish legislation to serve their own advantage (anchor 1).",
+            "anchorIds": [
+              "p-48756",
+              "p-51430",
+              "p-54675"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Proposes a general doctrine of political and moral realism across all forms of government (anchor 6).",
+            "anchorIds": [
+              "p-48756",
+              "p-51430"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Draws an analogy between justice and the arts, arguing that arts by definition seek the advantage of the subject rather than the practitioner, refuting Thrasymachus (anchor 2).",
+            "anchorIds": [
+              "p-50564",
+              "p-54675",
+              "p-57918"
+            ],
+            "prerequisiteNodeIds": [
+              "n-4-3"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Asserts a general principle governing all arts and crafts and their relationship to their subjects (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-50564",
+              "p-57918"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Infers that evil generates discord rather than power, demonstrating that even a band of robbers requires some internal justice to act effectively (anchor 2).",
+            "anchorIds": [
+              "p-55807",
+              "p-61326"
+            ],
+            "prerequisiteNodeIds": [
+              "n-4-3"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "A general principle on the self-defeating nature of pure injustice across any group or individual psyche (anchor 6).",
+            "anchorIds": [
+              "p-55807",
+              "p-61326"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Glaucon and Adeimantus formulate a demand by examining the limitations of Socrates' prior refutations and demanding a defense of justice in its intrinsic nature (anchor 1 to anchor 2).",
+            "anchorIds": [
+              "p-62348",
+              "p-69175"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Defines the scope of inquiry into the intrinsic moral value of justice versus its extrinsic consequences (anchor 5).",
+            "anchorIds": [
+              "p-62348",
+              "p-69175"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Glaucon develops the argument that justice originates in a compromise between suffering and doing evil, supported by the Gyges thought experiment (anchor 2).",
+            "anchorIds": [
+              "p-63705",
+              "p-64510",
+              "p-70000"
+            ],
+            "prerequisiteNodeIds": [
+              "n-4-3"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Presents a broad theory of human social compacts and psychological motivation regarding legal compliance (anchor 6).",
+            "anchorIds": [
+              "p-63705",
+              "p-70000"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Adeimantus gathers cultural and poetic evidence to show that ordinary endorsements of justice rest solely on external advantages and reputations (anchor 1 to anchor 2).",
+            "anchorIds": [
+              "p-65642",
+              "p-66716",
+              "p-69175"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Covers conventional religious and social teachings on virtue across Greek civilization (anchor 5).",
+            "anchorIds": [
+              "p-65642",
+              "p-66716"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Analyzes the brothers' challenge (n-4-7) and justifies the conceptual framing of ideals as ennobling standards that retain moral validity despite not being realized in common experience (anchor 2 to anchor 3).",
+            "anchorIds": [
+              "p-72757",
+              "p-73712"
+            ],
+            "prerequisiteNodeIds": [
+              "n-4-7"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Formulates a reusable ethical principle on the nature and educational function of moral ideals across human life (anchor 7).",
+            "anchorIds": [
+              "p-72757"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates proposes using the large-scale city as an enlarged model to discover justice before examining the smaller individual soul (anchor 2).",
+            "anchorIds": [
+              "p-76592",
+              "p-78325",
+              "p-79805"
+            ],
+            "prerequisiteNodeIds": [
+              "n-4-7"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Establishes a structural analogy between civil society and individual moral psychology (anchor 5 to anchor 6).",
+            "anchorIds": [
+              "p-76592",
+              "p-78325"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Deduces the genesis and expansion of the state from individual bodily needs and the principle of the division of labor based on diverse natural aptitudes (anchor 2 to anchor 3).",
+            "anchorIds": [
+              "p-80472",
+              "p-88474",
+              "p-89907"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-2"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Posits general economic and anthropological principles on the origin of human association and occupational specialization (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-80472",
+              "p-89907"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Traces how introducing luxury necessitates territorial expansion and war, which by division of labor (n-5-3) requires a distinct guardian class combining spirited courage and philosophic gentleness (anchor 3).",
+            "anchorIds": [
+              "p-81950",
+              "p-84148"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Applies to the political and military evolution of the luxurious state and the defined class of civic guardians (anchor 5).",
+            "anchorIds": [
+              "p-81950",
+              "p-84148"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "u06capj9OoyOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 49416,
+    "candidatesTokenCount": 4637,
+    "totalTokenCount": 54053,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49416
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4637
+      }
+    ]
+  },
+  "durationMs": 27652,
+  "requestHash": "9a3bc410084a672cff3f107605bc3479f35123d92c2a239ad2c5df6bd7883636"
+}

@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-27-2",
+          "n-27-3",
+          "n-27-5",
+          "n-29-3"
+        ],
+        "label": "Civic Order and Guardianship",
+        "summary": "Socrates establishes foundational principles for the just city, emphasizing the collective happiness of the entire community through proportionate class functioning, the preservation of education and music against innovation, the unifying civic harmony of temperance, and the assignment of public duties according to true capacity rather than bodily distinctions.",
+        "rationale": "These Book IV and V passages all explore structural governance, civic harmony, and educational foundations designed to maintain the integrity of the guardian class and the overall state."
+      },
+      {
+        "childIds": [
+          "n-28-3",
+          "n-38-3"
+        ],
+        "label": "Structure of the Soul and Desire",
+        "summary": "Socrates analyzes internal psychology by distinguishing the rational, spirited, and appetitive elements of the soul, while further categorizing appetites into necessary, natural desires versus dispensable, corruptive indulgences.",
+        "rationale": "Both entries address the internal division of the human psyche, examining the faculties that govern motivation and the ethical hierarchy of human desires."
+      },
+      {
+        "childIds": [
+          "n-31-2",
+          "n-31-4",
+          "n-31-5",
+          "n-31-7"
+        ],
+        "label": "Epistemology: Knowledge vs Opinion",
+        "summary": "Socrates distinguishes philosophers who grasp eternal, unchanging Forms from lovers of sights and sounds who focus on mutable particulars. By mapping knowledge to being and ignorance to non-being, he defines opinion as a distinct, intermediate faculty concerned with fluctuating phenomena.",
+        "rationale": "A tightly clustered sequence from Book V setting out the epistemological boundary separating genuine philosophical knowledge from ordinary opinion."
+      },
+      {
+        "childIds": [
+          "n-41-4",
+          "n-42-1",
+          "n-42-4",
+          "n-42-5"
+        ],
+        "label": "Book X: Soul, Fate, and Mimesis",
+        "summary": "Socrates demonstrates the deficiency of imitation relative to making and using, argues for the immortality of the soul on the basis that moral vice cannot extinguish it, and recounts the Myth of Er detailing the post-mortem judgement of deeds and the cosmic mechanism of Necessity's spindle.",
+        "rationale": "These entries form a continuous thematic movement in Book X, linking the critique of imitative arts to metaphysical proofs of the soul's survival and its cosmic afterlife."
+      },
+      {
+        "childIds": [
+          "n-44-2",
+          "n-44-4",
+          "n-45-3",
+          "n-45-5"
+        ],
+        "label": "Editorial Synopses of Themes",
+        "summary": "Scholarly commentary synthesizes Plato's principal frameworks across the Republic, tracking the degenerative succession of civic constitutions matched to psychic disorders, the central role of justice as organic harmony, the rationale for censoring poetry, and the comprehensive development of Platonic psychology and eschatology.",
+        "rationale": "These nodes belong to the editorial apparatus, each offering an analytical overview comparing central dialogues, structural arguments, and interpretive traditions."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7lGcauvFAcWDncoP6suG-AU",
+  "usage": {
+    "promptTokenCount": 14669,
+    "candidatesTokenCount": 738,
+    "totalTokenCount": 15407,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14669
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 738
+      }
+    ]
+  },
+  "durationMs": 6877,
+  "requestHash": "2922f40239cbebed8920b82037160224e2d0f48dab3b8887eac132e7e71066e3"
+}

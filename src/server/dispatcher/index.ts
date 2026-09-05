@@ -1,3 +1,4 @@
+import { withDevModels } from "../providers/dev-models";
 import { z } from "zod";
 import {
   ArtifactSchema,
@@ -13,7 +14,7 @@ import {
   type RouteRun,
   type Selection,
 } from "../../shared/schemas";
-import { dispatchProvider, createProvider, type Provider, type ProviderError, type ProviderMode } from "../providers";
+import { dispatchProvider, routeProviderName, createProvider, type Provider, type ProviderError, type ProviderMode } from "../providers";
 import { validateDependencies } from "../routing";
 import { parsePassageExplorer } from '../../shared/interactive-panel';
 
@@ -27,7 +28,7 @@ export type DispatchRequest = z.input<typeof DispatchRequestSchema>;
 export type DispatchResult = {
   runs: RouteRun[];
   artifacts: Artifact[];
-  provider: "mock" | "vertex_ai" | "inco" | "fal" | "mixed" | "not_configured";
+  provider: "mock" | "vertex_ai" | "inco" | "fal" | "bfl" | "mixed" | "not_configured";
   requestSnapshot: { selection: Selection; plan: RoutePlan };
 };
 export interface DispatchOptions {
@@ -76,7 +77,7 @@ function validateArtifact(artifact: unknown, selection: Selection, run: RouteRun
 }
 
 export async function dispatchRoutePlan(input: DispatchRequest, options: DispatchOptions = {}): Promise<DispatchResult> {
-  return execute(input, options);
+  return withDevModels(() => execute(input, options));
 }
 
 /** Retry only explicit failed/cancelled routes; keep completed sibling artifacts intact. */
@@ -86,7 +87,7 @@ export async function retryRoutePlan(
   retryKinds: RouteKind[],
   options: DispatchOptions = {},
 ): Promise<DispatchResult> {
-  return execute(input, options, { previous, retryKinds });
+  return withDevModels(() => execute(input, options, { previous, retryKinds }));
 }
 
 async function execute(
@@ -181,7 +182,7 @@ async function execute(
         } else {
           const artifact = validateArtifact(result.payload, selection, run);
           if (mode === "mock" && (result.provenance.provider !== "mock" || artifact.provider !== "mock")) throw new Error("Mock mode returned non-mock output.");
-          if (mode === "real" && (result.provenance.provider !== (kind === "generated_image" ? "fal" : "inco") || artifact.provider !== result.provenance.provider || artifact.provenance.provider !== result.provenance.provider)) throw new Error("Real mode returned output from the wrong provider.");
+          if (mode === "real" && (result.provenance.provider !== routeProviderName(kind) || artifact.provider !== result.provenance.provider || artifact.provenance.provider !== result.provenance.provider)) throw new Error("Real mode returned output from the wrong provider.");
           artifacts.push(artifact);
           run.artifactIds = [artifact.id];
           run.status = "complete";

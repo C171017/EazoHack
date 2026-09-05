@@ -41,4 +41,4 @@ export type TextChunk = { id: string; start: number; end: number; passages: Pass
 export type Candidate = Extraction['nodes'][number] & { id: string; chunkId: string };
 export type CandidateEdge = { id: string; source: string; target: string; type: typeof RELATIONS[number]; rationale: string; passageIds: string[] };
 export type ModelReply = { value: unknown; model: string; modelVersion: string; responseId?: string; usage: Record<string, number>; durationMs: number; requestHash?: string };
-export type Generate = (system: string, prompt: string, schema: z.ZodType, maxOutputTokens?: number) => Promise<ModelReply>;
+export type Generate = (system: string, prompt: string, schema: z.ZodType, maxOutputTokens?: number, options?: { signal?: AbortSignal; timeoutMs?: number }) => Promise<ModelReply>;

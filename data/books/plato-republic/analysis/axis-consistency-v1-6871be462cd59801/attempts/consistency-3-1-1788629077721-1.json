@@ -1,0 +1,560 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-6-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Socrates introduces the noble lie (the Myth of the Metals) as a necessary educational and political fiction to establish civic brotherhood and legitimate social stratification while allowing merit-based transposition of ranks. Because it directly implements the principle of state-regulated medicinal lying established in n-5-6 (depth 3.4) and serves the division of labor from n-5-3 (depth 2.5), incorporating the prerequisite chain from n-5-6 requires a depth of at least 3.4, calibrated here to 3.6 (between anchor 3 and anchor 4: a developed argument applying the medicinal falsehood).",
+            "anchorIds": [
+              "p-117557",
+              "p-128607",
+              "p-130805"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3",
+              "n-5-6"
+            ]
+          },
+          "generality": {
+            "value": 4.7,
+            "rationale": "Defines social stratification, civic myth, and meritocratic mobility for the classes in the ideal commonwealth.",
+            "anchorIds": [
+              "p-117557",
+              "p-128607"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "In the passage, Socrates arranges the mathematical curriculum—plane geometry, solid geometry, astronomy, and harmonics—justifying each discipline by its capacity to draw the soul toward being and away from sensory particulars. Because it directly builds upon and implements the soul-turning function of arithmetic established in n-10-1 (depth 6.4), the total reasoning depth must incorporate the prior chain of n-10-1, placing it at 6.6 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies strictly to the sequence and pedagogical purpose of mathematical disciplines within the higher educational curriculum of the guardians (anchor 4).",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Synthesizes the educational curriculum—including dialectic (n-10-3, depth 6.0) and the civic descent back into the den (n-9-6, depth 6.4)—into a comprehensive temporal schedule from childhood to age fifty. Because its prerequisite n-9-6 is calibrated at 6.4, incorporating that prior chain raises n-10-4 to 6.6 (anchor 6 to anchor 7: linked argument synthesizing major institutional and educational results).",
+            "anchorIds": [
+              "p-261123",
+              "p-263322",
+              "p-265520"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-6",
+              "n-10-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Restricted to the specific institutional lifecycle and testing schedule of the guardian-ruler class in the Republic (p-261123, p-263322, p-265520).",
+            "anchorIds": [
+              "p-261123",
+              "p-263322",
+              "p-265520"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.4,
+            "rationale": "Deduces the first degenerate form (timocracy) from faction within the ideal state and illustrates the matching character using the state-soul correspondence. Because it depends directly on n-11-1 (depth 6.2), incorporating the prior chain through n-28-6 and n-11-1 places this developed inference at 6.4 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-286551",
+              "p-289058",
+              "p-289972"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Focuses on the specific constitution and character type of timocracy (the ambitious, honour-loving state and individual; p-286551, p-289058, p-289972).",
+            "anchorIds": [
+              "p-286551",
+              "p-289058",
+              "p-289972"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "In p-315664, the commentator synthesizes the entire sequence of political declines into a unified ethical principle of degradation from the rule of reason down to a tyrannical monster passion. Because the dialogue's own sequence of constitutional regimes (n-11-2 through n-11-5) is treated in commentary, this synthesis links those regime analyses. However, to avoid cyclic or inflated prerequisite chains where the commentary synthesizes the overarching thesis of n-11-1 (depth 6.2) while referencing the individual stages, its direct prerequisite is n-11-1; it is calibrated at 6.2 (anchor 6: linked argument synthesizing established results).",
+            "anchorIds": [
+              "p-315664"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates an encompassing principle governing the ethical degeneration of political systems and human souls under the influence of excess (p-315664).",
+            "anchorIds": [
+              "p-315664"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "In p-396889, p-400904, and p-403238, the commentary responds directly to Plato's critique of poetry (n-14-1, depth 5.6), constructing an argument that art mediates between sense and ideas, and that feeling can be enlisted in service of reason and divine truth. Incorporating the prerequisite chain from n-14-1 (depth 5.6) requires depth >= 5.6, calibrated here to 5.8 (anchor 5 to anchor 6: a result using and responding to an earlier established argument).",
+            "anchorIds": [
+              "p-396889",
+              "p-400904",
+              "p-403238"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-1"
+            ]
+          },
+          "generality": {
+            "value": 6.7,
+            "rationale": "Asserts a broad aesthetic principle defining the proper cultural and spiritual role of art and poetry across civilized societies.",
+            "anchorIds": [
+              "p-396889",
+              "p-400904",
+              "p-403238"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "In p-424275, the commentary synthesizes Plato's repeated disclaimers across the Republic and Laws to conclude that the ideal state functions as an impossible synthesis and transcendent pattern rather than an earthly reality. Because it depends directly on the celestial pattern established in Book IX (n-12-7, depth 6.4) as well as the dual nature analysis (n-14-5, depth 2.3), incorporating the prior chain from n-12-7 requires a depth of at least 6.4, calibrated here to 6.6 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-424275"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-7",
+              "n-14-5"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Defines the ontological and political status of political ideals in Platonic thought and political philosophy broadly.",
+            "anchorIds": [
+              "p-424275"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "Reflects upon Plato's lifelong scheme of education for rulers, advancing an inferential defense and practical critique of how modern self-education must adapt that theoretical model. It builds directly upon the guardian lifespan scheme (n-10-4, depth 6.6) and education as soul-turning (n-16-6, depth 6.4). Incorporating the higher prerequisite chain (n-10-4, depth 6.6) places this assessment at 6.8 (anchor 6 to anchor 7: linked argument synthesizing established results).",
+            "anchorIds": [
+              "p-511362",
+              "p-512253",
+              "p-513793"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-4",
+              "n-16-6"
+            ]
+          },
+          "generality": {
+            "value": 6.7,
+            "rationale": "Proposes a broad ethical and psychological standard for human development and self-cultivation throughout adult life.",
+            "anchorIds": [
+              "p-511362",
+              "p-512253",
+              "p-513793"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "Socrates establishes the second theological canon (God is unchangeable and true) by deducing that since God is already perfect, any change would be for the worse, and God has no motive to deceive mortals. Because this builds directly upon the first theological standard (n-23-5, depth 2.7), incorporating that prerequisite chain places it at 2.9 (anchor 2 to anchor 3: developed local inference with its justification).",
+            "anchorIds": [
+              "p-702060",
+              "p-706026",
+              "p-706291"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-5"
+            ]
+          },
+          "generality": {
+            "value": 7.4,
+            "rationale": "A universal theological principle asserting divine immutability and absolute truthfulness across all divine representation.",
+            "anchorIds": [
+              "p-702060",
+              "p-706026"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Socrates derives the ban on complex instruments (many-stringed triangular harps and flutes) directly from the requirement for simple, austere Dorian and Phrygian harmonies. Because it depends directly on n-25-1 (depth 3.4), incorporating this prerequisite chain requires depth >= 3.4, calibrated here to 3.6 (between anchor 3 and anchor 4: short sequence of local inferences).",
+            "anchorIds": [
+              "p-744041",
+              "p-744308",
+              "p-744598"
+            ],
+            "prerequisiteNodeIds": [
+              "n-25-1"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Restricted to allowable musical instrumentation (lyre, harp, pipe) in the republic.",
+            "anchorIds": [
+              "p-744041",
+              "p-744308",
+              "p-744598"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Following the corruption of noble philosophic natures established in n-32-5 (depth 5.6), Socrates infers what happens next: philosophy is left desolate, and unworthy artisans invade the discipline, producing base sophisms. Incorporating the prerequisite chain from n-32-5 (depth 5.6) requires depth >= 5.6, calibrated here to 5.8 (anchor 5 to anchor 6: a result continuing an established argument).",
+            "anchorIds": [
+              "p-975927",
+              "p-976512",
+              "p-977651"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Describes the social phenomenon of counterfeit intellectual pursuits and sophistry in degenerate cities.",
+            "anchorIds": [
+              "p-975927",
+              "p-977651"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Deducing from the madness of the public and the danger of destruction, Socrates argues why the few uncorrupted philosophers must withdraw behind a wall to live quietly and keep pure. It builds directly upon the Parable of the Ship (n-32-4, depth 5.6) and the corruption of gifted souls (n-32-5, depth 5.6). Incorporating this prerequisite chain places it at 5.8 (anchor 5 to anchor 6).",
+            "anchorIds": [
+              "p-978272",
+              "p-980154"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-4",
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "A narrow tactical and ethical stance specifically for the small, exceptional remnant of true philosophers trapped in corrupt societies.",
+            "anchorIds": [
+              "p-978272"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Socrates synthesizes the findings on corruption (n-32-5, depth 5.6) and the withdrawal of the remnant (n-32-7, depth 5.8) into a general political diagnosis: no existing constitution is adequate to the philosophic nature, causing it to degenerate like an exotic seed in foreign soil. Incorporating n-32-7 (depth 5.8) places this synthesis at 6.0 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-980766"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5",
+              "n-32-7"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Encompasses all existing contemporary forms of political governance and their relation to the philosophic character.",
+            "anchorIds": [
+              "p-980766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "Revisiting the feasibility of the philosopher-king, Socrates combines the necessity of compulsion (n-30-4, depth 5.0) with the possibility of winning over the city (n-33-2, depth 6.0), demonstrating that establishing the ideal state is difficult but not impossible. Incorporating the prerequisite chain from n-33-2 (depth 6.0) requires depth >= 6.0, calibrated here to 6.2 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-986343",
+              "p-991184",
+              "p-994473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-4",
+              "n-33-2"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Asserts a political possibility theorem for realizing ideal states in human history.",
+            "anchorIds": [
+              "p-986343",
+              "p-994473"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Socrates sets out the Divided Line to formalize the proportion between the visible and intelligible realms established in the Analogy of the Sun (n-33-5, depth 5.6), dividing each into two subsections according to clearness and obscurity. Incorporating the prerequisite chain from n-33-5 (depth 5.6) requires depth >= 5.6, placing it at 5.8 (anchor 5 to anchor 6: a result using and extending an earlier established argument).",
+            "anchorIds": [
+              "p-1014039",
+              "p-1015203",
+              "p-1017137"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-5"
+            ]
+          },
+          "generality": {
+            "value": 9,
+            "rationale": "A comprehensive epistemological and ontological model mapping all objects of cognition and their corresponding levels of reality.",
+            "anchorIds": [
+              "p-1014039",
+              "p-1015203"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.1,
+            "rationale": "Socrates corrects the curricular order of higher education, deducing that solid geometry (three dimensions in themselves) must logically precede astronomy (solids in revolution), continuing the systematic progression of sciences that compel the soul toward true being. Because it builds directly upon the philosophical aim of geometry established in n-35-7 (depth 6.9), incorporating that prerequisite chain places it at 7.1 (anchor 7: a synthesis of linked arguments).",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-7"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Governs the specific curriculum sequence and definition of solid geometry within the guardian education plan (p-1055885, p-1057503).",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.5,
+            "rationale": "Reasserts and justifies the foundational macro-micro correspondence that states do not arise from 'oak and rock' but from human characters. It depends on resuming the project of examining the four degenerate forms in n-37-1 (depth 6.3) as well as the original large letters method (n-22-6, depth 2.3). Incorporating the prior chain through n-37-1 (depth 6.3) places it at 6.5 (anchor 6 to anchor 7: linked argument combining established results).",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416",
+              "p-1094497"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-6",
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 7.8,
+            "rationale": "A structural sociological and psychological principle asserting that all political constitutions necessarily reflect the character dispositions of their citizens (p-1094078, p-1094416).",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.5,
+            "rationale": "Explains the downfall of the ideal state through an elaborate deduction: all generated things decay, senses fail to calculate the geometrical number of births, inferior guardians neglect education and mix the metals, producing class warfare and property division. Because it directly implements the resume of the regimes in n-37-1 (depth 6.3) and the Myth of the Metals from n-26-4 (depth 3.8), incorporating the prior chain from n-37-1 requires depth >= 6.3, calibrated here to 6.5 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-1097088",
+              "p-1099283",
+              "p-1101246"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-4",
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Frames the universal cosmological law of generation and decay as applied specifically to the collapse of the ideal aristocratic state into timocracy (p-1097088, p-1101246).",
+            "anchorIds": [
+              "p-1097088",
+              "p-1101246"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.7,
+            "rationale": "Concludes the transition from oligarchy by defining the constitutional birth and characteristics of democracy: the victorious poor revolt, kill or exile opponents, and institute equal civic power with offices assigned by lot. Because it depends directly on the revolution from oligarchy to democracy in n-37-8 (depth 6.5), incorporating this prerequisite chain requires depth >= 6.5, calibrated here to 6.7 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-1126863",
+              "p-1127144",
+              "p-1126806"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-8"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Defines the nature, governing mechanism, and foundational civic compact of democratic constitutions (p-1126863, p-1127144).",
+            "anchorIds": [
+              "p-1126863",
+              "p-1127144"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Synthesizes the division of desires (n-38-3, depth 3.7) with the state-soul correspondence (n-37-2, depth 6.5) and the oligarchic character (n-37-7, depth 6.4) to portray the democratic individual, whose soul treats all desires as equal. Incorporating the prerequisite chain through n-37-2 (depth 6.5) requires depth >= 6.5, calibrated here to 6.6 (anchor 6 to anchor 7: linked argument combining established results).",
+            "anchorIds": [
+              "p-1133716",
+              "p-1137553",
+              "p-1138837"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2",
+              "n-37-7",
+              "n-38-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Defines the specific psychological character, internal lack of hierarchy, and way of life of the democratic individual (p-1137553, p-1138837).",
+            "anchorIds": [
+              "p-1137553",
+              "p-1138837"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Deduces the triadic internal class structure of democracy—drones/demagogues, wealthy traders, and working masses—by combining the drone concept (n-37-6, depth 6.3) with democratic conditions (n-38-1, depth 6.7). Because it depends directly on n-38-1 (depth 6.7), incorporating that prerequisite chain places it at 6.9 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147548",
+              "p-1147990"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-6",
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Provides a comprehensive class taxonomy applicable to democratic political societies (p-1146512, p-1147990).",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147990"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "OVCcarbSEcuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 134092,
+    "candidatesTokenCount": 6389,
+    "totalTokenCount": 140481,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 134092
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6389
+      }
+    ]
+  },
+  "durationMs": 29049,
+  "requestHash": "18c1c7efe0c07dae7bd0dfa3545c3f4f87525ee829a77318103c9f23589ddb0a"
+}

@@ -6,7 +6,7 @@ import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type Orbi
 import { confinePan, fitEntries, screenWorld, mapObstacles } from './map-framing';
 import { MapGrid, ORIGIN } from './map-grid';
 import { TimelineControl } from './timeline-control';
-import { axisValue, axisRange } from '../../shared/book-axes';
+import { axisValue, axisRange, coordinateRating } from '../../shared/book-axes';
 import { AxisDetails } from './axis-details';
 import { UnplacedNotes } from './unplaced-notes';
 import { semanticWindow, toScreen, zoomCentered, zoomIntoGroup, zoomLevel } from './semantic-window';
@@ -98,7 +98,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
       const next=pinch
-        ?zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size)
+        ?zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size,graph.roots,readingProgress)
         :{...view,x:view.x-(event.shiftKey&&!event.deltaX?event.deltaY:event.deltaX)*unit,y:view.y-(event.shiftKey&&!event.deltaX?0:event.deltaY)*unit};
       latest.current={current:confinePan(next,latest.current.size),size};onViewChange(next);
     };
@@ -107,12 +107,12 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       const {current:view,size}=latest.current;
       gesture={view,size};
     };
-    const gestureChange=(event:Event)=>{event.preventDefault();if(!gesture)return;const scale=(event as Event&{scale:number}).scale;if(!Number.isFinite(scale)||scale<=0)return;const next=zoomCentered(gesture.view,gesture.view.zoom*scale,gesture.size);latest.current={current:confinePan(next,latest.current.size),size:gesture.size};onViewChange(next);};
+    const gestureChange=(event:Event)=>{event.preventDefault();if(!gesture)return;const scale=(event as Event&{scale:number}).scale;if(!Number.isFinite(scale)||scale<=0)return;const next=zoomCentered(gesture.view,gesture.view.zoom*scale,gesture.size,graph.roots,readingProgress);latest.current={current:confinePan(next,latest.current.size),size:gesture.size};onViewChange(next);};
     const gestureEnd=(event:Event)=>{event.preventDefault();gesture=null;};
     element.addEventListener('wheel',wheel,{passive:false});
     element.addEventListener('gesturestart',gestureStart,{passive:false});element.addEventListener('gesturechange',gestureChange,{passive:false});element.addEventListener('gestureend',gestureEnd,{passive:false});
     return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);};
-  },[onViewChange]);
+  },[onViewChange,graph.roots,readingProgress]);
   const cancelMotion=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
   const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch){setSourceActivation(null);if(patch.selectedNodeId)setHeatSelection(null);}cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:confinePan(next,latest.current.size)};onViewChange(next);};
   function activateLeaf(id:string) {
@@ -120,8 +120,9 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     setSourceActivation({id,ticket:++sourceTicket.current});
   }
   function settle(from:MapView,target:Pick<MapView,'projection'|'yaw'|'pitch'>) {
-    cancelMotion();
-    const finish=fitEntries(windowed.nodes,{...from,...target,...confineCamera(target)},size,readingProgress);
+    cancelMotion();navigation.current?.abort();setNavigating(false);
+    // Rotation must not turn a local subtree fit into the new zoom-out limit.
+    const finish={...from,...target,...confineCamera(target)};
     const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(finish);return;}
     let start:number|undefined;const animate=(now:number)=>{
@@ -138,7 +139,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     if(target?.projection==='xy'&&d.view.projection==='xy'&&Math.abs(d.motion.raw.pitch-d.view.pitch)<1e-8)target.yaw=d.motion.raw.yaw;
     if(target)settle(d.latest,target);
   }
-  function zoom(factor:number){const {current:view,size}=latest.current;change(zoomCentered(view,view.zoom*factor,size));}
+  function zoom(factor:number){const {current:view,size}=latest.current;change(zoomCentered(view,view.zoom*factor,size,graph.roots,readingProgress));}
   async function openCluster(node:MapEntry) {
     navigation.current?.abort();const controller=new AbortController();navigation.current=controller;
     cancelMotion();setNavigationError(null);setNavigating(true);
@@ -230,7 +231,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
         onPointerUp={e=>{if(drag.current?.id!==e.pointerId)return;finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
         <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to zoom through the saved hierarchy. Activate a group to zoom into it; zoom out to return to broader groups. In flat views, scroll with two fingers or drag to pan; mouse wheel scrolls vertically and Shift-wheel horizontally. Alt-drag or Alt-arrow keys orbit; in 3D, drag to orbit within the three grid fences. Arrow keys pan flat views. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#ADB5C0"/></marker></defs>
-        <MapGrid size={size} projection={current.projection} screen={screen} modern={!!graph.axisVersion} readingProgress={readingProgress}/>
+        <MapGrid size={size} projection={current.projection} screen={screen} axisVersion={graph.axisVersion} readingProgress={readingProgress}/>
         {heat&&<g data-heat-targets>{heatTargets.map(point=>{
           const p=toScreen(point.leaf.position,current,size,[0,1],readingProgress);
           if(p.x<0||p.y<0||p.x>size.width||p.y>size.height)return null;
@@ -261,9 +262,9 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     {heat&&selectedHeat&&!current.selectedNodeId&&<HeatInspector key={selectedHeat.leaf.id} point={selectedHeat} filter="all" onClose={()=>setHeatSelection(null)} onSource={source} onLocate={id=>{setHeatSelection(null);void locate(id);}}/>}
     {current.selectedNodeId&&<section className="map-detail" aria-label={selectedEntry?.kind==='cluster'?'Selected group':'Selected occurrence'}>
       <div className="map-title-row"><div><small>{selectedEntry?.kind==='cluster'?`${selectedEntry.leafCount} notes · generated summary`:selected?.node.sourceLabel??'Source occurrence'}</small><h3>{selectedEntry?.label??selected?.node.label??'Loading note…'}</h3></div><button aria-label="Close node details" onClick={()=>change({selectedNodeId:null})}>×</button></div>
-      {selectedEntry?.kind==='cluster'?<><p>{selectedEntry.summary}</p><button className="map-source-button" onClick={()=>void openCluster(selectedEntry)}>Explore this group ↗</button><small> Grouping summarizes its children; it is not a new source passage.</small>{graph.axisVersion&&selectedEntry.bounds&&<p className="map-axis-range">Child range · Reasoning depth {axisRange(selectedEntry.bounds.min.x*4,selectedEntry.bounds.max.x*4)} · Generality {axisRange(selectedEntry.bounds.min.y,selectedEntry.bounds.max.y)}. The anchor represents a child position. Badges may shift slightly for readability; their connecting dots retain the exact position.</p>}</>:detail.error?<p role="alert">{detail.error} <button onClick={detail.retry}>Retry</button></p>:selected?<div className="map-detail-body"><div><blockquote>{selected.anchors.find(a=>a.id===selected.node.anchorIds[0])?.quote}</blockquote>{selected.node.axisAssessment?<p>X · Reasoning depth: {axisValue(selected.node.axisAssessment.reasoningDepth.value)}<br/>Y · Generality: {axisValue(selected.node.axisAssessment.generality.value)}</p>:<p>Legacy structure: {selected.node.structuralLevel===null?'Unclassified':LEVELS[selected.node.structuralLevel]}</p>}</div><div><p>{selected.node.summary}</p>{selected.node.anchorIds.map((id,i)=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>{i?'Additional evidence':'Read this passage'} ↗ </button>:null;})}
+      {selectedEntry?.kind==='cluster'?<><p>{selectedEntry.summary}</p><button className="map-source-button" onClick={()=>void openCluster(selectedEntry)}>Explore this group ↗</button><small> Grouping summarizes its children; it is not a new source passage.</small>{graph.axisVersion&&selectedEntry.bounds&&<p className="map-axis-range">Child range · Reasoning depth {axisRange(coordinateRating(selectedEntry.bounds.min.x,'x',graph.axisVersion),coordinateRating(selectedEntry.bounds.max.x,'x',graph.axisVersion),graph.axisVersion)} · Generality {axisRange(coordinateRating(selectedEntry.bounds.min.y,'y',graph.axisVersion),coordinateRating(selectedEntry.bounds.max.y,'y',graph.axisVersion),graph.axisVersion)}. The anchor represents a child position. Badges may shift slightly for readability; their connecting dots retain the exact position.</p>}</>:detail.error?<p role="alert">{detail.error} <button onClick={detail.retry}>Retry</button></p>:selected?<div className="map-detail-body"><div><blockquote>{selected.anchors.find(a=>a.id===selected.node.anchorIds[0])?.quote}</blockquote>{selected.node.axisAssessment?<p>X · Reasoning depth: {axisValue(selected.node.axisAssessment.reasoningDepth.value,graph.axisVersion)}<br/>Y · Generality: {axisValue(selected.node.axisAssessment.generality.value,graph.axisVersion)}</p>:<p>Legacy structure: {selected.node.structuralLevel===null?'Unclassified':LEVELS[selected.node.structuralLevel]}</p>}</div><div><p>{selected.node.summary}</p>{selected.node.anchorIds.map((id,i)=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>{i?'Additional evidence':'Read this passage'} ↗ </button>:null;})}
         <p>Shared concept: {selected.identity.label}</p><div className="map-related">{selected.identity.occurrenceIds.filter(id=>id!==selected.node.id).map(id=><button key={id} onClick={()=>void locate(id)}>{selected.neighbours.find(n=>n.id===id)?.label} ↗</button>)}</div>
-        <AxisDetails detail={selected} onSource={source} onLocate={id=>void locate(id)}/><details><summary>Position & relation evidence</summary><p>{selected.node.evidence.rationale}</p>{selected.edges.map(e=><p key={e.id}><button onClick={()=>void locate(e.source===selected.node.id?e.target:e.source)}>{selected.neighbours.find(n=>n.id===e.source)?.label} → {e.type} → {selected.neighbours.find(n=>n.id===e.target)?.label}</button><br/>{e.rationale}{e.evidenceAnchorIds.map(id=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>Relation evidence ↗ </button>:null;})}</p>)}</details></div></div>:<p>Loading source evidence…</p>}
+        <AxisDetails axisVersion={graph.axisVersion} detail={selected} onSource={source} onLocate={id=>void locate(id)}/><details><summary>Position & relation evidence</summary><p>{selected.node.evidence.rationale}</p>{selected.edges.map(e=><p key={e.id}><button onClick={()=>void locate(e.source===selected.node.id?e.target:e.source)}>{selected.neighbours.find(n=>n.id===e.source)?.label} → {e.type} → {selected.neighbours.find(n=>n.id===e.target)?.label}</button><br/>{e.rationale}{e.evidenceAnchorIds.map(id=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>Relation evidence ↗ </button>:null;})}</p>)}</details></div></div>:<p>Loading source evidence…</p>}
     </section>}
   </div>;
 }

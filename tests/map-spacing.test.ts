@@ -3,9 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { MapViewSchema } from '../src/shared/schemas';
 import { type Hierarchy, type MapEntry, clusterEntry, ZOOM_POLICY } from '../src/shared/zoom-hierarchy';
-import { initialView, orientation, placeLabels, placeClusterHandles } from '../src/features/book-graph/projection';
+import { DEFAULT_CAMERA, initialView, orientation, placeLabels, placeClusterHandles } from '../src/features/book-graph/projection';
 import { fitEntries } from '../src/features/book-graph/map-framing';
-import { semanticWindow, toScreen, zoomAt, zoomIntoGroup } from '../src/features/book-graph/semantic-window';
+import { semanticWindow, toScreen, zoomAt, zoomIntoGroup, zoomCentered } from '../src/features/book-graph/semantic-window';
 
 const hierarchy=JSON.parse(readFileSync('data/books/plato-republic/analysis/semantic-hierarchy-v2-b7628d5e4649ece7/hierarchy.json','utf8')) as Hierarchy;
 const roots=hierarchy.roots.map(id=>hierarchy.entries.find(n=>n.id===id)!);
@@ -92,4 +92,28 @@ test('cluster offsets are bounded, deterministic and preserve semantic anchors b
   for(const p of result){assert.equal(p.anchorX,200);assert.equal(p.anchorY,200);assert.ok(Math.hypot(p.x-200,p.y-200)<=64.001);assert.ok(p.x<control.x||p.x>control.x+control.width||p.y<control.y||p.y>control.y+control.height);}
   assert.ok(Math.hypot(result[0].x-result[1].x,result[0].y-result[1].y)>40);
   assert.deepEqual(placeClusterHandles([...input].reverse(),704,720,[control]).reverse(),result);
+});
+
+test('zoom-out repairs a saved subtree frame at the minimum in every projection',()=>{
+  for(const projection of ['3d','xy','xz','yz'] as const)for(const size of [{width:704,height:720},{width:1080,height:960}]) {
+    const camera={...view,projection,...orientation(projection),selectedNodeId:roots[0].id};
+    const old=fitEntries([roots[0]],camera,size,.2);
+    const expected=fitEntries(roots,{...camera,zoom:ZOOM_POLICY.minZoom,selectedNodeId:null},size,.2);
+    const standard=fitEntries(roots,{...camera,...DEFAULT_CAMERA,projection:'3d',zoom:ZOOM_POLICY.minZoom,selectedNodeId:null},size,.2);
+    expected.framing!.scale=Math.min(expected.framing!.scale,standard.framing!.scale);
+    // Already at the numeric minimum: an additional zoom-out must still repair
+    // framing saved by the old fit-on-projection path.
+    const repaired=zoomCentered(old,old.zoom/1.35,size,roots,.2);
+    assert.equal(repaired.zoom,ZOOM_POLICY.minZoom);
+    assert.deepEqual(repaired.framing,expected.framing);
+    assert.equal(repaired.selectedNodeId,camera.selectedNodeId);
+    const points=roots.map(n=>toScreen(n.position!,repaired,size,[0,1],.2));
+    assert.ok(points.every(p=>p.x>=0&&p.x<=size.width&&p.y>=0&&p.y<=size.height));
+    let deep=zoomIntoGroup(roots[0],old,size,0,.2);
+    while(deep.zoom>ZOOM_POLICY.minZoom)deep=zoomCentered(deep,deep.zoom/1.35,size,roots,.2);
+    assert.deepEqual(deep.framing,expected.framing);
+    assert.ok(MapViewSchema.safeParse(deep).success);
+    const repeated=zoomCentered(deep,deep.zoom/1.35,size,roots,.2);
+    assert.deepEqual(repeated,deep);
+  }
 });

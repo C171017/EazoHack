@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-21-5"
+        ],
+        "label": "Socrates' Aporia and Self-Blame",
+        "summary": "Socrates blames himself for wandering into downstream questions before defining the nature of justice, concluding that he knows nothing.",
+        "rationale": "Retained as an isolated occurrence from Book I dialogue, representing personal dialectical failure and aporia distinct from the broader political and curricular commentaries."
+      },
+      {
+        "childIds": [
+          "n-17-5",
+          "n-18-1",
+          "n-18-2",
+          "n-18-4",
+          "n-18-5"
+        ],
+        "label": "Reception and Utopian Parallels",
+        "summary": "Commentary examines how Plato's political vision contrasts with his later Laws and inspired subsequent philosophical traditions, including Cicero's historical adaptations, Augustine's heavenly city, More's social critiques, and Campanella's communal state.",
+        "rationale": "These entries form a distinct thematic sequence comparing Plato's ideal state to other classical, theological, and early modern utopian commonwealths."
+      },
+      {
+        "childIds": [
+          "n-6-4",
+          "n-8-1"
+        ],
+        "label": "Communal Guardian Regulations",
+        "summary": "The guardian class is subjected to strict collective discipline, forbidding private wealth, personal property, and domestic family units in favor of state-regulated unions and common nurseries.",
+        "rationale": "Both entries detail the foundational communal institutions designed to preserve civic unity and prevent guardians from turning into predatory rulers."
+      },
+      {
+        "childIds": [
+          "n-10-2",
+          "n-10-4",
+          "n-10-7"
+        ],
+        "label": "Philosopher Education and Dangers",
+        "summary": "Socrates outlines an ascending mathematical curriculum aimed at eternal reality and a lifespan scheme for dialectic, cautioning against the moral erosion that premature philosophical questioning can trigger.",
+        "rationale": "These sections concentrate on the educational progression, age thresholds, and philosophical perils involved in forming ruling philosopher-kings."
+      },
+      {
+        "childIds": [
+          "n-11-2",
+          "n-11-3",
+          "n-11-4",
+          "n-11-5",
+          "n-12-2"
+        ],
+        "label": "Degeneration of States and Souls",
+        "summary": "This sequence charts the stepwise decay of regimes and matching soul types from timocracy and oligarchy to chaotic democracy and full-blown tyrannical rule.",
+        "rationale": "All entries belong to the continuous psychological and constitutional decline traced across Books VIII and IX."
+      },
+      {
+        "childIds": [
+          "n-12-5",
+          "n-13-1"
+        ],
+        "label": "Mathematical Interval of Happiness",
+        "summary": "Commentary analyzes the numerical and geometrical formula calculating that the royal ruler experiences 729 times the happiness of the tyrant.",
+        "rationale": "These occurrences address the identical calculation and metaphorical meaning of the cubic difference separating royal and tyrannical pleasure."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "uVGcasfjCYKDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 22837,
+    "candidatesTokenCount": 765,
+    "totalTokenCount": 23602,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 22837
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 765
+      }
+    ]
+  },
+  "durationMs": 6725,
+  "requestHash": "536026d3a123afe33800ad8c8edc2c2aeb1a4c162e8aa5f8117ef6e9f0cd76e2"
+}

@@ -1,0 +1,640 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-35-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Socrates builds directly on the earlier conclusion that the soul must be converted from becoming to being (n-35-4), deducing that arithmetic functions as this turning art because sensible units elicit contradictory perceptions of the one and many (p-1042011, p-1046899, p-1049377).",
+            "anchorIds": [
+              "p-1042011",
+              "p-1046899",
+              "p-1049377"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-4"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Applies to the entire mathematical domain of arithmetic and calculation as an educational discipline within the curriculum of guardian education (p-1042011, p-1049377).",
+            "anchorIds": [
+              "p-1042011",
+              "p-1049377"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.3,
+            "rationale": "Directly links to the principle established in arithmetic (n-35-6) that studies must draw the soul toward being, extending this criterion to show that geometry's higher portion aims at contemplation of the eternal and the Idea of the Good (p-1052099, p-1053312, p-1053482).",
+            "anchorIds": [
+              "p-1052099",
+              "p-1053312",
+              "p-1053482"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-6"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Formulates the philosophical aim of geometry as a complete mathematical discipline within the higher guardian curriculum (p-1053312, p-1053482).",
+            "anchorIds": [
+              "p-1053312",
+              "p-1053482"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "Deduces the curriculum's structural sequence by correcting an error: solid geometry (three dimensions in themselves) must logically precede astronomy (solids in revolution), continuing the systematic ordering of mathematical sciences (p-1055885, p-1057503).",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-7"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Governs the specific curriculum sequence and definition of solid geometry within the guardian education plan (p-1055885, p-1057503).",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.5,
+            "rationale": "Extends the established rule that sciences must draw the soul away from sensible objects to being (n-35-6, n-35-7) to astronomy and harmonics, arguing that visible skies and audible chords are merely sensible diagrams for true mathematical ratios (p-1059579, p-1061383, p-1064015).",
+            "anchorIds": [
+              "p-1059579",
+              "p-1061383",
+              "p-1064015"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-1"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Covers two major mathematical disciplines (astronomy and harmonics), defining their proper intellectual practice across all theoretical problems (p-1061383, p-1064015).",
+            "anchorIds": [
+              "p-1061383",
+              "p-1064015"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.3,
+            "rationale": "Culminates the progression of preliminary mathematical sciences (n-35-6, n-35-7, n-36-2) by synthesizing them with the divided line and cave ascent (n-33-6, n-35-3), establishing dialectic as the sole science that does away with hypotheses to reach the first principle (p-1066053, p-1070332, p-1073704).",
+            "anchorIds": [
+              "p-1066053",
+              "p-1070332",
+              "p-1073704"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6",
+              "n-35-3",
+              "n-36-2"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Formulates the universal coping-stone over all branches of science and knowledge, establishing the supreme method of rational inquiry (p-1070332, p-1073704).",
+            "anchorIds": [
+              "p-1070332",
+              "p-1073704"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "Constructs the chronological and institutional scheme of human life stages by combining the requirements of preliminary sciences, dialectic (n-36-3), and mandatory civic service back in the cave (n-35-5) (p-1079942, p-1080590, p-1087263).",
+            "anchorIds": [
+              "p-1079942",
+              "p-1080590",
+              "p-1087263"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-5",
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 4.6,
+            "rationale": "Outlines a comprehensive lifetime regulation, but strictly restricted to the select class of philosopher-guardians within the ideal state (p-1080590, p-1087263).",
+            "anchorIds": [
+              "p-1080590",
+              "p-1087263"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Deploys an allegorical parallel of the supposititious son to deduce the psychological and moral dangers of exposing undisciplined youths to dialectic before mature character is formed (p-1081658, p-1083717, p-1084954).",
+            "anchorIds": [
+              "p-1081658",
+              "p-1083717",
+              "p-1084954"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Formulates a general psychological and pedagogical hazard regarding premature dialectic affecting students of philosophy (p-1083717, p-1084954).",
+            "anchorIds": [
+              "p-1083717",
+              "p-1084954"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Derives the practical starting mechanism for realizing the ideal republic from the prior account of guardian education and corruption, concluding that separating children under ten from adult customs enables uncorrupted training (p-1089513, p-1090167).",
+            "anchorIds": [
+              "p-1089513",
+              "p-1090167"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-3",
+              "n-36-5"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "A specific practical prescription for the inception and founding event of the ideal city (p-1089513).",
+            "anchorIds": [
+              "p-1089513"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Resumes the suspended thread from Book IV (n-28-6), formally defining the classification of the four degenerate regimes and individuals to settle Thrasymachus's challenge on happiness and justice (p-1093090, p-1091618, p-1094735).",
+            "anchorIds": [
+              "p-1093090",
+              "p-1091618",
+              "p-1094735"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-6"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Presents a taxonomy spanning all four inferior constitutions and human character types across the political and ethical domain (p-1093090, p-1094735).",
+            "anchorIds": [
+              "p-1093090",
+              "p-1094735"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "Reasserts and justifies the foundational macro-micro correspondence: states do not arise from 'oak and rock' but from human characters, so the five constitutions necessarily entail five soul types (p-1094078, p-1094416, p-1094497).",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416",
+              "p-1094497"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-6",
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 7.8,
+            "rationale": "A structural sociological and psychological principle asserting that all political constitutions necessarily reflect the character dispositions of their citizens (p-1094078, p-1094416).",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Explains the downfall of the ideal state through an elaborate deduction: all generated things decay, senses fail to calculate the nuptial number, inferior guardians neglect education and mix the metals, producing class warfare and property division (p-1097088, p-1099283, p-1101246).",
+            "anchorIds": [
+              "p-1097088",
+              "p-1099283",
+              "p-1101246"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-4",
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Frames the universal cosmological law of generation and decay as applied specifically to the collapse of the ideal aristocratic state into timocracy (p-1097088, p-1101246).",
+            "anchorIds": [
+              "p-1097088",
+              "p-1101246"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.3,
+            "rationale": "Constructs the timocratic character through psychological development, showing how conflicting maternal complaints against an easy-going philosophical father drive the young man to enthrone the spirited element (p-1105610, p-1107246, p-1108104).",
+            "anchorIds": [
+              "p-1105610",
+              "p-1107246",
+              "p-1108104"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3",
+              "n-37-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Characterizes the specific psychological type and domestic etiology of the timocratic individual (p-1105610, p-1108104).",
+            "anchorIds": [
+              "p-1105610",
+              "p-1108104"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Defines oligarchy and deduces its core political flaw—that wealth qualification fractures the polity into two warring cities of rich and poor—from the accumulation of private property described in timocracy's fall (p-1109832, p-1111480, p-1113039).",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-3"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Defines the constitution and internal political dynamic of the oligarchical regime across all its historical and theoretical instances (p-1109832, p-1113039).",
+            "anchorIds": [
+              "p-1109832",
+              "p-1113039"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "Develops the drone analogy by inferring from the free alienation of property in oligarchy that a disenfranchised, unproductive class inevitably emerges, splitting into stingless paupers and stinging criminals (p-1115143, p-1114152, p-1115526).",
+            "anchorIds": [
+              "p-1115143",
+              "p-1114152",
+              "p-1115526"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 5.6,
+            "rationale": "Formulates a general socioeconomic typology of disenfranchised and criminal classes resulting from unrestrained wealth alienation (p-1115143, p-1115526).",
+            "anchorIds": [
+              "p-1115143",
+              "p-1115526"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.5,
+            "rationale": "Analyzes the psychic generation of the oligarchic man: witnessing his father's ruined ambition, he dethrones spirit and reason to enthrone avarice, coercing desires through fear of property loss (p-1117342, p-1117831, p-1120318).",
+            "anchorIds": [
+              "p-1117342",
+              "p-1117831",
+              "p-1120318"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2",
+              "n-37-4",
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Defines the inner soul structure, motivations, and behavioral patterns of the oligarchic character type (p-1117342, p-1120318).",
+            "anchorIds": [
+              "p-1117342",
+              "p-1120318"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.6,
+            "rationale": "Traces the causal mechanism linking oligarchy's insatiable wealth accumulation to revolution: debt and usury multiply armed drones, who observe the physical weakness of the rich in battle and revolt (p-1122228, p-1123213, p-1125219).",
+            "anchorIds": [
+              "p-1122228",
+              "p-1123213",
+              "p-1125219"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5",
+              "n-37-6"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Articulates the general dynamic of political revolution transforming oligarchies into democracies (p-1122228, p-1125219).",
+            "anchorIds": [
+              "p-1122228",
+              "p-1125219"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.7,
+            "rationale": "Concludes the transition from oligarchy (n-37-8) by defining the constitutional birth and characteristics of democracy: the victorious poor institute equal civic power and assign magistrates by lot (p-1126863, p-1127144, p-1126806).",
+            "anchorIds": [
+              "p-1126863",
+              "p-1127144",
+              "p-1126806"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-8"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Defines the nature, governing mechanism, and foundational civic compact of democratic constitutions (p-1126863, p-1127144).",
+            "anchorIds": [
+              "p-1126863",
+              "p-1127144"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Infers from democratic freedom and license (n-38-1) that democracy becomes a multi-colored tapestry exhibiting every variety of character and containing an assortment of constitutions (p-1127593, p-1127860, p-1128485).",
+            "anchorIds": [
+              "p-1127593",
+              "p-1127860",
+              "p-1128485"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 5.3,
+            "rationale": "Describes the general social texture, diversity, and political atmosphere across democratic states (p-1127860, p-1128485).",
+            "anchorIds": [
+              "p-1127860",
+              "p-1128485"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Introduces a foundational ethical distinction within the appetitive soul, defining necessary desires as indispensable and beneficial, and unnecessary desires as dispensable, costly, and harmful (p-1131535, p-1131878, p-1132748).",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878",
+              "p-1132748"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "Establishes a broad psychological and ethical taxonomy of human desires and pleasures applicable across human nature (p-1131535, p-1131878).",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Synthesizes the division of desires (n-38-3) with the state-soul correspondence (n-37-2) and the oligarchic upbringing (n-37-7) to portray the democratic individual, whose soul treats all desires as equal and lives without order (p-1133716, p-1137553, p-1138837).",
+            "anchorIds": [
+              "p-1133716",
+              "p-1137553",
+              "p-1138837"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2",
+              "n-37-7",
+              "n-38-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Defines the specific psychological character, internal lack of hierarchy, and way of life of the democratic individual (p-1137553, p-1138837).",
+            "anchorIds": [
+              "p-1137553",
+              "p-1138837"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.9,
+            "rationale": "Argues that excessive liberty naturally provokes an extreme opposite reaction into tyranny, applying a general principle of natural change to political constitutions (p-1141216, p-1144784, p-1145274).",
+            "anchorIds": [
+              "p-1141216",
+              "p-1144784",
+              "p-1145274"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-2"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Formulates a general law of excess producing its opposite across nature, biology, seasons, and political regimes (p-1144784, p-1145274).",
+            "anchorIds": [
+              "p-1144784",
+              "p-1145274"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Deduces the triadic internal class structure of democracy—drones/demagogues, wealthy traders, and working masses—by combining the drone concept (n-37-6) with democratic conditions (p-1146512, p-1147548, p-1147990).",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147548",
+              "p-1147990"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-6",
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Provides a comprehensive class taxonomy applicable to democratic political societies (p-1146512, p-1147990).",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147990"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "Details the step-by-step political process whereby the people's protector uses judicial murder against the wealthy, requests a bodyguard, and is transformed into a tyrannical wolf (p-1149590, p-1150097, p-1151201).",
+            "anchorIds": [
+              "p-1149590",
+              "p-1150097",
+              "p-1151201"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-5",
+              "n-38-6"
+            ]
+          },
+          "generality": {
+            "value": 5.3,
+            "rationale": "Details the recurrent causal cycle through which populist leaders transform into tyrants in democratic settings (p-1149590, p-1151201).",
+            "anchorIds": [
+              "p-1149590",
+              "p-1151201"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.3,
+            "rationale": "Completes the account of tyranny by inferring the tyrant's subsequent actions: inciting continuous wars, purging high-minded citizens, hiring mercenaries, and subjugating the parent populace (p-1152816, p-1154020, p-1159089).",
+            "anchorIds": [
+              "p-1152816",
+              "p-1154020",
+              "p-1159089"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-7"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Characterizes the political methods, institutional maintenance, and despotic rule of tyrannical regimes generally (p-1154020, p-1159089).",
+            "anchorIds": [
+              "p-1154020",
+              "p-1159089"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Wk-caqHBPIyOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 38226,
+    "candidatesTokenCount": 6762,
+    "totalTokenCount": 44988,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38226
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6762
+      }
+    ]
+  },
+  "durationMs": 34178,
+  "requestHash": "4f3a51f32e93c22f87e090af6767836bd11048f2b3a68fa0af6ae9f85438dea1"
+}

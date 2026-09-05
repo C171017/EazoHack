@@ -1,0 +1,85 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-13-4",
+          "h-level-1-batch-13-5",
+          "h-level-1-batch-13-6",
+          "h-level-1-batch-14-5"
+        ],
+        "label": "Commentary on Plato's System",
+        "summary": "Scholarly paratext and editorial commentary analyze Plato's systemic frameworks across the Republic, addressing pedagogical tiers, censorship, civic communism, dialectical theology, and the structural analogies connecting constitutional decay with psychic corruption.",
+        "rationale": "Groups all editorial paratext clusters together, which analyze Plato's system thematically and comparatively rather than engaging directly in dramatic dialogue."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-13-2",
+          "h-level-1-batch-13-3",
+          "h-level-1-batch-14-3",
+          "h-level-1-batch-15-2"
+        ],
+        "label": "Civic Unity, Forms, and Kingship",
+        "summary": "Socrates establishes civic cohesion through shared feeling, defines the epistemic divide between mutable opinion and intelligible Forms, and argues that political suffering cannot end until philosophical wisdom governs the state.",
+        "rationale": "Covers the central Books V–VI dialogue discussions establishing the nature of the philosopher, ideal statehood, the forms, and the philosopher-king paradox."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-15-3",
+          "h-level-1-batch-15-4",
+          "h-level-1-batch-16-1"
+        ],
+        "label": "Epistemology, Cave, and Dialectic",
+        "summary": "Through the analogies of the Sun, the Divided Line, and the Allegory of the Cave, Socrates traces the dialectical ascent to the supreme Idea of the Good and details the resulting obligation of enlightened rulers to govern.",
+        "rationale": "Brings together the core epistemology and ruler education passages of Books VI and VII."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-13-1",
+          "h-level-1-batch-14-2",
+          "h-level-1-batch-15-1",
+          "h-level-1-batch-16-2",
+          "h-level-1-batch-16-3"
+        ],
+        "label": "Psychic Order and Political Decay",
+        "summary": "Socrates articulates the tripartite division of the soul, contrasting internal harmony and virtue as health with unruly desires. This psychological balance is mapped onto civic constitutions to demonstrate how constitutional decay from aristocracy to tyranny mirrors escalating psychic misery.",
+        "rationale": "Collects the interconnected psychological analyses and regime degeneration sequences from Books IV, VIII, and IX."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-4",
+          "h-level-1-batch-15-5",
+          "h-level-1-batch-15-6",
+          "h-level-1-batch-16-4",
+          "h-level-1-batch-16-5"
+        ],
+        "label": "Mimesis, Immortality, and Er",
+        "summary": "Book X analyses reject imitative art as thrice removed from reality and corruptive of psychic reason, establish the immortality of the soul, and recount the Myth of Er to demonstrate the soul's posthumous judgement, cosmic necessity, and choice of destiny.",
+        "rationale": "Unifies the cohesive Book X themes covering the critique of poetry, proofs of the soul's immortality, and eschatological myth."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FFKcavmUDYKDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 36990,
+    "candidatesTokenCount": 904,
+    "totalTokenCount": 37894,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 36990
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 904
+      }
+    ]
+  },
+  "durationMs": 7332,
+  "requestHash": "abfa61ca858c3cc2266f3c96ed9e0d392115cfd373c4cd7776648a87e659f108"
+}

@@ -1,7 +1,7 @@
 import type { MapView } from '../../shared/schemas';
 import { ZOOM_POLICY, type MapEntry, type Bounds } from '../../shared/zoom-hierarchy';
-import { sourceWorld, type Point3 } from './projection';
-import { screenWorld, type Size } from './map-framing';
+import { DEFAULT_CAMERA, sourceWorld, type Point3 } from './projection';
+import { fitEntries, screenWorld, type Size } from './map-framing';
 export { baseScale, type Size } from './map-framing';
 export const toWorld = sourceWorld;
 export function toScreen(p:Point3,view:MapView,size:Size,range:[number,number],readingProgress=.5) {
@@ -13,12 +13,25 @@ export function zoomAt(view:MapView,zoom:number,focus:{x:number;y:number},size:S
 }
 // Manual zoom always anchors the viewport centre. Recover the centred overview
 // progressively on zoom-out, including views previously panned or explicitly located.
-export function zoomCentered(view:MapView,zoom:number,size:Size):MapView {
+export function zoomCentered(view:MapView,zoom:number,size:Size,roots?:MapEntry[],readingProgress=.5):MapView {
   const next=zoomAt(view,zoom,{x:size.width/2,y:size.height/2},size);
-  if(next.zoom<=ZOOM_POLICY.minZoom)return {...next,x:0,y:0};
+  // Framing is a second scale, and older projection changes could fit a tiny
+  // subtree into it. Recover the full-book frame as well as the numeric zoom.
+  let overview:MapView['framing'];
+  if(roots&&zoom<view.zoom){
+    const base={...view,zoom:ZOOM_POLICY.minZoom,selectedNodeId:null};
+    const fitted=fitEntries(roots,base,size,readingProgress).framing;
+    const standard=fitEntries(roots,{...base,...DEFAULT_CAMERA,projection:'3d'},size,readingProgress).framing;
+    // Flat projections may compress the book into a narrow band. They must
+    // not magnify that band into a new, tighter minimum scale.
+    if(fitted&&standard)overview={...fitted,scale:Math.min(fitted.scale,standard.scale)};
+  }
+  if(next.zoom<=ZOOM_POLICY.minZoom)return {...next,x:0,y:0,...(overview?{framing:overview}:{})};
   if(next.zoom<view.zoom){
     const recovery=(next.zoom-ZOOM_POLICY.minZoom)/(view.zoom-ZOOM_POLICY.minZoom);
-    return {...next,x:view.x*recovery,y:view.y*recovery};
+    const from=view.framing;
+    const framing=from&&overview?{scale:overview.scale+(from.scale-overview.scale)*recovery,center:{x:overview.center.x+(from.center.x-overview.center.x)*recovery,y:overview.center.y+(from.center.y-overview.center.y)*recovery,z:overview.center.z+(from.center.z-overview.center.z)*recovery}}:next.framing;
+    return {...next,x:view.x*recovery,y:view.y*recovery,framing};
   }
   return next;
 }

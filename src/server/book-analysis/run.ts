@@ -8,6 +8,8 @@ import { assembleGraph, missingIdentityNodes, validateSynthesis, validateSynthes
 import { extractionPrompt, reviewPrompt, synthesisPrompt, SYSTEM } from './prompts';
 import { prepareText, validateExtraction } from './source';
 import { ModelRequestError } from './vertex';
+import { BookEmblemSchema } from '../../shared/book-emblem';
+import { EMBLEM_SYSTEM, emblemPrompt } from './emblem';
 
 import { readJson, writeJson } from './json-store';
 import { assignBookAxes } from './axis-run';
@@ -32,10 +34,10 @@ export async function analyzeText(input: {
   const changedChunks = new Set(metadata.chunks.filter(c => previous?.chunks && JSON.stringify(previous.chunks.find(p => p.id === c.id)) !== JSON.stringify(c)).map(c => c.id));
   await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'running', phase: 'extracting' });
   const replies: { key: string; reply: ModelReply }[] = [];
-  async function call<T>(key: string, prompt: string, schema: z.ZodType<T>, validate: (value: T) => T, tokens = 12_288): Promise<T> {
+  async function call<T>(key: string, prompt: string, schema: z.ZodType<T>, validate: (value: T) => T, tokens = 12_288, system = SYSTEM): Promise<T> {
     const file = path.join(root, `${key}.json`);
     const cached = await readJson(file) as ModelReply | null;
-    const requestHash = createHash('sha256').update(JSON.stringify({ system: SYSTEM, prompt, schema: z.toJSONSchema(schema), tokens, model: input.model })).digest('hex');
+    const requestHash = createHash('sha256').update(JSON.stringify({ system, prompt, schema: z.toJSONSchema(schema), tokens, model: input.model })).digest('hex');
     const invalidated = changedChunks.has(key) || changedChunks.size > 0 && !key.startsWith('chunk-');
     if (cached && !invalidated && cached.requestHash === requestHash) {
       if (cached.model !== input.model) throw new Error('Checkpoint model mismatch.');
@@ -57,7 +59,7 @@ export async function analyzeText(input: {
     let failure = '';
     for (let attempt = 1; attempt <= 3; attempt++) {
       try {
-        const reply = await input.generate(SYSTEM, prompt + (failure ? `\nThe previous attempt failed validation: ${failure.slice(0, 1600)}. Regenerate a complete corrected response.` : ''), schema, tokens);
+        const reply = await input.generate(system, prompt + (failure ? `\nThe previous attempt failed validation: ${failure.slice(0, 1600)}. Regenerate a complete corrected response.` : ''), schema, tokens);
         reply.requestHash = requestHash;
         // Retain provider response and usage even when our validation rejects it.
         await writeJson(path.join(root, 'attempts', `${key}-${Date.now()}-${attempt}.json`), reply);
@@ -127,6 +129,8 @@ export async function analyzeText(input: {
       });
     });
     const baseGraph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
+    // Summaries cover every analyzed section; the emblem has a reusable checkpoint.
+    baseGraph.bookEmblem = await call('book-emblem', emblemPrompt({ title: input.bookId, excerpt: JSON.stringify(extracted.map((chunk, index) => ({ section: chunks[index].section, summary: chunk.summary }))) }), BookEmblemSchema, value => value, 2048, EMBLEM_SYSTEM);
     let graph = await assignBookAxes({graph:baseGraph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     graph = await calibrateBookAxes({graph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     await writeJson(path.join(root, 'graph.json'), graph);

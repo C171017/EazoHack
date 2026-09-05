@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 4,
+        "reason": "The grouping combines h-level-1-batch-8-4 (the decline of political regimes and soul types across Books VIII) with an isolated occurrence n-39-7 (the example of the sensation of smell as a pure pleasure from Book IX). These two children lack a coherent thematic connection, as an isolated remark on olfactory pleasure does not meaningfully integrate with the detailed sociological and psychological degeneration of timocracy and oligarchy."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "G1GcaomoGIKDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 41998,
+    "candidatesTokenCount": 119,
+    "totalTokenCount": 42117,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41998
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 119
+      }
+    ]
+  },
+  "durationMs": 3747,
+  "requestHash": "d61c133433b087f70e97d37fcb38cbd484e632b79890f3acbcefdd047313eea7"
+}

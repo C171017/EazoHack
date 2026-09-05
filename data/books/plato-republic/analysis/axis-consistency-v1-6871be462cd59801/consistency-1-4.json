@@ -1,0 +1,609 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-29-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Socrates directly builds on the distinction between essential civic competence and accidental biological difference established in n-29-3, inferring that natural gifts for administration and philosophy are diffused across both sexes. Incorporating the reasoning chain through n-29-3 (depth 3.0), this developed local inference reaches 3.4.",
+            "anchorIds": [
+              "p-879718",
+              "p-880643",
+              "p-880940"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-3"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "A domain-wide claim covering human natural aptitudes across the sexes, with an explicit condition/qualification ('in all of them a woman is inferior to a man') (anchor 5).",
+            "anchorIds": [
+              "p-879718",
+              "p-880643"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "A foundational premise/first principle posited at the start of examining the law's aim, immediately inferring that unity is the highest civic good and distraction the greatest evil (anchor 1: immediate inference from an explicit starting point).",
+            "anchorIds": [
+              "p-897132",
+              "p-897597",
+              "p-897765"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "A broadly reusable normative principle for statecraft, defining the supreme good and criterion for any political commonwealth (anchor 7).",
+            "anchorIds": [
+              "p-897132",
+              "p-897597",
+              "p-897765"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers from the definition of Hellenes as natural kin that conflict between Greek cities is civil discord rather than true war, deducing specific prohibitions against enslavement and destruction (anchor 2).",
+            "anchorIds": [
+              "p-917134",
+              "p-919634",
+              "p-922157"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Applies strictly to Hellenic inter-city warfare and conduct, bounded by Greek identity as opposed to external barbarians (anchor 4: defined class within a restricted setting, positioned at 3.8).",
+            "anchorIds": [
+              "p-917134",
+              "p-919634",
+              "p-922157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Uses the analogy of an artist painting a perfectly beautiful human to justify that an ideal standard does not lose validity simply because it cannot be fully actualized in matter (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-925041",
+              "p-925834",
+              "p-926473"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Formulates an epistemological and normative principle governing the nature of theoretical ideals, models, and evaluative standards across varied philosophical domains (anchor 8).",
+            "anchorIds": [
+              "p-925041",
+              "p-925834"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Argues by inductive analogy from lovers of youth, wine, and honor that anyone who truly desires a class of goods must desire the whole class and not merely a part (anchor 2: developed local inference).",
+            "anchorIds": [
+              "p-932037",
+              "p-932216",
+              "p-930486"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "A general principle concerning the psychological definition of desire and love for a whole class of objects, applied to wisdom (anchor 6).",
+            "anchorIds": [
+              "p-932037",
+              "p-932216"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Infers a sharp distinction between genuine lovers of wisdom and superficial amateurs by building on the established premise of desire for the whole (n-30-5, depth 2.1), specifying the philosopher as one who loves the vision of truth.",
+            "anchorIds": [
+              "p-933820",
+              "p-932976",
+              "p-933719"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-5"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Defines the specific character and domain of the true philosopher in contrast to lovers of spectacles (anchor 5).",
+            "anchorIds": [
+              "p-933820",
+              "p-932976",
+              "p-933719"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "An initial metaphysical premise introduced to ground the distinction between Forms and appearances: each Form is itself one, but appears manifold through its combinations (anchor 1: immediate inference from the duality of opposites).",
+            "anchorIds": [
+              "p-934256",
+              "p-934184"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8.5,
+            "rationale": "Applies across all Forms and their instantiations—beauty, justice, good, evil, and every other class (between anchor 8 and 9: a cross-domain metaphysical principle).",
+            "anchorIds": [
+              "p-934256"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Introduced as a formal foundational definition of a faculty (power), distinguishing faculties by their distinct spheres and results rather than sensible traits (anchor 0: directly introduced definition with immediate clarification, 0.2).",
+            "anchorIds": [
+              "p-938311",
+              "p-938038"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "A general ontological and psychological definition of powers/faculties in humans and all other things (anchor 8: cross-domain principle).",
+            "anchorIds": [
+              "p-938311",
+              "p-938038"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.3,
+            "rationale": "Socrates deduces the psychological virtues of the philosopher (temperance, truthfulness, courage, lack of meanness) directly from their defined devotion to unchanging eternal being in n-32-1 (depth 5.0). Incorporating this prerequisite chain, the developed local deduction is rated at 5.3.",
+            "anchorIds": [
+              "p-948857",
+              "p-949401",
+              "p-953330"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Outlines a comprehensive character profile defining the entire class of genuine philosophic natures.",
+            "anchorIds": [
+              "p-948857",
+              "p-953330"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "Adeimantus introduces an empirical objection directly confronting the portrait of philosophic virtue established in n-32-2 (depth 5.3), asserting that common experience finds philosophers to be useless or rogues. As an immediate responsive objection directly dependent on that portrait, it incorporates the chain at 5.4.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Refers to the perceived condition of practitioners of philosophy within typical existing political states.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "Socrates derives his proposal for reforming the curriculum across life stages directly from the analysis that existing states corrupt and extinguish philosophic talent (n-32-8, depth 4.0), concluding that intensive dialectical study must be postponed until maturity.",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-8"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Sets a normative curricular standard for the education of philosophers over human life stages.",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.3,
+            "rationale": "Socrates establishes that the Idea of the Good is the supreme object of knowledge (megiston mathema) without which other knowledge is useless, building on the requirement that guardians must know eternal truth (n-32-1, depth 5.0) to identify the ultimate source of that truth.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1003684",
+              "p-1004174"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 9.5,
+            "rationale": "Characterizes the supreme ontological and epistemological principle upon which all other knowledge, utility, and virtue depend.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1004174"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.6,
+            "rationale": "Glaucon gives brief interlocutory assent to the fourfold schema of faculties that Socrates just systematically established in n-34-3 (depth 5.5). As an immediate conversational ratification dependent on the complete prior derivation, it is rated at 5.6.",
+            "anchorIds": [
+              "p-1019743"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "A specific conversational agreement by an interlocutor to a proposed categorization in the dialogue.",
+            "anchorIds": [
+              "p-1019743"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.8,
+            "rationale": "Socrates directly presents the Allegory of the Cave to illustrate in a figure our nature regarding education and the lack of it, building as an illustrative counterpart upon the proportioned divisions of the Divided Line (n-33-6, depth 4.5). Incorporating that established framework into the allegorical presentation yields 4.8.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1020773",
+              "p-1021956"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Presents a universal figure depicting the initial condition of all human knowledge and perception before education.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1021956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.7,
+            "rationale": "Socrates builds directly on the established principle that education is the conversion of the soul's vision from becoming to being (n-35-4, depth 6.5), deducing that arithmetic functions as this turning art because sensible units elicit contradictory perceptions of the one and many.",
+            "anchorIds": [
+              "p-1042011",
+              "p-1046899",
+              "p-1049377"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-4"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Applies to the entire mathematical domain of arithmetic and calculation as an educational discipline within the curriculum of guardian education (p-1042011, p-1049377).",
+            "anchorIds": [
+              "p-1042011",
+              "p-1049377"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.3,
+            "rationale": "Constructs the chronological lifecycle and testing scheme for rulers by synthesizing the mandate for compelled descent back into the cave (n-35-5, depth 7.0) with the attainment of dialectic as coping-stone (n-36-3, depth 6.3). Incorporating the depth of n-35-5, this synthesis reaches 7.3.",
+            "anchorIds": [
+              "p-1079942",
+              "p-1080590",
+              "p-1087263"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-5",
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 4.6,
+            "rationale": "Outlines a comprehensive lifetime regulation, but strictly restricted to the select class of philosopher-guardians within the ideal state (p-1080590, p-1087263).",
+            "anchorIds": [
+              "p-1080590",
+              "p-1087263"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Deploys the parallel of the supposititious son to deduce the moral danger of exposing youths to dialectic before mature character is formed, depending directly on the establishment of dialectic as dispensing with customary hypotheses (n-36-3, depth 6.3). Incorporating n-36-3, this local argument is calibrated at 6.6.",
+            "anchorIds": [
+              "p-1081658",
+              "p-1083717",
+              "p-1084954"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Formulates a general psychological and pedagogical hazard regarding premature dialectic affecting students of philosophy (p-1083717, p-1084954).",
+            "anchorIds": [
+              "p-1083717",
+              "p-1084954"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.5,
+            "rationale": "Derives the practical inception of the ideal city—sending out all citizens above ten years of age—by linking the political feasibility of philosopher-kings (n-33-3, depth 5.2) with the comprehensive education and service scheme for guardians (n-36-5, depth 7.3). Incorporating n-36-5, it is calibrated at 7.5.",
+            "anchorIds": [
+              "p-1089513",
+              "p-1090167"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-3",
+              "n-36-5"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "A specific practical prescription for the inception and founding event of the ideal city (p-1089513).",
+            "anchorIds": [
+              "p-1089513"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Reasserts and justifies the foundational macro-micro correspondence that states do not arise from 'oak and rock' but from characters, depending on the resume of the five regimes/souls project in n-37-1 (depth 5.0) and the original large letters method (n-22-6, depth 1.3). Incorporating n-37-1, it is rated at 5.2.",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416",
+              "p-1094497"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-6",
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 7.8,
+            "rationale": "A structural sociological and psychological principle asserting that all political constitutions necessarily reflect the character dispositions of their citizens (p-1094078, p-1094416).",
+            "anchorIds": [
+              "p-1094078",
+              "p-1094416"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.1,
+            "rationale": "Defines oligarchy and deduces that wealth qualifications divide the city into two warring factions of rich and poor, building directly upon the dissolution of timocracy and accumulation of private property established in n-37-3 (depth 5.8). Calibrated at 6.1.",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-3"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Defines the constitution and internal political dynamic of the oligarchical regime across all its historical and theoretical instances (p-1109832, p-1113039).",
+            "anchorIds": [
+              "p-1109832",
+              "p-1113039"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "Introduces a foundational distinction within the appetitive soul between necessary and unnecessary desires, building upon the established tripartite soul architecture (n-28-3, depth 3.4) with internal definitions and examples of beneficial versus injurious desires.",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878",
+              "p-1132748"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "Establishes a broad psychological and ethical taxonomy of human desires and pleasures applicable across human nature (p-1131535, p-1131878).",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.3,
+            "rationale": "Socrates establishes how the tyrannical soul develops by directly applying the division of desires (n-38-3, depth 3.7) and the portrait of the democratic character (n-38-4, depth 6.0) to trace how an unrestrained master passion completely enslaves the soul. Incorporating the chain of n-38-4, this is calibrated at 6.3.",
+            "anchorIds": [
+              "p-1160395",
+              "p-1160857",
+              "p-1163702"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-3",
+              "n-38-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "The claim delineates a specific psychological type and class within the taxonomy of human souls—namely, the tyrannical character dominated by a master passion.",
+            "anchorIds": [
+              "p-1160395",
+              "p-1163702"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Socrates develops a local inferential argument with its internal justification in the text, defining an intermediate state of rest between pleasure and pain and concluding that mere relief from pain is an illusory relative pleasure (anchor 2).",
+            "anchorIds": [
+              "p-1191748",
+              "p-1193308",
+              "p-1194224"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.4,
+            "rationale": "Enunciates a general psychological and philosophical principle about the nature of pleasure, pain, and affective neutrality across human experience.",
+            "anchorIds": [
+              "p-1193308",
+              "p-1194224"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "An immediate illustrative instance (pleasures of smell) introduced to support the distinction established in n-39-6 (depth 2.2) that pure pleasures without antecedent pain are real. Incorporating n-39-6, it is calibrated at 2.5.",
+            "anchorIds": [
+              "p-1194013"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-6"
+            ]
+          },
+          "generality": {
+            "value": 2.1,
+            "rationale": "Restricted to a single sensory modality (the sense of smell) used as an illustrative counterexample.",
+            "anchorIds": [
+              "p-1194013"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xk-cavzgH9CSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 108360,
+    "candidatesTokenCount": 5939,
+    "totalTokenCount": 114299,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 108360
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5939
+      }
+    ]
+  },
+  "durationMs": 29355,
+  "requestHash": "805b6350ec8704c6d48cd3b83af0f6b19f8dbf3537d60ae767946e27f5a1380e"
+}

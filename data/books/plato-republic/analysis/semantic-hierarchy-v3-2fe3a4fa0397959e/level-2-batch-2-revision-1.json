@@ -1,0 +1,97 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-7-2",
+          "h-level-1-batch-5-1"
+        ],
+        "label": "Commentary on Ideal Polities",
+        "summary": "Scholarly commentary traces the evolution and reception of Platonic political theory across historical counterparts, contrasting the Republic, Laws, and Statesman with later utopian and imperial visions in Cicero, Augustine, Dante, More, and Campanella.",
+        "rationale": "Both clusters contain introductory scholarly commentary analyzing Plato's political dialogues and their reception across Western utopian and political philosophy."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-5-2",
+          "h-level-1-batch-5-3",
+          "h-level-1-batch-8-1",
+          "n-21-5",
+          "h-level-1-batch-5-4"
+        ],
+        "label": "Debates on Justice: Books I–II",
+        "summary": "Early dialectical exchanges challenge conventional definitions of justice from Cephalus and Polemarchus, progress through Thrasymachus's cynical thesis on power, and culminate in Socrates's defense of the soul's welfare and subsequent aporia. In response, Glaucon and Adeimantus present their Book II challenge, prompting Socrates to investigate justice within the larger framework of a city.",
+        "rationale": "Covers the sequential dialectic of Books I and II, moving from traditional definitions and Thrasymachus's skepticism through Socrates's aporia to the Book II challenge."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-1",
+          "h-level-1-batch-7-3",
+          "h-level-1-batch-6-2",
+          "h-level-1-batch-8-2",
+          "h-level-1-batch-7-4"
+        ],
+        "label": "Civic Formation and Guardianship",
+        "summary": "This sequence details the founding institutions of the ideal commonwealth, establishing strict censorship of poetry and music, character criteria and living arrangements for guardians, the Myth of the Metals, and the definition of civic justice as class specialization.",
+        "rationale": "Encompasses the foundational institutional and educational framework of the State across Books II through IV."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-3",
+          "h-level-1-batch-7-5",
+          "h-level-1-batch-8-3"
+        ],
+        "label": "Philosopher-Rulers and Society",
+        "summary": "Socrates advances radical proposals regarding communal families, gender parity, and inter-Hellenic warfare before identifying philosophers as rulers. The sequence examines the philosopher's nature, explains public hostility toward philosophy, and outlines the education necessary to align philosophy with governance.",
+        "rationale": "Brings together the core arguments of Books V and VI regarding philosopher-rulers, civic misunderstanding, and philosophical pedagogy."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-4"
+        ],
+        "label": "Degeneration of Regimes and Souls",
+        "summary": "Socrates identifies five corresponding forms of constitutions and human souls, tracing the gradual decline of the ideal aristocracy through calculated birth errors into timocracy, the rise of the timocratic character, and subsequent degeneration into oligarchy dominated by property qualifications and avarice.",
+        "rationale": "Carried as a focused singleton examining Book VIII's systematic taxonomy of constitutional and psychological degeneration."
+      },
+      {
+        "childIds": [
+          "n-39-7"
+        ],
+        "label": "Pleasures of Smell Example",
+        "summary": "The sensation of scent is provided as an instance of pure pleasure that arises without prior suffering or deficit and departs without pain.",
+        "rationale": "Carried as an isolated singleton from Book IX addressing the distinct psychological category of non-deficit sensory pleasure."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-5",
+          "n-46-5"
+        ],
+        "label": "Index and Editorial Notes",
+        "summary": "Editorial reference material provides an extensive conceptual index spanning guardians, poetry, rulers, and the state, alongside documentation of typographic emendations, transcription conventions, and transliteration standards.",
+        "rationale": "Pairs the end-matter paratextual clusters comprising the analytical subject index and transcriber apparatus."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "H1GcatKIB4yOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 42440,
+    "candidatesTokenCount": 1073,
+    "totalTokenCount": 43513,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42440
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1073
+      }
+    ]
+  },
+  "durationMs": 7852,
+  "requestHash": "6c9b956bd7d8bad2d03826c839400705a44164a35712284a1dc6395190676e9c"
+}

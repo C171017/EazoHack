@@ -1,0 +1,584 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-10-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "Socrates synthesizes the full curriculum of higher education—integrating dialectic as the supreme coping-stone (n-10-3) with the practical obligation of the compelled descent back into the cave (n-9-6)—into a comprehensive temporal progression from childhood studies to culmination at age fifty. Grounded in these prior chains, this linked synthesis is calibrated at 6.8 (anchor 6 to anchor 7: linked argument synthesizing major educational and institutional structures).",
+            "anchorIds": [
+              "p-261123",
+              "p-263322",
+              "p-265520"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-6",
+              "n-10-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Restricted to the specific institutional lifecycle and testing schedule of the guardian-ruler class in the Republic (p-261123, p-263322, p-265520).",
+            "anchorIds": [
+              "p-261123",
+              "p-263322",
+              "p-265520"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "Builds directly upon the characterization of dialectic as dispensing with customary hypotheses and assumptions (n-10-3), deducing through the analogy of the supposititious son that premature exposure to dialectical questioning leads youths into moral skepticism and lawlessness when traditional parental codes are refuted. Grounded in that prior epistemological chain, it is calibrated at 6.8 (anchor 6 to anchor 7: a linked local argument applying an established result).",
+            "anchorIds": [
+              "p-263322",
+              "p-280675",
+              "p-282876"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "A principle concerning youth psychology and moral education during transitions where customary beliefs are challenged by intellectual criticism (p-263322, p-280675, p-282876).",
+            "anchorIds": [
+              "p-263322",
+              "p-280675",
+              "p-282876"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Deduces the rise of democracy and the democratic character directly from the internal tensions and economic divisions of oligarchy (n-11-3), tracing how the revolution of the impoverished leads to total liberty and an internal soul-state where necessary and unnecessary appetites are placed on equal footing. Supported by the preceding constitutional sequence, it is placed at 6.6 (anchor 6 to anchor 7: linked sequence of constitutional declines).",
+            "anchorIds": [
+              "p-295040",
+              "p-296779",
+              "p-298928"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Pertains specifically to democratic governance and the multi-faceted, egalitarian democratic individual (p-295040, p-296779, p-298928).",
+            "anchorIds": [
+              "p-295040",
+              "p-296779",
+              "p-298928"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Derives tyranny directly from the excess of democratic freedom (n-11-4), demonstrating through the law of contraries how unchecked license turns into extreme servitude as the popular champion demands a personal bodyguard, sheds citizen blood, and transforms into a tyrannical wolf. Continuing the linked regime progression, it is calibrated at 6.6 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-301249",
+              "p-303447",
+              "p-305671"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Covers the mechanics of tyranny as a specific constitutional degeneration and the emergence of the tyrant (p-301249, p-303447, p-305671).",
+            "anchorIds": [
+              "p-301249",
+              "p-303447",
+              "p-305671"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Building directly upon the account of political tyranny and unrestrained appetites (n-11-5), Socrates traces the internal psychological emergence of the tyrannical soul, showing how lawless nocturnal desires are released and enthroned under a dominant master passion. Continuing this established chain of character declines, it is calibrated at 6.6 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-332742",
+              "p-333925",
+              "p-335063"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies specifically to the genesis, psychological state, and conduct of the tyrannical individual character type (p-332742, p-333925, p-335063).",
+            "anchorIds": [
+              "p-332742",
+              "p-333925",
+              "p-335063"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Combines the psychological etiology of the tyrannical soul (n-12-2) with the state-individual analogy, using the thought experiment of an isolated slave-master in the wilderness to prove that the tyrannical man, especially when ruling publicly, is utterly enslaved to fear and the most miserable of individuals. Building on this prior chain, it is placed at 6.6 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-338614",
+              "p-337847",
+              "p-340598"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Evaluates the relative happiness and inner psychic condition of tyrannical rulers compared to just individuals (p-338614, p-337847, p-340598).",
+            "anchorIds": [
+              "p-338614",
+              "p-337847",
+              "p-340598"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "The commentary introduces the first paradox of the ideal state—the community of goods—by evaluating Aristotle's economic critique against the guardian communal discipline established in Book III (n-6-4), while contextualizing ancient land tenure and early Christian communism as evidence that property rights were historically fluid (anchor 3 to anchor 4: a developed local analysis building on guardian discipline).",
+            "anchorIds": [
+              "p-428590",
+              "p-428978"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-4"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Surveys the concept and legal sacredness of property across ancient societies, early Christian communities, and modern political economy.",
+            "anchorIds": [
+              "p-428590",
+              "p-428978"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Building directly upon the comparative historical analysis of property tenure in n-15-2, the commentator develops an inferential sequence from modern historical shifts (such as the emancipation of serfs and abolition of slavery) to conclude that property rights rest fundamentally upon public expediency rather than inherent sacredness, and can evolve toward shared public utility (anchor 3 to anchor 4: developed local inference).",
+            "anchorIds": [
+              "p-430833",
+              "p-431608",
+              "p-433800"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-2"
+            ]
+          },
+          "generality": {
+            "value": 7.4,
+            "rationale": "Presents a broad political and socioeconomic principle regarding the nature, ethical purpose, and historical contingency of property rights in civilized human society.",
+            "anchorIds": [
+              "p-430833",
+              "p-431608",
+              "p-433800"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "Jowett builds directly upon the established philosophical account of how unrealized ideals elevate human conduct (n-18-6), constructing an extended argument that identifies two great modern ideals—earthly progress for the human race and personal immortality for the individual—and deduces that their apparent tension is harmonized when resolved into resignation to the divine will (anchor 6 to anchor 7: linked argument synthesizing established results).",
+            "anchorIds": [
+              "p-561988"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-6"
+            ]
+          },
+          "generality": {
+            "value": 7.6,
+            "rationale": "Formulates a broad religious and existential principle addressing the primary motivational poles of human life (anchor 7 to 8).",
+            "anchorIds": [
+              "p-561988"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Glaucon reformulates and sharpens the intelligible distinction of the Divided Line (n-34-1), deducing that the science of dialectic contemplates a higher and clearer order of knowledge than the subordinate mathematical arts, which treat hypotheses as fixed starting points without ascending to the unhypothetical first principle (anchor 6: linked argument clarifying an established result).",
+            "anchorIds": [
+              "p-1018396",
+              "p-1018361"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-1"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "Applies the Divided Line's intelligible distinction specifically to geometry, mathematics, and dialectic.",
+            "anchorIds": [
+              "p-1018396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.3,
+            "rationale": "Glaucon explicitly understands and ratifies the complete fourfold alignment of cognitive faculties with ontological realms established by Socrates in n-34-3. As an immediate interlocutory assent directly accepting that multi-step systematic derivation, it is calibrated at 6.3 (anchor 6: linked argument step).",
+            "anchorIds": [
+              "p-1019743"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "A specific conversational agreement by an interlocutor to a proposed categorization in the dialogue.",
+            "anchorIds": [
+              "p-1019743"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Directly develops the Allegory of the Cave introduced in n-35-1, tracing the sequential stages of the liberated captive's ascent: the initial pain and dazzlement, acclimatization to reflections in water, nocturnal viewing of heavenly bodies, and the culminating contemplation of the sun itself as author of the visible world (anchor 6: linked narrative progression carrying forward the established allegorical framework).",
+            "anchorIds": [
+              "p-1023476",
+              "p-1023851",
+              "p-1024333"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-1"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Depicts the stages of epistemic ascent from sensory particulars to direct insight into ultimate reality.",
+            "anchorIds": [
+              "p-1023476",
+              "p-1024333"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.3,
+            "rationale": "Socrates establishes dialectic as the supreme coping-stone of education by synthesizing the complete mathematical curriculum ending in astronomy and harmonics (n-36-2) with the metaphysical ascent of the Cave (n-35-3) and the epistemological schema of the Divided Line (n-33-6), concluding that dialectic alone dispenses with hypotheses to reach the Idea of the Good (anchor 7: a synthesis of linked arguments across curricula and metaphysics).",
+            "anchorIds": [
+              "p-1066053",
+              "p-1070332",
+              "p-1073704"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6",
+              "n-35-3",
+              "n-36-2"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Formulates the universal coping-stone over all branches of science and knowledge, establishing the supreme method of rational inquiry (p-1070332, p-1073704).",
+            "anchorIds": [
+              "p-1070332",
+              "p-1073704"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.3,
+            "rationale": "Deduces the critical pedagogical hazard of premature dialectic using the parable of the supposititious son, demonstrating that young students who dismantle customary moral standards before developing mature judgment degenerate into lawless skepticism. Building directly upon the definition of dialectic as overturning hypotheses and customary axioms (n-36-3), this linked argument is calibrated at 7.3.",
+            "anchorIds": [
+              "p-1081658",
+              "p-1083717",
+              "p-1084954"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Formulates a general psychological and pedagogical hazard regarding premature dialectic affecting students of philosophy (p-1083717, p-1084954).",
+            "anchorIds": [
+              "p-1083717",
+              "p-1084954"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.7,
+            "rationale": "Socrates develops the drone analogy by deducing from the property qualifications and unchecked alienation in oligarchy (n-37-5) that dispossession inevitably creates a parasitic class divided into stingless paupers and stinging criminals (anchor 6 to anchor 7: linked argument combining established institutional and economic dynamics).",
+            "anchorIds": [
+              "p-1115143",
+              "p-1114152",
+              "p-1115526"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 5.6,
+            "rationale": "Formulates a general socioeconomic typology of disenfranchised and criminal classes resulting from unrestrained wealth alienation (p-1115143, p-1115526).",
+            "anchorIds": [
+              "p-1115143",
+              "p-1115526"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.7,
+            "rationale": "Socrates establishes the political revolution transforming oligarchy into democracy by synthesizing the systemic exploitation of oligarchical rule (n-37-5) with the radicalization of the armed pauper drone class (n-37-6), inferring that the poor discover the weakness of their rulers and overthrow them (anchor 6 to anchor 7: linked causal sequence).",
+            "anchorIds": [
+              "p-1122228",
+              "p-1123213",
+              "p-1125219"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5",
+              "n-37-6"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Articulates the general dynamic of political revolution transforming oligarchies into democracies (p-1122228, p-1125219).",
+            "anchorIds": [
+              "p-1122228",
+              "p-1125219"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Synthesizes the macro-micro correspondence (n-37-2) and the portrait of the oligarchic character (n-37-7) with the psychological taxonomy of necessary versus unnecessary desires (n-38-3), deducing the democratic individual whose soul is overthrown by drone desires and who treats all pleasures as equal (anchor 6 to anchor 7: linked argument combining multiple established results).",
+            "anchorIds": [
+              "p-1133716",
+              "p-1137553",
+              "p-1138837"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2",
+              "n-37-7",
+              "n-38-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Defines the specific psychological character, internal lack of hierarchy, and way of life of the democratic individual (p-1137553, p-1138837).",
+            "anchorIds": [
+              "p-1137553",
+              "p-1138837"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Builds directly on the characterization of democratic liberty and lack of restraint (n-38-2), applying the general principle that excessive increase in any domain induces an extreme reaction in the opposite direction to deduce that insatiable freedom inevitably generates tyranny and bitter slavery (anchor 6 to anchor 7: linked argument extending constitutional dynamics).",
+            "anchorIds": [
+              "p-1141216",
+              "p-1144784",
+              "p-1145274"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-2"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Formulates a general law of excess producing its opposite across nature, biology, seasons, and political regimes (p-1144784, p-1145274).",
+            "anchorIds": [
+              "p-1144784",
+              "p-1145274"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.1,
+            "rationale": "Completes the account of political tyranny by deducing the despot's subsequent methods from the protector's violent transformation (n-38-7): stirring up continuous warfare to remain indispensable, purging capable citizens, hiring mercenary bodyguards, and violently subjugating the citizenry that originally nurtured him (anchor 7: linked synthesis carrying the tyrant's rule to completion).",
+            "anchorIds": [
+              "p-1152816",
+              "p-1154020",
+              "p-1159089"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-7"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Characterizes the political methods, institutional maintenance, and despotic rule of tyrannical regimes generally (p-1154020, p-1159089).",
+            "anchorIds": [
+              "p-1154020",
+              "p-1159089"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Socrates establishes the genesis of the tyrannical man by synthesizing the division of appetites into lawful and unlawful desires (n-38-3) with the internal dynamics of the democratic character (n-38-4), showing how a newly implanted master passion seizes total dominion over the soul's acropolis and enslaves all other desires (anchor 6 to anchor 7: linked argument synthesizing psychological and constitutional results).",
+            "anchorIds": [
+              "p-1160395",
+              "p-1160857",
+              "p-1163702"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-3",
+              "n-38-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "The claim delineates a specific psychological type and class within the taxonomy of human souls—namely, the tyrannical character dominated by a master passion.",
+            "anchorIds": [
+              "p-1160395",
+              "p-1163702"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Contrasts the private tyrannical man with one who attains absolute public power, deducing from the nature of the tyrannical soul (n-39-1) through the thought experiment of an isolated slave-master in a wilderness that public rule exposes the tyrant to inescapable suspicion, constant terror, and ultimate misery (anchor 6 to anchor 7: linked inference extending the tyrannical character analysis).",
+            "anchorIds": [
+              "p-1178274",
+              "p-1179542",
+              "p-1181204"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-1"
+            ]
+          },
+          "generality": {
+            "value": 3.4,
+            "rationale": "Applies specifically to a narrow subcategory: tyrannical individuals who happen to attain absolute public office as rulers over a city.",
+            "anchorIds": [
+              "p-1178274",
+              "p-1181204"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Forms the first formal proof of the comparative inquiry, culminating the extended fivefold taxonomy of regimes and characters resumed in Book VIII (n-37-1) through the demonstrated misery of the public tyrant (n-39-2) to proclaim that the royal and just man is happiest and the tyrannical man most miserable (anchor 6 to anchor 7: linked argument culminating the fivefold regime-soul sequence).",
+            "anchorIds": [
+              "p-1183000",
+              "p-1183667"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-1",
+              "n-39-2"
+            ]
+          },
+          "generality": {
+            "value": 7.3,
+            "rationale": "Presents a broad comparative ethical principle ranking all five fundamental human life orientations and characters in terms of relative happiness and misery.",
+            "anchorIds": [
+              "p-1183000",
+              "p-1183667"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ilGcarXeOOuBncoPjarP6AU",
+  "usage": {
+    "promptTokenCount": 115804,
+    "candidatesTokenCount": 6713,
+    "totalTokenCount": 122517,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 115804
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6713
+      }
+    ]
+  },
+  "durationMs": 33273,
+  "requestHash": "4fe0b3016f6d0cb5b1949f21171d1650a52f374f07343940bbe8e0a6ca5bc872"
+}

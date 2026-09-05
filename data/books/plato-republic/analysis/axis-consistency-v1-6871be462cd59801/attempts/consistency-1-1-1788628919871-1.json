@@ -1,0 +1,574 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-3-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "An evaluative judgment directly characterizing the Republic's central status among Plato's works and its foundational role in philosophical history (anchor 1: immediate inference from the textual characteristics and dialogue comparisons).",
+            "anchorIds": [
+              "p-2409",
+              "p-4608"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Makes a broad claim across the entire corpus of Platonic philosophy and the genesis of foundational sciences like logic and psychology (anchor 5: domain-wide claim with substantial conditions).",
+            "anchorIds": [
+              "p-2409"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "An analytical overview drawing a direct structural synthesis of the overarching search for justice throughout the dialogue (between anchor 1 and anchor 2: summarizing the textual trajectory into a coherent thread).",
+            "anchorIds": [
+              "p-9220"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Applies across the whole compositional scope of the Republic as a single work and its trajectory (between anchor 4 and anchor 5).",
+            "anchorIds": [
+              "p-9220"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Direct structural classification of the text of the Republic into five thematic parts based on textual content and thematic shifts (anchor 1: immediate classification).",
+            "anchorIds": [
+              "p-11296"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies to the internal textual organization and subdivisions of the Republic as an entire text (anchor 4: defined class within one restricted setting).",
+            "anchorIds": [
+              "p-11296"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Develops an inference contrasting two halves of the work to explain potential compositional history and literary inconsistencies (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-13021",
+              "p-15222"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.2,
+            "rationale": "Concerns the thematic structure and composition of the Republic, with illustrative analogies to early literature (anchor 4).",
+            "anchorIds": [
+              "p-13021",
+              "p-15222"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Synthesizes competing interpretations of the dialogue's central subject, deducing that political justice and individual justice are inextricably united as soul and body, warp and woof (between anchor 2 and anchor 3).",
+            "anchorIds": [
+              "p-16108"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Articulates a broad interpretive and philosophical principle regarding the identity of ethics and politics spanning human society and Platonic thought (anchor 6: principle spanning related classes within a domain).",
+            "anchorIds": [
+              "p-16108"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Develops a local interpretative inference from the sequence of characters in Books I and II to historical stages of moral philosophy (anchor 2: developed local inference with its justification).",
+            "anchorIds": [
+              "p-33934",
+              "p-23695"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Pertains to the defined set of interlocutors in the Republic and how they typify stages of moral thought (anchor 4).",
+            "anchorIds": [
+              "p-33934"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Traces the shift in Socrates' role across books from an ironical interrogator to a constructive dogmatic theorist, justifying it through comparison with historical Socratic evidence (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-34602"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Covers the characterization and philosophical method of Socrates across the books of the Republic (between anchor 3 and anchor 4).",
+            "anchorIds": [
+              "p-34602"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates tests traditional definitions with counterexamples (such as returning weapons to a mad friend) and infers their philosophical inadequacy (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-43182",
+              "p-44042",
+              "p-47199"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Pertains to specific popular definitions of justice (paying debts, helping friends/harming enemies) under conventional Greek ethics (anchor 3: narrow subtype under specific conditions).",
+            "anchorIds": [
+              "p-43182",
+              "p-47199"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Thrasymachus introduces his thesis by immediate deduction from how political rulers establish legislation to serve their own advantage (anchor 1: immediate inference from an explicit starting point).",
+            "anchorIds": [
+              "p-48756",
+              "p-51430",
+              "p-54675"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Proposes a general doctrine of political and moral realism across all forms of government (anchor 6: principle spanning related classes within a domain).",
+            "anchorIds": [
+              "p-48756",
+              "p-51430"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Glaucon and Adeimantus formulate a demand by examining the limitations of Socrates' prior refutations and demanding a defense of justice in its intrinsic nature (between anchor 1 and anchor 2).",
+            "anchorIds": [
+              "p-62348",
+              "p-69175"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Defines the scope of inquiry into the intrinsic moral value of justice versus its extrinsic consequences (anchor 5: domain-wide claim with substantial conditions).",
+            "anchorIds": [
+              "p-62348",
+              "p-69175"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Adeimantus gathers cultural and poetic evidence to show that ordinary endorsements of justice rest solely on external advantages and reputations (between anchor 1 and anchor 2: developed inductive observation).",
+            "anchorIds": [
+              "p-65642",
+              "p-66716",
+              "p-69175"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Covers conventional religious and social teachings on virtue across Greek civilization (anchor 5).",
+            "anchorIds": [
+              "p-65642",
+              "p-66716"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Socrates establishes foundational principles of theology (God is only good, unchangeable) by deductions about divine perfection to justify censoring poetry for guardians, building upon the requirements of guardian education established in n-5-4 (depth 3.0), requiring depth >= 3.0.",
+            "anchorIds": [
+              "p-84489",
+              "p-86156",
+              "p-86915"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-4"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Applies directly to religious poetry, narratives, and civic theology taught to prospective guardians within the state (anchor 4 to anchor 5).",
+            "anchorIds": [
+              "p-84489",
+              "p-86156"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Editorial critique evaluating Plato's strict rejection of dietetics and gradual medicine against broader concepts of mind-body interaction and human health, building directly upon the established analysis of gymnastic and Platonic medicine in n-6-1 (depth 3.1).",
+            "anchorIds": [
+              "p-135971",
+              "p-133897"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-1"
+            ]
+          },
+          "generality": {
+            "value": 6.3,
+            "rationale": "Pertains to philosophical principles of health, psychosomatic interaction, and voluntary habit across human life (anchor 6).",
+            "anchorIds": [
+              "p-133897",
+              "p-135971"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "Argues that statutory legislation cannot mend corrupt civic character and is superfluous in a properly nurtured community, building upon both the soul-training through music and gymnastics (n-6-2, depth 3.8) and the organic priority of the whole commonwealth over partial classes (n-6-6, depth 4.1).",
+            "anchorIds": [
+              "p-140763",
+              "p-142482"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-2",
+              "n-6-6"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Broad institutional thesis concerning the limits of statutory jurisprudence compared to civic nurture and ethos (anchor 6).",
+            "anchorIds": [
+              "p-140763",
+              "p-142482"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "Commentator reflects on Book IV's subordination of class happiness, analyzing whether deontological duty precedes utilitarian happiness in ethical philosophy, building directly upon the established thesis that the objective of founding the state is the good of the whole rather than individual class indulgence (n-6-6, depth 4.1).",
+            "anchorIds": [
+              "p-144671",
+              "p-144159",
+              "p-146982"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-6"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Philosophical assessment spanning universal moral theories, comparing deontological duty and utilitarian happiness across ethics and politics (anchor 8: cross-domain principle).",
+            "anchorIds": [
+              "p-144671",
+              "p-146982"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "To defend and justify the paradox of the philosopher-king (n-8-3, depth 5.2), Socrates constructs an epistemological and metaphysical deduction distinguishing cognitive faculties by their distinct objects: knowledge of unchanging being, ignorance of non-being, and opinion of intermediate becoming.",
+            "anchorIds": [
+              "p-190451",
+              "p-195798"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-3"
+            ]
+          },
+          "generality": {
+            "value": 8.5,
+            "rationale": "A fundamental epistemological and metaphysical classification dividing all objects of thought, sensation, and cognitive faculties (between anchor 8 and anchor 9).",
+            "anchorIds": [
+              "p-190451"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.6,
+            "rationale": "Constructs the parable of the ship to explain why true philosophers seem useless, building directly upon the paradox of philosopher-kings (n-8-3, depth 5.2) and the rigorous distinction between authentic knowledge of reality and democratic opinion (n-8-4, depth 5.4).",
+            "anchorIds": [
+              "p-199165"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-3",
+              "n-8-4"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Explains the systemic friction between authentic theoretical knowledge and democratic or existing political regimes (between anchor 5 and anchor 6).",
+            "anchorIds": [
+              "p-199165"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Socrates establishes the Divided Line directly on top of the Sun analogy (n-9-1, depth 5.8), dividing reality and faculties into four proportioned segments based on the prior metaphysical distinctions of being, becoming, and the Good (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "The Divided Line is a broadly reusable, comprehensive epistemological and ontological model mapping all cognitive states and classes of reality across intelligible and visible realms (anchor 7).",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentary evaluates the character of the philosopher by directly comparing the ancient Platonic synoptic ideal with modern empirical science and division of intellectual labour, representing a developed local comparative inference (anchor 2).",
+            "anchorIds": [
+              "p-218184",
+              "p-220383"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "The passage articulates a comparative principle characterizing philosophical inquiry across two broad epochs (ancient Greek vs. modern European philosophy and science; anchor 6).",
+            "anchorIds": [
+              "p-218184",
+              "p-220383"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentator develops an analytical critique of Plato's logical method, noting its attempts to anticipate science a priori without empirical analysis and comparing it to modern rationalist philosophies (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-227850",
+              "p-229129"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Frames a principle regarding the nature of scientific methodology, analyzing a priori systematic deduction versus empirical inductive inquiry across historical schools (anchor 6).",
+            "anchorIds": [
+              "p-227850",
+              "p-229129"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "The Cave allegory translates the established metaphysical hierarchy of the Sun (n-9-1, depth 5.8) and Divided Line (n-9-2, depth 6.0) into an illustrative psychological and pedagogical ascent (anchor 6: linked synthesis combining established results).",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1",
+              "n-9-2"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "The allegory formulates a broadly applicable framework describing the general condition of human enlightenment, education, and the ascent from illusion to intellectual reality (anchor 7).",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Socrates develops a sequence of curricular disciplines—plane geometry, solid geometry, astronomy, and harmonics—justifying their placement by their capacity to compel the mind toward true being, building directly upon the foundational soul-turning role of arithmetic established in n-10-1 (depth 5.0).",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies strictly to the sequence and pedagogical purpose of mathematical disciplines within the higher educational curriculum of the guardians (anchor 4).",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentator evaluates Plato's philosophical aims (realizing and connecting abstractions) and his Pythagorean use of mathematics, developing a local analytical interpretation (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-268244",
+              "p-272641"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates general principles concerning the development of abstract human thought, mathematics as an educational tool, and universal law (anchor 6).",
+            "anchorIds": [
+              "p-268244",
+              "p-272641"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentary analyzes the dual disorders of eyesight from the Cave allegory, applying them to the psychological profiles of theorists versus practical men in daily life and modern politics (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-276257",
+              "p-277947",
+              "p-279461"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Presents a domain-wide psychological and political typology of how statesmen and thinkers misunderstand either general principles or immediate practical facts (anchor 5).",
+            "anchorIds": [
+              "p-276257",
+              "p-277947",
+              "p-279461"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "oE-caq77GcuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 119188,
+    "candidatesTokenCount": 5269,
+    "totalTokenCount": 124457,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 119188
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5269
+      }
+    ]
+  },
+  "durationMs": 23755,
+  "requestHash": "4692edf375722e9c370bf1ae110a71b08927e760208df8e7e21c4c5a222ac4af"
+}

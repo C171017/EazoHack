@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-7-1",
+          "n-7-3",
+          "n-7-4"
+        ],
+        "label": "Moral Duty, Soul, and Justice",
+        "summary": "These commentaries examine the structural foundation of ethics and politics in Book IV. Duty is positioned as prior to utility, the tripartite divisions of the soul are deduced through the principle of contradiction, and justice is formulated as internal order among parts of the soul and the state.",
+        "rationale": "All three entries stem from the Book IV commentary sequence focusing on the internal structure of the soul, moral duty, and the definition of justice as internal harmony."
+      },
+      {
+        "childIds": [
+          "n-8-4",
+          "n-8-7",
+          "n-9-1",
+          "n-9-5"
+        ],
+        "label": "Epistemology, Sun, and Cave",
+        "summary": "This sequence addresses the core metaphysical and epistemological allegories of Books V through VII. Socrates distinguishes knowledge from opinion, designates the Idea of the Good as the guardian's supreme aim, and illustrates intellectual ascent through the Sun analogy and the Allegory of the Cave.",
+        "rationale": "These entries form a continuous thematic and textual unit in Books V–VII covering the ascent of the mind from opinion and cave shadows to the supreme Idea of the Good."
+      },
+      {
+        "childIds": [
+          "n-12-7",
+          "n-15-6",
+          "n-16-1",
+          "n-16-5",
+          "n-17-1"
+        ],
+        "label": "Critique of Social Order and Law",
+        "summary": "These passages evaluate Plato's institutional and biological proposals against ethical and practical limits. The commentary critiques animal-style breeding and the fallacious equation of the state to an individual, contrasts rigid legalism and complex medicine with simple preventive hygiene, balances heredity with human will, and presents the ideal polity as an internal celestial pattern.",
+        "rationale": "Shares a common focus on political and physical regulation—critiquing Plato's eugenics, medical/legal over-complication, and state-individual analogy while setting internal order as a heavenly pattern."
+      },
+      {
+        "childIds": [
+          "n-16-4",
+          "n-16-6",
+          "n-17-2",
+          "n-18-6",
+          "n-18-7",
+          "n-18-8"
+        ],
+        "label": "Philosophic Ideals and Education",
+        "summary": "This group explores the philosophical curriculum and the transcendental role of ideals in governance and human life. It covers the training of the philosopher-statesman through dialectic and lifelong education, analyzes the inspiring function of unattainable ideals, and bridges Platonic conceptions of the Good with modern and Christian spiritual aspirations.",
+        "rationale": "Concentrates on the philosopher-king ideal, lifelong education, dialectic, and the role of speculative and spiritual ideals across Platonic and modern contexts."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9VCcatnOBoKDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 20877,
+    "candidatesTokenCount": 721,
+    "totalTokenCount": 21598,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 20877
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 721
+      }
+    ]
+  },
+  "durationMs": 7343,
+  "requestHash": "92216d5b85f08979d99dfcfc7bbca9c304e7e506f54a5e16c77c5751fed4b06b"
+}

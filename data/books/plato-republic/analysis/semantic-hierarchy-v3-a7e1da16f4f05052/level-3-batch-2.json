@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-2-3",
+          "h-level-2-batch-3-1",
+          "h-level-2-batch-3-2"
+        ],
+        "label": "Education and Guardian Polity",
+        "summary": "This sequence addresses the foundational upbringing and civic structure of the kallipolis, establishing strict censorship of myth, harmonious musical and gymnastic regimens, and rigorous tests for selecting guardians. It defines social justice as specialized non-interference, extends equal training and military duties to female guardians, and establishes communal living and regulated reproduction.",
+        "rationale": "Groups clusters covering Books II–V on the early moral-aesthetic education of guardians, the institutional selection and ascetic lifestyle of rulers, and the radical communal policies governing gender and family."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-2",
+          "h-level-2-batch-3-3",
+          "h-level-2-batch-4-3",
+          "h-level-2-batch-3-4"
+        ],
+        "label": "Philosopher-Kings and Metaphysics",
+        "summary": "These discussions argue that ending civic suffering requires philosopher-kings, confronting public charges of philosophical uselessness through the ship of state allegory while identifying corrupting influences. They chart the epistemological ascent through the analogies of the Sun, Line, and Cave, and culminate in an advanced mathematical and dialectical curriculum designed to reveal the Idea of the Good.",
+        "rationale": "Encompasses the central philosophical books (V–VII), uniting the political doctrine of philosopher-rulers with metaphysical epistemology and the curriculum of dialectic."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-3-5",
+          "h-level-2-batch-3-6",
+          "h-level-2-batch-4-4"
+        ],
+        "label": "Constitutional and Psychic Decay",
+        "summary": "Tracing the stepwise decline of the ideal state through timocracy, oligarchy, democracy, and tyranny, these clusters map civic factionalism directly onto the corruption of the tripartite soul. They analyze the misery of the tyrannical man, distinguish between true and illusory pleasures, and emphasize internal harmony under rational rule.",
+        "rationale": "Brings together Books VIII–IX, focusing on the five constitutional forms, their corresponding psychological profiles, and the comparative analysis of pleasure and misery."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-5"
+        ],
+        "label": "Mimesis, Immortality, and Er",
+        "summary": "Book X analyses reject imitative art as thrice removed from reality and corruptive of psychic reason, establish the immortality of the soul, and recount the Myth of Er to demonstrate the soul's posthumous judgement, cosmic necessity, and choice of destiny.",
+        "rationale": "Maintained as a distinct thematic unit covering Book X's final treatment of poetry, the metaphysical argument for the immortality of the soul, and the eschatological Myth of Er."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-1",
+          "h-level-2-batch-3-7"
+        ],
+        "label": "Scholarly Paratext and Indexes",
+        "summary": "These companion sections compile editorial commentary, thematic index entries, and transcription notes that contextualize Plato's philosophical polity. They examine the dialogue's pedagogical tiers, civic communism, dialectical theology, and historical contrasts with Athenian and Spartan institutions.",
+        "rationale": "Unites all non-dialogue apparatus, including thematic indices and critical editorial commentary located at the end of the text."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "H1KcaqnwBuuBncoPjarP6AU",
+  "usage": {
+    "promptTokenCount": 72573,
+    "candidatesTokenCount": 868,
+    "totalTokenCount": 73441,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 72573
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 868
+      }
+    ]
+  },
+  "durationMs": 9543,
+  "requestHash": "c3e0c903884b43b627f75dbe6e785e19362d2416c5b424e7ccc6b388e2416bd4"
+}

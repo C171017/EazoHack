@@ -1,3 +1,4 @@
-import { PdfWorkspace } from '@/features/reader/pdf/pdf-workspace';
+import { redirect } from 'next/navigation';
 
-export default function PdfPage() { return <PdfWorkspace />; }
+// Retain PDF display components for future use; all current reading uses text.
+export default function PdfPage() { redirect('/'); }

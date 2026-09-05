@@ -1,5 +1,6 @@
 import { AxisBatchSchema, AxisReviewSchema } from '../src/server/book-analysis/axis-prompts';
 import test from 'node:test';
+import { BookEmblemSchema, REPUBLIC_EMBLEM } from '../src/shared/book-emblem';
 import assert from 'node:assert/strict';
 import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
 import os from 'node:os';
@@ -70,12 +71,13 @@ test('text pipeline saves exact coordinates, excludes rejected claims, resumes c
   const generate: Generate = async (_system, prompt, schema) => {
     calls++;
     let value: unknown;
-    if (schema === ExtractSchema) {
+    if (schema === BookEmblemSchema) value = REPUBLIC_EMBLEM;
+    else if (schema === ExtractSchema) {
       const chunk = chunks.find(c => prompt.includes(`Source section hint: ${c.section}.`))!;
       value = { summary: 'A reading unit.', nodes: [{ label: chunk.section, identityLabel: 'Justice', summary: chunk.passages[1].text, sourceRole: 'dialogue', speaker: null, reasoningHint: 'Directly introduced.', generalityHint: 'Reusable claim.', rationale: 'A claim.', passageIds: [chunk.passages[1].id] }], edges: [] };
     } else if (schema === AxisBatchSchema) {
       const data=JSON.parse(prompt.split('DATA:\n')[1]);
-      value={assignments:data.targets.map((id:string)=>{const n=data.catalog.find((n:{id:string})=>n.id===id);return {nodeId:id,assessment:{reasoningDepth:{value:id==='n-1-1'?0:1.5,rationale:'Fixture: local inference or directly introduced.',anchorIds:n.anchorIds,prerequisiteNodeIds:[]},generality:{value:2.75,rationale:'Fixture: broad scope.',anchorIds:n.anchorIds}}};})};
+      value={assignments:data.targets.map((id:string)=>{const n=data.catalog.find((n:{id:string})=>n.id===id);return {nodeId:id,assessment:{reasoningDepth:{value:id==='n-1-1'?0:1.5,rationale:'Fixture: local inference or directly introduced.',anchorIds:n.anchorIds,prerequisiteNodeIds:[]},generality:{value:7.3,rationale:'Fixture: broad scope.',anchorIds:n.anchorIds}}};})};
     } else if (schema === AxisReviewSchema) value={rejected:[]};
     else if (schema === ReviewSchema) value = { rejectedNodes: [{ id: 'n-3-1', reason: 'Test: unsupported classification.' }], rejectedEdges: [], notes: 'Model review fixture.' };
     else if (schema === IdentityRepairSchema) value = { assignments: [{ nodeId: 'n-3-1', identityIndex: 0 }] };
@@ -87,13 +89,14 @@ test('text pipeline saves exact coordinates, excludes rejected claims, resumes c
     const result = await analyzeText(input);
     assert.equal(result.graph.nodes.length, 2);
     assert.equal(result.graph.identities.length, 1);
+    assert.deepEqual(result.graph.bookEmblem, REPUBLIC_EMBLEM);
     const resolved = JSON.parse(await readFile(path.join(result.root, 'synthesis-resolved.json'), 'utf8'));
     assert.equal(resolved.identities[0].nodeIds.length, 3, 'Targeted repair must retain every candidate before evidence review.');
     assert.equal(result.graph.analysis?.rejectedNodes, 1);
     assert.equal(result.graph.analysis?.processedCharacters, raw.length);
-    assert.equal(result.graph.axisVersion,'reasoning-generality-v1');
-    assert.ok(result.graph.nodes.every(n => n.position.y === n.axisAssessment!.generality.value));
-    assert.equal(result.graph.nodes[1].position.x,1.5/4);
+    assert.equal(result.graph.axisVersion,'reasoning-generality-v2');
+    assert.ok(result.graph.nodes.every(n => n.position.y === n.axisAssessment!.generality.value!*4/10));
+    assert.equal(result.graph.nodes[1].position.x,1.5/10);
     assert.notEqual(result.graph.nodes[0].position.z, result.graph.nodes[1].position.z);
     const initialCalls = calls;
     await analyzeText(input);

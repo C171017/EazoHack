@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-21-2",
+          "n-21-3"
+        ],
+        "label": "Justice and Soul Happiness",
+        "summary": "Socrates argues that because a just soul lives well and is happy, injustice can never be more advantageous or profitable than justice.",
+        "rationale": "Both items stem from Socrates' Book I dialogue addressing the relationship between justice, the well-being of the soul, and ultimate profitability."
+      },
+      {
+        "childIds": [
+          "n-25-5",
+          "n-26-4",
+          "n-27-4",
+          "n-29-4"
+        ],
+        "label": "Foundations of the Ideal State",
+        "summary": "These passages establish the civic and biological structure of the just state, critiquing medical practices that encourage civic idleness, allocating societal functions by natural endowment through the Myth of the Metals, organizing governance through civic wisdom and soldierly courage, and recognizing equal potential across genders.",
+        "rationale": "These entries from Books III–V detail the institutional, biological, and civic arrangements necessary to structure and sustain the ideal guardian city."
+      },
+      {
+        "childIds": [
+          "n-32-1",
+          "n-32-2",
+          "n-32-4",
+          "n-32-5",
+          "n-32-6",
+          "n-33-1",
+          "n-33-2"
+        ],
+        "label": "Philosophy and the State",
+        "summary": "This sequence examines the qualifications and nature of true philosophers as rulers, the societal misunderstanding and corruption that degrade philosophical practice, and the structured education and proper public presentation needed to reconcile philosophy with the city.",
+        "rationale": "All seven occurrences form a continuous Book VI thematic sequence focusing on the true philosopher's character, their public reputation, and the path to philosophical governance."
+      },
+      {
+        "childIds": [
+          "n-28-6",
+          "n-37-3",
+          "n-37-4",
+          "n-37-5",
+          "n-37-7"
+        ],
+        "label": "Degeneration of Regimes and Souls",
+        "summary": "Socrates identifies five corresponding forms of constitutions and human souls, tracing the gradual decline of the ideal aristocracy through calculated birth errors into timocracy, the rise of the timocratic character, and subsequent degeneration into oligarchy dominated by property qualifications and avarice.",
+        "rationale": "These passages articulate the theoretical framework and actual process of constitutional and psychological decay from the ideal monarchy/aristocracy to timocracy and oligarchy."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "41Ccar7SKq2dncoP5daroAE",
+  "usage": {
+    "promptTokenCount": 12559,
+    "candidatesTokenCount": 637,
+    "totalTokenCount": 13196,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12559
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 637
+      }
+    ]
+  },
+  "durationMs": 6705,
+  "requestHash": "68f6bd33dd0795c20ab655f5f9eb5a79d0984c4cb2d673c3b84c38e884516887"
+}

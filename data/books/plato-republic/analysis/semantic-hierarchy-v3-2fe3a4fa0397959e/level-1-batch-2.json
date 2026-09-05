@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-1-1",
+          "n-1-2",
+          "n-2-1",
+          "n-2-2",
+          "n-2-3",
+          "n-2-4"
+        ],
+        "label": "Editorial Notices and Preface",
+        "summary": "These front-matter items detail the publication of the third edition of Plato's Republic translated by Benjamin Jowett, including title details, dedication to Oxford pupils, acknowledgments, the extent of textual revisions, an exchange program for earlier copies, and future dialogue revision plans.",
+        "rationale": "These entries all stem from the opening paratextual and preface material of Jowett's edition, clustered closely in spatial coordinates and topic."
+      },
+      {
+        "childIds": [
+          "n-3-1",
+          "n-3-3"
+        ],
+        "label": "Overview and Structure of Work",
+        "summary": "Jowett introduces Plato's Republic as his greatest dialogue at the center of his thought, and outlines its overarching structure according to five natural conceptual divisions.",
+        "rationale": "Both items are introductory commentary passages by Jowett assessing the overarching philosophical merit and structural division of the entire dialogue."
+      },
+      {
+        "childIds": [
+          "n-38-2",
+          "n-38-4",
+          "n-38-5",
+          "n-38-6"
+        ],
+        "label": "Democracy and Its Degeneration",
+        "summary": "Socrates examines democratic governance, its unchecked liberty, the internal psychology of the democratic individual, its division into three socio-economic classes, and how extreme freedom precipitates the emergence of tyranny.",
+        "rationale": "These entries sequentially analyze the character, structure, and internal instability of democracy within Book VIII."
+      },
+      {
+        "childIds": [
+          "n-38-7",
+          "n-38-8",
+          "n-39-1",
+          "n-39-2",
+          "n-39-3",
+          "n-40-2"
+        ],
+        "label": "Tyranny and the Tyrant's Soul",
+        "summary": "Socrates traces the transformation of the popular champion into a tyrannical ruler, the genesis and lawless desires of the tyrannical character, the miserable servitude of ruling publicly, and proofs showing that the tyrant is uniquely unhappy and distant from true pleasure compared to the just king.",
+        "rationale": "These passages from Books VIII and IX form a coherent thematic progression exploring the rise, nature, psychological pathology, and supreme misery of the tyrant."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xFCcaradHJqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 8480,
+    "candidatesTokenCount": 626,
+    "totalTokenCount": 9106,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8480
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 626
+      }
+    ]
+  },
+  "durationMs": 5815,
+  "requestHash": "4fed61feed0a62bebc0ab94f35ea4d74c5fb8f0f75c4dd560d7ffac3b97214fc"
+}

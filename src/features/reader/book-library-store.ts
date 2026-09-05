@@ -1,7 +1,10 @@
 import type { UploadedBook } from './upload-book';
+import { pdfImportNote } from './pdf/import-model';
+import { nextShelfPosition, type ShelfPosition } from './bookshelf-model';
+import { BookEmblemSchema, type BookEmblem } from '@/shared/book-emblem';
 
-export type LibraryEntry = { id: string; title: string; kind: UploadedBook['kind']; addedAt: string };
-export const uploadedBookId = (book: UploadedBook) => book.kind === 'txt' ? book.bookId : `pdf:${book.hash}`;
+export type LibraryEntry = { id: string; title: string; kind: UploadedBook['kind']; addedAt: string; ready?: boolean; note?: string; shelf?: ShelfPosition; emblem?: BookEmblem };
+export const uploadedBookId = (book: UploadedBook) => book.kind === 'pdf' ? `pdf:${book.hash}` : book.originalPdf ? `pdf:${book.originalPdf.hash}` : book.bookId;
 
 /** Keep the catalogue separate so browsing never loads every book's contents. */
 export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-library') {
@@ -32,16 +35,42 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
     } finally { db.close(); }
   }
   return {
-    async save(book: UploadedBook) {
+    async save(book: UploadedBook, requestedSlot?: number) {
       const id = uploadedBookId(book);
       await transaction('readwrite', tx => {
-        tx.objectStore('books').put(book, id);
-        return tx.objectStore('catalogue').put({ id, title: book.title, kind: book.kind, addedAt: new Date().toISOString() } satisfies LibraryEntry);
+        const catalogue = tx.objectStore('catalogue');
+        const request = catalogue.getAll() as IDBRequest<LibraryEntry[]>;
+        request.onsuccess = () => {
+          const entries = placeLegacyEntries(request.result);
+          for (const entry of entries) catalogue.put(entry);
+          const previous = entries.find(entry => entry.id === id);
+          // Conversion and duplicate uploads retain their original place and emblem.
+          const shelf = previous?.shelf ?? nextShelfPosition(id, new Set([0, ...entries.map(entry => entry.shelf!.slot)]), requestedSlot);
+          tx.objectStore('books').put(book, id);
+          catalogue.put({ ...previous, id, title: book.title, kind: book.kind === 'pdf' || book.originalPdf ? 'pdf' : 'txt', ready: book.kind === 'txt', addedAt: previous?.addedAt ?? new Date().toISOString(), shelf,
+            ...(book.kind === 'txt' && book.originalPdf ? { note: pdfImportNote(book.originalPdf.manifest) } : {}),
+          } satisfies LibraryEntry);
+        };
+        return request;
       });
     },
     async list(): Promise<LibraryEntry[]> {
-      const entries = await transaction<LibraryEntry[]>('readonly', tx => tx.objectStore('catalogue').getAll());
-      return entries.sort((a, b) => b.addedAt.localeCompare(a.addedAt));
+      const entries = await transaction<LibraryEntry[]>('readwrite', tx => {
+        const catalogue = tx.objectStore('catalogue');
+        const request = catalogue.getAll() as IDBRequest<LibraryEntry[]>;
+        request.onsuccess = () => { for (const entry of placeLegacyEntries(request.result)) catalogue.put(entry); };
+        return request;
+      });
+      return placeLegacyEntries(entries).sort((a, b) => a.shelf!.slot - b.shelf!.slot);
+    },
+    async setEmblem(id: string, value: BookEmblem) {
+      const emblem = BookEmblemSchema.parse(value);
+      await transaction('readwrite', tx => {
+        const catalogue = tx.objectStore('catalogue');
+        const request = catalogue.get(id) as IDBRequest<LibraryEntry | undefined>;
+        request.onsuccess = () => { if (request.result) catalogue.put({ ...request.result, emblem }); };
+        return request;
+      });
     },
     async load(id: string): Promise<UploadedBook> {
       const book = await transaction<UploadedBook | undefined>('readonly', tx => tx.objectStore('books').get(id));
@@ -49,5 +78,15 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
       return book;
     },
   };
+}
+
+/** Upgrade the lightweight catalogue in place without reading source files. */
+function placeLegacyEntries(entries: LibraryEntry[]) {
+  const occupied = new Set<number>([0]); // The bundled Republic has its own place.
+  return [...entries].sort((a, b) => Number(!a.shelf) - Number(!b.shelf) || a.addedAt.localeCompare(b.addedAt) || a.id.localeCompare(b.id)).map(entry => {
+    const shelf = entry.shelf && !occupied.has(entry.shelf.slot) ? entry.shelf : nextShelfPosition(entry.id, occupied);
+    occupied.add(shelf.slot);
+    return { ...entry, shelf };
+  });
 }
 export const bookLibrary = createBookLibrary();

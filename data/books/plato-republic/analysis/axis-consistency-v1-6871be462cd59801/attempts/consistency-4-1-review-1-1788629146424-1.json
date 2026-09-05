@@ -1,0 +1,44 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-34-3",
+        "reason": "The reasoning depth rationale states that n-34-3 directly depends on n-34-2, citing a depth of 6.2 for n-34-2. However, in the catalog/proposed graph, n-34-2 is assessed at depth 5.2, not 6.2. Grounding a required lower bound of >= 6.2 and a calibration to 6.4 on a non-existent 6.2 rating for n-34-2 constitutes a numerical contradiction in the prerequisite calculation."
+      },
+      {
+        "nodeId": "n-38-7",
+        "reason": "The reasoning depth rationale explicitly justifies the rating by claiming that prerequisite n-38-5 is at depth 7.1 ('Because it directly combines the excessive liberty dynamic (n-38-5, depth 7.1...)'). In the proposed graph, however, n-38-5 is rated at depth 5.9, not 7.1. Citing an inflated prerequisite depth to force n-38-7 to 7.1 is ungrounded."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "llCcat-GMYyOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 136572,
+    "candidatesTokenCount": 279,
+    "totalTokenCount": 136851,
+    "cachedContentTokenCount": 130934,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 136572
+      }
+    ],
+    "cacheTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 130934
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 279
+      }
+    ]
+  },
+  "durationMs": 4717,
+  "requestHash": "3980984906da57271e2cb97cecc5d6913f193e2841ca90d8d4ffc263d9a6b1b7"
+}

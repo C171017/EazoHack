@@ -2,10 +2,12 @@
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
-import { readUploadedBook, type UploadedBook } from '../reader/upload-book';
+import { readUploadedBook, type UploadedBook, type TextBook } from '../reader/upload-book';
 import { BookLibrary } from '../reader/book-library';
+import { ensureBookEmblem } from '../reader/book-emblem-client';
+import type { ShelfPlacement } from '../reader/bookshelf-model';
 import { bookLibrary, uploadedBookId } from '../reader/book-library-store';
-import { PdfWorkspace } from '../reader/pdf/pdf-workspace';
+import { IncompatiblePdfError, PDF_IMPORT_VERSION, pdfImportNote, type ImportState } from '../reader/pdf/import-model';
 import { Button } from '@/ui/components/button';
 import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type RouteKind } from '@/shared/schemas';
 import type { WorkspaceSnapshot } from '../persistence';
@@ -24,22 +26,82 @@ import { useHeatPlacement } from '../book-graph/use-heat-placement';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 
 export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstrap}) {
-  const [uploaded, setUploaded] = useState<UploadedBook | null>(null);
+  const [uploaded, setUploaded] = useState<TextBook | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
-  async function upload(file: File) {
-    const book = await readUploadedBook(file);
-    await bookLibrary.save(book);
-    setUploaded(book);
+  const [importState, setImportState] = useState<ImportState | null>(null);
+  const [libraryRevision, setLibraryRevision] = useState(0);
+  const importing = useRef<AbortController | null>(null);
+  const retryInput = useRef<File | UploadedBook | null>(null);
+  const retryPlacement = useRef<ShelfPlacement | undefined>(undefined);
+  useEffect(() => () => importing.current?.abort(), []);
+  async function processBook(input: File | UploadedBook, placement?: ShelfPlacement) {
+    if (importing.current) return;
+    const controller = new AbortController();
+    importing.current = controller;
+    retryInput.current = input;
+    retryPlacement.current = placement;
+    const title = placement?.title ?? (input instanceof File ? input.name : input.title);
+    setLibraryOpen(true);
+    setImportState({ title, status: 'processing', percent: 0, stage: 'Preparing book' });
+    const update = (progress: Pick<ImportState, 'percent' | 'stage' | 'completed' | 'total'>) => {
+      if (!controller.signal.aborted) setImportState({ ...progress, title, status: 'processing' });
+    };
+    try {
+      let book = input instanceof File ? await readUploadedBook(input) : input;
+      if (placement) book = { ...book, title: placement.title };
+      if (book.kind === 'txt' && book.originalPdf && book.originalPdf.manifest.version !== PDF_IMPORT_VERSION) {
+        book = { kind: 'pdf', title: book.title, hash: book.originalPdf.hash, data: book.originalPdf.data };
+      }
+      controller.signal.throwIfAborted();
+      if (book.kind === 'pdf') {
+        // Save the original before conversion, including on failed/cancelled imports.
+        // Avoid replacing an existing ready conversion on a duplicate upload.
+        const saved = await bookLibrary.load(uploadedBookId(book)).catch(() => null);
+        controller.signal.throwIfAborted();
+        if (saved?.kind === 'txt' && saved.originalPdf?.manifest.version === PDF_IMPORT_VERSION) book = saved;
+        else {
+          await bookLibrary.save(book, placement?.slot);
+          setLibraryRevision(value => value + 1);
+          const { importPdfBook } = await import('../reader/pdf/import-book');
+          book = await importPdfBook(book, controller.signal, update);
+        }
+      }
+      controller.signal.throwIfAborted();
+      update({ percent: 99, stage: 'Saving book' });
+      if (placement) book = { ...book, title: placement.title };
+      await bookLibrary.save(book, placement?.slot);
+      controller.signal.throwIfAborted();
+      setUploaded(book);
+      setImportState({ title, status: 'ready', percent: 100, stage: 'Ready to read', note: book.originalPdf ? pdfImportNote(book.originalPdf.manifest) : undefined });
+      setLibraryRevision(value => value + 1);
+      void ensureBookEmblem(book).then(() => setLibraryRevision(value => value + 1)).catch(() => {
+        // The built-in line emblem remains usable if the provider is unavailable.
+      });
+    } catch (error) {
+      const cancelled = controller.signal.aborted;
+      setImportState(previous => ({ title, percent: previous?.percent ?? 0, status: cancelled ? 'cancelled' : 'failed',
+        stage: cancelled ? 'Processing cancelled' : error instanceof IncompatiblePdfError ? 'PDF not compatible' : 'Could not prepare book',
+        error: cancelled ? 'You can retry when you’re ready.' : error instanceof Error ? error.message : 'Processing failed. Please retry.',
+      }));
+    } finally { importing.current = null; }
+  }
+  async function upload(file: File, placement?: ShelfPlacement) {
+    await processBook(file, placement);
+  }
+  async function selectBook(book: UploadedBook | null) {
+    if (importing.current) return;
+    if (book?.kind === 'pdf' || (book?.originalPdf && book.originalPdf.manifest.version !== PDF_IMPORT_VERSION)) { await processBook(book); return; }
+    setUploaded(book); setLibraryOpen(false); setImportState(null);
   }
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
   return <>
-    {uploaded?.kind === 'pdf' ? <PdfWorkspace key={uploaded.hash} initialInput={{ id: 1, title: uploaded.title, hash: uploaded.hash, data: uploaded.data.slice() }} onReturn={() => setUploaded(null)} onLibrary={() => setLibraryOpen(true)} /> :
-      <TextWorkspace key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? 'The Republic of Plato.'} onUpload={upload} onReset={uploaded ? () => setUploaded(null) : undefined} onLibrary={() => setLibraryOpen(true)} />}
-    {libraryOpen && <BookLibrary currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={book => { setUploaded(book); setLibraryOpen(false); }} onClose={() => setLibraryOpen(false)} />}
+    <TextWorkspace key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
+    {libraryOpen && <BookLibrary currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
+      importState={importState} revision={libraryRevision} sampleEmblem={graph.bookEmblem} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />}
   </>;
 }
 
-function TextWorkspace({preview, graph, title, onUpload, onReset, onLibrary}: {preview: BookPreview; graph: MapBootstrap; title: string; onUpload: (file: File) => Promise<void>; onReset?: () => void; onLibrary: () => void}) {
+function TextWorkspace({preview, graph, title, onLibrary}: {preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
   const bookId = graph.bookId;
   const footprints = useReadingFootprints(bookId);
   const recordFootprints = footprints.record;
@@ -185,7 +247,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset, onLibrary}: {p
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
-        <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} onLibrary={onLibrary} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
+        <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onLibrary={onLibrary} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
       <section className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
         <div className="absolute inset-0">{graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>

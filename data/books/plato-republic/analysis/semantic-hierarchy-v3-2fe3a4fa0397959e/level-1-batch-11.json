@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-7-5",
+          "n-8-2",
+          "n-15-4"
+        ],
+        "label": "Gender Equality and Civic Unity",
+        "summary": "Socrates and the commentary examine the communal organization of the guardian class, emphasizing that natural aptitudes for war and civic leadership belong equally to women. Consequently, both sexes require common educational training to maintain an unbroken, organic civic unity where all members share joys and pains.",
+        "rationale": "These entries focus on Plato's proposals regarding gender parity in guardian duties and education, showing how removing private divisions fosters complete civic cohesion."
+      },
+      {
+        "childIds": [
+          "n-8-3",
+          "n-8-5",
+          "n-8-6"
+        ],
+        "label": "The Philosopher and Public Life",
+        "summary": "This sequence addresses the difficult relationship between authentic philosophy and state governance. While Socrates asserts that just rule requires uniting political authority with philosophy, allegories and analysis reveal how the true navigator is incapacitated by democratic factions and gifted natures are corrupted by public flattery.",
+        "rationale": "All three items center on Books V and VI themes concerning the philosopher-king paradox, the ship of state allegory, and the societal pressures that ruin philosophic potential."
+      },
+      {
+        "childIds": [
+          "n-9-2",
+          "n-10-3"
+        ],
+        "label": "Cognitive Ascent and Dialectic",
+        "summary": "Socrates establishes an epistemology of intellectual ascension through the Divided Line, mapping faculties from sensory opinion to intelligible comprehension. Dialectic stands as the ultimate science, surpassing mathematical hypotheses to lead pure reason directly to the idea of the good.",
+        "rationale": "These adjacent items from Books VI and VII delineate Plato's highest metaphysical and cognitive levels, contrasting sensory perception with dialectical knowledge."
+      },
+      {
+        "childIds": [
+          "n-11-1",
+          "n-11-7",
+          "n-12-4",
+          "n-12-6"
+        ],
+        "label": "Regime Decline and the Soul",
+        "summary": "The commentary traces the sequential ethical degradation of cities and individual souls from reason down to tyrannical passion across four corrupt constitutions. It contrasts these declines with the tripartite nature of the soul and the philosopher's superior claim to pure, rational pleasures over appetitive indulgence.",
+        "rationale": "Spanning Books VIII and IX, these passages analyze the systematic decay of political regimes alongside corresponding psychological disorders and the true hierarchy of pleasures."
+      },
+      {
+        "childIds": [
+          "n-14-1",
+          "n-14-2",
+          "n-16-7"
+        ],
+        "label": "Art, Poetry, and Moral Education",
+        "summary": "Plato critiques traditional poetry for exciting inferior passions and prioritizing particulars over rational truth, prompting his strict censorship of mythological models. In response, commentary evaluates how early training in harmonious music and disciplined gymnastics, as well as art oriented toward divine ideals, can cultivate moral character.",
+        "rationale": "These selections encompass Plato's aesthetic critique and educational philosophy, detailing the tensions between mimetic poetry's risks and the formative role of music and gymnastic."
+      },
+      {
+        "childIds": [
+          "n-14-7",
+          "n-15-7",
+          "n-16-2"
+        ],
+        "label": "Critiques of Plato's Social Plan",
+        "summary": "Commentary highlights practical and natural limits to Plato's radical social engineering, demonstrating that infant survival depends upon the natural family unit rather than public nurseries. Furthermore, attempts to breed exceptional human qualities through state lotteries ignore hereditary complexity, leaving the ideal commonwealth as an imaginative pattern rather than a feasible reality.",
+        "rationale": "These sections reflect critical commentary on the utopian feasibility of the Republic, specifically analyzing biological absurdities in communal child-rearing, selective breeding, and practical governance."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9FCcauXTIcuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 18951,
+    "candidatesTokenCount": 929,
+    "totalTokenCount": 19880,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18951
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 929
+      }
+    ]
+  },
+  "durationMs": 7677,
+  "requestHash": "b85328f44af641985653c39271f8069eef88122badb6e871fd975e7cdecead94"
+}

@@ -1,5 +1,7 @@
 # Layered PDF to plain text implementation
 
+> Current routing · 2026-09-06: uploads now use [lightweight PDF text import](27-pdf-text-import.md), with embedded extraction and geometry repair only. No OCR runs during import. Successful PDFs open in the TXT reader; the original PDF and source mappings are retained. `/pdf` redirects to `/`. The implementation below is retained for future PDF display work.
+
 Updated 2026-09-05. This implements the text-first scope from [the PDF research and coverage document](11-pdf-whole-book-analysis.md), alongside the existing [PDF reader](12-pdf-reader-implementation.md). Server OCR, its hosting, provider, queue and full-book recognition remain unimplemented by request. The original PDF is always retained. TXT reader and model configuration are separate tasks.
 
 ## Layers and boundaries

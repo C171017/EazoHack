@@ -39,7 +39,7 @@ export async function loadMapStore():Promise<MapStore> {
   return cache.promise;
 }
 export function mapBootstrap({graph,hierarchy,entries}:MapStore):MapBootstrap {
-  return {axisVersion:graph.axisVersion,bookId:graph.bookId,graphVersion:graph.graphVersion,analysis:graph.analysis,version:hierarchy.version,roots:hierarchy.roots.map(id=>entries.get(id)!),depth:hierarchy.depth,totalNodes:graph.nodes.length,unplaced:graph.nodes.filter(n=>Object.values(n.position).includes(null)).length,territories:graph.territories.map(({id,label,centroidX})=>({id,label,centroidX}))};
+  return {bookEmblem:graph.bookEmblem,axisVersion:graph.axisVersion,bookId:graph.bookId,graphVersion:graph.graphVersion,analysis:graph.analysis,version:hierarchy.version,roots:hierarchy.roots.map(id=>entries.get(id)!),depth:hierarchy.depth,totalNodes:graph.nodes.length,unplaced:graph.nodes.filter(n=>Object.values(n.position).includes(null)).length,territories:graph.territories.map(({id,label,centroidX})=>({id,label,centroidX}))};
 }
 export function nodeDetail({graph}:MapStore,id:string):NodeDetail|null {
   const node=graph.nodes.find(n=>n.id===id);if(!node)return null;

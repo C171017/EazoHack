@@ -1,0 +1,619 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-28-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Socrates establishes civic justice by utilizing the three previously defined virtues (wisdom, courage, temperance) and the foundational principle of division of labour, completing the residue argument (anchor 5: a result that uses earlier established arguments).",
+            "anchorIds": [
+              "p-831955",
+              "p-828602",
+              "p-831626"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-27-4",
+              "n-27-5",
+              "n-27-6"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "The definition directly governs the structural classes (trader, auxiliary, guardian) within the restricted setting of the ideal civic state (anchor 4).",
+            "anchorIds": [
+              "p-831955",
+              "p-831626"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "This is introduced as an axiomatic logical definition/starting claim (anchor 0), followed immediately by illustrative qualifications (a man standing and moving, spinning tops) to establish precision (anchoring close to 0 with minimal local inference, 0.3).",
+            "anchorIds": [
+              "p-836466",
+              "p-836892",
+              "p-837402"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 10,
+            "rationale": "The principle of non-contradiction is stated as a maximally general ontological and logical principle applying to any entity acting or being acted upon across all domains (anchor 10).",
+            "anchorIds": [
+              "p-836466"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "The claim deduces the distinct parts of the soul using a sequence of inferences applying the principle of non-contradiction to internal conflict (thirst vs. restraint, Leontius's desire vs. spirit), moving from anchor 3 into a complete local deduction (3.4).",
+            "anchorIds": [
+              "p-845386",
+              "p-846869",
+              "p-849077"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-2"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Applies across the human domain to define the universal tripartite psychological architecture of all human souls (anchor 6).",
+            "anchorIds": [
+              "p-845386",
+              "p-849077"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "This synthesizes the established definition of civic justice as each part doing its own business with the tripartite psychology of the soul, combining multiple established results into individual justice as internal psychic harmony (anchor 6).",
+            "anchorIds": [
+              "p-856473",
+              "p-851513",
+              "p-854000"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-1",
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "The claim characterizes individual virtue and justice across human conduct generally, applying to any individual soul across varied actions (anchor 6 with slight breadth beyond restricted civic roles, 6.2).",
+            "anchorIds": [
+              "p-856473"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "An immediate inference drawn via the analogy between somatic health/disease and psychic order, concluding that questioning justice's profitability is absurd (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-859615",
+              "p-858701",
+              "p-860234"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Defines virtue and vice across the entire domain of psychic states in human beings (anchor 6).",
+            "anchorIds": [
+              "p-859615",
+              "p-858701"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Directly infers from the correspondence of the ideal city and just man that four remaining forms of regime correspond to four remaining defective psychic states (anchor 2).",
+            "anchorIds": [
+              "p-861665",
+              "p-861207",
+              "p-861963"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-1",
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Applies domain-wide across political regimes and psychological types, setting out the fivefold typology (anchor 5).",
+            "anchorIds": [
+              "p-861665",
+              "p-861207"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "A dramatic conversational turn and narrative event where Adeimantus and Polemarchus physically interrupt and challenge Socrates (anchor 0: directly introduced observation/event).",
+            "anchorIds": [
+              "p-863503",
+              "p-863856",
+              "p-862361"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single specific dramatic scene within the dialogue between Adeimantus and Socrates (anchor 0).",
+            "anchorIds": [
+              "p-863503",
+              "p-863856"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Argues from an analogical inference (female hunting watchdogs performing identical tasks to males) to conclude that female guardians require identical education and duties (anchor 2: developed local inference with its justification).",
+            "anchorIds": [
+              "p-869334",
+              "p-869966",
+              "p-870247"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Restricted specifically to female guardians within the ideal civic commonwealth (anchor 4: defined class within one restricted setting).",
+            "anchorIds": [
+              "p-869966",
+              "p-870247"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "A short sequence of local inferences distinguishing essential relevance to an art/craft from accidental physiological differences (like bald vs. hairy cobblers, childbearing vs. begetting) to resolve a methodological objection (anchor 3).",
+            "anchorIds": [
+              "p-875318",
+              "p-876701",
+              "p-877254"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "A general methodological and philosophical principle determining how differences in natural aptitude apply across arts and practices (anchor 6).",
+            "anchorIds": [
+              "p-875318",
+              "p-876701"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers from the clarification of natural differences that administrative and guardian talents are scattered among both men and women (anchor 2: developed local inference).",
+            "anchorIds": [
+              "p-879718",
+              "p-880643",
+              "p-880940"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-3"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "A domain-wide claim covering human natural aptitudes across the sexes, with an explicit condition/qualification ('in all of them a woman is inferior to a man') (anchor 5).",
+            "anchorIds": [
+              "p-879718",
+              "p-880643"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "A complete local institutional argument that works out the legislative details of common wives, secret lottery breeding, and generational kinship to implement guardian unity (anchor 4).",
+            "anchorIds": [
+              "p-884384",
+              "p-890415",
+              "p-895987"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-2",
+              "n-26-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Enacts a detailed regulatory institution specifically confined to the guardian class of the ideal republic (anchor 4).",
+            "anchorIds": [
+              "p-884384",
+              "p-890415"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "A foundational premise/first principle posited at the start of examining the law's aim, immediately inferring that unity is the highest civic good and distraction the greatest evil (anchor 1: immediate inference from an explicit starting point).",
+            "anchorIds": [
+              "p-897132",
+              "p-897597",
+              "p-897765"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "A broadly reusable normative principle for statecraft, defining the supreme good and criterion for any political commonwealth (anchor 7).",
+            "anchorIds": [
+              "p-897132",
+              "p-897597",
+              "p-897765"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Develops the claim of civic unity via the organic analogy of the single human body, where harm to a single finger reverberates through the whole (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-898308",
+              "p-898569",
+              "p-902521"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-6"
+            ]
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "Provides an overarching model of civic cohesion applicable to any well-ordered commonwealth, bridging community of ownership and shared sensation (approaching anchor 7, 6.8).",
+            "anchorIds": [
+              "p-898308",
+              "p-898569"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers from the definition of Hellenes as natural kin that conflict between Greek cities is civil discord rather than true war, deducing specific prohibitions against enslavement and destruction (anchor 2).",
+            "anchorIds": [
+              "p-917134",
+              "p-919634",
+              "p-922157"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Applies strictly to Hellenic inter-city warfare and conduct, bounded by Greek identity as opposed to external barbarians (anchor 4: defined class within a restricted setting, positioned at 3.8).",
+            "anchorIds": [
+              "p-917134",
+              "p-919634",
+              "p-922157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Uses the analogy of an artist painting a perfectly beautiful human to justify that an ideal standard does not lose validity simply because it cannot be fully actualized in matter (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-925041",
+              "p-925834",
+              "p-926473"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Formulates an epistemological and normative principle governing the nature of theoretical ideals, models, and evaluative standards across varied philosophical domains (anchor 8).",
+            "anchorIds": [
+              "p-925041",
+              "p-925834"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "The central political culmination of Book V ('the third wave'): combines the necessity of realizing the ideal state with the requisite moral and cognitive perfection of rulers (anchor 5: a major result that uses earlier established arguments on guardian excellence and state unity).",
+            "anchorIds": [
+              "p-927858",
+              "p-927555",
+              "p-929473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-1",
+              "n-30-3"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "Asserts a sweeping universal condition for the cessation of evils across all human cities and the entire human race ('cities will never have rest from their evils,--nor the human race') (between anchors 7 and 8).",
+            "anchorIds": [
+              "p-927858"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Argues by inductive analogy from lovers of youth, wine, and honor that anyone who truly desires a class of goods must desire the whole class and not merely a part (anchor 2: developed local inference).",
+            "anchorIds": [
+              "p-932037",
+              "p-932216",
+              "p-930486"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "A general principle concerning the psychological definition of desire and love for a whole class of objects, applied to wisdom (anchor 6).",
+            "anchorIds": [
+              "p-932037",
+              "p-932216"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Infers a sharp distinction between genuine lovers of wisdom and superficial amateurs (curious lovers of sights and sounds) by defining the philosopher as one who loves the vision of truth (anchor 2).",
+            "anchorIds": [
+              "p-933820",
+              "p-932976",
+              "p-933719"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-5"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Defines the specific character and domain of the true philosopher in contrast to lovers of spectacles (anchor 5).",
+            "anchorIds": [
+              "p-933820",
+              "p-932976",
+              "p-933719"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "An initial metaphysical premise introduced to ground the distinction between Forms and appearances: each Form is itself one, but appears manifold through its combinations (anchor 1: immediate inference from the duality of opposites).",
+            "anchorIds": [
+              "p-934256",
+              "p-934184"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8.5,
+            "rationale": "Applies across all Forms and their instantiations—beauty, justice, good, evil, and every other class (between anchor 8 and 9: a cross-domain metaphysical principle).",
+            "anchorIds": [
+              "p-934256"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Deduces that those who confuse beautiful particulars with absolute beauty resemble dreamers, while those who distinguish the Form from participating objects are truly awake (anchor 2: developed local inference with justification).",
+            "anchorIds": [
+              "p-935097",
+              "p-934770",
+              "p-935644"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-6",
+              "n-31-1"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates a general epistemological classification contrasting sensory attachment with intellectual contemplation (anchor 6).",
+            "anchorIds": [
+              "p-935097",
+              "p-935644"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Introduced as a formal foundational definition of a faculty (power), distinguishing faculties by their distinct spheres and results rather than sensible traits (anchor 0: directly introduced definition with immediate clarification, 0.2).",
+            "anchorIds": [
+              "p-938311",
+              "p-938038"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "A general ontological and psychological definition of powers/faculties in humans and all other things (anchor 8: cross-domain principle).",
+            "anchorIds": [
+              "p-938311",
+              "p-938038"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Carries out a sequence of local inferences: knowledge is infallible while opinion errs; therefore they are distinct faculties; by the definition of faculty, they must have distinct subject matters (anchor 3: short sequence of local inferences).",
+            "anchorIds": [
+              "p-939909",
+              "p-939313",
+              "p-939534"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-3"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Establishes a fundamental epistemological thesis concerning the separate spheres of cognitive powers (anchor 7).",
+            "anchorIds": [
+              "p-939909",
+              "p-939534"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "A complete local argument: knowledge correlates with being and ignorance with non-being; because opinion is clearer than ignorance but darker than knowledge, it is an intermediate faculty correlating with what both is and is not (anchor 4).",
+            "anchorIds": [
+              "p-941587",
+              "p-940803",
+              "p-941467"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-4"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "A core epistemological principle categorizing opinion's ontological status between pure being and nothingness (anchor 7).",
+            "anchorIds": [
+              "p-941587",
+              "p-940803"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Examines sensory particulars through instances (beauty that appears ugly, double that is half) to show that sensible things exhibit contradictory properties and cannot be fixed as purely being or non-being (anchor 2: developed local inference with examples).",
+            "anchorIds": [
+              "p-943069",
+              "p-943183",
+              "p-943638"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-2",
+              "n-31-1"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "A sweeping claim regarding all sensible particulars in the physical and experiential world (between anchors 7 and 8).",
+            "anchorIds": [
+              "p-943069",
+              "p-943638"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Ok-carumCdCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 42166,
+    "candidatesTokenCount": 6130,
+    "totalTokenCount": 48296,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42166
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6130
+      }
+    ]
+  },
+  "durationMs": 30196,
+  "requestHash": "bd4dd8c56a67877651896bd5709a52162b9c272c4e7903ad5d873a9391e232c4"
+}

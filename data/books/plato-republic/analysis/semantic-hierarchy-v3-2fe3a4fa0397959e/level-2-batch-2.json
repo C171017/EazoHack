@@ -1,0 +1,90 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-7-2",
+          "h-level-1-batch-5-1"
+        ],
+        "label": "Commentary on Ideal Polities",
+        "summary": "Scholarly commentary traces the evolution and reception of Platonic political theory across historical counterparts, contrasting the Republic, Laws, and Statesman with later utopian and imperial visions in Cicero, Augustine, Dante, More, and Campanella.",
+        "rationale": "Both child groups consist of secondary editorial commentaries examining Plato's political philosophy alongside subsequent Western political and utopian literature."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-5-2",
+          "h-level-1-batch-5-3",
+          "h-level-1-batch-8-1",
+          "n-21-5",
+          "h-level-1-batch-5-4"
+        ],
+        "label": "Foundational Inquiries on Justice",
+        "summary": "Early dialectical exchanges challenge conventional definitions of justice from Cephalus and Polemarchus, progress through Thrasymachus's cynical thesis on power, and culminate in Socrates's defense of the soul's welfare and subsequent aporia. In response, Glaucon and Adeimantus present their Book II challenge, urging Socrates to prove the intrinsic value of justice by examining it within the larger framework of a city.",
+        "rationale": "Spans the initial philosophical movement of Books I and II, addressing early definitions, skeptical challenges, Socrates's self-critique, and the resulting transition to the civic analogy."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-1",
+          "h-level-1-batch-7-3",
+          "h-level-1-batch-6-2",
+          "h-level-1-batch-8-2",
+          "h-level-1-batch-7-4"
+        ],
+        "label": "Civic Formation and Guardianship",
+        "summary": "This sequence constructs the foundational institutions of the Republic, including the selection and character testing of guardians, strict musical and poetic censorship, and communal living arrangements without private wealth. Socrates defines civic justice through structural specialization, reinforces civic cohesion via the Myth of the Metals, and delineates judicial and ruling qualifications.",
+        "rationale": "Covers Books II through IV, focusing on the cultural, institutional, educational, and civic architecture of the ideal commonwealth and its guardian class."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-3",
+          "h-level-1-batch-7-5",
+          "h-level-1-batch-8-3"
+        ],
+        "label": "Philosopher-Rulers and Society",
+        "summary": "The dialogue advances controversial proposals regarding communal families, gender parity in civic duties, and limits on warfare, arriving at the thesis that philosophers must rule. It examines the intrinsic nature of philosophers, explains their public perception as useless or corrupt in flawed societies, and describes the sheltering remnant alongside the education required to align philosophy with governance.",
+        "rationale": "Encompasses the core arguments of Books V and VI concerning radical social proposals, the definition of philosophers, and their troubled relationship with existing public assemblies."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-4",
+          "n-39-7"
+        ],
+        "label": "Regime Decline & Soul Pleasures",
+        "summary": "Socrates details the sequential devolution of regimes and soul characters from aristocracy through timocracy and oligarchy, contrasting systemic corruption with insights into pure bodily pleasures such as scent.",
+        "rationale": "Pairs the late-dialogue analyses of psychological and civic degeneration in Book VIII with Book IX's examination of psychic appetites and non-deficit pleasures."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-5",
+          "n-46-5"
+        ],
+        "label": "Editorial Apparatus and Index",
+        "summary": "Editorial reference material provides an extensive conceptual index spanning guardians, poetry, rulers, and the state, accompanied by documentation of typographical emendations, transcription conventions, and transliteration standards.",
+        "rationale": "Brings together the volume's non-dialogue editorial reference paratexts, including the analytical subject index and the transcriber's apparatus notes."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ElGcat_rEuuBncoPjarP6AU",
+  "usage": {
+    "promptTokenCount": 41494,
+    "candidatesTokenCount": 1041,
+    "totalTokenCount": 42535,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41494
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1041
+      }
+    ]
+  },
+  "durationMs": 8943,
+  "requestHash": "2512bf50d9da102444533ae9b82dd1b78d796df19595689025dbe8ebda344dca"
+}

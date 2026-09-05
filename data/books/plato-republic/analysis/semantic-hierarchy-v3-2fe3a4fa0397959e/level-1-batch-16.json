@@ -1,0 +1,96 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-28-4",
+          "n-28-5"
+        ],
+        "label": "Soul Harmony and Health",
+        "summary": "Socrates defines justice in the individual as an inward attunement where reason rules over spirit and appetite, equating virtue with the health and beauty of the soul and vice with bodily disease.",
+        "rationale": "Both passages from Book IV establish the tripartite definition of personal justice and draw direct analogies between inner psychic harmony and physical health."
+      },
+      {
+        "childIds": [
+          "n-32-8",
+          "n-33-3"
+        ],
+        "label": "Philosopher and the State",
+        "summary": "Existing states alienate and degenerate the philosophic nature, yet establishing an ideal constitution remains viable if even a single philosopher attains power and frames laws after divine forms.",
+        "rationale": "Both passages from Book VI examine the troubled relationship between genuine philosophers and current corrupt polities, alongside the conditions for realizing the ideal city."
+      },
+      {
+        "childIds": [
+          "n-34-1",
+          "n-34-2",
+          "n-34-3",
+          "n-35-1"
+        ],
+        "label": "Dialectic, Faculties, and Cave",
+        "summary": "Through the divided line and the allegory of the cave, Socrates distinguishes shadows from true reality, contrasting dialectic's ascent to first principles with hypothetical arts and mapping the soul's four cognitive faculties.",
+        "rationale": "These Book VI–VII passages form an epistemological core explaining dialectical ascent, the four faculties of knowledge, and the prisoners' emergence from illusion."
+      },
+      {
+        "childIds": [
+          "n-37-1",
+          "n-37-2"
+        ],
+        "label": "Regimes and Dispositions",
+        "summary": "Socrates outlines the four inferior constitutions—timocracy, oligarchy, democracy, and tyranny—establishing that states arise from and correspond directly to the dispositions of individual souls.",
+        "rationale": "These adjacent Book VIII passages formulate the systematic structural correspondence between defective civic constitutions and individual character types."
+      },
+      {
+        "childIds": [
+          "n-40-1",
+          "n-40-5",
+          "n-40-6"
+        ],
+        "label": "Divine Order and Inner Polity",
+        "summary": "Socrates contrasts genuine pleasures of truth with mortal illusions, urging individuals to submit to divine wisdom and govern themselves according to an ideal heavenly pattern regardless of earthly politics.",
+        "rationale": "All three Book IX passages focus on ruling bodily desires, pursuing authentic over illusory pleasure, and maintaining the internal city of the soul."
+      },
+      {
+        "childIds": [
+          "n-41-3",
+          "n-41-5",
+          "n-41-6"
+        ],
+        "label": "Critique of Mimetic Poetry",
+        "summary": "Mimetic art is judged as thrice removed from reality, feeding the irrational and emotional faculties of the soul, which justifies philosophy's ancient quarrel with poetry unless poetry can prove its moral utility.",
+        "rationale": "These Book X passages form Socrates' unified critique of imitation, painting, and dramatic poetry as epistemologically hollow and ethically corrupting."
+      },
+      {
+        "childIds": [
+          "n-42-3",
+          "n-42-7"
+        ],
+        "label": "Eschatology and Just Rewards",
+        "summary": "Having proved justice good in itself, Socrates restores the external honors granted by gods and men, closing with the myth of Er's vision of rebirth and an exhortation to pursue virtue and the heavenly way.",
+        "rationale": "The concluding sections of Book X restore the external and afterlife rewards of virtue, culminating in the vision of rebirth and the dialogue's final moral appeal."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "B1Gcaqf_NMuZvdAP_dLD-AE",
+  "usage": {
+    "promptTokenCount": 11407,
+    "candidatesTokenCount": 918,
+    "totalTokenCount": 12325,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11407
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 918
+      }
+    ]
+  },
+  "durationMs": 7079,
+  "requestHash": "d304e05422d1a805a606b3206a588ba1e658eb2c11dcb99fb0a872269930edbf"
+}

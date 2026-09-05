@@ -1,6 +1,7 @@
 import { z } from "zod";
+import { BookEmblemSchema } from '../book-emblem';
 import { InteractivePanelSchema } from "../interactive-panel";
-import { AxisAssessmentSchema, BOOK_AXIS_VERSION } from '../book-axes';
+import { StoredAxisAssessmentSchema, BOOK_AXIS_VERSION, LEGACY_BOOK_AXIS_VERSION, axisCoordinate, axisMaximum, isTenth } from '../book-axes';
 
 const Id = z.string().min(1).max(160);
 const Text = z.string().min(1).max(20_000);
@@ -84,7 +85,7 @@ export const SourceDiscoverySchema = z.object({ status: z.enum(["no_results", "r
   if (value.scope === "book" && value.references.some((ref) => ref.scope !== "book")) ctx.addIssue({ code: "custom", message: "External source exceeds book scope" });
   if (value.scope === "external" && value.references.some((ref) => ref.scope !== "external")) ctx.addIssue({ code: "custom", message: "Book source exceeds external scope" });
 });
-const ArtifactBase = { id: Id, bookId: Id, selectionId: Id, routeRunId: Id, nodeIds: UniqueIds, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Artifact needs source anchors"), graphVersion: Id.optional(), provider: z.enum(["mock", "vertex_ai", "inco", "fal", "not_configured"]), schemaVersion: z.literal("1"), createdAt: IsoDate, savedAt: IsoDate.nullable(), provenance: z.object({ provider: z.enum(["mock", "vertex_ai", "inco", "fal"]), label: ShortText }).strict() };
+const ArtifactBase = { id: Id, bookId: Id, selectionId: Id, routeRunId: Id, nodeIds: UniqueIds, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Artifact needs source anchors"), graphVersion: Id.optional(), provider: z.enum(["mock", "vertex_ai", "inco", "fal", "bfl", "not_configured"]), schemaVersion: z.literal("1"), createdAt: IsoDate, savedAt: IsoDate.nullable(), provenance: z.object({ provider: z.enum(["mock", "vertex_ai", "inco", "fal", "bfl"]), label: ShortText }).strict() };
 export const ArtifactSchema = z.discriminatedUnion("kind", [
   z.object({ ...ArtifactBase, kind: z.literal("interactive_panel"), payload: InteractivePanelSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("interactive_ui"), payload: InteractiveUiConfigSchema }).strict(),
@@ -99,8 +100,9 @@ export const ArtifactSchema = z.discriminatedUnion("kind", [
 const Unit = z.number().finite().min(0).max(1);
 const Evidence = z.object({ rationale: Text, ruleVersion: Id, confidence: Unit.nullable(), anchorIds: UniqueIds.refine(ids => ids.length > 0, "Coordinate evidence required") }).strict();
 export const GraphSchema = z.object({
+  bookEmblem: BookEmblemSchema.optional(),
   id: Id, bookId: Id, graphVersion: Id, fileHash: Text, extractionVersion: Id,
-  axisVersion: z.literal(BOOK_AXIS_VERSION).optional(),
+  axisVersion: z.enum([LEGACY_BOOK_AXIS_VERSION, BOOK_AXIS_VERSION]).optional(),
   axisAnalysis: z.object({model: ShortText, promptVersion: Id, sourceGraphVersion: Id, reviewStatus: z.literal('model_reviewed'), consistencyVersion:z.literal('axis-consistency-v1').optional(), completedAt: IsoDate}).strict().optional(),
   sourceLength: z.number().int().positive(),
   analysis: z.object({
@@ -117,7 +119,7 @@ export const GraphSchema = z.object({
     id: Id, identityId: Id, kind: z.literal('occurrence'), label: ShortText, summary: Text,
     anchorIds: UniqueIds.refine(ids => ids.length > 0), themeTerritoryIds: UniqueIds,
     structuralLevel: z.number().int().min(0).max(4).nullable(),
-    axisAssessment: AxisAssessmentSchema.optional(),
+    axisAssessment: StoredAxisAssessmentSchema.optional(),
     position: z.object({ x: Unit.nullable(), y: z.number().finite().min(0).max(4).nullable(), z: Unit.nullable() }).strict(),
     evidence: Evidence, sourceLabel: ShortText,
     sourceRole: z.enum(['dialogue', 'commentary', 'paratext']).optional(),
@@ -150,8 +152,9 @@ export const GraphSchema = z.object({
       const a = n.axisAssessment;
       if (!a) fail('New axes require a source-grounded assessment for every occurrence');
       else {
-        if(n.position.x !== (a.reasoningDepth.value === null ? null : a.reasoningDepth.value / 4) || n.position.y !== a.generality.value) fail('X/Y must match reasoning depth and generality');
+        if(n.position.x !== axisCoordinate(a.reasoningDepth.value,'x',graph.axisVersion) || n.position.y !== axisCoordinate(a.generality.value,'y',graph.axisVersion)) fail('X/Y must match reasoning depth and generality');
         for (const rating of [a.reasoningDepth, a.generality]) {
+          if(rating.value!==null && (rating.value>axisMaximum(graph.axisVersion) || graph.axisVersion===BOOK_AXIS_VERSION && !isTenth(rating.value)))fail('Axis rating violates its versioned scale');
           if(!known(rating.anchorIds) || !rating.anchorIds.some(id => n.anchorIds.includes(id))) fail('Axis evidence must include the occurrence and reference known anchors');
         }
         if(a.reasoningDepth.prerequisiteNodeIds.some(id => id === n.id || !nodes.has(id))) fail('Invalid reasoning prerequisite');

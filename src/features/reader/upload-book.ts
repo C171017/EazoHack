@@ -1,6 +1,9 @@
 import type { BookPreview } from './book-preview';
+import type { PdfImportManifest } from './pdf/import-model';
 
-export type UploadedBook = { kind: 'txt'; title: string; bookId: string; preview: BookPreview } | { kind: 'pdf'; title: string; hash: string; data: Uint8Array };
+export type TextBook = { kind: 'txt'; title: string; bookId: string; preview: BookPreview; originalPdf?: { hash: string; data: Uint8Array; manifest: PdfImportManifest } };
+export type PdfBook = { kind: 'pdf'; title: string; hash: string; data: Uint8Array };
+export type UploadedBook = TextBook | PdfBook;
 
 /** Validate before replacing the active book. Source identity always uses raw bytes. */
 export async function readUploadedBook(file: File): Promise<UploadedBook> {

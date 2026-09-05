@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-33-3",
+          "n-34-3",
+          "n-35-3",
+          "n-35-4",
+          "n-35-5",
+          "n-36-3"
+        ],
+        "label": "Education and the Ideal Ruler",
+        "summary": "Philosophic rule requires ascending from visible shadows to the Idea of the Good through dialectic and soul conversion. Having achieved intellectual vision and fourfold mental alignment, enlightened philosophers are obligated to return and draft laws for the commonwealth.",
+        "rationale": "These Books VI and VII passages cover the cognitive ascent to truth, dialectic, the turning of the soul's eye, and the philosopher's duty to govern."
+      },
+      {
+        "childIds": [
+          "n-28-5",
+          "n-40-1",
+          "n-40-5",
+          "n-40-6"
+        ],
+        "label": "Soul Health and Inner Harmony",
+        "summary": "Virtue functions as internal health and order, where true pleasure stems from unchanging truth rather than bodily replenishment. Wise individuals order their internal city according to divine rule and a heavenly pattern regardless of external circumstances.",
+        "rationale": "These items focus on individual psychology, defining virtue as soul health, contrasting real versus illusory pleasures, and living by the inner divine pattern."
+      },
+      {
+        "childIds": [
+          "n-37-1",
+          "n-37-2",
+          "n-38-5",
+          "n-39-3"
+        ],
+        "label": "Regimes and Character Degeneration",
+        "summary": "State constitutions mirror the souls of their citizens across five distinct forms, showing how an insatiable pursuit of liberty in democracy gives birth to tyranny. A formal comparison concludes that the just, royal man is happiest, while the tyrannical man is the most miserable.",
+        "rationale": "These Books VIII and IX passages trace the direct correspondence between regime types and character types, including political decline and the happiness verdict."
+      },
+      {
+        "childIds": [
+          "n-41-5",
+          "n-41-6"
+        ],
+        "label": "Critique of Imitative Poetry",
+        "summary": "Imitative art appeals directly to the irrational, emotionally volatile parts of the soul, subverting inner governance. Because of an ancient quarrel between philosophy and poetry, poetic works must be excluded unless proven morally and politically beneficial.",
+        "rationale": "Both passages from Book X examine the psychological dangers of mimetic poetry and its historic tension with philosophical truth."
+      },
+      {
+        "childIds": [
+          "n-42-3",
+          "n-42-7"
+        ],
+        "label": "Eschatology and Virtue's Rewards",
+        "summary": "Having established the intrinsic worth of justice, Socrates restores the external honors and divine favor it earns during life. The mythic account of the soul's rebirth from the river of Unmindfulness culminates in a final plea to pursue virtue across this life and the next.",
+        "rationale": "These final Book X passages address the restored external rewards of justice and the closing eschatological exhortation based on Er's tale."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "-VGcaoDjKeuBncoPjarP6AU",
+  "usage": {
+    "promptTokenCount": 11898,
+    "candidatesTokenCount": 767,
+    "totalTokenCount": 12665,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11898
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 767
+      }
+    ]
+  },
+  "durationMs": 7095,
+  "requestHash": "36ff85fdda7611b643d6474fe141a5ada8651b86ed56731cac9c3989d4947848"
+}

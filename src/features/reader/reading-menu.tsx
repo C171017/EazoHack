@@ -4,15 +4,10 @@ import { useEffect, useId, useRef, useState, type CSSProperties } from 'react';
 import { chineseFonts, englishFonts, type ReadingFonts } from './reading-fonts';
 import styles from './reading-menu.module.css';
 
-export function ReadingMenu({ fonts, onChange, onUpload, onReset, onLibrary }: { fonts: ReadingFonts; onChange: (fonts: ReadingFonts) => void; onUpload: (file: File) => Promise<void>; onReset?: () => void; onLibrary: () => void }) {
-  const [section, setSection] = useState<'upload' | 'font' | null>(null);
-  const [busy, setBusy] = useState(false);
-  const [notice, setNotice] = useState('');
-  const fileInput = useRef<HTMLInputElement>(null);
+export function ReadingMenu({ fonts, onChange, onLibrary }: { fonts: ReadingFonts; onChange: (fonts: ReadingFonts) => void; onLibrary: () => void }) {
   const [open, setOpen] = useState(false);
   const root = useRef<HTMLDivElement>(null);
   const trigger = useRef<HTMLButtonElement>(null);
-  const openedByHover = useRef(false);
   const panelId = useId();
 
   useEffect(() => {
@@ -21,7 +16,7 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset, onLibrary }: {
       if (!root.current?.contains(event.target as Node)) setOpen(false);
     };
     const escape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') { setSection(null); setOpen(false); trigger.current?.focus(); }
+      if (event.key === 'Escape') { setOpen(false); trigger.current?.focus(); }
     };
     document.addEventListener('pointerdown', outside);
     document.addEventListener('keydown', escape);
@@ -32,50 +27,13 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset, onLibrary }: {
   }, [open]);
 
   return <div ref={root} className={styles.menu} data-open={open}
-    onPointerEnter={event => {
-      if (event.pointerType === 'mouse' && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !open) {
-        openedByHover.current = true;
-        setSection(null);
-        setOpen(true);
-      }
-    }}
-    onPointerLeave={() => {
-      if (openedByHover.current && !root.current?.contains(document.activeElement)) setOpen(false);
-    }}
     onBlur={event => {
       if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
     }}>
-    <button ref={trigger} className={styles.trigger} type="button"
-      aria-label={open ? 'Close reading menu' : 'Open reading menu'} aria-expanded={open} aria-controls={panelId}
-      onClick={() => {
-        if (!open) setSection(null);
-        // The first mouse click pins a hover-open menu instead of immediately closing it.
-        if (openedByHover.current) { openedByHover.current = false; setOpen(true); }
-        else setOpen(current => !current);
-      }}>
-      <span className={styles.line}/><span className={styles.line}/><span className={styles.line}/>
-    </button>
+    <button ref={trigger} type="button" aria-label="Font" title="Font" className={styles.trigger} aria-expanded={open} aria-controls={panelId} onClick={() => setOpen(current => !current)}><svg className={styles.icon} viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 10V5h22v5M16 5v22m-5 0h10M7 5h18"/><path d="M18 7v18" opacity=".3"/></svg></button>
+    <button type="button" aria-label="Library" title="Library" className={styles.trigger} onClick={() => { setOpen(false); onLibrary(); }}><svg className={styles.icon} viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="4" y="6" width="6" height="21" rx="1"/><path d="M10 6h6v21h-6M6 11h2m4 0h2M19 8l5-2 7 19-5 2z"/></svg></button>
     <div id={panelId} className={styles.options} inert={!open} aria-hidden={!open}>
       <div className={styles.content}>
-      <input ref={fileInput} type="file" accept=".txt,text/plain,.pdf,application/pdf" hidden onChange={async event => {
-        const file = event.target.files?.[0]; event.target.value = '';
-        if (!file || busy) return;
-        setBusy(true); setNotice('Opening book on this device…');
-        try { await onUpload(file); setNotice('Book opened.'); setOpen(false); }
-        catch (error) { setNotice(error instanceof Error ? error.message : 'Could not open this book.'); }
-        finally { setBusy(false); }
-      }}/>
-      <div className={styles.section} data-expanded={section === 'upload'}>
-        <button type="button" className={styles.option} style={{ '--item-index': 0 } as CSSProperties} aria-expanded={section === 'upload'} aria-controls={`${panelId}-upload`} onClick={() => { openedByHover.current = false; setSection(current => current === 'upload' ? null : 'upload'); }}><span className={styles.label}>Upload</span></button>
-        <div id={`${panelId}-upload`} className={styles.submenu} inert={section !== 'upload'} aria-hidden={section !== 'upload'}><div className={styles.subcontent}>
-          <button type="button" className={styles.option} style={{ '--item-index': 0 } as CSSProperties} disabled={busy} onClick={() => fileInput.current?.click()}><span className={styles.label}>{busy ? 'Opening…' : 'Choose a book'}</span></button>
-          <p className={styles.hint}>TXT · up to 20 MB<br/>PDF · up to 100 MB</p>
-          {onReset && <button type="button" className={styles.option} style={{ '--item-index': 1 } as CSSProperties} onClick={onReset}><span className={styles.label}>Open Republic</span></button>}
-        </div></div>
-      </div>
-      <div className={styles.section} data-expanded={section === 'font'}>
-        <button type="button" className={styles.option} style={{ '--item-index': 1 } as CSSProperties} aria-expanded={section === 'font'} aria-controls={`${panelId}-font`} onClick={() => { openedByHover.current = false; setSection(current => current === 'font' ? null : 'font'); }}><span className={styles.label}>Font</span></button>
-        <div id={`${panelId}-font`} className={styles.submenu} inert={section !== 'font'} aria-hidden={section !== 'font'}><div className={styles.subcontent}>
       {[{ key: 'english', label: 'English', options: englishFonts }, { key: 'chinese', label: '简体中文', options: chineseFonts }].map((group, groupIndex) =>
         <div role="group" aria-label={`${group.label} font`} key={group.key} className={styles.group}>
           {group.options.map((font, index) => <button key={font.id} type="button" className={styles.option}
@@ -85,12 +43,6 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset, onLibrary }: {
             <span className={styles.label} style={{ fontFamily: font.family }} lang={group.key === 'chinese' ? 'zh-CN' : 'en'}>{font.label}</span>
           </button>)}
         </div>)}
-        </div></div>
-      </div>
-      <div className={styles.section}>
-        <button type="button" className={styles.option} style={{ '--item-index': 2 } as CSSProperties} onClick={() => { setSection(null); setOpen(false); onLibrary(); }}><span className={styles.label}>Library</span></button>
-      </div>
-      {notice && <p role="status" className={styles.hint}>{notice}</p>}
       </div>
     </div>
   </div>;

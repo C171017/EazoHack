@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-6-7",
+          "n-7-5",
+          "n-8-2"
+        ],
+        "label": "Education and Civic Harmony",
+        "summary": "These passages focus on foundational policies for communal unity in the Republic, highlighting the primacy of character training over strict legislation, equal participation of women in governance and warfare, and the organic solidarity of citizens.",
+        "rationale": "All three entries examine structural and cultural mechanisms that bind the early ideal state together through moral upbringing and equal collective responsibility."
+      },
+      {
+        "childIds": [
+          "n-8-3",
+          "n-8-6",
+          "n-9-2",
+          "n-10-3"
+        ],
+        "label": "Philosophy and Dialectic",
+        "summary": "This selection outlines the philosopher-ruler archetype and the epistemological journey required to attain true knowledge, encompassing the risks of philosophical corruption, the hierarchy of the Divided Line, and dialectic as the highest science.",
+        "rationale": "These entries directly trace Socrates' progression in Books V–VII regarding the nature, hazards, and rigorous intellectual path of the philosopher-king."
+      },
+      {
+        "childIds": [
+          "n-11-1",
+          "n-11-7",
+          "n-12-4",
+          "n-12-6"
+        ],
+        "label": "Regime Decline and Soul Orders",
+        "summary": "This sequence addresses Books VIII and IX, comparing the degenerative stages of constitutions and individual characters, the corresponding tripartite hierarchy of desires and pleasures, and the allegorical beast within the soul.",
+        "rationale": "Focuses systematically on the degradation of political constitutions alongside the psychology of the tripartite soul and its moral consequences."
+      },
+      {
+        "childIds": [
+          "n-14-2",
+          "n-16-7"
+        ],
+        "label": "Aesthetics and Character Growth",
+        "summary": "The commentary evaluates the role of artistic expression, music, and physical exercise in forming human nature, noting their capacity to harmonize reason and emotion when properly regulated.",
+        "rationale": "Both entries address the pedagogical and ethical functions of the arts, literature, and physical culture in shaping the mind."
+      },
+      {
+        "childIds": [
+          "n-14-7",
+          "n-15-4",
+          "n-15-7",
+          "n-16-2"
+        ],
+        "label": "Critiques of Platonic Proposals",
+        "summary": "These discussions offer critical evaluations of Plato's radical social engineering, contrasting his proposals for female equality with commentary on the futility of breeding schemes, the necessity of the biological family, and the purely ideal nature of the state.",
+        "rationale": "These commentary nodes directly critique the practical feasibility and human limits of the political and biological institutions outlined in the Republic."
+      },
+      {
+        "childIds": [
+          "n-17-3"
+        ],
+        "label": "Lifelong Self-Education",
+        "summary": "Plato's vision of continuing education throughout life is praised as an inspiring ideal, though modern application depends on individual self-education.",
+        "rationale": "A distinct singleton addressing the modern application and lifelong horizon of personal philosophical education beyond the institutional state."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "4lGcarnOENyCncoPo7vS-Qg",
+  "usage": {
+    "promptTokenCount": 18955,
+    "candidatesTokenCount": 728,
+    "totalTokenCount": 19683,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18955
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 728
+      }
+    ]
+  },
+  "durationMs": 6206,
+  "requestHash": "e6a76823ba8a60f2be16e1df0fbffec1c304583ebd7703a6cb3ac7a40daabb9d"
+}

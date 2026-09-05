@@ -18,7 +18,7 @@ export const HierarchySchema = z.object({
   rationale:z.string(),
 }).strict();
 export type Hierarchy = z.infer<typeof HierarchySchema>;
-export type MapBootstrap = Pick<Graph,'bookId'|'graphVersion'|'analysis'|'axisVersion'> & {
+export type MapBootstrap = Pick<Graph,'bookId'|'graphVersion'|'analysis'|'axisVersion'|'bookEmblem'> & {
   version:string; roots:MapEntry[]; depth:number; totalNodes:number; unplaced:number; unavailable?:boolean;
   territories:Pick<Graph['territories'][number],'id'|'label'|'centroidX'>[];
 };

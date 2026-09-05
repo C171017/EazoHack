@@ -1,0 +1,636 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-24-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates builds directly on the established requirement that guardians must be courageous warriors, deducing that fears of Hades and laments in poetry must be censored.",
+            "anchorIds": [
+              "p-708129",
+              "p-708594",
+              "p-710079"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2",
+              "n-23-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "It applies specifically to stories of the afterlife and poetry recited to prospective guardians in the ideal state.",
+            "anchorIds": [
+              "p-708129",
+              "p-708594",
+              "p-710079"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Infers from the premise that falsehood is useless to gods and useful only as medicine that only civic rulers may administer it for the public good.",
+            "anchorIds": [
+              "p-715690",
+              "p-715958",
+              "p-716852"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-6"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Restricted to the governance of truth and lying within a political community between rulers and citizens.",
+            "anchorIds": [
+              "p-715690",
+              "p-715958",
+              "p-716852"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A structural taxonomy dividing poetic narration into simple description, imitation, and mixed style, established with immediate explanatory illustrations.",
+            "anchorIds": [
+              "p-725915",
+              "p-727574",
+              "p-730025"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Covers all forms of poetic narration and literature across genres including tragedy, comedy, and epic.",
+            "anchorIds": [
+              "p-725915",
+              "p-727574",
+              "p-730025"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "Applies the foundational principle of specialization ('one man can only do one thing well') to poetic enactment and character formation.",
+            "anchorIds": [
+              "p-731400",
+              "p-732749",
+              "p-735480"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-24-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Governs the mimetic activities and moral cultivation specifically of the guardian class.",
+            "anchorIds": [
+              "p-731400",
+              "p-732749",
+              "p-735480"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Concludes that versatile, pantomimic poets must be expelled from the commonwealth based on the previous restriction against multifaceted imitation.",
+            "anchorIds": [
+              "p-739766"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-4"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Focuses on the specific policy of handling versatile/all-imitating poets within the ideal city.",
+            "anchorIds": [
+              "p-739766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Deduces the elimination of lamenting and soft musical harmonies from the general rule that musical form must conform to virtuous speech and courageous character.",
+            "anchorIds": [
+              "p-741569",
+              "p-741958",
+              "p-742459"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies to the regulation of musical modes and melodies within the civic educational scheme.",
+            "anchorIds": [
+              "p-741569",
+              "p-741958",
+              "p-742459"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Selects the Dorian and Phrygian modes following the deduction that only courage in adversity and temperance in peace are suitable musical expressions.",
+            "anchorIds": [
+              "p-742610",
+              "p-743727"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-6"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Specific to the two allowed musical modes for training soldiers and citizens in the state.",
+            "anchorIds": [
+              "p-742610",
+              "p-743727"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Derives the ban on complex instruments and flutes directly from the requirement for simple, austere Dorian and Phrygian harmonies.",
+            "anchorIds": [
+              "p-744041",
+              "p-744308",
+              "p-744598"
+            ],
+            "prerequisiteNodeIds": [
+              "n-25-1"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Restricted to allowable musical instrumentation (lyre, harp, pipe) in the republic.",
+            "anchorIds": [
+              "p-744041",
+              "p-744308",
+              "p-744598"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Argues that rhythm and harmony depend on the words, and words reflect the soul, establishing that aesthetic beauty stems from psychic simplicity.",
+            "anchorIds": [
+              "p-747778",
+              "p-748265",
+              "p-748719"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-6"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Spans all creative and constructive arts, crafts, and natural forms as manifestations of character.",
+            "anchorIds": [
+              "p-747778",
+              "p-748265",
+              "p-748719"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "Synthesizes the aesthetic principles of rhythm and grace into a claim regarding the psychological efficacy of musical education in molding the soul before reason develops.",
+            "anchorIds": [
+              "p-750787",
+              "p-752464"
+            ],
+            "prerequisiteNodeIds": [
+              "n-25-3"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Asserts a general principle about musical training and aesthetic impressionability across human psychological development.",
+            "anchorIds": [
+              "p-750787",
+              "p-752464"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Applies civic functional specialization to medicine, inferring that citizens who have civic duties have no time for perpetual valetudinarian coddling.",
+            "anchorIds": [
+              "p-763310",
+              "p-763950",
+              "p-766754"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Governs medical practice and health regimens across the citizen body of the state.",
+            "anchorIds": [
+              "p-763310",
+              "p-763950",
+              "p-766754"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Contrasts medical training with judicial qualification by reasoning that while bodily diseases are cured with the mind, the judge's mind must remain uncontaminated by evil.",
+            "anchorIds": [
+              "p-769929",
+              "p-770667",
+              "p-771417"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Specific to the epistemological requirements and character profile of judicial officers.",
+            "anchorIds": [
+              "p-769929",
+              "p-770667",
+              "p-771417"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Resolves the dual curriculum of gymnastics and music by showing both aim at the soul to balance spirit and philosophic temper into harmony.",
+            "anchorIds": [
+              "p-774211",
+              "p-774628",
+              "p-777735"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3",
+              "n-25-4"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates an educational and psychological principle governing the dual constitution of human character.",
+            "anchorIds": [
+              "p-774211",
+              "p-774628",
+              "p-777735"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Deduces the basic criterion of political selection: rulers must be the elder, proven guardians whose lives demonstrate complete devotion to the common good.",
+            "anchorIds": [
+              "p-779067",
+              "p-779249",
+              "p-780108"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Applies to the ruling order and governance selection within the constitutional hierarchy.",
+            "anchorIds": [
+              "p-779067",
+              "p-779249",
+              "p-780108"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Designs a testing regimen of labors, terrors, and pleasures based on the requirement that rulers must never lose or be deceived about their civic convictions.",
+            "anchorIds": [
+              "p-782254",
+              "p-782977"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies directly to the cohort of prospective rulers being tested across life stages.",
+            "anchorIds": [
+              "p-782254",
+              "p-782977"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Distinguishes between elder rulers as guardians proper and younger fighters as executive auxiliaries based on the selection process.",
+            "anchorIds": [
+              "p-784350"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-1",
+              "n-26-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Specifies the formal two-tier division of the guardian class in the polis.",
+            "anchorIds": [
+              "p-784350"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Proposes the noble lie (the earthborn myth of metals) to legitimize civic fraternity, social stratification, and merit-based rank mobility.",
+            "anchorIds": [
+              "p-785629",
+              "p-786684"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-2",
+              "n-26-3"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Encompasses the origin myth, class hierarchy, and reproductive mobility for all citizens in the state.",
+            "anchorIds": [
+              "p-785629",
+              "p-786684"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Concludes that guardians and auxiliaries must be denied private property and wealth to prevent watchdogs from becoming predatory wolves.",
+            "anchorIds": [
+              "p-789522",
+              "p-790863"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3",
+              "n-26-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Prescribes communal living arrangements specifically for the military and ruling ranks of the state.",
+            "anchorIds": [
+              "p-789522",
+              "p-790863"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Adeimantus introduces a direct objection against the communal discipline just formulated, pointing out that guardians are deprived of normal goods and happiness.",
+            "anchorIds": [
+              "p-792835",
+              "p-793697"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Examines the personal plight and happiness of the guardian class under communal restrictions.",
+            "anchorIds": [
+              "p-792835",
+              "p-793697"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.5,
+            "rationale": "Replies to Adeimantus using the statue analogy, arguing that the founding purpose is the happiness and excellence of the whole state rather than any isolated class.",
+            "anchorIds": [
+              "p-794407",
+              "p-796604"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-6",
+              "n-27-1"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Establishes a cardinal principle of political teleology: the priority of the common good and systemic order over partial interests.",
+            "anchorIds": [
+              "p-794407",
+              "p-796604"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Argues that strictly preserving musical and physical education avoids cultural innovation and creeping lawlessness, making detailed legal enactments unnecessary.",
+            "anchorIds": [
+              "p-804214",
+              "p-805142",
+              "p-806342"
+            ],
+            "prerequisiteNodeIds": [
+              "n-25-4",
+              "n-25-7"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates a general sociological principle concerning the preservation of cultural education over legislative tinkering.",
+            "anchorIds": [
+              "p-804214",
+              "p-805142",
+              "p-806342"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.8,
+            "rationale": "Locates civic wisdom in the small ruling class and civic courage in the military auxiliaries via the analogy of dyed wool and preservation of lawful opinion.",
+            "anchorIds": [
+              "p-817439",
+              "p-820323",
+              "p-816457"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-1",
+              "n-26-3"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Defines two of the cardinal virtues as political attributes realized in specific classes of the ideal city.",
+            "anchorIds": [
+              "p-817439",
+              "p-820323",
+              "p-816457"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Deduces temperance not as class-bound but as a harmonious concord throughout all classes, where superior and inferior agree on who should rule.",
+            "anchorIds": [
+              "p-825383",
+              "p-823066",
+              "p-824650"
+            ],
+            "prerequisiteNodeIds": [
+              "n-27-4"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Applies across both the entire social order of a city and the internal order of an individual soul.",
+            "anchorIds": [
+              "p-825383",
+              "p-823066",
+              "p-824650"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Identifies justice as the remainder after wisdom, courage, and temperance are isolated, recovering the foundational principle that each person must do their own work.",
+            "anchorIds": [
+              "p-827801",
+              "p-828165"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-27-4",
+              "n-27-5"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Forms the central political definition of justice, governing class interactions and individual functions throughout the community.",
+            "anchorIds": [
+              "p-827801",
+              "p-828165"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "OE-casaCO4yOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 44390,
+    "candidatesTokenCount": 4149,
+    "totalTokenCount": 48539,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 44390
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4149
+      }
+    ]
+  },
+  "durationMs": 22357,
+  "requestHash": "974d20dc4d9e903d7f56071c34f553e392d874b3a72b8701c554b280d049c695"
+}

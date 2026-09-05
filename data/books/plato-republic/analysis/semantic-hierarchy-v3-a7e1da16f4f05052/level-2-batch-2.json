@@ -1,0 +1,99 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-9-1",
+          "h-level-1-batch-10-2",
+          "h-level-1-batch-10-3"
+        ],
+        "label": "Foundations of Justice",
+        "summary": "These texts focus on the foundational debates of Books I and II regarding the nature, origin, and value of justice. They contrast Thrasymachus's and Glaucon's conventionalist perspectives—depicting justice as power or mutual compromise—with Socrates's arguments establishing justice's intrinsic excellence and its emergence through human interdependence.",
+        "rationale": "Combines direct dialogue and commentary from the early books addressing the core dispute over whether justice is an external expedient or an intrinsic good."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-2",
+          "h-level-1-batch-11-1",
+          "h-level-1-batch-12-1"
+        ],
+        "label": "Civic Order and Internal Duty",
+        "summary": "This sequence examines the structural harmony of the state and the internal constitution of the soul in Book IV. It highlights how the division of labour, civic unity, gender equality in governance, and the tripartite alignment of faculties establish justice as an overarching moral duty prioritized over utilitarian calculation.",
+        "rationale": "Brings together commentary clusters centered on the organic unity of the Commonwealth and the corresponding psychic order where reason governs appetite and spirit."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-1",
+          "h-level-1-batch-9-3",
+          "h-level-1-batch-10-4",
+          "h-level-1-batch-11-4"
+        ],
+        "label": "Poetic and Cultural Formation",
+        "summary": "Covering the regulation of poetry, music, and physical training, these selections address early moral and aesthetic education. They trace Socrates's strict censorship of theological myths alongside analytical appraisals of how simple harmony, literary forms, and disciplined bodily regimens properly attune the spirited and rational soul.",
+        "rationale": "Groups all dialogue and commentary clusters treating the role of cultural arts, censorship, and gymnastics in shaping psychic character and civic life."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-4",
+          "h-level-1-batch-11-2",
+          "h-level-1-batch-12-2"
+        ],
+        "label": "Metaphysics and Dialectic",
+        "summary": "These clusters trace the core epistemological and metaphysical framework of Books V–VII. They outline the ascent from opinion to absolute being through the Divided Line, the Allegory of the Cave, and dialectic as the coping-stone of the sciences, while critically contrasting Platonic a priori methods with modern scientific inquiry.",
+        "rationale": "Unites commentary clusters examining Plato's higher dialectic, the theory of ideas, and the intellectual ascent to the Good."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-5",
+          "h-level-1-batch-12-3",
+          "h-level-1-batch-12-4"
+        ],
+        "label": "Critiques of Platonic Polity",
+        "summary": "These discussions evaluate Plato's radical social institutions and political analogies, scrutinizing his proposals for community of families, breeding schemes, and philosopher-rulers. Commentaries stress the necessity of the biological family, the spiritual dignity of individuals, and the gap between an earthly commonwealth and an ideal celestial pattern.",
+        "rationale": "Consolidates related critical commentaries assessing the ethical, biological, and practical limits of Plato's social engineering."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-5",
+          "h-level-1-batch-11-3",
+          "n-17-4"
+        ],
+        "label": "Regimes, Destiny, and Cyclical History",
+        "summary": "This group explores Plato's temporal frameworks of constitutional decline and cosmic destiny across Books VIII–X. It pairs the psychological degeneration through timocracy, oligarchy, democracy, and tyranny with the ancient cyclical conception of history and the moral responsibility of the soul choosing its life within necessity.",
+        "rationale": "Combines discussions regarding political degeneration, moral devolution of soul types, and ancient cyclical perspectives on historical fate."
+      },
+      {
+        "childIds": [
+          "n-17-3",
+          "h-level-1-batch-12-5"
+        ],
+        "label": "Lifelong Education & Ideals",
+        "summary": "These texts consider education as an enduring conversion of the soul throughout life, driven by dialectical pursuit of transcendent standards. They examine how Platonic archetypes like the Good and parallel modern aspirations elevate human conduct and character above common routine.",
+        "rationale": "Unites the singleton occurrence on lifelong self-education with the cluster detailing transcendent philosophical ideals."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BVKcauL4CYKDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 57365,
+    "candidatesTokenCount": 1190,
+    "totalTokenCount": 58555,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 57365
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1190
+      }
+    ]
+  },
+  "durationMs": 10272,
+  "requestHash": "63e1c3e9de218f093e74feed1700004a20af4b9590d19a48574cec7116376a01"
+}

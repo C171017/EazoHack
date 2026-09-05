@@ -1,5 +1,7 @@
 # Reasoning depth × generality: implementation
 
+The original 0–4 scoring release below is superseded by the [2026-09-06 fine scale](23-fine-axis-scale.md); its measurements remain a historical baseline.
+
 2026-09-05. User-selected option 1 from the axis comparison. Current semantic contract: [08-book-map-3d.md](08-book-map-3d.md).
 
 ## Delivered behavior

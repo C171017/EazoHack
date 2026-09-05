@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-2",
+          "n-23-3"
+        ],
+        "label": "Guardian Natures in Book II",
+        "summary": "Socrates establishes that the guardian role requires rigorous lifelong specialization and natural aptitude. Candidates must unite spirited courage with philosophical gentleness toward fellow citizens, much like well-bred watchdogs.",
+        "rationale": "Both entries address the initial Book II selection criteria and temperamental characteristics required for dedicated civic guardians."
+      },
+      {
+        "childIds": [
+          "n-24-1",
+          "n-24-2",
+          "n-24-4",
+          "n-24-5",
+          "n-25-1",
+          "n-25-2",
+          "n-24-6"
+        ],
+        "label": "Censorship of Poetry and Music",
+        "summary": "Socrates regulates cultural storytelling and artistic expression in Book III to mold guardian character. Reforms include expunging frightening descriptions of Hades, reserving medicinal falsehoods exclusively for rulers, prohibiting harmful poetic imitation, banishing overly versatile or sorrowful harmonies in favor of Dorian and Phrygian modes, and eliminating complex musical instruments.",
+        "rationale": "A tightly clustered sequence from Book III focusing on the pedagogical censorship of poetic narrative, imitation, instruments, and musical modes."
+      },
+      {
+        "childIds": [
+          "n-26-2",
+          "n-26-3",
+          "n-27-1"
+        ],
+        "label": "Guardian Trials and Austerity",
+        "summary": "Guardian candidates undergo exhaustive testing against fear, toil, and seduction to identify true rulers, separating them from auxiliary enforcers. In response, Adeimantus objects that denying rulers property, money, and private luxury renders them unhappy mercenaries in their own commonwealth.",
+        "rationale": "These Book III and Book IV passages examine the selection, ranking, and severe material deprivations imposed upon civic guardians."
+      },
+      {
+        "childIds": [
+          "n-29-1",
+          "n-29-2",
+          "n-29-5",
+          "n-30-2"
+        ],
+        "label": "Book V Communal Life and Warfare",
+        "summary": "Interrupted by Adeimantus to clarify communal arrangements, Socrates outlines equal education and military duties for female guardians alongside state-regulated reproduction and common families. He further prescribes restraint during inter-Hellenic warfare, defining conflicts between Greek states as civil discord rather than absolute war.",
+        "rationale": "Covers the Book V reform proposals concerning gender equality, shared families, and the ethical rules governing military conflict among Hellenic states."
+      },
+      {
+        "childIds": [
+          "n-39-7"
+        ],
+        "label": "Pleasures of Smell Example",
+        "summary": "The sensation of scent is provided as an instance of pure pleasure that arises without prior suffering or deficit and departs without pain.",
+        "rationale": "This isolated Book IX dialogue excerpt concerns sensory epistemology and pure pleasure, setting it thematically and spatially apart from the statecraft sections."
+      },
+      {
+        "childIds": [
+          "n-46-5"
+        ],
+        "label": "Transcriber Editorial Notes",
+        "summary": "Editorial notes provide documentation of typographic corrections, collation details, and the structural markup used for marginal Stephanus numbers and Greek transliteration.",
+        "rationale": "A modern paratextual commentary node at the book's terminal coordinate, distinct from the ancient dialogue text."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "w1Gcatx7goOdyg-P05SQAw",
+  "usage": {
+    "promptTokenCount": 10345,
+    "candidatesTokenCount": 844,
+    "totalTokenCount": 11189,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10345
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 844
+      }
+    ]
+  },
+  "durationMs": 6560,
+  "requestHash": "e47d87ce304ef0964669cd861c10e734fd384dad230c864ab40459a67a692ddb"
+}

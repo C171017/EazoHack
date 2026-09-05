@@ -1,0 +1,84 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-1-1"
+        ],
+        "label": "Editorial and Structural Setup",
+        "summary": "Jowett presents the third edition translation and its extensive textual alterations alongside a structural overview charting the fivefold evolution of the dialogue and Socrates' pedagogical method.",
+        "rationale": "Retained as a singleton group because it contains paratextual and structural front matter rather than thematic discussions of Platonic philosophy."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-2",
+          "h-level-2-batch-2-1",
+          "h-level-2-batch-1-3"
+        ],
+        "label": "Early Debates and Moral Roots",
+        "summary": "These clusters trace the dialectical debates of Books I and II over conventional versus intrinsic accounts of justice. Socrates counters the cynical challenges of Thrasymachus, Glaucon, and Adeimantus by shifting the inquiry toward political foundations and guardian nature.",
+        "rationale": "Groups the early dialectical examinations of justice and virtue across Books I and II, progressing directly from aporia to foundational state-building."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-4",
+          "h-level-2-batch-2-2"
+        ],
+        "label": "Civic Formation and Soul Order",
+        "summary": "These sections address guardian discipline, educational censorship, and communal regulations alongside the internal tripartite harmony of the soul in Books III and IV. Justice is identified as internal order and civic duty overarching utilitarian calculation.",
+        "rationale": "Brings together the socio-educational architecture of the state with its internal moral and psychological counterpart in the soul."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-4",
+          "h-level-2-batch-1-5",
+          "h-level-2-batch-2-7"
+        ],
+        "label": "Epistemology, Dialectic & Form",
+        "summary": "This sequence focuses on the philosophical ascent through mathematics and dialectic to the Idea of the Good, along with the allegories of the Cave, Sun, and Divided Line. It highlights the philosopher's political duty, lifelong soul conversion, and the divergence between ancient speculation and modern method.",
+        "rationale": "Synthesizes the central epistemological, metaphysical, and higher-educational curricula of Books V–VII."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-6",
+          "h-level-2-batch-2-6"
+        ],
+        "label": "Regime Decay and Soul Misery",
+        "summary": "Covering Books VIII–X, these clusters detail the cyclical devolution of constitutional regimes and human souls into the abject misery of tyranny. The discussions integrate Plato's ethical hierarchy of pleasures, cosmic numbers, and the soul's moral responsibility under necessity.",
+        "rationale": "Unites the historical, psychological, and cosmic analyses of regime degeneration and tyrannical distress."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-5",
+          "h-level-2-batch-1-7"
+        ],
+        "label": "Utopian Models and Lineage",
+        "summary": "These essays evaluate Plato's radical institutional proposals—such as community of property and wives—against historical models like Sparta and later utopian thinkers including Cicero, Augustine, More, and Campanella. Modern critiques emphasize the biological family, individual dignity, and the tension between celestial ideals and practical politics.",
+        "rationale": "Combines retrospective and historical critiques of Plato's ideal commonwealth with its wider philosophical lineage."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IFKcar2rE-uBncoPjarP6AU",
+  "usage": {
+    "promptTokenCount": 99803,
+    "candidatesTokenCount": 881,
+    "totalTokenCount": 100684,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 99803
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 881
+      }
+    ]
+  },
+  "durationMs": 10287,
+  "requestHash": "8ccbb9223507f05655122fcafcf20b4573e3401256faf06b032345d4b01ee069"
+}

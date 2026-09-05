@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { createProvider, dispatchProvider } from '../src/server/providers';
+import { dispatchProvider } from '../src/server/providers';
+import { createIncoProvider } from '../src/server/providers/inco';
 import { fixtureSelection, makeMockArtifact } from '../src/shared/fixtures';
 
 const explanation = {title:'Read', explanation:'An explanation.', steps:['Read','Reflect'], assumptions:[]};
@@ -18,19 +19,19 @@ test('Inco routes all three methods and preserves validated artifacts and proven
       assert.equal(body.messages[0].role,'system');
       return Response.json({choices:[{finish_reason:'stop',message:{content:JSON.stringify(raw)}}]});
     });
-    const result = await createProvider(kind,'real').run(fixtureSelection,{routeRunId:'test'});
+    const result = await createIncoProvider(kind).run(fixtureSelection,{routeRunId:'test'});
     assert.ok(result.ok);
     assert.equal(result.payload.provider,'inco');
     assert.equal(result.payload.kind,kind);
     assert.deepEqual(result.payload.anchorIds,fixtureSelection.anchorIds);
-    assert.equal(dispatchProvider('real',[kind]),'inco');
+    assert.equal(dispatchProvider('real',[kind]),'vertex_ai');
   }
 });
 
 test('Inco handles missing keys, cancellation, HTTP errors and invalid output without exposing secrets', async t => {
   const oldKey = process.env.INCO_API_KEY;
   t.after(() => { if (oldKey === undefined) delete process.env.INCO_API_KEY; else process.env.INCO_API_KEY = oldKey; });
-  const provider = createProvider('interactive_ui','real');
+  const provider = createIncoProvider('interactive_ui');
   delete process.env.INCO_API_KEY;
   const missing = await provider.run(fixtureSelection,{routeRunId:'test'});
   assert.ok(!missing.ok && missing.error.code === 'not_configured');

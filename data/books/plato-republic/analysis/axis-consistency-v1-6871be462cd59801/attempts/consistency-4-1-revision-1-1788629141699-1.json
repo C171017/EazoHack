@@ -1,0 +1,452 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-6-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Socrates infers that to keep guardians from turning into wolves against the citizens, private property, money, and private dwellings must be forbidden to them. Because this directly operationalizes the Myth of the Metals from n-6-3 (depth 3.6) and guardian nature from n-5-4 (depth 3.0), incorporating the prerequisite chain from n-6-3 requires depth >= 3.6, calibrated here to 3.8 (between anchor 3 and anchor 4: a developed local argument applying the civic myth and guardian specialization).",
+            "anchorIds": [
+              "p-119083"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-4",
+              "n-6-3"
+            ]
+          },
+          "generality": {
+            "value": 4.3,
+            "rationale": "Specific institutional regime governing auxiliary soldiers and rulers in the republic.",
+            "anchorIds": [
+              "p-119083"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "Dialectic is concluded to be the coping-stone of education, building upon the preparatory mathematical curriculum (n-10-2, depth 6.6) and the epistemological distinction of the Divided Line (n-9-2, depth 6.0) to attain the Idea of the Good (p-257856, p-259146). Incorporating the higher prerequisite chain of n-10-2 (depth 6.6) requires depth >= 6.6, placing it at 6.8 (anchor 6 to anchor 7: linked argument synthesizing established results).",
+            "anchorIds": [
+              "p-257856",
+              "p-259146"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-2",
+              "n-10-2"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "A broad epistemological principle establishing dialectic as the supreme science that provides grounding to all other sciences and knowledge of essences (p-257856, p-259146).",
+            "anchorIds": [
+              "p-257856",
+              "p-259146"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.6,
+            "rationale": "Traces the descent from timocracy to oligarchy based on the accumulation of wealth and shows how avarice overtakes the soul of the oligarchic individual (n-11-2; p-291357, p-291952, p-293392). Because its prerequisite n-11-2 is rated at 6.4, incorporating the prior chain requires depth >= 6.4, calibrated here to 6.6 (anchor 6 to anchor 7: linked sequence across constitutional declines).",
+            "anchorIds": [
+              "p-291357",
+              "p-291952",
+              "p-293392"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Specific to the constitution of oligarchy, its economic factionalism, and the wealth-worshipping character type (p-291357, p-291952, p-293392).",
+            "anchorIds": [
+              "p-291357",
+              "p-291952",
+              "p-293392"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "In p-426038, Jowett refutes Niebuhr's historical objection by building on the established conclusion that Plato's republic is an impossible historical synthesis and transcendent pattern rather than an earthly state (n-14-7, depth 6.6), deducing that Plato viewed all existing polities as states of faction and was writing for all mankind. Incorporating n-14-7 (depth 6.6) requires depth >= 6.6, calibrated here to 6.8 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-426038"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-7"
+            ]
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "Characterizes the political stance of universal philosophical thinkers towards empirical states, using Plato and St. Augustine as primary exemplars.",
+            "anchorIds": [
+              "p-426038"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "Synthesizes the broad history of utopian thought and Platonic philosophy to derive an account of the practical and moral function of unrealized ideals in elevating human conduct. Because it builds directly upon the established conclusion that the ideal state is a pattern rather than an earthly reality (n-14-7, depth 6.6) as well as More's Utopia (n-18-4, depth 3.1), incorporating the chain through n-14-7 requires depth >= 6.6, calibrated here to 6.8 (anchor 6 to anchor 7: synthesis of linked arguments).",
+            "anchorIds": [
+              "p-559619",
+              "p-561816"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-7",
+              "n-18-4"
+            ]
+          },
+          "generality": {
+            "value": 7.9,
+            "rationale": "Pertains to human action, culture, and ethics generally, explaining how abstract visions guide behavior across diverse social and institutional spheres.",
+            "anchorIds": [
+              "p-559619",
+              "p-561816"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Socrates infers that because falsehood is useless to gods and useful only as medicine to men, private citizens must not lie, whereas rulers alone retain the privilege of using deception for the public good. Because this directly applies the second theological canon established in n-23-6 (depth 2.9) regarding divine truthfulness and medicinal falsehood, incorporating that prerequisite chain places it at 3.1 (anchor 3: a short sequence of local inferences).",
+            "anchorIds": [
+              "p-715690",
+              "p-715958",
+              "p-716852"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-6"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Restricted to the governance of truth and lying within a political community between rulers and citizens.",
+            "anchorIds": [
+              "p-715690",
+              "p-715958",
+              "p-716852"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "Socrates derives his proposal for reforming the curriculum across life stages directly from the analysis that existing states corrupt and extinguish philosophic talent (n-32-8, depth 6.0), concluding that intensive dialectical study must be postponed until maturity. Incorporating the prerequisite chain through n-32-8 (depth 6.0) requires depth >= 6.0, calibrated here to 6.2 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-8"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Sets a normative curricular standard for the education of philosophers over human life stages.",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Explains the higher intelligible subsection of the Divided Line: dialectic treats hypotheses as stepping stones to ascend to an unhypothetical first principle and then descends purely through ideas (p-1017742, p-1017669). Because this builds directly upon the proportioned divisions established in the Divided Line (n-33-6, depth 5.8), incorporating that prerequisite chain places it at 6.0 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-1017742",
+              "p-1017669"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "Formulates the universal operational method of dialectical reasoning across all intelligible ideas.",
+            "anchorIds": [
+              "p-1017742"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.4,
+            "rationale": "Socrates establishes the four psychic faculties corresponding to the four segments of the Line: reason (noesis), understanding (dianoia), faith (pistis), and perception of shadows/imagination (eikasia), scaled by clearness and truth (p-1019319, p-1019237). Because this directly depends on the distinction between dialectic and the hypothetical arts formulated in n-34-2 (depth 6.2, which builds on n-34-1, depth 6.0), incorporating this prerequisite chain requires depth >= 6.2, calibrated here to 6.4 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-1019319",
+              "p-1019237"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6",
+              "n-34-2"
+            ]
+          },
+          "generality": {
+            "value": 9,
+            "rationale": "Defines the full classification of cognitive capacities across all human intellectual and perceptual experience.",
+            "anchorIds": [
+              "p-1019319"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Socrates directly presents the Allegory of the Cave to illustrate in a figure our nature regarding education and the lack of it, building as an illustrative counterpart upon the proportioned divisions of the Divided Line (n-33-6, depth 5.8). Incorporating that established framework into the allegorical presentation requires depth >= 5.8, calibrated here to 6.0 (anchor 6: linked argument combining established results).",
+            "anchorIds": [
+              "p-1019944",
+              "p-1020773",
+              "p-1021956"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Presents a universal figure depicting the initial condition of all human knowledge and perception before education.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1021956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.3,
+            "rationale": "Extends the established rule that sciences must draw the soul away from sensible objects to being to astronomy and harmonics, arguing that visible skies and audible chords are merely sensible diagrams for true mathematical ratios (p-1059579, p-1061383, p-1064015). Because it directly continues the mathematical curriculum sequence after solid geometry (n-36-1, depth 7.1), incorporating that prerequisite chain places it at 7.3 (anchor 7: a synthesis of linked arguments across the curriculum).",
+            "anchorIds": [
+              "p-1059579",
+              "p-1061383",
+              "p-1064015"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-1"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Covers two major mathematical disciplines (astronomy and harmonics), defining their proper intellectual practice across all theoretical problems (p-1061383, p-1064015).",
+            "anchorIds": [
+              "p-1061383",
+              "p-1064015"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.7,
+            "rationale": "Constructs the timocratic character through psychological development, showing how conflicting maternal complaints against an easy-going philosophical father drive the young man to enthrone the spirited element (p-1105610, p-1107246, p-1108104). Because this directly applies the macro-micro correspondence established in n-37-2 (depth 6.5) along with the tripartite soul (n-28-3, depth 3.4), incorporating the prerequisite chain from n-37-2 requires depth >= 6.5, calibrated here to 6.7 (anchor 6 to anchor 7: linked argument combining established results).",
+            "anchorIds": [
+              "p-1105610",
+              "p-1107246",
+              "p-1108104"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3",
+              "n-37-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Characterizes the specific psychological type and domestic etiology of the timocratic individual (p-1105610, p-1108104).",
+            "anchorIds": [
+              "p-1105610",
+              "p-1108104"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.7,
+            "rationale": "Defines oligarchy and deduces that wealth qualifications divide the city into two warring factions of rich and poor, building directly upon the dissolution of timocracy and accumulation of private property established in n-37-3 (depth 6.5). Incorporating the prerequisite chain through n-37-3 requires depth >= 6.5, calibrated here to 6.7 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-3"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Defines the constitution and internal political dynamic of the oligarchical regime across all its historical and theoretical instances (p-1109832, p-1113039).",
+            "anchorIds": [
+              "p-1109832",
+              "p-1113039"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Socrates deduces the psychological genesis and character structure of the oligarchic man (p-1117342, p-1117831, p-1120318) by applying the macro-micro correspondence (n-37-2, depth 6.5) and the timocratic starting point (n-37-4, depth 6.7) directly to the established regime of oligarchy (n-37-5, depth 6.7). Incorporating the full required prerequisite chain through n-37-4 and n-37-5 requires depth >= 6.7, calibrated here to 6.9 (anchor 6 to anchor 7: linked argument combining established results).",
+            "anchorIds": [
+              "p-1117342",
+              "p-1117831",
+              "p-1120318"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2",
+              "n-37-4",
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Defines the inner soul structure, motivations, and behavioral patterns of the oligarchic character type (p-1117342, p-1120318).",
+            "anchorIds": [
+              "p-1117342",
+              "p-1120318"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.9,
+            "rationale": "Infers from democratic freedom and license (n-38-1, depth 6.7) that democracy becomes a multi-colored tapestry exhibiting every variety of character and containing an assortment of constitutions (p-1127593, p-1127860, p-1128485). Incorporating the prior chain of n-38-1 requires depth >= 6.7, calibrated here to 6.9 (anchor 6 to anchor 7).",
+            "anchorIds": [
+              "p-1127593",
+              "p-1127860",
+              "p-1128485"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 5.3,
+            "rationale": "Describes the general social texture, diversity, and political atmosphere across democratic states (p-1127860, p-1128485).",
+            "anchorIds": [
+              "p-1127860",
+              "p-1128485"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7.1,
+            "rationale": "Details the step-by-step political process whereby the people's protector uses judicial murder against the wealthy, requests a bodyguard, and is transformed into a tyrannical wolf (p-1149590, p-1150097, p-1151201). Because it directly combines the excessive liberty dynamic (n-38-5, depth 7.1, which builds on n-38-2, depth 6.9) with the democratic class structure (n-38-6, depth 6.9), incorporating the higher prerequisite chain of n-38-5 requires depth >= 7.1, calibrated here to 7.1 (anchor 7: a synthesis of linked arguments across the democratic decline).",
+            "anchorIds": [
+              "p-1149590",
+              "p-1150097",
+              "p-1151201"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-5",
+              "n-38-6"
+            ]
+          },
+          "generality": {
+            "value": 5.3,
+            "rationale": "Details the recurrent causal cycle through which populist leaders transform into tyrants in democratic settings (p-1149590, p-1151201).",
+            "anchorIds": [
+              "p-1149590",
+              "p-1151201"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.8,
+            "rationale": "Socrates establishes how the tyrannical soul develops by directly applying the division of desires (n-38-3, depth 3.7) and the portrait of the democratic character (n-38-4, depth 6.6) to trace how an unrestrained master passion completely enslaves the soul. Incorporating the prerequisite chain through n-38-4 (depth 6.6) requires depth >= 6.6, calibrated here to 6.8 (anchor 6 to anchor 7: linked argument combining established results).",
+            "anchorIds": [
+              "p-1160395",
+              "p-1160857",
+              "p-1163702"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-3",
+              "n-38-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "The claim delineates a specific psychological type and class within the taxonomy of human souls—namely, the tyrannical character dominated by a master passion.",
+            "anchorIds": [
+              "p-1160395",
+              "p-1163702"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "fFCcar7rA8uUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 136101,
+    "candidatesTokenCount": 5303,
+    "totalTokenCount": 141404,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 136101
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5303
+      }
+    ]
+  },
+  "durationMs": 26190,
+  "requestHash": "b068dbcff2dc112b81dca62d04c64b914dce78147eb5a4af5c6b316822258bd1"
+}

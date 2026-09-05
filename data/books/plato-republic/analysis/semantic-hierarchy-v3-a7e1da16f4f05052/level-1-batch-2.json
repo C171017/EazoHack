@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-3-1",
+          "n-3-4",
+          "n-14-5",
+          "n-10-6"
+        ],
+        "label": "Philosophical and Civic Ideals",
+        "summary": "Commentaries examine the broad metaphysical and architectural design of the Republic, emphasizing its dual structure balancing a traditional Hellenic polity against an ideal philosophical commonwealth, alongside allegories contrasting theoretical contemplation with practical civic affairs.",
+        "rationale": "These commentary items share an overarching perspective on the Republic's dual nature, philosophical significance, and the tension between theoretical ideals and political realities."
+      },
+      {
+        "childIds": [
+          "n-19-1",
+          "n-19-3",
+          "n-19-4",
+          "n-19-7",
+          "n-20-3",
+          "n-21-1"
+        ],
+        "label": "Book I Debates on Justice",
+        "summary": "Book I dialogue traverses early conceptions of justice: Cephalus discusses character and passions in old age, Socrates refutes returning debts to the mad and tests ruler fallibility, Polemarchus defines justice as helping friends and harming foes, Thrasymachus praises injustice as profitable power, and Socrates affirms justice as the soul's excellence.",
+        "rationale": "All six occurrences are direct dialogue passages from Book I examining initial definitions, conventional maxims, and radical challenges regarding justice."
+      },
+      {
+        "childIds": [
+          "n-3-2",
+          "n-4-6",
+          "n-4-7",
+          "n-22-3",
+          "n-22-4",
+          "n-22-5"
+        ],
+        "label": "The Intrinsic Value of Justice",
+        "summary": "Glaucon and Adeimantus, echoed across Book II dialogues and introductory summaries, challenge Socrates to demonstrate that justice is desirable entirely in itself, contrasting its inner soul-reality against common praises based on external rewards, reputation, or the impunity demonstrated by the Ring of Gyges.",
+        "rationale": "These entries form a tight thematic cluster centered on the Book II challenge of demonstrating the intrinsic worth of justice apart from consequences and outward praise."
+      },
+      {
+        "childIds": [
+          "n-5-2",
+          "n-22-6"
+        ],
+        "label": "State and Individual Analogy",
+        "summary": "Socrates introduces the method of examining justice in the larger letters of the State before reading the smaller letters in the individual, establishing the civic framework for the dialogue's moral inquiry.",
+        "rationale": "Both items focus specifically on Socrates's proposal to locate justice by analyzing the city before turning to the individual."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "sFGcarvMNPGlktwPzoWIkQ0",
+  "usage": {
+    "promptTokenCount": 16794,
+    "candidatesTokenCount": 557,
+    "totalTokenCount": 17351,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16794
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 557
+      }
+    ]
+  },
+  "durationMs": 6247,
+  "requestHash": "aa90f56ac4ccd3aa24f5f93813fe7e63cb829dbc311ba43504d5196b3695a24d"
+}

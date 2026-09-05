@@ -6,3 +6,6 @@ out/
 !.env.example
 .DS_Store
 coverage/
+
+# Local-only development controls and model selections
+.local-dev/

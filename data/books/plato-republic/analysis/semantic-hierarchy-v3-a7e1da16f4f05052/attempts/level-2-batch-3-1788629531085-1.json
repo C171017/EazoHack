@@ -1,0 +1,99 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-6-2",
+          "h-level-1-batch-5-3",
+          "h-level-1-batch-6-3",
+          "h-level-1-batch-14-1"
+        ],
+        "label": "Foundations of Guardian Rule",
+        "summary": "Socrates details the selection, training, and communal obligations of the guardian class, emphasizing judicial wisdom, austerity, and proportional civic happiness over private luxuries or medical pampering.",
+        "rationale": "All four clusters examine the initial formation, testing, and functional discipline of the guardian and civic order in Books III and IV."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-7-1",
+          "h-level-1-batch-5-4",
+          "h-level-1-batch-6-4"
+        ],
+        "label": "Communal Equality and Justice",
+        "summary": "These discussions define civic justice through distinct class duties, extend equal education and military roles to female guardians, and establish principles for regulated reproduction and inter-Hellenic conduct.",
+        "rationale": "Brings together the structural definition of civic justice from Book IV with the radical social reforms regarding gender equality and communal life in Book V."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-7-2",
+          "h-level-1-batch-8-1"
+        ],
+        "label": "Philosophers and Flawed States",
+        "summary": "Socrates addresses objections regarding the apparent uselessness or corruption of philosophers, using allegories such as the ship of state to contrast true contemplation of being with corrupted natures and unworthy imitators.",
+        "rationale": "Focuses specifically on the Book VI examination of why philosophers are marginalized or compromised in contemporary societies."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-2",
+          "h-level-1-batch-7-3"
+        ],
+        "label": "Curriculum of Dialectic and Truth",
+        "summary": "The higher educational program directs future rulers from mathematical sciences and solid geometry through mature dialectic, culminating in the vision of the good required to govern the commonwealth.",
+        "rationale": "Covers the sequential higher curriculum and philosophical ascent detailed in Book VII."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-3",
+          "h-level-1-batch-7-4",
+          "h-level-1-batch-8-4"
+        ],
+        "label": "Civic and Character Degeneration",
+        "summary": "Tracing the decay of the ideal commonwealth through timocracy, oligarchy, and democracy, Socrates charts how unrestrained desires and factionalism produce drone classes, demagogic leaders, and tyrannical rule.",
+        "rationale": "Encompasses the systematic breakdown of political constitutions and corresponding soul types across Book VIII."
+      },
+      {
+        "childIds": [
+          "n-39-7",
+          "h-level-1-batch-7-5",
+          "h-level-1-batch-8-5"
+        ],
+        "label": "Tyranny, Pleasure, and Reality",
+        "summary": "Socrates evaluates the misery of the tyrannical soul, contrasting base desires with pure painless pleasures like scent and distinguishing genuine essence from material copies and artistic imitations.",
+        "rationale": "Unites the culmination of Book IX on the tyrant's calculated misery and nature of pleasure with the metaphysical distinctions of Book X."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-5",
+          "h-level-1-batch-6-6",
+          "h-level-1-batch-6-7",
+          "n-46-5"
+        ],
+        "label": "Indices and Editorial Apparatus",
+        "summary": "Editorial notes, thematic indexes on virtue, rulers, and Homer, and scholarly commentary contextualize Plato's polity against historical Athenian and Spartan practices.",
+        "rationale": "Groups all terminal paratextual occurrences, editorial indexes, and modern commentary together at the apparatus level."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FFKcauLbA62dncoP5daroAE",
+  "usage": {
+    "promptTokenCount": 35000,
+    "candidatesTokenCount": 842,
+    "totalTokenCount": 35842,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 35000
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 842
+      }
+    ]
+  },
+  "durationMs": 7472,
+  "requestHash": "f97ba7b11c8bfaba07e139268f79ede4bb58bc588d0b7699686d0741285f65eb"
+}

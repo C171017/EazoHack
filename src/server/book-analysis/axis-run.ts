@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { z } from 'zod';
-import { BOOK_AXIS_VERSION } from '../../shared/book-axes';
+import { BOOK_AXIS_VERSION, axisCoordinate } from '../../shared/book-axes';
 import { GraphSchema, type Graph } from '../../shared/schemas';
 import type { Generate, ModelReply } from './contracts';
 import { AXIS_PROMPT_VERSION, AXIS_SYSTEM, AxisBatchSchema, AxisReviewSchema, axisPrompt, axisReviewPrompt } from './axis-prompts';
@@ -87,7 +87,7 @@ export async function assignBookAxes({graph,outputRoot,generate,model,log=()=>{}
       axisAnalysis:{model,promptVersion:AXIS_PROMPT_VERSION,sourceGraphVersion:graph.graphVersion,reviewStatus:'model_reviewed',completedAt:new Date().toISOString()},
       nodes:graph.nodes.map(n=>{
         const assessment=byId.get(n.id)!;
-        return {...n,axisAssessment:assessment,position:{x:assessment.reasoningDepth.value===null?null:assessment.reasoningDepth.value/4,y:assessment.generality.value,z:n.position.z},
+        return {...n,axisAssessment:assessment,position:{x:axisCoordinate(assessment.reasoningDepth.value,'x'),y:axisCoordinate(assessment.generality.value,'y'),z:n.position.z},
           evidence:{...n.evidence,ruleVersion:AXIS_PROMPT_VERSION,rationale:`X — ${assessment.reasoningDepth.rationale}\nY — ${assessment.generality.rationale}\nZ derives from the unchanged first exact source anchor. Topics do not determine coordinates.`,anchorIds:[...new Set([...n.anchorIds,...assessment.reasoningDepth.anchorIds,...assessment.generality.anchorIds])]}};
       })});
     preserveSource(result,graph);

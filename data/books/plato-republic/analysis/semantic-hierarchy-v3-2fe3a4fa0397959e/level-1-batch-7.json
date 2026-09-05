@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-21-5"
+        ],
+        "label": "Socrates' Aporia and Self-Blame",
+        "summary": "Socrates blames himself for wandering into downstream questions before defining the nature of justice, concluding that he knows nothing.",
+        "rationale": "This occurrence stands apart as an early methodological aporia concluding Book I, separated in thematic scope and position from the later political prescriptions and commentaries."
+      },
+      {
+        "childIds": [
+          "n-18-1",
+          "n-18-4"
+        ],
+        "label": "Platonic Legacy in Cicero and More",
+        "summary": "Introductory commentaries analyze how subsequent thinkers appropriated Platonic models, comparing Cicero's Romanized imitations with More's construction of Utopia based on community of property.",
+        "rationale": "Both entries derive from introductory commentary assessing external historical receptions and adaptations of Plato's political philosophy."
+      },
+      {
+        "childIds": [
+          "n-24-1",
+          "n-24-2",
+          "n-24-4",
+          "n-24-5",
+          "n-24-6",
+          "n-25-1",
+          "n-25-2"
+        ],
+        "label": "Censorship of Poetry and Music",
+        "summary": "Socrates establishes rigorous cultural controls for educating the guardians, purging fearful depictions of the underworld, restricting poetic imitation and pantomime, licensing medicinal lies strictly to rulers, and admitting only austere musical modes and instruments.",
+        "rationale": "These entries form a continuous thematic block in Book III regulating narrative, dramatic imitation, poetic content, and musical instrumentation."
+      },
+      {
+        "childIds": [
+          "n-26-2",
+          "n-26-3",
+          "n-26-5",
+          "n-27-1",
+          "n-28-1",
+          "n-29-5"
+        ],
+        "label": "Guardian Life and Civic Order",
+        "summary": "Socrates details the selection, strict communal living, and familial regulations of rulers and auxiliaries, responding to Adeimantus's objections regarding guardian hardship and identifying civic justice with strict class specialization.",
+        "rationale": "These Book III to Book V sections share the institutional design of guardian life, collective discipline, objections regarding their happiness, and the definition of state justice."
+      },
+      {
+        "childIds": [
+          "n-32-3",
+          "n-32-7"
+        ],
+        "label": "The Philosopher and Public Life",
+        "summary": "Adeimantus highlights the general perception of philosophers as useless oddities or rogues, while Socrates describes how the noble remnant must shelter quietly away from corrupt civic politics.",
+        "rationale": "Both entries address Book VI's examination of the friction between true philosophers and existing political societies."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "41CcauasBZqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 12278,
+    "candidatesTokenCount": 699,
+    "totalTokenCount": 12977,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12278
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 699
+      }
+    ]
+  },
+  "durationMs": 5873,
+  "requestHash": "cbc66abad9c490e6cef0e107754cde49ddd9a61ea56fa797ea33bc308d359d84"
+}

@@ -28,13 +28,14 @@ export function vertexSchema(schema: z.ZodType): unknown {
   return convert(z.toJSONSchema(schema));
 }
 
-export const generateStructured: Generate = async (system, prompt, schema, maxOutputTokens = 12_288) => {
+export const generateStructured: Generate = async (system, prompt, schema, maxOutputTokens = 12_288, options = {}) => {
   const project = process.env.GOOGLE_CLOUD_PROJECT || process.env.GCP_PROJECT_ID || '';
   const location = process.env.GOOGLE_CLOUD_LOCATION || 'global';
   const model = analysisModel();
   if (!/^[a-z][a-z0-9-]{4,61}[a-z0-9]$/.test(project) || !/^[a-z0-9-]+$/.test(location) || !/^[a-z0-9.-]+$/.test(model)) throw new ModelRequestError('Invalid or missing Vertex project, location, or model configuration.', false);
   const started = Date.now();
-  const signal = AbortSignal.timeout(180_000);
+  const timeout = AbortSignal.timeout(options.timeoutMs ?? 180_000);
+  const signal = options.signal ? AbortSignal.any([timeout, options.signal]) : timeout;
   const token = await vertexAccessToken();
   const response = await fetch(`https://aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`, {
     method: 'POST', signal,

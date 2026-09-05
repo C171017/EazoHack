@@ -1,0 +1,562 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-42-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Socrates introduces the cosmological vision of the spindle of Necessity directly as part of the Myth of Er mythos, detailing the concentric whorls and sirens with minimal internal argumentative inference beyond narrative setting.",
+            "anchorIds": [
+              "p-1270536",
+              "p-1272734"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-4"
+            ]
+          },
+          "generality": {
+            "value": 7.2,
+            "rationale": "The passage depicts the entire cosmic mechanism, astronomical motions, and planetary order governing universal fate, covering cosmic phenomena broadly within the Platonic mythos.",
+            "anchorIds": [
+              "p-1270536",
+              "p-1272734"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "The necessity of choosing a life based on philosophical knowledge rather than mere unreflective habit synthesizes Socrates' earlier conclusions about virtue, the tripartite soul, and philosophical education with the mythic setting of reincarnation.",
+            "anchorIds": [
+              "p-1274066",
+              "p-1276267",
+              "p-1278007"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-4",
+              "n-42-5"
+            ]
+          },
+          "generality": {
+            "value": 7.8,
+            "rationale": "The claim applies to all human choices and souls selecting incarnate destinies across lives, articulating a broad moral principle governing human agency and responsibility.",
+            "anchorIds": [
+              "p-1274066",
+              "p-1276267",
+              "p-1278007"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 9.2,
+            "rationale": "This is the culminating conclusion of the entire dialogue, where Socrates draws upon the completed proof of the soul's immortality and intrinsic virtue, as well as the Vision of Er, to deliver the ultimate practical and philosophical exhortation.",
+            "anchorIds": [
+              "p-1281978",
+              "p-1283419"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-1",
+              "n-42-3",
+              "n-42-6"
+            ]
+          },
+          "generality": {
+            "value": 9.3,
+            "rationale": "The exhortation applies unconditionally across all human action and existence, both in this mortal life and throughout all future post-mortem journeys.",
+            "anchorIds": [
+              "p-1281978",
+              "p-1283419"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "The editorial apparatus summarizes and comments upon Plato's scattered evaluations of art and poetry, synthesizing the themes of simplicity, moderation, and censorship into an interpretive schema.",
+            "anchorIds": [
+              "p-1290140",
+              "p-1289120"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "Presents a broad editorial principle regarding Plato's treatment of all forms of artistic expression (music, sculpture, architecture, and painting) within his political theory.",
+            "anchorIds": [
+              "p-1290140",
+              "p-1289120"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "The editorial note compares Plato's communism across several works (Republic, Critias, Laws), synthesizing his drive for state unity across textual contexts.",
+            "anchorIds": [
+              "p-1299247",
+              "p-1299064"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "Covers Plato's general doctrine of communal property and family structures across multiple political texts.",
+            "anchorIds": [
+              "p-1299247",
+              "p-1299064"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "An editorial distillation comparing dialectic with eristic and showing how dialectical method ascends above scientific hypotheses, synthesizing references across the dialogues.",
+            "anchorIds": [
+              "p-1305613",
+              "p-1305056"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "A general characterization of dialectic as the overarching method of philosophical cognition across Platonic epistemological thought.",
+            "anchorIds": [
+              "p-1305613",
+              "p-1305056"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "An editorial summary organizing the Republic's educational program into two systematic tiers: primary cultural/gymnastic and advanced philosophical education.",
+            "anchorIds": [
+              "p-1310197",
+              "p-1309050"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Covers the entire citizen and guardian educational framework within Plato's political philosophy.",
+            "anchorIds": [
+              "p-1310197",
+              "p-1309050"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Editorial commentary summarizing Plato's theology under two primary canons from Book II, tracing their application across the dialogue and into the Laws.",
+            "anchorIds": [
+              "p-1319546"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "States domain-wide principles regarding the divine nature and divine causality asserted across Plato's thought.",
+            "anchorIds": [
+              "p-1319546"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Editorial analysis of Plato's degeneration of constitutions, correlating political decline with psychological degradation and comparing it with the Statesman, Laws, and Aristotle.",
+            "anchorIds": [
+              "p-1322766",
+              "p-1324967"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7.1,
+            "rationale": "Applies across all regime types and psychological types in Platonic political taxonomy.",
+            "anchorIds": [
+              "p-1322766",
+              "p-1324967"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Index list compiling textual locations and explicit qualifications demanded for guardians, with direct descriptive references.",
+            "anchorIds": [
+              "p-1325386"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Restricted to the specific class of guardians/rulers in Plato's ideal republic.",
+            "anchorIds": [
+              "p-1325386"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Index list recording line-by-line references and explicit objections raised by Plato against Homer and mimetic poetry throughout the Republic.",
+            "anchorIds": [
+              "p-1331278",
+              "p-1337347"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Focuses specifically on Homer and mimetic poetic passages within the dialogue's pedagogical critique.",
+            "anchorIds": [
+              "p-1331278",
+              "p-1337347"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "An editorial commentary synthesizing the Idea of the Good as the ontological source of truth, beauty, and symmetry, incorporating insights from the Republic and Philebus.",
+            "anchorIds": [
+              "p-1335025",
+              "p-1334643"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 8.6,
+            "rationale": "Formulates the Idea of the Good as the supreme ontological and metaphysical principle uniting all knowledge and existence.",
+            "anchorIds": [
+              "p-1335025",
+              "p-1334643"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "An editorial synthesis following the argumentative arc of justice through Book I, the social construction of Books II-IV, the degenerate states, and the final 729-fold and eschatological proofs.",
+            "anchorIds": [
+              "p-1341688",
+              "p-1340214"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7.9,
+            "rationale": "Covers justice both as the universal civic principle of societal organization and the comprehensive psychological health of the individual.",
+            "anchorIds": [
+              "p-1341688",
+              "p-1340214"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "Commentary on the ancient Greek understanding of 'music' as mental culture encompassing literature and science, comparing the Republic's curriculum with the Laws and historical practice.",
+            "anchorIds": [
+              "p-1354597",
+              "p-1356792"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.4,
+            "rationale": "Presents a broad cultural and pedagogical category spanning Greek education and Platonic curriculum.",
+            "anchorIds": [
+              "p-1354597",
+              "p-1356792"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Index entry providing structured citations across the work relating to the character, education, pleasures, and political role of the philosopher.",
+            "anchorIds": [
+              "p-1362524",
+              "p-1363813"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Encompasses the category of the philosopher throughout the Republic.",
+            "anchorIds": [
+              "p-1362524",
+              "p-1363813"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Editorial overview tracing the development of the critique of poetry from pedagogical concerns in Books II-III to the ontological and psychological attack in Book X.",
+            "anchorIds": [
+              "p-1366617",
+              "p-1368817"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.7,
+            "rationale": "Addresses the general role and evaluation of poetry and drama within civic culture and education.",
+            "anchorIds": [
+              "p-1366617",
+              "p-1368817"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Index entry cataloging textual citations concerning the ruler, their traits, education, testing, and duties in the Republic.",
+            "anchorIds": [
+              "p-1374420"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.6,
+            "rationale": "Restricted to the definition and characteristics of rulers within Platonic political thought.",
+            "anchorIds": [
+              "p-1374420"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "Editorial analysis synthesizing Platonic psychology, connecting the tripartite soul, four epistemological faculties, and the arguments for immortality and transmigration.",
+            "anchorIds": [
+              "p-1382197",
+              "p-1384396"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7.8,
+            "rationale": "Covers Platonic psychological theory as a whole, bridging epistemology, ethics, and metaphysics.",
+            "anchorIds": [
+              "p-1382197",
+              "p-1384396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Index entry systematically indexing occurrences of topics concerning the state, its origin, classes, unity, and constitutional forms.",
+            "anchorIds": [
+              "p-1386991"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.3,
+            "rationale": "Covers the civic and political instances of the state across the entire dialogue.",
+            "anchorIds": [
+              "p-1386991"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Editorial synthesis analyzing the dual composition of Plato's ideal state as an amalgamation of historical Hellenic institutions and an imaginary philosophical republic.",
+            "anchorIds": [
+              "p-1389105"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.3,
+            "rationale": "Applies as a comprehensive interpretive framework to Plato's model of the republic.",
+            "anchorIds": [
+              "p-1389105"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Detailed historical comparison specifying which features of the Republic derive from Spartan militarism/subordination and which derive from Athenian refinement and philosophy.",
+            "anchorIds": [
+              "p-1389105",
+              "p-1391295"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-1"
+            ]
+          },
+          "generality": {
+            "value": 5.8,
+            "rationale": "Specific comparative analysis of historical Greek institutional influences on Plato's political design.",
+            "anchorIds": [
+              "p-1389105",
+              "p-1391295"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "Editorial assessment of the three radical innovations of Plato (communism, equal women's roles, philosopher-kings), identifying them as unprecedented products of Plato's imagination.",
+            "anchorIds": [
+              "p-1391295",
+              "p-1393487"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-1"
+            ]
+          },
+          "generality": {
+            "value": 5.7,
+            "rationale": "Focuses on the three specific radical paradoxes of the Republic relative to ancient Greek practice.",
+            "anchorIds": [
+              "p-1391295",
+              "p-1393487"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Index list collecting passages and thematic definitions concerning virtue as psychic health, harmony, and its relations to bodily care and pleasure.",
+            "anchorIds": [
+              "p-1399938"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "Covers the moral and psychological concept of virtue indexed across the Republic.",
+            "anchorIds": [
+              "p-1399938"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct factual paratext recording editorial collation, formatting practices, Stephanus number placement, and transliteration standards, containing no philosophical inference.",
+            "anchorIds": [
+              "p-1406019",
+              "p-1407211",
+              "p-1407923"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Applies strictly to the typographical and transliteration conventions of this specific digital edition.",
+            "anchorIds": [
+              "p-1406019",
+              "p-1407211",
+              "p-1407923"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "f0-caovVEMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 49598,
+    "candidatesTokenCount": 3839,
+    "totalTokenCount": 53437,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 49598
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3839
+      }
+    ]
+  },
+  "durationMs": 20699,
+  "requestHash": "93d2ff293654686de96427bb9be38deedab3463f1165ba668b2dd9e3caa36821"
+}

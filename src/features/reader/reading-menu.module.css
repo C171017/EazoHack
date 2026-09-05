@@ -1,13 +1,5 @@
-.menu { position: relative; min-height: 44px; color: var(--color-ink); font-family: Arial, sans-serif; }
+.menu { position: relative; display: flex; align-items: center; gap: 12px; min-height: 44px; color: var(--color-ink); font-family: Arial, sans-serif; }
 .trigger { position: relative; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; background: transparent; color: inherit; cursor: pointer; }
-.line { position: absolute; height: 1.5px; border-radius: 3px; background: currentColor; transform-origin: center; transition: top 740ms cubic-bezier(.16,1,.3,1), width 740ms cubic-bezier(.16,1,.3,1), opacity 460ms ease, transform 900ms cubic-bezier(.16,1,.3,1); }
-.line:nth-child(1) { top: 13px; left: 16%; width: 66%; }
-.line:nth-child(2) { top: 21px; left: 31%; width: 52%; }
-.line:nth-child(3) { top: 29px; left: 10%; width: 76%; }
-.menu[data-open='true'] .line { top: 21px; left: 25%; width: 50%; }
-.menu[data-open='true'] .line:nth-child(1) { transform: rotate(405deg); }
-.menu[data-open='true'] .line:nth-child(2) { opacity: 0; transform: rotate(540deg) scaleX(.3); }
-.menu[data-open='true'] .line:nth-child(3) { transform: rotate(315deg); }
 .options { position: absolute; top: 100%; right: -8px; width: min(300px, calc(100vw - 48px)); isolation: isolate; opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(-8px); transition: opacity 320ms ease, transform 700ms cubic-bezier(.16,1,.3,1), visibility 0s 760ms; }
 /* Keep the entire blur layer translucent so source text shows through the center.
    Feather the surface independently so labels and focus rings stay crisp.
@@ -19,19 +11,12 @@
 .group + .group { margin-top: 4px; }
 .option { position: relative; display: flex; align-items: center; justify-content: flex-end; width: 100%; min-height: 58px; padding: 8px 0 8px 18px; border: 0; background: transparent; color: inherit; text-align: right; cursor: pointer; opacity: 0; transform: translate3d(25px,-20px,-70px) rotate(35deg) scale(.78); transform-origin: right top; transition: opacity 320ms ease, transform 760ms cubic-bezier(.16,1,.3,1); transition-delay: calc((3 - var(--item-index)) * 26ms); }
 .menu[data-open='true'] .option { opacity: 1; transform: translate3d(0,0,0) rotate(0) scale(1); transition-delay: calc(105ms + var(--item-index) * 72ms); }
-.label { font-size: 28px; font-weight: 400; line-height: 1.4; transition: color 260ms ease; }
+.label { font-size: 22px; font-weight: 400; line-height: 1.4; transition: color 260ms ease; }
 .option[aria-pressed='true'] .label { color: #66734d; }
 .option:hover .label { color: #66734d; }
 .trigger:focus-visible, .option:focus-visible { outline: 2px solid #69764d; outline-offset: 4px; border-radius: 3px; }
 @media (min-width: 1024px) { .content { max-height: calc(100svh - 130px); } }
-@media (prefers-reduced-motion: reduce) { .line, .options, .option { transition: opacity 120ms ease; transition-delay: 0ms !important; } .option { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .options, .option { transition: opacity 120ms ease; transition-delay: 0ms !important; } .option { transform: none; } }
 
-.submenu { display: grid; grid-template-rows: 0fr; opacity: 0; visibility: hidden; transition: grid-template-rows 700ms cubic-bezier(.16,1,.3,1), opacity 320ms ease, visibility 0s 700ms; }
-.subcontent { min-height: 0; overflow: hidden; padding-right: 8px; }
-.section[data-expanded='true'] .submenu { grid-template-rows: 1fr; opacity: 1; visibility: visible; transition-delay: 0s; }
-.menu[data-open='true'] .submenu .option { opacity: 0; transform: translate3d(25px,-20px,-70px) rotate(35deg) scale(.78); transition-delay: 0s; }
-.menu[data-open='true'] .section[data-expanded='true'] .submenu .option { opacity: 1; transform: translate3d(0,0,0) rotate(0) scale(1); transition-delay: calc(105ms + var(--item-index) * 72ms); }
-.submenu .label { font-size: 22px; }
-.hint { font-size: 12px; line-height: 1.6; text-align: right; color: var(--color-muted); margin: 8px 0 16px; }
-.option:disabled { cursor: wait; }
-@media (prefers-reduced-motion: reduce) { .submenu { transition: none; } .menu[data-open='true'] .submenu .option { transform: none; } }
+.icon { width: 34px; height: 34px; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.65; stroke-linecap: round; stroke-linejoin: round; transition: color 260ms ease; }
+.trigger:hover .icon { color: #66734d; }

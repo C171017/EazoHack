@@ -1,0 +1,96 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-1",
+          "n-23-4"
+        ],
+        "label": "Origin of War and Early Tales",
+        "summary": "Socrates describes how luxury drives the city into expansion and warfare, and establishes strict regulation of poetic tales to properly shape the impressionable minds of future guardians.",
+        "rationale": "Both entries address foundational aspects of state creation and civic education in Book II, specifically early city formation and the censorship of stories for youth."
+      },
+      {
+        "childIds": [
+          "n-25-5",
+          "n-25-6"
+        ],
+        "label": "Practices of Healing and Law",
+        "summary": "Socrates critiques protracted medical regimens that distract citizens from civic tasks and contrasts physical healing with the qualifications of a good judge, who must grasp evil by observation rather than personal habit.",
+        "rationale": "Both entries from Book III analyze civic professions concerning bodily and mental maintenance—medicine and the judiciary—contrasting direct experience with functional necessity."
+      },
+      {
+        "childIds": [
+          "n-26-1",
+          "n-26-4",
+          "n-26-5",
+          "n-27-4"
+        ],
+        "label": "Foundational Guardian Order",
+        "summary": "Socrates details the selection of rulers, the myth of the metals, the prohibition of private possessions for guardians, and the civic manifestations of wisdom and courage.",
+        "rationale": "These Book III and IV sections establish the structural, ideological, and moral foundation of the ruling and auxiliary classes in the newly ordered city."
+      },
+      {
+        "childIds": [
+          "n-29-4",
+          "n-30-6"
+        ],
+        "label": "Philosophic Capacities & Nature",
+        "summary": "Socrates outlines how governing aptitudes are distributed across sexes and distinguishes genuine philosophers as those who contemplate ultimate truth rather than superficial appearances.",
+        "rationale": "These Book V passages both characterize the intrinsic nature, capacities, and definitions of true rulers and guardians."
+      },
+      {
+        "childIds": [
+          "n-44-5",
+          "n-44-6",
+          "n-45-4"
+        ],
+        "label": "Index: Guardians, Homer, Rulers",
+        "summary": "The editorial apparatus compiles references detailing the testing and traits of guardians and rulers, as well as citations criticizing Homer and poetic imitation.",
+        "rationale": "Paratextual index entries cataloguing guardian education, qualifications of leadership, and Plato's critiques of poetic art."
+      },
+      {
+        "childIds": [
+          "n-45-2",
+          "n-45-6",
+          "n-46-4"
+        ],
+        "label": "Index: Virtues, State & Mind",
+        "summary": "Paratextual entries index passages throughout the work on the definition of virtue, the governance and structural evolution of the state, and the philosopher's development.",
+        "rationale": "Editorial index listings systematically cross-referencing major thematic definitions regarding virtue, political order, and philosophical inquiry."
+      },
+      {
+        "childIds": [
+          "n-46-2",
+          "n-46-3"
+        ],
+        "label": "Commentary on Plato's Polity",
+        "summary": "The editorial commentary examines historical Spartan and Athenian models influencing Plato's city alongside novel radical proposals like philosopher-rulers and communal living.",
+        "rationale": "Editorial apparatus entries offering historical and analytical commentary on the practical precedents and unique innovations of the Republic."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "w1GcapHhAZ2AktwPl_yY2Q8",
+  "usage": {
+    "promptTokenCount": 16615,
+    "candidatesTokenCount": 715,
+    "totalTokenCount": 17330,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16615
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 715
+      }
+    ]
+  },
+  "durationMs": 6912,
+  "requestHash": "e761bc55d686ac734f839756b54bfad0af795ee678fc45ab12e17e6dbe87452a"
+}

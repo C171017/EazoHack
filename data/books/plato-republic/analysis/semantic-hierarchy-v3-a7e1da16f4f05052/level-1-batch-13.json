@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-28-2",
+          "n-39-6",
+          "n-41-7"
+        ],
+        "label": "Psychology & Opposites",
+        "summary": "Socrates lays down foundational principles regarding contrary states, distinguishing the intermediate neutrality of rest from genuine pleasure, formulating the non-contradiction principle for parts and wholes, and asserting the immortal endurance of the soul.",
+        "rationale": "These passages from Books IV, IX, and X address core structural principles of dialectic, psychological states (pleasure/pain), and the metaphysical status of the soul."
+      },
+      {
+        "childIds": [
+          "n-29-6",
+          "n-30-1"
+        ],
+        "label": "Civic Unity & Shared Feeling",
+        "summary": "In Book V, Socrates defines civic cohesion as the paramount good of the commonwealth, likening the harmonious state to a single organism where injury to any part elicits shared joy and grief across the whole community.",
+        "rationale": "Consecutive passages from Book V defining the ideal state's supreme unity through communal feeling and the organic metaphor."
+      },
+      {
+        "childIds": [
+          "n-30-3",
+          "n-30-5",
+          "n-31-1",
+          "n-31-3",
+          "n-31-6"
+        ],
+        "label": "Forms, Faculties & Ideals",
+        "summary": "Socrates establishes that philosophers desire the entirety of wisdom, examining how singular Forms manifest across fluctuating sensory particulars, characterizing mental faculties by their sphere and results, and affirming ideals as valid evaluative standards irrespective of concrete realization.",
+        "rationale": "A tightly clustered series from Book V exploring epistemological definitions (faculties, lover of wisdom) and metaphysical doctrines (the Forms vs particulars, ideal standards)."
+      },
+      {
+        "childIds": [
+          "n-43-1",
+          "n-43-4",
+          "n-45-1"
+        ],
+        "label": "Education & Aesthetic Culture",
+        "summary": "Editorial notes examine Plato's pedagogical systems, detailing the tiered progression from music and gymnastics to advanced dialectics while highlighting the moral censorship and moderation required in art and melody.",
+        "rationale": "Apparatus commentary focusing on Plato's educational curricula and his stringent regulatory standards for poetry, art, and music."
+      },
+      {
+        "childIds": [
+          "n-43-2",
+          "n-46-1"
+        ],
+        "label": "Civic Structure & Communism",
+        "summary": "Paratext commentary traces the composition of Plato's state between Spartan militarism and Athenian culture, analyzing how the communal abolition of private property and family aims to preserve civic cohesion across the dialogues.",
+        "rationale": "Editorial analyses centered on the institutional mechanics, civic composition, and communal property structures of the Republic and related dialogues."
+      },
+      {
+        "childIds": [
+          "n-43-3",
+          "n-44-1",
+          "n-44-3"
+        ],
+        "label": "Dialectic, Theology & Good",
+        "summary": "Editorial commentary synthesizes Plato's supreme metaphysical concepts, outlining the perfection and unchanging truth of God, the ascent of dialectic beyond eristic hypotheses, and the transcendent Idea of the Good as the source of truth and being.",
+        "rationale": "Apparatus commentary synthesizing the apex of Platonic metaphysics, theology, and philosophical method."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7VGcaraDLp2AktwPl_yY2Q8",
+  "usage": {
+    "promptTokenCount": 13487,
+    "candidatesTokenCount": 834,
+    "totalTokenCount": 14321,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13487
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 834
+      }
+    ]
+  },
+  "durationMs": 6692,
+  "requestHash": "79a1e9bda004a87a6595dea94adb540dfcb691a3cb21f40d4ca98dbce59adabb"
+}

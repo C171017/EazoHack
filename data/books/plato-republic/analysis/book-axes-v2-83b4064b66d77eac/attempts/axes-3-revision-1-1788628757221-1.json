@@ -1,0 +1,623 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-9-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Socrates establishes the Divided Line directly on top of the Sun analogy, dividing reality and faculties into four proportioned segments based on the previous metaphysical distinctions (anchor p-215396, p-217597). This builds directly upon the established Sun analogy (n-9-1).",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "The Divided Line is a broadly reusable, comprehensive epistemological and ontological model mapping all cognitive states (shadow-perception to dialectical reason) and classes of reality across the intelligible and visible realms (p-215396, p-217597).",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentary evaluates the character of the philosopher by directly comparing the ancient Platonic synoptic ideal with modern empirical science and division of intellectual labour (p-218184, p-220383), representing a developed local comparative inference.",
+            "anchorIds": [
+              "p-218184",
+              "p-220383"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "The passage articulates a comparative principle characterizing philosophical inquiry across two broad epochs (ancient Greek vs. modern European philosophy and science; p-218184, p-220383).",
+            "anchorIds": [
+              "p-218184",
+              "p-220383"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentator develops an analytical critique of Plato's logical method, noting its attempts to anticipate science a priori without empirical analysis and comparing it to modern rationalist philosophies (p-227850, p-229129).",
+            "anchorIds": [
+              "p-227850",
+              "p-229129"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "It frames a principle regarding the nature of scientific methodology, analyzing a priori systematic deduction versus empirical inductive inquiry across historical schools (p-227850, p-229129).",
+            "anchorIds": [
+              "p-227850",
+              "p-229129"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "The Cave allegory translates the established metaphysical hierarchy of the Sun (n-9-1) and Divided Line (n-9-2) into an illustrative psychological and pedagogical ascent (p-242536, p-244736).",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1",
+              "n-9-2"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "The allegory formulates a broadly applicable framework describing the general condition of human enlightenment, education, and the ascent from illusion to intellectual reality (p-242536, p-244736).",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "The obligation of the philosopher to descend back to the den is a linked deduction combining the purpose of civic justice established in Book IV (n-6-6) and the ascent of the philosopher in the Cave (n-9-5; p-246935).",
+            "anchorIds": [
+              "p-246935"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-6",
+              "n-9-5"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "The claim specifically governs the political duty and social station of the philosophical guardian class within the ideal commonwealth (p-246935).",
+            "anchorIds": [
+              "p-246935"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Following the mandate of turning the soul toward being (n-9-5), Socrates deduces arithmetic as the first study by showing how sensory contradictions compel intellectual reflection (p-248920, p-251121).",
+            "anchorIds": [
+              "p-248920",
+              "p-251121"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-5"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Presents a domain-wide pedagogical and epistemological claim about the nature of number and calculation in directing consciousness toward abstract reality (p-248920, p-251121).",
+            "anchorIds": [
+              "p-248920",
+              "p-251121"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Socrates develops a sequence of curricular disciplines—plane geometry, solid geometry, astronomy, and harmonics—justifying their placement by their capacity to compel the mind toward true being (p-252870, p-253814, p-255204).",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies strictly to the sequence and pedagogical purpose of mathematical disciplines within the higher educational curriculum of the guardians (p-252870, p-253814, p-255204).",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Dialectic is concluded to be the coping-stone of education, building upon the preparatory mathematical curriculum (n-10-2) and the epistemological distinction of the Divided Line (n-9-2) to attain the Idea of the Good (p-257856, p-259146).",
+            "anchorIds": [
+              "p-257856",
+              "p-259146"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-2",
+              "n-10-2"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "A broad epistemological principle establishing dialectic as the supreme science that provides grounding to all other sciences and knowledge of essences (p-257856, p-259146).",
+            "anchorIds": [
+              "p-257856",
+              "p-259146"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Synthesizes the entire educational apparatus—gymnastics, preparatory sciences, dialectic (n-10-3), and civic descent (n-9-6)—into a comprehensive temporal schedule from childhood to age fifty (p-261123, p-263322, p-265520).",
+            "anchorIds": [
+              "p-261123",
+              "p-263322",
+              "p-265520"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-6",
+              "n-10-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Restricted to the specific institutional lifecycle and testing schedule of the guardian-ruler class in the Republic (p-261123, p-263322, p-265520).",
+            "anchorIds": [
+              "p-261123",
+              "p-263322",
+              "p-265520"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.2,
+            "rationale": "Builds upon the role of dialectic as dispensing with customary premises (n-10-3), deducing the severe danger of moral skepticism when exposed prematurely through the analogy of the supposititious son (p-263322, p-280675, p-282876).",
+            "anchorIds": [
+              "p-263322",
+              "p-280675",
+              "p-282876"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "A principle concerning youth psychology and moral education during transitions where customary beliefs are challenged by intellectual criticism (p-263322, p-280675, p-282876).",
+            "anchorIds": [
+              "p-263322",
+              "p-280675",
+              "p-282876"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentator evaluates Plato's philosophical aims (realizing and connecting abstractions) and his Pythagorean use of mathematics, developing a local analytical interpretation (p-268244, p-272641).",
+            "anchorIds": [
+              "p-268244",
+              "p-272641"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates general principles concerning the development of abstract human thought, mathematics as an educational tool, and universal law (p-268244, p-272641).",
+            "anchorIds": [
+              "p-268244",
+              "p-272641"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentary analyzes the dual disorders of eyesight from the Cave allegory, applying them to the psychological profiles of theorists versus practical men (p-276257, p-277947, p-279461).",
+            "anchorIds": [
+              "p-276257",
+              "p-277947",
+              "p-279461"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Presents a domain-wide psychological and political typology of how statesmen and thinkers misunderstand either general principles or immediate practical facts (p-276257, p-277947, p-279461).",
+            "anchorIds": [
+              "p-276257",
+              "p-277947",
+              "p-279461"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Socrates resumes the project of Book IV (n-28-6), systematically linking four degenerate constitutions and matching souls to evaluate relative happiness against the just state (p-284222, p-286421).",
+            "anchorIds": [
+              "p-284222",
+              "p-286421"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-6"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "A comprehensive classification scheme encompassing the four major defective forms of civic government and individual human character (p-284222, p-286421).",
+            "anchorIds": [
+              "p-284222",
+              "p-286421"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "Deduces the first degenerate form (timocracy) from faction within the ideal state and illustrates the matching character using the state-soul isomorphism (n-11-1; p-286551, p-289058, p-289972).",
+            "anchorIds": [
+              "p-286551",
+              "p-289058",
+              "p-289972"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Focuses on the specific constitution and character type of timocracy (the ambitious, honour-loving state and individual; p-286551, p-289058, p-289972).",
+            "anchorIds": [
+              "p-286551",
+              "p-289058",
+              "p-289972"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "Traces the descent from timocracy to oligarchy based on the accumulation of wealth and shows how avarice overtakes the soul of the oligarchic individual (n-11-2; p-291357, p-291952, p-293392).",
+            "anchorIds": [
+              "p-291357",
+              "p-291952",
+              "p-293392"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Specific to the constitution of oligarchy, its economic factionalism, and the wealth-worshipping character type (p-291357, p-291952, p-293392).",
+            "anchorIds": [
+              "p-291357",
+              "p-291952",
+              "p-293392"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.6,
+            "rationale": "Deduces democracy from the internal contradictions of oligarchy (n-11-3), explaining democratic character through the uprising of unnecessary desires (p-295040, p-296779, p-298928).",
+            "anchorIds": [
+              "p-295040",
+              "p-296779",
+              "p-298928"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Pertains specifically to democratic governance and the multi-faceted, egalitarian democratic individual (p-295040, p-296779, p-298928).",
+            "anchorIds": [
+              "p-295040",
+              "p-296779",
+              "p-298928"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.8,
+            "rationale": "Derives tyranny directly from the excess of democratic freedom (n-11-4), tracing the demagogue's transformation into a tyrant through a sequence of political steps (p-301249, p-303447, p-305671).",
+            "anchorIds": [
+              "p-301249",
+              "p-303447",
+              "p-305671"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Covers the mechanics of tyranny as a specific constitutional degeneration and the emergence of the tyrant (p-301249, p-303447, p-305671).",
+            "anchorIds": [
+              "p-301249",
+              "p-303447",
+              "p-305671"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The editorial commentary provides an analytical critique contrasting Plato's conceptual sequence of constitutions with the actual historical order of ancient Greek city-states (p-308846, p-311475).",
+            "anchorIds": [
+              "p-308846",
+              "p-311475"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Discusses a broad historiographical principle distinguishing ideal philosophical models from empirical historical development in polities (p-308846, p-311475).",
+            "anchorIds": [
+              "p-308846",
+              "p-311475"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Synthesizes the entire sequence of political declines (n-11-1 through n-11-5) into a unified ethical principle of moral decline from reason down to a master passion (p-315664).",
+            "anchorIds": [
+              "p-315664"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1",
+              "n-11-2",
+              "n-11-3",
+              "n-11-4",
+              "n-11-5"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Formulates an encompassing principle governing the ethical degeneration of political systems and human souls under the influence of excess (p-315664).",
+            "anchorIds": [
+              "p-315664"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The commentary analyzes the mathematical and philological evidence regarding Plato's geometrical number, identifying it as 216 through Pythagorean properties (p-321015, p-320032, p-328363).",
+            "anchorIds": [
+              "p-321015",
+              "p-320032",
+              "p-328363"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses specifically on the interpretation of a single enigmatic mathematical riddle and text in Plato's Book VIII (p-321015, p-320032, p-328363).",
+            "anchorIds": [
+              "p-321015",
+              "p-320032",
+              "p-328363"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "Building on the account of tyranny and appetites (n-11-5), Socrates details the psychological progression of the tyrannical man ruled by a master erotic passion (p-332742, p-333925, p-335063).",
+            "anchorIds": [
+              "p-332742",
+              "p-333925",
+              "p-335063"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-5"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies specifically to the genesis, psychological state, and conduct of the tyrannical individual character type (p-332742, p-333925, p-335063).",
+            "anchorIds": [
+              "p-332742",
+              "p-333925",
+              "p-335063"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6.5,
+            "rationale": "Combines the psychological analysis of the tyrant (n-12-2) with the state-individual analogy to demonstrate the supreme misery and enslavement of the tyrant, answering the challenge of Book II (p-338614, p-337847, p-340598).",
+            "anchorIds": [
+              "p-338614",
+              "p-337847",
+              "p-340598"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Evaluates the relative happiness and inner psychic condition of tyrannical rulers compared to just individuals (p-338614, p-337847, p-340598).",
+            "anchorIds": [
+              "p-338614",
+              "p-337847",
+              "p-340598"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 6,
+            "rationale": "The second and third proofs of justice build on the tripartite soul (n-7-4) and nature of true being, evaluating three classes of pleasures and proving intellectual pleasures are superior (p-341636, p-343509, p-345710).",
+            "anchorIds": [
+              "p-341636",
+              "p-343509",
+              "p-345710"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-4"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "A comprehensive axiological principle ranking all human pleasures and their ontological reality based on the structure of the soul (p-341636, p-343509, p-345710).",
+            "anchorIds": [
+              "p-341636",
+              "p-343509",
+              "p-345710"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 7,
+            "rationale": "Calculates the numerical distance of happiness (729) by combining the constitutional ranking (n-11-1), the hierarchy of pleasures (n-12-4), and the tyrannical misery proof (n-12-3; p-346744, p-352659).",
+            "anchorIds": [
+              "p-346744",
+              "p-352659"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1",
+              "n-12-3",
+              "n-12-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A highly specific mathematical and symbolic formula calculating the precise gap in happiness between the king and the tyrant (p-346744, p-352659).",
+            "anchorIds": [
+              "p-346744",
+              "p-352659"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "_E6cauCkMMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 65077,
+    "candidatesTokenCount": 6309,
+    "totalTokenCount": 71386,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 65077
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6309
+      }
+    ]
+  },
+  "durationMs": 24758,
+  "requestHash": "515049a8c15a4825a23a21fb8893c2c5ce8ddf8ed826badf461b0d6febf50750"
+}

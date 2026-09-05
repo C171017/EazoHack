@@ -1,6 +1,6 @@
 # Shared 3D book-map contract
 
-Updated 2026-09-05: the user selected **Reasoning depth × Generality**. This replaces the former X topic-territory / Y structural-level contract. Z remains source progress. Implementation and validation: [axis redesign](22-map-axis-redesign.md).
+Updated 2026-09-06: the user selected **Reasoning depth × Generality**. This replaces the former X topic-territory / Y structural-level contract. Z remains source progress. Implementation and validation: [axis redesign](22-map-axis-redesign.md).
 
 ## One coordinate system, three views
 
@@ -22,11 +22,11 @@ All views use the same graphVersion and hierarchyVersion. No projection-specific
 
 ## Rating rules
 
-Both semantic ratings use an ordered 0–4 rubric with source-supported intermediate values. These are interpretable anchors, not equal intervals of meaning and not five mandatory buckets. Code normalizes X to 0–1 for the existing geometry; saved Y remains 0–4. Neither axis is normalized to the observed min/max of a particular book. Honest clustering and ties remain visible; arbitrary decimal scores and forced uniform occupancy are disallowed.
+Both semantic ratings use an ordered 0–10 rubric with source-supported tenths: eleven named anchors and 101 possible positions per axis. These are interpretable anchors, not equal intervals of meaning. Code maps ratings to fixed geometry units X=score/10 and Y=score×4/10; stored assessments and all visible readouts use 0–10. The grid remains an independent spatial reference, with sparse score labels; it never snaps nodes. Neither axis is normalized to the observed min/max of a particular book. Genuine ties remain visible; arbitrary jitter and forced uniform occupancy are disallowed. The full rubric and migration are documented in [fine axis scale](23-fine-axis-scale.md).
 
-Reasoning anchors: 0 directly introduced observation/assumption/definition; 1 a local inference; 2 a short linked argument; 3 several linked results; 4 an extended chain across arguments. This is the author's within-book reasoning, not background knowledge required by a particular reader, difficulty, chronology, abstraction or importance. No extracted edge does not imply depth zero. Positive values need explained internal inference or evidenced prerequisite nodes.
+Reasoning anchors progress from directly introduced material (0), through immediate/local inferences (1–2), sequences and complete local arguments (3–4), use and combination of earlier results (5–6), synthesis and extended chains (7–8), to culminating/work-wide reasoning (9–10). This is total required reasoning within the book, not chapter order, background knowledge, difficulty or importance. Positive values need explained internal inference or evidenced prerequisites.
 
-Generality anchors: 0 a specific instance/scene; 1 a small bounded set; 2 a restricted class/domain; 3 a broadly reusable claim; 4 a very general principle within the work's subject. This is the claimed scope, not the truth of the claim, physical size, abstraction, mention frequency or breadth of use in the book.
+Generality anchors progress from one event (0), through an individual and bounded cases (1–2), narrow subtypes and defined classes (3–4), domain claims and related classes (5–6), varied settings and cross-domain principles (7–8), to near-universal and maximally general claims (9–10). This rates asserted scope, not truth, physical size, abstraction or frequency.
 
 An abstract starting definition may have X=0 and high Y. A model-derived prediction about one specific event may have high X and Y=0. Assess the actual occurrence's statement: a depicted story and its general interpretation are different units. Preserve speakers, opposed claims and editorial attribution. Explain a mixed unit's rated scope or leave the axis unknown instead of rewriting the source.
 
@@ -48,7 +48,7 @@ Bounds, node and label budgets, source navigation, camera limits, and asynchrono
 
 ## Versions and publication
 
-New maps require `axisVersion: reasoning-generality-v1`, reviewed axis metadata and an assessment for every accepted occurrence. Old graphs remain parseable and are displayed as legacy; never reinterpret old topic/structure numbers as new reasoning/generality numbers.
+New maps require `axisVersion: reasoning-generality-v2`, reviewed axis metadata and an assessment for every accepted occurrence. Prior reasoning/generality graphs remain parseable with their original 0–4 ratings; topic/structure graphs retain explicit legacy labels; never reinterpret old topic/structure numbers as new reasoning/generality numbers.
 
 Reassessment creates a separate staged graph, preserves accepted nodes, anchors, identities, original relations and Z, and rebuilds the hierarchy. Switch the published map only after source, coordinate and hierarchy validation pass. Changed graph/hierarchy versions invalidate saved camera mappings rather than silently restoring selections against incompatible spatial data. Keep prior snapshots and request-fingerprinted checkpoints for recovery.
 

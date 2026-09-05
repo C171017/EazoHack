@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-14-4",
+          "n-15-3",
+          "n-16-3",
+          "n-17-4"
+        ],
+        "label": "Commentary on History and State",
+        "summary": "These introductory analyses examine ancient attitudes toward fate, property rights, historical progress, and the suppression of individuality in Spartan statecraft.",
+        "rationale": "Coherent block of editorial commentary analyzing historical and political concepts in Plato's philosophy prior to the main dialogue."
+      },
+      {
+        "childIds": [
+          "n-19-5",
+          "n-19-6",
+          "n-20-1",
+          "n-20-2"
+        ],
+        "label": "Debate on Justice and Ruling",
+        "summary": "Thrasymachus defines justice as the interest of the stronger and asserts rulers are unerring, while Socrates counters that true arts and rulers seek only to benefit their subjects without inflicting harm.",
+        "rationale": "Direct dialectical clash in Book I between Thrasymachus and Socrates concerning the nature of rulership and the beneficiary of justice."
+      },
+      {
+        "childIds": [
+          "n-20-4",
+          "n-20-5",
+          "n-20-6"
+        ],
+        "label": "Virtue, Function, and Unity",
+        "summary": "Socrates argues that the just man does not seek to exceed his peers, that injustice inevitably disrupts common action, and that justice is the essential virtue fulfilling the soul's function.",
+        "rationale": "Sequential arguments by Socrates in Book I establishing the harmonious function and virtue of the soul versus the divisive impact of injustice."
+      },
+      {
+        "childIds": [
+          "n-22-1",
+          "n-22-2",
+          "n-22-7",
+          "n-22-8"
+        ],
+        "label": "Origins of Justice and the Polis",
+        "summary": "Glaucon categorizes goods and presents the social contract origin of justice, after which Socrates outlines how human necessity and the division of labour give rise to the state.",
+        "rationale": "Book II discussions tracing the pragmatic and contractual origins of justice and the foundational economic structure of the state."
+      },
+      {
+        "childIds": [
+          "n-23-5",
+          "n-23-6",
+          "n-24-3"
+        ],
+        "label": "Theological and Poetic Norms",
+        "summary": "Socrates establishes theological standards that portray divinity as entirely good and immutable, while classifying poetic narration into simple, imitative, and mixed modes.",
+        "rationale": "Consecutive curriculum discussions in Books II and III establishing regulatory theological criteria and narrative modes for poetry."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7FCcauDnM4KDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 11729,
+    "candidatesTokenCount": 619,
+    "totalTokenCount": 12348,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11729
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 619
+      }
+    ]
+  },
+  "durationMs": 6062,
+  "requestHash": "5c5a9b09232c66d8c290183cf1d0f68d49ddca9d78fd44e6bde590b09d16eec8"
+}

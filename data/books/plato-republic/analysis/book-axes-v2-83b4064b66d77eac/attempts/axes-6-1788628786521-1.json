@@ -1,0 +1,608 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-20-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Socrates builds directly on Thrasymachus's premise of the ruler/artisan in the strict sense (n-20-1) to deduce by local analogy with medicine and navigation that an art aims at the good of its subject, not the practitioner.",
+            "anchorIds": [
+              "p-606583",
+              "p-606062",
+              "p-607448"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-1"
+            ]
+          },
+          "generality": {
+            "value": 6.3,
+            "rationale": "The claim formulates a general rule governing every true art, craft, science, or form of governance, spanning all arts within that broad domain.",
+            "anchorIds": [
+              "p-606583",
+              "p-607448"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Thrasymachus introduces an immediate counter-thesis rejecting Socrates' art analogy, re-asserting that injustice on a large scale (tyranny) is profitable and virtuous.",
+            "anchorIds": [
+              "p-608406",
+              "p-611557",
+              "p-622572"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-2"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Applies domain-wide to the nature of justice and injustice in political and private conduct, especially focusing on grand tyranny.",
+            "anchorIds": [
+              "p-608406",
+              "p-622572"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Socrates establishes through a sequence of questioning about musicians and physicians that a knowledgeable practitioner does not seek to outdo fellow experts, concluding that justice aligns with wisdom and injustice with ignorance.",
+            "anchorIds": [
+              "p-627871",
+              "p-625889",
+              "p-626881"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-3"
+            ]
+          },
+          "generality": {
+            "value": 6.1,
+            "rationale": "Establishes a principle spanning all arts and sciences concerning non-overreaching (pleonexia) and extends it to moral conduct.",
+            "anchorIds": [
+              "p-626881",
+              "p-627871"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Socrates develops a local inferential argument showing that injustice generates sedition and paralysis within groups or individuals, requiring some remnant of justice to achieve any common action.",
+            "anchorIds": [
+              "p-631098",
+              "p-632005",
+              "p-633014"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-4"
+            ]
+          },
+          "generality": {
+            "value": 6.4,
+            "rationale": "Applies across diverse collective and individual bodies—cities, armies, families, bands of robbers, and individual souls.",
+            "anchorIds": [
+              "p-631098",
+              "p-632005"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Socrates introduces the foundational teleological premise that whatever has an end/function also possesses an excellence (virtue) necessary to perform that function, using eyes and pruning-hooks as immediate examples.",
+            "anchorIds": [
+              "p-634569",
+              "p-635411",
+              "p-636552"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7.3,
+            "rationale": "Posits a broadly reusable principle across all entities, bodily organs, instruments, and souls that each has a characteristic function and virtue.",
+            "anchorIds": [
+              "p-635411",
+              "p-636552"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Combines the definition of function and virtue from n-20-6 with earlier admissions about the soul to state that justice is the specific excellence of the soul.",
+            "anchorIds": [
+              "p-637215",
+              "p-637319"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-6"
+            ]
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "A definition specific to the domain of human psychology and ethics regarding the virtue of the human soul.",
+            "anchorIds": [
+              "p-637215"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Follows directly through a short deduction from n-21-1: since the just soul has excellence, it fulfills its life-function well, living well and therefore being happy and blessed.",
+            "anchorIds": [
+              "p-637344",
+              "p-637467",
+              "p-637574"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-1"
+            ]
+          },
+          "generality": {
+            "value": 5.3,
+            "rationale": "Applies to any human soul and person living justly or unjustly.",
+            "anchorIds": [
+              "p-637467",
+              "p-637574"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Draws an immediate corollary from n-21-2 (happiness is profitable, misery is not) to conclude that injustice can never be more profitable than justice, refuting Thrasymachus.",
+            "anchorIds": [
+              "p-637641",
+              "p-637698"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-2"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Covers all instances of comparative profit between justice and injustice in human life.",
+            "anchorIds": [
+              "p-637698"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "An editorial sidenote stating a simple observation/fact about the narrative flow: Socrates is displeased with himself and the argument.",
+            "anchorIds": [
+              "p-637852"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Describes one specific character's state of mind at a single narrative moment.",
+            "anchorIds": [
+              "p-637852"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Socrates reviews the structure of Book I's conversation and reflects on his own error in rushing to downstream questions before defining the essence of justice.",
+            "anchorIds": [
+              "p-637924"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-3"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Pertains specifically to Socrates' personal epistemological status and self-assessment regarding the preceding dialogue.",
+            "anchorIds": [
+              "p-637924"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Glaucon introduces an explicit starting taxonomy classifying goods into three distinct categories with zero prior inference in Book II.",
+            "anchorIds": [
+              "p-639483",
+              "p-639849",
+              "p-640026"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "A comprehensive classification scheme purposing to encompass all desirable things and goods across human life.",
+            "anchorIds": [
+              "p-639483",
+              "p-639849",
+              "p-640026"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Glaucon lays out the conventional theory of justice as a compromise arising from the experience of doing and suffering evil without power to retaliate.",
+            "anchorIds": [
+              "p-643203",
+              "p-641273"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-1"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Asserts a general social and anthropological theory for the origin of legal covenants and justice across human societies.",
+            "anchorIds": [
+              "p-643203"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Glaucon uses the mythical narrative of Gyges' ring as an illustrative thought experiment to demonstrate the claim that all men practice justice only involuntarily.",
+            "anchorIds": [
+              "p-644378",
+              "p-646576"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-2"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Purports to reveal universal human motivation when freed from detection or accountability.",
+            "anchorIds": [
+              "p-644378",
+              "p-646576"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Adeimantus introduces an observational catalog of how poets, parents, and prose writers consistently praise justice merely for its extrinsic rewards.",
+            "anchorIds": [
+              "p-653380",
+              "p-656070",
+              "p-663328"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "Surveys the conventional cultural discourse and literature regarding morality in Greek society.",
+            "anchorIds": [
+              "p-653380",
+              "p-656070"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Synthesizes Glaucon's and Adeimantus's critiques (n-22-1, n-22-4) to formulate the definitive programmatic demand requiring Socrates to defend justice in itself in the soul.",
+            "anchorIds": [
+              "p-663328",
+              "p-665524"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-1",
+              "n-22-4"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Defines the exact theoretical problem and scope of investigation for the dialogue regarding justice and the soul.",
+            "anchorIds": [
+              "p-663328",
+              "p-665524"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "In response to the challenge (n-22-5), Socrates proposes a methodological analogy: reading large letters first (justice in the state) before reading smaller ones (justice in the individual).",
+            "anchorIds": [
+              "p-668093",
+              "p-669061",
+              "p-669400"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-5"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "A structural methodology governing the inquiry into justice across political and individual levels.",
+            "anchorIds": [
+              "p-668093",
+              "p-669400"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Directly posited starting point of political theory: a state arises from human material needs and lack of individual self-sufficiency.",
+            "anchorIds": [
+              "p-670316",
+              "p-670512",
+              "p-671202"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "Asserts a general foundational principle for the origin and existence of any political society or commonwealth.",
+            "anchorIds": [
+              "p-670316",
+              "p-670512"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Deduces from natural differences in aptitude and the nature of needs (n-22-7) that specialization and division of labour produce better and more plentiful goods.",
+            "anchorIds": [
+              "p-672509",
+              "p-673154",
+              "p-673568"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-7"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "A principle of political economy governing all crafts, occupations, and productions within a city.",
+            "anchorIds": [
+              "p-672509",
+              "p-673154"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "When luxury is introduced beyond the rustic city, Socrates infers that territorial expansion and war inevitably follow from the unlimited accumulation of wealth.",
+            "anchorIds": [
+              "p-679318",
+              "p-681589",
+              "p-681958"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-7"
+            ]
+          },
+          "generality": {
+            "value": 5.5,
+            "rationale": "Explains the genesis of external war and political evil across civilized states.",
+            "anchorIds": [
+              "p-681589",
+              "p-681958"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Applies the specialization principle (n-22-8) to the art of war necessitated by n-23-1, deducing that a dedicated guardian class is essential.",
+            "anchorIds": [
+              "p-682712",
+              "p-683143",
+              "p-684634"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-23-1"
+            ]
+          },
+          "generality": {
+            "value": 4.4,
+            "rationale": "Applies specifically to the military and guardian function within the constructed state.",
+            "anchorIds": [
+              "p-682712",
+              "p-684634"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Addresses the apparent paradox of uniting spirited fierceness with civic gentleness, resolving it by the analogy of the well-bred watchdog that loves learning/the familiar.",
+            "anchorIds": [
+              "p-686092",
+              "p-686977",
+              "p-688126"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Pertains to the psychological traits required for guardians of the state.",
+            "anchorIds": [
+              "p-686092",
+              "p-688126"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Infers from the impressionability of youth and the requirement of harmonious guardians (n-23-3) that early stories and myths must be strictly regulated and censored.",
+            "anchorIds": [
+              "p-691325",
+              "p-690743",
+              "p-694303"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3"
+            ]
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "Governs the domain of juvenile education and storytelling in the state.",
+            "anchorIds": [
+              "p-691325",
+              "p-694303"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Deduces from the definition of God as good that God cannot be hurtful or cause evil, establishing the first theological canon for poetry.",
+            "anchorIds": [
+              "p-697118",
+              "p-696375",
+              "p-699706"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-4"
+            ]
+          },
+          "generality": {
+            "value": 7.4,
+            "rationale": "Asserts a universal theological principle regarding the nature of God and cosmic causation of good and evil.",
+            "anchorIds": [
+              "p-697118",
+              "p-699706"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Argues that since God is already perfect, any change would be for the worse, and since God has no motive to deceive, God is completely immutable and truthful.",
+            "anchorIds": [
+              "p-702060",
+              "p-706026",
+              "p-706291"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-5"
+            ]
+          },
+          "generality": {
+            "value": 7.4,
+            "rationale": "A universal theological principle asserting divine immutability and absolute truthfulness across all divine representation.",
+            "anchorIds": [
+              "p-702060",
+              "p-706026"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Gk-cauD1GsuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 43854,
+    "candidatesTokenCount": 4995,
+    "totalTokenCount": 48849,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43854
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4995
+      }
+    ]
+  },
+  "durationMs": 25896,
+  "requestHash": "5d6987580a213996340a5554f96fc95510b3a05cd46e112f89a0ab0ba86e6852"
+}
