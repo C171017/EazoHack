@@ -51,6 +51,11 @@
   margin-bottom: 1.5rem;
 }
 
+/* Assistance sits outside source spans so source offsets remain immutable. */
+.reader-artifact { margin: 1rem 0; font-family: sans-serif; line-height: 1.5; font-size: 14px; overflow-wrap: anywhere; }
+.reader-artifact button { cursor: pointer; }
+.reader-artifact button:focus-visible { outline: 2px solid var(--color-moss); outline-offset: 3px; }
+
 .txt-source-block-continuation {
   margin-top: -1.5rem;
 }

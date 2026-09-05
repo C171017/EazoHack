@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ArtifactPlacementSchema } from '../reader/artifact-placement';
 import {
   ArtifactSchema,
   MapViewSchema,
@@ -21,6 +22,7 @@ export const WorkspaceSnapshotSchema = z.object({
   selections: z.array(SelectionSchema).max(2_000).default([]),
   anchors: z.array(SourceAnchorSchema).max(10_000).default([]),
   artifacts: z.array(ArtifactSchema).max(2_000).default([]),
+  placements: z.array(ArtifactPlacementSchema).max(2_000).default([]),
   interactionState: z.record(z.string(), z.record(z.string(), interactionValue)).default({}),
   graphViewport: z.object({
     x: z.number().finite(),
@@ -52,6 +54,16 @@ export const WorkspaceSnapshotSchema = z.object({
   const anchors = new Set(snapshot.anchors.map((anchor) => anchor.id));
   const selections = new Map(snapshot.selections.map((selection) => [selection.id, selection]));
   const artifacts = new Set(snapshot.artifacts.map((artifact) => artifact.id));
+  const placed = new Set<string>();
+  snapshot.placements.forEach((placement,index) => {
+    const artifact=snapshot.artifacts.find(a=>a.id===placement.artifactId);
+    const anchor=snapshot.anchors.find(a=>a.id===placement.anchorId);
+    const locator=anchor?.locators[0];
+    if(placed.has(placement.artifactId)) issue(['placements',index], 'Duplicate artifact placement');
+    placed.add(placement.artifactId);
+    if(!artifact || artifact.selectionId!==placement.selectionId || !artifact.anchorIds.includes(placement.anchorId)) issue(['placements',index], 'Invalid placement binding');
+    if(!anchor || anchor.resolution!=='exact' || anchor.locators.length!==1 || locator?.kind!=='txt' || locator.endOffset!==placement.offset) issue(['placements',index], 'Invalid placement offset');
+  });
   snapshot.selections.forEach((selection, index) => {
     selection.anchorIds.forEach((id, anchorIndex) => {
       if (!anchors.has(id)) issue(["selections", index, "anchorIds", anchorIndex], "Missing saved anchor");

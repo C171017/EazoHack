@@ -1,6 +1,7 @@
 'use client';
 
-import { forwardRef, memo, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
+import { Fragment, forwardRef, memo, useEffect, useImperativeHandle, useMemo, useRef, useState, type ReactNode } from 'react';
+import { splitSourceRange } from './artifact-placement';
 import { resolveTxtAnchor } from './source-anchor';
 import type { SourceAnchor } from '@/shared/schemas';
 import { createTxtRenderChunks, findTxtBlock, type TxtRenderChunk } from './txt-document';
@@ -19,15 +20,19 @@ export type ContinuousTxtReaderHandle = {
 };
 
 type HighlightRange = { startOffset: number; endOffset: number } | null;
+export type ReaderSlot = { id: string; offset: number; content: ReactNode };
+const EMPTY_SLOTS: ReaderSlot[] = [];
 
 const TxtChunk = memo(function TxtChunk({
   chunk,
   sourceText,
   highlight,
+  slots,
 }: {
   chunk: TxtRenderChunk;
   sourceText: string;
   highlight: HighlightRange;
+  slots: ReaderSlot[];
 }) {
   return <section
     id={chunk.id}
@@ -37,23 +42,21 @@ const TxtChunk = memo(function TxtChunk({
     data-txt-start={chunk.startOffset}
     data-txt-end={chunk.endOffset}
   >
-    {chunk.blocks.map(block => {
-      const text = sourceText.slice(block.startOffset, block.endOffset);
-      const from = highlight ? Math.max(0, highlight.startOffset - block.startOffset) : 0;
-      const to = highlight ? Math.min(text.length, highlight.endOffset - block.startOffset) : 0;
-      return <span
-        id={block.id}
-        key={block.id}
-        className={block.continuation ? 'txt-source-block txt-source-block-continuation' : 'txt-source-block'}
+    {chunk.blocks.map(block => <div id={block.id} key={block.id} className={block.continuation ? 'txt-source-block txt-source-block-continuation' : 'txt-source-block'}>
+      {splitSourceRange(block.startOffset, block.endOffset, slots.map(s=>s.offset)).map(part=>{
+      const text = sourceText.slice(part.startOffset, part.endOffset);
+      const from = highlight ? Math.max(0, highlight.startOffset - part.startOffset) : 0;
+      const to = highlight ? Math.min(text.length, highlight.endOffset - part.startOffset) : 0;
+      return <Fragment key={part.startOffset}><span
         data-txt-block
-        data-txt-start={block.startOffset}
-        data-txt-end={block.endOffset}
+        data-txt-start={part.startOffset}
+        data-txt-end={part.endOffset}
       >
         {highlight && to > from
           ? <>{text.slice(0, from)}<mark className="rounded-sm bg-highlight text-ink">{text.slice(from, to)}</mark>{text.slice(to)}</>
           : text}
-      </span>;
-    })}
+      </span>{slots.filter(s=>s.offset===part.endOffset).map(slot=><aside key={slot.id} data-reader-artifact={slot.id} className="reader-artifact" aria-label="Passage assistance">{slot.content}</aside>)}</Fragment>;
+    })}</div>)}
   </section>;
 });
 
@@ -96,7 +99,8 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   extractionVersion: string;
   activeAnchor: SourceAnchor | null;
   onSelection: (selection: TxtSelectionRange) => void;
-}>(function ContinuousTxtReader({ sourceText, fileHash, extractionVersion, activeAnchor, onSelection }, ref) {
+  slots?: ReaderSlot[];
+}>(function ContinuousTxtReader({ sourceText, fileHash, extractionVersion, activeAnchor, onSelection, slots=EMPTY_SLOTS }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText), [sourceText]);
   const scroller = useRef<HTMLDivElement>(null);
   const documentRoot = useRef<HTMLDivElement>(null);
@@ -154,7 +158,8 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     scrollToOffset(offset, behavior = 'auto') {
       const root = scroller.current;
       const block = findTxtBlock(chunks, offset);
-      const element = block ? document.getElementById(block.id) : null;
+      const container = block ? document.getElementById(block.id) : null;
+      const element = [...(container?.querySelectorAll<HTMLElement>('[data-txt-block]')??[])].find(e=>Number(e.dataset.txtStart)<=offset&&Number(e.dataset.txtEnd)>offset)??container;
       if (!root || !element) return;
       if (alignmentFrame.current !== null) cancelAnimationFrame(alignmentFrame.current);
       let attempt = 0;
@@ -165,7 +170,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
         // mark split. Align its text position rather than the paragraph's top.
         let targetRect = element.getBoundingClientRect();
         const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
-        let remaining = Math.max(0, offset - block!.startOffset);
+        let remaining = Math.max(0, offset - Number(element.dataset.txtStart??block!.startOffset));
         for (let node = walker.nextNode(); node; node = walker.nextNode()) {
           const length = node.textContent?.length ?? 0;
           if (remaining < length) {
@@ -195,7 +200,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     },
   }), [chunks]);
 
-  function captureSelection() {
+  function selectedSource() {
     const selection = window.getSelection();
     const root = documentRoot.current;
     if (!root || !selection?.rangeCount || selection.isCollapsed) return;
@@ -206,14 +211,17 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     if (startOffset === null || endOffset === null || endOffset <= startOffset) return;
     const quote = sourceText.slice(startOffset, endOffset);
     if (!quote.trim()) return;
-    onSelection({
+    return {
       startOffset,
       endOffset,
       quote,
       prefix: sourceText.slice(Math.max(0, startOffset - 40), startOffset),
       suffix: sourceText.slice(endOffset, endOffset + 40),
-    });
-    selection.removeAllRanges();
+    };
+  }
+  function captureSelection() {
+    const range=selectedSource();
+    if(range) onSelection(range);
   }
 
   const progress = sourceText.length
@@ -232,6 +240,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       ref={documentRoot}
       onMouseUp={captureSelection}
       onKeyUp={captureSelection}
+      onCopy={event=>{const range=selectedSource();if(range){event.preventDefault();event.clipboardData.setData('text/plain',range.quote);}}}
       className="font-reading text-[17px] leading-[1.95] selection:bg-highlight"
       data-testid="book-text"
       role="document"
@@ -243,7 +252,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
           && highlight.endOffset > chunk.startOffset
             ? highlight
             : null;
-        return <TxtChunk key={chunk.id} chunk={chunk} sourceText={sourceText} highlight={chunkHighlight}/>;
+        return <TxtChunk key={chunk.id} chunk={chunk} sourceText={sourceText} highlight={chunkHighlight} slots={slots.filter(s=>s.offset>chunk.startOffset&&s.offset<=chunk.endOffset)}/>;
       })}
     </div>
     <div className="mt-10 border-t border-line pt-5 text-xs leading-6 text-muted">End of complete TXT source.</div>
