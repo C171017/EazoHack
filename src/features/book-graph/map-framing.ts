@@ -21,7 +21,7 @@ export function mapObstacles(view:MapView,size:Size,keyHeight=58) {
     ...(view.selectedNodeId?[{x:16,y:size.height-302,width:size.width-32,height:250}]:[])];
 }
 
-export function fitEntries(entries:MapEntry[],view:MapView,size:Size,progress:number):MapView {
+export function fitEntries(entries:MapEntry[],view:MapView,size:Size,progress:number,bottomReserve=0):MapView {
   const points=entries.flatMap(n=>n.position?[sourceWorld(n.position,[0,1],progress)]:[]);
   if(!points.length)return {...view,x:0,y:0};
   // Keep the source-scroll origin reachable in projections that show Z.
@@ -31,7 +31,7 @@ export function fitEntries(entries:MapEntry[],view:MapView,size:Size,progress:nu
   const cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2;
   const {yaw,pitch}=view;
   const center={x:cx*Math.cos(yaw)-cy*Math.sin(yaw)*Math.sin(pitch),y:cx*Math.sin(yaw)+cy*Math.cos(yaw)*Math.sin(pitch),z:-cy*Math.cos(pitch)};
-  const inspector=view.selectedNodeId?260:0;
+  const inspector=(view.selectedNodeId?260:0)+bottomReserve;
   const pixels=Math.min(Math.max(80,size.width-260)/Math.max(120,Math.max(...xs)-Math.min(...xs)),Math.max(80,size.height-180-inspector)/Math.max(120,Math.max(...ys)-Math.min(...ys)));
   const scale=Math.max(.05,Math.min(20,pixels/baseScale(size)/view.zoom));
   return {...view,x:0,y:-inspector/2,framing:{center,scale}};

@@ -16,6 +16,8 @@ import { enhancementHistoryReducer, emptyEnhancementHistory } from './enhancemen
 import { ArtifactView } from './artifact-view';
 import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange, type ReaderSlot } from '../reader/continuous-txt-reader';
 import { placementsFor } from '../reader/artifact-placement';
+import { completedFootprints, readingHeat } from '../book-graph/reading-heat';
+import { useReadingFootprints } from '../book-graph/use-reading-footprints';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 
 export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstrap}) {
@@ -28,6 +30,9 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
 
 function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: BookPreview; graph: MapBootstrap; title: string; onUpload: (file: File) => Promise<void>; onReset?: () => void}) {
   const bookId = graph.bookId;
+  const footprints = useReadingFootprints(bookId);
+  const recordFootprints = footprints.record;
+  const heat = useMemo(() => readingHeat(footprints.events, { ...preview, bookId }), [footprints.events, preview, bookId]);
   const [mapAnchor,setMapAnchor] = useState<SourceAnchor|null>(null);
   const [mapView,setMapView] = useState<WorkspaceSnapshot['mapView']>(null);
   const reader = useRef<ContinuousTxtReaderHandle>(null);
@@ -93,8 +98,10 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       const nextArtifacts=ArtifactSchema.array().parse(body.artifacts);
       if(nextArtifacts.some(artifact=>artifact.selectionId!==frozen.id||artifact.bookId!==frozen.bookId||artifact.anchorIds.some(id=>!frozen.anchorIds.includes(id))))throw new Error('Result selection mismatch');
       if(ticket!==activeRequest.current)return;
-      const failures=RouteRunSchema.array().parse(body.runs).filter(run=>run.status==='failed'||run.status==='cancelled');
+      const runs=RouteRunSchema.array().parse(body.runs);
+      const failures=runs.filter(run=>run.status==='failed'||run.status==='cancelled');
       dispatchEnhancements({type:'generate',artifacts:nextArtifacts,placements:placementsFor(nextArtifacts,anchors)});
+      recordFootprints(completedFootprints(runs,nextArtifacts,anchors));
       setRequests(current=>{
         if(failures.length)return {...current,[frozen.id]:{routes:failures.map(r=>r.route),message:failures.map(r=>`${r.route}: ${r.error?.message??r.status}`).join(' '),failed:true}};
         const next={...current};delete next[frozen.id];return next;
@@ -102,7 +109,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       setNotice('Results added to their original passage.');
     }catch(error){if(ticket===activeRequest.current){const message=error instanceof Error?error.message:'Request failed';setNotice(message);setRequests(current=>({...current,[frozen.id]:{routes:kinds,message,failed:true}}));}}
     finally{if(ticket===activeRequest.current)setBusy(false);}
-  }, [anchors,busy]);
+  }, [anchors,busy,recordFootprints]);
   const enhanceSelection = useCallback((route:RouteKind) => {
     void exercise(selection,[route]);
   }, [exercise,selection]);
@@ -169,7 +176,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
         <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
       <section className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
-        <div className="absolute inset-0">{graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
+        <div className="absolute inset-0">{graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error,loading:footprints.loading,retry:footprints.retry}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
 
       </section>
     </div>

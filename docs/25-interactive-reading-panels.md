@@ -31,3 +31,5 @@ The renderer in `src/features/assistance/interactive-panel.tsx` only renders Rea
 ## Validation
 
 `tests/interactive-panel.test.ts` covers prompt/provider wiring, source quote rejection, contract bounds, unsafe fields, escaped rendering, meaningful state changes, sequence controls, corrupt state, all four enhancement routes over the HTTP handlers, and undo/redo. Existing routing and persistence tests also exercise the expanded artifact registry.
+
+Live browser QA generated both modes through Vertex Gemini using Republic passages: Jowett's edition-exchange arrangement for comparison, and the five natural divisions of the dialogue for sequence navigation. Verified case changes, baseline comparison, reset, ⌘3 generation, undo/redo with restored interaction state, Next-step navigation, and keyboard End reaching the final step with Next disabled. Lint, type checking, and the test suite passed. An isolated production build failed to fetch Google Fonts under restricted networking; a network-enabled retry stalled and was stopped, so production-build completion is not claimed.
