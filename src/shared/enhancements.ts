@@ -15,6 +15,7 @@ export function enhancementStyle(kind: EnhancementKind | null) {
 }
 
 export function artifactEnhancement(artifact: Artifact): EnhancementKind | null {
+  if (artifact.kind === 'interactive_panel') return 'interactive';
   if (artifact.kind === 'concept_diagram') return 'diagram';
   if (artifact.kind === 'generated_image') return 'illustration';
   if (artifact.kind === 'interactive_ui') return artifact.payload.components.some(item => item.component === 'ParameterSlider') ? 'interactive' : 'explanation';
@@ -22,5 +23,5 @@ export function artifactEnhancement(artifact: Artifact): EnhancementKind | null 
 }
 
 export function routeEnhancement(route: RouteKind): EnhancementKind | null {
-  return route === 'interactive_ui' ? 'explanation' : route === 'concept_diagram' ? 'diagram' : route === 'generated_image' ? 'illustration' : null;
+  return route === 'interactive_panel' ? 'interactive' : route === 'interactive_ui' ? 'explanation' : route === 'concept_diagram' ? 'diagram' : route === 'generated_image' ? 'illustration' : null;
 }

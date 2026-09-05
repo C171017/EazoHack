@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { InteractivePanelSchema } from "../interactive-panel";
 import { AxisAssessmentSchema, BOOK_AXIS_VERSION } from '../book-axes';
 
 const Id = z.string().min(1).max(160);
@@ -6,7 +7,7 @@ const Text = z.string().min(1).max(20_000);
 const ShortText = z.string().min(1).max(500);
 const IsoDate = z.string().datetime();
 const UniqueIds = z.array(Id).max(500).refine((ids) => new Set(ids).size === ids.length, "Duplicate IDs");
-export const RouteKindSchema = z.enum(["interactive_ui", "generated_image", "concept_diagram", "source_discovery"]);
+export const RouteKindSchema = z.enum(["interactive_ui", "generated_image", "concept_diagram", "source_discovery", "interactive_panel"]);
 export type RouteKind = z.infer<typeof RouteKindSchema>;
 export const ROUTE_KINDS = RouteKindSchema.options;
 
@@ -21,10 +22,10 @@ export const SourceAnchorSchema = z.object({ id: Id, bookId: Id, fileHash: Text,
 export const SelectionSchema = z.object({ id: Id, bookId: Id, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Selection needs anchors"), selectedText: Text.refine((text) => text.trim().length > 0, "Empty selection"), contextSnapshot: z.string().max(40_000), createdAt: IsoDate }).strict();
 
 const RouteMap = z.partialRecord(RouteKindSchema, ShortText);
-const DependencyMap = z.partialRecord(RouteKindSchema, z.array(RouteKindSchema).max(4));
+const DependencyMap = z.partialRecord(RouteKindSchema, z.array(RouteKindSchema).max(ROUTE_KINDS.length));
 export const RoutePlanSchema = z.object({
-  id: Id, selectionId: Id, routes: z.array(RouteKindSchema).min(1).max(4), reasonByRoute: RouteMap, dependsOn: DependencyMap,
-  trigger: z.object({ mode: z.enum(["mock_manual", "manual"]), requestedRoutes: z.array(RouteKindSchema).min(1).max(4), requestedAt: IsoDate }).strict(), routerVersion: Id,
+  id: Id, selectionId: Id, routes: z.array(RouteKindSchema).min(1).max(ROUTE_KINDS.length), reasonByRoute: RouteMap, dependsOn: DependencyMap,
+  trigger: z.object({ mode: z.enum(["mock_manual", "manual"]), requestedRoutes: z.array(RouteKindSchema).min(1).max(ROUTE_KINDS.length), requestedAt: IsoDate }).strict(), routerVersion: Id,
 }).strict().superRefine((plan, ctx) => {
   const selected = new Set(plan.routes);
   if (selected.size !== plan.routes.length) ctx.addIssue({ code: "custom", message: "Routes must be unique", path: ["routes"] });
@@ -45,7 +46,7 @@ export const RoutePlanSchema = z.object({
   if (!plan.routes.every(visit)) ctx.addIssue({ code: "custom", message: "Route dependencies contain a cycle", path: ["dependsOn"] });
 });
 export const RunErrorSchema = z.object({ code: z.enum(["not_configured", "invalid_input", "invalid_output", "provider_failed", "dependency_failed", "cancelled"]), message: ShortText, retryable: z.boolean() }).strict();
-export const RouteRunSchema = z.object({ id: Id, planId: Id, route: RouteKindSchema, status: z.enum(["pending", "running", "complete", "failed", "cancelled"]), dependsOn: z.array(RouteKindSchema).max(4), error: RunErrorSchema.optional(), artifactIds: UniqueIds }).strict();
+export const RouteRunSchema = z.object({ id: Id, planId: Id, route: RouteKindSchema, status: z.enum(["pending", "running", "complete", "failed", "cancelled"]), dependsOn: z.array(RouteKindSchema).max(ROUTE_KINDS.length), error: RunErrorSchema.optional(), artifactIds: UniqueIds }).strict();
 
 const ExplanationCard = z.object({ component: z.literal("ExplanationCard"), props: z.object({ title: ShortText, body: Text }).strict() }).strict();
 const ParameterSlider = z.object({ component: z.literal("ParameterSlider"), props: z.object({ label: ShortText, min: z.number().finite(), max: z.number().finite(), step: z.number().positive().finite(), value: z.number().finite(), unit: z.string().max(30) }).strict().refine((p) => p.max > p.min && p.value >= p.min && p.value <= p.max && p.step <= p.max - p.min, "Invalid slider bounds") }).strict();
@@ -85,6 +86,7 @@ export const SourceDiscoverySchema = z.object({ status: z.enum(["no_results", "r
 });
 const ArtifactBase = { id: Id, bookId: Id, selectionId: Id, routeRunId: Id, nodeIds: UniqueIds, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Artifact needs source anchors"), graphVersion: Id.optional(), provider: z.enum(["mock", "vertex_ai", "fal", "not_configured"]), schemaVersion: z.literal("1"), createdAt: IsoDate, savedAt: IsoDate.nullable(), provenance: z.object({ provider: z.enum(["mock", "vertex_ai", "fal"]), label: ShortText }).strict() };
 export const ArtifactSchema = z.discriminatedUnion("kind", [
+  z.object({ ...ArtifactBase, kind: z.literal("interactive_panel"), payload: InteractivePanelSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("interactive_ui"), payload: InteractiveUiConfigSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("generated_image"), payload: GeneratedImageSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("concept_diagram"), payload: ConceptDiagramSchema }).strict(),
@@ -186,6 +188,7 @@ export const GraphSchema = z.object({
 export const MapViewSchema = z.object({
   graphVersion: Id, hierarchyVersion: Id.optional(), projection: z.enum(['3d','xy','xz','yz']),
   axisConvention: z.literal('z-up-v1').optional(),
+  framing: z.object({center:z.object({x:z.number().finite(),y:z.number().finite(),z:z.number().finite()}).strict(),scale:z.number().finite().min(.05).max(20)}).strict().optional(),
   yaw: z.number().finite(), pitch: z.number().finite().min(-Math.PI/2).max(Math.PI/2),
   x: z.number().finite(), y: z.number().finite(), zoom: z.number().min(0.5).max(48),
   selectedNodeId: Id.nullable(), readerAnchorId: Id.nullable().default(null), sourceScope: z.enum(['excerpt','book']),

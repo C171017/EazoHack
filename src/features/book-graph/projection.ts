@@ -41,10 +41,11 @@ export function worldPoint(node: Graph['nodes'][number], range: [number,number],
   return sourceWorld({x,y,z},range,readingProgress);
 }
 // Leader lines offset labels only; points always retain their semantic positions.
-export function placeLabels<T extends {id:string;x:number;y:number;label:string}>(points: T[], width:number,height:number) {
-  const boxes: {x:number;y:number;width:number;height:number}[] = [];
-  return points.map(p => {
-    const w = Math.min(210,Math.max(100,p.label.length*6.1+18));
+export type LabelObstacle={x:number;y:number;width:number;height:number};
+export function placeLabels<T extends {id:string;x:number;y:number;label:string;radius?:number}>(points: T[], width:number,height:number,obstacles:LabelObstacle[]=[],markers: {x:number;y:number;radius?:number}[]=points) {
+  const boxes: LabelObstacle[] = [...obstacles,...markers.map(p=>({x:p.x-(p.radius??18)-5,y:p.y-(p.radius??18)-5,width:((p.radius??18)+5)*2,height:((p.radius??18)+5)*2}))];
+  return points.flatMap(p => {
+    const w = Math.min(Math.max(40,width-16),210,Math.max(100,Math.min(p.label.length,31)*6.1+18));
     const preferredX = Math.max(8,Math.min(width-w-8,p.x+13));
     const preferredY = Math.max(12,Math.min(height-30,p.y-12));
     const columns = Math.max(1,Math.floor((width-16)/218));
@@ -54,9 +55,12 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string}
     const ys = [...new Set([preferredY,...Array.from({length:Math.max(1,Math.floor((height-24)/30))},(_,i)=>12+i*30)])];
     const slots=xs.flatMap(x=>ys.map(y=>({x,y,score:(x-preferredX)**2+(y-preferredY)**2}))).sort((a,b)=>a.score-b.score);
     const slot=slots.find(({x,y})=>!boxes.some(b=>x < b.x+b.width+4 && x+w+4 > b.x && y < b.y+b.height+4 && y+26+4 > b.y));
-    const {x,y}=slot??{x:preferredX,y:preferredY};
+    // Omit a label when the pane has no safe slot; the focusable marker and
+    // its accessible name remain available. Never fall back to an overlap.
+    if(!slot)return [];
+    const {x,y}=slot;
     boxes.push({x,y,width:w,height:26});
-    return {...p,labelX:x,labelY:y,width:w};
+    return [{...p,labelX:x,labelY:y,width:w}];
   });
 }
 

@@ -2,6 +2,7 @@ import { z } from "zod";
 import {
   ArtifactSchema,
   RouteKindSchema,
+  ROUTE_KINDS,
   RoutePlanSchema,
   RouteRunSchema,
   RunErrorSchema,
@@ -19,7 +20,7 @@ export const DispatchRequestSchema = z.object({
   selection: SelectionSchema,
   plan: RoutePlanSchema,
   mode: z.enum(["mock", "real"]).default("mock"),
-  failKinds: z.array(RouteKindSchema).max(4).default([]),
+  failKinds: z.array(RouteKindSchema).max(ROUTE_KINDS.length).default([]),
 }).strict();
 export type DispatchRequest = z.input<typeof DispatchRequestSchema>;
 export type DispatchResult = {

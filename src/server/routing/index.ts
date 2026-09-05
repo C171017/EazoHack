@@ -1,6 +1,7 @@
 import { z } from "zod";
 import {
   RouteKindSchema,
+  ROUTE_KINDS,
   RoutePlanSchema,
   SelectionSchema,
   type RouteKind,
@@ -9,9 +10,9 @@ import {
 
 export const RoutePlanRequestSchema = z.object({
   selection: SelectionSchema,
-  routes: z.array(RouteKindSchema).min(1).max(4),
+  routes: z.array(RouteKindSchema).min(1).max(ROUTE_KINDS.length),
   mode: z.enum(["mock", "real"]).default("mock"),
-  dependsOn: z.partialRecord(RouteKindSchema, z.array(RouteKindSchema).max(4)).default({}),
+  dependsOn: z.partialRecord(RouteKindSchema, z.array(RouteKindSchema).max(ROUTE_KINDS.length)).default({}),
 }).strict();
 
 export class RoutingNotConfiguredError extends Error {

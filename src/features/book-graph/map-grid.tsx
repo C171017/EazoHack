@@ -21,7 +21,7 @@ function point(axis:keyof Point3,distance:number,other?:keyof Point3,offset=0):P
   return {...ORIGIN,[axis]:ORIGIN[axis]+distance,...(other?{[other]:ORIGIN[other]+offset}:{})};
 }
 
-export function MapGrid({screen,modern=false,readingProgress=.5}:{modern?:boolean;readingProgress?:number;screen:(point:Point3)=>{x:number;y:number}}) {
+export function MapGrid({screen,modern=false,readingProgress=.5,size,projection}:{size?:{width:number;height:number};projection?:string;modern?:boolean;readingProgress?:number;screen:(point:Point3)=>{x:number;y:number}}) {
   const id=useId();
   const origin=screen(ORIGIN);
   const directions=AXES.map(axis=>{const p=screen(point(axis,1));return {x:p.x-origin.x,y:p.y-origin.y};});
@@ -58,5 +58,14 @@ export function MapGrid({screen,modern=false,readingProgress=.5}:{modern?:boolea
       return <g key={`source-${i}`} className="map-axis-ticks"><line x1={p.x-4} x2={p.x+4} y1={p.y} y2={p.y} stroke={COLORS[2]}/><text x={p.x-9} y={p.y+3} textAnchor="end">{i*10}%</text></g>;
     })}
     <circle data-reading-origin cx={origin.x} cy={origin.y} r="3" fill={COLORS[2]}/>
+    {modern&&projection==='xy'&&size&&<g className="map-axis-ticks">
+      {Array.from({length:9},(_,i)=>{
+        const x=screen({x:-250+i*62.5,y:-170,z:0}).x,y=screen({x:-250,y:-170+i*42.5,z:0}).y;
+        return <g key={`rating-${i}`}>
+          {x>40&&x<size.width-40&&<text x={x} y={size.height-16} textAnchor="middle">X {i/2}</text>}
+          {y>64&&y<size.height-40&&<text x={12} y={y+3}>Y {i/2}</text>}
+        </g>;
+      })}
+    </g>}
   </g>;
 }

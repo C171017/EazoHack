@@ -35,3 +35,13 @@ The first structured JSON-style prompt caused the model to draw a passage text p
 - TypeScript and ESLint passed.
 
 The implementation is an MVP synchronous integration. Public deployment still needs the application's user authentication and shared usage limits; this local wiring does not add those services.
+
+## No-text prompt revision
+
+2026-09-05: passage-illustration-v4 explicitly forbids words, all written characters, digits, punctuation, equations, pseudo-text, captions, labels and watermarks. It overrides writing mentioned in the source with blank surfaces and closed books.
+
+Live visual verification: v3 cave sample contained no visible writing (3.228 s). A synthetic stress passage explicitly mentioning JUSTICE/TRUTH on a slate and KNOW THYSELF on a sign produced lettering in both v3 (4.121 s) and the stronger v4 (3.149 s). Therefore prompt compliance is not guaranteed, and this change must not be described as enforcing text-free images. The six fal adapter tests and prompt lint pass. No OCR gate or additional text-model call was added. These timings do not establish that prohibiting text reduces latency.
+
+## Purpose-first prompt (current)
+
+The user's subsequent clarification supersedes the strict no-character policy above. `passage-illustration-v5` asks for an intuitive book illustration: choose the subjects, actions, setting or relationships most useful to visualize; compose a clear scene; use a faithful visual metaphor for abstract ideas. It favors understanding over decoration and imagery over written explanation. The instruction to avoid captions, labels and passage transcription replaces the long prohibition list and forced blank surfaces/closed books. No extra inference stage or validation/regeneration loop was added. Six adapter tests and prompt lint passed; v5 has not been live-image benchmarked, and no latency improvement is claimed.
