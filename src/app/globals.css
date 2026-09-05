@@ -9,3 +9,57 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+
+.txt-reader-pane {
+  height: 78vh;
+  height: 78svh;
+  min-height: 28rem;
+  max-height: 56rem;
+}
+
+.txt-reader-scroll {
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+
+.txt-reader-progress {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 10;
+  display: flex;
+  width: fit-content;
+  margin: 0 0 1.5rem auto;
+  border: 1px solid var(--color-line);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--color-paper) 92%, transparent);
+  padding: 0.35rem 0.65rem;
+  color: var(--color-muted);
+  font-size: 0.625rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  pointer-events: none;
+  backdrop-filter: blur(6px);
+}
+
+.txt-render-chunk {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 1200px;
+}
+
+.txt-source-block {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.txt-source-block-continuation {
+  margin-top: -1.5rem;
+}
+
+@media (min-width: 64rem) {
+  .txt-reader-pane {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+}

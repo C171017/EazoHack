@@ -99,12 +99,8 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
     const index=['1','2','3','4'].indexOf(e.key);
     if(index>=0){e.preventDefault();switchProjection(PROJECTIONS[index].id);}
   }}>
-    <header className="map-header">
-      <div className="map-eyebrow"><span>THE REPUBLIC</span><span>EDITORIAL SAMPLE · BOOK I</span></div>
-      <div className="map-title-row"><h2>A space for ideas.</h2><button className="map-small-button" aria-pressed={list} disabled={!spatialAvailable} onClick={()=>setList(!list)}>{list?'Show space':'Browse nodes'}</button></div>
-      <p className="map-subtitle">Themes, structure, and the path through a book.</p>
-    </header>
     <div ref={stage} className="map-stage">
+      <button className="map-small-button" aria-pressed={list} disabled={!spatialAvailable} onClick={()=>setList(!list)}>{list?'Show space':'Browse nodes'}</button>
       {list?<div className="map-node-list" aria-label="All map occurrences">{graph.nodes.map(n=><button key={n.id} aria-pressed={selected?.id===n.id} onClick={()=>choose(n.id)}><span>{n.label}</span><small>{n.sourceLabel} · {n.structuralLevel===null?'Unclassified':LEVELS[n.structuralLevel]}</small></button>)}</div>:
       <svg data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-projection={current.projection} ref={svg} width="100%" height="100%" aria-label="Book map: orbitable 3D coordinates with three projections" role="group" tabIndex={0}
         onKeyDown={e=>{
@@ -163,7 +159,6 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
           <text x={p.labelX+8} y={p.labelY+17}>{p.label}</text>
         </g></g>;})}
       </svg>}
-      <div className="map-camera-tools"><button aria-label="Zoom out" onClick={()=>{cancelMotion();change({zoom:Math.max(.5,current.zoom-.2)});}}>−</button><span>{Math.round(current.zoom*100)}%</span><button aria-label="Zoom in" onClick={()=>{cancelMotion();change({zoom:Math.min(2.5,current.zoom+.2)});}}>+</button><button onClick={()=>{cancelMotion();onViewChange({...current,...orientation(current.projection),x:0,y:0,zoom:1});}}>Reset view</button></div>
     </div>
     {selected&&<section className="map-detail" aria-label="Selected occurrence">
       <div className="map-title-row"><div><small>{selected.sourceLabel} · {selected.structuralLevel===null?'Unclassified':LEVELS[selected.structuralLevel]}</small><h3>{selected.label}</h3></div><button aria-label="Close node details" onClick={()=>change({selectedNodeId:null})}>×</button></div>

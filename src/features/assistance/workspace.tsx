@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
 import { Button } from '@/ui/components/button';
@@ -8,6 +8,7 @@ import { createWorkspaceRepository, type WorkspaceSnapshot } from '../persistenc
 import { initialView } from '../book-graph/projection';
 import { createSampleGraph } from '../book-graph/sample-graph';
 import { ArtifactView } from './artifact-view';
+import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange } from '../reader/continuous-txt-reader';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 const routes: {kind:RouteKind;label:string;symbol:string}[] = [
   {kind:'interactive_ui',label:'Interactive UI',symbol:'↔'},
@@ -20,7 +21,7 @@ export function Workspace({preview}:{preview:BookPreview}) {
   const graph = useMemo(()=>createSampleGraph(preview),[preview]);
   const [mapAnchor,setMapAnchor] = useState<SourceAnchor|null>(null);
   const [mapView,setMapView] = useState<WorkspaceSnapshot['mapView']>(null);
-  const reader = useRef<HTMLDivElement>(null);
+  const reader = useRef<ContinuousTxtReaderHandle>(null);
   const [selection,setSelection] = useState<Selection|null>(null);
   const [anchors,setAnchors] = useState<SourceAnchor[]>([]);
   const [selectedRoutes,setSelectedRoutes] = useState<RouteKind[]>(['interactive_ui','concept_diagram']);
@@ -44,29 +45,25 @@ export function Workspace({preview}:{preview:BookPreview}) {
         setSaved(snapshot);setSelection(snapshot.selections[0]??null);setAnchors(snapshot.anchors);
         setArtifacts(snapshot.artifacts);setMapView(snapshot.mapView);setMapAnchor(snapshot.mapView?.graphVersion===graph.graphVersion?(graph.anchors.find(a=>a.id===snapshot.mapView?.readerAnchorId)??null):null);setInteractionState(snapshot.interactionState);
         setNotice('Restored your saved view, passage and results.');
+        if (snapshot.readerPosition?.fileHash===preview.fileHash&&snapshot.readerPosition.extractionVersion===preview.extractionVersion) {
+          requestAnimationFrame(()=>reader.current?.scrollToOffset(snapshot.readerPosition!.startOffset));
+        }
       }
       setReady(true);
     }).catch(error=>{if(alive){setNotice(`Local restore failed: ${error.message}`);setReady(true);}});
     return ()=>{alive=false;void repository.close();};
-  },[graph]);
-  function captureSelection() {
-    const domSelection=window.getSelection();
-    const container=reader.current;
-    if (!container || !domSelection?.rangeCount || domSelection.isCollapsed) return;
-    const range=domSelection.getRangeAt(0);
-    if(!container.contains(range.startContainer)||!container.contains(range.endContainer)) return;
-    const before=range.cloneRange();before.selectNodeContents(container);before.setEnd(range.startContainer,range.startOffset);
-    const relativeStart=before.toString().length;
-    const text=range.toString();
-    if(!text.trim()) return;
-    const startOffset=preview.startOffset+relativeStart;
-    const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset,endOffset:startOffset+text.length}],quote:text,prefix:preview.text.slice(Math.max(0,relativeStart-40),relativeStart),suffix:preview.text.slice(relativeStart+text.length,relativeStart+text.length+40),resolution:'exact'});
-    const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',anchorIds:[anchor.id],selectedText:text,contextSnapshot:'Book I opening excerpt; Benjamin Jowett third edition.',createdAt:new Date().toISOString()});
-    setMapAnchor(null);setMapView(current=>current?{...current,readerAnchorId:null}:null);activeRequest.current++;setBusy(false);setSelection(next);setAnchors([anchor]);setArtifacts([]);setRuns([]);setInteractionState({});
-    setPanelOpen(true);
-    setNotice('Passage selected. Mock controls below exercise the scaffold only.');
-    domSelection.removeAllRanges();
-  }
+  },[graph,preview.extractionVersion,preview.fileHash]);
+  const captureSelection = useCallback((range:TxtSelectionRange) => {
+    try {
+      const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset:range.startOffset,endOffset:range.endOffset}],quote:range.quote,prefix:range.prefix,suffix:range.suffix,resolution:'exact'});
+      const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',anchorIds:[anchor.id],selectedText:range.quote,contextSnapshot:'Complete TXT source; Benjamin Jowett third edition.',createdAt:new Date().toISOString()});
+      setMapAnchor(null);setMapView(current=>current?{...current,readerAnchorId:null}:null);activeRequest.current++;setBusy(false);setSelection(next);setAnchors([anchor]);setArtifacts([]);setRuns([]);setInteractionState({});
+      setPanelOpen(true);
+      setNotice('Passage selected. Mock controls below exercise the scaffold only.');
+    } catch {
+      setNotice('Select a non-empty passage shorter than 20,000 characters.');
+    }
+  },[preview.extractionVersion,preview.fileHash]);
   async function exercise() {
     if(!selection||!selectedRoutes.length)return;
     const frozen=selection, ticket=++activeRequest.current;
@@ -87,34 +84,23 @@ export function Workspace({preview}:{preview:BookPreview}) {
   async function save() {
     const repository=createWorkspaceRepository();
     try {
-      const snapshot=await repository.save({schemaVersion:1,id:workspaceId,bookId:'plato-republic',selections:selection?[selection]:[],anchors,artifacts:artifacts.map(artifact=>({...artifact,savedAt:new Date().toISOString()})),interactionState,graphViewport:null,mapView:mapView??initialView(graph.graphVersion),bookmarks:selection?.anchorIds??[],savedAt:new Date().toISOString()});
+      const snapshot=await repository.save({schemaVersion:1,id:workspaceId,bookId:'plato-republic',selections:selection?[selection]:[],anchors,artifacts:artifacts.map(artifact=>({...artifact,savedAt:new Date().toISOString()})),interactionState,graphViewport:null,mapView:mapView??initialView(graph.graphVersion),readerPosition:{fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,startOffset:reader.current?.getReadingPosition()??0},bookmarks:selection?.anchorIds??[],savedAt:new Date().toISOString()});
       setSaved(snapshot);setNotice('Saved locally · view, passage and results.');
     }catch(error){setNotice(`Not saved: ${error instanceof Error?error.message:'Storage error'}`);}
     finally{await repository.close();}
   }
   function readMapSource(anchor:SourceAnchor) {
     setMapAnchor(anchor);
-    requestAnimationFrame(()=>reader.current?.querySelector('mark')?.scrollIntoView({block:'center',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'}));
+    const locator=anchor.locators.find(candidate=>candidate.kind==='txt');
+    if(locator?.kind==='txt')requestAnimationFrame(()=>reader.current?.scrollToOffset(locator.startOffset,window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'));
   }
   const activeAnchor=mapAnchor??anchors[0];
-  const offset=activeAnchor?.locators[0].kind==='txt'?activeAnchor.locators[0].startOffset-preview.startOffset:-1;
-  const validHighlight=activeAnchor?.fileHash===preview.fileHash&&activeAnchor?.extractionVersion===preview.extractionVersion&&offset>=0&&preview.text.slice(offset,offset+(activeAnchor?.quote.length??0))===activeAnchor?.quote;
+  const activeLocator=activeAnchor?.locators.find(candidate=>candidate.kind==='txt');
+  const validHighlight=activeAnchor?.fileHash===preview.fileHash&&activeAnchor?.extractionVersion===preview.extractionVersion&&activeLocator?.kind==='txt'&&preview.sourceText.slice(activeLocator.startOffset,activeLocator.endOffset)===activeAnchor.quote;
   return <main className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
     <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
-      <section className="flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
-        <div className="scrollbar-hidden min-h-0 flex-1 overflow-y-auto px-8 py-9 lg:px-12 xl:px-16">
-          <div className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-muted"><span className="h-px w-8 bg-line"/>The Republic / Book I</div>
-          <h1 className="font-reading text-4xl">A conversation begins.</h1>
-          <p className="mt-3 mb-9 text-xs leading-6 text-muted">Opening excerpt · Stephanus 327 onward<br/>Select any part of the original text to hold it in context.</p>
-          <div ref={reader} onMouseUp={captureSelection} onKeyUp={captureSelection} className="font-reading text-[17px] leading-[1.95] selection:bg-highlight" data-testid="book-text">
-            {preview.text.split(/(?<=\n\n)/).map((paragraph,index,all)=>{
-              const start=all.slice(0,index).reduce((sum,text)=>sum+text.length,0);
-              const from=Math.max(0,offset-start),to=Math.min(paragraph.length,offset+(activeAnchor?.quote.length??0)-start);
-              return <span key={index} className="mb-6 block">{validHighlight&&to>from?<>{paragraph.slice(0,from)}<mark className="rounded-sm bg-highlight text-ink">{paragraph.slice(from,to)}</mark>{paragraph.slice(to)}</>:paragraph}</span>;
-            })}
-          </div>
-          <div className="mt-10 border-t border-line pt-5 text-xs leading-6 text-muted">End of reading preview. The complete source is preserved locally; full-book navigation and analysis are not implemented.</div>
-        </div>
+      <section className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
+        <ContinuousTxtReader ref={reader} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection}/>
       </section>
       <section className="relative min-h-[960px] flex-1 overflow-hidden bg-paper lg:min-h-0" aria-label="Exploration workspace">
         <div className="absolute inset-0">{ready&&<BookMap graph={graph} excerptRange={[preview.startOffset/preview.totalCharacters,(preview.startOffset+preview.text.length)/preview.totalCharacters]} view={mapView} onViewChange={setMapView} onSource={readMapSource} onSaveView={save}/>}</div>
@@ -135,7 +121,7 @@ export function Workspace({preview}:{preview:BookPreview}) {
               </div>
             </div>
             <div className="mt-4 space-y-3">{runs.filter(run=>run.status==='failed'||run.status==='cancelled').map(run=><div key={run.id} className="rounded-xl border border-line bg-mist p-4 text-xs text-warning"><strong>{routes.find(route=>route.kind===run.route)?.label}: {run.status}</strong><p className="mt-1">{run.error?.message}</p></div>)}{artifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</div>
-            {saved&&<div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-[11px] text-muted"><span>One local reading checkpoint · {saved.artifacts.length} mock results</span><Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);setMapAnchor(graph.anchors.find(a=>a.id===saved.mapView?.readerAnchorId)??null);setMapView(saved.mapView);setSelection(saved.selections[0]??null);setAnchors(saved.anchors);setArtifacts(saved.artifacts);setInteractionState(saved.interactionState);setRuns([]);setNotice('Opened the saved checkpoint.');reader.current?.scrollIntoView({block:'start',behavior:'smooth'});}}>Revisit ↗</Button></div>}
+            {saved&&<div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-[11px] text-muted"><span>One local reading checkpoint · {saved.artifacts.length} mock results</span><Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);setMapAnchor(graph.anchors.find(a=>a.id===saved.mapView?.readerAnchorId)??null);setMapView(saved.mapView);setSelection(saved.selections[0]??null);setAnchors(saved.anchors);setArtifacts(saved.artifacts);setInteractionState(saved.interactionState);setRuns([]);setNotice('Opened the saved checkpoint.');const position=saved.readerPosition?.fileHash===preview.fileHash&&saved.readerPosition.extractionVersion===preview.extractionVersion?saved.readerPosition.startOffset:0;reader.current?.scrollToOffset(position,'smooth');}}>Revisit ↗</Button></div>}
           </div>
         </div>}
       </section>

@@ -28,6 +28,11 @@ export const WorkspaceSnapshotSchema = z.object({
     zoom: z.number().positive().finite(),
   }).strict().nullable().default(null),
   mapView: MapViewSchema.nullable().default(null),
+  readerPosition: z.object({
+    fileHash: z.string().min(1).max(20_000),
+    extractionVersion: z.string().min(1).max(160),
+    startOffset: z.number().int().nonnegative(),
+  }).strict().nullable().default(null),
   bookmarks: z.array(z.string().min(1)).max(10_000).default([]),
   savedAt: z.string().datetime(),
 }).strict().superRefine((snapshot, context) => {

@@ -36,6 +36,11 @@ function checkpoint(): WorkspaceSnapshot {
       createdAt: "2026-09-05T00:00:00.000Z",
     }],
     graphViewport: { x: 12, y: -30, zoom: 1.5 },
+    readerPosition: {
+      fileHash: "a".repeat(64),
+      extractionVersion: "fixture-1",
+      startOffset: 4_200,
+    },
     bookmarks: ["anchor-1"],
   });
 }
@@ -60,6 +65,13 @@ test("a graph or artifact is not required to save a reading checkpoint", async (
   await repository.save(snapshot);
   assert.deepEqual(await repository.load(snapshot.id), snapshot);
   await repository.close();
+});
+
+test("reader positions reject invalid source offsets", () => {
+  assert.equal(WorkspaceSnapshotSchema.safeParse({
+    ...checkpoint(),
+    readerPosition: { ...checkpoint().readerPosition!, startOffset: -1 },
+  }).success, false);
 });
 
 test("invalid bindings and duplicate IDs are rejected before overwriting a good checkpoint", async () => {

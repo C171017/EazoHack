@@ -8,6 +8,13 @@ export async function getBookPreview() {
   const startOffset = normalized.indexOf('I went down yesterday to the Piraeus');
   if (startOffset < 0) throw new Error('Book I opening not found in the source.');
   const endOffset = normalized.indexOf('\n\n', startOffset + 6000);
-  return { text: normalized.slice(startOffset, endOffset), startOffset, fileHash, extractionVersion:'txt-lf-v1', totalCharacters:normalized.length };
+  return {
+    text: normalized.slice(startOffset, endOffset),
+    sourceText: normalized,
+    startOffset,
+    fileHash,
+    extractionVersion:'txt-lf-v1',
+    totalCharacters:normalized.length,
+  };
 }
 export type BookPreview = Awaited<ReturnType<typeof getBookPreview>>;
