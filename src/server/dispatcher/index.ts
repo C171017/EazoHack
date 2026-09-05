@@ -27,7 +27,7 @@ export type DispatchRequest = z.input<typeof DispatchRequestSchema>;
 export type DispatchResult = {
   runs: RouteRun[];
   artifacts: Artifact[];
-  provider: "mock" | "vertex_ai" | "fal" | "mixed" | "not_configured";
+  provider: "mock" | "vertex_ai" | "inco" | "fal" | "mixed" | "not_configured";
   requestSnapshot: { selection: Selection; plan: RoutePlan };
 };
 export interface DispatchOptions {
@@ -181,7 +181,7 @@ async function execute(
         } else {
           const artifact = validateArtifact(result.payload, selection, run);
           if (mode === "mock" && (result.provenance.provider !== "mock" || artifact.provider !== "mock")) throw new Error("Mock mode returned non-mock output.");
-          if (mode === "real" && (result.provenance.provider !== (kind === "generated_image" ? "fal" : "vertex_ai") || artifact.provider !== result.provenance.provider || artifact.provenance.provider !== result.provenance.provider)) throw new Error("Real mode returned output from the wrong provider.");
+          if (mode === "real" && (result.provenance.provider !== (kind === "generated_image" ? "fal" : "inco") || artifact.provider !== result.provenance.provider || artifact.provenance.provider !== result.provenance.provider)) throw new Error("Real mode returned output from the wrong provider.");
           artifacts.push(artifact);
           run.artifactIds = [artifact.id];
           run.status = "complete";

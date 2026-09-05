@@ -32,10 +32,8 @@ export function MapGrid({screen,modern=false,readingProgress=.5,size,projection}
     // Fade edge-on planes to avoid stacks of coincident lines in flat views.
     const facing=Math.min(1,Math.abs(a.x*b.y-a.y*b.x)/scaleSquared*4);
     if(facing<.001)continue;
-    // Every line retains its parallel axis's color, even when that axis is off-screen.
-    // The world-space fade and facing attenuation stay independent of zoom.
     for(const [axis,other] of [[u,v],[v,u]] as const)for(const offset of other==='z'?VERTICAL_OFFSETS:OFFSETS) {
-      lines.push({key:`${u}${v}-${axis}-${offset}`,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT,other,offset),b:point(axis,EXTENT,other,offset),color:COLORS[AXES.indexOf(axis)],opacity:.24*fade(other==='z'?Math.abs(offset):offset)*facing,vertical:axis==='z'});
+      lines.push({key:`${u}${v}-${axis}-${offset}`,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT,other,offset),b:point(axis,EXTENT,other,offset),color:'#9299A3',opacity:.24*fade(other==='z'?Math.abs(offset):offset)*facing,vertical:axis==='z'});
     }
   }
   AXES.forEach((axis,i)=>lines.push({key:axis,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT),b:point(axis,EXTENT),color:COLORS[i],opacity:.66,vertical:axis==='z'}));

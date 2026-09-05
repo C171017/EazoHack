@@ -17,7 +17,7 @@ npm ci
 npm run dev
 ```
 
-Open [http://127.0.0.1:3000](http://127.0.0.1:3000). Reading the saved graph requires no credentials. Live passage assistance and rerunning book analysis require the [Vertex configuration](docs/10-gemini-production.md). The dev server binds to loopback.
+Open [http://127.0.0.1:3000](http://127.0.0.1:3000). Reading the saved graph requires no credentials. Live passage assistance requires server-only `INCO_API_KEY` for methods 1–3 and `FAL_KEY` for illustrations; see [method configuration](docs/19-enhancement-methods.md). Rerunning book analysis requires the [Vertex configuration](docs/10-gemini-production.md). The dev server binds to loopback.
 
 Run `npm run analyze:book -- --dry-run` to inspect text coverage, then `npm run analyze:book` to generate or resume the book graph. See [text-only analysis and JSON storage](docs/13-text-book-analysis.md) for prompts, checkpoints, validation, and the database decision.
 

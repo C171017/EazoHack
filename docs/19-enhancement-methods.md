@@ -23,7 +23,7 @@ Models and inference providers are separate choices. Each method may have its ow
 
 The TXT reader now reveals four colored SVG icon buttons beside the selected text: cobalt speech bubble (Explanation), emerald hierarchy (Diagram), orchid clicking pointer (Interactive panel), and gold palette (Illustration). The floating picker uses feathered blur and staggered motion, with reduced-motion support. It dismisses on Escape, outside pointer input, scrolling, or resize. Mouse/pointer selection and keyboard Shift-arrow extension preserve canonical source offsets.
 
-All four methods are connected. Explanation and Diagram use the legacy `interactive_ui` and `concept_diagram` routes. Interactive panel uses the distinct `interactive_panel` route through the existing Vertex Gemini provider and renders validated scenario comparisons or process steppers; see [interactive reading panels](25-interactive-reading-panels.md). Illustration uses `generated_image`; see [Z-Image illustrations](24-z-image-illustrations.md). Existing artifact records remain compatible. The text reader has no Reading session panel or checkpoint save/restore flow; generated results and retry controls remain attached to the original passage. Its reading and enhancement state lasts for the current mounted workspace. The separate PDF workspace retains its existing controls.
+All four methods are connected. Explanation and Diagram use the legacy `interactive_ui` and `concept_diagram` routes. Interactive panel uses the distinct `interactive_panel` route through the Inco GLM 5.3 Flash provider and renders validated scenario comparisons or process steppers; see [interactive reading panels](25-interactive-reading-panels.md). Illustration uses `generated_image`; see [Z-Image illustrations](24-z-image-illustrations.md). Existing artifact records remain compatible. The text reader has no Reading session panel or checkpoint save/restore flow; generated results and retry controls remain attached to the original passage. Its reading and enhancement state lasts for the current mounted workspace. The separate PDF workspace retains its existing controls.
 
 ## Model research
 
@@ -32,3 +32,7 @@ See [model/provider shortlist](20-generation-model-research.md) for current rese
 Latest selection proposal: [API-first, cost-aware shortlist](21-api-cost-model-shortlist.md), reflecting the user's lighter-harness constraint. Provider choices remain unapproved.
 
 Approved color implementation: see [color decisions](23-color-design-decisions.md). Generated TXT marks retain their enhancement identity across selection changes and undo/redo; overlapping methods have separate underline segments.
+
+## Current text generation provider
+
+Explanation, Diagram, and Interactive panel use Inco `glm-5.3-flash:fast` through `https://api.inco.ai/v1/chat/completions`. Set server-only `INCO_API_KEY` locally and in deployment secrets. The model ID was verified against Inco’s authenticated model list. The three methods share existing artifact validation and source anchoring. Illustration continues to use fal; whole-book analysis continues to use Vertex Gemini. Existing Vertex artifacts remain readable. API reference: https://platform.inco.ai/docs.

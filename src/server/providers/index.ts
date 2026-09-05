@@ -6,12 +6,12 @@ import {
 } from "../../shared/schemas";
 import { makeMockArtifact } from "../../shared/fixtures";
 import { createFalImageProvider } from "./fal-z-image";
-import { createVertexGeminiProvider } from "./vertex-gemini";
+import { createIncoProvider } from "./inco";
 
 export type ProviderMode = "mock" | "real";
 export type ProviderError = RunError;
 export type ProviderResult<T> = {
-  provenance: { provider: "mock" | "vertex_ai" | "fal" | "not_configured"; label: string };
+  provenance: { provider: "mock" | "vertex_ai" | "inco" | "fal" | "not_configured"; label: string };
   timing: { startedAt: string; durationMs: number };
 } & ({ ok: true; payload: T } | { ok: false; error: ProviderError });
 
@@ -30,7 +30,7 @@ export function createProvider(
   kind: RouteKind,
   mode: ProviderMode,
 ): Provider<Selection, Artifact> {
-  if (mode === "real") return kind === "generated_image" ? createFalImageProvider() : createVertexGeminiProvider(kind);
+  if (mode === "real") return kind === "generated_image" ? createFalImageProvider() : createIncoProvider(kind);
   return {
     async run(selection, context) {
       const startedAt = new Date().toISOString();
@@ -56,8 +56,8 @@ export function createProvider(
 }
 
 /** A dispatch may combine independent text and image providers. */
-export function dispatchProvider(mode: ProviderMode, routes: RouteKind[]): "mock" | "vertex_ai" | "fal" | "mixed" {
+export function dispatchProvider(mode: ProviderMode, routes: RouteKind[]): "mock" | "vertex_ai" | "inco" | "fal" | "mixed" {
   if (mode === "mock") return "mock";
-  if (!routes.includes("generated_image")) return "vertex_ai";
+  if (!routes.includes("generated_image")) return "inco";
   return routes.length === 1 ? "fal" : "mixed";
 }
