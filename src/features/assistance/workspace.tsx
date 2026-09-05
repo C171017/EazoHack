@@ -54,8 +54,8 @@ export function Workspace({preview}:{preview:BookPreview}) {
     const text=range.toString();
     if(!text.trim()) return;
     const startOffset=preview.startOffset+relativeStart;
-    const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locator:{type:'txt',startOffset,endOffset:startOffset+text.length},quote:text,prefix:preview.text.slice(Math.max(0,relativeStart-40),relativeStart),suffix:preview.text.slice(relativeStart+text.length,relativeStart+text.length+40),resolution:'exact'});
-    const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',anchorIds:[anchor.id],selectedText:text,contextSnapshot:{text:'Book I opening excerpt; Benjamin Jowett third edition.'},createdAt:new Date().toISOString()});
+    const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset,endOffset:startOffset+text.length}],quote:text,prefix:preview.text.slice(Math.max(0,relativeStart-40),relativeStart),suffix:preview.text.slice(relativeStart+text.length,relativeStart+text.length+40),resolution:'exact'});
+    const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',anchorIds:[anchor.id],selectedText:text,contextSnapshot:'Book I opening excerpt; Benjamin Jowett third edition.',createdAt:new Date().toISOString()});
     activeRequest.current++;setBusy(false);setSelection(next);setAnchors([anchor]);setArtifacts([]);setRuns([]);setInteractionState({});
     setNotice('Passage selected. Mock controls below exercise the scaffold only.');
     domSelection.removeAllRanges();
@@ -87,7 +87,7 @@ export function Workspace({preview}:{preview:BookPreview}) {
     finally{await repository.close();}
   }
   const activeAnchor=anchors[0];
-  const offset=activeAnchor?.locator.type==='txt'?activeAnchor.locator.startOffset-preview.startOffset:-1;
+  const offset=activeAnchor?.locators[0].kind==='txt'?activeAnchor.locators[0].startOffset-preview.startOffset:-1;
   const validHighlight=offset>=0&&preview.text.slice(offset,offset+(activeAnchor?.quote.length??0))===activeAnchor?.quote;
   return <main className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
     <header className="flex h-18 shrink-0 items-center justify-between border-b border-line px-6 lg:px-9">

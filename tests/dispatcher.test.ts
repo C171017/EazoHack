@@ -36,6 +36,9 @@ test("a failed route leaves sibling results intact and can be retried alone", as
   for (const artifact of first.artifacts) assert.ok(retried.artifacts.some((item) => item.id === artifact.id));
   assert.ok(retried.runs.every((run) => run.status === "complete"));
   await assert.rejects(retryRoutePlan(request, retried, ["generated_image"]), /Only failed or cancelled/);
+  const changed = structuredClone(request);
+  changed.selection.selectedText = "Changed text using the same selection ID";
+  await assert.rejects(retryRoutePlan(changed, first, ["generated_image"]), /original selection and plan snapshots/);
 });
 
 test("dependencies start after completion; failure blocks only dependent routes", async () => {
@@ -88,6 +91,21 @@ test("cancelled runs discard late provider output and permit a new retry", async
   assert.deepEqual(result.artifacts, []);
   const retried = await retryRoutePlan(request, result, ["interactive_ui"]);
   assert.equal(retried.runs[0].status, "complete");
+});
+
+test("cancellation settles even when a future provider has not returned", async () => {
+  const controller = new AbortController();
+  const result = await dispatchRoutePlan(input(["interactive_ui"]), {
+    signal: controller.signal,
+    providerFactory: () => ({
+      run() {
+        queueMicrotask(() => controller.abort());
+        return new Promise(() => {});
+      },
+    }),
+  });
+  assert.equal(result.runs[0].status, "cancelled");
+  assert.deepEqual(result.artifacts, []);
 });
 
 test("provider output cannot switch source bindings and input is frozen", async () => {

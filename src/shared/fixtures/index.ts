@@ -1,4 +1,4 @@
-import { ArtifactSchema, BookSchema, SelectionSchema, SourceAnchorSchema, type Artifact, type RouteKind, type Selection } from "../schemas";
+import { ArtifactSchema, BookSchema, ROUTE_KINDS, RoutePlanSchema, RouteRunSchema, SelectionSchema, SourceAnchorSchema, type Artifact, type RouteKind, type Selection } from "../schemas";
 
 // Original programmatic test content, not a quotation or interpretation of Plato.
 export const FIXTURE_TEXT = "A reading tool can connect a passage to a question. Evidence should remain attached when an explanation is saved.";
@@ -6,6 +6,7 @@ export const FIXTURE_DATE = "2026-09-05T00:00:00.000Z";
 export const fixtureBook = BookSchema.parse({ id: "fixture-book-v1", fileHash: "fixture-original-text-v1", title: "Scaffold test passage", format: "txt", extractionVersion: "fixture-v1", createdAt: FIXTURE_DATE });
 export const fixtureAnchors = [SourceAnchorSchema.parse({ id: "fixture-anchor-v1", bookId: fixtureBook.id, fileHash: fixtureBook.fileHash, extractionVersion: fixtureBook.extractionVersion, locators: [{ kind: "txt", startOffset: 0, endOffset: FIXTURE_TEXT.length }], quote: FIXTURE_TEXT, prefix: "", suffix: "", resolution: "exact" })];
 export const fixtureSelection = SelectionSchema.parse({ id: "fixture-selection-v1", bookId: fixtureBook.id, anchorIds: fixtureAnchors.map((a) => a.id), selectedText: FIXTURE_TEXT, contextSnapshot: "Original scaffold fixture. This is not a passage from The Republic.", createdAt: FIXTURE_DATE });
+export const fixtureRoutePlan = RoutePlanSchema.parse({ id: "fixture-plan-v1", selectionId: fixtureSelection.id, routes: [...ROUTE_KINDS], reasonByRoute: Object.fromEntries(ROUTE_KINDS.map((kind) => [kind, "Explicit mock exercise; this is not a routing recommendation."])), dependsOn: {}, trigger: { mode: "mock_manual", requestedRoutes: [...ROUTE_KINDS], requestedAt: FIXTURE_DATE }, routerVersion: "fixture-v1" });
 
 export function makeMockArtifact(kind: RouteKind, selection: Selection, runId: string): Artifact {
   const base = { id: `artifact-${runId}`, bookId: selection.bookId, selectionId: selection.id, routeRunId: runId, nodeIds: [], anchorIds: selection.anchorIds, provider: "mock", schemaVersion: "1", createdAt: new Date().toISOString(), savedAt: null, provenance: { provider: "mock", label: "Deterministic scaffold fixture. No model, image generation, or source search was called." } };
@@ -16,3 +17,8 @@ export function makeMockArtifact(kind: RouteKind, selection: Selection, runId: s
     case "source_discovery": return ArtifactSchema.parse({ ...base, kind, payload: { status: "no_results", scope: "undecided", query: selection.selectedText, references: [], summary: "No search was performed. Source scope and search provider remain undecided." } });
   }
 }
+
+export const fixtureArtifacts = ROUTE_KINDS.map((kind) => ({ ...makeMockArtifact(kind, fixtureSelection, `fixture-run-${kind}`), createdAt: FIXTURE_DATE }));
+export const fixturePartialFailure = ROUTE_KINDS.map((route) => RouteRunSchema.parse({ id: `fixture-run-${route}`, planId: fixtureRoutePlan.id, route, status: route === "generated_image" ? "failed" : "complete", dependsOn: [], artifactIds: route === "generated_image" ? [] : [`artifact-fixture-run-${route}`], ...(route === "generated_image" ? { error: { code: "provider_failed", message: "Intentional fixture failure", retryable: true } } : {}) }));
+// Deliberately invalid input for validation tests; never render this object.
+export const fixtureInvalidConfig = { schemaVersion: "1", components: [{ component: "ExplanationCard", props: { title: "Invalid fixture", body: "Must be rejected", className: "arbitrary-output" } }], assumptions: [], ruleSources: [], validationStatus: "mock_unverified" };

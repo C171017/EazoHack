@@ -20,6 +20,7 @@ test("route plans allow all four routes and reject duplicate, unknown and cyclic
   assert.equal(RoutePlanSchema.safeParse({ ...plan, dependsOn: { interactive_ui: ["generated_image"], generated_image: ["interactive_ui"] } }).success, false);
   assert.equal(RoutePlanSchema.safeParse({ ...plan, routes: ["interactive_ui"], reasonByRoute: { interactive_ui: "Test" }, dependsOn: { interactive_ui: ["generated_image"] } }).success, false);
   assert.equal(RoutePlanSchema.safeParse({ ...plan, reasonByRoute: {} }).success, false);
+  assert.equal(RoutePlanSchema.safeParse({ ...plan, trigger: { ...plan.trigger, requestedRoutes: ["interactive_ui"] } }).success, false);
 });
 
 test("four mock artifacts retain selection binding and honest provenance", () => {
@@ -48,6 +49,7 @@ test("diagram and graph integrity reject dangling endpoints, duplicate IDs and u
   if (artifact.kind !== "concept_diagram") throw new Error("Wrong fixture kind");
   assert.equal(ConceptDiagramSchema.safeParse({ ...artifact.payload, edges: [{ ...artifact.payload.edges[0], target: "missing" }] }).success, false);
   assert.equal(ConceptDiagramSchema.safeParse({ ...artifact.payload, nodes: [artifact.payload.nodes[0], artifact.payload.nodes[0]] }).success, false);
+  assert.equal(ArtifactSchema.safeParse({ ...artifact, payload: { ...artifact.payload, nodes: [{ ...artifact.payload.nodes[0], anchorIds: ["unrelated-selection-anchor"] }, ...artifact.payload.nodes.slice(1)] } }).success, false);
   const graph = { id: "g", bookId: fixtureSelection.bookId, version: "1", anchorIds: fixtureSelection.anchorIds, nodes: [{ id: "n", label: "Node", summary: "Test", anchorIds: fixtureSelection.anchorIds, position: { x: 0, y: 0 } }], edges: [{ id: "e", source: "n", target: "n", type: "test", evidenceAnchorIds: [], rationale: "Test", provenance: "book_supported" }] };
   assert.equal(GraphSchema.safeParse(graph).success, false);
   assert.equal(GraphSchema.safeParse({ ...graph, edges: [] }).success, true);

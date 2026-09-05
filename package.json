@@ -1,13 +1,14 @@
 {
   "name": "eazo-hack",
-  "version": "1.0.0",
-  "description": "状态：**核心体验与基础技术栈已确认；仅授权文档更新**。更新于 2026-09-05。当前没有应用实现、工程脚手架或已安装依赖。",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "version": "0.1.0",
+  "description": "Credential-free Eazo reading workspace scaffold",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "node --import tsx --test tests/*.test.ts"
   },
   "repository": {
     "type": "git",
@@ -15,9 +16,17 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/C171017/EazoHack/issues"
   },
-  "homepage": "https://github.com/C171017/EazoHack#readme"
+  "homepage": "https://github.com/C171017/EazoHack#readme",
+  "dependencies": {
+    "@xyflow/react": "^12.11.6",
+    "next": "^16.3.4",
+    "pdfjs-dist": "^6.3.289",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zod": "^4.5.4"
+  },
+  "private": true
 }

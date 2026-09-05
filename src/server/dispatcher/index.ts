@@ -7,6 +7,7 @@ import {
   SelectionSchema,
   type Artifact,
   type RouteKind,
+  type RoutePlan,
   type RouteRun,
   type Selection,
 } from "../../shared/schemas";
@@ -24,6 +25,7 @@ export type DispatchResult = {
   runs: RouteRun[];
   artifacts: Artifact[];
   provider: "mock" | "not_configured";
+  requestSnapshot: { selection: Selection; plan: RoutePlan };
 };
 export interface DispatchOptions {
   signal?: AbortSignal;
@@ -38,6 +40,23 @@ function freeze<T>(value: T): T {
     Object.freeze(value);
   }
   return value;
+}
+
+function withCancellation<T>(pending: Promise<T>, signal?: AbortSignal): Promise<T> {
+  if (!signal) return pending;
+  return new Promise<T>((resolve, reject) => {
+    const abort = () => reject(new DOMException("Run cancelled.", "AbortError"));
+    signal.addEventListener("abort", abort, { once: true });
+    if (signal.aborted) {
+      signal.removeEventListener("abort", abort);
+      abort();
+    }
+    // Keep a rejection handler on late work even after cancellation wins the race.
+    pending.then(
+      (value) => { signal.removeEventListener("abort", abort); resolve(value); },
+      (error) => { signal.removeEventListener("abort", abort); reject(error); },
+    );
+  });
 }
 
 function validateArtifact(artifact: unknown, selection: Selection, run: RouteRun): Artifact {
@@ -83,6 +102,9 @@ async function execute(
   const artifacts: Artifact[] = [];
   const retained = new Set<RouteKind>();
   if (retry) {
+    const priorSelection = SelectionSchema.parse(retry.previous.requestSnapshot.selection);
+    const priorPlan = RoutePlanSchema.parse(retry.previous.requestSnapshot.plan);
+    if (JSON.stringify(priorSelection) !== JSON.stringify(selection) || JSON.stringify(priorPlan) !== JSON.stringify(plan)) throw new Error("Retry must preserve the original selection and plan snapshots.");
     if (retry.previous.provider !== (mode === "mock" ? "mock" : "not_configured")) throw new Error("Retry mode must match the original run.");
     if (!retry.retryKinds.length || new Set(retry.retryKinds).size !== retry.retryKinds.length) throw new Error("Choose unique failed or cancelled routes to retry.");
     const priorRuns = retry.previous.runs.map((run) => RouteRunSchema.parse(run));
@@ -141,7 +163,7 @@ async function execute(
       emit(run);
       try {
         const provider = (options.providerFactory ?? createProvider)(kind, mode);
-        const result = await provider.run(selection, { routeRunId: run.id, signal: options.signal, simulateFailure: request.failKinds.includes(kind) });
+        const result = await withCancellation(provider.run(selection, { routeRunId: run.id, signal: options.signal, simulateFailure: request.failKinds.includes(kind) }), options.signal);
         if (options.signal?.aborted) {
           finishError(run, { code: "cancelled", message: "Run cancelled; late output was discarded.", retryable: true });
         } else if (!result.ok) {
@@ -155,12 +177,19 @@ async function execute(
           emit(run);
         }
       } catch {
-        finishError(run, { code: "invalid_output", message: "The provider failed or returned output outside the validated selection contract.", retryable: false });
+        finishError(run, options.signal?.aborted
+          ? { code: "cancelled", message: "Run cancelled; late output will be discarded.", retryable: true }
+          : { code: "invalid_output", message: "The provider failed or returned output outside the validated selection contract.", retryable: false });
       }
     })();
     work.set(kind, task);
     return task;
   };
   await Promise.all(plan.routes.map(start));
-  return { runs: plan.routes.map((kind) => RouteRunSchema.parse(runs.get(kind))), artifacts, provider: mode === "mock" ? "mock" : "not_configured" };
+  return {
+    runs: plan.routes.map((kind) => RouteRunSchema.parse(runs.get(kind))),
+    artifacts,
+    provider: mode === "mock" ? "mock" : "not_configured",
+    requestSnapshot: structuredClone({ selection, plan }),
+  };
 }

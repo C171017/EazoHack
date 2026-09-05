@@ -27,6 +27,7 @@ export const RoutePlanSchema = z.object({
 }).strict().superRefine((plan, ctx) => {
   const selected = new Set(plan.routes);
   if (selected.size !== plan.routes.length) ctx.addIssue({ code: "custom", message: "Routes must be unique", path: ["routes"] });
+  if (new Set(plan.trigger.requestedRoutes).size !== plan.trigger.requestedRoutes.length || plan.trigger.requestedRoutes.length !== selected.size || plan.trigger.requestedRoutes.some((route) => !selected.has(route))) ctx.addIssue({ code: "custom", message: "Mock plan routes must match its explicit trigger snapshot", path: ["trigger", "requestedRoutes"] });
   for (const route of plan.routes) if (!plan.reasonByRoute[route]) ctx.addIssue({ code: "custom", message: "Each route needs a reason", path: ["reasonByRoute", route] });
   for (const route of Object.keys(plan.reasonByRoute) as RouteKind[]) if (!selected.has(route)) ctx.addIssue({ code: "custom", message: "Reason refers to an unselected route" });
   for (const [route, deps] of Object.entries(plan.dependsOn)) {
@@ -79,7 +80,10 @@ export const ArtifactSchema = z.discriminatedUnion("kind", [
   z.object({ ...ArtifactBase, kind: z.literal("generated_image"), payload: GeneratedImageSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("concept_diagram"), payload: ConceptDiagramSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("source_discovery"), payload: SourceDiscoverySchema }).strict(),
-]);
+]).superRefine((artifact, ctx) => {
+  const allowed = new Set(artifact.anchorIds);
+  if (artifact.kind === "concept_diagram" && [...artifact.payload.nodes, ...artifact.payload.edges].some((item) => item.anchorIds.some((id) => !allowed.has(id)))) ctx.addIssue({ code: "custom", message: "Diagram references anchors outside the artifact selection", path: ["payload"] });
+});
 
 export const GraphSchema = z.object({ id: Id, bookId: Id, version: Id, anchorIds: UniqueIds, nodes: z.array(z.object({ id: Id, label: ShortText, summary: Text, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Concept needs evidence"), position: z.object({ x: z.number().finite(), y: z.number().finite() }).strict() }).strict()).max(1000), edges: z.array(z.object({ id: Id, source: Id, target: Id, type: ShortText, evidenceAnchorIds: UniqueIds, rationale: Text, provenance: z.enum(["book_supported", "model_inferred", "mock"]) }).strict()).max(3000) }).strict().superRefine((graph, ctx) => {
   const nodes = new Set(graph.nodes.map((n) => n.id)); const anchors = new Set(graph.anchorIds);
