@@ -39,3 +39,5 @@
 @media(prefers-reduced-motion:reduce){.book-map *{scroll-behavior:auto!important;transition:none!important}}
 
 .map-save-view{margin-left:10px;color:#bfd6c5;text-decoration:underline;text-underline-offset:3px}
+.map-filters,.map-pagination{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin:8px 0}
+.map-filters select{max-width:170px}.map-pagination button{padding:5px 8px;border:1px solid #344b3b;border-radius:4px;color:#c2d2c6}.map-pagination button:disabled{opacity:.35;cursor:default}

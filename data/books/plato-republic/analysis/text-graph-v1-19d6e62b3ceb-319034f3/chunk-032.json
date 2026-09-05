@@ -1,0 +1,206 @@
+{
+  "value": {
+    "summary": "In Book VI of Plato's Republic, Socrates and Adeimantus analyze the natural qualities of the true philosopher, confront popular perceptions of philosophers as useless or rogue, introduce the ship of state parable to explain their apparent uselessness, and trace how corrupt societies and unworthy imitators spoil and degrade philosophy.",
+    "nodes": [
+      {
+        "label": "Philosopher as Ideal Guardian",
+        "identityLabel": "Philosopher Ruler Qualification",
+        "summary": "Socrates argues that those who know the eternal, unchanging truth of things with clear vision, while lacking nothing in experience or virtue, are the only fit guardians of the State.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the core criteria of knowledge, virtue, and vision into the central political thesis for the guardians.",
+        "passageIds": [
+          "p-946665",
+          "p-947385",
+          "p-947917"
+        ]
+      },
+      {
+        "label": "Nature of the True Philosopher",
+        "identityLabel": "Philosophic Virtues",
+        "summary": "The true philosopher possesses an innate love of all true being, detests falsehood, seeks pleasures of the soul over bodily desire, is temperate and brave, and possesses memory, proportion, and quickness of learning.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines the enduring psychological and intellectual profile of the genuine philosopher.",
+        "passageIds": [
+          "p-948857",
+          "p-949401",
+          "p-953330"
+        ]
+      },
+      {
+        "label": "Charge of Roguery and Uselessness",
+        "identityLabel": "Public Indictment of Philosophy",
+        "summary": "Adeimantus objects that common experience shows dedicated philosophers become useless oddities or utter rogues, rendering the claim that they should rule paradoxical.",
+        "sourceRole": "dialogue",
+        "speaker": "Adeimantus",
+        "level": 1,
+        "rationale": "Represents an empirical observation and objection grounded in popular opinion.",
+        "passageIds": [
+          "p-953959",
+          "p-955558"
+        ]
+      },
+      {
+        "label": "Parable of the Ship of State",
+        "identityLabel": "Ship of State Parable",
+        "summary": "Socrates compares the city to a mutinous vessel where ignorant sailors vie for control of a dull captain and dismiss the true navigator, who studies skies and seasons, as a useless star-gazer.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 0,
+        "rationale": "A concrete allegorical figure illustrating the political condition of the philosopher in existing states.",
+        "passageIds": [
+          "p-956124",
+          "p-958319",
+          "p-959553"
+        ]
+      },
+      {
+        "label": "Corruption of Gifted Natures",
+        "identityLabel": "Corruption of Philosophic Talents",
+        "summary": "Finest minds suffer the greatest injury in unsuitable conditions; flattery, societal praise and blame, and worldly advantages divert gifted souls into doing great evil.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Synthesizes psychological and social explanations to show why the best potential philosophers deteriorate.",
+        "passageIds": [
+          "p-964763",
+          "p-966030",
+          "p-967421"
+        ]
+      },
+      {
+        "label": "Usurpation by Unworthy Imitators",
+        "identityLabel": "Mésalliance of Philosophy",
+        "summary": "When genuine disciples desert philosophy, base artisans and puny natures occupy the vacuum, producing sophisms rather than genuine wisdom.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A direct claim describing how pretenders debase the discipline after true candidates fall away.",
+        "passageIds": [
+          "p-975927",
+          "p-976512",
+          "p-977651"
+        ]
+      },
+      {
+        "label": "The Sheltered Remnant",
+        "identityLabel": "The Wall of Shelter",
+        "summary": "The small band of true philosophers, unable to alter the madness of the multitude and lacking an aligned state, must shelter under a wall and live quietly without participating in civic life.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Describes the specific practical stance available to genuine philosophers in existing corrupt cities.",
+        "passageIds": [
+          "p-978272",
+          "p-980154"
+        ]
+      },
+      {
+        "label": "Alienation from Existing States",
+        "identityLabel": "Need for a Suited Constitution",
+        "summary": "No current constitution suits the philosophical nature, leaving it to degenerate like an exotic seed unless a state matching its own perfection is established.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Concludes the political diagnosis by linking philosophic degradation directly to the lack of an ideal institutional environment.",
+        "passageIds": [
+          "p-980766"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 0,
+        "type": "supports",
+        "rationale": "The comprehensive virtues and love of truth identified in the philosopher provide the rationale for their fitness as rulers.",
+        "passageIds": [
+          "p-948481"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 0,
+        "type": "challenges",
+        "rationale": "Adeimantus challenges the philosopher-ruler thesis with the observable fact that lifelong practitioners are useless or depraved.",
+        "passageIds": [
+          "p-953959",
+          "p-955558"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The ship parable explains why true helmsmen are called useless, vindicating the observation while shifting blame onto the mutinous crew.",
+        "passageIds": [
+          "p-959008",
+          "p-959553"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The account of societal corruption explains how the best natures turn into rogues and monstrous figures.",
+        "passageIds": [
+          "p-963755",
+          "p-975055"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The abandonment of philosophy by corrupted noble natures creates the void filled by unworthy craftspeople.",
+        "passageIds": [
+          "p-975927"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "Because society overwhelmingly corrupts potential philosophers, the few survivors must shelter behind a wall in isolation.",
+        "passageIds": [
+          "p-978272"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "supports",
+        "rationale": "The necessity of taking shelter proves that no existing government affords an environment where philosophers can perform their greatest work.",
+        "passageIds": [
+          "p-980154",
+          "p-980766"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FdKbaqjWIIyOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 15318,
+    "candidatesTokenCount": 1882,
+    "totalTokenCount": 17200,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15318
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1882
+      }
+    ]
+  },
+  "durationMs": 14276
+}

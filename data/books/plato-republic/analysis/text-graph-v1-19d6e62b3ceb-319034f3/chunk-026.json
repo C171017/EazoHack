@@ -1,0 +1,135 @@
+{
+  "value": {
+    "summary": "This segment of Book III examines the criteria for selecting rulers from among the guardians, the introduction of a foundational myth, and the strict communal regulations imposed on the warrior class.",
+    "nodes": [
+      {
+        "label": "Selection of Rulers",
+        "identityLabel": "selection_of_rulers",
+        "summary": "Socrates establishes that rulers must be drawn from the elder guardians who demonstrate unwavering devotion to the welfare of the city across all stages of life.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the qualifications and criteria required for choosing political leadership.",
+        "passageIds": [
+          "p-779067",
+          "p-779249",
+          "p-780108"
+        ]
+      },
+      {
+        "label": "Testing the Guardians",
+        "identityLabel": "testing_guardians",
+        "summary": "Candidates are subjected to trials involving deception, fear, toil, and temptation to ensure they never abandon their conviction to prioritize the commonwealth.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Specifies concrete procedures and tests for verifying steadfastness in candidates.",
+        "passageIds": [
+          "p-782254",
+          "p-782977"
+        ]
+      },
+      {
+        "label": "Separation of Rulers and Auxiliaries",
+        "identityLabel": "rulers_and_auxiliaries",
+        "summary": "Full guardianship is assigned strictly to the proven elders, while younger warriors are designated as auxiliaries who enforce the rulers' policies.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines the distinct functional classes of supreme rulers versus enforcing auxiliaries.",
+        "passageIds": [
+          "p-784350"
+        ]
+      },
+      {
+        "label": "The Myth of the Metals",
+        "identityLabel": "noble_lie_metals",
+        "summary": "Socrates proposes a civic narrative asserting that citizens are born from the earth with soul compositions of gold, silver, brass, or iron, which dictates their societal roles while permitting mobility based on natural merit.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Introduces an overarching civic myth intended to preserve class order, civic fraternity, and stability.",
+        "passageIds": [
+          "p-785629",
+          "p-786684"
+        ]
+      },
+      {
+        "label": "Communal Living and Prohibition of Property",
+        "identityLabel": "guardian_property_ban",
+        "summary": "Auxiliaries and rulers are prohibited from holding private property, money, or individual dwellings to prevent them from becoming predatory tyrants over the citizenry.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Lays out specific institutional restrictions regarding lodging, diet, and wealth for the military class.",
+        "passageIds": [
+          "p-789522",
+          "p-790863"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 0,
+        "type": "supports",
+        "rationale": "The testing regimen provides the empirical filter used to identify suitable rulers.",
+        "passageIds": [
+          "p-782254",
+          "p-782977"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "Selecting the senior elite leads to the structural distinction between elder rulers and younger auxiliaries.",
+        "passageIds": [
+          "p-784350"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The functional differentiation of classes is formalized into a founding myth of distinct metallic compositions.",
+        "passageIds": [
+          "p-784350",
+          "p-786684"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "Prohibiting property ensures the auxiliary and ruling classes maintain their intended protective role without oppressing citizens.",
+        "passageIds": [
+          "p-789522",
+          "p-790863"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "99GbatKGBYyOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 6680,
+    "candidatesTokenCount": 1093,
+    "totalTokenCount": 7773,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6680
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1093
+      }
+    ]
+  },
+  "durationMs": 10068
+}

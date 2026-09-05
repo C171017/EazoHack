@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "In this commentary and analytical synopsis of Plato's Republic (Books IX-X), the author examines the mathematical interval separating king from tyrant, Plato's doctrine of imitation as thrice removed from reality, the psychological and civic hazards of poetic emotionalism, the proof of the soul's immortality, the cosmic judgment narrative in the Myth of Er, and editorial reflections on Plato's hostility toward poetry.",
+    "nodes": [
+      {
+        "label": "Interval of King and Tyrant",
+        "identityLabel": "tyrant_king_interval_729",
+        "summary": "Plato employs the number 729 (the cube of 9) to designate the vast interval separating royal and tyrannical pleasure, treating it as an arithmetical and geometrical representation of an immeasurable difference.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Describes a specific textual pattern and formula used in Book IX to quantify tyrannical unhappiness.",
+        "passageIds": [
+          "p-355014",
+          "p-356907"
+        ]
+      },
+      {
+        "label": "Three Removes of Imitation",
+        "identityLabel": "imitation_thrice_removed",
+        "summary": "Using the example of the three beds (the divine idea, the carpenter's artifact, and the painter's representation), imitation is defined as an image of appearance, standing thrice removed from truth and reality.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Forms an overarching philosophical argument in Book X linking the theory of Forms to the critique of imitative art.",
+        "passageIds": [
+          "p-358301",
+          "p-360499"
+        ]
+      },
+      {
+        "label": "Ignorance of the Imitator",
+        "identityLabel": "poetic_ignorance_of_truth",
+        "summary": "Unlike the user who possesses knowledge or the maker who holds true belief, the poetic or artistic imitator knows only appearance and produces no genuine civic or moral utility.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Constructs a conceptual triad of arts (using, making, imitating) to analyze the epistemic status of poets.",
+        "passageIds": [
+          "p-362275",
+          "p-364476"
+        ]
+      },
+      {
+        "label": "Corruptive Power of Poetry",
+        "identityLabel": "poetry_emotional_harm",
+        "summary": "Poetry addresses and strengthens the grieving and irrational part of the soul against rational restraint, fostering vices and emotions that compromise virtue and order in both the individual and the State.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Synthesizes Plato's psychological division of the soul with his moral justification for banishing poetry.",
+        "passageIds": [
+          "p-365059",
+          "p-367471",
+          "p-369057"
+        ]
+      },
+      {
+        "label": "Argument for Immortality",
+        "identityLabel": "soul_immortality_proof",
+        "summary": "Because the soul is not destroyed by its own inherent moral evil (injustice) nor by external bodily evils, it is indestructible and everlasting.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Presents the systematic deduction demonstrating the imperishability and constant number of souls.",
+        "passageIds": [
+          "p-370715",
+          "p-372912"
+        ]
+      },
+      {
+        "label": "The Myth of Er",
+        "identityLabel": "myth_of_er_judgment",
+        "summary": "Er recounts the post-mortem judgment of souls, the celestial spindle of Necessity, and the crucial responsibility of each soul to choose its next life wisely based on philosophical discipline.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Details the specific allegorical narrative illustrating posthumous recompense and the choice of destiny.",
+        "passageIds": [
+          "p-374923",
+          "p-377928",
+          "p-380129"
+        ]
+      },
+      {
+        "label": "Contextualizing Plato on Poetry",
+        "identityLabel": "critique_of_platonic_poetics",
+        "summary": "The commentator suggests Plato's anti-poetic stance stemmed from contemporary theatrical and political decay, while arguing against Plato that art can express ideal truths beyond mere literal imitation.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "An editorial critique and historical framing that organizes and challenges Plato's arguments against the poets.",
+        "passageIds": [
+          "p-385695",
+          "p-386611",
+          "p-389139"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The metaphysical remove of imitation from the Forms provides the grounds for concluding that the imitator lacks true knowledge.",
+        "passageIds": [
+          "p-360499",
+          "p-362275",
+          "p-364476"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The demonstration of the poet's epistemic deficit is extended to explain why poetic imitation feeds the inferior, irrational faculty of the soul.",
+        "passageIds": [
+          "p-364476",
+          "p-365059",
+          "p-367251"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "The metaphysical demonstration of the soul's immortality establishes the premise for the eternal consequences and choices portrayed in the Myth of Er.",
+        "passageIds": [
+          "p-370291",
+          "p-373253",
+          "p-374923"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 1,
+        "type": "challenges",
+        "rationale": "The commentator argues that art is the expression of the ideal rather than merely an imitation thrice removed from reality.",
+        "passageIds": [
+          "p-389139"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "stGbaoOpCJ2Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 11865,
+    "candidatesTokenCount": 1688,
+    "totalTokenCount": 13553,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11865
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1688
+      }
+    ]
+  },
+  "durationMs": 13631
+}

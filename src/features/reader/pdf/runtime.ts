@@ -17,8 +17,8 @@ export function sourceRect(viewport: PageViewport, base: PageViewport, box: numb
     const [px, py] = viewport.convertToPdfPoint(x,y);
     return base.convertToViewportPoint(px,py);
   });
-  const x = clamp(Math.min(...corners.map(p => p[0])) / base.width);
-  const y = clamp(Math.min(...corners.map(p => p[1])) / base.height);
+  const x = Math.min(0.999999,clamp(Math.min(...corners.map(p => p[0])) / base.width));
+  const y = Math.min(0.999999,clamp(Math.min(...corners.map(p => p[1])) / base.height));
   return { x, y, width: Math.max(0.000001, clamp(Math.max(...corners.map(p => p[0])) / base.width) - x), height: Math.max(0.000001, clamp(Math.max(...corners.map(p => p[1])) / base.height) - y) };
 }
 export function displayRect(rect: Rect, base: PageViewport, viewport: PageViewport): number[] {
@@ -42,7 +42,8 @@ export function extractNative(content: TextContent, page: PDFPageProxy): TextSou
     const h = Math.hypot(c,d) || item.height || 1;
     const w = item.width || Math.hypot(a,b) || 1;
     const angle = Math.atan2(b,a), ux=Math.cos(angle), uy=Math.sin(angle);
-    const ascent = content.styles[item.fontName]?.ascent ?? 0.8;
+    const fontAscent = content.styles[item.fontName]?.ascent;
+    const ascent = Number.isFinite(fontAscent) ? fontAscent : 0.8;
     const points = [[0,-h*(1-ascent)],[w,-h*(1-ascent)],[0,h*ascent],[w,h*ascent]].map(([x,y]) => viewport.convertToViewportPoint(e+x*ux-y*uy,f+x*uy+y*ux));
     const box=[Math.min(...points.map(p=>p[0])),Math.min(...points.map(p=>p[1])),Math.max(...points.map(p=>p[0])),Math.max(...points.map(p=>p[1]))];
     fragments.push({ id: `n${fragments.length}`, text: item.str, start, end: text.length, rect: sourceRect(viewport,viewport,box), confidence: null });
@@ -57,9 +58,28 @@ export function nativeItems(content: TextContent): TextItem[] { return content.i
 export class LocalOcr {
   private tail: Promise<unknown> = Promise.resolve();
   private worker: OcrWorker | null = null;
+  private initializing: Promise<OcrWorker> | null = null;
   private idle: ReturnType<typeof setTimeout> | null = null;
   private disposed = false;
   activate() { this.disposed=false; }
+  private async getWorker(): Promise<OcrWorker> {
+    if(this.worker)return this.worker;
+    if(!this.initializing) {
+      this.initializing=(async()=>{
+        const {createWorker,PSM}=await import('tesseract.js');
+        // Tesseract's error callback also covers initialization failures before a worker handle exists.
+        const worker=await new Promise<OcrWorker>((resolve,reject)=>{
+          void createWorker('eng',1,{workerPath:'/api/pdf/assets/ocr/worker.min.js',corePath:'/api/pdf/assets/ocr',langPath:'/api/pdf/assets/ocr',workerBlobURL:false,errorHandler:reject}).then(resolve,reject);
+        });
+        if(this.disposed){await worker.terminate();throw new Error('Reader closed');}
+        await worker.setParameters({tessedit_pageseg_mode:PSM.AUTO});
+        this.worker=worker;
+        this.idle=setTimeout(()=>this.release(),15000);
+        return worker;
+      })().finally(()=>{this.initializing=null;});
+    }
+    return this.initializing;
+  }
   async recognize(page: PDFPageProxy, signal: AbortSignal): Promise<TextSource> {
     const job = this.tail.catch(() => {}).then(() => this.run(page,signal));
     this.tail = job;
@@ -87,17 +107,10 @@ export class LocalOcr {
       return await Promise.race([cancelled, (async () => {
         await render.promise;
         combined.throwIfAborted();
-        if (!this.worker) {
-          const { createWorker, PSM } = await import('tesseract.js');
-          const worker = await createWorker('eng', 1, {
-            workerPath: '/api/pdf/assets/ocr/worker.min.js', corePath: '/api/pdf/assets/ocr',
-            langPath: '/api/pdf/assets/ocr', workerBlobURL: false,
-          });
-          if (combined.aborted || this.disposed) { await worker.terminate(); combined.throwIfAborted(); throw new Error('Reader closed'); }
-          await worker.setParameters({ tessedit_pageseg_mode: PSM.AUTO });
-          this.worker = worker;
-        }
-        const { data } = await this.worker.recognize(canvas, {}, { text: true, blocks: true });
+        const worker=await this.getWorker();
+        combined.throwIfAborted();
+        if(this.idle)clearTimeout(this.idle);
+        const { data } = await worker.recognize(canvas, {}, { text: true, blocks: true });
         combined.throwIfAborted();
         let text = '';
         const fragments: TextSource['fragments'] = [];
@@ -111,7 +124,7 @@ export class LocalOcr {
           }
           text += '\n';
         }
-        return { text, fragments };
+        return { text, rawText:data.text, fragments };
       })()]);
     } finally {
       combined.removeEventListener('abort', abort);

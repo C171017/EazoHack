@@ -1,0 +1,127 @@
+{
+  "value": {
+    "summary": "Socrates argues that since justice is the soul's excellence, the just person lives well and is happy, rendering justice more profitable than injustice. However, he concludes with self-dissatisfaction, noting that jumping between questions left the fundamental nature of justice unknown.",
+    "nodes": [
+      {
+        "label": "Justice as Excellence of Soul",
+        "identityLabel": "excellence of the soul",
+        "summary": "Justice is acknowledged as the excellence of the soul, while injustice is its defect.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Direct premise stated as an agreed claim about the nature of justice and the soul.",
+        "passageIds": [
+          "p-637215",
+          "p-637319"
+        ]
+      },
+      {
+        "label": "Just Soul Lives Well and Happy",
+        "identityLabel": "just life and happiness",
+        "summary": "Because the just soul lives well, the just person is blessed and happy, whereas the unjust person is miserable.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Deductive claim built upon the excellence of the soul.",
+        "passageIds": [
+          "p-637344",
+          "p-637467",
+          "p-637574"
+        ]
+      },
+      {
+        "label": "Superior Profit of Justice",
+        "identityLabel": "profitability of justice",
+        "summary": "Since happiness is profitable and misery is not, injustice can never be more profitable than justice.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Conclusive argument synthesizing happiness and profitability against Thrasymachus's position.",
+        "passageIds": [
+          "p-637641",
+          "p-637698"
+        ]
+      },
+      {
+        "label": "Editorial Note on Socrates",
+        "identityLabel": "editorial sidenote on Socrates",
+        "summary": "An editorial sidenote records that Socrates is displeased with himself and with the argument.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Paratextual/editorial comment summarizing Socrates' state of mind.",
+        "passageIds": [
+          "p-637852"
+        ]
+      },
+      {
+        "label": "Socrates' Aporia and Self-Blame",
+        "identityLabel": "Socratic ignorance of justice",
+        "summary": "Socrates blames himself for wandering into downstream questions before defining the nature of justice, concluding that he knows nothing.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Reflective argument evaluating the methodology of the entire dialogue's inquiry.",
+        "passageIds": [
+          "p-637924"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "Justice being the soul's excellence grounds the inference that the just soul lives well and is happy.",
+        "passageIds": [
+          "p-637215",
+          "p-637344",
+          "p-637467"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The premise that the just person is happy and happiness is profitable leads to the conclusion that justice is more profitable than injustice.",
+        "passageIds": [
+          "p-637574",
+          "p-637641",
+          "p-637698"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "challenges",
+        "rationale": "Socrates' self-critique questions the validity of concluding about the comparative profit or happiness of justice before defining its nature.",
+        "passageIds": [
+          "p-637698",
+          "p-637924"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "0NGbasy_I9CSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 2054,
+    "candidatesTokenCount": 1007,
+    "totalTokenCount": 3061,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2054
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1007
+      }
+    ]
+  },
+  "durationMs": 9208
+}

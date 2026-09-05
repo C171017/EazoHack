@@ -5,7 +5,8 @@ import type { TextContent } from 'pdfjs-dist/types/src/display/api';
 import type { SourceAnchor } from '@/shared/schemas';
 import { preparePage, type PageText } from './model';
 import { readPageCache, writePageCache } from './cache';
-import { displayRect, extractNative, loadPdfRuntime, type LocalOcr } from './runtime';
+import { displayRect, extractNative, nativeItems, loadPdfRuntime, type LocalOcr } from './runtime';
+import { repairNativeSpacing } from './geometry';
 import { extractionId } from './selection';
 
 export const PdfPage = memo(function PdfPage({ doc, hash, index, width, ocr, recognize, retry, highlight, onReady, onSize }: {
@@ -44,13 +45,14 @@ export const PdfPage = memo(function PdfPage({ doc, hash, index, width, ocr, rec
     const abort=new AbortController();
     let timer:ReturnType<typeof setTimeout>|undefined;
     void (async()=>{
-      if(!retry) {
+      {
         const cached=await readPageCache(hash,index,'eng').catch(()=>null);
         if(abort.signal.aborted)return;
-        if(cached){setText(cached);onReady(cached);setStatus(cached.method==='ocr'?'Recognized text':'Selectable text');return;}
+        if(cached&&(!retry||cached.retryToken===retry)){setText(cached);onReady(cached);setStatus(cached.reviewRequired?'Text needs review':cached.method==='ocr'?'Recognized text':'Selectable text');return;}
       }
-      const native=extractNative(loaded.content,loaded.page);
-      const result=await preparePage({fileHash:hash,pageIndex:index,language:'eng',native,forceOcr:retry>0}, async signal=>{
+      const raw=extractNative(loaded.content,loaded.page);
+      const native=repairNativeSpacing(raw,nativeItems(loaded.content));
+      const prepared=await preparePage({fileHash:hash,pageIndex:index,language:'eng',native,forceOcr:retry>0}, async signal=>{
         if(!recognize) throw new Error('Text recognition will start when this page is in view.');
         await new Promise<void>((resolve,reject)=>{
           timer=setTimeout(resolve,650);
@@ -59,6 +61,7 @@ export const PdfPage = memo(function PdfPage({ doc, hash, index, width, ocr, rec
         signal.throwIfAborted();setStatus('Recognizing text on this device…');
         return ocr.recognize(loaded.page,signal);
       },abort.signal);
+      const result={...prepared,...(retry?{retryToken:retry}:{})};
       if(abort.signal.aborted)return;
       setText(result);onReady(result);setStatus(result.reviewRequired?'Text needs review':result.method==='ocr'?'Recognized text':'Selectable text');
       await writePageCache(result).catch(()=>{if(!abort.signal.aborted)setStatus('Text ready · local cache unavailable');});

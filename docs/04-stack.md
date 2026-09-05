@@ -35,6 +35,8 @@ PDF 和图谱组件在浏览器端，Route Handlers 保持服务端 provider/密
 
 ## 未锁定项
 
+PDF/整书提取方案见 [11-pdf-whole-book-analysis.md](11-pdf-whole-book-analysis.md)：PDF.js 保持阅读基础栈；先改善原生文字提取，再对确有需要的页面 OCR。pdfplumber、Mistral Document AI、Docling 是本次研究候选，不因写入文档而成为锁定依赖或部署服务。整书任务执行位置、持久执行机制与预算仍需选择。段落辅助接入见 [10-gemini-production.md](10-gemini-production.md)，其模型选择不自动决定整书分析服务。
+
 不在本轮选择：编码模型版本、生产模型版本、服务提供商、图片 API、搜索服务、托管、外部来源范围、demo 书/大小、四路深度与活动语义。脚手架必须用明确标注的 mock 在无凭据条件下运行；真实 provider 未配置时报告 `not_configured`，不能暗示接通。
 
 ## 何时重新评估

@@ -1,0 +1,153 @@
+{
+  "value": {
+    "summary": "This commentary examines Plato's social, political, and educational doctrines in the Republic. The commentator analyzes the limits of heredity, the essential role of the family against Platonic communal breeding, the difficulties and aspirations surrounding philosopher-statesmen and the Idea of the Good, the analogy between the individual and the state, and Plato's comprehensive theory of lifelong education spanning music and gymnastic.",
+    "nodes": [
+      {
+        "label": "Limits of Heredity and Will",
+        "identityLabel": "heredity_and_human_will",
+        "summary": "Heredity transmits mental and physical traits, but it remains immeasurable and leaves room for prevention, cure, and human will.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "States an overarching claim about the bounded influence of heredity relative to human initiative.",
+        "passageIds": [
+          "p-461405"
+        ]
+      },
+      {
+        "label": "Necessity of the Family Unit",
+        "identityLabel": "necessity_of_family",
+        "summary": "Nature rebukes Plato's foundling system because infants cannot thrive without the irreplaceable sympathy and care of the family.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Presents a direct critique and generalized claim about nature requiring domestic family rearing.",
+        "passageIds": [
+          "p-463334"
+        ]
+      },
+      {
+        "label": "Spartan Model and Individuality",
+        "identityLabel": "sparta_and_individuality",
+        "summary": "Plato misjudged Sparta, which suppressed individual genius and culture in favour of an unyielding state machine.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Offers an interpretive claim evaluating Plato's reliance on Spartan institutions versus true individual progress.",
+        "passageIds": [
+          "p-464139"
+        ]
+      },
+      {
+        "label": "The Philosopher-Statesman",
+        "identityLabel": "philosopher_statesman_ideal",
+        "summary": "The philosopher-king ideal faces practical distrust and distortion, yet the synthesis of speculative thought and decisive action remains essential.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes the complex debate reconciling theoretical vision with the demands of state governance.",
+        "passageIds": [
+          "p-474971",
+          "p-481326",
+          "p-483526"
+        ]
+      },
+      {
+        "label": "State-Individual Analogy",
+        "identityLabel": "analogy_state_and_individual",
+        "summary": "Plato fallaciously equates the state to a single individual, conflating politics with ethics, though the comparison still ennobles political ideals.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Analyzes and synthesizes the theoretical merits and flaws of linking individual ethics with collective political structures.",
+        "passageIds": [
+          "p-484962",
+          "p-487160",
+          "p-487285"
+        ]
+      },
+      {
+        "label": "Education for Life and Soul",
+        "identityLabel": "platonic_education_framework",
+        "summary": "Education spans the whole of life, aiming not to insert knowledge from without, but to turn the soul toward truth and goodness.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Articulates a foundational concept framing Plato's view of lifelong moral and intellectual development.",
+        "passageIds": [
+          "p-488839",
+          "p-489391"
+        ]
+      },
+      {
+        "label": "Music, Gymnastic, and Character",
+        "identityLabel": "music_and_gymnastic_training",
+        "summary": "Early education unites music and gymnastic, using simple harmonious forms and physical discipline to nurture and strengthen the mind.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Summarizes the specific curricular claims regarding the dual training of mind and body.",
+        "passageIds": [
+          "p-491266",
+          "p-493540",
+          "p-494856"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The critique of abolishing the family aligns with the criticism of the rigid Spartan model that subordinates human nature to state control.",
+        "passageIds": [
+          "p-463334",
+          "p-464139"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "Plato's curriculum of higher education and contemplation provides the preparation required to form philosopher-legislators.",
+        "passageIds": [
+          "p-474971",
+          "p-489391"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The stages of musical and gymnastic training serve as the preliminary foundation for Plato's lifelong educational process.",
+        "passageIds": [
+          "p-488839",
+          "p-491266",
+          "p-494856"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "vdGbauvLOIKDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 10778,
+    "candidatesTokenCount": 1348,
+    "totalTokenCount": 12126,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10778
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1348
+      }
+    ]
+  },
+  "durationMs": 12394
+}

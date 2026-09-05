@@ -1,0 +1,147 @@
+{
+  "value": {
+    "summary": "This section of the index and editorial apparatus covers entries from God to Music, highlighting Plato's theology, the succession of constitutions, the definition and primacy of justice, the Idea of the Good, and the regulation of poetry and education.",
+    "nodes": [
+      {
+        "label": "Platonic Theology",
+        "identityLabel": "platonic_theology",
+        "summary": "Editorial note summarizing Plato's theology under two heads: God is perfect and unchangeable, and God is true and the author of truth, which serves as a canon to judge poetry.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes multiple concepts regarding divine nature, poetry censorship, and comparisons between the Republic and Laws.",
+        "passageIds": [
+          "p-1319546"
+        ]
+      },
+      {
+        "label": "Succession of Constitutions",
+        "identityLabel": "forms_of_government",
+        "summary": "Editorial analysis of Plato's classification of governments, linking the descent from aristocracy to timocracy, oligarchy, democracy, and tyranny to the divisions of the soul.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Presents an overarching argument tracking the decline of state constitutions and their individual psychological counterparts.",
+        "passageIds": [
+          "p-1322766",
+          "p-1324967"
+        ]
+      },
+      {
+        "label": "Idea of the Good",
+        "identityLabel": "idea_of_good",
+        "summary": "Editorial note framing the Idea of the Good as an abstraction of perfection uniting beauty, symmetry, and truth, and the source of truth and being.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Defines a core, reusable Platonic metaphysical concept central to dialectic and knowledge.",
+        "passageIds": [
+          "p-1335025",
+          "p-1334643"
+        ]
+      },
+      {
+        "label": "Nature and Role of Justice",
+        "identityLabel": "concept_of_justice",
+        "summary": "Editorial analysis identifying justice as the foundational inquiry of the Republic, defined politically as each person doing their own work and internally as psychic harmony.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Synthesizes the central argument of the Republic from Book I through the final proof of the just man's happiness.",
+        "passageIds": [
+          "p-1341688",
+          "p-1340214"
+        ]
+      },
+      {
+        "label": "Qualifications of Guardians",
+        "identityLabel": "guardians_qualifications",
+        "summary": "Index entry documenting the requirements for guardians, including philosophical wisdom, spirited and gentle nature, community of goods, and tests of pleasure and pain.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Compiles specific claims and institutional requirements defining the guardian class.",
+        "passageIds": [
+          "p-1325386"
+        ]
+      },
+      {
+        "label": "Critique of Homer and Poetry",
+        "identityLabel": "critique_of_poets",
+        "summary": "Index entry citing Plato's critique of Homer and mimetic poetry as thrice removed from the truth, unsuitable for moral education, and portraying gods falsely.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Surveys the claims and textual citations regarding Homer's limitations as educator and legislator.",
+        "passageIds": [
+          "p-1331278",
+          "p-1337347"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "The theological canons that God is unchangeable and true provide the standard by which Homer and tragic poets are evaluated and censored.",
+        "passageIds": [
+          "p-1319546",
+          "p-1331278"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The comparison of declining constitutions and their corresponding soul types supplies the final proof of the superior happiness of the just man over the tyrant.",
+        "passageIds": [
+          "p-1322766",
+          "p-1341688"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "Apprehension of the Idea of Good is the supreme knowledge required for the philosopher-guardians to rule the state.",
+        "passageIds": [
+          "p-1334643",
+          "p-1325386"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The specialization and function of the guardians embody the political principle of justice that every class performs its own proper work.",
+        "passageIds": [
+          "p-1325386",
+          "p-1341688"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "X9Kbarj7B6Gdx9gP1MGDcA",
+  "usage": {
+    "promptTokenCount": 22629,
+    "candidatesTokenCount": 1292,
+    "totalTokenCount": 23921,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 22629
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1292
+      }
+    ]
+  },
+  "durationMs": 10675
+}

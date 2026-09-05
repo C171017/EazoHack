@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "In this analytical overview of Plato's Republic Books V and VI, Socrates and his interlocutors examine the communal organization of guardians, the radical requirement that kings be philosophers, the epistemology distinguishing opinion from knowledge, the allegorical ship of state explaining philosophy's disrepute, and the necessity of educating rulers toward the supreme idea of the good.",
+    "nodes": [
+      {
+        "label": "Communal Guardian Family",
+        "identityLabel": "guardian_communism",
+        "summary": "Guardian marriages, reproduction, and child-rearing are strictly regulated by rulers through rigged lots and common nurseries to remove private domestic ties and maintain civic unity.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "States the concrete legislative proposal organizing guardian family life.",
+        "passageIds": [
+          "p-177804",
+          "p-180118"
+        ]
+      },
+      {
+        "label": "Civic Unity as Organic Whole",
+        "identityLabel": "civic_unity",
+        "summary": "The highest good of a commonwealth is unbroken unity where citizens share pleasures and pains, responding together like a single bodily organism.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Articulates the overarching normative principle justifying common property and relations.",
+        "passageIds": [
+          "p-181163",
+          "p-182674"
+        ]
+      },
+      {
+        "label": "Philosopher-King Paradox",
+        "identityLabel": "philosopher_kings",
+        "summary": "The ideal city can never become actual until political authority and true philosophy are united in the same persons.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 4,
+        "rationale": "Identifies the core governing paradox and institutional mechanism across Books V-VI.",
+        "passageIds": [
+          "p-188140",
+          "p-193592"
+        ]
+      },
+      {
+        "label": "Knowledge versus Opinion",
+        "identityLabel": "knowledge_and_opinion",
+        "summary": "Knowledge relates to unchanging real being, ignorance to non-being, and opinion to intermediate contingent objects that both are and are not.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines foundational epistemological faculties and their corresponding ontological objects.",
+        "passageIds": [
+          "p-190451",
+          "p-195798"
+        ]
+      },
+      {
+        "label": "Parable of the Ship",
+        "identityLabel": "ship_of_state",
+        "summary": "An allegory illustrates how mutinous, ignorant sailors disable the true navigator, explaining why authentic philosophers appear useless in contemporary politics.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 0,
+        "rationale": "Supplies an illustrative allegorical scenario to address the social reputation of philosophers.",
+        "passageIds": [
+          "p-199165"
+        ]
+      },
+      {
+        "label": "Corruption of Philosophic Nature",
+        "identityLabel": "philosophic_corruption",
+        "summary": "Rare gifted natures are easily corrupted by public opinion and social flattery, leaving philosophy abandoned to unworthy pretenders.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Explains the pattern and sociological causes behind the deterioration of philosophic temperaments.",
+        "passageIds": [
+          "p-201434"
+        ]
+      },
+      {
+        "label": "Idea of the Good",
+        "identityLabel": "idea_of_the_good",
+        "summary": "The guardian's higher course of education must culminate in the idea of the good, the supreme principle surpassing wisdom and pleasure.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Introduces the central metaphysical concept required for ruling the ideal state.",
+        "passageIds": [
+          "p-211000"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "Abolishing private families and holding all things in common establishes organic civic harmony.",
+        "passageIds": [
+          "p-181163"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "defines",
+        "rationale": "Distinguishing knowledge of absolute forms from sensory opinion clarifies who qualifies as a true philosopher-king.",
+        "passageIds": [
+          "p-188140",
+          "p-190451"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The ship parable explains why philosopher-rulers are unappreciated despite possessing the art of governance.",
+        "passageIds": [
+          "p-198483",
+          "p-199165"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "Analyzing public corruption of promising souls details how the social environment depicted in the mutiny develops.",
+        "passageIds": [
+          "p-199165",
+          "p-201434"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "Grasping the idea of the good constitutes the required qualification for philosopher-guardians to rule.",
+        "passageIds": [
+          "p-211000"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "j9Gbap_4GdyCncoPo7vS-Qg",
+  "usage": {
+    "promptTokenCount": 12163,
+    "candidatesTokenCount": 1405,
+    "totalTokenCount": 13568,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12163
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1405
+      }
+    ]
+  },
+  "durationMs": 13853
+}

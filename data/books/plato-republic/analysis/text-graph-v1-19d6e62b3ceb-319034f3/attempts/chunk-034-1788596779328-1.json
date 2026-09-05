@@ -1,0 +1,109 @@
+{
+  "value": {
+    "summary": "In Book VI, the speakers discuss the higher division of the intelligible realm reached via dialectic, contrasting reason's ascent to a first principle with the arts that remain dependent on hypotheses. They conclude by establishing four faculties of the soul corresponding to four divisions of objects.",
+    "nodes": [
+      {
+        "label": "Dialectical ascent and descent",
+        "identityLabel": "dialectical_inquiry",
+        "summary": "Reason uses hypotheses as points of departure to ascend to the first principle of the whole, and then descends purely through ideas without sensible aids.",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes the process of intelligible cognition and dialectic into a coordinated conceptual argument.",
+        "passageIds": [
+          "p-1017742",
+          "p-1017669"
+        ]
+      },
+      {
+        "label": "Dialectic vs arts' hypotheses",
+        "identityLabel": "hypothetical_arts_vs_dialectic",
+        "summary": "The interlocutor restates that dialectic contemplates clearer knowledge than the arts (like geometry), which proceed from hypotheses without ascending to a first principle.",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Clarifies and contrasts the concepts of understanding (geometry/arts) and reason (dialectic).",
+        "passageIds": [
+          "p-1018396",
+          "p-1018361"
+        ]
+      },
+      {
+        "label": "Four faculties of the soul",
+        "identityLabel": "four_soul_faculties",
+        "summary": "Four faculties—reason, understanding, faith, and perception of shadows—are aligned with the four divisions, possessing clearness proportional to the truth of their objects.",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Introduces a foundational fourfold schema mapping soul faculties to divisions of truth.",
+        "passageIds": [
+          "p-1019319",
+          "p-1019237"
+        ]
+      },
+      {
+        "label": "Assent to the fourfold schema",
+        "identityLabel": "interlocutor_assent",
+        "summary": "The interlocutor understands, assents to, and accepts the proposed arrangement of the faculties.",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "level": 0,
+        "rationale": "A concrete textual statement of conversational agreement.",
+        "passageIds": [
+          "p-1019743"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 0,
+        "type": "develops",
+        "rationale": "The interlocutor's interpretation clarifies and expands on the speaker's account of dialectic versus hypotheses.",
+        "passageIds": [
+          "p-1018396"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The proposal of four soul faculties formalizes the distinction between reason and understanding into a complete fourfold scale.",
+        "passageIds": [
+          "p-1019319"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The interlocutor gives explicit assent to the arrangement of the four faculties.",
+        "passageIds": [
+          "p-1019743"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "JNKbas_4KdCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 2121,
+    "candidatesTokenCount": 860,
+    "totalTokenCount": 2981,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2121
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 860
+      }
+    ]
+  },
+  "durationMs": 8092
+}

@@ -6,10 +6,11 @@ import { z } from 'zod';
 import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, type Artifact } from '@/shared/schemas';
 import { ArtifactView } from '@/features/assistance/artifact-view';
 import { PdfReader } from './pdf-reader';
+import { DocumentPanel } from './document-panel';
 import { loadPdfRuntime } from './runtime';
 import { validateLayout, type PageText } from './model';
 import { writePageCache } from './cache';
-import type { PdfSelection } from './selection';
+import { extractionId, type PdfSelection } from './selection';
 import './pdf.css';
 
 type Input = { id:number; title:string; hash:string; data?:Uint8Array };
@@ -50,7 +51,10 @@ function PdfSession({input}:{input:Input}) {
   const [password,setPassword]=useState('');
   const [passwordNeeded,setPasswordNeeded]=useState(false);
   const passwordCallback=useRef<((value:string)=>void)|null>(null);
-  const [page,setPage]=useState<PageText|null>(null);
+  const [pageResult,setPage]=useState<PageText|null>(null);
+  const [currentPage,setCurrentPage]=useState(0);
+  const page=pageResult?.pageIndex===currentPage?pageResult:null;
+  const [anchorWarning,setAnchorWarning]=useState('');
   const [chosen,setChosen]=useState<PdfSelection|null>(null);
   const [notice,setNotice]=useState('Select a passage from the PDF to begin.');
   const [jump,setJump]=useState<{page:number;ticket:number}|null>(null);
@@ -61,6 +65,16 @@ function PdfSession({input}:{input:Input}) {
   const [assistBusy,setAssistBusy]=useState(false);
   const generation=useRef(0);
   const requests=useRef(new Set<AbortController>());
+  useEffect(()=>{
+    let alive=true;
+    void (async()=>{
+      const selected=chosen?.anchors.filter(a=>a.locators.some(l=>l.kind==='pdf'&&l.pageIndex===currentPage))??[];
+      const version=page?await extractionId(page):null;
+      const mismatch=page&&selected.some(a=>{const l=a.locators[0];return l.kind!=='pdf'||a.extractionVersion!==version||page.source.text.slice(l.startOffset,l.endOffset)!==a.quote;});
+      if(alive)setAnchorWarning(mismatch?'This page’s extraction changed. Your saved quotation is preserved; select it again to refresh the highlight.':'');
+    })();
+    return()=>{alive=false;};
+  },[page,chosen,currentPage]);
   useEffect(()=>{
     let alive=true;
     let task:ReturnType<Awaited<ReturnType<typeof loadPdfRuntime>>['getDocument']>|undefined;
@@ -82,7 +96,7 @@ function PdfSession({input}:{input:Input}) {
   const select=useCallback((value:PdfSelection)=>{generation.current++;setChosen(value);setArtifacts([]);setAssistBusy(false);setNotice(value.provenance.some(p=>p.reviewRequired)?'Check the recognized quotation against the page before using it.':'Passage selected.');},[]);
   function save() {
     try {
-      localStorage.setItem(`eazo-pdf-checkpoint:${input.hash}`,JSON.stringify({hash:input.hash,page:page?.pageIndex??0,selection:chosen?.selection??null,anchors:chosen?.anchors??[],provenance:chosen?.provenance??[]}));
+      localStorage.setItem(`eazo-pdf-checkpoint:${input.hash}`,JSON.stringify({hash:input.hash,page:currentPage,selection:chosen?.selection??null,anchors:chosen?.anchors??[],provenance:chosen?.provenance??[]}));
       setNotice('Reading position and passage saved on this device.');
     }catch{setNotice('Could not save locally. Your passage is still available in this session.');}
   }
@@ -127,10 +141,12 @@ function PdfSession({input}:{input:Input}) {
   if(error)return <p role="alert" className="pdf-banner">{error}</p>;
   if(!doc)return <div className="pdf-banner">{passwordNeeded?<form onSubmit={e=>{e.preventDefault();passwordCallback.current?.(password);setPasswordNeeded(false);setPassword('');}}><label>PDF password <input autoComplete="off" type="password" value={password} onChange={e=>setPassword(e.target.value)}/></label><button>Unlock</button></form>:<p role="status">Opening original PDF pages…</p>}</div>;
   return <div className="pdf-body">
-    <PdfReader doc={doc} fileHash={input.hash} onSelection={select} onPageText={updatePage} anchors={chosen?.anchors} jumpTo={jump} retryPage={retry} onNotice={setNotice}/>
+    <PdfReader doc={doc} fileHash={input.hash} onSelection={select} onPageText={updatePage} onPageChange={setCurrentPage} anchors={chosen?.anchors} jumpTo={jump} retryPage={retry} onNotice={setNotice}/>
     <aside className="pdf-inspector" aria-label="PDF passage and text tools">
+      <DocumentPanel doc={doc} hash={input.hash} title={input.title} onSelection={select} onJump={page=>setJump({page,ticket:Date.now()})}/>
       <p className="pdf-eyebrow">Read · Select · Explore</p><h2>A passage to hold</h2>
       <p role="status">{notice}</p>
+      {anchorWarning&&<p className="pdf-warning">{anchorWarning}</p>}
       {chosen?<><blockquote>{chosen.selection.selectedText}</blockquote><p className="pdf-small">Pages {chosen.provenance.map(p=>p.pageIndex+1).join(', ')} · {chosen.provenance.some(p=>p.method==='ocr')?'Includes recognized text':'Embedded PDF text'}</p></>:<p>Select directly over the words on the page. Covers, notes, illustrations and every supplied page remain available.</p>}
       <div className="pdf-actions"><button onClick={save}>Save position & passage</button><button onClick={restore}>Reopen saved</button>{chosen&&<button onClick={()=>{const l=chosen.anchors[0].locators[0];if(l.kind==='pdf')setJump({page:l.pageIndex,ticket:Date.now()});}}>Return to passage</button>}</div>
       {chosen&&<button disabled={assistBusy} onClick={()=>void assist()}>{assistBusy?'Running…':'Try mock assistance'}</button>}
@@ -139,14 +155,14 @@ function PdfSession({input}:{input:Input}) {
         <p className="pdf-small">{page?`Page ${page.pageIndex+1} · ${page.method==='ocr'?'Local OCR (English)':'Embedded PDF text'}`:'Text is being prepared for the visible page.'}</p>
         {page?.reviewRequired&&<p className="pdf-warning">Recognition needs review. {page.quality.reasons.join('. ')}. The original page is always available.</p>}
         {page?.quality.ambiguousLayout&&<p>Columns or marginal notes may make the reading order ambiguous.</p>}
-        <button onClick={()=>{const index=page?.pageIndex??0;setRetry({page:index,ticket:Date.now()});setNotice('Retrying this page with local English OCR.');}}>Retry with OCR</button>
+        <button onClick={()=>{setRetry({page:currentPage,ticket:Date.now()});setNotice('Retrying this page with local English OCR.');}}>Retry with OCR</button>
         {page&&<details><summary>Extracted text</summary><pre>{page.source.text||'No text recognized. This may be an illustration or blank page.'}</pre></details>}
-        {page?.ocr&&<details><summary>Original embedded text</summary><pre>{page.native.text||'No embedded text.'}</pre></details>}
+        {page?.ocr&&<><details><summary>Raw OCR output</summary><pre>{page.ocr.rawText??page.ocr.text}</pre></details><details><summary>Original embedded text</summary><pre>{page.native.text||'No embedded text.'}</pre></details></>}
         {page&&<div className="pdf-layout"><p>Optional reading order & headings</p><p className="pdf-small">{layoutConfig.available?`Sends this page’s text and positions to ${layoutConfig.label}.`:'No external layout service is configured. Reading and local OCR work without one.'}</p><button disabled={!layoutConfig.available||layoutBusy} onClick={()=>void suggestLayout()}>{layoutBusy?'Requesting suggestion…':'Suggest layout'}</button>
           {page.layout&&<details open><summary>Suggested order · {page.layout.provider}</summary><div className="pdf-derived">{page.layout.proposal.order.map(id=>{const f=page.source.fragments.find(f=>f.id===id);const h=page.layout?.proposal.headings.find(h=>h.fragmentId===id);return h?<strong key={id}>{f?.text} </strong>:<span key={id}>{f?.text} </span>;})}</div></details>}
         </div>}
       </details>
-      <p className="pdf-small">PDF files and OCR stay on this device. Only an explicit layout request sends page text to a configured service. The OCR language pack loads when first needed.</p>
+      <p className="pdf-small">Opening PDFs and OCR happen on this device. Mock assistance sends your selected passage to this app’s server. Optional layout sends the current page’s text to your configured service.</p>
     </aside>
   </div>;
 }

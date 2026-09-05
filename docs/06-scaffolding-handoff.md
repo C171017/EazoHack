@@ -1,5 +1,7 @@
 # 项目脚手架交接计划
 
+> PDF 后续衔接（2026-09-05）：下文是初始脚手架任务，不再作为后来获授权的 PDF 四层处理之禁令。TXT 已交另一任务负责。继续 PDF/整书工作前阅读 [11-pdf-whole-book-analysis.md](11-pdf-whole-book-analysis.md)：全来源保留、先检查提取器再 OCR、阅读按需任务与全量分析分开、章节与证据回链。新说明是设计/测量记录，不是实现验收。
+
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
 
 

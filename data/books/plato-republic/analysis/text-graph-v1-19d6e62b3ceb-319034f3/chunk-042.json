@@ -1,0 +1,186 @@
+{
+  "value": {
+    "summary": "In Book X, Socrates argues for the immortality of the soul by demonstrating that it cannot be destroyed by inherent moral corruption or external bodily harm. After concluding that the soul's nature is immortal, he restores the earthly and divine rewards belonging to justice. Socrates then recounts the Myth of Er, describing the posthumous judgement of souls, the cosmic spindle of Necessity, and the souls' fateful choosing of their next incarnations, ending with an exhortation to pursue justice.",
+    "nodes": [
+      {
+        "label": "Soul's Immortality via Evil",
+        "identityLabel": "immortality_of_the_soul",
+        "summary": "Things are destroyed only by their specific inherent evils; since moral vice does not consume or destroy the soul, and external bodily ailments cannot destroy it directly, the soul is indestructible and immortal.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes a multi-step philosophical argument establishing the nature and permanence of the soul.",
+        "passageIds": [
+          "p-1251856",
+          "p-1254311",
+          "p-1256444"
+        ]
+      },
+      {
+        "label": "The Soul in Original Purity",
+        "identityLabel": "soul_original_purity",
+        "summary": "The soul's present condition is compared to the encrusted sea-god Glaucus; its genuine nature is revealed only when viewed in purity through its love of wisdom and kinship with the divine.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Presents an essential philosophical concept and metaphor explaining the true versus apparent state of the soul.",
+        "passageIds": [
+          "p-1257478",
+          "p-1258608"
+        ]
+      },
+      {
+        "label": "Restoration of Virtue's Rewards",
+        "identityLabel": "restoration_of_rewards",
+        "summary": "Having established that justice is inherently good for the soul without external incentives, Socrates reintroduces the reputation, honors, and divine protections that the just receive from gods and men in life.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Synthesizes the earlier theoretical concessions and develops the wider argument regarding justice's practical and divine benefits.",
+        "passageIds": [
+          "p-1259504",
+          "p-1260719",
+          "p-1261823"
+        ]
+      },
+      {
+        "label": "Posthumous Judgement of Er",
+        "identityLabel": "myth_of_er_judgement",
+        "summary": "Socrates narrates the journey of Er, recounting the post-mortem judgement of souls, tenfold retributions or rewards for deeds, and the terrifying eternal fate of incurable tyrants like Ardiaeus.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Articulates a structured narrative pattern of moral retribution and cosmic reckoning after death.",
+        "passageIds": [
+          "p-1265362",
+          "p-1267558",
+          "p-1269757"
+        ]
+      },
+      {
+        "label": "Cosmic Spindle of Necessity",
+        "identityLabel": "spindle_of_necessity",
+        "summary": "Souls witness the cosmic structure turned by the spindle of Necessity, governed by eight rotating concentric whorls, the sirens' harmonies, and the three Fates who guide past, present, and future.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 0,
+        "rationale": "Provides concrete cosmological description and structural detail of the universe within the myth.",
+        "passageIds": [
+          "p-1270536",
+          "p-1272734"
+        ]
+      },
+      {
+        "label": "The Soul's Choice of Destiny",
+        "identityLabel": "choice_of_destiny",
+        "summary": "Souls are offered lots to select their next lives under the rule that virtue is free and choice rests with the chooser; those lacking philosophy often choose poorly, blinded by past habit.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Constructs the moral and philosophical climax of the myth regarding human responsibility, discernment, and ethical choice.",
+        "passageIds": [
+          "p-1274066",
+          "p-1276267",
+          "p-1278007"
+        ]
+      },
+      {
+        "label": "Rebirth and Final Exhortation",
+        "identityLabel": "exhortation_to_justice",
+        "summary": "After drinking from the river of Unmindfulness and being propelled into rebirth, the preserved tale grounds Socrates' final plea to practice justice and virtue always.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 4,
+        "rationale": "Serves as the concluding ethical framework and final exhortation summarizing the purpose of the dialogue.",
+        "passageIds": [
+          "p-1281978",
+          "p-1283419"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "Once the immortality of the soul is proven, Socrates refines the view of the soul by stripping away its bodily encrustations.",
+        "passageIds": [
+          "p-1256444",
+          "p-1257478"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "Demonstrating the soul's enduring nature completes the conditions of the argument, permitting the restoration of external rewards.",
+        "passageIds": [
+          "p-1259504",
+          "p-1260719"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "Earthly rewards are judged insignificant compared to the posthumous recompenses revealed in the tale of Er.",
+        "passageIds": [
+          "p-1264557",
+          "p-1265362"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "Following the subterranean and celestial journeys, the souls travel to the spindle of Necessity.",
+        "passageIds": [
+          "p-1267558",
+          "p-1270536"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "The presence before Lachesis and the Fates at the spindle sets the setting for distributing lots and choosing destinies.",
+        "passageIds": [
+          "p-1272734",
+          "p-1274066"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "The process of selection and rebirth serves as the grounds for Socrates' final admonition to follow justice in all lives.",
+        "passageIds": [
+          "p-1276267",
+          "p-1283419"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "UdKbatziBJmdx9gP8fnjmQE",
+  "usage": {
+    "promptTokenCount": 12259,
+    "candidatesTokenCount": 1803,
+    "totalTokenCount": 14062,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12259
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1803
+      }
+    ]
+  },
+  "durationMs": 12280
+}

@@ -1,0 +1,124 @@
+{
+  "value": {
+    "summary": "This concluding section of the volume's editorial index and apparatus features an analytical entry on Plato's conception of the state, index entries covering topics from Statesmen to Zeus, and notes by the digital transcriber regarding editorial corrections and formatting conventions.",
+    "nodes": [
+      {
+        "label": "Plato's Dual Polity Models",
+        "identityLabel": "Analysis of Platonic State",
+        "summary": "The editorial apparatus analyzes the Republic's state as combining an older Hellenic/Spartan model with an ideal commonwealth ruled by philosophers holding property in common.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Synthesizes major structural threads of the dialogue into a broad interpretative argument.",
+        "passageIds": [
+          "p-1389105"
+        ]
+      },
+      {
+        "label": "Spartan & Athenian Influences",
+        "identityLabel": "Historical Influences on the State",
+        "summary": "Plato's political design draws on Spartan military life, subordinated individuality, and common meals, tempered by Athenian intellectual culture and refinement.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Notes specific historical elements that form the basis of the broader polity analysis.",
+        "passageIds": [
+          "p-1389105",
+          "p-1391295"
+        ]
+      },
+      {
+        "label": "Radical Ideal Features",
+        "identityLabel": "Distinctive Platonic Innovations",
+        "summary": "The state includes unique concepts foreign to typical Greek polities: community of property, women sharing equal education and governance, and rule by philosophers.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Identifies reusable organizing institutional concepts that distinguish Plato's ideal state.",
+        "passageIds": [
+          "p-1391295",
+          "p-1393487"
+        ]
+      },
+      {
+        "label": "Ideality of Heavenly Pattern",
+        "identityLabel": "Platonic Ideal Realm",
+        "summary": "The philosopher-ruled city is characterized as an intellectual ideal and heavenly pattern rather than a design intended for concrete historical implementation.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Articulates an interpretative claim regarding the feasibility and purpose of the city.",
+        "passageIds": [
+          "p-1393487"
+        ]
+      },
+      {
+        "label": "Transcriber's Corrections",
+        "identityLabel": "Digital Edition Paratext",
+        "summary": "Editorial notes provide documentation of textual corrections, orthographic regularizations, and formatting conventions applied in the digital edition.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 0,
+        "rationale": "Documents concrete editorial and typographical adjustments for the electronic edition.",
+        "passageIds": [
+          "p-1406048",
+          "p-1406349",
+          "p-1407211"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 0,
+        "type": "supports",
+        "rationale": "Historical Spartan and Athenian parallels provide evidentiary grounding for the dual-element analysis of the state.",
+        "passageIds": [
+          "p-1389105"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 0,
+        "type": "develops",
+        "rationale": "The detailing of common property, women's status, and philosopher rulers develops the ideal component of the polity framework.",
+        "passageIds": [
+          "p-1389105",
+          "p-1391295"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "The heavenly pattern observation refines the characterization of the philosopher-led commonwealth as essentially imaginative rather than practical.",
+        "passageIds": [
+          "p-1391295",
+          "p-1393487"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "bNKbasdpv5LH2A-Y0NGxAg",
+  "usage": {
+    "promptTokenCount": 12893,
+    "candidatesTokenCount": 1014,
+    "totalTokenCount": 13907,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12893
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1014
+      }
+    ]
+  },
+  "durationMs": 10505
+}

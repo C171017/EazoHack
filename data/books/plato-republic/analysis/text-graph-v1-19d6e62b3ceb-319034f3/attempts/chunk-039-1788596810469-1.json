@@ -1,0 +1,166 @@
+{
+  "value": {
+    "summary": "In Book IX of Plato's Republic, Socrates examines the origin and character of the tyrannical man, comparing his misery and enslavement to that of a tyrannical state. He presents three proofs demonstrating that the just and wise ruler leads the happiest life, analyzing the tripartite soul and establishing that pure pleasure is distinct from the mere cessation of pain.",
+    "nodes": [
+      {
+        "label": "Genesis of the Tyrannical Man",
+        "identityLabel": "Genesis of Tyrannical Character",
+        "summary": "Socrates describes how lawless appetites, normally restrained or exposed only during dreams, take over when a master passion establishes tyrannical rule over a person's soul.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An overarching argument detailing the psychological origin and descent of an individual into tyranny.",
+        "passageIds": [
+          "p-1160395",
+          "p-1160857",
+          "p-1163702"
+        ]
+      },
+      {
+        "label": "The Private vs. Public Tyrant",
+        "identityLabel": "Degrees of Tyrannical Misery",
+        "summary": "Socrates argues that while a private tyrannical person is miserable, one who becomes a public ruler is cast into extreme danger, suspicion, and complete servitude to fear.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the comparative analysis between private vice and public tyrannical power.",
+        "passageIds": [
+          "p-1178274",
+          "p-1179542",
+          "p-1181204"
+        ]
+      },
+      {
+        "label": "First Proof: Virtue and Happiness",
+        "identityLabel": "First Judgment of Happiness",
+        "summary": "Socrates proclaims the first proof: the most royal and just individual is the happiest, whereas the most unjust and tyrannical is the most miserable.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A formal conclusion and argument judging the five types of states and individuals according to virtue and happiness.",
+        "passageIds": [
+          "p-1183000",
+          "p-1183667"
+        ]
+      },
+      {
+        "label": "The Tripartite Soul and Pleasures",
+        "identityLabel": "Tripartite Soul Pleasures",
+        "summary": "The soul is divided into three components—appetitive, spirited, and rational—each pursuing its own corresponding desire and pleasure: gain, honor, and truth.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A conceptual framework categorizing the three parts of the soul and their corresponding objects of desire.",
+        "passageIds": [
+          "p-1184369",
+          "p-1184738",
+          "p-1186191"
+        ]
+      },
+      {
+        "label": "Philosopher's Judgment on Pleasure",
+        "identityLabel": "Criterion of Judgment",
+        "summary": "Because the philosopher possesses experience of all three pleasures as well as wisdom and reason, his assessment placing intellectual pleasure first is uniquely valid.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A structured argument demonstrating why the philosopher's judgment ranks the life of wisdom highest.",
+        "passageIds": [
+          "p-1188142",
+          "p-1189548",
+          "p-1190528"
+        ]
+      },
+      {
+        "label": "The Intermediate State of Rest",
+        "identityLabel": "Nature of True Pleasure",
+        "summary": "Socrates identifies an intermediate state of rest between pleasure and pain, demonstrating that relief from pain is an illusory relative pleasure rather than genuine, positive pleasure.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A core conceptual distinction clarifying how neutral states and relief from pain are mistaken for true pleasure.",
+        "passageIds": [
+          "p-1191748",
+          "p-1193308",
+          "p-1194224"
+        ]
+      },
+      {
+        "label": "Pleasures of Smell Example",
+        "identityLabel": "Pleasure of Smell",
+        "summary": "The sensation of scent is provided as an instance of pure pleasure that arises without prior suffering or deficit and departs without pain.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 0,
+        "rationale": "A specific empirical example used to demonstrate non-relative pleasure.",
+        "passageIds": [
+          "p-1194013"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The account of internal tyranny in the soul is developed into the discussion of the miserable public tyrant.",
+        "passageIds": [
+          "p-1178274",
+          "p-1181204"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The depiction of the tyrant's total misery serves as direct grounds for the herald's proclamation of the first judgment.",
+        "passageIds": [
+          "p-1183000",
+          "p-1183667"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "The division into three forms of pleasure provides the necessary classification for determining which life is genuinely best.",
+        "passageIds": [
+          "p-1184369",
+          "p-1188142"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 5,
+        "type": "exemplifies",
+        "rationale": "Smell exemplifies a positive pleasure that does not depend on the cessation of a previous painful state.",
+        "passageIds": [
+          "p-1194013",
+          "p-1194224"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "PtKbavzwBMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 17778,
+    "candidatesTokenCount": 1603,
+    "totalTokenCount": 19381,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 17778
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1603
+      }
+    ]
+  },
+  "durationMs": 13195
+}

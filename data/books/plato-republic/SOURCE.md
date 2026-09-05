@@ -29,3 +29,14 @@ The PDF is a scan of the 1888 third edition. It is the same base edition as the
 Gutenberg source, but the Gutenberg transcription also incorporates complete
 Stephanus numbering from a 1908 printing; therefore the two files are not
 byte-for-byte identical.
+
+## Extraction inspection · 2026-09-05
+
+The PDF contains 628 pages and no top-level embedded outline entries in the
+read-only pypdf check. Extracting its embedded text across all pages took 5.14
+seconds, but the output had spacing problems. On PDF page 301, pdfplumber
+recovered readable word spacing from the same text layer without new OCR;
+therefore concatenated output alone does not prove the embedded OCR is damaged.
+This is not a full transcription or reading-order audit. The sampling details,
+timing extrapolation, and architectural implications are recorded in
+[PDF and whole-book analysis](../../../docs/11-pdf-whole-book-analysis.md).

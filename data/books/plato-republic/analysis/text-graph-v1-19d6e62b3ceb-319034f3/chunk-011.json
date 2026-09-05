@@ -1,0 +1,182 @@
+{
+  "value": {
+    "summary": "In Book VIII, Plato surveys the decline of the ideal State through four successive degenerate constitutions—timocracy, oligarchy, democracy, and tyranny—pairing each regime with a corresponding character type, while editorial commentary contextualizes this sequence as an order of thought rather than historical fact.",
+    "nodes": [
+      {
+        "label": "Four Degenerate States and Men",
+        "identityLabel": "Degenerate Constitutions Parallel",
+        "summary": "Socrates resumes his argument by positing four inferior constitutions—timocracy, oligarchy, democracy, and tyranny—each corresponding to an individual human character type, to assess relative happiness and misery against the just State.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes the overarching framework governing the sequence of regimes and characters throughout Book VIII.",
+        "passageIds": [
+          "p-284222",
+          "p-286421"
+        ]
+      },
+      {
+        "label": "Origin and Nature of Timocracy",
+        "identityLabel": "Timocracy and Timocratic Man",
+        "summary": "Timocracy arises from internal division and unpropitious generation, creating a military-dominated state valuing honor, private property, and war over philosophy, mirrored in an ambitious man torn between an unworldly father and social ambition.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Specifies the first degenerate constitution and corresponding character type.",
+        "passageIds": [
+          "p-286551",
+          "p-289058",
+          "p-289972"
+        ]
+      },
+      {
+        "label": "Oligarchy and the Divided City",
+        "identityLabel": "Oligarchy and Oligarchical Man",
+        "summary": "Oligarchy is established when wealth determines political privilege, creating two antagonistic factions of rich and poor, fostering useless drones, and shaping an uneducated man driven solely by avarice and penny-pinching calculation.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Presents the second stage of constitutional and psychological degradation based on excessive wealth.",
+        "passageIds": [
+          "p-291357",
+          "p-291952",
+          "p-293392"
+        ]
+      },
+      {
+        "label": "Democracy and Lawless Freedom",
+        "identityLabel": "Democracy and Democratic Man",
+        "summary": "Democracy emerges from the rebellion of the impoverished against oligarchy, resulting in total liberty, disregard for qualifications, and an individual whose soul treats all necessary and unnecessary desires as equal.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Defines the third regime and soul type, highlighting excessive liberty as the transition point.",
+        "passageIds": [
+          "p-295040",
+          "p-296779",
+          "p-298928"
+        ]
+      },
+      {
+        "label": "Tyranny from Excess Liberty",
+        "identityLabel": "Tyranny and the Tyrant",
+        "summary": "Excessive liberty leads directly to extreme servitude as a popular protector turns into a tyrannical wolf, surrounding himself with mercenaries and preying upon the populace and temples to maintain absolute power.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Presents the final, worst stage of constitutional and personal degeneration.",
+        "passageIds": [
+          "p-301249",
+          "p-303447",
+          "p-305671"
+        ]
+      },
+      {
+        "label": "Order of Thought vs History",
+        "identityLabel": "Platonic Historiography Commentary",
+        "summary": "The editorial commentary argues that Plato's succession of regimes reflects an order of philosophical thought rather than actual historical development in Greek cities.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Provides a high-level interpretive framework contrasting Platonic schema with historical evidence.",
+        "passageIds": [
+          "p-308846",
+          "p-311475"
+        ]
+      },
+      {
+        "label": "Ethical Gradation of Declines",
+        "identityLabel": "Ethical Gradation Analysis",
+        "summary": "The commentator notes that each successive constitution reflects an ethical degradation, falling from the rule of reason to honor, then wealth, followed by unrestrained liberty, and finally a single tyrannical monster passion.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Synthesizes the ethical trajectory underlying the entire sequence of five states and personalities.",
+        "passageIds": [
+          "p-315664"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The fourfold schema of decline begins concretely with timocracy.",
+        "passageIds": [
+          "p-284222",
+          "p-286551"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "Oligarchy develops directly out of timocracy as the accumulation of wealth supersedes honor.",
+        "passageIds": [
+          "p-291357",
+          "p-293392"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "Democracy arises out of oligarchy through the insatiable desire for wealth and the pauperization of citizens.",
+        "passageIds": [
+          "p-295040"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "Tyranny develops directly from democracy through the excess of freedom passing into extreme servitude.",
+        "passageIds": [
+          "p-301249"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 0,
+        "type": "challenges",
+        "rationale": "The commentary challenges the literal historical accuracy of the fourfold decline of states set out by Plato.",
+        "passageIds": [
+          "p-308846",
+          "p-311475"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 0,
+        "type": "supports",
+        "rationale": "The ethical gradation analysis explains and grounds Plato's parallel classification of states and character types.",
+        "passageIds": [
+          "p-315664"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ndGbaoH_ONyCncoPo7vS-Qg",
+  "usage": {
+    "promptTokenCount": 10715,
+    "candidatesTokenCount": 1628,
+    "totalTokenCount": 12343,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10715
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1628
+      }
+    ]
+  },
+  "durationMs": 15584
+}

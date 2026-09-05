@@ -44,7 +44,7 @@ function safeSegment(value: string, label: string, pattern: RegExp): string {
   return value;
 }
 
-async function accessToken(): Promise<string> {
+export async function vertexAccessToken(): Promise<string> {
   if (!process.env.VERCEL) {
     const token = await new GoogleAuth({ scopes: [CLOUD_SCOPE] }).getAccessToken();
     if (!token) throw new VertexConfigurationError("Google Application Default Credentials are unavailable.");
@@ -128,7 +128,7 @@ async function generate(kind: RouteKind, selection: Selection, context: Provider
     const project = safeSegment(process.env.GOOGLE_CLOUD_PROJECT?.trim() || process.env.GCP_PROJECT_ID?.trim() || required("GOOGLE_CLOUD_PROJECT"), "project", /^[a-z][a-z0-9-]{4,61}[a-z0-9]$/);
     const location = safeSegment(process.env.GOOGLE_CLOUD_LOCATION?.trim() || "global", "location", /^[a-z0-9-]+$/);
     const response = await fetch(`https://aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`, {
-      method: "POST", signal: context.signal, headers: { authorization: `Bearer ${await accessToken()}`, "content-type": "application/json" },
+      method: "POST", signal: context.signal, headers: { authorization: `Bearer ${await vertexAccessToken()}`, "content-type": "application/json" },
       body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: prompt(kind, selection) }] }], generationConfig: { responseMimeType: "application/json", responseSchema: responseSchema(kind), thinkingConfig: { thinkingLevel: "LOW" }, maxOutputTokens: 4096 } }),
     });
     const body = await response.json() as { error?: { message?: string }; candidates?: Array<{ content?: { parts?: Array<{ text?: string }> } }> };

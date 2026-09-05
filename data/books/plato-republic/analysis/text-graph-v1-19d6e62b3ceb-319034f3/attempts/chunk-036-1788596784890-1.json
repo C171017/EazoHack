@@ -1,0 +1,188 @@
+{
+  "value": {
+    "summary": "In Book VII of the Republic, Socrates corrects the curriculum of higher studies by inserting solid geometry before astronomy and harmonics, arguing that mathematical disciplines must move beyond sensible phenomena to abstract problems. He designates dialectic as the highest science, which alone reaches unhypothetical first principles and the idea of the good. Finally, he outlines the lifelong education, selection criteria, age stages, practical risks of youthful scepticism, and governance duties of philosopher-rulers.",
+    "nodes": [
+      {
+        "label": "Order of mathematical sciences",
+        "identityLabel": "Mathematical curriculum",
+        "summary": "Socrates corrects the sequence of higher studies, placing solid geometry after plane geometry and before astronomy and harmonics, while requiring these subjects to be pursued through problems rather than sensory observation.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Socrates organizes several sciences into a coherent pedagogical sequence oriented toward intellectual conversion.",
+        "passageIds": [
+          "p-1055885",
+          "p-1057503",
+          "p-1061383"
+        ]
+      },
+      {
+        "label": "Sensory observation error",
+        "identityLabel": "Critique of empirical astronomy",
+        "summary": "Socrates rebukes the notion that looking up at the physical sky elevates the soul, arguing that true astronomy grasps invisible proportions through intelligence rather than visible material movements.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Socrates asserts a specific claim refuting Glaucon's praise of physical observation.",
+        "passageIds": [
+          "p-1058542",
+          "p-1059579",
+          "p-1060627"
+        ]
+      },
+      {
+        "label": "Dialectic as coping-stone",
+        "identityLabel": "Nature of dialectic",
+        "summary": "Dialectic is presented as the supreme science that discards unexamined hypotheses, uses the mathematical disciplines as handmaids, and ascends by pure reason to the essence of things and the idea of the good.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Dialectic acts as an overarching framework organizing and surpassing the preliminary disciplines.",
+        "passageIds": [
+          "p-1066053",
+          "p-1070332",
+          "p-1073704"
+        ]
+      },
+      {
+        "label": "Four divisions of the soul",
+        "identityLabel": "Divisions of the mind",
+        "summary": "Socrates reaffirms four cognitive divisions: science and understanding within intellect (concerned with being), and belief and perception of shadows within opinion (concerned with becoming).",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A systematic conceptual model categorizing states of cognition and their corresponding epistemic objects.",
+        "passageIds": [
+          "p-1071218",
+          "p-1071551"
+        ]
+      },
+      {
+        "label": "Danger of early dialectic",
+        "identityLabel": "Youthful scepticism",
+        "summary": "Premature exposure to dialectic can breed lawlessness and eristic contradiction, illustrated by a supposititious son who disregards traditional parents upon finding they are not his true kin.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An extended illustrative argument cautioning against premature philosophical refutation.",
+        "passageIds": [
+          "p-1081658",
+          "p-1083717",
+          "p-1084954"
+        ]
+      },
+      {
+        "label": "Education stages and governance",
+        "identityLabel": "Philosopher-ruler curriculum",
+        "summary": "Socrates outlines the timeline of testing and education from unforced childhood learning to gymnastics, correlation of sciences at twenty, dialectic at thirty, public service at thirty-five, and vision of the good with governance at fifty.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A comprehensive pedagogical schedule structuring the development of guardians into rulers.",
+        "passageIds": [
+          "p-1078764",
+          "p-1079942",
+          "p-1087263"
+        ]
+      },
+      {
+        "label": "Founding the city via children",
+        "identityLabel": "Realization of the ideal state",
+        "summary": "To establish the ideal constitution swiftly, the philosopher-kings would send all inhabitants over ten years old into the country and raise the remaining children under the new laws.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A concrete operational claim detailing how the ideal city could be initiated in practice.",
+        "passageIds": [
+          "p-1089513",
+          "p-1090007"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 0,
+        "type": "supports",
+        "rationale": "The critique of treating sensible astronomy as philosophy grounds Socrates' correction of the mathematical order toward abstract problem-solving.",
+        "passageIds": [
+          "p-1058542",
+          "p-1061383"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "The preliminary mathematical sciences prepare the soul and serve as handmaids to dialectic.",
+        "passageIds": [
+          "p-1065449",
+          "p-1070332"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "defines",
+        "rationale": "The epistemological division defining science and understanding within intellect provides the structural placement for dialectic above other arts.",
+        "passageIds": [
+          "p-1070332",
+          "p-1071218"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "The threat of moral scepticism and lawlessness justifies delaying the study of dialectic until thirty years of age in the education curriculum.",
+        "passageIds": [
+          "p-1081125",
+          "p-1084655",
+          "p-1086281"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The attainment of dialectic culminates in the fifty-year-old rulers beholding the absolute good to order the state.",
+        "passageIds": [
+          "p-1073704",
+          "p-1087263"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "The completed educational schedule of philosopher-rulers enables the practical plan to found the city by educating the young.",
+        "passageIds": [
+          "p-1088753",
+          "p-1089513"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "JNKbapvGBpmdx9gP8fnjmQE",
+  "usage": {
+    "promptTokenCount": 14525,
+    "candidatesTokenCount": 1761,
+    "totalTokenCount": 16286,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14525
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1761
+      }
+    ]
+  },
+  "durationMs": 13654
+}

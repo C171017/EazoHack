@@ -1,0 +1,155 @@
+{
+  "value": {
+    "summary": "In this portion of Book V, Socrates and Glaucon examine the communal unity of the ideal State, establishing that common property and family ties prevent internal faction. After addressing conduct toward Hellenic enemies and the realistic role of ideals as guiding standards, Socrates introduces the central reform: cities will never be free from evils until philosophers become kings. To defend this claim, they begin distinguishing true philosophers from mere lovers of sights and sounds.",
+    "nodes": [
+      {
+        "label": "Unity of the Best-Ordered State",
+        "identityLabel": "organic_state_unity",
+        "summary": "A state achieves optimal order and cohesion when citizens share feelings in common, likening the commonwealth to an individual body where hurt to any single part affects the whole.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes several key concepts including shared usage of 'mine', organic bodily empathy, and common property.",
+        "passageIds": [
+          "p-898308",
+          "p-898569",
+          "p-902521"
+        ]
+      },
+      {
+        "label": "Inter-Hellenic Conduct and War",
+        "identityLabel": "hellenic_warfare_limits",
+        "summary": "Warfare between Hellenic states is categorized as internal discord among natural friends, prohibiting enslavement, corpse-looting, and the devastation of lands.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Articulates a normative claim regulating the conduct of citizens toward fellow Hellenes versus barbarians.",
+        "passageIds": [
+          "p-917134",
+          "p-919634",
+          "p-922157"
+        ]
+      },
+      {
+        "label": "Ideals as Evaluative Standards",
+        "identityLabel": "nature_of_ideals",
+        "summary": "An ideal pattern of justice or a perfect state serves as an absolute standard for evaluation and is not rendered invalid merely because it cannot be realized in every concrete detail.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Formulates a reusable epistemological and political concept regarding how theoretical models function relative to actuality.",
+        "passageIds": [
+          "p-925041",
+          "p-925834",
+          "p-926473"
+        ]
+      },
+      {
+        "label": "The Philosopher-King Paradox",
+        "identityLabel": "philosopher_kings",
+        "summary": "Political evils in cities and humankind will not end until political greatness and wisdom unite through philosophers ruling as kings.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Presents the central overarching paradox and operational premise enabling the realization of the ideal State.",
+        "passageIds": [
+          "p-927858",
+          "p-927555",
+          "p-929473"
+        ]
+      },
+      {
+        "label": "Desire for the Whole of Wisdom",
+        "identityLabel": "philosopher_whole_desire",
+        "summary": "Analogous to lovers of youth, wine, and honor who cherish every instance of their object, the philosopher is characterized by a desire for all knowledge and wisdom, not merely a part.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A thematic pattern and inductive claim grounded on the analogy of diverse types of lovers.",
+        "passageIds": [
+          "p-932037",
+          "p-932216",
+          "p-930486"
+        ]
+      },
+      {
+        "label": "Lovers of the Vision of Truth",
+        "identityLabel": "true_philosophers_defined",
+        "summary": "True philosophers are defined as lovers of the vision of truth, distinguishing them from sight-seers, sound-lovers, and musical amateurs who only imitate the pursuit of knowledge.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Supplies the core distinguishing definition of the true philosopher in contrast to lovers of spectacles.",
+        "passageIds": [
+          "p-933820",
+          "p-932976",
+          "p-933719"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The principle of civic solidarity and brotherhood among citizens is extended to guide external relations with fellow Hellenes.",
+        "passageIds": [
+          "p-920602",
+          "p-920844"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "Clarifying that the ideal requires only closest possible approximation allows Socrates to propose the single transformative change of philosopher-kings.",
+        "passageIds": [
+          "p-926965",
+          "p-927333"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "To defend the proposal of philosopher rulers against attack, Socrates must develop an account of what a philosopher actually is.",
+        "passageIds": [
+          "p-929473",
+          "p-929955"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The general desire for the whole of wisdom is refined to exclude superficial sight-lovers and specify true philosophers as seekers of the vision of truth.",
+        "passageIds": [
+          "p-932976",
+          "p-933820"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BdKbasiRNtCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 16314,
+    "candidatesTokenCount": 1512,
+    "totalTokenCount": 17826,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16314
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1512
+      }
+    ]
+  },
+  "durationMs": 14877
+}

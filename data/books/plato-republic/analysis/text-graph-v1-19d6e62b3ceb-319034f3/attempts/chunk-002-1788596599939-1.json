@@ -1,0 +1,90 @@
+{
+  "value": {
+    "summary": "In the Preface to the third edition of Plato's Republic, the translator acknowledges editorial contributions, notes that additions and revisions affect at least a third of the work, offers an exchange arrangement for owners of the 1881 edition, and states an intention to publish revised editions of the other dialogues.",
+    "nodes": [
+      {
+        "label": "Editorial Acknowledgments",
+        "identityLabel": "Editorial Acknowledgments",
+        "summary": "The translator acknowledges the assistance of Matthew Knight, Frank Fletcher, and J. W. Mackail for their scholarship, accuracy, index preparation, and correction of inaccuracies.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Reports specific concrete acknowledgments of editorial contributions for the edition.",
+        "passageIds": [
+          "p-784"
+        ]
+      },
+      {
+        "label": "Scope of Additions/Alterations",
+        "identityLabel": "Revision Scope",
+        "summary": "Additions and alterations made to both the introduction and the text affect at least one third of the work.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "States a descriptive factual claim about the proportion of the volume revised.",
+        "passageIds": [
+          "p-1470"
+        ]
+      },
+      {
+        "label": "Exchange Plan for 1881 Copies",
+        "identityLabel": "Exchange Arrangement",
+        "summary": "Recognizing the extent of the revisions and the dissatisfaction of owning an inferior form, the translator arranged for owners of the 1881 edition to exchange clean copies for the new edition at half price.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Presents a practical arrangement motivated by the extensive revisions of the text.",
+        "passageIds": [
+          "p-1580",
+          "p-1470"
+        ]
+      },
+      {
+        "label": "Future Dialogue Revisions",
+        "identityLabel": "Future Publication Plans",
+        "summary": "The translator expresses the hope to publish a revised edition of Plato's remaining dialogues within a year.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 1,
+        "rationale": "States an authorial intention regarding subsequent publications.",
+        "passageIds": [
+          "p-2244"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The extensive scope of the additions and alterations provides the explicit rationale for the half-price exchange arrangement.",
+        "passageIds": [
+          "p-1580",
+          "p-1470"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "cdGbaqvhC62dncoP5daroAE",
+  "usage": {
+    "promptTokenCount": 1825,
+    "candidatesTokenCount": 572,
+    "totalTokenCount": 2397,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1825
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 572
+      }
+    ]
+  },
+  "durationMs": 8967
+}

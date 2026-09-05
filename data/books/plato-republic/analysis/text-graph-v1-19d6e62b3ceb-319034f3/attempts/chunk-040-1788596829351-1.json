@@ -1,0 +1,154 @@
+{
+  "value": {
+    "summary": "In Book IX, Socrates distinguishes true pleasures of the soul from illusory bodily pleasures, calculates the king's vast superiority in pleasure over the tyrant, and introduces the tripartite image of the soul to refute the claim that injustice is profitable.",
+    "nodes": [
+      {
+        "label": "True vs Illusory Pleasure",
+        "identityLabel": "pleasure-and-being",
+        "summary": "Pleasures derived from filling the soul with invariable truth and essence are more real than bodily satisfactions, which are mixed with pain and mistaken for positive pleasure.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the philosophical argument comparing the reality and satisfaction of bodily versus intellectual desires.",
+        "passageIds": [
+          "p-1197992",
+          "p-1195343",
+          "p-1196527"
+        ]
+      },
+      {
+        "label": "The 729-Fold Interval",
+        "identityLabel": "tyrant-king-interval",
+        "summary": "Socrates calculates by cubing distances that a king lives 729 times more pleasantly than a tyrant, who is furthest removed from law and reason.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A specific quantitative claim and calculation derived from the hierarchy of rulers and desires.",
+        "passageIds": [
+          "p-1203397",
+          "p-1202114",
+          "p-1202883"
+        ]
+      },
+      {
+        "label": "The Composite Soul Image",
+        "identityLabel": "chimerical-soul-model",
+        "summary": "Socrates models the soul as a composite creature consisting of a multiform beast, a lion, and an inner man, enclosed within a human outward form.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A conceptual metaphor constructed to evaluate the effects of justice and injustice on the soul.",
+        "passageIds": [
+          "p-1205019",
+          "p-1205276",
+          "p-1205630"
+        ]
+      },
+      {
+        "label": "Refutation of Injustice",
+        "identityLabel": "injustice-refutation",
+        "summary": "Praising injustice is shown to mean feeding the insatiable monster and starving the inner man, whereas justice subjects the lower beasts to divine reason.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the ethical defense of justice using the composite soul model to refute Thrasymachus's claim.",
+        "passageIds": [
+          "p-1206266",
+          "p-1206893",
+          "p-1207790"
+        ]
+      },
+      {
+        "label": "Subjection to Divine Rule",
+        "identityLabel": "rule-of-the-best",
+        "summary": "It is best for every person to be governed by divine wisdom within, or alternatively by external law, as demonstrated by the rearing of children.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Presents a general principle about moral governance and law supported by the example of child-rearing.",
+        "passageIds": [
+          "p-1210385",
+          "p-1210967"
+        ]
+      },
+      {
+        "label": "Internal City Pattern",
+        "identityLabel": "heavenly-city-pattern",
+        "summary": "The wise person governs bodily desires and wealth to maintain internal harmony, living according to the ideal heavenly city regardless of earthly existence.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Provides an organizing framework for how the philosopher acts in personal conduct and politics.",
+        "passageIds": [
+          "p-1214526",
+          "p-1213437",
+          "p-1212681"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "The distinction between genuine and spurious pleasures underpins the mathematical ranking of royal and tyrannical pleasure.",
+        "passageIds": [
+          "p-1202114",
+          "p-1201341"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The composite image of the soul provides the framework used directly to argue against the profitability of injustice.",
+        "passageIds": [
+          "p-1206266",
+          "p-1204835"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "The argument that the human part must master the beast develops into the claim that everyone should be ruled by divine wisdom or external authority.",
+        "passageIds": [
+          "p-1210385",
+          "p-1207790"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "Establishing inner harmony over the unruly parts develops into the life principle of looking to the internal city.",
+        "passageIds": [
+          "p-1213437",
+          "p-1212393"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "UtKbapDNCJqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 9559,
+    "candidatesTokenCount": 1451,
+    "totalTokenCount": 11010,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9559
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1451
+      }
+    ]
+  },
+  "durationMs": 13328
+}

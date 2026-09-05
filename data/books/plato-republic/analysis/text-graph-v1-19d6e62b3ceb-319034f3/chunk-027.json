@@ -1,0 +1,152 @@
+{
+  "value": {
+    "summary": "In Book IV of Plato's Republic, Socrates responds to Adeimantus's objection regarding guardian happiness by asserting that the city's goal is collective happiness, not class privilege. Socrates and his interlocutors outline state unity, education, and the prevention of extreme wealth or poverty, subsequently locating the four cardinal virtues within the model state: wisdom in the ruling guardians, courage in the fighting auxiliaries, temperance in widespread harmony across classes, and justice in each citizen performing their proper role.",
+    "nodes": [
+      {
+        "label": "Adeimantus's Objection",
+        "identityLabel": "guardian_happiness_objection",
+        "summary": "Adeimantus raises the charge that Socrates denies the guardians wealth, land, and ordinary luxuries, effectively making them miserable mercenaries in their own city.",
+        "sourceRole": "dialogue",
+        "speaker": "Adeimantus",
+        "level": 1,
+        "rationale": "Level 1 because it presents a specific counter-claim questioning the welfare and happiness of the guardian class.",
+        "passageIds": [
+          "p-792835",
+          "p-793697"
+        ]
+      },
+      {
+        "label": "Happiness of the Whole State",
+        "identityLabel": "collective_state_happiness",
+        "summary": "Socrates argues that the purpose of founding the state is the greatest happiness of the whole rather than any single class, comparing the state to a statue whose parts must be painted proportionally.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Level 3 because it articulates an overarching structural argument governing the distribution of civic roles and happiness across the entire city.",
+        "passageIds": [
+          "p-794407",
+          "p-796604"
+        ]
+      },
+      {
+        "label": "Primacy of Nurture and Music",
+        "identityLabel": "education_and_musical_stability",
+        "summary": "Socrates asserts that proper education and strict maintenance of music and gymnastic without innovation preserve civic order and prevent creeping lawlessness.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Level 2 because it defines the foundational role of education and cultural preservation as a reusable political principle.",
+        "passageIds": [
+          "p-804214",
+          "p-805142",
+          "p-806342"
+        ]
+      },
+      {
+        "label": "Wisdom and Courage Identified",
+        "identityLabel": "virtues_wisdom_and_courage",
+        "summary": "Socrates locates civic wisdom in the small ruling class possessing knowledge for the whole state, and civic courage in the soldiers whose education preserves the law's conviction regarding what is to be feared.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Level 1 because it identifies specific virtues within distinct classes of the commonwealth.",
+        "passageIds": [
+          "p-817439",
+          "p-820323",
+          "p-816457"
+        ]
+      },
+      {
+        "label": "Temperance as Harmony",
+        "identityLabel": "temperance_definition",
+        "summary": "Temperance is defined not as the property of a single class, but as an agreement and harmony throughout the whole state wherein the naturally worse part is governed by the better.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Level 2 because it establishes a comprehensive conceptual definition of temperance operating across the entire social scale.",
+        "passageIds": [
+          "p-825383",
+          "p-823066",
+          "p-824650"
+        ]
+      },
+      {
+        "label": "Justice as Doing One's Business",
+        "identityLabel": "justice_definition",
+        "summary": "Socrates identifies civic justice as the foundational principle that each citizen must perform the single task for which nature best suited them, minding their own business without meddling in others'.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Level 3 because it resolves the foundational question of the dialogue by integrating the functional roles of all classes into an organizing definition of justice.",
+        "passageIds": [
+          "p-827801",
+          "p-828165"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 0,
+        "type": "challenges",
+        "rationale": "Socrates's thesis that the city's goal is the proportional happiness of the whole directly rebuts Adeimantus's objection about guardians lacking personal wealth and luxuries.",
+        "passageIds": [
+          "p-794407",
+          "p-792835"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "Rigid education and cultural stability sustain the civic order required to maintain the collective happiness of the commonwealth.",
+        "passageIds": [
+          "p-804214",
+          "p-794407"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "Identifying wisdom and courage in distinct parts lays the groundwork for defining justice through the method of residues and class specialization.",
+        "passageIds": [
+          "p-814689",
+          "p-827801"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "Temperance establishes the universal consensus on who should rule, leading directly to the discovery of justice as each part fulfilling its own natural function.",
+        "passageIds": [
+          "p-826014",
+          "p-827801"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9tGbauiWLMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 16681,
+    "candidatesTokenCount": 1444,
+    "totalTokenCount": 18125,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16681
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1444
+      }
+    ]
+  },
+  "durationMs": 10692
+}

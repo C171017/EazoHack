@@ -1,0 +1,190 @@
+{
+  "value": {
+    "summary": "Glaucon and Adeimantus challenge Socrates to defend justice in itself rather than for its extrinsic rewards, prompting Socrates to model justice first in a developing State founded on mutual need and the division of labour.",
+    "nodes": [
+      {
+        "label": "Threefold Division of Goods",
+        "identityLabel": "classification of goods",
+        "summary": "Glaucon classifies goods into three kinds: those welcomed for their own sake, those desired both for themselves and their results, and burdensome goods desired only for rewards.",
+        "sourceRole": "dialogue",
+        "speaker": "Glaucon",
+        "level": 2,
+        "rationale": "Glaucon sets out an analytic taxonomy distinguishing three classes of desirable things.",
+        "passageIds": [
+          "p-639483",
+          "p-639849",
+          "p-640026"
+        ]
+      },
+      {
+        "label": "Social Contract Origin of Justice",
+        "identityLabel": "origin of justice",
+        "summary": "Glaucon articulates the common view that justice is an agreed compromise between the natural good of committing injustice without penalty and the evil of suffering injustice without redress.",
+        "sourceRole": "dialogue",
+        "speaker": "Glaucon",
+        "level": 3,
+        "rationale": "Organizes the conventional theory explaining why laws and standards of justice are created and upheld.",
+        "passageIds": [
+          "p-643203",
+          "p-641273"
+        ]
+      },
+      {
+        "label": "Ring of Gyges Thought Experiment",
+        "identityLabel": "ring of Gyges",
+        "summary": "Glaucon recounts the tale of Gyges using an invisibility ring to seize power, arguing that anyone freed from fear of discovery would act unjustly.",
+        "sourceRole": "dialogue",
+        "speaker": "Glaucon",
+        "level": 0,
+        "rationale": "A concrete narrative illustration demonstrating that men practice justice only involuntarily.",
+        "passageIds": [
+          "p-644378",
+          "p-646576"
+        ]
+      },
+      {
+        "label": "Praise of Justice for External Gain",
+        "identityLabel": "extrinsic praise of justice",
+        "summary": "Adeimantus argues that parents, poets, and prose writers praise justice merely for reputation, social advancement, and divine favour, rather than its intrinsic worth.",
+        "sourceRole": "dialogue",
+        "speaker": "Adeimantus",
+        "level": 3,
+        "rationale": "A broad critical overview of cultural, poetic, and religious rhetoric surrounding justice and divine propitiation.",
+        "passageIds": [
+          "p-653380",
+          "p-656070",
+          "p-663328"
+        ]
+      },
+      {
+        "label": "The Demand to Defend Justice Itself",
+        "identityLabel": "defence of justice in the soul",
+        "summary": "Adeimantus challenges Socrates to demonstrate what justice and injustice accomplish on their own inside the soul, stripped of external reputations and rewards.",
+        "sourceRole": "dialogue",
+        "speaker": "Adeimantus",
+        "level": 4,
+        "rationale": "Defines the fundamental organizing question and mandate that governs the rest of the dialogue.",
+        "passageIds": [
+          "p-663328",
+          "p-665524"
+        ]
+      },
+      {
+        "label": "State Analogy: The Large Letters",
+        "identityLabel": "city-soul analogy",
+        "summary": "Socrates proposes to locate justice by examining a State first, likening it to reading large letters before examining smaller ones in the individual.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 4,
+        "rationale": "Establishes the macro-level interpretive framework used to investigate justice in the soul.",
+        "passageIds": [
+          "p-668093",
+          "p-669061",
+          "p-669400"
+        ]
+      },
+      {
+        "label": "Foundation of the State on Human Need",
+        "identityLabel": "origin of the state",
+        "summary": "Socrates states that a city originates because individuals are not self-sufficing but have numerous bodily and material needs that require mutual cooperation.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A core premise detailing the fundamental cause of social organization.",
+        "passageIds": [
+          "p-670316",
+          "p-670512",
+          "p-671202"
+        ]
+      },
+      {
+        "label": "Specialization and Division of Labour",
+        "identityLabel": "division of labour",
+        "summary": "Socrates and Adeimantus deduce that work is better and more plentiful when each citizen performs the single craft fitted to their natural disposition.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A reusable organizing economic principle governing the construction of the ideal city.",
+        "passageIds": [
+          "p-672509",
+          "p-673154",
+          "p-673568"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "The thought experiment of Gyges' ring demonstrates Glaucon's claim that justice is only practiced of necessity and not willingly.",
+        "passageIds": [
+          "p-644378",
+          "p-646576"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "Adeimantus's review of how poets and teachers praise only the consequences of justice grounds his requirement that Socrates defend justice in itself.",
+        "passageIds": [
+          "p-663328"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "The large-letters method of examining justice in the city is introduced as Socrates' direct procedural response to the brothers' challenge.",
+        "passageIds": [
+          "p-668093",
+          "p-669400"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The construction of the city based on basic human wants carries out the proposal to trace justice in a State.",
+        "passageIds": [
+          "p-669757",
+          "p-670316"
+        ]
+      },
+      {
+        "sourceIndex": 7,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "The division of labour specifies how the newly formed community effectively satisfies the multiple needs that brought it into being.",
+        "passageIds": [
+          "p-671774",
+          "p-672509",
+          "p-673154"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "6NGbapbMD7-Sx9gPmNDRsQI",
+  "usage": {
+    "promptTokenCount": 13603,
+    "candidatesTokenCount": 1711,
+    "totalTokenCount": 15314,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13603
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1711
+      }
+    ]
+  },
+  "durationMs": 14098
+}

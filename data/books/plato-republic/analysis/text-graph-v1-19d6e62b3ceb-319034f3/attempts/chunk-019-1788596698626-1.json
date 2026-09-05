@@ -1,0 +1,165 @@
+{
+  "value": {
+    "summary": "In Book I of Plato's Republic, Socrates encounters Polemarchus and Cephalus at the Piraeus, prompting discussions on old age, wealth, and definitions of justice. After refuting Cephalus's view of debt repayment and Polemarchus's definition of helping friends and harming enemies, Socrates faces Thrasymachus, who asserts that justice is the interest of the stronger.",
+    "nodes": [
+      {
+        "label": "Old Age and Character",
+        "identityLabel": "old_age_and_character",
+        "summary": "Cephalus argues that old age brings peace from passions, and that troubles in aging stem from a person's character and temper rather than age itself.",
+        "sourceRole": "dialogue",
+        "speaker": "Cephalus",
+        "level": 1,
+        "rationale": "Cephalus presents a claim and general observation about human temperament and the experience of aging.",
+        "passageIds": [
+          "p-570737",
+          "p-572998"
+        ]
+      },
+      {
+        "label": "Wealth and Peace of Mind",
+        "identityLabel": "wealth_and_peace_of_mind",
+        "summary": "Cephalus claims that the greatest blessing of wealth for a sensible man is avoiding deceit and paying all debts to gods and men before death.",
+        "sourceRole": "dialogue",
+        "speaker": "Cephalus",
+        "level": 1,
+        "rationale": "Cephalus outlines an evaluative claim regarding the practical and moral advantage of riches.",
+        "passageIds": [
+          "p-575206",
+          "p-576391"
+        ]
+      },
+      {
+        "label": "Justice as Repaying Debts",
+        "identityLabel": "justice_paying_debts",
+        "summary": "Socrates challenges the idea that justice is merely speaking the truth and returning what has been borrowed, using the example of returning weapons to an insane friend.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Socrates organizes a counter-argument to a traditional definition of justice through a reductio counterexample.",
+        "passageIds": [
+          "p-577089",
+          "p-577644"
+        ]
+      },
+      {
+        "label": "Justice as Harming Enemies",
+        "identityLabel": "justice_friends_and_enemies",
+        "summary": "Polemarchus adopts the view that justice consists in doing good to friends and harm to enemies.",
+        "sourceRole": "dialogue",
+        "speaker": "Polemarchus",
+        "level": 2,
+        "rationale": "A substantive, reusable proposed definition of justice offered for dialectical examination.",
+        "passageIds": [
+          "p-580244",
+          "p-579425",
+          "p-587026"
+        ]
+      },
+      {
+        "label": "Injustice via Injury",
+        "identityLabel": "injustice_via_injury",
+        "summary": "Socrates argues that harming someone deteriorates their proper human virtue (justice), meaning that justice cannot produce injustice or harm anyone.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A multi-step analogical argument demonstrating that the just person cannot harm others.",
+        "passageIds": [
+          "p-587578",
+          "p-587977",
+          "p-588495"
+        ]
+      },
+      {
+        "label": "Justice as the Stronger's Interest",
+        "identityLabel": "interest_of_the_stronger",
+        "summary": "Thrasymachus asserts that justice is nothing other than the interest of the stronger, specifically the ruling power that establishes laws to serve itself.",
+        "sourceRole": "dialogue",
+        "speaker": "Thrasymachus",
+        "level": 2,
+        "rationale": "A major conceptual definition of justice introduced into the dialogue.",
+        "passageIds": [
+          "p-595396",
+          "p-596481"
+        ]
+      },
+      {
+        "label": "Rulers' Fallibility",
+        "identityLabel": "fallibility_of_rulers",
+        "summary": "Socrates points out that if rulers are fallible and can mistakenly legislate against their own interests, obedience to their laws results in injury rather than interest to the stronger.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Socrates develops a dialectical argument challenging Thrasymachus's definition using the premise that rulers make mistakes.",
+        "passageIds": [
+          "p-598042",
+          "p-598563",
+          "p-599171"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "Cephalus's description of wealth facilitating the payment of debts leads directly to Socrates questioning whether paying debts defines justice.",
+        "passageIds": [
+          "p-576391",
+          "p-577089"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "Polemarchus takes over the debt-based definition from Cephalus and interprets it via Simonides as giving each what is due (benefits to friends, harms to enemies).",
+        "passageIds": [
+          "p-578333",
+          "p-579592"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 3,
+        "type": "challenges",
+        "rationale": "Socrates demonstrates that injuring men makes them worse in justice, directly refuting the claim that justice harms enemies.",
+        "passageIds": [
+          "p-587578",
+          "p-588495"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 5,
+        "type": "challenges",
+        "rationale": "Socrates argues that if fallible rulers command things contrary to their interest, obedience would mean subjects acting against the stronger's interest.",
+        "passageIds": [
+          "p-598563",
+          "p-599171"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "z9Gbao3dIduTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 17445,
+    "candidatesTokenCount": 1530,
+    "totalTokenCount": 18975,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 17445
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1530
+      }
+    ]
+  },
+  "durationMs": 12355
+}

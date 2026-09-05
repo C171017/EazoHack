@@ -1,4 +1,4 @@
-import { PDF_PIPELINE_VERSION, TextSourceSchema, type PageText } from './model';
+import { PDF_PIPELINE_VERSION, PageTextSchema, validateLayout, type PageText } from './model';
 
 const DB = 'eazo-pdf-v1';
 function open(): Promise<IDBDatabase> {
@@ -12,12 +12,14 @@ const key = (hash: string, page: number, language: string) => `${PDF_PIPELINE_VE
 export async function readPageCache(hash: string, page: number, language: string): Promise<PageText | null> {
   const db = await open();
   try {
-    const value = await new Promise<PageText | undefined>((resolve, reject) => {
+    const raw = await new Promise<unknown>((resolve, reject) => {
       const r = db.transaction('pages').objectStore('pages').get(key(hash, page, language));
       r.onsuccess = () => resolve(r.result); r.onerror = () => reject(r.error);
     });
-    if (!value || value.version !== PDF_PIPELINE_VERSION || value.fileHash !== hash || value.pageIndex !== page || value.language !== language) return null;
-    if (!TextSourceSchema.safeParse(value.source).success || !TextSourceSchema.safeParse(value.native).success) return null;
+    const parsed=PageTextSchema.safeParse(raw);if(!parsed.success)return null;
+    const value=parsed.data;
+    if (value.version !== PDF_PIPELINE_VERSION || value.fileHash !== hash || value.pageIndex !== page || value.language !== language) return null;
+    if(value.layout){try{validateLayout(value.source,value.layout.proposal);}catch{return null;}}
     return value;
   } finally { db.close(); }
 }

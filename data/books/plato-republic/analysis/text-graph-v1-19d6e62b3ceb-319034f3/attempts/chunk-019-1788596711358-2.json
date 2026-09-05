@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "In the opening portion of Republic Book I, Socrates attends the festival at the Piraeus and is persuaded to visit Cephalus's home. The discussion begins with the experiences and comforts of old age, before turning toward the definition of justice. Socrates challenges the initial formulations of Cephalus and Polemarchus regarding truth-telling, repaying debts, and helping friends while harming enemies. Thrasymachus then forcefully enters the debate, arguing that justice is merely the interest of the stronger party.",
+    "nodes": [
+      {
+        "label": "Old Age and Character",
+        "identityLabel": "old_age_and_character",
+        "summary": "Cephalus explains that old age brings freedom from unruly passions, attributing happiness or misery in later years primarily to personal character rather than age itself.",
+        "sourceRole": "dialogue",
+        "speaker": "Cephalus",
+        "level": 1,
+        "rationale": "States an experiential claim linking inner character to the peaceful experience of aging.",
+        "passageIds": [
+          "p-570737",
+          "p-572998"
+        ]
+      },
+      {
+        "label": "Value of Riches in Age",
+        "identityLabel": "advantages_of_wealth",
+        "summary": "Cephalus argues that wealth's chief advantage for a good man is relieving the dread of entering the afterlife having deceived others or unpaid debts.",
+        "sourceRole": "dialogue",
+        "speaker": "Cephalus",
+        "level": 1,
+        "rationale": "Presents a claim connecting wealth with clear conscience and the satisfaction of moral debts.",
+        "passageIds": [
+          "p-575206",
+          "p-576391"
+        ]
+      },
+      {
+        "label": "Paying Debts Counterexample",
+        "identityLabel": "justice_paying_debts",
+        "summary": "Socrates argues that justice cannot simply mean speaking the truth and returning debts, citing the counterexample of withholding weapons from a friend who has become mad.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Provides a counterexample challenging the definition of justice as strictly returning what is owed.",
+        "passageIds": [
+          "p-577089",
+          "p-577644",
+          "p-578427"
+        ]
+      },
+      {
+        "label": "Good to Friends, Harm to Foes",
+        "identityLabel": "justice_friends_and_enemies",
+        "summary": "Polemarchus adopts Simonides's view by defining justice as giving what is proper, interpreted as doing good to one's friends and evil to one's enemies.",
+        "sourceRole": "dialogue",
+        "speaker": "Polemarchus",
+        "level": 2,
+        "rationale": "Proposes a general, traditional definition of justice.",
+        "passageIds": [
+          "p-579425",
+          "p-579592",
+          "p-580244"
+        ]
+      },
+      {
+        "label": "Justice Never Harms",
+        "identityLabel": "justice_does_not_injure",
+        "summary": "Socrates argues that harming someone deteriorates their virtue and causes injustice, concluding that injuring anyone cannot be the function of a just person.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Constructs an organized deductive argument demonstrating that true justice cannot inflict injury.",
+        "passageIds": [
+          "p-587578",
+          "p-587977",
+          "p-588495"
+        ]
+      },
+      {
+        "label": "Interest of the Stronger",
+        "identityLabel": "thrasymachus_justice_definition",
+        "summary": "Thrasymachus asserts that justice is nothing other than the interest of the stronger, manifested in the laws established by rulers for their own benefit.",
+        "sourceRole": "dialogue",
+        "speaker": "Thrasymachus",
+        "level": 2,
+        "rationale": "Defines justice as political power asserting its advantage.",
+        "passageIds": [
+          "p-595396",
+          "p-596481"
+        ]
+      },
+      {
+        "label": "Fallibility of Rulers",
+        "identityLabel": "ruler_fallibility_challenge",
+        "summary": "Socrates challenges Thrasymachus by showing that rulers can make mistakes regarding their own interests, meaning obeying them could lead to their injury.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Constructs an argument pointing out an inconsistency between obedience to the ruler and the ruler's actual interest.",
+        "passageIds": [
+          "p-598042",
+          "p-598563",
+          "p-598971"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "Cephalus's mention of debts and deception initiates Socrates's inquiry into the definition of justice.",
+        "passageIds": [
+          "p-576391",
+          "p-577089"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The failure of the simplistic view of repaying debts prompts Polemarchus to reformulate the principle as helping friends and harming enemies.",
+        "passageIds": [
+          "p-577870",
+          "p-578333",
+          "p-579592"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 3,
+        "type": "challenges",
+        "rationale": "Socrates's conclusion that a just person can never harm anyone directly refutes Polemarchus's definition.",
+        "passageIds": [
+          "p-588332",
+          "p-588495"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 5,
+        "type": "challenges",
+        "rationale": "Socrates demonstrates that if rulers err, following their decrees harms rather than benefits the stronger party.",
+        "passageIds": [
+          "p-598563",
+          "p-598971"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3dGbaszfEKGdx9gP1MGDcA",
+  "usage": {
+    "promptTokenCount": 17466,
+    "candidatesTokenCount": 1641,
+    "totalTokenCount": 19107,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 17466
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1641
+      }
+    ]
+  },
+  "durationMs": 10730
+}

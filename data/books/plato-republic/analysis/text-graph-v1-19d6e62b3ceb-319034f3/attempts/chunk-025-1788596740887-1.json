@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "In Book III, Socrates and Glaucon examine musical modes, rhythms, and physical training for the guardians. Purging complexity and indulgence from music, gymnastics, and medicine, they establish that both music and gymnastic primarily educate the spirited and philosophic elements of the soul into an enduring harmony.",
+    "nodes": [
+      {
+        "label": "Retention of Dorian and Phrygian",
+        "identityLabel": "dorian_and_phrygian_harmonies",
+        "summary": "Socrates restricts acceptable harmonies to two: a warlike strain for crisis and courage, and a peaceful strain for prudence and temperance, identified as the Dorian and Phrygian.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Socrates establishes a specific norm regarding which two musical harmonies are permitted in the purged city.",
+        "passageIds": [
+          "p-742610",
+          "p-743727"
+        ]
+      },
+      {
+        "label": "Exclusion of Complex Music",
+        "identityLabel": "exclusion_of_complex_instruments",
+        "summary": "Instruments with multiple strings, complex scales, or flute-like versatility are banned from the city to purge luxury, keeping only the lyre, harp, and rustic pipe.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Socrates draws concrete regulatory consequences from restricting musical modes to simple forms.",
+        "passageIds": [
+          "p-744041",
+          "p-744308",
+          "p-744598"
+        ]
+      },
+      {
+        "label": "Primacy of Simplicity in Style",
+        "identityLabel": "simplicity_in_style_and_soul",
+        "summary": "Rhythm and harmony must follow the words, and the words reflect the soul; therefore, true beauty and grace depend on the simplicity of a well-ordered character.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A general philosophical principle defining the relationship between soul, style, rhythm, and harmony across the arts.",
+        "passageIds": [
+          "p-747778",
+          "p-748265",
+          "p-748719"
+        ]
+      },
+      {
+        "label": "Potency of Musical Education",
+        "identityLabel": "potency_of_music",
+        "summary": "Musical training is deemed the most potent education because rhythm and harmony sink deep into the soul, imparting grace and instilling intuitive love of the good before rational maturity.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An overarching argument for why aesthetic education forms the foundation of moral judgment and character in the guardians.",
+        "passageIds": [
+          "p-750787",
+          "p-752464"
+        ]
+      },
+      {
+        "label": "Critique of Lingering Medicine",
+        "identityLabel": "critique_of_valetudinarian_medicine",
+        "summary": "Socrates condemns valetudinarian medicine that pampers chronic diseases and prolongs unproductive lives, maintaining that citizens have civic duties and must not spend their lives nursing ailments.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A specific claim critiquing medical practices that treat disease as a full-time occupation rather than maintaining citizens for state service.",
+        "passageIds": [
+          "p-763310",
+          "p-763950",
+          "p-766754"
+        ]
+      },
+      {
+        "label": "Judicial Knowledge Without Evil",
+        "identityLabel": "judge_nature_and_education",
+        "summary": "Unlike a physician who benefits from bodily experience of disease, a good judge must remain uncorrupted by vice in youth and acquire knowledge of evil late through observation of others.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A claim establishing how legal judgment differs from medical practice regarding personal contamination with vice.",
+        "passageIds": [
+          "p-769929",
+          "p-770667",
+          "p-771417"
+        ]
+      },
+      {
+        "label": "Harmony of Music and Gymnastic",
+        "identityLabel": "balance_of_music_and_gymnastic",
+        "summary": "Music and gymnastic are both designed chiefly for the soul to tune and balance the spirited and philosophic elements, preventing ferocity on one side and effeminacy on the other.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A high-level synthesizing argument resolving the dual curriculum of music and gymnastic into psychological harmony.",
+        "passageIds": [
+          "p-774211",
+          "p-774628",
+          "p-777735"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "Restricting the state to the Dorian and Phrygian modes directly leads to rejecting complex, many-stringed instruments and flutes.",
+        "passageIds": [
+          "p-743880",
+          "p-744041"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The doctrine that rhythm and harmony mirror the soul underpins the view that musical education directly shapes moral character.",
+        "passageIds": [
+          "p-748265",
+          "p-750787"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The discussion of the limits of medicine prompts the comparison between the training of physicians and the moral qualification of judges.",
+        "passageIds": [
+          "p-769271",
+          "p-769929"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "The understanding of music's effect on the soul is extended and integrated with gymnastic to harmonize the spirited and philosophical elements.",
+        "passageIds": [
+          "p-773999",
+          "p-777735"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9tGbarWTJr-Sx9gPmNDRsQI",
+  "usage": {
+    "promptTokenCount": 15510,
+    "candidatesTokenCount": 1577,
+    "totalTokenCount": 17087,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15510
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1577
+      }
+    ]
+  },
+  "durationMs": 14832
+}

@@ -1,0 +1,68 @@
+import { GraphSchema, type Graph } from '../../shared/schemas';
+import { PROMPT_VERSION, type Candidate, type CandidateEdge, type Passage, type Review, type Synthesis } from './contracts';
+
+export function validateSynthesis(value: Synthesis, nodes: Candidate[]) {
+  const expected = new Set(nodes.map(n => n.id));
+  for (const [kind, groups] of [['theme', value.themes], ['identity', value.identities]] as const) {
+    const assignments = groups.flatMap(g => g.nodeIds);
+    if (assignments.length !== nodes.length || new Set(assignments).size !== nodes.length || assignments.some(id => !expected.has(id))) throw new Error(`Every occurrence must have exactly one ${kind}; assignments missing, duplicated, or unknown.`);
+  }
+  for (const edge of value.crossEdges) {
+    if (!expected.has(edge.source) || !expected.has(edge.target) || edge.source === edge.target) throw new Error('Invalid cross-edge endpoints.');
+    if (nodes.find(n => n.id === edge.source)!.chunkId === nodes.find(n => n.id === edge.target)!.chunkId) throw new Error('Cross edges must connect different chunks.');
+  }
+  return value;
+}
+
+export function assembleGraph(input: {
+  nodes: Candidate[]; edges: CandidateEdge[]; synthesis: Synthesis; reviews: Review[];
+  passages: Map<string, Passage>; text: string; fileHash: string; bookId: string;
+  graphVersion: string; model: string; totalChunks: number;
+}): Graph {
+  const { synthesis, passages, text, fileHash, bookId, graphVersion, model, totalChunks } = input;
+  const rejectedNodes = new Set(input.reviews.flatMap(r => r.rejectedNodes.map(n => n.id)));
+  const rejectedEdges = new Set(input.reviews.flatMap(r => r.rejectedEdges.map(e => e.id)));
+  const kept = input.nodes.filter(n => !rejectedNodes.has(n.id));
+  if (!kept.length) throw new Error('No supported occurrences survived review.');
+  const keptIds = new Set(kept.map(n => n.id));
+  const edges = input.edges.filter(e => !rejectedEdges.has(e.id) && keptIds.has(e.source) && keptIds.has(e.target));
+  const used = new Set([...kept.flatMap(n => n.passageIds), ...edges.flatMap(e => e.passageIds)]);
+  const anchors = [...used].map(id => {
+    const p = passages.get(id);
+    if (!p || text.slice(p.start, p.end) !== p.text) throw new Error(`Unresolved source anchor: ${id}`);
+    return { id, bookId, fileHash, extractionVersion: 'txt-lf-v1', locators: [{ kind: 'txt', startOffset: p.start, endOffset: p.end }], quote: p.text, prefix: text.slice(Math.max(0, p.start - 80), p.start), suffix: text.slice(p.end, p.end + 80), resolution: 'exact' };
+  });
+  const themeGroups = synthesis.themes.map(t => ({ ...t, nodeIds: t.nodeIds.filter(id => keptIds.has(id)) })).filter(t => t.nodeIds.length);
+  const territories = themeGroups.map((t, i) => {
+    const anchorIds = [...new Set(kept.filter(n => t.nodeIds.includes(n.id)).flatMap(n => n.passageIds))];
+    return { id: `theme-${i}`, label: t.label, centroidX: (i + 0.5) / themeGroups.length, anchorIds, coverage: t.nodeIds.length / kept.length, orderLocked: true, evidence: { anchorIds, rationale: `${t.rationale} Coverage is the fraction of retained occurrences, not source text. Theme distance is navigational.`, ruleVersion: PROMPT_VERSION, confidence: null } };
+  });
+  const identities = synthesis.identities.map((identity, i) => ({ id: `identity-${i}`, label: identity.label, summary: `Shared concept with separately anchored occurrences; individual claims and attribution remain distinct.`, occurrenceIds: identity.nodeIds.filter(id => keptIds.has(id)) })).filter(i => i.occurrenceIds.length);
+  const nodes = kept.map(n => {
+    const p = passages.get(n.passageIds[0])!;
+    const themeIndex = themeGroups.findIndex(t => t.nodeIds.includes(n.id));
+    return { id: n.id, identityId: identities.find(i => i.occurrenceIds.includes(n.id))!.id, kind: 'occurrence', label: n.label, summary: n.summary,
+      anchorIds: n.passageIds, themeTerritoryIds: [territories[themeIndex].id], structuralLevel: n.level,
+      position: { x: territories[themeIndex].centroidX, y: n.level, z: p.start / text.length },
+      evidence: { anchorIds: n.passageIds, rationale: `${n.rationale} X follows primary theme “${territories[themeIndex].label}”; Z derives from the first exact passage offset. Classification is a model interpretation.`, ruleVersion: PROMPT_VERSION, confidence: null },
+      sourceLabel: `${p.section} · ${n.sourceRole}${n.speaker ? ` · ${n.speaker}` : ''}`, sourceRole: n.sourceRole, speaker: n.speaker,
+    };
+  }).sort((a, b) => a.position.z - b.position.z || a.id.localeCompare(b.id));
+  const graph = GraphSchema.parse({
+    id: `${bookId}-map`, bookId, graphVersion, fileHash, extractionVersion: 'txt-lf-v1', sourceLength: text.length,
+    anchors, territories, identities, nodes,
+    edges: edges.map(e => ({ id: e.id, source: e.source, target: e.target, type: e.type, evidenceAnchorIds: e.passageIds, rationale: e.rationale, provenance: 'model_inferred' })),
+    analysis: { status: 'complete', provider: 'vertex_ai', model, promptVersion: PROMPT_VERSION, createdAt: new Date().toISOString(), completedChunks: totalChunks, totalChunks, processedCharacters: text.length, reviewStatus: 'model_reviewed', rejectedNodes: rejectedNodes.size, rejectedEdges: input.edges.length - edges.length },
+  });
+  validateGraphSource(graph, text, fileHash);
+  return graph;
+}
+
+export function validateGraphSource(graph: Graph, text: string, fileHash: string) {
+  if (graph.fileHash !== fileHash || graph.extractionVersion !== 'txt-lf-v1' || graph.sourceLength !== text.length) throw new Error('Saved analysis belongs to a different source version.');
+  for (const anchor of graph.anchors) {
+    const locator = anchor.locators[0];
+    if (locator.kind !== 'txt' || anchor.resolution !== 'exact' || text.slice(locator.startOffset, locator.endOffset) !== anchor.quote) throw new Error(`Saved analysis has an invalid exact quote: ${anchor.id}`);
+  }
+  return graph;
+}

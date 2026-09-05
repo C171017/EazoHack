@@ -1,0 +1,169 @@
+{
+  "value": {
+    "summary": "In Book V of Plato's Republic, the interlocutors interrupt Socrates to demand a full account of the community of women and children. Socrates outlines that women possess the same administrative and martial capacities as men and should receive identical training in gymnastics, music, and warfare. He then presents a radical program of communal living and regulated reproduction among the guardians, aiming to maximize state unity and eliminate private discord.",
+    "nodes": [
+      {
+        "label": "Interruption of Book V",
+        "identityLabel": "Demand for Communal Details",
+        "summary": "Adeimantus and the company halt Socrates' transition to discussing degenerate states, insisting on a thorough account of how women and children are held in common.",
+        "sourceRole": "dialogue",
+        "speaker": "Adeimantus",
+        "level": 4,
+        "rationale": "Organizes the entirety of Book V by pausing the previous inquiry into soul and regime corruptions to open the three major controversial proposals.",
+        "passageIds": [
+          "p-863503",
+          "p-863856",
+          "p-862361"
+        ]
+      },
+      {
+        "label": "Equal Duties and Training",
+        "identityLabel": "Female Guardian Education",
+        "summary": "Socrates argues from animal analogies that female guardians must participate equally in defense and governance, requiring identical education in music, gymnastics, and war.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Constructs the primary argument demonstrating that women must receive identical guardian education to perform shared civic roles.",
+        "passageIds": [
+          "p-869334",
+          "p-869966",
+          "p-870247"
+        ]
+      },
+      {
+        "label": "Difference of Nature Clarified",
+        "identityLabel": "Relevant Natural Differences",
+        "summary": "Socrates resolves the apparent contradiction regarding specialization by distinguishing between incidental biological differences and differences relevant to civic capacities.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Clarifies a core philosophical concept regarding how to distinguish relevant natural aptitudes from superficial differences.",
+        "passageIds": [
+          "p-875318",
+          "p-876701",
+          "p-877254"
+        ]
+      },
+      {
+        "label": "Distribution of Natural Gifts",
+        "identityLabel": "Universal Aptitude Across Sexes",
+        "summary": "Socrates posits that nature's governing and philosophical talents are distributed across both sexes, even if the female sex is held to be generally weaker.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Asserts a specific empirical pattern about the distribution of human faculties across sexes.",
+        "passageIds": [
+          "p-879718",
+          "p-880643",
+          "p-880940"
+        ]
+      },
+      {
+        "label": "Regulated Mating and Families",
+        "identityLabel": "Eugenic Family System",
+        "summary": "Socrates proposes that guardians share spouses and offspring, with state-regulated pairing by rigged lotteries, collective rearing, and collective kinship designations.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the complex logistical and social framework of eugenic mating festivals, infanticide/selection, and generational naming.",
+        "passageIds": [
+          "p-884384",
+          "p-890415",
+          "p-895987"
+        ]
+      },
+      {
+        "label": "Civic Unity as Supreme Good",
+        "identityLabel": "State Unity Through Shared Feeling",
+        "summary": "Socrates identifies internal cohesion through shared joy and pain as the greatest civic good, contrasting it with private fragmentation.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines the fundamental criteria of political health and unity that justifies the dissolution of private nuclear households.",
+        "passageIds": [
+          "p-897132",
+          "p-897597",
+          "p-897765"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The demand for clarification about family life prompts the specific inquiry into the role and training of women.",
+        "passageIds": [
+          "p-863856",
+          "p-868745"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "Disarming the objection about distinct natural duties justifies assigning women the same guardian functions.",
+        "passageIds": [
+          "p-875318",
+          "p-877254",
+          "p-881211"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "Applying the concept of relevant difference reveals that both men and women possess guardian temperaments.",
+        "passageIds": [
+          "p-877254",
+          "p-879718",
+          "p-880643"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "Communal education and military exercise lead directly to the necessity of communal living and regulated reproduction.",
+        "passageIds": [
+          "p-884270",
+          "p-884384",
+          "p-887309"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "Establishing unity and shared pleasure/pain as the supreme good provides the rational justification for communal wives and children.",
+        "passageIds": [
+          "p-896828",
+          "p-897132",
+          "p-897765"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BdKbapmwNtCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 15716,
+    "candidatesTokenCount": 1487,
+    "totalTokenCount": 17203,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15716
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1487
+      }
+    ]
+  },
+  "durationMs": 16063
+}

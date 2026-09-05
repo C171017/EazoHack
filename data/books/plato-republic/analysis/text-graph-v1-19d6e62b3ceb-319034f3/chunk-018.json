@@ -1,0 +1,174 @@
+{
+  "value": {
+    "summary": "This commentary section surveys key historical utopias and political ideals written in the tradition of Plato's Republic—including works by Cicero, St. Augustine, Dante, Thomas More, Bacon, and Campanella—before concluding with philosophical reflections on the nature and religious resonance of human ideals.",
+    "nodes": [
+      {
+        "label": "Cicero's Imitations of Plato",
+        "identityLabel": "Cicero and Plato",
+        "summary": "Cicero adapts Platonic concepts such as the vision of Er in the Somnium Scipionis and grounds his ideal state in Roman history, but his rhetorical style and unoriginal philosophy fall short of Plato's art.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Summarizes a specific comparative analysis of Cicero's imitation of Platonic forms.",
+        "passageIds": [
+          "p-532065"
+        ]
+      },
+      {
+        "label": "Augustine's De Civitate Dei",
+        "identityLabel": "Augustine and the City of God",
+        "summary": "Prompted by the sack of Rome, Augustine develops the ideal of a heavenly city while polemically contrasting pagan corruption with Christian truth, exhibiting deep Christian ethics but an uncritical use of classical sources.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Characterizes Augustine's major treatise as an ideal state framework born from the collapse of the Roman Empire.",
+        "passageIds": [
+          "p-533514",
+          "p-535715"
+        ]
+      },
+      {
+        "label": "Dante's Universal Empire",
+        "identityLabel": "Dante's De Monarchia",
+        "summary": "Dante's De Monarchia champions the necessity of a universal empire possessing divine legitimacy separate from the Papacy to establish earthly peace and freedom.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Details Dante's medieval political ideal and its rationale.",
+        "passageIds": [
+          "p-537204",
+          "p-539405"
+        ]
+      },
+      {
+        "label": "More's Utopia and Platonism",
+        "identityLabel": "More's Utopia",
+        "summary": "More draws heavily on Platonic ideals, adopting community of property, profound religious tolerance, and sharp social criticism to imagine a just commonwealth against contemporary European decay.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Presents More's philosophical and literary achievement within the Platonic tradition.",
+        "passageIds": [
+          "p-539533",
+          "p-544653",
+          "p-547094"
+        ]
+      },
+      {
+        "label": "Campanella's City of the Sun",
+        "identityLabel": "Campanella's Utopian Vision",
+        "summary": "Campanella's City of the Sun depicts an ideal state structured around communal property and families, natural scientific education, and public duty to alleviate social ignorance and misery.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Summarizes the specific institutional design and themes of Campanella's dialogue.",
+        "passageIds": [
+          "p-553528",
+          "p-555938",
+          "p-556820"
+        ]
+      },
+      {
+        "label": "The Function of Ideals",
+        "identityLabel": "Philosophy of Ideals",
+        "summary": "Ideals lift human conduct above daily routine and commercial self-interest, acting as elevated visions of unrealized perfection rather than immediate practical guides.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes a broader philosophical thesis on the purpose and impact of utopian and philosophical ideals.",
+        "passageIds": [
+          "p-559619",
+          "p-561816"
+        ]
+      },
+      {
+        "label": "Modern Dual Ideals and Faith",
+        "identityLabel": "Modern Ideals of Future",
+        "summary": "Modern thought centers on two great ideals: the future progress of humanity in this world and the eternal future of the individual, both harmonized when surrendered to divine will.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Defines two modern conceptual categories of human aspiration.",
+        "passageIds": [
+          "p-561988"
+        ]
+      },
+      {
+        "label": "The Divine Man and the Good",
+        "identityLabel": "The Idea of the Good",
+        "summary": "The Christian ideal of the Divine Man unites divine and human nature within the human heart, fulfilling the enduring aspiration toward the Platonic Idea of Good.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Synthesizes Platonic metaphysics with Christian theology as the apex of ideal conception.",
+        "passageIds": [
+          "p-564220"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "exemplifies",
+        "rationale": "More's depiction of an ideal society exemplifies the elevating function of philosophical ideals discussed in section VII.",
+        "passageIds": [
+          "p-539533",
+          "p-559619"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "exemplifies",
+        "rationale": "Campanella's imaginative city exemplifies the attempt to lift human society above prevailing ignorance and misery through an unrealized vision.",
+        "passageIds": [
+          "p-556820",
+          "p-559619"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "The general account of human ideals is developed into the specific dual ideals of the future of the human race and of the individual.",
+        "passageIds": [
+          "p-559619",
+          "p-561988"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "The modern dual ideals are complemented and culminated by the third ideal of the Divine Man and the supreme Idea of Good.",
+        "passageIds": [
+          "p-561988",
+          "p-564220"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "vdGbaqqbOq2dncoP5daroAE",
+  "usage": {
+    "promptTokenCount": 10495,
+    "candidatesTokenCount": 1602,
+    "totalTokenCount": 12097,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10495
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1602
+      }
+    ]
+  },
+  "durationMs": 16867
+}

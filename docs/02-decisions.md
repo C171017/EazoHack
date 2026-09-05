@@ -8,6 +8,7 @@
 | 编号 | 状态 | 结论 |
 | --- | --- | --- |
 | D01 | 已确认，替代旧提案 | 阅读 → 高亮 → 路由到一种或多种辅助 → 探索 → 保存到段落/地图；不再以图谱选概念作为求助起点 |
+| D03 | 输入/来源范围已确认；处理规模与部署待验证 | 当前接受纯文本与 PDF，全部随附内容保留。PDF 四层文字处理已获实现授权；阅读按需处理不能代替全量分析。详见 11-pdf-whole-book-analysis.md |
 | D04 | 已确认，替代 2D 默认 | 整书地图采用共享 3D 空间及三个规范二维投影：X×Y、X×Z、Y×Z；相反方向不另算视图，自由 3D 只用于总览与投影切换。当前使用 React/SVG 三维坐标投影与有出处的编辑样本；不代表整书分析已完成 |
 | D05 | 输入已确认；触发细节待决 | MVP 以左侧原书选中/高亮文字作为上下文。截图与周期采集在 MVP 外；节点/当前页不能替代选文 |
 | D06 | 产品范围已确认；实现深度待决 | 路由器可组合实时生成交互 UI、生成图片、SVG/概念图/思维导图、来源查找四路；撤销此前 SVG-only 默认范围 |
@@ -25,7 +26,7 @@
 | 2 / D09 | 来源查找覆盖书内还是外部？ | 演示暂提议书内检索相关段落；若批准外部检索，再选服务、核验来源及处理失败。不能把“书内提案”写成已定范围 |
 | 3 / D05 | 高亮后何时启动、如何组合/改选？ | 建议高亮后明确点击求助，显示路线理由并允许改选；规则、并发、数量、成本控制待定 |
 | 4 / D02 | 示例书、关系类型与 3D 渲染技术？ | 轴和投影已由 D04/D12 确认；仍需确定演示书、关系类型允许表、主题提取阈值与生产渲染器 |
-| 5 / D03 | 首发文件和整书规模？ | 有文字层、排版简单的 PDF；TXT 有余量再加；不接受静默截断 |
+| 5 / D03 | 整书处理预算、质量门槛与执行位置？ | TXT/PDF 与完整来源范围已确认；OCR/全文分析 provider、执行机、并发和规模仍待选/验证；不接受静默截断 |
 | 6 / D07 | 活动指标、空间书签与映射？ | 主动事件计数，避免段落到多概念重复计量；不表示理解程度 |
 | 7 / D11 | 模型版本、图片/检索服务及运行环境？ | 基础栈已锁；具体模型、服务商、图片 API、搜索服务和托管仍待后续决定与预检 |
 
@@ -34,6 +35,8 @@
 2026-09-05 | D04/D12 | 已确认 | 用户选择 3D 整书地图和排名第一的受约束动态轴方案：主题疆域 × 具体细节到组织性结构 × 来源进度；只保留 X×Y、X×Z、Y×Z 三个规范二维投影 | `README.md`、`docs/01-product.md`、`docs/02-decisions.md`、`docs/03-architecture.md`、`docs/04-stack.md`、`docs/05-plan.md`、`docs/06-scaffolding-handoff.md`、`docs/07-scaffold-status.md`、`docs/08-book-map-3d.md`
 
 ## Implementation authorization update
+
+2026-09-05 | D03 documentation clarification | 用户要求记录 PDF 与整书分析讨论。TXT/PDF 全来源与 PDF 四层处理是既有确认；独立全量任务、章节分块、证据合并为方案说明，服务端执行和工具 shortlist 仍为建议。已记录本地提取测量，纠正“粘连文字必然需要 OCR”和“整书转换不现实”的假设；本文不宣称整书分析已交付。详见 [11-pdf-whole-book-analysis.md](11-pdf-whole-book-analysis.md)。
 
 2026-09-05 | User authorized scaffolding, delegation, local dev and visual verification, limited to finalized decisions and neutral foundations for open parts. Republic source acquisition is complete; demo processing scale, graph semantics and full-book analysis remain unverified. No routing policy, providers, search scope, activity metric or hosting was selected.
 

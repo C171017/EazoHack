@@ -1,0 +1,206 @@
+{
+  "value": {
+    "summary": "In this commentary and analysis of Plato's Republic, Books II and III, the commentator traces Socrates' response to Glaucon and Adeimantus by founding an ideal state to examine justice, moving from primitive division of labor to the luxurious city, introducing the guardian class, and establishing strict moral and poetic censorship over theological myths, imitation, and musical modes.",
+    "nodes": [
+      {
+        "label": "The Ideal of Justice Apart from Circumstances",
+        "identityLabel": "ideal_justice_in_isolation",
+        "summary": "The commentator explains that the brothers ask Socrates to demonstrate that justice yields happiness even when stripped of external benefits, defending this method by showing that ideals serve as vital educational and moral benchmarks despite their paradoxical nature compared to everyday human experience.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes the philosophical problem and justification for abstracting justice from external rewards.",
+        "passageIds": [
+          "p-72757",
+          "p-73712"
+        ]
+      },
+      {
+        "label": "Analogy of State and Individual",
+        "identityLabel": "state_individual_analogy",
+        "summary": "Socrates proposes to locate justice by looking first at the larger structure of the city before examining the individual, reflecting early Greek political thought where ethical life is framed through civic community.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Identifies the core structural method used to investigate justice across the Republic.",
+        "passageIds": [
+          "p-76592",
+          "p-78325",
+          "p-79805"
+        ]
+      },
+      {
+        "label": "Genesis of the State and Division of Labour",
+        "identityLabel": "state_genesis_division_labour",
+        "summary": "Society originates from mutual necessity and the satisfaction of basic material needs, requiring specialization where individuals perform functions best aligned with their diverse natural capabilities.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Presents the specific theoretical claim on how economic cooperation generates the initial civic community.",
+        "passageIds": [
+          "p-80472",
+          "p-88474",
+          "p-89907"
+        ]
+      },
+      {
+        "label": "The Luxurious City and Origin of Guardians",
+        "identityLabel": "luxurious_city_and_guardians",
+        "summary": "The transition from the simple rustic community to a luxurious state brings complex arts, resource competition, and war, necessitating a specialized guardian class that must unite spirited courage with philosophical gentleness.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Traces the developmental step from material expansion to the military and philosophical protector class.",
+        "passageIds": [
+          "p-81950",
+          "p-84148"
+        ]
+      },
+      {
+        "label": "Censorship of Theological Narratives",
+        "identityLabel": "theological_censorship",
+        "summary": "Educational reform requires strict regulation of poetry and myth, decreeing that God must only be depicted as the cause of good and as wholly true and unchanging, to avoid corrupting young citizens with unworthy divine models.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Conceptualizes the fundamental theological and moral canons governing civic education.",
+        "passageIds": [
+          "p-84489",
+          "p-86156",
+          "p-86915"
+        ]
+      },
+      {
+        "label": "The True Lie in the Soul",
+        "identityLabel": "lie_in_the_soul",
+        "summary": "The commentator examines the distinction between the hateful lie in the soul—an involuntary deception regarding supreme moral and ontological truth—and medicinal verbal fictions regulated for state utility.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Formulates the specific Platonic concept contrasting internal ontological error with provisional verbal accommodation.",
+        "passageIds": [
+          "p-96168",
+          "p-100446"
+        ]
+      },
+      {
+        "label": "Restrictions on Poetic Imitation",
+        "identityLabel": "poetic_imitation_restriction",
+        "summary": "Guardians are barred from widespread dramatic imitation because assuming unworthy or diverse roles risks reshaping their character, thereby violating the cardinal principle of civic specialization.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Captures the argument directly applying the division of labor to poetic expression and dramatic performance.",
+        "passageIds": [
+          "p-103088",
+          "p-105278"
+        ]
+      },
+      {
+        "label": "Purification of Musical Harmony and Rhythm",
+        "identityLabel": "musical_purification",
+        "summary": "Musical modes and metres are purged of softness, sorrow, and excessive complexity, preserving only simple Dorian and Phrygian strains that cultivate courageous resilience and temperate self-mastery.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Specifies the musical regulations instituted to inculcate simplicity and harmony within the soul.",
+        "passageIds": [
+          "p-106127"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "Socrates handles the brothers' demand for an unadorned ideal of justice by turning methodologically to the state.",
+        "passageIds": [
+          "p-76592",
+          "p-79805"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "The decision to look for justice in the state leads directly to constructing the primitive state through division of labor.",
+        "passageIds": [
+          "p-79805",
+          "p-80472"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The primitive economic settlement expands into a luxurious city, creating conditions that require a standing military and guardian class.",
+        "passageIds": [
+          "p-81950",
+          "p-88474"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "Forming guardians with combined gentleness and spirit prompts the curricular censorship of poetic depictions of the gods.",
+        "passageIds": [
+          "p-84148",
+          "p-84489"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "The ban against depicting God as deceptive or evil is grounded in the broader principle condemning the lie in the soul.",
+        "passageIds": [
+          "p-86915",
+          "p-96168"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "The premise that one person cannot properly perform multiple distinct roles is invoked to forbid guardians from widespread dramatic imitation.",
+        "passageIds": [
+          "p-103088"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "The critique of multifaceted theatrical imitation extends directly into purifying complex musical instruments, metres, and harmonies.",
+        "passageIds": [
+          "p-105278",
+          "p-106127"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "f9GbaqGGG62dncoP5daroAE",
+  "usage": {
+    "promptTokenCount": 11896,
+    "candidatesTokenCount": 1884,
+    "totalTokenCount": 13780,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11896
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1884
+      }
+    ]
+  },
+  "durationMs": 15826
+}

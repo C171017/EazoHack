@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "In Book II, Socrates and his interlocutors transition from the simple, healthy city to a luxurious State requiring territorial expansion, war, and a dedicated guardian class. They analyze the guardian's nature—demanding spirited bravery paired with philosophical gentleness—and establish strict theological and poetic criteria for their education, excluding traditional myths depicting divine malevolence, mutability, or deceit.",
+    "nodes": [
+      {
+        "label": "The Luxurious State and War",
+        "identityLabel": "origin of the luxurious State and warfare",
+        "summary": "When Glaucon seeks comforts beyond the simple city, Socrates introduces the luxurious State; its need for unlimited wealth requires seizing neighbors' territory, making war inevitable.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the shift in the dialogue from basic social provision to territorial expansion and conflict.",
+        "passageIds": [
+          "p-679318",
+          "p-681589",
+          "p-681958"
+        ]
+      },
+      {
+        "label": "Specialization of the Guardian",
+        "identityLabel": "specialized military guardian class",
+        "summary": "Because one person cannot master multiple arts, war requires dedicated practitioners who possess natural aptitudes and undergo continuous training as guardians.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Applies the core principle of one man, one art specifically to military service.",
+        "passageIds": [
+          "p-682712",
+          "p-683143",
+          "p-684634"
+        ]
+      },
+      {
+        "label": "Spirited and Philosophical Nature",
+        "identityLabel": "guardian temperament: spirited yet philosophical",
+        "summary": "Guardians must combine spirit with gentleness toward fellow citizens, illustrated by well-bred dogs who distinguish friend from stranger through knowledge.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines the dual psychological concept necessary for a successful guardian class.",
+        "passageIds": [
+          "p-686092",
+          "p-686977",
+          "p-688126"
+        ]
+      },
+      {
+        "label": "Censorship of Early Stories",
+        "identityLabel": "censorship of tales in early education",
+        "summary": "Because young minds absorb impressions indelibly, the founders must censor poets and storytellers, rejecting myths of divine conflicts and crimes.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Introduces the policy and principle governing the education of guardians via poetry and music.",
+        "passageIds": [
+          "p-691325",
+          "p-690743",
+          "p-694303"
+        ]
+      },
+      {
+        "label": "God is the Author of Good Only",
+        "identityLabel": "first theological rule: God causes only good",
+        "summary": "Since God is good and not hurtful, God cannot cause evil; God is the author of only the good things in human life, not of all things.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "States the first explicit canonical theological claim governing poetic representations.",
+        "passageIds": [
+          "p-697118",
+          "p-696375",
+          "p-699706"
+        ]
+      },
+      {
+        "label": "Divine Immutability and Truthfulness",
+        "identityLabel": "second theological rule: God does not transform or deceive",
+        "summary": "Being already perfect, God neither alters form nor deceives mortals with lies or phantoms, establishing the second standard for poetry.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Establishes the second specific theological rule that poets must obey in the commonwealth.",
+        "passageIds": [
+          "p-702060",
+          "p-706026",
+          "p-706291"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The emergence of war from territorial enlargement necessitates the creation of a specialized soldier class.",
+        "passageIds": [
+          "p-682207",
+          "p-682712"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "The requirement for specialized guardians leads directly into determining their required natural temperament.",
+        "passageIds": [
+          "p-684634",
+          "p-685732",
+          "p-686092"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "Once the required guardian nature is identified, inquiry shifts to how they must be reared and educated through regulated stories.",
+        "passageIds": [
+          "p-688975",
+          "p-691325"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The principle that God is the author only of good provides theological criteria for judging which poetic stories must be censored.",
+        "passageIds": [
+          "p-697118",
+          "p-699706"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The rule that God does not change or deceive supplies the rationale for banning poetic tales of divine deception and shape-shifting.",
+        "passageIds": [
+          "p-703193",
+          "p-706291",
+          "p-707280"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "6dGbarybC8uUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 15860,
+    "candidatesTokenCount": 1461,
+    "totalTokenCount": 17321,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15860
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1461
+      }
+    ]
+  },
+  "durationMs": 13229
+}

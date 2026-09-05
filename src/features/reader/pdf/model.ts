@@ -1,6 +1,7 @@
 import { z } from 'zod';
+import { hasAmbiguousLayout } from './layout-quality';
 
-export const PDF_PIPELINE_VERSION = 'pdf-text-v1';
+export const PDF_PIPELINE_VERSION = 'pdf-text-v2';
 export const RectSchema = z.object({ x: z.number().min(0).max(1), y: z.number().min(0).max(1), width: z.number().positive().max(1), height: z.number().positive().max(1) }).strict()
   .refine(r => r.x + r.width <= 1.000001 && r.y + r.height <= 1.000001, 'Rectangle exceeds page');
 export type Rect = z.infer<typeof RectSchema>;
@@ -9,7 +10,7 @@ export const FragmentSchema = z.object({
   rect: RectSchema, confidence: z.number().min(0).max(100).nullable(),
 }).strict();
 export type Fragment = z.infer<typeof FragmentSchema>;
-export const TextSourceSchema = z.object({ text: z.string().max(200000), fragments: z.array(FragmentSchema).max(20000) }).strict().superRefine((s, ctx) => {
+export const TextSourceSchema = z.object({ text: z.string().max(200000), rawText: z.string().max(200000).optional(), fragments: z.array(FragmentSchema).max(20000) }).strict().superRefine((s, ctx) => {
   const ids = new Set<string>();
   for (const f of s.fragments) {
     if (ids.has(f.id) || f.end < f.start || s.text.slice(f.start, f.end) !== f.text) ctx.addIssue({ code: 'custom', message: 'Invalid fragment binding' });
@@ -17,18 +18,20 @@ export const TextSourceSchema = z.object({ text: z.string().max(200000), fragmen
   }
 });
 export type TextSource = z.infer<typeof TextSourceSchema>;
-export type Quality = { status: 'usable' | 'missing' | 'damaged'; reasons: string[]; ambiguousLayout: boolean };
+const QualitySchema=z.object({status:z.enum(['usable','missing','damaged']),reasons:z.array(z.string().max(500)).max(30),ambiguousLayout:z.boolean()}).strict();
+export type Quality = z.infer<typeof QualitySchema>;
 export const LayoutProposalSchema = z.object({
   order: z.array(z.string().max(100)).max(2000),
   headings: z.array(z.object({ fragmentId: z.string().max(100), level: z.number().int().min(1).max(6) }).strict()).max(100),
 }).strict();
 export type LayoutProposal = z.infer<typeof LayoutProposalSchema>;
-export type PageText = {
-  pageIndex: number; fileHash: string; language: string; version: string;
-  method: 'embedded' | 'ocr'; reason: 'good-embedded' | 'damaged-embedded' | 'missing-embedded' | 'manual-ocr';
-  native: TextSource; ocr: TextSource | null; source: TextSource; quality: Quality;
-  reviewRequired: boolean; layout: { proposal: LayoutProposal; provider: string } | null;
-};
+export const PageTextSchema=z.object({
+  pageIndex:z.number().int().nonnegative(),fileHash:z.string().regex(/^[a-f0-9]{64}$/),language:z.string().max(100),version:z.string().max(100),
+  method:z.enum(['embedded','ocr']),reason:z.enum(['good-embedded','damaged-embedded','missing-embedded','manual-ocr']),
+  native:TextSourceSchema,ocr:TextSourceSchema.nullable(),source:TextSourceSchema,quality:QualitySchema,reviewRequired:z.boolean(),
+  layout:z.object({proposal:LayoutProposalSchema,provider:z.string().max(500)}).strict().nullable(),retryToken:z.number().nonnegative().optional(),
+}).strict().refine(p=>JSON.stringify(p.source)===JSON.stringify(p.method==='ocr'?p.ocr:p.native),'Source must retain the chosen extraction');
+export type PageText=z.infer<typeof PageTextSchema>;
 
 /** Heuristics are warnings, never a guarantee of transcription accuracy. No Latin word test for CJK. */
 export function assessText(source: TextSource): Quality {
@@ -41,10 +44,7 @@ export function assessText(source: TextSource): Quality {
   if (latin.length > 60 && latin.filter(word => word.length === 1).length / latin.length > 0.65) reasons.push('Suspiciously fragmented letters');
   const measured = source.fragments.filter(f => f.confidence !== null);
   if (measured.length && measured.reduce((n, f) => n + f.confidence!, 0) / measured.length < 65) reasons.push('Low OCR confidence');
-  // Coexisting left/right runs with a gutter suggest columns or marginal notes.
-  const left = source.fragments.filter(f => f.text.trim() && f.rect.x < 0.45 && f.rect.x + f.rect.width < 0.62);
-  const right = source.fragments.filter(f => f.text.trim() && f.rect.x > 0.56);
-  const ambiguousLayout = left.length > 3 && right.length > 3 && right.some(r => left.some(l => Math.abs(l.rect.y - r.rect.y) < 0.025));
+  const ambiguousLayout = hasAmbiguousLayout(source.fragments);
   return { status: reasons.length ? 'damaged' : 'usable', reasons, ambiguousLayout };
 }
 

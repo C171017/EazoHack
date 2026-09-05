@@ -1,0 +1,223 @@
+{
+  "value": {
+    "summary": "In Book VIII, Socrates and his interlocutors resume the examination of the four imperfect constitutions and their corresponding human characters: timocracy, oligarchy, democracy, and tyranny. The dialogue traces the structural decay from the ideal State through timocracy and oligarchy into the beginnings of democracy, highlighting how specific internal divisions, appetites, and property relations drive political and psychological degeneration.",
+    "nodes": [
+      {
+        "label": "Four Imperfect Constitutions",
+        "identityLabel": "Constitutional Typology",
+        "summary": "Socrates resumes the project of comparing four principal inferior constitutions—Cretan/Spartan (timocracy), oligarchy, democracy, and tyranny—and their matching human characters to determine the relative happiness of justice versus injustice.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 4,
+        "rationale": "Organizes the overarching framework and enquiry of Book VIII across governments and psychological types.",
+        "passageIds": [
+          "p-1093090",
+          "p-1091618",
+          "p-1094735"
+        ]
+      },
+      {
+        "label": "State-Soul Correspondence",
+        "identityLabel": "Correspondence Principle",
+        "summary": "Governments mirror the dispositions of the individuals within them, as states arise not from 'oak and rock' but from human characters.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Serves as an analytical, reusable principle linking political forms directly to individual psychologies.",
+        "passageIds": [
+          "p-1094078",
+          "p-1094416",
+          "p-1094497"
+        ]
+      },
+      {
+        "label": "Fall of the Ideal State",
+        "identityLabel": "Origin of Timocracy",
+        "summary": "Due to sensory limitation, rulers miscalculate the geometrical number regulating births, leading to inferior progeny, the corruption of guardians, neglect of music, mixing of metals, and factional partition of common property into private land.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Presents a multi-stage causal argument explaining how aristocracy fragments internally into timocracy.",
+        "passageIds": [
+          "p-1097088",
+          "p-1099283",
+          "p-1101246"
+        ]
+      },
+      {
+        "label": "The Timocratic Character",
+        "identityLabel": "Timocratic Type",
+        "summary": "Dominated by the spirited element, the timocrat is ambitious, contentious, fond of war and physical culture, and torn between his easy-going father and complaints from his mother and servants.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Describes the specific psychological pattern and familial development of the timocratic individual.",
+        "passageIds": [
+          "p-1105610",
+          "p-1107246",
+          "p-1108104"
+        ]
+      },
+      {
+        "label": "Definition of Oligarchy",
+        "identityLabel": "Oligarchic Constitution",
+        "summary": "Oligarchy is defined as a regime founded on property valuation where the rich hold power and the poor are excluded, splitting the city into two hostile camps.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Formulates the core institutional definition and inherent civic divide of oligarchy.",
+        "passageIds": [
+          "p-1109832",
+          "p-1111480",
+          "p-1113039"
+        ]
+      },
+      {
+        "label": "The Drone Analogy",
+        "identityLabel": "Drone Concept",
+        "summary": "Unchecked accumulation and dispossession generate a class of non-productive citizens likened to drones in a hive—some stingless (paupers) and others possessing stings (criminals).",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Introduces a recurring theoretical metaphor used to diagnose civic decay and internal parasitism.",
+        "passageIds": [
+          "p-1115143",
+          "p-1114152",
+          "p-1115526"
+        ]
+      },
+      {
+        "label": "The Oligarchical Character",
+        "identityLabel": "Oligarchical Type",
+        "summary": "Witnessing the ruin of his timocratic father, the oligarchical youth dethrones spirit and ambition to enthrone avarice, subduing all unnecessary desires through fear and compulsion.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Identifies the psychological transition and behavioral traits of the miserly, wealth-focused man.",
+        "passageIds": [
+          "p-1117342",
+          "p-1117831",
+          "p-1120318"
+        ]
+      },
+      {
+        "label": "Transition to Democracy",
+        "identityLabel": "Origin of Democracy",
+        "summary": "The insatiable desire for riches in an oligarchy drives usury, ruins men of position, and fills the city with armed, disenfranchised paupers who discover the physical weakness and idleness of their rulers.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the socio-economic causes that make revolution and the shift from oligarchy to democracy inevitable.",
+        "passageIds": [
+          "p-1122228",
+          "p-1123213",
+          "p-1125219"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 0,
+        "type": "supports",
+        "rationale": "The principle that states mirror human dispositions provides the methodological ground for investigating the four regimes via matching individuals.",
+        "passageIds": [
+          "p-1094078",
+          "p-1094497"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 0,
+        "type": "exemplifies",
+        "rationale": "The dissolution of the ideal city into timocracy begins the sequential demonstration of the four inferior constitutional forms.",
+        "passageIds": [
+          "p-1096169",
+          "p-1101979"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 1,
+        "type": "exemplifies",
+        "rationale": "The emergence of the timocratic youth illustrates the correspondence between spirited character and the timocratic polity.",
+        "passageIds": [
+          "p-1106701",
+          "p-1108104"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 0,
+        "type": "develops",
+        "rationale": "The definition and defects of oligarchy develop the second stage of the constitutional descent framework.",
+        "passageIds": [
+          "p-1109729",
+          "p-1109832"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "The concept of drones elaborates the internal pathology and class polarization created by oligarchic wealth concentration.",
+        "passageIds": [
+          "p-1115143",
+          "p-1115787"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 1,
+        "type": "exemplifies",
+        "rationale": "The oligarchical man's internal prioritization of money exemplifies how the individual soul reflects the oligarchical constitution.",
+        "passageIds": [
+          "p-1118602",
+          "p-1121785"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 7,
+        "type": "supports",
+        "rationale": "The multiplication of disenfranchised 'stinging drones' creates the volatile revolutionary class that drives the collapse toward democracy.",
+        "passageIds": [
+          "p-1123213",
+          "p-1123554"
+        ]
+      },
+      {
+        "sourceIndex": 7,
+        "targetIndex": 0,
+        "type": "develops",
+        "rationale": "The transition to democracy carries forward the progressive unfolding of the four defective regimes.",
+        "passageIds": [
+          "p-1122016",
+          "p-1122228"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "PdKbap-jMp2Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 15989,
+    "candidatesTokenCount": 2087,
+    "totalTokenCount": 18076,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15989
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2087
+      }
+    ]
+  },
+  "durationMs": 18748
+}

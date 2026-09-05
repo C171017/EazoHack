@@ -1,0 +1,164 @@
+{
+  "value": {
+    "summary": "In this portion of Book VI, Socrates outlines how philosophy must be practiced to benefit rather than ruin the State, arguing that true philosophers can guide and reform cities once the public understands their genuine nature. He identifies the idea of the good as the supreme object of knowledge required of rulers, illustrating its role through the analogy of the sun and analyzing cognition using the divided line.",
+    "nodes": [
+      {
+        "label": "Education in Philosophy",
+        "identityLabel": "philosophic_curriculum",
+        "summary": "Socrates criticizes the prevailing superficial and premature study of philosophy, arguing instead for a curriculum that pairs youth with bodily training and reserves intensive dialectical study and retirement for mature years.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Presents a normative claim detailing how philosophical education should be sequenced throughout life.",
+        "passageIds": [
+          "p-982910",
+          "p-983785"
+        ]
+      },
+      {
+        "label": "Reconciliation with Multitude",
+        "identityLabel": "public_reconciliation",
+        "summary": "Socrates maintains that the multitude will cease their hostility toward philosophy if they are shown true philosophers, who contemplate unchanging divine order rather than engaging in petty quarrels.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Claims the general public can be persuaded once they distinguish true philosophers from corrupt pretenders.",
+        "passageIds": [
+          "p-987917",
+          "p-989214",
+          "p-989720"
+        ]
+      },
+      {
+        "label": "Philosopher-Ruler Feasibility",
+        "identityLabel": "philosopher_ruler",
+        "summary": "Socrates argues that establishing an ideal constitution is difficult but not impossible, provided at least one philosopher comes to power and drafts laws by gazing upon absolute virtues.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the conditions under which the political program of the dialogue can be realized.",
+        "passageIds": [
+          "p-986343",
+          "p-991184",
+          "p-994473"
+        ]
+      },
+      {
+        "label": "Supremacy of the Idea of Good",
+        "identityLabel": "idea_of_good",
+        "summary": "Socrates asserts that the idea of the good is the highest knowledge, without which all other knowledge and virtues lack utility and true value.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Introduces and defines the core metaphysical and ethical concept governing the entire philosophical system.",
+        "passageIds": [
+          "p-1001463",
+          "p-1003684",
+          "p-1004174"
+        ]
+      },
+      {
+        "label": "Analogy of the Sun",
+        "identityLabel": "sun_analogy",
+        "summary": "Socrates uses the sun as an offspring of the good, explaining that just as the sun illuminates the visible world and enables sight, the good illuminates the intelligible realm and causes truth and knowledge.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An explanatory model organizing the relations among the good, truth, knowledge, and their sensory counterparts.",
+        "passageIds": [
+          "p-1010240",
+          "p-1011533",
+          "p-1012839"
+        ]
+      },
+      {
+        "label": "The Divided Line",
+        "identityLabel": "divided_line",
+        "summary": "Socrates divides reality into visible and intelligible spheres, using a proportioned line to distinguish shadows and sensible objects from mathematical hypotheses and higher dialectical insight.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 4,
+        "rationale": "Provides a comprehensive cognitive and ontological framework categorizing all four stages of cognition.",
+        "passageIds": [
+          "p-1014039",
+          "p-1015203",
+          "p-1017137"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "A proper regimen of lifelong philosophical education creates rulers capable of ordering a state.",
+        "passageIds": [
+          "p-983785",
+          "p-986343"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "Reconciling the populace with the true philosopher removes the primary barrier to realizing the polity.",
+        "passageIds": [
+          "p-987917",
+          "p-994473"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "defines",
+        "rationale": "Knowledge of the idea of the good defines what makes a ruler competent to order the constitution.",
+        "passageIds": [
+          "p-1004174",
+          "p-1004445"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 3,
+        "type": "exemplifies",
+        "rationale": "The visible role of the sun serves as an analogical model illustrating the nature and power of the good.",
+        "passageIds": [
+          "p-1010240",
+          "p-1011533"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "The divided line formalizes and refines the distinction between visible and intelligible realms first introduced through the sun analogy.",
+        "passageIds": [
+          "p-1013547",
+          "p-1014039"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FdKbaq78IMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 16176,
+    "candidatesTokenCount": 1457,
+    "totalTokenCount": 17633,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16176
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1457
+      }
+    ]
+  },
+  "durationMs": 10863
+}

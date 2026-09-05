@@ -1,0 +1,190 @@
+{
+  "value": {
+    "summary": "In Book VII of the Republic, Socrates presents the Allegory of the Cave to illustrate human enlightenment and its absence. He examines the arduous ascent out of the cave toward the Idea of the Good, the obligation of enlightened philosophers to descend back to govern the city, and the curricular sciences—notably arithmetic and geometry—that redirect the eye of the soul from transient becoming to eternal being.",
+    "nodes": [
+      {
+        "label": "Allegory of the Cave",
+        "identityLabel": "Allegory of the Cave",
+        "summary": "Socrates describes human beings chained from childhood in an underground den, seeing only shadows projected by firelight on a wall and mistaking them for true realities.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 0,
+        "rationale": "Socrates presents a concrete narrative image of prisoners, chains, puppeteers, and shadows in a cave to illustrate enlightenment.",
+        "passageIds": [
+          "p-1019944",
+          "p-1020773",
+          "p-1021956"
+        ]
+      },
+      {
+        "label": "The Ascent to the Sun",
+        "identityLabel": "Ascent to the Sun",
+        "summary": "When dragged into the upper world, a prisoner is initially dazzled, gradually grows accustomed to reflections and nocturnal celestial bodies, and ultimately contemplates the sun as the cause of all things visible.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Socrates outlines the staged progression of perception and cognitive habituation experienced by the released prisoner.",
+        "passageIds": [
+          "p-1023476",
+          "p-1023851",
+          "p-1024333"
+        ]
+      },
+      {
+        "label": "Ascent of the Soul to Good",
+        "identityLabel": "Ascent of the Soul",
+        "summary": "Socrates decodes the allegory: the cave is the visible realm, the sun is the Idea of the Good, and the ascent represents the soul's arduous journey into the intellectual world.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Socrates synthesizes the allegorical details into a broader philosophical argument relating ontology, epistemology, and the Good.",
+        "passageIds": [
+          "p-1026827",
+          "p-1027792"
+        ]
+      },
+      {
+        "label": "Turning the Soul's Eye",
+        "identityLabel": "Conversion of the Soul",
+        "summary": "Education is not putting knowledge into a soul lacking it, but the conversion and turning round of the whole soul's existing organ of vision from the realm of becoming to that of being.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Socrates articulates an abstract, reusable theoretical model of education as conversion rather than transmission.",
+        "passageIds": [
+          "p-1029815",
+          "p-1030048",
+          "p-1030513"
+        ]
+      },
+      {
+        "label": "Philosophers Must Rule",
+        "identityLabel": "Philosopher-Ruler Duty",
+        "summary": "Philosophers who have attained contemplation of the Good must be compelled to descend back into the cave to govern, ensuring the welfare of the whole commonwealth rather than their own private bliss.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An overarching normative political argument justifying why philosophers must assume political governance despite preferring contemplation.",
+        "passageIds": [
+          "p-1033301",
+          "p-1033624",
+          "p-1034256"
+        ]
+      },
+      {
+        "label": "Arithmetic as Soul-Turner",
+        "identityLabel": "Study of Arithmetic",
+        "summary": "Arithmetic and calculation draw the soul toward true being because sensible perceptions of unity evoke contradictions (the one and the many), compelling pure intellect to resolve them.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines arithmetic's philosophical role as an intellectual catalyst that provokes thought through perceptual contradiction.",
+        "passageIds": [
+          "p-1042011",
+          "p-1046899",
+          "p-1049377"
+        ]
+      },
+      {
+        "label": "Geometry Directed to Being",
+        "identityLabel": "Philosophical Geometry",
+        "summary": "While geometry has practical military uses, its true higher philosophical aim is knowledge of the eternal, making the vision of the idea of good easier by compelling the soul toward being.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Clarifies the core nature and target of geometry as contemplation of eternal reality rather than mere practical measurement.",
+        "passageIds": [
+          "p-1052099",
+          "p-1053312",
+          "p-1053482"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The liberation and ascent out of the cave follows sequentially from the initial description of the chained prisoners.",
+        "passageIds": [
+          "p-1022174",
+          "p-1023476"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "exemplifies",
+        "rationale": "The narrative of the cave serves as the concrete allegorical figure for the soul's ascent to the intelligible world.",
+        "passageIds": [
+          "p-1026827"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The interpretation of the cave ascent directly grounds Socrates' definition of education as turning the soul's eye from darkness to light.",
+        "passageIds": [
+          "p-1029815",
+          "p-1030048"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "The account of descending back into the dark after experiencing the beatific vision grounds the civic mandate requiring philosophers to govern.",
+        "passageIds": [
+          "p-1027792",
+          "p-1033301",
+          "p-1034256"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "Arithmetic is explicitly identified as the specific discipline capable of effecting the turning round of the soul.",
+        "passageIds": [
+          "p-1038127",
+          "p-1038788",
+          "p-1042011"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "Geometry is introduced as the kindred subsequent branch of knowledge that similarly draws the soul toward eternal being.",
+        "passageIds": [
+          "p-1051425",
+          "p-1052099",
+          "p-1053482"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "JNKbavTlBpqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 15801,
+    "candidatesTokenCount": 1795,
+    "totalTokenCount": 17596,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15801
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1795
+      }
+    ]
+  },
+  "durationMs": 13852
+}

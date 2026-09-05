@@ -1,0 +1,204 @@
+{
+  "value": {
+    "summary": "This segment of Book VIII traces the genesis and characteristics of democracy, the psychology of the democratic character, and the inevitable decay of democratic liberty into tyranny.",
+    "nodes": [
+      {
+        "label": "Nature and Rise of Democracy",
+        "identityLabel": "democracy_definition",
+        "summary": "Democracy originates when the impoverished populace revolts against and expels or executes their wealthy rulers, instituting equal power, shared freedom, and offices assigned by lot.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines the fundamental nature, origin, and institutional mechanisms of democracy.",
+        "passageIds": [
+          "p-1126863",
+          "p-1127144",
+          "p-1126806"
+        ]
+      },
+      {
+        "label": "Democratic Freedom and Diversity",
+        "identityLabel": "democratic_liberty",
+        "summary": "Democratic governance prioritizes unchecked individual liberty and speech, producing a state with every variety of human character and assorted constitutions.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Describes the general features and resulting societal variety produced by excessive democratic freedom.",
+        "passageIds": [
+          "p-1127593",
+          "p-1127860",
+          "p-1128485"
+        ]
+      },
+      {
+        "label": "Division of Desires",
+        "identityLabel": "pleasure_classification",
+        "summary": "Pleasures and desires are bifurcated into necessary desires, which are beneficial and essential to life, and unnecessary desires, which are dispensable, costly, and injurious to virtue.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Establishes a theoretical categorization of human appetites essential to psychological and political analysis.",
+        "passageIds": [
+          "p-1131535",
+          "p-1131878",
+          "p-1132748"
+        ]
+      },
+      {
+        "label": "The Democratic Individual",
+        "identityLabel": "democratic_soul",
+        "summary": "The democratic character emerges from an oligarchic upbringing as unnecessary desires overcome restraint, leading to a life governed by shifting whims, lack of hierarchy, and indiscriminate indulgence.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Synthesizes the concepts of necessary/unnecessary desires with the parallel between the state and the soul.",
+        "passageIds": [
+          "p-1133716",
+          "p-1137553",
+          "p-1138837"
+        ]
+      },
+      {
+        "label": "Excessive Liberty Breeds Tyranny",
+        "identityLabel": "liberty_to_tyranny",
+        "summary": "An insatiable thirst for freedom dissolves all forms of social and legal restraint, causing an extreme reaction where absolute liberty transforms into extreme subjugation.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Articulates the central political principle explaining the systemic transition from democratic anarchy to authoritarian control.",
+        "passageIds": [
+          "p-1141216",
+          "p-1144784",
+          "p-1145274"
+        ]
+      },
+      {
+        "label": "Three Classes in a Democracy",
+        "identityLabel": "democratic_class_structure",
+        "summary": "Democracies comprise three groups: parasitic spendthrifts and demagogues, the orderly and wealthy class that is despoiled, and the working masses who follow those who provide distributions.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Outlines the sociological breakdown and economic tensions within a democratic commonwealth.",
+        "passageIds": [
+          "p-1146512",
+          "p-1147548",
+          "p-1147990"
+        ]
+      },
+      {
+        "label": "The Protector's Metamorphosis",
+        "identityLabel": "tyrant_emergence",
+        "summary": "Emerging as a champion of the multitude against the wealthy, the demagogue sheds citizen blood through trumped-up charges, demands a personal bodyguard, and eventually rules as a complete tyrant.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Integrates the social class tensions into an explanatory account of the protector's transformation into an armed tyrant.",
+        "passageIds": [
+          "p-1149590",
+          "p-1150097",
+          "p-1151201"
+        ]
+      },
+      {
+        "label": "The Tyrant's Rule and Parricide",
+        "identityLabel": "tyrannical_maintenance",
+        "summary": "To maintain power, the tyrant instigates continual warfare, purges capable and virtuous citizens, hires mercenary guards, and violently subjugates the very citizenry that empowered him.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Details the concrete measures and practical tactics deployed by the tyrant to preserve absolute rule.",
+        "passageIds": [
+          "p-1152816",
+          "p-1154020",
+          "p-1159089"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The political establishment of equal shares and popular governance leads directly to general liberty and diversity in the polis.",
+        "passageIds": [
+          "p-1127301",
+          "p-1127593"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The theoretical division between necessary and unnecessary desires provides the mechanism for the young oligarch's transformation into a democratic soul.",
+        "passageIds": [
+          "p-1133251",
+          "p-1133716"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "The unconstrained freedom and absence of authority detailed in democratic life escalate until they provoke an opposite political extreme.",
+        "passageIds": [
+          "p-1141216",
+          "p-1144331",
+          "p-1144784"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "The factional warfare between the despoiled wealthy and the populace creates the role for a champion whom the masses nurse into tyranny.",
+        "passageIds": [
+          "p-1148946",
+          "p-1149590"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "The broader systemic dynamic of liberty passing into slavery is concretely realized through the rise of the demagogic protector.",
+        "passageIds": [
+          "p-1145274",
+          "p-1149590"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "Once the protector secures a bodyguard and seizes absolute power, he proceeds to purge rivals, provoke external conflicts, and oppress his subjects.",
+        "passageIds": [
+          "p-1151965",
+          "p-1152816"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "PtKbav-nBJqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 16285,
+    "candidatesTokenCount": 1891,
+    "totalTokenCount": 18176,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16285
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1891
+      }
+    ]
+  },
+  "durationMs": 16400
+}

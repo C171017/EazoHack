@@ -1,0 +1,155 @@
+{
+  "value": {
+    "summary": "This section covers the commentary and analysis on Plato's Republic Books VIII and IX, addressing the mathematical interpretation of the Platonic number of births, the rise and misery of the tyrannical character, the tripartite evaluation of pleasure, the numerical gap between royal and tyrannical happiness, and the tripartite allegorical image of the human soul.",
+    "nodes": [
+      {
+        "label": "The Platonic Number of Births",
+        "identityLabel": "platonic_number",
+        "summary": "Analysis of the mathematical problem in Book VIII, identifying the number 216 as the cycle of human generations and examining its Pythagorean proportions and harmonies.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "An overarching analysis organizing mathematical details and historical commentary on the cycle of generation.",
+        "passageIds": [
+          "p-321015",
+          "p-320032",
+          "p-328363"
+        ]
+      },
+      {
+        "label": "Genesis of the Tyrant",
+        "identityLabel": "tyrannical_man",
+        "summary": "The progression of the tyrannical soul from lawless nocturnal appetites into dominant passion, madness, and widespread injustice.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Presents a reusable psychological and ethical concept traced through individual degeneration.",
+        "passageIds": [
+          "p-332742",
+          "p-333925",
+          "p-335063"
+        ]
+      },
+      {
+        "label": "Misery of the Tyrant",
+        "identityLabel": "tyrant_misery",
+        "summary": "Demonstration that the tyrannical man, especially when ruling a public tyranny, is entirely enslaved, terrified, and the most miserable of individuals.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Articulates the claim regarding the comparative misery of the tyrannical life relative to the royal master.",
+        "passageIds": [
+          "p-338614",
+          "p-337847",
+          "p-340598"
+        ]
+      },
+      {
+        "label": "Hierarchy of Pleasures",
+        "identityLabel": "tripartite_pleasure",
+        "summary": "Evaluation of the three forms of pleasure belonging to reason, passion, and appetite, judged through the superior experience and reason of the philosopher.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "An argument comparing the types of life and principles of the soul to determine authentic pleasure.",
+        "passageIds": [
+          "p-341636",
+          "p-343509",
+          "p-345710"
+        ]
+      },
+      {
+        "label": "Interval of King and Tyrant",
+        "identityLabel": "number_729",
+        "summary": "Calculation placing the happiness of the royal man 729 times above that of the tyrant, using the formula of a cubed relation.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "A specific formulaic claim quantifying the gap between the just ruler and the tyrant.",
+        "passageIds": [
+          "p-346744",
+          "p-352659"
+        ]
+      },
+      {
+        "label": "Tripartite Image of the Soul",
+        "identityLabel": "image_of_soul",
+        "summary": "The allegorical figure of the soul combining a many-headed beast, a lion, and an inner human figure under human form to distinguish justice from injustice.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "A distinct conceptual model illustrating internal psychic governance and justice.",
+        "passageIds": [
+          "p-348394",
+          "p-349594"
+        ]
+      },
+      {
+        "label": "The Heavenly Pattern",
+        "identityLabel": "heavenly_pattern",
+        "summary": "The concept of an ideal city existing as a celestial pattern according to which an individual orders their own internal life, irrespective of earthly existence.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "A normative conceptual framework directing political and personal action.",
+        "passageIds": [
+          "p-351123"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "The account of the development of the tyrannical personality leads directly to the assessment of his extreme misery in private and public station.",
+        "passageIds": [
+          "p-335063",
+          "p-338614"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "The philosophical ranking of pure versus shadowy pleasures provides the basis for mathematically calculating the tyrant's distance from authentic happiness.",
+        "passageIds": [
+          "p-343509",
+          "p-346744"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "The internal harmony shown by subjecting the beast and lion to the inner man culminates in living by the pattern of the ideal city.",
+        "passageIds": [
+          "p-349594",
+          "p-351123"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ndGbavG9Ba2dncoP5daroAE",
+  "usage": {
+    "promptTokenCount": 12194,
+    "candidatesTokenCount": 1348,
+    "totalTokenCount": 13542,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12194
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1348
+      }
+    ]
+  },
+  "durationMs": 19433
+}

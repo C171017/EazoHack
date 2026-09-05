@@ -1,0 +1,162 @@
+{
+  "value": {
+    "summary": "In Book VII of Plato's Republic, Socrates corrects the curriculum of the guardian rulers by placing solid geometry before astronomy and treating both astronomy and harmonics as abstract sciences rather than empirical observations. He then identifies dialectic as the highest science that directly ascends to the idea of the good without sensory reliance or unexamined assumptions. To avoid the corruption and lawlessness of early dialectical debate, Socrates outlines a rigorous sequence of education, practical governance, and final philosophical contemplation, concluding with the practical founding of the ideal city.",
+    "nodes": [
+      {
+        "label": "Solid Geometry Curriculum",
+        "identityLabel": "solid_geometry",
+        "summary": "Socrates corrects the order of instruction, explaining that three-dimensional geometry of solids in themselves must precede the study of solids in motion.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Specifies a particular curricular correction concerning three-dimensional study.",
+        "passageIds": [
+          "p-1055885",
+          "p-1057503"
+        ]
+      },
+      {
+        "label": "Abstract Astronomy and Harmonics",
+        "identityLabel": "abstract_astronomy_harmonics",
+        "summary": "True astronomy and harmonics must leave visible skies and audible sounds behind, utilizing mathematical and rational problems instead of empirical observation.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Articulates a reusable method across mathematical sister sciences.",
+        "passageIds": [
+          "p-1059579",
+          "p-1061383",
+          "p-1064015"
+        ]
+      },
+      {
+        "label": "Dialectic as Coping-Stone",
+        "identityLabel": "dialectic_definition",
+        "summary": "Dialectic is established as the supreme science that discards hypotheses to ascend directly to pure being and the essential nature of the good through reason alone.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Synthesizes the mathematical studies and defines the ultimate philosophical method.",
+        "passageIds": [
+          "p-1066053",
+          "p-1070332",
+          "p-1073704"
+        ]
+      },
+      {
+        "label": "Danger of Premature Dialectic",
+        "identityLabel": "premature_dialectic_parable",
+        "summary": "Using the analogy of a supposititious son, Socrates shows how youthful exposure to dialectic can lead to lawlessness and skepticism when traditional moral codes are refuted.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A concrete allegorical argument illustrating the perils of introducing young minds to disputation.",
+        "passageIds": [
+          "p-1081658",
+          "p-1083717",
+          "p-1084954"
+        ]
+      },
+      {
+        "label": "Curricular Ages and Service",
+        "identityLabel": "guardian_education_timeline",
+        "summary": "Socrates details the progressive stages of testing and training: unforced preliminary studies in youth, physical training, integration at twenty, dialectic at thirty, fifteen years of public office, and ultimate contemplation at fifty.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "An overarching schema and schedule structuring the life path of the guardians.",
+        "passageIds": [
+          "p-1079942",
+          "p-1080590",
+          "p-1087263"
+        ]
+      },
+      {
+        "label": "Founding of the Ideal State",
+        "identityLabel": "founding_mechanism",
+        "summary": "Socrates proposes that philosopher-kings will found the just city most readily by sending away everyone over ten and educating the young in new laws.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "A specific practical proposal concluding Book VII's political implementation discussion.",
+        "passageIds": [
+          "p-1089513",
+          "p-1090167"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "Solid geometry is placed in the curriculum directly prior to the abstract treatment of solids in motion.",
+        "passageIds": [
+          "p-1057503"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The mathematical arts serve as preparatory exercises and handmaids to the supreme study of dialectic.",
+        "passageIds": [
+          "p-1066947",
+          "p-1070332"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "The danger of youthful lawlessness justifies delaying the formal study of dialectic until age thirty.",
+        "passageIds": [
+          "p-1084655",
+          "p-1084834"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "Dialectic is situated as the culminating phase of education before practical civic governance and philosophical contemplation.",
+        "passageIds": [
+          "p-1080590",
+          "p-1087263"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The fully trained philosopher-rulers provide the necessary leadership to practically institute and order the just city.",
+        "passageIds": [
+          "p-1087263",
+          "p-1089513"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "M9KbatabI6Gdx9gP1MGDcA",
+  "usage": {
+    "promptTokenCount": 14544,
+    "candidatesTokenCount": 1449,
+    "totalTokenCount": 15993,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14544
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1449
+      }
+    ]
+  },
+  "durationMs": 10379
+}

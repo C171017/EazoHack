@@ -90,6 +90,13 @@ const Evidence = z.object({ rationale: Text, ruleVersion: Id, confidence: Unit.n
 export const GraphSchema = z.object({
   id: Id, bookId: Id, graphVersion: Id, fileHash: Text, extractionVersion: Id,
   sourceLength: z.number().int().positive(),
+  analysis: z.object({
+    status: z.literal('complete'), provider: z.literal('vertex_ai'), model: ShortText,
+    promptVersion: Id, createdAt: IsoDate, completedChunks: z.number().int().positive(),
+    totalChunks: z.number().int().positive(), processedCharacters: z.number().int().positive(),
+    reviewStatus: z.literal('model_reviewed'), rejectedNodes: z.number().int().nonnegative(),
+    rejectedEdges: z.number().int().nonnegative(),
+  }).strict().optional(),
   anchors: z.array(SourceAnchorSchema).max(1000),
   territories: z.array(z.object({ id: Id, label: ShortText, centroidX: Unit, anchorIds: UniqueIds.refine(ids => ids.length > 0), coverage: Unit, evidence: Evidence, orderLocked: z.literal(true) }).strict()).min(1).max(7),
   identities: z.array(z.object({ id: Id, label: ShortText, summary: Text, occurrenceIds: UniqueIds.refine(ids => ids.length > 0) }).strict()).max(500),
@@ -99,10 +106,13 @@ export const GraphSchema = z.object({
     structuralLevel: z.number().int().min(0).max(4).nullable(),
     position: z.object({ x: Unit.nullable(), y: z.number().int().min(0).max(4).nullable(), z: Unit.nullable() }).strict(),
     evidence: Evidence, sourceLabel: ShortText,
+    sourceRole: z.enum(['dialogue', 'commentary', 'paratext']).optional(),
+    speaker: ShortText.nullable().optional(),
   }).strict()).max(500),
   edges: z.array(z.object({ id: Id, source: Id, target: Id, type: ShortText, evidenceAnchorIds: UniqueIds.refine(ids => ids.length > 0), rationale: Text, provenance: z.enum(['book_supported', 'model_inferred', 'editorial', 'mock']) }).strict()).max(1500),
 }).strict().superRefine((graph, ctx) => {
   const fail = (message: string) => ctx.addIssue({code:'custom',message});
+  if(graph.analysis && (graph.analysis.completedChunks !== graph.analysis.totalChunks || graph.analysis.processedCharacters !== graph.sourceLength)) fail('Complete analysis must cover all chunks and source characters');
   const anchors = new Map(graph.anchors.map(a => [a.id,a]));
   const nodes = new Map(graph.nodes.map(n => [n.id,n]));
   const identities = new Map(graph.identities.map(n => [n.id,n]));
@@ -136,6 +146,8 @@ export const MapViewSchema = z.object({
   yaw: z.number().finite(), pitch: z.number().finite().min(-Math.PI/2).max(Math.PI/2),
   x: z.number().finite(), y: z.number().finite(), zoom: z.number().min(0.5).max(2.5),
   selectedNodeId: Id.nullable(), readerAnchorId: Id.nullable().default(null), sourceScope: z.enum(['excerpt','book']),
+  themeFilter: Id.nullable().optional(), roleFilter: z.enum(['dialogue','commentary','paratext']).nullable().optional(),
+  nodePage: z.number().int().nonnegative().optional(),
 }).strict();
 export type MapView = z.infer<typeof MapViewSchema>;
 

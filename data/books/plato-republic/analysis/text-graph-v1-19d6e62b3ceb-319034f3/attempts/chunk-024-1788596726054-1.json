@@ -1,0 +1,143 @@
+{
+  "value": {
+    "summary": "In Book III, Socrates continues the reform of education for the guardians by examining poetic content, narrative style, and musical modes. He argues for censoring descriptions of the underworld, divine lamentations, and immoral deeds to foster courage and temperance, restricting lying solely to rulers for the public good, limiting narrative imitation so guardians remain dedicated to a single virtuous craft, and expelling pantomimic poets and relaxed musical harmonies in favor of austere, disciplined forms.",
+    "nodes": [
+      {
+        "label": "Censorship of the Underworld",
+        "identityLabel": "Censorship of Underworld Tales",
+        "summary": "Tales depicting the world below as terrible and lamentable must be expunged so that guardians do not fear death or prefer slavery to dying in battle.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Level 1 marks a prescriptive thematic claim concerning which narratives are permissible in youth education.",
+        "passageIds": [
+          "p-708129",
+          "p-708594",
+          "p-710079"
+        ]
+      },
+      {
+        "label": "Rulers' Privilege of Lying",
+        "identityLabel": "Noble Lie and Truthfulness",
+        "summary": "Truth is strictly valued, meaning private citizens may not lie, whereas rulers alone retain the privilege of using falsehoods like medicine for the public good.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Level 1 reflects a specific political and moral rule established for the governing of the state.",
+        "passageIds": [
+          "p-715690",
+          "p-715958",
+          "p-716852"
+        ]
+      },
+      {
+        "label": "Modes of Poetic Narration",
+        "identityLabel": "Poetic Narration vs Imitation",
+        "summary": "Poetic style is divided into simple narrative, pure imitation (as in tragedy and comedy), or a combination of both (as in epic poetry).",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Level 2 represents a reusable conceptual taxonomy defining the forms of poetic discourse.",
+        "passageIds": [
+          "p-725915",
+          "p-727574",
+          "p-730025"
+        ]
+      },
+      {
+        "label": "Restriction of Imitation",
+        "identityLabel": "Specialization and Mimesis",
+        "summary": "Because one person can perform only one role well, guardians must not imitate diverse or base characters, lest imitation become second nature and corrupt their virtue.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Level 3 structures an argument connecting human psychological development and social specialization to aesthetic censorship.",
+        "passageIds": [
+          "p-731400",
+          "p-732749",
+          "p-735480"
+        ]
+      },
+      {
+        "label": "Exclusion of Pantomimic Poets",
+        "identityLabel": "Exile of the Versatile Poet",
+        "summary": "The versatile poet who imitates all manners and sounds will be revered as holy but expelled from the city in favor of the austere storyteller who imitates virtue alone.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Level 1 is a concrete institutional policy applied to versatile artistic performers.",
+        "passageIds": [
+          "p-739766"
+        ]
+      },
+      {
+        "label": "Regulation of Musical Harmonies",
+        "identityLabel": "Permissible Musical Harmonies",
+        "summary": "Melody must conform to words, requiring the elimination of sorrowful and relaxed harmonies like the Lydian and Ionian, leaving only martial and temperate modes.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Level 1 articulates a specific educational regulation concerning musical modes.",
+        "passageIds": [
+          "p-741569",
+          "p-741958",
+          "p-742459"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The conceptual distinction between narration and imitation provides the analytical basis for restricting guardian mimesis.",
+        "passageIds": [
+          "p-730696",
+          "p-731400"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "The rule that guardians must not engage in manifold or degraded imitation directly justifies expelling the pantomimic poet.",
+        "passageIds": [
+          "p-739187",
+          "p-739766"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "The rejection of lamentation in poetic tales directly motivates the prohibition of sorrowful musical harmonies that accompany words.",
+        "passageIds": [
+          "p-741636",
+          "p-741958"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "6dGbasuUDZqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 17413,
+    "candidatesTokenCount": 1369,
+    "totalTokenCount": 18782,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 17413
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1369
+      }
+    ]
+  },
+  "durationMs": 14694
+}

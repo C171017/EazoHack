@@ -1,0 +1,188 @@
+{
+  "value": {
+    "summary": "In Republic Book X, Socrates and Glaucon examine the nature of imitative poetry, establishing its metaphysical distance from truth and its corrupting psychological effects on the soul, before turning toward the rewards of virtue and the immortality of the soul.",
+    "nodes": [
+      {
+        "label": "Rejection of Imitative Poetry",
+        "identityLabel": "banishment of imitation",
+        "summary": "Socrates affirms that imitative poetry must be excluded from the ideal commonwealth, arguing that knowledge of its true character is the sole remedy against its harmful effects.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "States an overarching conclusion organizing the critique of mimetic art.",
+        "passageIds": [
+          "p-1215142",
+          "p-1215403"
+        ]
+      },
+      {
+        "label": "The Three Beds and Makers",
+        "identityLabel": "three removes from reality",
+        "summary": "Socrates illustrates the hierarchy of reality using three levels of beds: the ideal form made by God, the physical bed fashioned by the craftsman, and the painter's two-dimensional appearance.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "An explanatory pattern and analogy classifying degrees of reality.",
+        "passageIds": [
+          "p-1219876",
+          "p-1220256",
+          "p-1221498"
+        ]
+      },
+      {
+        "label": "The Imitator as Thrice Removed",
+        "identityLabel": "mimetic distance from truth",
+        "summary": "Socrates argues that mimetic artists, including tragic poets like Homer, create only appearances of appearances without genuine knowledge of reality or craft.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A generalized conceptual definition derived from the bed analogy.",
+        "passageIds": [
+          "p-1221711",
+          "p-1222817",
+          "p-1229528"
+        ]
+      },
+      {
+        "label": "Using, Making, and Imitating",
+        "identityLabel": "hierarchy of knowledge in arts",
+        "summary": "Socrates distinguishes three relations to any instrument: the user who possesses knowledge, the maker who gains right belief from the user, and the imitator who possesses neither.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A conceptual framework explaining the distribution of knowledge across human activities.",
+        "passageIds": [
+          "p-1231661",
+          "p-1232714",
+          "p-1233259"
+        ]
+      },
+      {
+        "label": "Appeal to the Inferior Soul",
+        "identityLabel": "mimetic corruption of soul",
+        "summary": "Imitation appeals to the emotionally volatile, unmeasured part of the soul rather than the rational and calculating element, undermining inner moral order.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the psychological and ethical arguments demonstrating imitation's internal harm.",
+        "passageIds": [
+          "p-1236050",
+          "p-1241049",
+          "p-1245182"
+        ]
+      },
+      {
+        "label": "The Ancient Quarrel",
+        "identityLabel": "philosophy vs poetry",
+        "summary": "Socrates notes the longstanding conflict between philosophy and poetry, permitting poetry's return only if its defenders can prove its moral and political usefulness.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A broad thematic debate framing the relationship between rational inquiry and cultural mythmaking.",
+        "passageIds": [
+          "p-1246643",
+          "p-1247974",
+          "p-1248462"
+        ]
+      },
+      {
+        "label": "Immortality of the Soul",
+        "identityLabel": "soul's immortality",
+        "summary": "Socrates turns the conversation from earthly virtue to its eternal significance, proposing to an astonished Glaucon that the human soul is immortal and imperishable.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 4,
+        "rationale": "Introduces the overarching metaphysical premise that organizes the ultimate stakes of virtue.",
+        "passageIds": [
+          "p-1250336",
+          "p-1250672",
+          "p-1250751"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The tripartite hierarchy of the beds establishes that the painter or imitator stands third from the original truth.",
+        "passageIds": [
+          "p-1220256",
+          "p-1221604"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "Distinguishing user, maker, and imitator further refines why the imitator lacks genuine understanding of reality.",
+        "passageIds": [
+          "p-1231661",
+          "p-1232714"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "Because the imitator deals merely with appearances and not reality, their productions align with the unreflective, irrational part of the soul.",
+        "passageIds": [
+          "p-1236050",
+          "p-1241049"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 0,
+        "type": "supports",
+        "rationale": "The demonstration that poetry feeds and strengthens the soul's unruly passions justifies its exclusion from the city.",
+        "passageIds": [
+          "p-1241049",
+          "p-1245642"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The political exclusion of poetry leads into the formal terms of the ancient quarrel between poetry and philosophy.",
+        "passageIds": [
+          "p-1246643",
+          "p-1247974"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "Concluding the dispute over poetry prompts Socrates to address the far greater stakes of virtue across eternity.",
+        "passageIds": [
+          "p-1249642",
+          "p-1250336"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "UtKbasm3DMuZvdAP_dLD-AE",
+  "usage": {
+    "promptTokenCount": 16546,
+    "candidatesTokenCount": 1443,
+    "totalTokenCount": 17989,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16546
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1443
+      }
+    ]
+  },
+  "durationMs": 14361
+}

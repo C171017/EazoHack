@@ -1,0 +1,56 @@
+{
+  "value": {
+    "summary": "Front matter for Benjamin Jowett's third edition of Plato's Republic, including title pages, publication information, and a dedication to former pupils at Balliol College.",
+    "nodes": [
+      {
+        "label": "Title and Edition Details",
+        "identityLabel": "Edition Paratext",
+        "summary": "Title page information presenting Plato's Republic translated into English with introduction, analysis, and index by B. Jowett, in its revised third edition.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 0,
+        "rationale": "Concrete bibliographic details of the work and publication edition.",
+        "passageIds": [
+          "p-161",
+          "p-209",
+          "p-418"
+        ]
+      },
+      {
+        "label": "Dedication to Former Pupils",
+        "identityLabel": "Jowett's Dedication",
+        "summary": "Jowett inscribes the volume in gratitude to his former pupils at Balliol College and the University of Oxford across forty-six years.",
+        "sourceRole": "paratext",
+        "speaker": "B. Jowett",
+        "level": 0,
+        "rationale": "A concrete personal dedication marking the publication of the volume.",
+        "passageIds": [
+          "p-548"
+        ]
+      }
+    ],
+    "edges": []
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "b9GbaqWTOeuBncoPjarP6AU",
+  "usage": {
+    "promptTokenCount": 1979,
+    "candidatesTokenCount": 324,
+    "totalTokenCount": 2303,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1979
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 324
+      }
+    ]
+  },
+  "durationMs": 6037
+}

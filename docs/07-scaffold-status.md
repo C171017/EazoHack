@@ -1,5 +1,11 @@
 # Scaffold implementation status
 
+## PDF / whole-book documentation clarification · 2026-09-05
+
+TXT and PDF, complete supplied-source preservation, and the four-stage PDF text pipeline are now authorized scope; older entries below describing PDF/OCR as deferred refer to their recorded delivery stage. Reader work is proceeding separately. This documentation pass does not certify that implementation or automatic whole-book graph generation.
+
+See [PDF and whole-book analysis](11-pdf-whole-book-analysis.md) for independent reader/analysis jobs, embedded extraction before OCR, direct-PDF model input, chapter discovery, and evidence-bound merging. Read-only measurements: all 628 pages extracted with pypdf in 5.14 seconds (spacing issues); 12 pdfplumber pages in 0.49 seconds (about 25 seconds for 628 pages by extrapolation only). No OCR/graph latency or accuracy acceptance is claimed. Provider and processing-host recommendations remain unselected by this documentation update.
+
 Updated 2026-09-05. The current user authorized scaffolding, subagents, local development and visual verification, while leaving unresolved product choices open. This update supersedes the earlier documentation-only authorization. The raw Republic download was not edited.
 
 ## Delivered

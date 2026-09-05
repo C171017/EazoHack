@@ -1,0 +1,137 @@
+{
+  "value": {
+    "summary": "This section of the index and editorial apparatus presents extensive thematic entries and editorial commentary on key topics in Plato's Republic, focusing especially on music, poetry, psychology, and the structure of the ideal state.",
+    "nodes": [
+      {
+        "label": "Ancient Music and Education",
+        "identityLabel": "Ancient Music in Education",
+        "summary": "The editor details how music among the ancients encompassed mental culture and preparatory education before gymnastic training, highlighting Plato's curriculum across the Republic and Laws.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes the broad philosophical understanding and educational stages of music in Platonic thought.",
+        "passageIds": [
+          "p-1354597",
+          "p-1356792"
+        ]
+      },
+      {
+        "label": "Index: The Philosopher",
+        "identityLabel": "Philosopher and Ruler",
+        "summary": "An extensive index entry outlining citations across the Republic regarding the qualities, hazards, corruptions, and ruling duties of the philosopher.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Presents a structured catalog of textual citations detailing the philosopher's role and character.",
+        "passageIds": [
+          "p-1362524",
+          "p-1363813"
+        ]
+      },
+      {
+        "label": "Critique of Poetry",
+        "identityLabel": "Platonic Critique of Poetry",
+        "summary": "An editorial essay tracing Plato's examination of poetry's educational and cultural role, culminating in the demand for censorship or expulsion in the ideal commonwealth.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Synthesizes Plato's multi-dialogue perspective on poetry, imitation, and political order.",
+        "passageIds": [
+          "p-1366617",
+          "p-1368817"
+        ]
+      },
+      {
+        "label": "Index: The Ruler",
+        "identityLabel": "The Ruler in the State",
+        "summary": "An index entry indexing references on the testing, qualification, and philosopher-king duties of rulers in the ideal republic.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 1,
+        "rationale": "A reference list of claims and passages defining the ruler's obligations.",
+        "passageIds": [
+          "p-1374420"
+        ]
+      },
+      {
+        "label": "Platonic Psychology",
+        "identityLabel": "Psychology and Immortality",
+        "summary": "An editorial discussion examining the Republic's tripartite soul, the four intellectual faculties, and the arguments and myths surrounding the soul's immortality and transmigration.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes key philosophical doctrines on soul division, cognitive faculties, and eschatology.",
+        "passageIds": [
+          "p-1382197",
+          "p-1384396"
+        ]
+      },
+      {
+        "label": "Index: The State",
+        "identityLabel": "Structure of the State",
+        "summary": "An index list referencing the development, social classes, governance, corruptions, and unity of the state in the Republic.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Provides reference entries on the state's civic architecture and forms.",
+        "passageIds": [
+          "p-1386991"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "The discussion of musical education and simplicity leads into the broader evaluation and censorship of poetic arts.",
+        "passageIds": [
+          "p-1354597",
+          "p-1366617"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The nature and training of the philosopher provide the basis for who is qualified to rule the state.",
+        "passageIds": [
+          "p-1362524",
+          "p-1374420"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "The tripartite psychology of the soul supplies the foundational model for the classes and virtues of the state.",
+        "passageIds": [
+          "p-1382197",
+          "p-1386991"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "YNKbapjcBtCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 22263,
+    "candidatesTokenCount": 1141,
+    "totalTokenCount": 23404,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 22263
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1141
+      }
+    ]
+  },
+  "durationMs": 10854
+}

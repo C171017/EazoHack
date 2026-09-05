@@ -35,6 +35,8 @@ This is a scaffold, not a completed four-provider product. The route checkboxes 
 
 ## Still open / deferred
 
+TXT and PDF input with all supplied content retained are now confirmed scope; PDF reader implementation is being handled separately. On-demand reading preparation does not cover whole-book analysis. See the [PDF extraction and graph design note](docs/11-pdf-whole-book-analysis.md) for the independent full-source job, direct-PDF alternatives, measured extraction timings, and open OCR/execution choices. This note is not implementation acceptance.
+
 Routing triggers, overrides and combination policy; actual models/providers; source-discovery scope; route demo depth; full-book parsing/analysis and relation taxonomy; large-graph rendering capacity; PDF viewer integration; activity metrics; deployment. The spatial contract and three axis meanings are now decided in [the 3D book-map contract](docs/08-book-map-3d.md). The Republic source is acquired; processing scale and coverage have not been claimed. No external model, image, or search services are configured.
 
 ## Documentation
@@ -50,6 +52,7 @@ Routing triggers, overrides and combination policy; actual models/providers; sou
 | [Implementation status](docs/07-scaffold-status.md) | Actual delivered scope and validation |
 | [3D book-map contract](docs/08-book-map-3d.md) | Approved axes, projections, adaptive rules and spatial data requirements |
 | [3D implementation](docs/09-3d-implementation.md) | Renderer comparison, delivered interactions, data and persistence migration |
+| [PDF and whole-book analysis](docs/11-pdf-whole-book-analysis.md) | Full-source scope, extraction/OCR, chapter discovery, graph evidence, timing measurements and open choices |
 | [Book source](data/books/plato-republic/SOURCE.md) | Unmodified source and checksum |
 
 The newer documentation was recovered from the existing local handoff worktree. The current user's instruction supersedes its historical documentation-only authorization and first-gate stop language; unresolved product decisions remain open.

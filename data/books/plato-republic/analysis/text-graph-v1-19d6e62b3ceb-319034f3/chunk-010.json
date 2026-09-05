@@ -1,0 +1,176 @@
+{
+  "value": {
+    "summary": "In this analytical overview of Republic Book VII, Socrates outlines the curriculum for philosopher-rulers, moving through arithmetic, geometry, astronomy, and harmonics to dialectic. The commentary then examines the pedagogical progression from sensible contradictions to pure abstraction, the dual disorders of intellectual eyesight, and the dangers of early dialectic.",
+    "nodes": [
+      {
+        "label": "Number as Conductor to Being",
+        "identityLabel": "arithmetic_intellect",
+        "summary": "Arithmetic and calculation are introduced as the primary disciplines that draw the mind from becoming to being by presenting sensible contradictions that require abstract reflection.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the role of arithmetic as the foundational intellectual study lifting the mind toward truth.",
+        "passageIds": [
+          "p-248920",
+          "p-251121"
+        ]
+      },
+      {
+        "label": "Curriculum of Solids and Motion",
+        "identityLabel": "mathematical_curriculum",
+        "summary": "Socrates arranges the mathematical disciplines in order: plane geometry, solid geometry, astronomy, and harmonics, emphasizing their value for the idea of the good rather than mere practical utility.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Specifies the structured sequence of mathematical sciences leading up to dialectic.",
+        "passageIds": [
+          "p-252870",
+          "p-253814",
+          "p-255204"
+        ]
+      },
+      {
+        "label": "Dialectic as Coping-Stone",
+        "identityLabel": "dialectic_supremacy",
+        "summary": "Dialectic is described as the science of absolute truth that dispenses with hypotheses, leading the intellect to the idea of the good as the coping-stone of all sciences.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An overarching argument for the unique status and function of dialectic above the preliminary sciences.",
+        "passageIds": [
+          "p-257856",
+          "p-259146"
+        ]
+      },
+      {
+        "label": "Selection and Lifespan Scheme",
+        "identityLabel": "guardian_education_timeline",
+        "summary": "Rulers must possess diligence and ability, proceeding from playful study in youth through fragmented sciences, five years of dialectic at thirty, fifteen years in the den, and culmination at fifty.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Defines the multi-stage educational and civic timeline for training philosopher-kings.",
+        "passageIds": [
+          "p-261123",
+          "p-263322",
+          "p-265520"
+        ]
+      },
+      {
+        "label": "Two Aims of Platonic Thought",
+        "identityLabel": "realizing_connecting_abstractions",
+        "summary": "The commentary identifies Plato's twin aims as realizing abstractions and connecting them, noting that mathematics aids the mind in drawing away from sense despite potential detachment from facts.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Editorial assessment organizing Plato's broad philosophical program regarding universals and abstraction.",
+        "passageIds": [
+          "p-268244",
+          "p-272641"
+        ]
+      },
+      {
+        "label": "Dual Disorders of Eyesight",
+        "identityLabel": "disordered_eyesight_analogy",
+        "summary": "The political allegory of the cave is illustrated through two kinds of disordered eyesight: theorists blinded by broad abstractions when facing practical affairs, and practical men blinded when confronted with universal principles.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "A thematic pattern connecting the cave allegory to modern and ancient political profiles.",
+        "passageIds": [
+          "p-276257",
+          "p-277947",
+          "p-279461"
+        ]
+      },
+      {
+        "label": "Peril of the Supposititious Son",
+        "identityLabel": "supposititious_son_analogy",
+        "summary": "Premature exposure to dialectical questioning is likened to a supposititious son who loses respect for his reputed parents, causing young students to discard morality and doubt all solid principles.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "A concrete analogy explaining the moral and intellectual hazards of teaching philosophy to the young too early.",
+        "passageIds": [
+          "p-263322",
+          "p-280675",
+          "p-282876"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "Arithmetic establishes the need to move past sensation, which the sequence of geometry, astronomy, and harmonics carries forward.",
+        "passageIds": [
+          "p-251121",
+          "p-252870"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The mathematical arts serve as the indispensable prelude preparing the intellect for dialectic.",
+        "passageIds": [
+          "p-257856",
+          "p-259146"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "Dialectic is instituted as the core advanced study in the guardian education schedule.",
+        "passageIds": [
+          "p-259146",
+          "p-263322"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The risk of moral decay shown by the supposititious son analogy justifies postponing dialectic to age thirty.",
+        "passageIds": [
+          "p-263322",
+          "p-280675"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "Plato's use of arithmetic to evoke reflection grounds the commentary's claim that his philosophy aims to realize abstractions.",
+        "passageIds": [
+          "p-251121",
+          "p-268244"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ndGbaovQJp2AktwPl_yY2Q8",
+  "usage": {
+    "promptTokenCount": 11557,
+    "candidatesTokenCount": 1589,
+    "totalTokenCount": 13146,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11557
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1589
+      }
+    ]
+  },
+  "durationMs": 12790
+}

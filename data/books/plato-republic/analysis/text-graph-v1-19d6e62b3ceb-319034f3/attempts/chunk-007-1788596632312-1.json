@@ -1,0 +1,132 @@
+{
+  "value": {
+    "summary": "This commentary and analysis traces the transition from Republic Book IV to Book V, examining the priority of duty over utilitarian happiness, the identification of the cardinal virtues and tripartite soul, the definition of justice as internal harmony, and the extension of shared civic roles and education to women.",
+    "nodes": [
+      {
+        "label": "Duty Precedes Utility",
+        "identityLabel": "duty_and_happiness",
+        "summary": "The commentary evaluates the relation of duty to happiness, arguing that duty and moral right form the true initial foundation of ethics and politics, whereas utilitarian happiness acts as a secondary principle or corrective.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes a major philosophical debate comparing ancient Platonic ethics with modern utilitarianism.",
+        "passageIds": [
+          "p-144671",
+          "p-144159",
+          "p-146982"
+        ]
+      },
+      {
+        "label": "Four Cardinal Virtues",
+        "identityLabel": "cardinal_virtues",
+        "summary": "Socrates locates wisdom in the guardians, courage in the soldiers, temperance across all classes, and isolates justice by eliminating the other three virtues.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Presents the foundational conceptual scheme of the four virtues in the perfect state.",
+        "passageIds": [
+          "p-150162",
+          "p-150738",
+          "p-151285"
+        ]
+      },
+      {
+        "label": "Justice as Internal Order",
+        "identityLabel": "justice_definition",
+        "summary": "Justice is defined as every class and every element doing its own business, functioning as the comprehensive harmony and health of the state and the soul.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Formulates the core thesis defining justice and comparing it with temperance and health.",
+        "passageIds": [
+          "p-153193",
+          "p-154946",
+          "p-162170"
+        ]
+      },
+      {
+        "label": "Tripartite Soul",
+        "identityLabel": "tripartite_soul",
+        "summary": "Using the principle of contradiction and instances of conflicting impulses, Socrates establishes three distinct principles in the human soul: the rational, the spirited or passionate, and the concupiscent.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A multi-part psychological framework demonstrating the isomorphism between the state and the individual.",
+        "passageIds": [
+          "p-157875",
+          "p-160069",
+          "p-165017"
+        ]
+      },
+      {
+        "label": "Equal Roles for Women",
+        "identityLabel": "equality_of_women_guardians",
+        "summary": "Socrates argues that natural differences between men and women do not affect aptitude for governance or warfare, requiring equal education and duties for female guardians.",
+        "sourceRole": "commentary",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Presents the claim that sex is an accidental difference regarding political and military capacity.",
+        "passageIds": [
+          "p-175141",
+          "p-173414",
+          "p-174485"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "The deduction of the cardinal virtues leads directly to the isolation and characterization of justice as the coordinating remainder.",
+        "passageIds": [
+          "p-150162",
+          "p-153193"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The tripartite division of the soul provides psychological grounds for defining justice as the proper harmony of internal elements.",
+        "passageIds": [
+          "p-157875",
+          "p-162170"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "The division of labour defining justice is tested and refined when addressing whether women share the same essential natures and employments.",
+        "passageIds": [
+          "p-153193",
+          "p-174485",
+          "p-175141"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "j9GbaqSJK4KDncoPj9OUkAM",
+  "usage": {
+    "promptTokenCount": 11359,
+    "candidatesTokenCount": 1192,
+    "totalTokenCount": 12551,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11359
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1192
+      }
+    ]
+  },
+  "durationMs": 9839
+}

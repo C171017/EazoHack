@@ -1,0 +1,161 @@
+{
+  "value": {
+    "summary": "This section covers the commentary and analysis of Republic Books III and IV, focusing on the roles of music and gymnastic, the balance of reason and passion, the selection and mythic origins of rulers, and the governance and unity of the ideal state.",
+    "nodes": [
+      {
+        "label": "Soul and Physical Training",
+        "identityLabel": "gymnastic_and_soul",
+        "summary": "Gymnastics must be kept simple and in service of the soul, avoiding excessive medical coddling and luxury.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "States a direct principle regarding bodily training and the avoidance of medical dependency.",
+        "passageIds": [
+          "p-109585",
+          "p-111783"
+        ]
+      },
+      {
+        "label": "Harmonizing Reason and Passion",
+        "identityLabel": "music_gymnastic_balance",
+        "summary": "Music and gymnastics are both primarily directed to the soul to achieve harmony between its spirited and philosophic elements.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes the relation between bodily and musical arts under a unified psychological argument.",
+        "passageIds": [
+          "p-113721",
+          "p-115915"
+        ]
+      },
+      {
+        "label": "The Myth of the Metals",
+        "identityLabel": "noble_lie_and_classes",
+        "summary": "The state employs the fiction of earthborn men with natures of gold, silver, brass, and iron to legitimate class rank and merit-based transposition.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 2,
+        "rationale": "Describes a reusable civic myth and conceptual mechanism for structuring social hierarchy.",
+        "passageIds": [
+          "p-117557",
+          "p-128607",
+          "p-130805"
+        ]
+      },
+      {
+        "label": "Guardian Communal Discipline",
+        "identityLabel": "guardian_property_rules",
+        "summary": "Guardians are denied private property, money, and luxury so that they remain protective watchdogs rather than predatory tyrants.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "States the institutional rule forbidding wealth and property among the guardians.",
+        "passageIds": [
+          "p-119083"
+        ]
+      },
+      {
+        "label": "Critique of Platonic Medicine",
+        "identityLabel": "critique_of_medicine_and_diet",
+        "summary": "Commentary notes Plato's failure to appreciate gradual healing, dietetics, and the nuanced interaction of body and mind.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 1,
+        "rationale": "Offers an editorial critique challenging Plato's strict rejection of medicine and diet.",
+        "passageIds": [
+          "p-135971",
+          "p-133897"
+        ]
+      },
+      {
+        "label": "Good of the Whole State",
+        "identityLabel": "whole_state_happiness",
+        "summary": "In Book IV, Socrates replies to Adeimantus that the objective of the state is the happiness and excellence of the whole, not the exceptional indulgence of any single class.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Presents the central political principle that arbitrates class roles against individual privilege.",
+        "passageIds": [
+          "p-137785",
+          "p-139980"
+        ]
+      },
+      {
+        "label": "Primacy of Education over Laws",
+        "identityLabel": "education_vs_legislation",
+        "summary": "Detailed legislation is useless without proper education, whereas sound education and preservation of musical forms render minute legal enactments unnecessary.",
+        "sourceRole": "commentary",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Forms a core organizational thesis contrasting systemic education with symptomatic legalism.",
+        "passageIds": [
+          "p-140763",
+          "p-142482"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "The discussion of bodily regimen and gymnastics is refined into the broader theory of balancing passion and reason in the soul.",
+        "passageIds": [
+          "p-113721"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 0,
+        "type": "challenges",
+        "rationale": "The commentary criticizes Plato's abrupt dismissal of diet and the management of bodily health.",
+        "passageIds": [
+          "p-135971",
+          "p-109585"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "Depriving guardians of wealth ensures they serve the state as a whole rather than acting as self-serving tyrants.",
+        "passageIds": [
+          "p-119083",
+          "p-137785"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "Properly balanced education in music and gymnastic establishes inner order, eliminating the need for complex external laws.",
+        "passageIds": [
+          "p-113721",
+          "p-140763"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "f9GbatHdHdyCncoPo7vS-Qg",
+  "usage": {
+    "promptTokenCount": 11198,
+    "candidatesTokenCount": 1365,
+    "totalTokenCount": 12563,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11198
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1365
+      }
+    ]
+  },
+  "durationMs": 10739
+}

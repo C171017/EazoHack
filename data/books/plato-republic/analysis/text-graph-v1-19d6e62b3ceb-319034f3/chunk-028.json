@@ -1,0 +1,168 @@
+{
+  "value": {
+    "summary": "In Book IV, Socrates identifies political justice as each class fulfilling its proper work, applies this principle to the individual soul via the principle of non-contradiction, and concludes that justice constitutes the healthy internal harmony of soul and State.",
+    "nodes": [
+      {
+        "label": "Justice in the State",
+        "identityLabel": "Political Justice",
+        "summary": "Justice in the city is identified as the condition wherein each class—trader, auxiliary, and guardian—performs its proper task without meddling in the duties of others.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An overarching definition and political argument integrating the roles of the three civic classes.",
+        "passageIds": [
+          "p-831955",
+          "p-828602",
+          "p-831626"
+        ]
+      },
+      {
+        "label": "Principle of Non-Contradiction",
+        "identityLabel": "Principle of Non-Contradiction",
+        "summary": "The same entity cannot act or be acted upon in contrary manners simultaneously within the same part and in relation to the same object.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "A foundational logical principle formulated to differentiate multiple components within an apparent single entity.",
+        "passageIds": [
+          "p-836466",
+          "p-836892",
+          "p-837402"
+        ]
+      },
+      {
+        "label": "Tripartite Soul",
+        "identityLabel": "Tripartite Division of Soul",
+        "summary": "The soul is composed of three distinct principles—rational, spirited, and appetitive—mirrored by conflicting impulses such as Leontius's anger against his desires.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "An organizing structural theory of the human psyche derived through logical tests and behavioural observations.",
+        "passageIds": [
+          "p-845386",
+          "p-846869",
+          "p-849077"
+        ]
+      },
+      {
+        "label": "Individual Justice as Harmony",
+        "identityLabel": "Individual Justice",
+        "summary": "Justice in the individual is defined not merely by outward deeds, but by an inner harmony where reason governs, spirit aids, and appetites are contained.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the virtues into a unified internal psychological state analogous to the just State.",
+        "passageIds": [
+          "p-856473",
+          "p-851513",
+          "p-854000"
+        ]
+      },
+      {
+        "label": "Virtue as Soul Health",
+        "identityLabel": "Virtue-Health Analogy",
+        "summary": "Virtue and vice in the soul correspond directly to health and disease in the body, rendering the question of whether injustice is profitable absurd.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "A culminating argument settling the profitability of justice versus injustice through somatic analogy.",
+        "passageIds": [
+          "p-859615",
+          "p-858701",
+          "p-860234"
+        ]
+      },
+      {
+        "label": "Five Constitutions and Souls",
+        "identityLabel": "Correspondence of Constitutions",
+        "summary": "Socrates establishes that there are five distinct forms of the State matching five forms of the soul, beginning with aristocracy/monarchy.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 4,
+        "rationale": "Sets up the large-scale framework classifying regime types and psychic varieties explored in subsequent books.",
+        "passageIds": [
+          "p-861665",
+          "p-861207",
+          "p-861963"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "The principle that opposites cannot coexist simultaneously in the same part proves the soul has multiple distinct principles.",
+        "passageIds": [
+          "p-836466",
+          "p-844373",
+          "p-845386"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "The model of justice as class division of labour in the city is translated directly to internal psychological harmony in the individual.",
+        "passageIds": [
+          "p-832239",
+          "p-833879",
+          "p-856473"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The identification of three soul parts provides the constitutive elements required for individual inner order and justice.",
+        "passageIds": [
+          "p-850642",
+          "p-851513",
+          "p-856473"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "Inner psychic order and justice are conceptualized as the natural health and well-being of the soul.",
+        "passageIds": [
+          "p-859361",
+          "p-859615"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "The structural parallel between individual souls and state constitutions forms the baseline for classifying five forms of each.",
+        "passageIds": [
+          "p-861542",
+          "p-861665"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BdKbarv5Jp2Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 15350,
+    "candidatesTokenCount": 1438,
+    "totalTokenCount": 16788,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15350
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1438
+      }
+    ]
+  },
+  "durationMs": 12605
+}

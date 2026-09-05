@@ -1,0 +1,177 @@
+{
+  "value": {
+    "summary": "In Book V (476A-480A), Socrates distinguishes the true philosopher from sight-lovers and opinion-holders by analyzing the ontological status of absolute Forms versus sensory particulars, formally defining faculties by their correlative spheres and establishing opinion as an intermediate capacity between knowledge of being and ignorance of not-being.",
+    "nodes": [
+      {
+        "label": "Unity of Forms and the Many",
+        "identityLabel": "form_particular_distinction",
+        "summary": "Socrates establishes that opposing concepts such as beauty and ugliness, or just and unjust, are each individually one, yet appear manifold due to their combination with bodies, actions, and other things.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "States a foundational ontological claim about Forms being single while their manifestations appear multiple.",
+        "passageIds": [
+          "p-934256",
+          "p-934184"
+        ]
+      },
+      {
+        "label": "Philosophers versus Dreamers",
+        "identityLabel": "philosophers_vs_lovers_of_sights",
+        "summary": "Lovers of sights and sounds substitute beautiful particulars for absolute beauty, resembling dreamers, whereas true philosophers apprehend absolute beauty itself without confusing it with participating objects.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Organizes the core conceptual contrast between sensory observers and genuine philosophers.",
+        "passageIds": [
+          "p-935097",
+          "p-934770",
+          "p-935644"
+        ]
+      },
+      {
+        "label": "Definition of a Faculty",
+        "identityLabel": "definition_of_faculty",
+        "summary": "Faculties are defined as internal powers distinguished not by perceptual features like shape or color, but solely by their distinctive sphere of operation and resultant effect.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 2,
+        "rationale": "Introduces a generalized, reusable analytical definition used to classify cognitive capacities.",
+        "passageIds": [
+          "p-938311",
+          "p-938038"
+        ]
+      },
+      {
+        "label": "Knowledge and Opinion as Separate",
+        "identityLabel": "knowledge_opinion_separation",
+        "summary": "Because knowledge is infallible and opinion is fallible, they constitute distinct faculties and therefore must relate to distinct subject matters.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Constructs an argument linking the difference in cognitive error to distinct ontological domains.",
+        "passageIds": [
+          "p-939909",
+          "p-939313",
+          "p-939534"
+        ]
+      },
+      {
+        "label": "Opinion as Intermediate Faculty",
+        "identityLabel": "opinion_as_intermediate",
+        "summary": "Since knowledge correlates to what is (being) and ignorance to what is not (not-being), opinion is situated as an intermediate faculty between knowledge and ignorance.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Deduces the placement and status of opinion relative to knowledge and ignorance.",
+        "passageIds": [
+          "p-941587",
+          "p-940803",
+          "p-941467"
+        ]
+      },
+      {
+        "label": "Fluctuating Nature of Particulars",
+        "identityLabel": "instability_of_particulars",
+        "summary": "Sensory particulars such as beautiful, just, or double things necessarily exhibit their opposite qualities, making them ambiguous entities that both are and are not.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 1,
+        "rationale": "Articulates the empirical observation and claim that particulars are subject to contradiction and flux.",
+        "passageIds": [
+          "p-943069",
+          "p-943183",
+          "p-943638"
+        ]
+      },
+      {
+        "label": "Lovers of Opinion vs. Wisdom",
+        "identityLabel": "philodoxers_vs_philosophers",
+        "summary": "Those who delight in the manifold fluctuating particulars hold opinions and are lovers of opinion, while those who embrace unchanging eternal truth are lovers of wisdom.",
+        "sourceRole": "dialogue",
+        "speaker": "Socrates",
+        "level": 3,
+        "rationale": "Synthesizes the ontological and epistemological findings to definitively categorize persons into philodoxers and philosophers.",
+        "passageIds": [
+          "p-945741",
+          "p-944871",
+          "p-945817"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "The principle that each Form is one while particulars are many grounds the distinction between awake philosophers and dreaming sight-lovers.",
+        "passageIds": [
+          "p-934534",
+          "p-935644"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "defines",
+        "rationale": "The criterion that different faculties must have distinct spheres and results establishes that knowledge and opinion cannot share the same subject matter.",
+        "passageIds": [
+          "p-939909",
+          "p-938311"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "Establishing knowledge and opinion as distinct faculties leads directly to determining the intermediate sphere and role of opinion.",
+        "passageIds": [
+          "p-940181",
+          "p-941587"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 4,
+        "type": "exemplifies",
+        "rationale": "The contradictory, fluctuating nature of particulars provides the exact intermediate ontological subject matter required by the faculty of opinion.",
+        "passageIds": [
+          "p-944543",
+          "p-942025"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "Classifying opinion as intermediate between being and not-being grounds the naming of lovers of opinion as distinct from lovers of wisdom.",
+        "passageIds": [
+          "p-944871",
+          "p-945741"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FdKbap6RINuTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 6736,
+    "candidatesTokenCount": 1595,
+    "totalTokenCount": 8331,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6736
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1595
+      }
+    ]
+  },
+  "durationMs": 12176
+}

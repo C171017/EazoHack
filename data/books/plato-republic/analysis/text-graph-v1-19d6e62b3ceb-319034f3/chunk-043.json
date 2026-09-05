@@ -1,0 +1,103 @@
+{
+  "value": {
+    "summary": "This section consists of the editorial index and analytical commentary for an edition of Plato's Republic, covering alphabetical entries from A through G. Beyond simple citations, it includes sustained editorial commentaries evaluating key Platonic themes such as the nature of art, civic communism, dialectic as the crown of knowledge, and early and philosophic education.",
+    "nodes": [
+      {
+        "label": "Plato's Conception of Art",
+        "identityLabel": "editorial_view_of_art",
+        "summary": "The editorial commentary outlines Plato's evaluation of art through the standard of simplicity, moderation, and censorship, balancing aesthetic influence against the threat of unmanliness.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 3,
+        "rationale": "An editorial essay synthesizing multiple books and dialogues to summarize a overarching Platonic doctrine.",
+        "passageIds": [
+          "p-1290140",
+          "p-1289120"
+        ]
+      },
+      {
+        "label": "Communism and State Unity",
+        "identityLabel": "editorial_view_of_communism",
+        "summary": "The editor analyzes Plato's abolition of private possession and family in the ideal state as an effort to eliminate division, noting adjustments between the Republic, Critias, and Laws.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Organizes the rationale, limits, and textual evolution of Plato's proposals for communal life across dialogues.",
+        "passageIds": [
+          "p-1299247",
+          "p-1299064"
+        ]
+      },
+      {
+        "label": "Dialectic versus Eristic",
+        "identityLabel": "editorial_view_of_dialectic",
+        "summary": "Dialectic is characterized as the coping stone of the sciences that uses hypotheses to ascend to ideas, distinguished sharply from contentious disputation (eristic).",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 3,
+        "rationale": "Synthesizes the Republic's highest epistemological method alongside comparative notes from later dialogues.",
+        "passageIds": [
+          "p-1305613",
+          "p-1305056"
+        ]
+      },
+      {
+        "label": "Two Tiers of Education",
+        "identityLabel": "editorial_view_of_education",
+        "summary": "The editorial apparatus outlines the dual educational curriculum: common training in gymnastics and music for citizens, followed by advanced mathematical and dialectical training for rulers.",
+        "sourceRole": "paratext",
+        "speaker": null,
+        "level": 3,
+        "rationale": "A structural overview explaining the pedagogical framework governing the entire dialogue.",
+        "passageIds": [
+          "p-1310197",
+          "p-1309050"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "The editorial analysis of art and censorship grounds the first stage of civic education described in the educational curriculum.",
+        "passageIds": [
+          "p-1290140",
+          "p-1310197"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "Dialectic serves as the crowning discipline within the higher philosophical tier of Plato's educational program.",
+        "passageIds": [
+          "p-1305613",
+          "p-1310197"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "YNKbasrjBMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 24434,
+    "candidatesTokenCount": 864,
+    "totalTokenCount": 25298,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 24434
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 864
+      }
+    ]
+  },
+  "durationMs": 10086
+}
