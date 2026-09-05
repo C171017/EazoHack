@@ -1,0 +1,18 @@
+import { ArtifactSchema, BookSchema, SelectionSchema, SourceAnchorSchema, type Artifact, type RouteKind, type Selection } from "../schemas";
+
+// Original programmatic test content, not a quotation or interpretation of Plato.
+export const FIXTURE_TEXT = "A reading tool can connect a passage to a question. Evidence should remain attached when an explanation is saved.";
+export const FIXTURE_DATE = "2026-09-05T00:00:00.000Z";
+export const fixtureBook = BookSchema.parse({ id: "fixture-book-v1", fileHash: "fixture-original-text-v1", title: "Scaffold test passage", format: "txt", extractionVersion: "fixture-v1", createdAt: FIXTURE_DATE });
+export const fixtureAnchors = [SourceAnchorSchema.parse({ id: "fixture-anchor-v1", bookId: fixtureBook.id, fileHash: fixtureBook.fileHash, extractionVersion: fixtureBook.extractionVersion, locators: [{ kind: "txt", startOffset: 0, endOffset: FIXTURE_TEXT.length }], quote: FIXTURE_TEXT, prefix: "", suffix: "", resolution: "exact" })];
+export const fixtureSelection = SelectionSchema.parse({ id: "fixture-selection-v1", bookId: fixtureBook.id, anchorIds: fixtureAnchors.map((a) => a.id), selectedText: FIXTURE_TEXT, contextSnapshot: "Original scaffold fixture. This is not a passage from The Republic.", createdAt: FIXTURE_DATE });
+
+export function makeMockArtifact(kind: RouteKind, selection: Selection, runId: string): Artifact {
+  const base = { id: `artifact-${runId}`, bookId: selection.bookId, selectionId: selection.id, routeRunId: runId, nodeIds: [], anchorIds: selection.anchorIds, provider: "mock", schemaVersion: "1", createdAt: new Date().toISOString(), savedAt: null, provenance: { provider: "mock", label: "Deterministic scaffold fixture. No model, image generation, or source search was called." } };
+  switch (kind) {
+    case "interactive_ui": return ArtifactSchema.parse({ ...base, kind, payload: { schemaVersion: "1", components: [{ component: "ExplanationCard", props: { title: "Keep the evidence close", body: "This fixed mock card demonstrates a registered component attached to the selected passage. It is not an AI interpretation." } }, { component: "ParameterSlider", props: { label: "Example detail level", min: 1, max: 5, step: 1, value: 3, unit: "steps" } }], assumptions: ["The slider demonstrates local UI state only; no pedagogical rule has been validated."], ruleSources: ["Original scaffold fixture"], validationStatus: "mock_unverified" } });
+    case "generated_image": return ArtifactSchema.parse({ ...base, kind, payload: { status: "placeholder", resource: null, prompt: "A visual linking a passage, a question, and an explanation.", caption: "Image placeholder · no image provider is configured." } });
+    case "concept_diagram": return ArtifactSchema.parse({ ...base, kind, payload: { schemaVersion: "1", nodes: [{ id: "passage", label: "Selected passage", anchorIds: selection.anchorIds }, { id: "question", label: "Reader question", anchorIds: selection.anchorIds }, { id: "explanation", label: "Saved explanation", anchorIds: selection.anchorIds }], edges: [{ id: "passage-question", source: "passage", target: "question", label: "prompts", anchorIds: selection.anchorIds }, { id: "question-explanation", source: "question", target: "explanation", label: "explored through", anchorIds: selection.anchorIds }], groups: [], layoutHint: "left_to_right", legend: "Mock relationships illustrate the tool, not claims about the book." } });
+    case "source_discovery": return ArtifactSchema.parse({ ...base, kind, payload: { status: "no_results", scope: "undecided", query: selection.selectedText, references: [], summary: "No search was performed. Source scope and search provider remain undecided." } });
+  }
+}

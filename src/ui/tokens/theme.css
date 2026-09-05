@@ -1,0 +1,14 @@
+@theme {
+  --color-paper: #faf9f6;
+  --color-ink: #263731;
+  --color-muted: #748078;
+  --color-line: #e2e5dd;
+  --color-moss: #426c50;
+  --color-mist: #eef2eb;
+  --color-highlight: #e4ecb7;
+  --color-warning: #946b2e;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-reading: Georgia, 'Times New Roman', serif;
+  --radius-panel: 1rem;
+  --shadow-panel: 0 8px 30px #233d2910;
+}

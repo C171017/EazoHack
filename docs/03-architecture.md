@@ -1,6 +1,6 @@
 # 架构、数据流与出处锚点
 
-已确认的是高亮输入、可组合的四路辅助及整书地图愿景；以下 schema、调度和实现方式为建议，不是已实现接口。
+已确认的是高亮输入、可组合的四路辅助、整书地图愿景，以及结构化模型路由 + 应用调度器的默认架构。以下接口仍是待脚手架化的契约，不是已实现能力。
 
 ## 整书到图谱
 
@@ -22,7 +22,15 @@
 
 所有产物保留选文作为 grounding，标记书中依据、模型补充及未验证内容；这不要求每次执行来源查找。source_discovery 才主动寻找资料，其范围为待决值，未确认时不能自动启用外部搜索。引用结果记录定位/链接、摘录与支持关系；检索为空时显示无结果，不编造参考。
 
-交互 UI 实时生成是确认意图。推荐窄主题的已验证渲染器承载 LLM 实时生成的内容、参数和界面组合；另一候选是生成代码并隔离运行，需另评估校验、资源限制与通信边界。推荐方案不构成对生成 UI 的否定。教学模拟须保存假设、方程/规则来源与验证状态；可操作性不等于模型正确。书文是分析资料，不作为执行指令。各路线的具体实现由 D06/D08 决定。
+交互 UI 实时生成是确认意图，且运行边界已经确定：模型只输出受版本控制的配置、内容、参数与组件组合；服务端以 Zod 校验，客户端只解析允许列表中的已测试 React 组件。组件 variant 映射到源码中预编译的 Tailwind class，模型不得提交 class 名、HTML、JavaScript 或表达式。教学模拟须保存假设、方程/规则来源与验证状态；可操作性不等于模型正确。书文是分析资料，不作为执行指令。
+
+概念图采用同一受控数据驱动原则：模型输出节点、边、分组和可选注释，经 Zod 校验与引用完整性检查后，由 React 组件和 SVG 渲染。它与右侧 React Flow 整书网络共享视觉 token，但不共享运行状态，也不将段落图自动提升为整书事实。
+
+## 路由与调度边界
+
+服务端模型路由器只负责产生 `RoutePlan`；应用调度器负责许可路线、依赖排序、并发、取消、重试、状态迁移和 provider 调用。不要引入 agent framework，也不要让模型直接调用 provider、IndexedDB 或客户端组件。
+
+每个 provider 实现相同的可替换边界：接收冻结的选文请求与路线专用参数，返回可校验的产物 payload 和 provenance。脚手架阶段以显式 `mock` 实现贯通四路；真实模型、图片和搜索 provider 保持未配置状态，不得由 mock 成功暗示真实服务已接通。
 
 ## 最小数据契约
 
@@ -36,7 +44,7 @@
 | Node | `id, bookId, graphVersion, type, label, summary, anchorIds, position{x,y}`；概念至少一个有效出处 |
 | Edge | `id, source, target, type, evidenceAnchorIds, rationale, provenance`；端点存在，关系方向按标签解释；`provenance=model_inferred` 明示推断 |
 | Selection | `id, bookId, anchorIds, selectedText, contextSnapshot, createdAt`；必有非空选文，跨页可有多个锚点 |
-| RoutePlan | `id, selectionId, routes[], reasonByRoute, trigger, routerVersion`；路线去重且可多选，规则及组合上限待决 |
+| RoutePlan | `id, selectionId, routes[], reasonByRoute, trigger, routerVersion`；路线去重且可多选，规则及组合上限待决；服务端 Zod 校验 |
 | RouteRun | `id, planId, route, status, dependsOn[], error?, artifactIds[]`；独立 pending/running/complete/failed/cancelled |
 | Artifact | `id, bookId, selectionId, routeRunId, nodeIds[], anchorIds, graphVersion?, kind, payload, provider?, modelLabel?, schemaVersion, createdAt, savedAt`；原文关联必有，节点可暂空，模型标识记录实际值 |
 | Reference | `id, scope, anchorId?, url?, title, excerpt?, supportRelation, verificationStatus, retrievedAt`；书内需锚点，外部需实际来源链接；scope 选择受 D09 约束 |
@@ -48,9 +56,9 @@
 
 | kind | 建议 payload |
 | --- | --- |
-| interactive_ui | 界面描述/生成配置或隔离代码引用、参数、交互状态、假设、模型规则依据、validationStatus；保存后可恢复探索状态 |
+| interactive_ui | 版本化组件配置、参数、交互状态、假设、规则依据、validationStatus；只允许注册表组件和 variant，不含代码或 Tailwind class |
 | generated_image | 图片 Blob/持久资源引用、提示词、说明文字、生成信息；不能只保存会过期的临时 URL |
-| concept_diagram | 节点/边或 SVG 描述、布局与图例；输出验证后渲染 |
+| concept_diagram | 版本化节点/边/分组、布局提示与图例；应用校验后以 React + SVG 渲染 |
 | source_discovery | Reference ID 列表、检索范围/查询、支持或不支持的说明；原文锚点不等同于检索结果 |
 
 产物可以共享 selectionId 组成一组。建议用 planId/routeRunId 去重保存，重试保留版本，避免重复事件。
@@ -68,6 +76,6 @@
 
 ## 边界与保存
 
-浏览器负责文件、选文、高亮、渲染、图谱状态和本地保存；服务端负责整书分析、路由与四路服务适配/校验，密钥仅在服务端配置。启动分析会发送提取文本，段落辅助发送选文及明确界定的补充背景，页面应说明这些行为。外部检索仅在范围确认后接入，图片服务的数据处理条款也需接入时核对。本轮文档工作不需要凭据。
+浏览器负责文件、选文、高亮、渲染、图谱状态和本地保存；Next.js Route Handlers 负责整书分析、结构化路由、调度入口与四路 provider 适配/校验，密钥仅在服务端配置。启动分析会发送提取文本，段落辅助发送选文及明确界定的补充背景，页面应说明这些行为。外部检索仅在范围确认后接入，图片服务的数据处理条款也需接入时核对。本轮文档工作不需要凭据。
 
 本地 IndexedDB 保存文件 Blob、锚点、图谱、产物和事件；刷新恢复，不承诺跨设备同步或永久存储。写入失败需显示未保存；演示前做导出备份，内容包括图、锚点、产物与书签，原书可凭指纹重新选择。用户删除一本书时连同本地关联记录删除；外部模型服务的数据处理条款需接入时另核对，不能声称端到端只在本机。

@@ -1,0 +1,4 @@
+/* Scoped React Flow integration: override library node chrome with workspace tokens. */
+.book-map .react-flow__node-default { border: 1px solid var(--color-line); border-radius: 12px; background: var(--color-paper); color: var(--color-ink); padding: 18px; font: 12px Arial, sans-serif; box-shadow: 0 4px 12px #233d2908; }
+.book-map .react-flow__edge-path { stroke: #a6b6a4; }
+.book-map .react-flow__controls { box-shadow: none; border: 1px solid var(--color-line); }

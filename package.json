@@ -1,0 +1,23 @@
+{
+  "name": "eazo-hack",
+  "version": "1.0.0",
+  "description": "状态：**核心体验与基础技术栈已确认；仅授权文档更新**。更新于 2026-09-05。当前没有应用实现、工程脚手架或已安装依赖。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C171017/EazoHack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/C171017/EazoHack/issues"
+  },
+  "homepage": "https://github.com/C171017/EazoHack#readme"
+}
