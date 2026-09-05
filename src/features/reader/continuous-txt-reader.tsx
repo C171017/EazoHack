@@ -3,6 +3,7 @@
 import { Fragment, forwardRef, memo, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { splitSourceRange } from './artifact-placement';
 import { resolveTxtAnchor } from './source-anchor';
+import { snapSelectionToWords } from './word-selection';
 import { EnhancementPicker, type PickerPosition } from './enhancement-picker';
 import type { RouteKind, SourceAnchor } from '@/shared/schemas';
 import { createTxtRenderChunks, findTxtBlock, type TxtRenderChunk } from './txt-document';
@@ -96,6 +97,30 @@ function boundaryOffset(node: Node, offset: number, edge: 'start' | 'end', root:
   return Number(edge === 'start' ? block.dataset.txtStart : block.dataset.txtEnd);
 }
 
+type NativeSourceSelection = TxtSelectionRange & { backward: boolean };
+
+function restoreSourceSelection(root: HTMLElement, saved: NativeSourceSelection) {
+  const boundary=(offset:number,end:boolean)=>{
+      const spans=[...root.querySelectorAll<HTMLElement>('[data-txt-block]')];
+      const span=spans.find(s=>end?Number(s.dataset.txtStart)<offset&&Number(s.dataset.txtEnd)>=offset:Number(s.dataset.txtStart)<=offset&&Number(s.dataset.txtEnd)>offset);
+      if(!span)return null;
+      let remaining=offset-Number(span.dataset.txtStart);
+      const walker=document.createTreeWalker(span,NodeFilter.SHOW_TEXT);
+      for(let node=walker.nextNode();node;node=walker.nextNode()){
+        const length=node.textContent?.length??0;
+        if(remaining<=length)return {node,offset:remaining};
+        remaining-=length;
+      }
+      return null;
+    };
+  const start=boundary(saved.startOffset,false),end=boundary(saved.endOffset,true);
+  if (start && end) {
+    const selection = window.getSelection();
+    if (saved.backward) selection?.setBaseAndExtent(end.node, end.offset, start.node, start.offset);
+    else selection?.setBaseAndExtent(start.node, start.offset, end.node, end.offset);
+  }
+}
+
 const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   title?: string;
   bookId?: string;
@@ -114,28 +139,14 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   const scroller = useRef<HTMLDivElement>(null);
   const documentRoot = useRef<HTMLDivElement>(null);
   const [pickerPosition, setPickerPosition] = useState<PickerPosition | null>(null);
-  const nativeSelection = useRef<TxtSelectionRange|null>(null);
+  const nativeSelection = useRef<NativeSourceSelection|null>(null);
   // Source spans can split when a slot appears. Rebind the native range to the
   // same source offsets so copying and Shift-selection survive that render.
   useLayoutEffect(()=>{
     const saved=nativeSelection.current,root=documentRoot.current;
     if(!saved||!root)return;
     nativeSelection.current=null;
-    const boundary=(offset:number,end:boolean)=>{
-      const spans=[...root.querySelectorAll<HTMLElement>('[data-txt-block]')];
-      const span=spans.find(s=>end?Number(s.dataset.txtStart)<offset&&Number(s.dataset.txtEnd)>=offset:Number(s.dataset.txtStart)<=offset&&Number(s.dataset.txtEnd)>offset);
-      if(!span)return null;
-      let remaining=offset-Number(span.dataset.txtStart);
-      const walker=document.createTreeWalker(span,NodeFilter.SHOW_TEXT);
-      for(let node=walker.nextNode();node;node=walker.nextNode()){
-        const length=node.textContent?.length??0;
-        if(remaining<=length)return {node,offset:remaining};
-        remaining-=length;
-      }
-      return null;
-    };
-    const start=boundary(saved.startOffset,false),end=boundary(saved.endOffset,true);
-    if(start&&end){const range=document.createRange();range.setStart(start.node,start.offset);range.setEnd(end.node,end.offset);const selection=window.getSelection();selection?.removeAllRanges();selection?.addRange(range);}
+    restoreSourceSelection(root, saved);
   });
   const currentChunkRef = useRef(0);
   const alignmentFrame = useRef<number | null>(null);
@@ -273,9 +284,12 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     if (!root || !selection?.rangeCount || selection.isCollapsed) return;
     const range = selection.getRangeAt(0);
     if (!root.contains(range.startContainer) || !root.contains(range.endContainer)) return;
-    const startOffset = boundaryOffset(range.startContainer, range.startOffset, 'start', root);
-    const endOffset = boundaryOffset(range.endContainer, range.endOffset, 'end', root);
-    if (startOffset === null || endOffset === null || endOffset <= startOffset) return;
+    const rawStart = boundaryOffset(range.startContainer, range.startOffset, 'start', root);
+    const rawEnd = boundaryOffset(range.endContainer, range.endOffset, 'end', root);
+    if (rawStart === null || rawEnd === null) return;
+    const snapped = snapSelectionToWords(sourceText, rawStart, rawEnd);
+    if (!snapped) return;
+    const { startOffset, endOffset } = snapped;
     const quote = sourceText.slice(startOffset, endOffset);
     if (!quote.trim()) return;
     return {
@@ -289,7 +303,12 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   function captureSelection() {
     const range=selectedSource();
     if(range && range.quote.length <= 20000){
-      const nativeRange=window.getSelection()?.getRangeAt(0);
+      const selection = window.getSelection();
+      const original = selection?.getRangeAt(0);
+      const backward = !!original && selection?.anchorNode === original.endContainer && selection.anchorOffset === original.endOffset;
+      const saved = { ...range, backward };
+      if (documentRoot.current) restoreSourceSelection(documentRoot.current, saved);
+      const nativeRange=selection?.getRangeAt(0);
       const bounds=scroller.current?.getBoundingClientRect();
       const rect=nativeRange?.getClientRects()[0];
       if(rect&&bounds){
@@ -297,7 +316,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
         const top=rect.top-62>Math.max(bounds.top+64,8)?rect.top-62:Math.min(rect.bottom+10,window.innerHeight-64);
         setPickerPosition({left,top});
       }
-      nativeSelection.current=range;onSelection(range);
+      nativeSelection.current=saved;onSelection(range);
     }else setPickerPosition(null);
   }
   useEffect(() => {
@@ -322,7 +341,9 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   }, []);
   useEffect(() => {
     const keyboardSelection = (event: KeyboardEvent) => {
-      if (event.shiftKey && ['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) captureSelection();
+      // Keep native adjustment while Shift is held; snapping every arrow key
+      // would prevent shrinking a selection by less than a whole word.
+      if (event.key === 'Shift') captureSelection();
       else if (window.getSelection()?.isCollapsed) setPickerPosition(null);
     };
     document.addEventListener('keyup', keyboardSelection);

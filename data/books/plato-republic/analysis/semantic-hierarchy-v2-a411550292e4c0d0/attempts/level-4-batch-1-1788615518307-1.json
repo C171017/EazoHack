@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-1-3",
+          "h-level-3-batch-2-5"
+        ],
+        "label": "Paratext, Editions, & Indices",
+        "summary": "Paratextual materials and reference indices provide documentation for Jowett's edition of the Republic. They record editorial revisions, textual acknowledgments, transcriber guidelines, and thematic doctrinal summaries across Platonic thought.",
+        "rationale": "Both clusters consist of non-narrative editorial apparatus, including translation acknowledgments, edition histories, collation criteria, and thematic reference indices."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-2",
+          "h-level-3-batch-1-3",
+          "h-level-3-batch-2-2"
+        ],
+        "label": "Origins of Justice & City Order",
+        "summary": "Early investigations into the definition and nature of justice lead directly to the theoretical construction of the ideal commonwealth. The dialogue develops specialized guardian functions, education in music and gymnastics, and the psychological harmony between civic classes and the tripartite soul.",
+        "rationale": "These groups span Books I through IV, tracing the continuous inquiry from foundational challenges against traditional justice to the structural establishment of the city and its cardinal virtues."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-4",
+          "h-level-3-batch-2-3"
+        ],
+        "label": "Philosopher Rulers & Dialectic",
+        "summary": "The discussion establishes the necessity of philosopher-rulers and delineates the rigorous metaphysical and educational training required for governance. It charts the intellectual ascent from sensible imagery through mathematical disciplines to the Idea of the Good and dialectic.",
+        "rationale": "These clusters focus on Books V through VII, specifically the epistemic and curricular requirements for the philosophic rulers, the Divided Line, and the ascent from the Cave."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-5",
+          "h-level-3-batch-2-4"
+        ],
+        "label": "Regime Decay & Soul Immortality",
+        "summary": "A systematic survey details the progressive corruption of political constitutions and corresponding human characters from timocracy down to tyranny. It evaluates the profound misery of the tyrannical life, censures imitative art, and affirms the immortality and posthumous destiny of the soul through the Myth of Er.",
+        "rationale": "These clusters encompass Books VIII through X, analyzing the decline of regimes and souls alongside the concluding metaphysical proofs of immortality and the cosmic judgment."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-7",
+          "h-level-3-batch-2-1"
+        ],
+        "label": "Platonic Politics & Commentaries",
+        "summary": "Critical commentaries evaluate the theoretical foundations and historical reception of Plato's political philosophy. They analyze the radical institutional proposals of the Republic alongside comparative Greek models and subsequent utopian adaptations across Western intellectual history.",
+        "rationale": "Both clusters comprise higher-level historical and philosophical commentaries analyzing Plato's political paradoxes, comparative dialogues, and legacy among later thinkers."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "VRucarpq_qPRyQ-jqPiwDQ",
+  "usage": {
+    "promptTokenCount": 167650,
+    "candidatesTokenCount": 660,
+    "totalTokenCount": 168310,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 167650
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 660
+      }
+    ]
+  },
+  "durationMs": 12896,
+  "requestHash": "8a9fd7362e8dccb7832c4f97f08d2e799c919c883908a45cd2ecc67a24109206"
+}

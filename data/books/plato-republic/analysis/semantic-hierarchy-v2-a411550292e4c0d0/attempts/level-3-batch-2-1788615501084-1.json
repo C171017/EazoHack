@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-3-1",
+          "h-level-2-batch-3-2",
+          "h-level-2-batch-3-3"
+        ],
+        "label": "Commentaries on Platonic Thought",
+        "summary": "These analytical commentaries evaluate the foundations of Plato's philosophy across civic unity, metaphysical ascent, and utopian governance. They examine the mirroring of state and soul, the epistemology of the philosopher-king, and critical assessments of radical polity reforms.",
+        "rationale": "Groups the early-to-mid commentary sequences (batch 3-1, 3-2, 3-3) that provide meta-level analytical appraisal of justice, epistemology, and political institutions."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-3-4",
+          "h-level-2-batch-3-5",
+          "h-level-2-batch-4-1"
+        ],
+        "label": "Foundations of City and Soul",
+        "summary": "The dialogue advances from early refutations of might-makes-right through the origins of the city to the definition of virtues in the state and individual. Socrates establishes specialization, guardian discipline, and the tripartite psychology necessary for justice.",
+        "rationale": "Combines the dialogue's narrative progression from Book I to Book IV, focusing on the debate on justice, the genesis and education of the commonwealth, and the harmony of the tripartite soul."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-2",
+          "h-level-2-batch-4-3"
+        ],
+        "label": "Metaphysics and Dialectic",
+        "summary": "Socrates formulates the core epistemology and metaphysics of the dialogue, differentiating opinion from knowledge and the visible realm from intelligible Forms. The supreme Idea of the Good, the Divided Line, the Cave, and dialectic establish the true training of philosopher-rulers.",
+        "rationale": "Merges the twin dialogue clusters (batch 4-2 and 4-3) encompassing Books V through VII that center on the ascent from sensory particulars to the Idea of the Good through dialectic."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-4",
+          "h-level-2-batch-4-5",
+          "h-level-2-batch-4-6"
+        ],
+        "label": "Psychic Regimes and Immortality",
+        "summary": "Examining the decline of constitutions alongside tyrannical misery, Socrates establishes the superior happiness of the just soul and repudiates imitative art for corrupting the passions. The imperishable nature of the soul is demonstrated, culminating in the Myth of Er and the ultimate vindication of virtue.",
+        "rationale": "Brings together the culminating Books VIII–X of the dialogue (batch 4-4, 4-5, 4-6), covering the decline of regimes, the critique of mimesis, and posthumous cosmic justice."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-4",
+          "h-level-2-batch-2-6"
+        ],
+        "label": "Paratext and Topical Indices",
+        "summary": "These reference entries provide synoptic overviews of core Platonic doctrines and compile structural indices of themes such as poetic censorship, education, and constitutional models. Editorial and transcriber notes record Greek transliteration conventions and collation criteria.",
+        "rationale": "Merges the paratextual and indexical apparatus at the end of the text (batch 14-4 and 2-6), unifying analytical glossaries with bibliographic and editorial notes."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "RRucapa3Aemj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 93848,
+    "candidatesTokenCount": 873,
+    "totalTokenCount": 94721,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 93848
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 873
+      }
+    ]
+  },
+  "durationMs": 10512,
+  "requestHash": "a545ea0c660b128095f408033b9648e9a831f74574fbf8c261bdbbbe5b86cc72"
+}

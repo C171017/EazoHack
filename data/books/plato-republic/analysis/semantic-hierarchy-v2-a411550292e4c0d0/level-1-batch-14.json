@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-6",
+          "n-27-5",
+          "n-27-6",
+          "n-28-3"
+        ],
+        "label": "Virtue, Soul, and Divine Order",
+        "summary": "These passages define divine nature as unalterable and true, articulate justice and temperance through proper civic and psychic balance, and establish the tripartite division of the human soul into rational, spirited, and appetitive elements.",
+        "rationale": "Gathers Book II and IV discussions analyzing divine standards, cardinal virtues, and internal psychic harmony."
+      },
+      {
+        "childIds": [
+          "n-30-4",
+          "n-31-2",
+          "n-31-4",
+          "n-31-5",
+          "n-33-6"
+        ],
+        "label": "Epistemology and Philosopher Rule",
+        "summary": "This sequence asserts that philosophers must rule states, distinguishing true lovers of being from superficial dreamers, differentiating knowledge from opinion across intelligible and visible domains, and mapping these cognitive stages via the divided line.",
+        "rationale": "Brings together Books V and VI epistemological and political arguments concerning the philosopher's intellect, faculties of knowing, and divided line structure."
+      },
+      {
+        "childIds": [
+          "n-37-2",
+          "n-39-6",
+          "n-42-6",
+          "n-42-7"
+        ],
+        "label": "Psychic Fate and Rebirth",
+        "summary": "Socrates establishes that constitutions reflect individual human souls, distinguishes genuine pleasure from mere cessation of pain, and concludes the Republic with the Myth of Er detailing souls' responsibility in selecting new lives, transmigration, and the imperative to pursue justice.",
+        "rationale": "Connects late-dialogue passages (Books VIII, IX, X) tracing the soul's correspondence to external forms, illusory versus true pleasures, and postmortem moral agency."
+      },
+      {
+        "childIds": [
+          "n-43-3",
+          "n-44-1",
+          "n-44-3",
+          "n-44-4",
+          "n-45-5"
+        ],
+        "label": "Editorial Synopses of Plato",
+        "summary": "Paratextual editorial entries systematize core Platonic concepts across the dialogue, covering the methodology of dialectic versus eristic, theology, the Idea of the Good, the nature and centrality of justice, and the tripartite theory of the soul.",
+        "rationale": "Clusters the editorial commentary entries situated at the end of the volume that summarize Plato's central philosophical themes."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "DhucasyyIqyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 13632,
+    "candidatesTokenCount": 645,
+    "totalTokenCount": 14277,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13632
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 645
+      }
+    ]
+  },
+  "durationMs": 6469,
+  "requestHash": "48f90ee11b93448e9267d90825f2c62ff11b29eafa23d86cd35977cbe98401a3"
+}

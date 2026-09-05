@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-24-4",
+          "n-25-5",
+          "n-27-4",
+          "n-28-1"
+        ],
+        "label": "Virtue and Civic Order in III-IV",
+        "summary": "In Books III and IV, Socrates restricts imitation and valetudinarian medicine so citizens devote themselves exclusively to their proper roles, subsequently defining civic wisdom, courage, and justice through the non-meddling specialization of civic classes.",
+        "rationale": "Consecutive core dialogue passages from Books III and IV concerning role specialization, civic virtues, and institutional justice."
+      },
+      {
+        "childIds": [
+          "n-29-5",
+          "n-30-2"
+        ],
+        "label": "Communal Unity and Hellenic War",
+        "summary": "Socrates establishes state-regulated communal mating and child-rearing to eliminate division among guardians, while regulating warfare to treat conflicts between Hellenic states as internal discord rather than foreign war.",
+        "rationale": "Early Book V dialogue regulations aimed at communal cohesion within the guardian class and Pan-Hellenic restraint in conflict."
+      },
+      {
+        "childIds": [
+          "n-30-5",
+          "n-30-6"
+        ],
+        "label": "Defining the Philosopher",
+        "summary": "Socrates defines the true philosopher as one who loves the entirety of wisdom and the vision of truth, contrasting genuine seekers with sight-seers and superficial amateurs of the arts.",
+        "rationale": "Directly consecutive Book V exchanges defining the nature and intellectual desire of the true philosopher."
+      },
+      {
+        "childIds": [
+          "n-39-7"
+        ],
+        "label": "Pleasures of Smell Example",
+        "summary": "The sensation of scent is provided as an instance of pure pleasure that arises without prior suffering or deficit and departs without pain.",
+        "rationale": "Isolated Book IX discussion of pure sensory pleasure with distinct coordinate and source positioning."
+      },
+      {
+        "childIds": [
+          "n-43-1",
+          "n-43-4",
+          "n-45-1",
+          "n-45-3"
+        ],
+        "label": "Editorial Analysis on Art & Study",
+        "summary": "The editorial apparatus reviews Plato's curriculum of music, gymnastics, and higher dialectic, analyzing his strict censorship of painting, sculpture, and poetry according to principles of simplicity and state utility.",
+        "rationale": "Paratextual entries and commentary focusing on Plato's pedagogical curriculum and aesthetic critique."
+      },
+      {
+        "childIds": [
+          "n-43-2",
+          "n-44-2",
+          "n-46-1",
+          "n-46-2",
+          "n-46-3"
+        ],
+        "label": "Commentary on State Structure",
+        "summary": "Commentary notes analyze Plato's constitutional forms, the succession of degenerating regimes, and the composite nature of the ideal state, tracing its mixture of Spartan discipline, Athenian culture, and radical innovations.",
+        "rationale": "Paratextual commentary entries synthesizing Plato's political constitutions and institutional models."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ohucaunnKJmdx9gP8fnjmQE",
+  "usage": {
+    "promptTokenCount": 15311,
+    "candidatesTokenCount": 772,
+    "totalTokenCount": 16083,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15311
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 772
+      }
+    ]
+  },
+  "durationMs": 9605,
+  "requestHash": "f8eb07074b23b629bb8978fd9d0b6361e97681c878101835f8a8543073e437ee"
+}

@@ -1,0 +1,426 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-9-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates constructs an analogical proportional relationship between the visible sun mediating sight/light and the Idea of the Good mediating truth/being in the intelligible realm. Because this directly depends upon n-8-4 (depth 3) and n-8-7 (depth 3), which establish the ontological/epistemological division of faculties and the Idea of the Good, its reasoning depth incorporates that prerequisite chain and cannot be lower than 3.",
+            "anchorIds": [
+              "p-213198",
+              "p-215396"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-4",
+              "n-8-7"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Presents an overarching metaphysical and epistemological model governing all visible phenomena and intelligible truth.",
+            "anchorIds": [
+              "p-213198",
+              "p-215396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates establishes the logical sequence of the higher sciences by advancing from arithmetic through plane geometry, solid geometry, astronomy, and harmonics as aids to turn the mind toward being. Building directly on arithmetic as soul-turner (n-10-1, depth 2), its reasoning depth incorporates that prerequisite and is calibrated to 2.",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Details the specific curriculum of mathematical studies designed for the intellectual preparation of guardian rulers.",
+            "anchorIds": [
+              "p-252870",
+              "p-253814",
+              "p-255204"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates derives timocracy from faction among rulers and eugenic miscalculation, and the timocratic individual as an internal compromise where ambition supersedes reason. Because this directly depends upon n-11-1 (depth 3, which establishes the comparative taxonomy of four degenerate states and characters), its reasoning depth must incorporate that prerequisite chain and is calibrated to 3.",
+            "anchorIds": [
+              "p-286551",
+              "p-289058",
+              "p-289972"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-4",
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Pertains to a specific constitutional type and psychological profile (timocracy/the honor-loving Spartan character).",
+            "anchorIds": [
+              "p-286551",
+              "p-289058",
+              "p-289972"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "The editorial commentary evaluates Plato's succession of regimes by comparing it to historical Greek records, inferring that the sequence reflects an order of philosophical thought rather than chronological history. Because this directly evaluates and depends on Plato's fourfold cycle of regimes in n-11-1 (depth 3), its depth incorporates n-11-1 and is calibrated to 3.",
+            "anchorIds": [
+              "p-308846",
+              "p-311475"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Evaluates the interpretive scope of Plato's cycle of regimes and its relationship to actual Greek political history.",
+            "anchorIds": [
+              "p-308846",
+              "p-311475"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "The commentary analyzes the successive constitutions and souls as a systematic ethical degradation from reason to honor, wealth, unrestrained liberty, and tyrannical passion. Because this builds directly on the four degenerate constitutions framework in n-11-1 (depth 3), its total reasoning depth incorporates n-11-1 and is calibrated to 3.",
+            "anchorIds": [
+              "p-315664"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Provides an ethical formula organizing the entire chain of political and psychological degeneration in Books VIII and IX.",
+            "anchorIds": [
+              "p-315664"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates calculates the numerical difference in pleasure between the royal man and the tyrant by taking their degrees of remove across constitutions (3 x 3 = 9) and cubing the surface dimension to reach 729. Because this deduction directly builds upon n-11-1 (depth 3) and n-12-4 (depth 2.5), its reasoning depth incorporates the prerequisite chain and is calibrated to 3.",
+            "anchorIds": [
+              "p-346744",
+              "p-352659"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1",
+              "n-12-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Offers a precise numerical calculation quantifying the comparative difference in happiness between the king and the tyrant.",
+            "anchorIds": [
+              "p-346744",
+              "p-352659"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Analyzes the philosophical grounds of Plato's critique of poetry in Book X, showing that poetic imitation appeals to the inferior emotional faculties rather than the rational understanding of universals. Because this inferential argument directly builds on the epistemological separation of knowledge of universals from opinion of particulars in n-8-4 (depth 3) as well as the tripartite soul (n-7-4, depth 2), its reasoning depth incorporates n-8-4 and is calibrated to 3.",
+            "anchorIds": [
+              "p-390516",
+              "p-391799",
+              "p-394015"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-4",
+              "n-8-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Applies broadly to the classification of poetry, art, and the psychological impact of mimetic representation on human reason.",
+            "anchorIds": [
+              "p-390516",
+              "p-391799",
+              "p-394015"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Concludes from Plato's concessions, ironies, and ideal formulations across the text that the Republic functions as a celestial pattern and standard of evaluation rather than an earthly blueprint. Because this relies directly on n-12-7 (depth 3, the heavenly pattern) and n-14-5 (depth 1), its reasoning depth incorporates n-12-7 and is calibrated to 3.",
+            "anchorIds": [
+              "p-424275"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-7",
+              "n-14-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a general interpretative thesis on the nature, intention, and status of Plato's political ideal.",
+            "anchorIds": [
+              "p-424275"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Adeimantus raises the objection that Socrates' city makes the guardians miserable by depriving them of lands, houses, money, and ordinary comforts. Because this interlocutory objection takes as its direct and necessary premise the prohibition on guardian property and communal lifestyle established in n-26-5 (depth 2.5), its reasoning depth cannot be lower than its prerequisite and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-792835",
+              "p-793697"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A specific interlocutory objection focused on the condition and perceived misery of the state's guardian class.",
+            "anchorIds": [
+              "p-792835"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates resolves the apparent contradiction regarding division of labor by distinguishing between incidental physical/biological differences and differences relevant to civic aptitudes. Because this directly builds on and defends the equal participation of female guardians in n-29-2 (depth 2.5) while refining the principle of specialization (n-22-8, depth 1), its reasoning depth cannot be lower than n-29-2 and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-875318",
+              "p-876701",
+              "p-877254"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-8",
+              "n-29-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a reusable methodological distinction between natural differences relevant to an art and incidental differences.",
+            "anchorIds": [
+              "p-875318",
+              "p-876701"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates deduces that when genuine philosophical natures are corrupted and desert philosophy, base artisans and puny natures enter the vacuum, generating sophisms rather than true wisdom. Because this directly depends upon the account of the corruption of gifted natures in n-32-5 (depth 2.5), its reasoning depth cannot be lower than its prerequisite and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-975927",
+              "p-976512",
+              "p-977651"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies to the specific phenomenon of secondary crafts and pretenders encroaching into philosophy in actual cities.",
+            "anchorIds": [
+              "p-975927",
+              "p-977651"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates accounts for the small remnant of true philosophers who escape social corruption and withdraw under the shelter of a wall to preserve their integrity. Because this directly builds on the analysis of public corruption of philosophical souls in n-32-5 (depth 2.5), its reasoning depth incorporates that prerequisite and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-978272",
+              "p-980154"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Examines a small, bounded subset of actual individuals (e.g., Theages, Socrates himself) who escape general social corruption.",
+            "anchorIds": [
+              "p-978272"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates deduces that no existing constitution is suitable for the philosophic nature, causing it to degenerate like an exotic seed in foreign soil. Because this directly derives from the reality of philosophic corruption examined in n-32-5 (depth 2.5), its reasoning depth cannot be lower than its prerequisite and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-980766"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Characterizes the systemic incompatibility between all existing historical polities and philosophical nature.",
+            "anchorIds": [
+              "p-980766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates argues that establishing the ideal constitution is difficult but feasible if at least one philosopher comes to power, drafting laws by contemplating absolute virtues on a wiped tablet. Because this directly requires the thesis that hostility from the multitude can be overcome by presenting true philosophers (n-33-2, depth 2.5) alongside the philosopher-king paradox (n-30-4, depth 2), its reasoning depth incorporates n-33-2 and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-986343",
+              "p-991184",
+              "p-994473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-4",
+              "n-33-2"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Pertains to the conditions of possibility for establishing the ideal commonwealth in human history.",
+            "anchorIds": [
+              "p-986343",
+              "p-994473"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates explains the decay of the ideal city as resulting from sensory imperfection in calculating the geometrical number of births, leading to inferior progeny, mixing of metals, and class faction. Because this directly builds on the classification of regimes starting from the ideal state in n-37-1 (depth 3) and the Myth of the Metals in n-26-4 (depth 1), its reasoning depth incorporates n-37-1 and is calibrated to 3.",
+            "anchorIds": [
+              "p-1097088",
+              "p-1099283",
+              "p-1101246"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-4",
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Describes the general causal mechanism for the dissolution of the perfect state.",
+            "anchorIds": [
+              "p-1097088",
+              "p-1099283",
+              "p-1101246"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates defines oligarchy as a regime founded on property valuation where the rich rule and the poor are excluded, splitting the city into two hostile factions. Because this directly follows as the next stage in the fourfold degenerate regimes schema established in n-37-1 (depth 3), its reasoning depth cannot be lower than its prerequisite and is calibrated to 3.",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Characterizes a specific constitution and its essential socio-political defect.",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "lRqcavXrK-mj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 122930,
+    "candidatesTokenCount": 4137,
+    "totalTokenCount": 127067,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 122930
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4137
+      }
+    ]
+  },
+  "durationMs": 27668,
+  "requestHash": "aca8e6098df0ab97af7bfba247ebe8806901fd493e7a3eb3650f16c2015d1be3"
+}

@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-24-6",
+          "n-25-1",
+          "n-25-2"
+        ],
+        "label": "Musical Modes and Instruments",
+        "summary": "Socrates establishes regulations for music in the republic, eliminating sorrowful or complex modes in favor of the Dorian and Phrygian harmonies. In addition, multi-stringed and versatile instruments like the flute are banned to preserve simplicity and temperance.",
+        "rationale": "All three nodes form a continuous sequence in Book III regulating musical forms, modes, and instruments for the guardian class."
+      },
+      {
+        "childIds": [
+          "n-25-6",
+          "n-26-1",
+          "n-26-2",
+          "n-26-3",
+          "n-26-4"
+        ],
+        "label": "Judicial and Civic Hierarchy",
+        "summary": "Socrates describes how judges acquire moral discernment through observation rather than personal vice, followed by criteria for choosing elder rulers through rigorous testing. The guardian class is split into true rulers and auxiliaries, reinforced socially by the Myth of the Metals.",
+        "rationale": "A contiguous sequence in Book III establishing the selection, testing, judicial standards, and mythical framing of the ruling classes."
+      },
+      {
+        "childIds": [
+          "n-29-1",
+          "n-32-3"
+        ],
+        "label": "Adeimantus on Family and Rule",
+        "summary": "Adeimantus challenges Socrates twice: first by demanding an explanation of how women and children are held in common, and later by objecting that philosophers in practice become useless oddities or rogues rather than effective rulers.",
+        "rationale": "Both items are dialogue interventions by Adeimantus questioning the practical feasibility and reception of core political proposals in Books V and VI."
+      },
+      {
+        "childIds": [
+          "n-42-5"
+        ],
+        "label": "Cosmic Spindle of Necessity",
+        "summary": "Souls witness the cosmic structure turned by the spindle of Necessity, governed by eight rotating concentric whorls, the sirens' harmonies, and the three Fates who guide past, present, and future.",
+        "rationale": "Maintained as a singleton due to its isolated cosmological and mythological narrative in Book X, distinct from paratextual indexes and political discussions."
+      },
+      {
+        "childIds": [
+          "n-44-5",
+          "n-44-6",
+          "n-45-2",
+          "n-45-4",
+          "n-45-6",
+          "n-46-4"
+        ],
+        "label": "Thematic Index of Republic",
+        "summary": "Editorial apparatus entries catalog references across the dialogues concerning the qualifications of guardians, the critique of Homer and mimetic poetry, the natures of the philosopher and the ruler, the architecture of the state, and the concept of virtue.",
+        "rationale": "These entries form a coherent block of topical index entries cataloging central themes across the text."
+      },
+      {
+        "childIds": [
+          "n-46-5"
+        ],
+        "label": "Transcriber Editorial Notes",
+        "summary": "Editorial notes provide documentation of typographic corrections, collation details, and the structural markup used for marginal Stephanus numbers and Greek transliteration.",
+        "rationale": "A distinct paratextual document recording specific transcription conventions and technical notes rather than indexing conceptual content."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "nxucaoe7DqyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 14487,
+    "candidatesTokenCount": 768,
+    "totalTokenCount": 15255,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14487
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 768
+      }
+    ]
+  },
+  "durationMs": 5923,
+  "requestHash": "ec42e2a066c9448307f46e371807a5439f33c7202fdab098f351d8cb507310c0"
+}

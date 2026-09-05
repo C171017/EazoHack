@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 4,
+        "reason": "The grouping combines disparate and distant passages: n-36-6 concerns the radical founding method of the ideal state in Book VII by exiling everyone over ten years old, while n-40-2 concerns a mathematical calculation in Book IX of the numerical ratio comparing the pleasure of a king to that of a tyrant. Grouping these two isolated occurrences as an overarching topic of regime realization and tyranny creates an incoherent pair that lacks common subject continuity."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "tBucatHRBv6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 10298,
+    "candidatesTokenCount": 122,
+    "totalTokenCount": 10420,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10298
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 122
+      }
+    ]
+  },
+  "durationMs": 3719,
+  "requestHash": "67a192689d1d9b21e4feb8847c4e1d14632ffd7afa0c26fbb3cdf71ed0d79f26"
+}

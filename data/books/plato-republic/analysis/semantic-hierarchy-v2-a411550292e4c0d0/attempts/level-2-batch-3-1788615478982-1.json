@@ -1,0 +1,83 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-10-1",
+          "h-level-1-batch-12-1",
+          "h-level-1-batch-12-2",
+          "h-level-1-batch-12-3"
+        ],
+        "label": "Soul, Justice, and State Unity",
+        "summary": "These early analytical commentaries explore foundational definitions of justice, ethical civic unity, and the structural harmony of the state. They examine how internal psychological faculties mirror societal roles and address bodily and moral discipline as essential components of governance.",
+        "rationale": "Groups early commentary focusing on the internal tripartite soul, moral education, physical training, and the constitutional synthesis between justice and political order."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-4",
+          "h-level-1-batch-12-5",
+          "h-level-1-batch-11-2",
+          "h-level-1-batch-12-6"
+        ],
+        "label": "Epistemology and Philosopher-Kings",
+        "summary": "This sequence addresses Platonic metaphysics, epistemology, and political leadership, including the rule of philosopher-kings, the Idea of the Good, and analogies of the Sun, Line, and Cave. It traces how cognitive ascent above opinion informs ethical conduct and relates ideal celestial patterns to constitutional decline and theological fulfillment.",
+        "rationale": "Binds commentary on the metaphysical ascent to the Good, the divided line, epistemology, philosopher-kings, and the transcendent functions of moral ideals."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-10-3",
+          "h-level-1-batch-10-4",
+          "h-level-1-batch-11-3",
+          "h-level-1-batch-9-4"
+        ],
+        "label": "Critiques of Platonic Polity",
+        "summary": "These commentaries appraise Plato's broader philosophical proposals, critiquing state-controlled breeding, the abolition of the family, and the banishment of poetry. They assess moral choice, property evolution, gender education, dialectic, and the historical tensions inherent in realizing utopian political structures.",
+        "rationale": "Combines extensive analytical commentaries offering critical evaluations of Plato's radical social institutions, artistic censorship, education, and political feasibility."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-4",
+          "h-level-1-batch-9-1",
+          "h-level-1-batch-9-2"
+        ],
+        "label": "Debates on Justice and Craft",
+        "summary": "Socrates engages with Polemarchus and Thrasymachus regarding whether justice is aiding friends, the interest of the stronger, or an inherent excellence of soul. Through arguments from the nature of crafts and the weakness of discord, Socrates refutes claims that injustice yields greater profit than living justly.",
+        "rationale": "Covers Book I dialogue disputations over the definition of justice, the unerring nature of rulers, craft analogies, and whether justice ensures true happiness."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-3",
+          "h-level-1-batch-10-5",
+          "h-level-1-batch-10-6",
+          "h-level-1-batch-13-1"
+        ],
+        "label": "Genesis and Education of the City",
+        "summary": "Following Glaucon's challenge regarding the social contract and the Ring of Gyges, Socrates initiates the city-soul inquiry to observe the origin of justice. The discussion outlines the division of labor, the emergence of the luxurious commonwealth, and the establishment of strict poetic, theological, and musical education for the guardians.",
+        "rationale": "Spans the transition from Glaucon's skeptical thought experiment in Book II to the structural founding and cultural-musical education of the ideal commonwealth."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Lxucar7HI-mp0ckPidKHEA",
+  "usage": {
+    "promptTokenCount": 52489,
+    "candidatesTokenCount": 948,
+    "totalTokenCount": 53437,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52489
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 948
+      }
+    ]
+  },
+  "durationMs": 8075,
+  "requestHash": "8ba56d196efcea06f7f2f2f1cb98f1121986b54593e80d2d1c3750942b8676e2"
+}

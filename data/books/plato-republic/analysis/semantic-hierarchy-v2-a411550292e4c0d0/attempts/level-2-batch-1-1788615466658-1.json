@@ -1,0 +1,104 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-1-2",
+          "h-level-1-batch-1-3"
+        ],
+        "label": "Democracy & Tyranny Transitions",
+        "summary": "These dialogue passages and accompanying commentaries analyze the devolution of civic government from democracy into tyranny. They examine how unbridled liberty fractures civic classes, incites demagogues to seize autocratic power, and subjects both the state and the tyrant's own soul to profound misery and enslavement.",
+        "rationale": "Unites complementary dialogue and commentary focusing on the transition from democratic excess to tyranny and the psychology of the tyrant."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-1-1",
+          "h-level-1-batch-10-2",
+          "h-level-1-batch-2-2"
+        ],
+        "label": "Guardian Education & Dialectic",
+        "summary": "These sections examine the intellectual formation of guardian-philosophers, from preparatory mathematical and scientific disciplines to dialectic and the pursuit of the Good. They evaluate the moral hazards of premature dialectical speculation, the civic necessity of the philosopher's descent into governance, and modern epistemological contrasts with Plato's a priori method.",
+        "rationale": "Brings together analyses of the philosopher-guardian's higher curriculum, dialectic, the role of poetry, and methodological critiques."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-1",
+          "n-2-3"
+        ],
+        "label": "Translator Paratext & Editions",
+        "summary": "Paratextual notes detail Jowett's third edition of the Republic, including dedications to Oxford pupils, acknowledgments of editorial collaborators, the extensive scope of revisions, and an exchange plan allowing owners of the 1881 edition to acquire the updated volume.",
+        "rationale": "Combines introductory publication apparatus and Jowett's specific administrative notice regarding earlier edition copies."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-2",
+          "h-level-1-batch-4-1"
+        ],
+        "label": "Foundations & Moral Challenges",
+        "summary": "These commentaries introduce the foundational search for justice across the Republic, tracking the evolution of moral conceptions from aphoristic traditions to sophisticated challenges. Interlocutors like Glaucon and Adeimantus demand an account of justice's inherent excellence in the soul rather than its external social rewards.",
+        "rationale": "Groups introductory overviews of the Republic's thematic structure with early Book I–II inquiries into traditional and challenging definitions of justice."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-2",
+          "h-level-1-batch-4-3",
+          "h-level-1-batch-11-1"
+        ],
+        "label": "Civic Order & Guardian Class",
+        "summary": "Commentary outlines the architectural founding of the ideal commonwealth, tracking the need for a dedicated guardian class under communal discipline, strict cultural censorship of music and myth, and physical training. Further discussions address the allocation of cardinal virtues, identical civic duties for female guardians, communal family structures, and the parable of the ship.",
+        "rationale": "Synthesizes central early-to-mid dialogue schemes concerning state organization, civic virtue, communal living, and guardian upbringing."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-4",
+          "h-level-1-batch-2-3"
+        ],
+        "label": "Regime Decline & Numeric Models",
+        "summary": "These analyses explore Plato's mathematical and mythic constructs along with the decline of the state through timocracy, oligarchy, and tyranny. Key models include the geometric number regulating generational decline, the 729-fold interval separating the happiness of the king from the tyrant, and the cosmic vision depicted in the Myth of Er.",
+        "rationale": "Groups discussions focusing on Plato's symbolic numbers, geometric intervals of regimes, and cosmological myths."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-4",
+          "h-level-1-batch-3-3",
+          "n-18-1",
+          "h-level-1-batch-3-4"
+        ],
+        "label": "Comparative Politics & Successors",
+        "summary": "These sections examine Plato's political paradoxes—including the community of property and families—alongside influences from Dorian and Spartan institutions. They trace comparative shifts across the Republic, Statesman, and Laws, and evaluate later adaptations of ideal states by Cicero, Augustine, Dante, More, and Campanella.",
+        "rationale": "Connects institutional analyses of Plato's ideal state and legal models with historical imitations and utopias across classical, medieval, and Renaissance thought."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-5"
+        ],
+        "label": "Book I Dialogue & Sidenotes",
+        "summary": "Early Book I content includes Cephalus's dialogue reflections on old age and temper, accompanied by an editorial note recording Socrates's dissatisfaction with his own argument.",
+        "rationale": "Retained as an isolated local singleton representing the narrative opening of the Republic and its accompanying editorial marginalia."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IRucaoPrO-mj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 56985,
+    "candidatesTokenCount": 1197,
+    "totalTokenCount": 58182,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 56985
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1197
+      }
+    ]
+  },
+  "durationMs": 9472,
+  "requestHash": "268b21f3981870737d4a4d476e2a1b5c9b70a559a45973856d3ac20c77214e2d"
+}

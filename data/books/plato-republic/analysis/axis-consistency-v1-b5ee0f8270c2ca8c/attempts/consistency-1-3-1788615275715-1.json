@@ -1,0 +1,585 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-23-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates directly derives the conclusion that God causes only good from the premise that the good is not hurtful and therefore cannot cause harm or evil; this is a self-contained local inference within Book II without prerequisite nodes.",
+            "anchorIds": [
+              "p-697118",
+              "p-696375",
+              "p-699706"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Articulates an absolute theological canon concerning the essential nature and causality of divinity.",
+            "anchorIds": [
+              "p-697118",
+              "p-699706"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates performs an internal deduction from the premise that falsehood is like a medicinal poison/drug to the conclusion that rulers alone (like physicians) may use it for civic welfare, while private citizens may not. The link to earlier commentary node n-5-6 is removed as n-24-2 is the original dialogue occurrence in Book III rather than a dependent of the introductory essay.",
+            "anchorIds": [
+              "p-715690",
+              "p-715958",
+              "p-716852"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Governs the civic distribution and privilege of telling falsehoods across civic ranks within the state.",
+            "anchorIds": [
+              "p-715958",
+              "p-716852"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Directly deduces the expulsion of the all-imitating pantomimic poet from the established principle that guardians must not engage in diverse imitation (n-24-4, depth 2). Incorporating the depth of n-24-4 requires calibrating to 2.5.",
+            "anchorIds": [
+              "p-739766"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Formulates the specific political and educational treatment of versatile, all-imitating artists within the community.",
+            "anchorIds": [
+              "p-739766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates directly infers through a local step that because melody and rhythm follow words, lamenting and relaxed modes must be banned from the state since poetry depicting lamentation was already prohibited.",
+            "anchorIds": [
+              "p-741569",
+              "p-741958",
+              "p-742459"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Governs the permissible categories of musical modes and melodies within civic education.",
+            "anchorIds": [
+              "p-741569",
+              "p-741958"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates reasons through a short local chain: rhythm and harmony follow verbal style, and verbal style reflects the soul; therefore, true beauty and grace in style depend upon simplicity of character.",
+            "anchorIds": [
+              "p-747778",
+              "p-748265",
+              "p-748719"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "States an overarching aesthetic and moral law connecting style, rhythm, and craftsmanship across painting, sculpture, and nature to soul character.",
+            "anchorIds": [
+              "p-748265",
+              "p-748719"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates establishes through a contrast between body and mind that while a doctor cures body with mind and can experience physical illness, a judge governs mind with mind and therefore must not have a corrupt soul, having to learn evil only through external observation late in life.",
+            "anchorIds": [
+              "p-769929",
+              "p-770667",
+              "p-771417"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Defines the specific epistemic qualifications and developmental background required of judicial rulers.",
+            "anchorIds": [
+              "p-770667",
+              "p-771417"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates reasons locally that since the elder must rule the younger, and the best of the guardians must be those who cherish the commonwealth most steadfastly throughout life, rulers must be chosen from elder guardians based on lifelong devotion.",
+            "anchorIds": [
+              "p-779067",
+              "p-779249",
+              "p-780108"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Provides the constitutional criterion governing the selection of the sovereign ruling class in the city.",
+            "anchorIds": [
+              "p-779249",
+              "p-780108"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Adeimantus's objection directly takes as its necessary starting premise Socrates' prohibition on guardian private property and communal living (n-26-5, depth 2), asking how guardians can be happy under such constraints; its depth cannot be lower than its prerequisite.",
+            "anchorIds": [
+              "p-792835",
+              "p-793697"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A specific interlocutory objection focused on the condition and perceived misery of the state's guardian class.",
+            "anchorIds": [
+              "p-792835"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates deduces the absurdity of asking whether injustice is profitable by applying the medical analogy of health/disease directly to the comprehensive definition of justice as internal psychic harmony (n-28-4, depth 3). Since it depends on n-28-4, it must be at least depth 3.",
+            "anchorIds": [
+              "p-858701",
+              "p-859615",
+              "p-860234"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Covers the general ethical evaluation of virtue versus vice regarding human flourishing and well-being.",
+            "anchorIds": [
+              "p-859615",
+              "p-860234"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates establishes five forms of the state matching five forms of the soul, building upon the established correspondence and the definition of individual virtue/harmony (n-28-4, depth 3). As a direct continuation and application of n-28-4, its reasoning depth must be at least 3.",
+            "anchorIds": [
+              "p-861207",
+              "p-861665",
+              "p-861963"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Restricted specifically to the comparative framework of five constitutional types and their psychological counterparts.",
+            "anchorIds": [
+              "p-861665",
+              "p-861963"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates poses the fundamental question regarding the greatest good and evil of a state, deducing that unity is the greatest good and discord the greatest evil, and showing that unity arises where joy and sorrow are shared in common.",
+            "anchorIds": [
+              "p-897132",
+              "p-897597",
+              "p-897765"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates an overarching normative principle of political philosophy regarding civic cohesion.",
+            "anchorIds": [
+              "p-897132",
+              "p-897597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates distinguishes natural friendship among Hellenes from natural enmity with barbarians, deducing from this definitional contrast that Greek conflict is mere internal discord (stasis), which prohibits ravaging lands or enslavement.",
+            "anchorIds": [
+              "p-917134",
+              "p-919634",
+              "p-922157"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Governs the specific operational rules of warfare and inter-state relations among Greek poleis.",
+            "anchorIds": [
+              "p-919634",
+              "p-922157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates infers through the analogy of a painter depicting an ideally beautiful human that an ideal pattern of justice or a perfect state remains valid as an objective evaluative standard even if it cannot be fully realized in practice.",
+            "anchorIds": [
+              "p-925041",
+              "p-925834",
+              "p-926473"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "A general methodological and epistemological principle regarding the nature and evaluative function of theoretical ideals.",
+            "anchorIds": [
+              "p-925041",
+              "p-925834"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates draws an inductive analogy from lovers of youth, wine, and honor—who embrace every variety of the loved object—to infer that the philosopher necessarily loves and desires the whole of wisdom and learning, not merely a part.",
+            "anchorIds": [
+              "p-930486",
+              "p-932037",
+              "p-932216"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Defines the essential nature and disposition defining the character class of the philosopher.",
+            "anchorIds": [
+              "p-932037",
+              "p-932216"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates performs a direct inferential step: since opposites like beauty and ugliness, or justice and injustice, are two, each is singly one; but by combining with actions and bodies, each appears manifold.",
+            "anchorIds": [
+              "p-934184",
+              "p-934256"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Articulates a foundational ontological principle of the Theory of Forms covering all abstract properties and physical manifestations.",
+            "anchorIds": [
+              "p-934256"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Socrates demonstrates through elenctic induction that every sensible particular (beautiful things, just actions, double amounts) also exhibits opposite properties (ugliness, injustice, halves), deducing that particulars hover ambiguously between being and not-being.",
+            "anchorIds": [
+              "p-943069",
+              "p-943183",
+              "p-943638"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Governs the entire realm of sensory particulars and empirical objects of perception.",
+            "anchorIds": [
+              "p-943069",
+              "p-943638"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates deduces the full catalog of philosophic virtues (truthfulness, temperance, contempt of bodily pleasures, courage, quickness of learning, memory) from the primary definition of the philosopher as one who loves true eternal being (n-31-7, depth 2). The depth incorporates the prerequisite chain.",
+            "anchorIds": [
+              "p-948857",
+              "p-949401",
+              "p-953330"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-7"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Specifies the essential qualities characterizing any true philosophical nature.",
+            "anchorIds": [
+              "p-948857",
+              "p-949401",
+              "p-953330"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Adeimantus introduces an empirical observation and conversational challenge without prior internal inferential deduction: that in everyday life, devotees of philosophy turn out to be either useless or completely vicious.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Addresses the observed standing and behavior of students and practitioners of philosophy in contemporary cities.",
+            "anchorIds": [
+              "p-953959",
+              "p-955558"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Deduces that when authentic philosophical natures are corrupted and desert philosophy (n-32-5, depth 1.5), unworthy mechanical craftsmen step into the vacuum, generating sophisms rather than true wisdom. Calibrated to reflect dependence on n-32-5.",
+            "anchorIds": [
+              "p-975927",
+              "p-976512",
+              "p-977651"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies to the specific phenomenon of secondary crafts and pretenders encroaching into philosophy in actual cities.",
+            "anchorIds": [
+              "p-975927",
+              "p-977651"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Deduces that no existing political constitution is suitable for the philosophic nature from the reality of philosophic corruption (n-32-5, depth 1.5), using the seed-and-soil analogy to explain why philosophy degenerates in foreign civic environments.",
+            "anchorIds": [
+              "p-980766"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Characterizes the systemic incompatibility between all existing historical polities and philosophical nature.",
+            "anchorIds": [
+              "p-980766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Socrates introduces the Idea of the Good as an overarching starting principle and highest study, explicitly noting it as a known starting point rather than deriving it from prior premises.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1003684",
+              "p-1004174"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Identifies the ultimate ontological and ethical principle presiding over all knowledge, value, and action.",
+            "anchorIds": [
+              "p-1001463",
+              "p-1003684"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Glaucon gives unhesitating assent to the fourfold schema of faculties just established by Socrates (n-34-3, depth 2); as an assent to a complex preceding derivation, its depth cannot be lower than the schema accepted.",
+            "anchorIds": [
+              "p-1019743"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A conversational moment of personal assent within the dramatic exchange.",
+            "anchorIds": [
+              "p-1019743"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Socrates introduces the Allegory of the Cave directly as a figurative narrative image illustrating human enlightenment and unenlightenment without an internal deductive argument.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1020773",
+              "p-1021956"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Presents a universal narrative model of the human condition regarding ignorance and appearance.",
+            "anchorIds": [
+              "p-1019944",
+              "p-1021956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates identifies an omission in the curriculum established in n-35-7 (depth 2), deducing that solid geometry (three dimensions in themselves) must precede the study of solids in motion (astronomy). Its depth incorporates n-35-7.",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ],
+            "prerequisiteNodeIds": [
+              "n-35-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Specifies a particular curricular stage and sequence in the education of rulers.",
+            "anchorIds": [
+              "p-1055885",
+              "p-1057503"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "SRqcaqiFLump0ckPidKHEA",
+  "usage": {
+    "promptTokenCount": 104817,
+    "candidatesTokenCount": 5620,
+    "totalTokenCount": 110437,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 104817
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5620
+      }
+    ]
+  },
+  "durationMs": 34550,
+  "requestHash": "0299f3f68c2c53916f4be81e90703a43c8ee7f9aa1b4352935165c4e051c55cf"
+}

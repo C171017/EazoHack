@@ -1,0 +1,98 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-14-1",
+          "h-level-1-batch-15-1",
+          "h-level-1-batch-13-2"
+        ],
+        "label": "Civic and Psychic Alignment",
+        "summary": "These discussions define divine immutability, the principle of non-contradiction, and civic harmony rooted in specialization. They establish the tripartite soul and argue that internal justice and proper constitutional order mirror one another.",
+        "rationale": "Groups clusters focused on foundational definitions of virtue, justice, non-contradiction, and the structural harmony connecting the individual soul to the political state."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-13-3",
+          "h-level-1-batch-14-2",
+          "h-level-1-batch-15-2"
+        ],
+        "label": "Epistemology and Philosopher Rule",
+        "summary": "Socrates contrasts unchanging intelligible Forms with fluctuating sensory particulars and defines cognitive faculties across the divided line. He argues that genuine philosophers must hold sovereign power despite their vulnerability to social corruption.",
+        "rationale": "Combines related sequences on the metaphysical distinction between opinion and knowledge, intelligible Forms, and the paradox of philosopher-kings."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-13-4",
+          "h-level-1-batch-15-3",
+          "h-level-1-batch-16-1"
+        ],
+        "label": "The Good, Dialectic, and Ascent",
+        "summary": "These passages elucidate the supreme Idea of the Good via the analogies of the Sun and the Cave, contrasting dialectic against subordinate hypothesis-dependent sciences. True education is depicted as turning the whole soul from becoming toward intelligible reality.",
+        "rationale": "Unites the central epistemological allegories (Sun and Cave) with dialectical method and the intellectual ascent to the Idea of the Good."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-16-2",
+          "h-level-1-batch-8-4",
+          "h-level-1-batch-16-3",
+          "h-level-1-batch-16-4"
+        ],
+        "label": "Regimes, Desires, and Harmony",
+        "summary": "Socrates analyzes deteriorating political constitutions and matching psychic types, demonstrating through multiple proofs that the just person is far happier than the miserable tyrant. Modeling the soul as an inner man, lion, and beast, he shows that justice requires subjecting bodily appetite to divine reason.",
+        "rationale": "Brings together the systematic comparative analysis of degenerate regimes, tyrannical misery, hierarchy of desires, and inner psychic governance."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-16-5",
+          "h-level-1-batch-15-4"
+        ],
+        "label": "Forms and Critique of Imitation",
+        "summary": "Reality is analyzed across original forms, crafted physical implements, and painterly copies thrice removed from the truth. Socrates condemns imitative poetry for feeding irrational passions and misrepresenting reality, excluding it from the commonwealth unless its defenders prove its moral and civic benefit.",
+        "rationale": "Connects the metaphysical critique of imitation (the three beds and makers) with the banishment and moral evaluation of imitative poetry in Book X."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-3",
+          "n-41-7",
+          "h-level-1-batch-16-6",
+          "n-42-4"
+        ],
+        "label": "Immortality, Er, and Judgement",
+        "summary": "Demonstrating that moral vice harms without destroying the soul, Socrates asserts its imperishability and restores external rewards to virtue in life and death. The Myth of Er portrays posthumous judgements, retribution for incurable tyrants, and the personal responsibility of souls choosing future reincarnations.",
+        "rationale": "Gathers Book X's concluding metaphysical arguments for the immortality of the soul and the eschatological vision of post-mortem judgement and rebirth in the Myth of Er."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-4"
+        ],
+        "label": "Editorial Synopses of Plato",
+        "summary": "Paratextual editorial entries systematize core Platonic concepts across the dialogue, covering the methodology of dialectic versus eristic, theology, the Idea of the Good, the nature and centrality of justice, and the tripartite theory of the soul.",
+        "rationale": "Maintained as a singleton because it comprises secondary editorial commentaries and paratextual overviews rather than primary dramatic dialogue."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "LxucavbXGqyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 34441,
+    "candidatesTokenCount": 1137,
+    "totalTokenCount": 35578,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 34441
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1137
+      }
+    ]
+  },
+  "durationMs": 8851,
+  "requestHash": "6aa7a3a2e8267e3465f02a83b2385a6ce9c95e1715391400dd779198bbb0c8b0"
+}

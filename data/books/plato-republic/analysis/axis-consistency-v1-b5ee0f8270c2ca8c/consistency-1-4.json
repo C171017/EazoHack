@@ -1,0 +1,588 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-36-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates establishes the exact lifecycle scheme (unforced youth study, gymnastics, synoptic sciences at 20, dialectic at 30, den service at 35, vision of the Good at 50) as the practical temporal realization of the higher educational curriculum culminating in dialectic. Its validity directly presupposes dialectic as the summit of the sciences (n-36-3, depth 3), so its total depth must incorporate that prerequisite chain.",
+            "anchorIds": [
+              "p-1079942",
+              "p-1080590",
+              "p-1087263"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "A structural scheme for guardian development across their lifespans.",
+            "anchorIds": [
+              "p-1079942",
+              "p-1080590",
+              "p-1087263"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "The argument uses the supposititious son analogy to show the danger of premature dialectic in subverting received moral habits. Because it specifically examines the proper timing and peril of dialectical inquiry, it depends directly on establishing dialectic's nature and methods (n-36-3, depth 3), and cannot have a lower reasoning depth than its required prerequisite.",
+            "anchorIds": [
+              "p-1081658",
+              "p-1083717",
+              "p-1084954"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Describes a psychological and educational hazard specific to young dialecticians.",
+            "anchorIds": [
+              "p-1081658",
+              "p-1083717",
+              "p-1084954"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "The proposal to banish everyone over ten to start the city cleanly builds directly on the feasibility argument of philosopher-kings establishing a state by wiping the canvas clean (n-33-3, depth 2), deriving a single operational method for actualizing that founding.",
+            "anchorIds": [
+              "p-1089513",
+              "p-1090167"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A single radical policy prescription for instituting the philosopher-led polity.",
+            "anchorIds": [
+              "p-1089513",
+              "p-1090167"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Defines oligarchy as rule by property qualification and demonstrates how it divides the state into rich and poor factions, following directly from the classification and decline of regimes established in n-37-1.",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Characterizes a specific constitution and its essential socio-political defect.",
+            "anchorIds": [
+              "p-1109832",
+              "p-1111480",
+              "p-1113039"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Directly infers from the nature of democratic liberty and lack of compulsion (n-38-1) that the democratic city becomes a colorful bazaar exhibiting every variety of human character and constitution.",
+            "anchorIds": [
+              "p-1127593",
+              "p-1127860",
+              "p-1128485"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Specifies the varied social and constitutional conditions within democratic cities.",
+            "anchorIds": [
+              "p-1127593",
+              "p-1127860",
+              "p-1128485"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Socrates establishes a principled division of desires into necessary and unnecessary by applying the analysis of the appetitive principle of the tripartite soul (n-28-3, depth 2), distinguishing between desires that benefit life and cannot be eliminated from harmful, superfluous indulgences.",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878",
+              "p-1132748"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Provides a general taxonomy of desires relevant across moral psychology.",
+            "anchorIds": [
+              "p-1131535",
+              "p-1131878",
+              "p-1132748"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Analyzes the internal demographic and economic structure of democracy into demagogic drones, wealthy orderly citizens, and the manual-laboring multitude, directly combining the drone taxonomy (n-37-6) with the constitutional dynamics of democracy (n-38-1).",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147548",
+              "p-1147990"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-6",
+              "n-38-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies specifically to the demographic and economic classes within a democracy.",
+            "anchorIds": [
+              "p-1146512",
+              "p-1147548",
+              "p-1147990"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Introduces an analytical distinction between true positive pleasure, pain, and neutral rest, showing through internal phenomenological argument and basic observation of states of consciousness that mere cessation of pain is illusory pleasure.",
+            "anchorIds": [
+              "p-1191748",
+              "p-1193308",
+              "p-1194224"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Formulates a broad psychological and phenomenological principle governing the nature of pleasure and pain generally.",
+            "anchorIds": [
+              "p-1193308",
+              "p-1194224"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates establishes the three relations to any instrument (user with knowledge, maker with right belief, imitator with neither). This directly builds upon and refines the thesis that the imitator is thrice removed from truth (n-41-3, depth 2.5) while linking to the faculty distinction between knowledge and belief (n-31-4, depth 2).",
+            "anchorIds": [
+              "p-1231661",
+              "p-1232714",
+              "p-1233259"
+            ],
+            "prerequisiteNodeIds": [
+              "n-31-4",
+              "n-41-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "A general triadic framework covering all human artifacts and arts.",
+            "anchorIds": [
+              "p-1231661",
+              "p-1232714",
+              "p-1233259"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates reviews the ancient quarrel between poetry and philosophy and outlines the conditions for poetry's defense and return, summarizing the cumulative critique of poetry's cognitive defect and corruption of the soul developed in n-41-1 and n-41-5 (depth 2.5).",
+            "anchorIds": [
+              "p-1246643",
+              "p-1247974",
+              "p-1248462"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-1",
+              "n-41-5"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Pertains broadly to the cultural and philosophical standing of the entire discipline of poetry within a well-ordered state.",
+            "anchorIds": [
+              "p-1246643",
+              "p-1248462"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Socrates abruptly introduces the claim that the human soul is immortal and imperishable as a startling assertion to Glaucon, opening a completely new line of demonstration without any internal or textual deductive derivation in this passage.",
+            "anchorIds": [
+              "p-1250336",
+              "p-1250672",
+              "p-1250751"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Proposes a universal metaphysical claim about the eternal, imperishable nature of all human souls.",
+            "anchorIds": [
+              "p-1250672",
+              "p-1250751"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "The eschatological Myth of Er illustrates and grounds the post-mortem rewards and tenfold retributions of virtue and vice, directly depending on the preceding restoration of virtue's rewards in life and death (n-42-3, depth 3). It cannot have lower depth than the conclusion it dramatizes.",
+            "anchorIds": [
+              "p-1265362",
+              "p-1267558",
+              "p-1269757"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Presents a mythical narrative detailing specific post-mortem judgements, journey intervals, and the concrete punishment of tyrants like Ardiaeus.",
+            "anchorIds": [
+              "p-1265362",
+              "p-1267558",
+              "p-1269757"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The editorial entry evaluates and synthesizes Plato's treatment of art, drawing local inferences about the criteria of simplicity and state censorship across the dialogue.",
+            "anchorIds": [
+              "p-1290140",
+              "p-1289120"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "It characterizes a specific domain within Plato's philosophy, namely his aesthetic theory and view of artistic regulation.",
+            "anchorIds": [
+              "p-1290140"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The commentator analyzes Plato's communal institutions across works, inferring their root purpose in civic unity through comparative textual commentary.",
+            "anchorIds": [
+              "p-1299247",
+              "p-1299064"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "The entry concerns a restricted institutional policy domain in Plato's political philosophy: communism of goods, women, and children.",
+            "anchorIds": [
+              "p-1299247"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The entry contrasts dialectic with eristic based on their respective methods and aims, inferring Plato's distinction across multiple dialogues.",
+            "anchorIds": [
+              "p-1305613",
+              "p-1305056"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "It characterizes the highest method of philosophical inquiry, widely applicable across knowledge and science in Plato's epistemology.",
+            "anchorIds": [
+              "p-1305613"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The commentator organizes and summarizes the Republic's educational structure into two distinct developmental tiers based on an analytical survey of the dialogue.",
+            "anchorIds": [
+              "p-1310197",
+              "p-1309050"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "It covers the bounded domain of civic and ruler education designed for the ideal commonwealth.",
+            "anchorIds": [
+              "p-1310197"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The note distills the core theological principles of Book II into two systematic rules, drawing comparisons with the Laws.",
+            "anchorIds": [
+              "p-1319546"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "It articulates foundational principles regarding the nature of God that serve as universal standards for judgment across poetry and ethics.",
+            "anchorIds": [
+              "p-1319546"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The apparatus infers the rationale connecting the degradation of regimes to corresponding divisions in the tripartite soul.",
+            "anchorIds": [
+              "p-1322766",
+              "p-1324967"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "The claim applies to the defined classification of political constitutions and their corresponding character types.",
+            "anchorIds": [
+              "p-1322766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The note analyzes Plato's concept of the Good by synthesizing references from the Republic and the Philebus.",
+            "anchorIds": [
+              "p-1335025",
+              "p-1334643"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "The Idea of the Good is characterized as the ultimate metaphysical principle uniting being, truth, beauty, and perfection across all reality.",
+            "anchorIds": [
+              "p-1335025"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-44-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The apparatus traces the progression of the search for justice from the opening refutations through the political and psychological definitions to the final proof.",
+            "anchorIds": [
+              "p-1341688",
+              "p-1340214"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "It addresses the overarching principle of justice that governs both state organization and individual moral psychology.",
+            "anchorIds": [
+              "p-1341688"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The editor summarizes and explains the broader ancient Greek concept of musical education compared to modern definitions through historical inference.",
+            "anchorIds": [
+              "p-1354597",
+              "p-1356792"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Restricted to the pedagogical domain of music and mental culture in classical Greek thought and Plato's treatises.",
+            "anchorIds": [
+              "p-1354597",
+              "p-1356792"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The essay reconstructs Plato's line of critique against poetry by tracing its historical development and ethical objections from Book II to Book X.",
+            "anchorIds": [
+              "p-1366617",
+              "p-1368817"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "It addresses the specific subject matter of poetic imitation and censorship within the commonwealth.",
+            "anchorIds": [
+              "p-1366617",
+              "p-1368817"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The editorial apparatus reviews and connects the Republic's psychological models (tripartite division, intellectual faculties, immortality) across the work.",
+            "anchorIds": [
+              "p-1382197",
+              "p-1384396"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "It covers human soul structure, epistemology, and immortality, formulating broadly reusable principles of Platonic psychology.",
+            "anchorIds": [
+              "p-1382197",
+              "p-1384396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The commentator deduces a dual compositional structure in Plato's political model by contrasting Hellenic historical customs with ideal philosophic rule.",
+            "anchorIds": [
+              "p-1389105"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Classifies the institutional structure of the ideal polity in the Republic.",
+            "anchorIds": [
+              "p-1389105"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Sxqcap-JI7Wc0ckP-4GV6AI",
+  "usage": {
+    "promptTokenCount": 104245,
+    "candidatesTokenCount": 5641,
+    "totalTokenCount": 109886,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 104245
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5641
+      }
+    ]
+  },
+  "durationMs": 31235,
+  "requestHash": "620cfe12c45ea564481d73eb131b167640cff34f707e775afcdd541343d70c32"
+}

@@ -1,0 +1,91 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-3-5",
+          "h-level-1-batch-5-1"
+        ],
+        "label": "Foundational Justice Debates",
+        "summary": "Socrates interrogates early conceptions of justice and ruler fallibility before Adeimantus demands an intrinsic defense of justice in the soul stripped of external reputation and divine rewards.",
+        "rationale": "Gathers early dialectical inquiries examining and questioning standard definitions and motivations for justice."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-7-1",
+          "h-level-1-batch-5-2",
+          "h-level-1-batch-5-3",
+          "h-level-1-batch-7-2"
+        ],
+        "label": "Civic Formation and Order",
+        "summary": "Socrates regulates cultural education, musical modes, medical practice, and specialized social roles to form disciplined guardians. The community is stabilized by civic myths, restrictions on private wealth, and the harmonized virtues of the state and soul.",
+        "rationale": "Encompasses the foundational construction, cultural censorship, and institutional ordering of the guardian class in Books II–IV."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-7-3",
+          "h-level-1-batch-5-4",
+          "h-level-1-batch-5-5",
+          "h-level-1-batch-7-4"
+        ],
+        "label": "Communal Rules and Philosophers",
+        "summary": "Discussions define the shared duties of male and female guardians, regulated reproduction, and Panhellenic warfare codes. Socrates identifies genuine philosophers as true seekers of reality who are qualified to govern, despite public dismissal and civic madness.",
+        "rationale": "Brings together Book V and VI proposals concerning radical communal institutions and the political role of genuine philosophers."
+      },
+      {
+        "childIds": [
+          "n-34-4",
+          "h-level-1-batch-8-1",
+          "h-level-1-batch-8-2"
+        ],
+        "label": "Higher Dialectic and Curriculum",
+        "summary": "Following assent to the faculty schema, Socrates details the mathematical disciplines designed to turn the soul toward pure being. He structures the stages of advanced education and ruler training while warning against early dialectical debate.",
+        "rationale": "Covers the theoretical curriculum, faculty divisions, and state formation through advanced philosophical training in Books VI–VII."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-3",
+          "n-39-7",
+          "n-42-5"
+        ],
+        "label": "Regime Decline and Soul Visions",
+        "summary": "This span examines the systematic corruption of polities from timocracy into democracy, illustrates innocent pure pleasures via olfactory sensation, and envisions the cosmic spindle governing soul destiny.",
+        "rationale": "Combines late-dialogue progressions (Books VIII–X) detailing political decay, psychological comparisons, and the eschatological cosmic vision."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-3",
+          "h-level-1-batch-6-4",
+          "h-level-1-batch-6-5",
+          "n-46-5"
+        ],
+        "label": "Index and Editorial Apparatus",
+        "summary": "Editorial apparatus, topical commentary, and index entries analyze poetic censorship, civic education, and constitutional models. Accompanying transcriber notes record Greek transliteration rules and structural collation details.",
+        "rationale": "Groups all scholarly paratext, comprehensive indexes, contextual commentary, and technical editorial documentation."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Ihucaq2HDP6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 40496,
+    "candidatesTokenCount": 897,
+    "totalTokenCount": 41393,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40496
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 897
+      }
+    ]
+  },
+  "durationMs": 7699,
+  "requestHash": "e36c5af319f207beeeb8730c48f0b695ca95772fc1734e5b4030f77df5dc1115"
+}

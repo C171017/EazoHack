@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-2",
+          "n-23-3",
+          "n-24-4",
+          "n-24-5",
+          "n-25-5"
+        ],
+        "label": "Disciplining the City's Roles",
+        "summary": "Socrates establishes that city members must specialize strictly in their natural aptitudes, requiring guardians to balance spiritedness with gentleness while avoiding corrupting theatrical imitation. In parallel, civic well-being demands expelling versatile poets and rejecting excessive medical coddling that diverts citizens from their essential roles.",
+        "rationale": "These entries from Books II and III share the principle of functional specialization and the elimination of moral or bodily indulgences that undermine a citizen's core civic craft."
+      },
+      {
+        "childIds": [
+          "n-26-5",
+          "n-27-1",
+          "n-27-4",
+          "n-28-1",
+          "n-28-6"
+        ],
+        "label": "Civic Order and Virtue",
+        "summary": "Auxiliaries are denied private wealth and personal property to safeguard civic unity, drawing Adeimantus's objection that the defenders are deprived of ordinary happiness. Socrates balances this by identifying wisdom, courage, and non-meddling justice across the city's classes, establishing an alignment between the constitutions of the state and the soul.",
+        "rationale": "Spanning late Book III and Book IV, these nodes center on the communal discipline of rulers, the defense against charges of guardian unhappiness, and the definitions of justice and constitutional structure."
+      },
+      {
+        "childIds": [
+          "n-29-2",
+          "n-29-4",
+          "n-30-1"
+        ],
+        "label": "Universal Guardianship and Unity",
+        "summary": "Socrates argues that philosophical and executive gifts are distributed among both men and women, requiring identical education and duties for female guardians. This communal foundation culminates in a completely unified commonwealth that shares all joys and pains like a single living body.",
+        "rationale": "These Book V entries present radical proposals for gender-inclusive guardian roles and collective unity where private interests are replaced by shared civic sentiment."
+      },
+      {
+        "childIds": [
+          "n-32-1",
+          "n-32-6",
+          "n-32-7",
+          "n-33-3"
+        ],
+        "label": "The Philosopher and Statecraft",
+        "summary": "True philosophers are identified as the only fit rulers because they apprehend eternal reality, though their desertion by society leaves philosophy vulnerable to debased pretenders. A noble remnant is forced to seek shelter from civic madness, yet Socrates maintains that an ideal state remains achievable if even a single philosopher attains power.",
+        "rationale": "These Book VI passages examine the qualification of philosophers to rule, their contemporary alienation and counterfeits, and the practical possibility of philosophical governance."
+      },
+      {
+        "childIds": [
+          "n-34-4"
+        ],
+        "label": "Assent to the fourfold schema",
+        "summary": "The interlocutor understands, assents to, and accepts the proposed arrangement of the faculties.",
+        "rationale": "Carried as an individual leaf because it marks a distinct conversational agreement to a structural epistemological schema at lower generality, separate from the broader political narratives."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7xqcaqiIEOmp0ckPidKHEA",
+  "usage": {
+    "promptTokenCount": 10768,
+    "candidatesTokenCount": 802,
+    "totalTokenCount": 11570,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10768
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 802
+      }
+    ]
+  },
+  "durationMs": 7751,
+  "requestHash": "e7502de972973b72aa76b6f13a7513305b48cf2ed11fabd5d39474b1e6ed5dcb"
+}

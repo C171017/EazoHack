@@ -1,0 +1,65 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-5-5",
+        "reason": "Proposed depth 2 conflicts with the whole-book baseline rating of depth 1 for n-5-5, and while n-5-4 is listed as a prerequisite, the deductive core of the argument concerning divine perfection and immutability (God is good and unchanging) constitutes an internal first-principles step rather than an extended two-step chain above n-5-4."
+      },
+      {
+        "nodeId": "n-8-5",
+        "reason": "The proposal assigns depth 2 with prerequisite n-8-3, but the whole-book catalog establishes depth 1; the Parable of the Ship responds directly to Adeimantus's objection regarding why philosophers appear useless via an allegorical illustration rather than adding a full secondary inferential tier upon n-8-3."
+      },
+      {
+        "nodeId": "n-9-2",
+        "reason": "The proposal assigns depth 2, whereas the whole-book baseline establishes depth 1 (a direct geometric formulation immediately accompanying the sun analogy without an additional distinct reasoning layer)."
+      },
+      {
+        "nodeId": "n-9-5",
+        "reason": "The proposal assigns depth 2, whereas the whole-book baseline establishes depth 1 (the cave parable is introduced as an illustrative allegorical counterpart rather than an extended inferential deduction)."
+      },
+      {
+        "nodeId": "n-10-5",
+        "reason": "The proposal assigns depth 2, whereas the whole-book baseline establishes depth 1; the commentary directly observes and abstracts the two motives from the mathematical material without requiring a multi-tiered deduction."
+      },
+      {
+        "nodeId": "n-11-6",
+        "reason": "The proposal assigns depth 2, whereas the whole-book baseline establishes depth 1; the commentary performs a direct single-step analytical comparison between the text's regime succession and Greek history."
+      },
+      {
+        "nodeId": "n-11-7",
+        "reason": "The proposal assigns depth 2, whereas the whole-book baseline establishes depth 1; the ethical gradation is a direct synthesis and formulaic summation of the decline sequence rather than a multi-stage inferential leap."
+      },
+      {
+        "nodeId": "n-12-2",
+        "reason": "The proposal assigns depth 2.5, which is unsupported compared to the whole-book baseline of 2.0; the half-step decimal precision is ungrounded relative to the sequence of regime character developments."
+      },
+      {
+        "nodeId": "n-12-6",
+        "reason": "The proposal assigns depth 3, whereas the whole-book baseline establishes depth 2; the composite image of the soul directly maps and personifies the already established tripartite soul and internal justice rather than forming a third-tier inferential deduction."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "uRmcaozLAump0ckPidKHEA",
+  "usage": {
+    "promptTokenCount": 120398,
+    "candidatesTokenCount": 671,
+    "totalTokenCount": 121069,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 120398
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 671
+      }
+    ]
+  },
+  "durationMs": 13903,
+  "requestHash": "b6f12a0e80fac9d9cb524521d42df51dcf8442de6fa95dfeb95c54b90a0534c7"
+}

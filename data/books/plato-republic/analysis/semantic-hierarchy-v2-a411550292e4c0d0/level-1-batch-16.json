@@ -1,0 +1,89 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-34-1",
+          "n-34-3",
+          "n-35-3",
+          "n-35-4"
+        ],
+        "label": "Intellectual Ascent and Faculties",
+        "summary": "Reason moves dialectically through hypotheses and ideas to attain first principles, mapping four faculties of mind to corresponding levels of reality. Education is presented as the conversion and turning of the soul's vision away from the realm of becoming toward the Idea of the Good.",
+        "rationale": "These Book VI–VII passages focus on the epistemological ascent of the mind, the four cognitive faculties, and the reorientation of the soul toward truth."
+      },
+      {
+        "childIds": [
+          "n-37-1",
+          "n-38-3",
+          "n-39-3"
+        ],
+        "label": "Regimes, Desires, and Justice",
+        "summary": "Socrates contrasts four imperfect constitutions and human characters to determine the relative happiness of justice versus injustice. After categorizing human desires into necessary and unnecessary pleasures, he concludes with the first proof that the most just individual is the happiest and the tyrant the most miserable.",
+        "rationale": "Covers the evaluation of degraded constitutions and desires leading up to the initial formal proof of the superiority of the just life in Books VIII–IX."
+      },
+      {
+        "childIds": [
+          "n-39-4",
+          "n-40-1"
+        ],
+        "label": "Tripartite Soul and Pleasures",
+        "summary": "The soul's appetitive, spirited, and rational components are examined alongside their corresponding pursuits of gain, honor, and truth. Socrates contrasts deceptive physical pleasures mixed with pain against true pleasures rooted in invariable essence.",
+        "rationale": "Focuses specifically on the psychological breakdown of the three soul parts and the philosophical criteria distinguishing true and illusory pleasures."
+      },
+      {
+        "childIds": [
+          "n-40-3",
+          "n-40-4",
+          "n-40-5",
+          "n-40-6"
+        ],
+        "label": "Inner Governance and Soul Beast",
+        "summary": "Socrates models the soul as an inner man, a lion, and a many-headed beast, demonstrating that justice subjects unruly appetites to reason. True governance requires submission to divine wisdom within or without, leading the philosopher to order their life by an internal heavenly pattern.",
+        "rationale": "A closely connected sequence of Book IX passages developing the composite beast allegory and the internal moral governance of the soul."
+      },
+      {
+        "childIds": [
+          "n-41-2",
+          "n-41-4"
+        ],
+        "label": "Forms, Crafts, and Imitation",
+        "summary": "Reality is categorized into divine forms, physical artifacts made by craftsmen, and painterly imitations thrice removed from the truth. Socrates distinguishes the user who possesses genuine knowledge from the maker with right belief and the imitator who has neither.",
+        "rationale": "These Book X passages analyze the metaphysical status and epistemic deficiency of artistic imitation relative to ideal forms and knowledgeable use."
+      },
+      {
+        "childIds": [
+          "n-42-1",
+          "n-42-2",
+          "n-42-3"
+        ],
+        "label": "Immortality and Soul's Rewards",
+        "summary": "Because moral vice harms without destroying the soul, Socrates concludes that the soul is indestructible and immortal. Stripping away earthly encrustations to reveal its original purity, he ultimately restores the external honors and divine rewards due to virtue in life and death.",
+        "rationale": "These Book X passages form the philosophical conclusion regarding the soul's immortality, original nature, and restored rewards."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "GBucat3kAbWc0ckP-4GV6AI",
+  "usage": {
+    "promptTokenCount": 10173,
+    "candidatesTokenCount": 889,
+    "totalTokenCount": 11062,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10173
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 889
+      }
+    ]
+  },
+  "durationMs": 8387,
+  "requestHash": "3cbe8207bb7be4e8bf3a677f259fae9c2cb2fb6292aa434edc5a35e540851c9b"
+}

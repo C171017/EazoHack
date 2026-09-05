@@ -1,0 +1,84 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-1-3"
+        ],
+        "label": "Translator Paratext & Editions",
+        "summary": "Paratextual notes detail Jowett's third edition of the Republic, including dedications to Oxford pupils, acknowledgments of editorial collaborators, the extensive scope of revisions, and an exchange plan allowing owners of the 1881 edition to acquire the updated volume.",
+        "rationale": "Retained as an isolated paratextual cluster detailing translation revisions, dedications, and publishing particulars, distinct from the thematic analyses and dialogue."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-4",
+          "h-level-1-batch-2-5",
+          "h-level-2-batch-2-1"
+        ],
+        "label": "Foundational Justice Inquiries",
+        "summary": "These discussions trace the inquiry into justice from early traditional definitions and conversational aporia to radical challenges posed by interlocutors. Glaucon and Adeimantus press Socrates to demonstrate that justice is inherently beneficial to the soul rather than pursued solely for external rewards or social standing.",
+        "rationale": "Combines introductory commentaries and early Book I/II dialogue scenes centered on questioning conventional morality and demanding an intrinsic defense of justice."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-5",
+          "h-level-2-batch-2-2"
+        ],
+        "label": "Ideal State & Guardian Design",
+        "summary": "These sections outline the architectural creation of the commonwealth through specialized civic functions, communal discipline, and strict cultural regulation. Both dialogue and commentary examine musical and narrative censorship, physical regimen, the myth of the metals, and the allocation of cardinal virtues to establish internal order.",
+        "rationale": "Merges dialogue and analytical commentary detailing the construction of the early city, guardian training, and institutional stability."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-2",
+          "h-level-2-batch-2-3",
+          "h-level-2-batch-2-4"
+        ],
+        "label": "Philosopher Governance & Study",
+        "summary": "These passages address the qualifications of true philosophers to govern, along with their rigorous intellectual curriculum from preparatory sciences to dialectic. They detail communal gender roles, the philosopher's duty to return to civic management, the ascent to the Good, and the hazards of premature dialectical disputation.",
+        "rationale": "Unites dialogue and commentary covering the central books on philosopher-rulers, higher education, the nature of being, and dialectical training."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-1",
+          "h-level-2-batch-1-6",
+          "h-level-2-batch-2-5"
+        ],
+        "label": "Regime Decline & Soul Destiny",
+        "summary": "These sections analyze the systematic degeneration of political constitutions and individual souls from timocracy down through democracy and tyrannical misery. They incorporate mathematical models of generational decay, numerical valuations separating the king from the tyrant, and the cosmic vision of the Myth of Er.",
+        "rationale": "Groups dialogue spans and commentaries detailing political perversions, mathematical measures of regime decline, and mythic accounts of cosmic necessity."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-7"
+        ],
+        "label": "Comparative Politics & Successors",
+        "summary": "These sections examine Plato's political paradoxes—including the community of property and families—alongside influences from Dorian and Spartan institutions. They trace comparative shifts across the Republic, Statesman, and Laws, and evaluate later adaptations of ideal states by Cicero, Augustine, Dante, More, and Campanella.",
+        "rationale": "Stands alone as an extensive comparative historical analysis tracking the evolution and reception of Platonic political thought in later works and classical successors."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "RBucapNXrInRyQ-2x684",
+  "usage": {
+    "promptTokenCount": 77902,
+    "candidatesTokenCount": 938,
+    "totalTokenCount": 78840,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 77902
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 938
+      }
+    ]
+  },
+  "durationMs": 10061,
+  "requestHash": "7fad72dcb0e865cd0ca403192ddf797207bfd44ad471fed39bd4fd44cda99140"
+}

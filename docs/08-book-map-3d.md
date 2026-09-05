@@ -30,7 +30,7 @@ Generality anchors: 0 a specific instance/scene; 1 a small bounded set; 2 a rest
 
 An abstract starting definition may have X=0 and high Y. A model-derived prediction about one specific event may have high X and Y=0. Assess the actual occurrence's statement: a depicted story and its general interpretation are different units. Preserve speakers, opposed claims and editorial attribution. Explain a mixed unit's rated scope or leave the axis unknown instead of rewriting the source.
 
-Each axis stores its own rationale and source-anchor IDs. Reasoning can additionally cite accepted prerequisite node IDs. A separate source review inspects those prerequisites. Unknown coordinates remain null and unplaced; the original node and its source remain accessible. Uncertainty is not a zero or midpoint.
+Each axis stores its own rationale and source-anchor IDs. Reasoning can additionally cite accepted prerequisite node IDs. A separate source review inspects those prerequisites. Whole-book calibration checks total depth across batches: a dependent cannot receive a lower known depth than a required prerequisite, and an unknown required depth remains explicit. Unknown coordinates remain null and unplaced; the original node and its source remain accessible. Uncertainty is not a zero or midpoint.
 
 ## Topics and source identity
 

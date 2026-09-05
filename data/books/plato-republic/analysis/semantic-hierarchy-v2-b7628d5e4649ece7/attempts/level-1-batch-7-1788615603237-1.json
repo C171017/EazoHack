@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-24-5",
+          "n-26-5",
+          "n-27-1"
+        ],
+        "label": "Guardianship and Social Bounds",
+        "summary": "Socrates establishes restrictions on poetic imitation and forbids guardians from possessing private property or wealth, prompting Adeimantus to question whether such austerity deprives the city's protectors of happiness.",
+        "rationale": "All three nodes originate from Books III and IV and center on the rigorous material and cultural restrictions placed on guardians to ensure the security of the commonwealth, alongside Adeimantus's objection to their enforced poverty."
+      },
+      {
+        "childIds": [
+          "n-28-6",
+          "n-29-2",
+          "n-29-4",
+          "n-30-1"
+        ],
+        "label": "Civic Unity and Governance",
+        "summary": "Socrates links the five constitutions of the state to types of souls, proposes that female guardians undergo equal training due to natural capacity, and identifies civic unity in common feeling across the commonwealth.",
+        "rationale": "These entries from Books IV and V address the internal alignment of the ideal city, focusing on the equality of female guardians, organic civic solidarity, and constitutional forms."
+      },
+      {
+        "childIds": [
+          "n-32-1",
+          "n-32-6",
+          "n-32-7",
+          "n-33-3"
+        ],
+        "label": "Philosophy and the State",
+        "summary": "True philosophers possess the knowledge required to govern, yet in corrupt societies they must shelter quietly while unworthy pretenders fill their place, leaving the realization of an ideal state dependent on a rare philosopher-ruler.",
+        "rationale": "These selections from Book VI examine the qualifications of genuine philosophers, their vulnerability to societal corruption, the rise of imitators, and the conditions under which a philosopher-ruler can draft just laws."
+      },
+      {
+        "childIds": [
+          "n-34-4",
+          "n-35-6",
+          "n-35-7",
+          "n-36-1",
+          "n-36-2"
+        ],
+        "label": "The Mathematical Curriculum",
+        "summary": "Following assent to the divisions of the soul's faculties, Socrates outlines a progressive mathematical course of arithmetic, plane geometry, solid geometry, astronomy, and harmonics designed to elevate the intellect toward eternal being.",
+        "rationale": "These passages from Books VI and VII systematically detail the propaedeutic mathematical sciences intended to reorient the intellect away from physical observation and toward pure form."
+      },
+      {
+        "childIds": [
+          "n-36-6",
+          "n-40-2"
+        ],
+        "label": "Regime Realization and Tyranny",
+        "summary": "Socrates describes establishing the ideal state by educating the young away from their parents, and later mathematically contrasts the pleasure of the philosophical ruler against the miserable degradation of the tyrant.",
+        "rationale": "Both nodes represent culminations of political life: the radical practical inception of the just regime in Book VII and the comparative metric of royal versus tyrannical happiness in Book IX."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "rBucaqK5GOmj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 10013,
+    "candidatesTokenCount": 764,
+    "totalTokenCount": 10777,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10013
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 764
+      }
+    ]
+  },
+  "durationMs": 7733,
+  "requestHash": "a4c5228cfc86685cd957b85b88dff3167f9e334e0d7793e1e54891cd7c3d611c"
+}

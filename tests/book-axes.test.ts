@@ -11,7 +11,7 @@ import { createSampleGraph } from '../src/features/book-graph/sample-graph';
 import { getBookPreview } from '../src/features/reader/book-preview';
 import { clusterEntry, leafEntry, validateHierarchy } from '../src/shared/zoom-hierarchy';
 import { nodeDetail, createMapStore, unplacedNotes } from '../src/server/book-map/store';
-import { calibrateBookAxes, depthInconsistencies } from '../src/server/book-analysis/axis-calibration';
+import { calibrateBookAxes, depthInconsistencies, requiredDepthFloors } from '../src/server/book-analysis/axis-calibration';
 
 test('axis reassessment preserves source, supports fractional/unknown values, reviews corrections, and resumes safely',async()=>{
   const graph=createSampleGraph(await getBookPreview()),dir=await mkdtemp(path.join(os.tmpdir(),'eazo-axes-'));
@@ -111,5 +111,14 @@ test('whole-book calibration catches cross-batch depth inversions and replays re
     assert.equal(GraphSchema.safeParse(bad).success,false);
     const unknown=structuredClone(result);unknown.nodes[0].axisAssessment!.reasoningDepth.value=null;unknown.nodes[0].position.x=null;
     assert.equal(GraphSchema.safeParse(unknown).success,false);
+    const long=structuredClone(graph);
+    for(let i=2;i<long.nodes.length;i++){
+      long.nodes[i].axisAssessment!.reasoningDepth.value=1;long.nodes[i].position.x=.25;
+      long.nodes[i].axisAssessment!.reasoningDepth.prerequisiteNodeIds=[long.nodes[i-1].id];
+    }
+    assert.equal(requiredDepthFloors(GraphSchema.parse(long)).get(long.nodes.at(-1)!.id),2);
+    const closed=await calibrateBookAxes({graph:long,outputRoot:path.join(dir,'long'),model:'fixture',generate});
+    assert.equal(depthInconsistencies(closed).length,0);
+    assert.equal(closed.nodes.at(-1)!.axisAssessment!.reasoningDepth.value,2,'Long chains must not become unknown merely because propagation exceeded four passes');
   }finally{await rm(dir,{recursive:true,force:true});}
 });

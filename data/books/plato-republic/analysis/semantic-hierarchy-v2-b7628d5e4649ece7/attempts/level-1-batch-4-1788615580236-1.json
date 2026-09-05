@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-6-3",
+          "n-6-4",
+          "n-7-2",
+          "n-7-5",
+          "n-8-1",
+          "n-23-3"
+        ],
+        "label": "Guardian Society and Virtues",
+        "summary": "These accounts examine the constitution of the ideal city's guardian class, from their innate spirited and gentle temperaments to the foundational myth of the metals, communal domestic life without private property, and the equal role of women. Together with these civic arrangements, the city's structure is analyzed through the isolation of the four cardinal virtues: wisdom, courage, temperance, and justice.",
+        "rationale": "Groups the early discussions regarding guardian selection, social and familial organization, and the cardinal virtues of the state into a single cohesive thematic block."
+      },
+      {
+        "childIds": [
+          "n-8-5",
+          "n-10-1",
+          "n-10-2",
+          "n-10-4"
+        ],
+        "label": "Philosopher Ruler Education",
+        "summary": "Through the parable of the ship and the outline of a rigorous curriculum, these passages defend the role of the philosopher in governance. They trace the intellectual ascent from arithmetic and solid geometry to dialectic, framing an extensive lifespan scheme designed to prepare dialectical rulers for state leadership.",
+        "rationale": "Unites the defense of philosophical rule with the mathematical and philosophical curriculum prescribed for educating the philosopher-kings."
+      },
+      {
+        "childIds": [
+          "n-11-2",
+          "n-11-3",
+          "n-11-4",
+          "n-11-5",
+          "n-11-6"
+        ],
+        "label": "Decline of Political Regimes",
+        "summary": "This sequence charts the progressive degeneration of the state and soul from timocracy through oligarchy, democracy, and tyranny, driven by internal faction and excessive liberty. An editorial reflection assesses whether this progression represents an abstract philosophical order of thought rather than historical chronology.",
+        "rationale": "Brings together the Book VIII accounts of political degeneration alongside the commentary evaluating the historical versus conceptual nature of the regime sequence."
+      },
+      {
+        "childIds": [
+          "n-12-2",
+          "n-12-3",
+          "n-12-5"
+        ],
+        "label": "Psychology and Wretchedness of Tyrants",
+        "summary": "These sections examine the origin of the tyrannical man governed by lawless nocturnal appetites, demonstrating his inner enslavement and profound misery when holding absolute public power. This wretchedness is finalized in a mathematical calculation demonstrating the royal ruler's happiness to be 729 times greater than that of the tyrant.",
+        "rationale": "Groups the detailed Book IX treatment of the tyrannical soul, its public misery, and the mathematical demonstration of its distance from royal happiness."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "lRucatXQIL-Sx9gPmNDRsQI",
+  "usage": {
+    "promptTokenCount": 21345,
+    "candidatesTokenCount": 693,
+    "totalTokenCount": 22038,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21345
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 693
+      }
+    ]
+  },
+  "durationMs": 7268,
+  "requestHash": "e3fc650b02426596d555f7b692e5abc9d00a76c2adfca504169ca35523e3cdad"
+}

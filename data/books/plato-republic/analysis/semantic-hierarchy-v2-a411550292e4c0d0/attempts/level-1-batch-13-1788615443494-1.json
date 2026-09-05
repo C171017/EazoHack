@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-4",
+          "n-23-5",
+          "n-24-3",
+          "n-25-3",
+          "n-25-4",
+          "n-27-3"
+        ],
+        "label": "Poetic and Musical Education",
+        "summary": "Socrates establishes foundational principles for early nurture, reforming poetic narration and theology while emphasizing that musical harmony and simplicity cultivate virtue and civic order.",
+        "rationale": "Coherent sequence of Book II-IV passages on regulating poetry, theology, musical education, and character formation."
+      },
+      {
+        "childIds": [
+          "n-28-2",
+          "n-29-6",
+          "n-30-3",
+          "n-32-4"
+        ],
+        "label": "Psychic and Political Order",
+        "summary": "These discussions define analytical principles of non-contradiction, civic unity through shared experience, the status of political ideals as evaluative models, and the plight of the philosophical ruler through the ship of state.",
+        "rationale": "Bridges Book IV-VI passages addressing internal consistency, civic cohesion, and standard models of political rule."
+      },
+      {
+        "childIds": [
+          "n-31-1",
+          "n-31-3",
+          "n-31-6"
+        ],
+        "label": "Forms, Faculties, Particulars",
+        "summary": "Socrates examines the unity of intelligible Forms, defines cognitive faculties by their distinct operations, and contrasts unchanging truths with ambiguous, fluctuating sensory particulars.",
+        "rationale": "Tight thematic cluster in Book V defining the epistemological and ontological distinction between knowledge of Forms and belief about particulars."
+      },
+      {
+        "childIds": [
+          "n-33-4",
+          "n-33-5",
+          "n-35-1",
+          "n-35-2"
+        ],
+        "label": "The Good and the Cave Allegory",
+        "summary": "Socrates presents the Idea of the Good as the supreme source of truth and being via the Sun analogy, mirrored in the Allegory of the Cave where prisoners ascend from dark shadows to direct contemplation of the sun.",
+        "rationale": "Thematic and narrative continuum in Books VI-VII outlining the Idea of the Good and the corresponding allegory of enlightenment."
+      },
+      {
+        "childIds": [
+          "n-41-7"
+        ],
+        "label": "Immortality of the Soul",
+        "summary": "Socrates turns the conversation from earthly virtue to its eternal significance, proposing to an astonished Glaucon that the human soul is immortal and imperishable.",
+        "rationale": "Book X singleton that stands apart chronologically and thematically from the epistemological and pedagogical dialogues of Books II-VII."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "DhucarvsDv6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 10662,
+    "candidatesTokenCount": 565,
+    "totalTokenCount": 11227,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10662
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 565
+      }
+    ]
+  },
+  "durationMs": 5584,
+  "requestHash": "8662c4124d7a2569f3e73510c225bd605420aa2e72ea0c03d41fcc657c34207d"
+}

@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-35-6",
+          "n-35-7",
+          "n-36-1",
+          "n-36-2"
+        ],
+        "label": "Curricular Sciences of Being",
+        "summary": "Socrates reviews the mathematical disciplines designed to draw the soul from sensory flux to eternal being. Arithmetic, plane geometry, solid geometry, and abstract astronomy and harmonics must prioritize intellectual problems over empirical perception.",
+        "rationale": "All four entries cover the specific sequential mathematical curriculum described in Book VII that directs intellect toward true being."
+      },
+      {
+        "childIds": [
+          "n-36-5",
+          "n-36-4",
+          "n-36-6"
+        ],
+        "label": "Education and State Foundation",
+        "summary": "Socrates presents the training of philosopher-kings, cautioning against premature exposure to dialectical debate before outlining progressive stages of education, public office, and rule. The establishment of this ideal polity begins by educating youths under ten outside the influence of their parents.",
+        "rationale": "These entries focus on the institutional timeline, pedagogical precautions regarding dialectic, and the practical foundation of the ideal kallipolis."
+      },
+      {
+        "childIds": [
+          "n-37-3",
+          "n-37-4",
+          "n-37-5",
+          "n-37-6",
+          "n-37-7",
+          "n-37-8"
+        ],
+        "label": "Degeneration of Regimes",
+        "summary": "This sequence tracks the decline of the ideal republic through timocracy, oligarchy, and early democracy. Rulers miscalculate the marriage number, leading to factionalism, property accumulation, the rise of parasitic drone classes, and civil unrest.",
+        "rationale": "The entries trace the step-by-step devolution of political constitutions and corresponding human characters across Book VIII."
+      },
+      {
+        "childIds": [
+          "n-39-1",
+          "n-39-2",
+          "n-39-5",
+          "n-40-2"
+        ],
+        "label": "Tyranny and True Pleasure",
+        "summary": "Socrates analyzes the emergence and misery of the tyrannical personality in both private life and sovereign authority. Contrasting this state with the philosopher's intellect, he demonstrates that the just ruler enjoys pleasures far superior to those of the tyrant.",
+        "rationale": "These Book IX entries analyze the tyrannical soul, contrasting tyrannical misery with philosophical happiness and evaluating pleasures."
+      },
+      {
+        "childIds": [
+          "n-42-4"
+        ],
+        "label": "Posthumous Judgement of Er",
+        "summary": "Socrates narrates the journey of Er, recounting the post-mortem judgement of souls, tenfold retributions or rewards for deeds, and the terrifying eternal fate of incurable tyrants like Ardiaeus.",
+        "rationale": "This entry stands apart as an eschatological myth concluding Book X regarding cosmic justice, retribution, and the afterlife."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7xqcasmVMqyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 12551,
+    "candidatesTokenCount": 729,
+    "totalTokenCount": 13280,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12551
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 729
+      }
+    ]
+  },
+  "durationMs": 7227,
+  "requestHash": "c966a2f72bbe1fddf3cfbff0ec2cc8c1d32afcb43778bab39c0e3eed21dd6d1d"
+}

@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-1-1",
+          "n-1-2",
+          "n-2-1",
+          "n-2-2",
+          "n-2-4"
+        ],
+        "label": "Translator Paratext & Scope",
+        "summary": "Paratextual entries outline the third edition of Jowett's translation, including the dedication to Oxford pupils, acknowledgments of editorial collaborators, the extensive revisions made to the text, and plans for future dialogue publications.",
+        "rationale": "Coherent block of front matter and editorial paratext detailing edition provenance, acknowledgments, and translational scope."
+      },
+      {
+        "childIds": [
+          "n-9-6",
+          "n-10-7",
+          "n-13-7"
+        ],
+        "label": "Philosophic Training & Culture",
+        "summary": "These passages address the education and duties of guardians, contrasting the obligation of enlightened philosophers to govern with the moral perils of exposing unprepared youth to dialectic, while also critiquing the cultural and artistic role of poetry.",
+        "rationale": "Gathers commentary sections addressing education, intellectual maturation, civic duty, and the cultural critique of poets."
+      },
+      {
+        "childIds": [
+          "n-12-1",
+          "n-13-1",
+          "n-14-3"
+        ],
+        "label": "Mathematical & Mythic Models",
+        "summary": "Commentary on Plato's symbolic and mathematical constructs, exploring the geometric number governing human generations, the numerical interval separating the king from the tyrant, and the astronomical cosmology of the Myth of Er.",
+        "rationale": "Unites analytical commentary on Platonic numbers, calculations of proportion, and mythic celestial architecture."
+      },
+      {
+        "childIds": [
+          "n-14-5",
+          "n-14-6",
+          "n-15-1",
+          "n-15-2",
+          "n-15-5"
+        ],
+        "label": "The Ideal State & Paradoxes",
+        "summary": "An examination of the constitutional foundations of the Republic, contrasting its Spartan and Pythagorean influences with an ideal polity beyond faction, alongside analyses of the radical paradoxes concerning common property and the abolition of private families.",
+        "rationale": "Synthesizes commentary on the political institutions, historical prototypes, and radical civic paradoxes of the Republic."
+      },
+      {
+        "childIds": [
+          "n-19-1",
+          "n-21-4"
+        ],
+        "label": "Book I Dialogue & Sidenotes",
+        "summary": "Early Book I content includes Cephalus's dialogue reflections on old age and temper, accompanied by an editorial note recording Socrates's dissatisfaction with his own argument.",
+        "rationale": "Brings together direct dialogue material from the opening of Book I and its immediate editorial commentary."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "yxqcau3KJump0ckPidKHEA",
+  "usage": {
+    "promptTokenCount": 13758,
+    "candidatesTokenCount": 581,
+    "totalTokenCount": 14339,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13758
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 581
+      }
+    ]
+  },
+  "durationMs": 6237,
+  "requestHash": "7f49f3dff8037d73f6a710053a2568a86119350e6311e3ed42d016808008f936"
+}

@@ -35,6 +35,7 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset }: { fonts: Rea
     onPointerEnter={event => {
       if (event.pointerType === 'mouse' && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !open) {
         openedByHover.current = true;
+        setSection(null);
         setOpen(true);
       }
     }}
@@ -46,7 +47,9 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset }: { fonts: Rea
     }}>
     <button ref={trigger} className={styles.trigger} type="button"
       aria-label={open ? 'Close reading menu' : 'Open reading menu'} aria-expanded={open} aria-controls={panelId}
+      onPointerEnter={event => { if (event.pointerType === 'mouse') setSection(null); }}
       onClick={() => {
+        if (!open) setSection(null);
         // The first mouse click pins a hover-open menu instead of immediately closing it.
         if (openedByHover.current) { openedByHover.current = false; setOpen(true); }
         else setOpen(current => !current);

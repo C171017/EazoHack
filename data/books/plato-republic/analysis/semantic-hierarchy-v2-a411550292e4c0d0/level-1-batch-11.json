@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-7-2",
+          "n-7-5",
+          "n-8-1",
+          "n-8-5"
+        ],
+        "label": "Guardian Roles and Civic Ideals",
+        "summary": "Socrates establishes civic virtue and guardian life, allocating cardinal virtues across civic strata, mandating identical roles for female guardians, and organizing domestic unions communally. In addition, the parable of the ship illustrates the political estrangement and apparent uselessness of genuine philosophical leaders in actual states.",
+        "rationale": "These entries encompass Socrates' proposals in the commentary regarding guardian class structures, civic roles, communal arrangements, and the parable of the philosopher-pilot."
+      },
+      {
+        "childIds": [
+          "n-11-1",
+          "n-11-7",
+          "n-12-4",
+          "n-12-6",
+          "n-12-7"
+        ],
+        "label": "Constitutions, Soul, and Ideals",
+        "summary": "This sequence charts the ethical degradation across four inferior regimes and character types alongside the tripartite structure of the soul and its corresponding pleasures. It culminates in positing an unearthly celestial pattern that serves as the moral guide for an individual's internal conduct regardless of external politics.",
+        "rationale": "These nodes trace the systematic decline of regimes and personalities, the psychological imagery of the tripartite soul and pleasures, and the concluding concept of the heavenly city pattern."
+      },
+      {
+        "childIds": [
+          "n-14-1",
+          "n-14-7",
+          "n-16-4",
+          "n-16-5",
+          "n-18-7"
+        ],
+        "label": "Commentary on Platonic Politics",
+        "summary": "Commentary examines Plato's philosophical foundations and legacy, criticizing his banishment of poetry and evaluating the ideal state as an unfeasible vision rather than an empirical reality. Further analysis addresses the tensions of the philosopher-statesman, questions the analogy equating the state to an individual soul, and reflects on modern ideals of faith and human progress.",
+        "rationale": "A cohesive section of critical commentary evaluating Plato's broader political, artistic, and philosophical concepts alongside their modern philosophical reception."
+      },
+      {
+        "childIds": [
+          "n-5-1",
+          "n-19-5",
+          "n-21-2",
+          "n-21-3"
+        ],
+        "label": "Justice, Harm, and Happiness",
+        "summary": "Examining whether justice inherently produces happiness, Socrates demonstrates through dialogue that causing harm can never be the role of the just person, proving that the just soul lives well and achieves greater benefit than the unjust. Editorial analysis complements this by defending the conceptual validity of pursuing an ideal of justice independent of worldly rewards.",
+        "rationale": "All four entries directly center on the fundamental moral debate regarding whether justice benefits its possessor, causes harm, and leads to true happiness."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BBucapylD_6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 15596,
+    "candidatesTokenCount": 653,
+    "totalTokenCount": 16249,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15596
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 653
+      }
+    ]
+  },
+  "durationMs": 6447,
+  "requestHash": "ac84e82dc84b31d779db2139423fd6f0da8179788bb9a0b301158a804227efaf"
+}

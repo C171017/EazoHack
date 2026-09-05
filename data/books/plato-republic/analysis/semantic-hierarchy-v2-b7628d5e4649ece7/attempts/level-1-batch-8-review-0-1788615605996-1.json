@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 4,
+        "reason": "The grouping combines two distant and thematically disparate sections (Book IX's psychological debate on the threefold pleasures of the philosopher versus Book X's eschatological Myth of Er recounting cosmic judgment and afterlife retributions), forming an incoherent grouping without a shared parent topic."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "sxucaqqrA52Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 12847,
+    "candidatesTokenCount": 85,
+    "totalTokenCount": 12932,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12847
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 85
+      }
+    ]
+  },
+  "durationMs": 3687,
+  "requestHash": "7a57c670dd66e71b80b565978ae54f8c0e5addb45681b78f36845adcb062966b"
+}

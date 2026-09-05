@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-2-3"
+        ],
+        "label": "Exchange Plan for 1881 Copies",
+        "summary": "Recognizing the extent of the revisions and the dissatisfaction of owning an inferior form, the translator arranged for owners of the 1881 edition to exchange clean copies for the new edition at half price.",
+        "rationale": "A single editorial notice regarding the publishing terms and copy exchanges of the 1881 translation, separate from the philosophical content."
+      },
+      {
+        "childIds": [
+          "n-3-1",
+          "n-3-2",
+          "n-3-3",
+          "n-3-4"
+        ],
+        "label": "Scope and Structure of Republic",
+        "summary": "These sections outline the philosophical significance of the Republic, its foundational search after justice, and proposed analytical divisions into five parts or two opposing halves.",
+        "rationale": "All four children belong to the opening introduction and analysis, setting up the overarching scope, structural divisions, and thematic arc of the Republic."
+      },
+      {
+        "childIds": [
+          "n-16-3",
+          "n-17-1",
+          "n-17-5",
+          "n-17-6"
+        ],
+        "label": "Platonic Politics, Law and Models",
+        "summary": "These passages analyze Plato's critique and adoption of the Spartan system, his views on legal and medical simplicity, and comparative shifts across the Republic, Statesman, and Laws.",
+        "rationale": "All entries are critical commentary evaluating Plato's own political theories, institutional designs, and stylistic shifts across his dialogues."
+      },
+      {
+        "childIds": [
+          "n-17-7",
+          "n-18-2",
+          "n-18-3",
+          "n-18-4",
+          "n-18-5"
+        ],
+        "label": "Successors to Plato's Ideal State",
+        "summary": "This sequence examines historical adaptations and parallels to Platonic political ideals across Cicero, Augustine, Dante, Thomas More, and Campanella.",
+        "rationale": "A contiguous commentary review of post-Platonic thinkers and utopian writers who reshaped the concept of an ideal state or empire."
+      },
+      {
+        "childIds": [
+          "n-19-2",
+          "n-19-3",
+          "n-19-7",
+          "n-21-5"
+        ],
+        "label": "Book I Debates on Justice",
+        "summary": "In Book I dialogue scenes, Socrates challenges definitions of justice—such as returning debts or serving rulers' interests—and Cephalus assesses wealth, culminating in Socrates' admitting he knows nothing.",
+        "rationale": "These entries comprise direct dialogue occurrences from Book I debating definitions of justice and Socrates' ultimate aporia."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "0xqcavb-IayJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 16082,
+    "candidatesTokenCount": 636,
+    "totalTokenCount": 16718,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16082
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 636
+      }
+    ]
+  },
+  "durationMs": 6162,
+  "requestHash": "c198324b121e20f0977c491f195a3ffb8392b3dcea8b7d16361d415107a20186"
+}

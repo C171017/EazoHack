@@ -1,0 +1,37 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 0,
+        "reason": "The group combines two completely unrelated topics—the physical nature of the pleasure of smell and the cosmological myth of the spindle of Necessity—solely because they are dialogue occurrences, without establishing a coherent topical connection."
+      },
+      {
+        "index": 4,
+        "reason": "The group pairs an index entry indexing Plato's philosophical treatment of virtue with modern technical transcriber notes on Gutenberg formatting and Greek transliteration, lacking any shared conceptual subject."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "4hqcaq6ELP6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 18992,
+    "candidatesTokenCount": 128,
+    "totalTokenCount": 19120,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18992
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 128
+      }
+    ]
+  },
+  "durationMs": 3427,
+  "requestHash": "0a2913469af3f5f6e2fe24997c26e158774aeea19ecdebd48d7d2b693e0bffe9"
+}

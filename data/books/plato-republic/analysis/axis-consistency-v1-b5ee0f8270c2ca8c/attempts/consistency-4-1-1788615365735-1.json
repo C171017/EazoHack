@@ -1,0 +1,256 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-9-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates develops the Divided Line directly out of the Sun analogy (n-9-1, depth 3), subdividing reality and cognition into proportional segments matching visible light and intelligible truth. Because it directly relies on n-9-1 as a necessary inferential premise, its reasoning depth cannot be lower than its prerequisite and is calibrated to 3.",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The divided line provides a broad epistemological and ontological framework mapping all cognition from sensible perception to pure dialectical reason across the entire intelligible and visible cosmos.",
+            "anchorIds": [
+              "p-215396",
+              "p-217597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "The Allegory of the Cave in the introductory summary directly synthesizes and maps the Sun analogy (n-9-1, depth 3) and Divided Line (n-9-2, depth 3) into an illustrative account of human education, turning of the soul, and conversion toward the Idea of the Good. Incorporating these required prerequisites sets its reasoning depth to 3.",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-1",
+              "n-9-2"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "The allegory of the cave serves as an overarching model of human enlightenment, moral education, and philosophical conversion.",
+            "anchorIds": [
+              "p-242536",
+              "p-244736"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Oligarchy is deduced as the next degenerative stage arising out of the timocratic constitution and character, where avarice replaces ambition and the city divides into rich and poor factions. Because this builds directly upon the account of timocracy (n-11-2, depth 3), its total depth incorporates that prerequisite and is calibrated to 3.",
+            "anchorIds": [
+              "p-291357",
+              "p-291952",
+              "p-293392"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-2"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Analyzes one specific constitutional regime (oligarchy) and its corresponding psychological and economic pathology.",
+            "anchorIds": [
+              "p-291357",
+              "p-291952",
+              "p-293392"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates replies directly to Adeimantus's objection (n-27-1, depth 2.5) that guardians are deprived of happiness and property, employing the statue analogy to establish that the goal of the state is the happiness of the organic whole rather than of any single class. Because it answers and presupposes n-27-1, its reasoning depth cannot be lower than 2.5.",
+            "anchorIds": [
+              "p-794407",
+              "p-796604"
+            ],
+            "prerequisiteNodeIds": [
+              "n-27-1"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Expresses a fundamental political thesis regarding the overarching objective of a legitimate state constitution versus factional or class interest.",
+            "anchorIds": [
+              "p-794407",
+              "p-796604"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates establishes that natural governing abilities and virtues are distributed across both sexes by distinguishing relevant natural capacity from biological childbearing (n-29-3, depth 2.5). Because this directly depends on the distinction made in n-29-3, its reasoning depth cannot be lower than its prerequisite and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-879718",
+              "p-880643",
+              "p-880940"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Covers the distribution of social aptitudes and offices within the civic community.",
+            "anchorIds": [
+              "p-879718",
+              "p-880940"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Socrates proposes a lifespan educational scheme for philosophy to prevent degeneration, contrasting it directly with contemporary practice in existing states (n-32-8, depth 2.5). Incorporating n-32-8 as a necessary premise sets its reasoning depth to 2.5.",
+            "anchorIds": [
+              "p-982910",
+              "p-983785"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-8"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Sets forth a comprehensive normative lifespan model for philosophical and physical education.",
+            "anchorIds": [
+              "p-983785"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates deduces the generation of stinging (criminal) and stingless (pauper) drones directly from the constitutional defect of oligarchy, where property alienation leaves disenfranchised citizens without an assigned function. Because it directly builds upon the definition and conditions of oligarchy (n-37-5, depth 3), its total reasoning depth incorporates n-37-5 and is calibrated to 3.",
+            "anchorIds": [
+              "p-1114152",
+              "p-1115143",
+              "p-1115526"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Applies to the socioeconomic subclasses created under oligarchic conditions.",
+            "anchorIds": [
+              "p-1114152",
+              "p-1115143",
+              "p-1115526"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates traces the genesis of the oligarchical character as a psychological conversion following the sudden ruin of the timocratic father, enthroning avarice in place of ambition and reason. Because this directly requires the definition of oligarchy (n-37-5, depth 3) and the state-soul correspondence (n-37-2, depth 1), its depth cannot be lower than n-37-5 and is calibrated to 3.",
+            "anchorIds": [
+              "p-1117342",
+              "p-1117831",
+              "p-1120318"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2",
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Describes the formation and internal psychic hierarchy of the oligarchical character.",
+            "anchorIds": [
+              "p-1117342",
+              "p-1117831",
+              "p-1120318"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Socrates traces how insatiable avarice in an oligarchy breeds armed, stinging drones and disenfranchised paupers who realize the weakness of their rulers, precipitating revolution. Because this builds directly on the nature of oligarchy (n-37-5, depth 3) and the drone taxonomy (n-37-6, depth 3), its depth incorporates those prerequisites and is calibrated to 3.",
+            "anchorIds": [
+              "p-1122228",
+              "p-1123213",
+              "p-1125219"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5",
+              "n-37-6"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Explains the transition mechanism between two specific constitutional regimes.",
+            "anchorIds": [
+              "p-1122228",
+              "p-1123213",
+              "p-1125219"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "thqcapS9CLWc0ckP-4GV6AI",
+  "usage": {
+    "promptTokenCount": 96395,
+    "candidatesTokenCount": 2321,
+    "totalTokenCount": 98716,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 96395
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2321
+      }
+    ]
+  },
+  "durationMs": 16528,
+  "requestHash": "174cf96e225777a0d2e08ac36341653ef12f89248023f461db692c7385e9c518"
+}
