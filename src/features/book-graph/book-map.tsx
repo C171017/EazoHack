@@ -7,16 +7,18 @@ import { baseScale, semanticWindow, toScreen, zoomAt, zoomCentered, zoomLevel } 
 import { readMap, useMapPages, useMapRequest } from './map-data';
 import { useNodeTransition } from './node-transition';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
-export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveView}:{
-  graph:MapBootstrap;excerptRange:[number,number];view:MapView|null;
-  onViewChange:(view:MapView)=>void;onSource:(anchor:SourceAnchor)=>void;onSaveView:()=>void;
+export function BookMap({graph,view,onViewChange,onSource}:{
+  graph:MapBootstrap;view:MapView|null;
+  onViewChange:(view:MapView)=>void;onSource:(anchor:SourceAnchor)=>void;
 }) {
-  const current=useMemo<MapView>(()=>view?.graphVersion===graph.graphVersion&&(!view.hierarchyVersion||view.hierarchyVersion===graph.version)?{...view,zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,view.zoom)),...(view.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!view.hierarchyVersion&&view.selectedNodeId?.startsWith('h-')?null:view.selectedNodeId}:{...initialView(graph.graphVersion),hierarchyVersion:graph.version,sourceScope:'book' as const},[view,graph.graphVersion,graph.version]);
+  // Old checkpoints may contain filters whose controls have been removed.
+  // Keep their camera and selection, but always display the whole source.
+  const current=useMemo<MapView>(()=>view?.graphVersion===graph.graphVersion&&(!view.hierarchyVersion||view.hierarchyVersion===graph.version)?{...view,themeFilter:null,roleFilter:null,sourceScope:'book',zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,view.zoom)),...(view.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!view.hierarchyVersion&&view.selectedNodeId?.startsWith('h-')?null:view.selectedNodeId}:{...initialView(graph.graphVersion),hierarchyVersion:graph.version,sourceScope:'book' as const},[view,graph.graphVersion,graph.version]);
   const [size,setSize]=useState({width:800,height:550});
   const [previousLevel,setPreviousLevel]=useState(0),[navigationError,setNavigationError]=useState<string|null>(null);
   const [navigating,setNavigating]=useState(false);
   const level=zoomLevel(current.zoom,previousLevel,graph.depth);
-  const range:[number,number]=current.sourceScope==='excerpt'?excerptRange:[0,1];
+  const range:[number,number]=[0,1];
   const data=useMapPages(graph.version,pages=>semanticWindow(graph.roots,pages,current,size,range,level));
   const {windowed,install}=data;
   const index=useMemo(()=>new Map([...graph.roots,...[...data.pages.values()].flat()].map(n=>[n.id,n])),[graph.roots,data.pages]);
@@ -39,7 +41,7 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
     onViewChange({...current,readerAnchorId:anchor.id});
     onSource(anchor);
   },[sourceActivation,selected,current,onViewChange,onSource]);
-  const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,{kind:'edges',id:windowed.nodes.map(n=>n.id),theme:current.themeFilter??'',role:current.roleFilter??'',start:String(range[0]),end:String(range[1])},140);
+  const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,{kind:'edges',id:windowed.nodes.map(n=>n.id),start:'0',end:'1'},140);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
   const drag=useRef<{id:number;x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;pan:boolean;moved:boolean}|null>(null);
@@ -114,7 +116,7 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
       const result=await readMap<{node:MapEntry;ancestors:string[];pages:Record<string,MapEntry[]>}>(graph.version,{kind:'locate',id},controller.signal);
       if(controller.signal.aborted)return;
       data.install(result.pages);
-      const zoom=Math.max(1,ZOOM_POLICY.step**result.ancestors.length*1.06),next={...latest.current.current,selectedNodeId:id,themeFilter:null,roleFilter:null,sourceScope:'book' as const,zoom,x:0,y:0};
+      const zoom=Math.max(1,ZOOM_POLICY.step**result.ancestors.length*1.06),next={...latest.current.current,selectedNodeId:id,zoom,x:0,y:0};
       if(result.node.position){const p=toScreen(result.node.position,next,size,[0,1]);next.x=size.width/2-p.x;next.y=size.height/2-p.y;}
       latest.current={...latest.current,current:next};onViewChange(next);
       if(result.node.kind==='occurrence')setSourceActivation({id,ticket:++sourceTicket.current});
@@ -186,8 +188,7 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
           </g>
         </g>;})}
       </svg>
-      <div className="map-zoom-controls"><button aria-label="Zoom out" disabled={current.zoom<=ZOOM_POLICY.minZoom} onClick={()=>zoom(1/1.35)}>−</button><span>{Math.round(current.zoom*100)}%</span><button aria-label="Zoom in" disabled={current.zoom>=ZOOM_POLICY.maxZoom} onClick={()=>zoom(1.35)}>+</button><button aria-label="Reset view" onClick={()=>change({...initialView(graph.graphVersion),sourceScope:current.sourceScope,themeFilter:current.themeFilter,roleFilter:current.roleFilter})}>↺</button></div>
-      <div className="map-layer-status" aria-live="polite">{data.error?<><span>{data.error}</span> <button onClick={data.retry}>Retry loading</button></>:windowed.wanted.length?'Opening this part of the book…':`${windowed.nodes.length} visible · detail ${level} of ${graph.depth}`} {!windowed.nodes.length&&!windowed.wanted.length&&<button onClick={()=>change({x:0,y:0,zoom:1})}>Return to overview</button>}</div>
+      {(data.error||windowed.wanted.length>0||!windowed.nodes.length)&&<div className="map-layer-status" aria-live="polite">{data.error?<><span>{data.error}</span> <button onClick={data.retry}>Retry loading</button></>:windowed.wanted.length?'Opening this part of the book…':null} {!windowed.nodes.length&&!windowed.wanted.length&&<button onClick={()=>change({x:0,y:0,zoom:1})}>Return to overview</button>}</div>}
     </div>
     {restoredPath.error&&<p role="alert">{restoredPath.error} <button onClick={restoredPath.retry}>Retry</button></p>}{navigationError&&<p role="alert">{navigationError}</p>}{navigating&&<p role="status">Finding this note…</p>}
     {current.selectedNodeId&&<section className="map-detail" aria-label={selectedEntry?.kind==='cluster'?'Selected group':'Selected occurrence'}>
@@ -196,10 +197,5 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
         <p>Shared concept: {selected.identity.label}</p><div className="map-related">{selected.identity.occurrenceIds.filter(id=>id!==selected.node.id).map(id=><button key={id} onClick={()=>void locate(id)}>{selected.neighbours.find(n=>n.id===id)?.label} ↗</button>)}</div>
         <details><summary>Position & relation evidence</summary><p>{selected.node.evidence.rationale}</p>{selected.edges.map(e=><p key={e.id}><button onClick={()=>void locate(e.source===selected.node.id?e.target:e.source)}>{selected.neighbours.find(n=>n.id===e.source)?.label} → {e.type} → {selected.neighbours.find(n=>n.id===e.target)?.label}</button><br/>{e.rationale}{e.evidenceAnchorIds.map(id=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>Relation evidence ↗ </button>:null;})}</p>)}</details></div></div>:<p>Loading source evidence…</p>}
     </section>}
-    <footer className="map-footer"><div className="map-filters"><label>Theme <select aria-label="Theme filter" value={current.themeFilter??''} onChange={e=>change({themeFilter:e.target.value||null})}><option value="">All themes</option>{graph.territories.map(t=><option key={t.id} value={t.id}>{t.label}</option>)}</select></label><label>Text <select aria-label="Text type filter" value={current.roleFilter??''} onChange={e=>change({roleFilter:(e.target.value||null) as MapView['roleFilter']})}><option value="">All source text</option><option value="dialogue">Dialogue</option><option value="commentary">Commentary</option><option value="paratext">Front matter / apparatus</option></select></label></div>
-      <div className="map-footer-row"><label>Source range <select aria-label="Source range" value={current.sourceScope} onChange={e=>change({sourceScope:e.target.value as MapView['sourceScope']})}><option value="excerpt">Book I opening · expanded</option><option value="book">Entire source file</option></select></label><button className="map-save-view" onClick={onSaveView}>Save view</button></div>
-      <p>Pinch to explore · two-finger scroll to pan · drag to rotate · + / − to zoom</p><p>{current.projection==='3d'?'3D · Drag near a plane to snap':PROJECTIONS.find(p=>p.id===current.projection)?.hint} · Shift-drag pans · keys 1–4 change projection</p>
-      <p className="map-disclosure">{(current.themeFilter||current.roleFilter)&&'Groups include matching notes; group counts describe all descendants. '}{graph.analysis?.model} · {graph.totalNodes} source notes · {graph.depth+1} layers. Larger circles summarize notes. Height means structure, not importance. Model-reviewed; not human-verified.{(edges.data?.total??0)>ZOOM_POLICY.edges&&` Showing ${ZOOM_POLICY.edges} of ${edges.data!.total} relation groups.`}</p>
-    </footer>
   </div>;
 }
