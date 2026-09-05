@@ -13,12 +13,12 @@ function input(routes: RouteKind[] = [...ROUTE_KINDS]) {
   return { selection, plan: createMockRoutePlan({ selection, routes }), mode: "mock" as const };
 }
 
-test("all four mock routes complete independently and bind to the selection", async () => {
+test("all registered mock routes complete independently and bind to the selection", async () => {
   const request = input();
   const result = await dispatchRoutePlan(request);
   assert.equal(result.provider, "mock");
-  assert.deepEqual(result.runs.map((run) => run.status), ["complete", "complete", "complete", "complete"]);
-  assert.equal(result.artifacts.length, 4);
+  assert.deepEqual(result.runs.map((run) => run.status), ROUTE_KINDS.map(() => "complete"));
+  assert.equal(result.artifacts.length, ROUTE_KINDS.length);
   for (const artifact of result.artifacts) {
     assert.equal(artifact.selectionId, request.selection.id);
     assert.deepEqual(artifact.anchorIds, request.selection.anchorIds);
@@ -30,9 +30,9 @@ test("a failed route leaves sibling results intact and can be retried alone", as
   const request = input();
   const first = await dispatchRoutePlan({ ...request, failKinds: ["generated_image"] });
   assert.equal(first.runs.find((run) => run.route === "generated_image")?.error?.code, "provider_failed");
-  assert.equal(first.artifacts.length, 3);
+  assert.equal(first.artifacts.length, ROUTE_KINDS.length - 1);
   const retried = await retryRoutePlan(request, first, ["generated_image"]);
-  assert.equal(retried.artifacts.length, 4);
+  assert.equal(retried.artifacts.length, ROUTE_KINDS.length);
   for (const artifact of first.artifacts) assert.ok(retried.artifacts.some((item) => item.id === artifact.id));
   assert.ok(retried.runs.every((run) => run.status === "complete"));
   await assert.rejects(retryRoutePlan(request, retried, ["generated_image"]), /Only failed or cancelled/);
@@ -49,7 +49,7 @@ test("dependencies start after completion; failure blocks only dependent routes"
   assert.ok(transitions.indexOf("concept_diagram:running") > transitions.indexOf("interactive_ui:complete"));
   const failed = await dispatchRoutePlan({ ...request, failKinds: ["interactive_ui"] });
   assert.equal(failed.runs.find((run) => run.route === "concept_diagram")?.error?.code, "dependency_failed");
-  assert.equal(failed.artifacts.length, 2);
+  assert.equal(failed.artifacts.length, ROUTE_KINDS.length - 2);
 });
 
 test("cycle, empty selection and mismatched selection are rejected before providers", async () => {

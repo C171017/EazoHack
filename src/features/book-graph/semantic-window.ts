@@ -1,7 +1,7 @@
 import type { MapView } from '../../shared/schemas';
 import { ZOOM_POLICY, type MapEntry, type Bounds } from '../../shared/zoom-hierarchy';
 import { sourceWorld, placeLabels, type Point3 } from './projection';
-import { screenWorld, type Size } from './map-framing';
+import { screenWorld, mapObstacles, type Size } from './map-framing';
 export { baseScale, type Size } from './map-framing';
 export const toWorld = sourceWorld;
 export function toScreen(p:Point3,view:MapView,size:Size,range:[number,number],readingProgress=.5) {
@@ -68,7 +68,7 @@ export function semanticWindow(roots:MapEntry[],pages:ReadonlyMap<string,MapEntr
       if(depth>=level&&points.some(p=>childIds.has(p.id)&&(p.x<28||p.y<60||p.x>size.width-28||p.y>size.height-40)))continue;
       if(points.some((a,i)=>points.slice(i+1).some(b=>(childIds.has(a.id)||childIds.has(b.id))&&Math.hypot(a.x-b.x,a.y-b.y)<a.radius+b.radius+gap)))continue;
       const onScreen=points.filter(p=>p.x>=0&&p.y>=0&&p.x<=size.width&&p.y<=size.height);
-      if(placeLabels(onScreen,size.width,size.height).length<onScreen.length)continue;
+      if(placeLabels(onScreen,size.width,size.height,mapObstacles(view,size)).length<onScreen.length)continue;
     }
     expanded.push(node.id);
     frontier.splice(i,1,...next.map(node=>({node,depth:depth+1})));i--;

@@ -85,7 +85,7 @@ test('mixed text/image dispatch and retry retain each route provider identity', 
   const routes=['interactive_ui','generated_image'] as const;
   const request={selection:fixtureSelection,plan:createRoutePlan({selection:fixtureSelection,routes:[...routes],mode:'real'}),mode:'real' as const};
   let failImage=true;
-  const options={providerFactory:(kind: typeof routes[number] | 'concept_diagram' | 'source_discovery')=>kind==='generated_image'
+  const options={providerFactory:(kind: typeof routes[number] | 'concept_diagram' | 'source_discovery' | 'interactive_panel')=>kind==='generated_image'
     ? createFalImageProvider({key:()=> 'key',fetch:async()=> failImage ? Response.json({}, {status:429}) : Response.json(response())})
     : {async run(selection: typeof fixtureSelection, ctx:typeof context) {
       const artifact=makeMockArtifact('interactive_ui',selection,ctx.routeRunId);

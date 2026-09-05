@@ -24,6 +24,7 @@ export const InteractivePanelResponseSchema = z.object({
   const labels = panel.states.map(state => state.label.toLocaleLowerCase());
   if (new Set(labels).size !== labels.length) ctx.addIssue({ code: 'custom', path: ['states'], message: 'State labels must be distinct' });
   if (!panel.states.some(state => state.basis === 'passage')) ctx.addIssue({ code: 'custom', path: ['states'], message: 'At least one state must be grounded in the passage' });
+  if (panel.states[0]?.basis !== 'passage') ctx.addIssue({ code: 'custom', path: ['states', 0, 'basis'], message: 'The baseline must be grounded in the passage' });
   if (panel.mode === 'sequence' && panel.states.some(state => state.basis !== 'passage')) ctx.addIssue({ code: 'custom', path: ['states'], message: 'Sequence steps must follow the passage' });
 });
 

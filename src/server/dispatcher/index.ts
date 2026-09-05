@@ -15,6 +15,7 @@ import {
 } from "../../shared/schemas";
 import { dispatchProvider, createProvider, type Provider, type ProviderError, type ProviderMode } from "../providers";
 import { validateDependencies } from "../routing";
+import { parsePassageExplorer } from '../../shared/interactive-panel';
 
 export const DispatchRequestSchema = z.object({
   selection: SelectionSchema,
@@ -70,6 +71,7 @@ function validateArtifact(artifact: unknown, selection: Selection, run: RouteRun
     parsed.kind !== run.route || parsed.routeRunId !== run.id ||
     JSON.stringify(actualAnchors) !== JSON.stringify(expectedAnchors)
   ) throw new Error("Provider output does not match the frozen selection and route.");
+  if (parsed.kind === 'interactive_panel') parsePassageExplorer(parsed.payload.explorer, selection.selectedText);
   return parsed;
 }
 

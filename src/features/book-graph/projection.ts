@@ -42,16 +42,32 @@ export function worldPoint(node: Graph['nodes'][number], range: [number,number],
 }
 // Leader lines offset labels only; points always retain their semantic positions.
 export type LabelObstacle={x:number;y:number;width:number;height:number};
+// Cluster badges are navigation handles. A bounded offset keeps tied groups
+// clickable; callers draw the unchanged semantic anchor and its connector.
+export function placeClusterHandles<T extends {id:string;x:number;y:number;radius:number;cluster:boolean}>(points:T[],width:number,height:number,obstacles:LabelObstacle[]) {
+  const occupied=points.filter(p=>!p.cluster).map(p=>({x:p.x,y:p.y,radius:p.radius}));
+  const positions=new Map<string,{x:number;y:number}>();
+  for(const p of [...points].filter(p=>p.cluster).sort((a,b)=>a.id.localeCompare(b.id))) {
+    const radius=p.radius*1.1+5;
+    const candidates=[{x:p.x,y:p.y},...[32,48,64].flatMap(distance=>Array.from({length:12},(_,i)=>({x:p.x+distance*Math.cos(i*Math.PI/6),y:p.y+distance*Math.sin(i*Math.PI/6)})))];
+    const position=candidates.find(q=>q.x>=radius&&q.y>=radius&&q.x<=width-radius&&q.y<=height-radius
+      &&!occupied.some(o=>Math.hypot(q.x-o.x,q.y-o.y)<radius+o.radius)
+      &&!obstacles.some(o=>q.x+radius>o.x&&q.x-radius<o.x+o.width&&q.y+radius>o.y&&q.y-radius<o.y+o.height))??p;
+    occupied.push({...position,radius});positions.set(p.id,position);
+  }
+  return points.map(p=>({...p,anchorX:p.x,anchorY:p.y,...positions.get(p.id)}));
+}
 export function placeLabels<T extends {id:string;x:number;y:number;label:string;radius?:number}>(points: T[], width:number,height:number,obstacles:LabelObstacle[]=[],markers: {x:number;y:number;radius?:number}[]=points) {
   const boxes: LabelObstacle[] = [...obstacles,...markers.map(p=>({x:p.x-(p.radius??18)-5,y:p.y-(p.radius??18)-5,width:((p.radius??18)+5)*2,height:((p.radius??18)+5)*2}))];
   return points.flatMap(p => {
     const w = Math.min(Math.max(40,width-16),210,Math.max(100,Math.min(p.label.length,31)*6.1+18));
-    const preferredX = Math.max(8,Math.min(width-w-8,p.x+13));
+    const clearance=(p.radius??18)+12;
+    const preferredX = Math.max(8,Math.min(width-w-8,p.x+clearance));
     const preferredY = Math.max(12,Math.min(height-30,p.y-12));
     const columns = Math.max(1,Math.floor((width-16)/218));
     // Find the nearest free label slot anywhere in the scene. Only the labels
     // move; source-derived points and the graph's XYZ values remain untouched.
-    const xs = [...new Set([preferredX,Math.max(8,Math.min(width-w-8,p.x-w-13)),...Array.from({length:columns},(_,i)=>8+i*218)])];
+    const xs = [...new Set([preferredX,Math.max(8,Math.min(width-w-8,p.x-w-clearance)),...Array.from({length:columns},(_,i)=>8+i*218)])];
     const ys = [...new Set([preferredY,...Array.from({length:Math.max(1,Math.floor((height-24)/30))},(_,i)=>12+i*30)])];
     const slots=xs.flatMap(x=>ys.map(y=>({x,y,score:(x-preferredX)**2+(y-preferredY)**2}))).sort((a,b)=>a.score-b.score);
     const slot=slots.find(({x,y})=>!boxes.some(b=>x < b.x+b.width+4 && x+w+4 > b.x && y < b.y+b.height+4 && y+26+4 > b.y));

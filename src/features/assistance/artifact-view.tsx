@@ -1,6 +1,7 @@
 import type { Artifact, InteractiveUiConfig } from '@/shared/schemas';
 import { artifactEnhancement, ENHANCEMENTS, enhancementStyle } from '@/shared/enhancements';
 import type { CSSProperties } from 'react';
+import { InteractivePanel } from './interactive-panel';
 type State = Record<string,string|number|boolean|null>;
 export function artifactLabel(artifact: Artifact): string {
   const kind = artifactEnhancement(artifact);
@@ -26,8 +27,9 @@ export function InteractiveConfig({config,state,onStateChange}:{config:Interacti
   })}<p className="border-t border-line pt-3 text-[10px] leading-5 text-muted">{config.validationStatus} · {config.assumptions.join(' ')}</p></div>;
 }
 export function ArtifactView({artifact,state,onStateChange}:{artifact:Artifact;state:State;onStateChange:(state:State)=>void}) {
-  return <article data-enhancement={artifactEnhancement(artifact) ?? undefined} style={enhancementStyle(artifactEnhancement(artifact)) as CSSProperties} className="enhancement-artifact rounded-panel border border-line bg-paper p-5"><div className="mb-4 flex flex-col gap-2 text-[10px] uppercase tracking-widest"><span className="enhancement-heading">{artifactLabel(artifact)}</span><span className="text-muted">{artifact.provenance.label}</span></div>
+  return <article aria-label={artifactLabel(artifact)} data-enhancement={artifactEnhancement(artifact) ?? undefined} style={enhancementStyle(artifactEnhancement(artifact)) as CSSProperties} className="enhancement-artifact rounded-panel border border-line bg-paper p-5">{artifact.kind==='source_discovery'&&<div className="mb-4 flex flex-col gap-2 text-[10px] uppercase tracking-widest"><span className="enhancement-heading">{artifactLabel(artifact)}</span><span className="text-muted">{artifact.provenance.label}</span></div>}
     {artifact.kind==='interactive_ui'&&<InteractiveConfig config={artifact.payload} state={state} onStateChange={onStateChange}/>}
+    {artifact.kind==='interactive_panel'&&<InteractivePanel config={artifact.payload} state={state} onStateChange={onStateChange}/>}
     {artifact.kind==='generated_image'&&(artifact.payload.status==='ready'?<figure>
       {/* Persisted data URLs have no remote image host and reserve their intrinsic ratio. */}
       {/* eslint-disable-next-line @next/next/no-img-element */}

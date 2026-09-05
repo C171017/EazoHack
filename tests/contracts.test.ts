@@ -14,8 +14,8 @@ test("selection rejects empty text and anchors; cross-page anchors remain explic
   assert.equal(SourceAnchorSchema.safeParse({ ...fixtureAnchors[0], locators: [{ kind: "txt", startOffset: 3, endOffset: 1 }] }).success, false);
 });
 
-test("route plans allow all four routes and reject duplicate, unknown and cyclic dependencies", () => {
-  assert.equal(RoutePlanSchema.parse(plan).routes.length, 4);
+test("route plans allow all registered routes and reject duplicate, unknown and cyclic dependencies", () => {
+  assert.equal(RoutePlanSchema.parse(plan).routes.length, ROUTE_KINDS.length);
   assert.equal(RoutePlanSchema.safeParse({ ...plan, routes: ["interactive_ui", "interactive_ui"] }).success, false);
   assert.equal(RoutePlanSchema.safeParse({ ...plan, dependsOn: { interactive_ui: ["generated_image"], generated_image: ["interactive_ui"] } }).success, false);
   assert.equal(RoutePlanSchema.safeParse({ ...plan, routes: ["interactive_ui"], reasonByRoute: { interactive_ui: "Test" }, dependsOn: { interactive_ui: ["generated_image"] } }).success, false);
@@ -23,7 +23,7 @@ test("route plans allow all four routes and reject duplicate, unknown and cyclic
   assert.equal(RoutePlanSchema.safeParse({ ...plan, trigger: { ...plan.trigger, requestedRoutes: ["interactive_ui"] } }).success, false);
 });
 
-test("four mock artifacts retain selection binding and honest provenance", () => {
+test("mock artifacts retain selection binding and honest provenance", () => {
   for (const kind of ROUTE_KINDS) {
     const artifact = ArtifactSchema.parse(makeMockArtifact(kind, fixtureSelection, `run-${kind}`));
     assert.equal(artifact.selectionId, fixtureSelection.id);

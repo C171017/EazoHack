@@ -14,6 +14,13 @@ export function screenWorld(p:Point3,view:MapView,size:Size) {
   return {x:size.width/2+q.x*scale+view.x,y:size.height/2+q.y*scale+view.y};
 }
 
+export function mapObstacles(view:MapView,size:Size,keyHeight=58) {
+  const origin=screenWorld({x:-250,y:-170,z:0},view,size);
+  return [{x:0,y:0,width:size.width,height:keyHeight},{x:0,y:size.height-40,width:size.width,height:40},
+    ...(view.pitch<Math.PI/2-.12?[{x:origin.x-28,y:origin.y-46,width:56,height:92}]:[]),
+    ...(view.selectedNodeId?[{x:16,y:size.height-302,width:size.width-32,height:250}]:[])];
+}
+
 export function fitEntries(entries:MapEntry[],view:MapView,size:Size,progress:number):MapView {
   const points=entries.flatMap(n=>n.position?[sourceWorld(n.position,[0,1],progress)]:[]);
   if(!points.length)return {...view,x:0,y:0};
