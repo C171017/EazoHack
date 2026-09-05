@@ -25,3 +25,21 @@ Grid spacing stays 50 world units, independent of 0.1 score precision. Flat X–
 ## Verification
 
 Tests cover legacy snapshot reading, mandatory reassessment, source preservation, all 101 round-trip score positions, invalid precision/ranges, independent review/retry/resume, unknown positions, prerequisite consistency and representative-child bounds. Full suite and live Republic results are recorded below after completion.
+
+### Published Republic result
+
+- Graph: `axis-consistency-v1-6871be462cd59801`; map: `semantic-hierarchy-v3-a7e1da16f4f05052`.
+- All 288 notes are placed, with zero unknown coordinates and zero prerequisite-depth conflicts. All 213 original relations, source text/anchors, identities, topics and Z positions are unchanged.
+- Distinct reasoning-depth values: **6 → 64**; distinct generality values: **9 → 65**. Distinct X–Y pairs: **30 → 252**. Largest exact X–Y tie: **48 → 5**. These measure underlying semantic positions, independent of camera fitting or displaced group badges.
+- Navigation frontiers: 288 → 84 → 26 → 11 → 4; five navigation layers and 406 total hierarchy entries. Source validation and complete hierarchy reachability/bounds validation passed.
+- TypeScript, ESLint, diff whitespace checks and all 180 tests passed, including the long-chain explanation regression and its rejection of unauthorized score edits.
+
+Reproduce the distribution comparison with:
+
+```sh
+node --import tsx scripts/audit-axis-scale.ts \
+  data/books/plato-republic/analysis/semantic-hierarchy-v2-b7628d5e4649ece7/graph.json \
+  data/books/plato-republic/analysis/current-graph.json
+```
+
+Browser verification passed in an isolated temporary dev snapshot: all four projections, stable group expansion, fractional group ranges, leaf details (`n-3-7`: X 2.3 / 10, Y 3.8 / 10), and source navigation. The isolated browser reported no errors or warnings. The old hierarchy version correctly returns HTTP 409. The shared port-3000 page also displayed the new scale; ongoing workspace refreshes motivated the isolated navigation check. Local publication only; no deployment or Git commit was made.

@@ -89,7 +89,6 @@ export function BookLibrary({ currentId, onSelect, onUpload, onClose, importStat
   }
 
   return <dialog ref={dialog} className={styles.library} aria-label="Library" onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
-    <button type="button" className={styles.close} onClick={onClose} disabled={busy} aria-label="Close library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6 18 18 M18 6 6 18"/></svg></button>
     <div className={styles.inner}>
       <div className={styles.shelfArea}>
         <div ref={shelf} className={styles.shelfViewport} role="region" aria-label="Bookshelf" tabIndex={0} onKeyDown={event => {
@@ -114,10 +113,9 @@ export function BookLibrary({ currentId, onSelect, onUpload, onClose, importStat
           </div>
         </div>
         <div className={styles.shelfDetails}>
-          <h1>Your library <span>{books.length + 1} {books.length ? 'books' : 'book'}</span></h1>
           {(scroll.left || scroll.right) && <div className={styles.scrollControls}><button type="button" aria-label="Scroll shelf left" disabled={!scroll.left} onClick={() => moveShelf(-1)}>←</button><button type="button" aria-label="Scroll shelf right" disabled={!scroll.right} onClick={() => moveShelf(1)}>→</button></div>}
         </div>
-        <p className={styles.hint} role={loading ? 'status' : undefined}>{loading ? 'Opening your shelf…' : <>Choose a book to read. <span>Choose a space to add one.</span></>}</p>
+        {loading && <p className={styles.hint} role="status">Opening your shelf…</p>}
       </div>
       {importState && <section className={styles.processing} aria-label={`Import ${importState.title}`}>
         <div className={styles.progressRing} role="progressbar" aria-label="Book processing progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={importState.percent} aria-valuetext={`${importState.stage}, ${importState.percent}% complete`}>

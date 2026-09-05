@@ -46,6 +46,5 @@ export function BookSpine({ id, title, emblem, variant, current, disabled, note,
       <span ref={titleElement} className={styles.spineTitle} data-cjk={/[\u3000-\u9fff]/.test(title) || undefined}>{title}</span>
       {current && <svg className={styles.bookmark} viewBox="0 0 14 35" aria-hidden="true"><path d="M2 1H12V32L7 27 2 32Z"/></svg>}
     </span>
-    <span className={styles.bookCaption} aria-hidden="true">{current ? 'Continue reading' : 'Open book'} <span>↗</span></span>
   </button>;
 }

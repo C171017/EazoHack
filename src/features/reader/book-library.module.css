@@ -12,10 +12,6 @@
 .library button { color: inherit; cursor: pointer; }
 .library button:disabled { cursor: default; }
 .library button:focus-visible, .library input:focus-visible, .shelfViewport:focus-visible { outline: 1.5px solid var(--shelf-ink); outline-offset: 6px; }
-.close { position: absolute; right: clamp(22px, 4vw, 64px); top: 28px; z-index: 2; display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: transparent; transition: transform 220ms ease; }
-.close svg { width: 24px; fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; }
-.close:hover { transform: rotate(90deg); }
-.close:disabled { opacity: .35; }
 .inner { min-height: 100%; padding: 100px clamp(20px, 5vw, 80px) 64px; display: flex; flex-direction: column; justify-content: center; }
 .shelfArea { width: 100%; margin: 22px auto 0; }
 .shelfViewport { width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: none; overscroll-behavior-x: contain; }
@@ -42,9 +38,6 @@
 .book[data-variant='4'] .spineTitle { font-size: 19px; }
 .book[data-variant='5'] .spineTitle { font-size: 18px; }
 .bookmark { position: absolute; z-index: 1; left: 20%; top: -4px; width: 11px; height: 29px; fill: var(--shelf-paper); stroke: currentColor; stroke-width: 1; }
-.bookCaption { position: absolute; top: calc(100% + 33px); left: 50%; width: 134px; transform: translate(-50%, -4px); font-size: 10px; letter-spacing: .02em; opacity: 0; pointer-events: none; transition: opacity 180ms ease, transform 180ms ease; }
-.book:hover .bookCaption, .book:focus-visible .bookCaption { opacity: 1; transform: translate(-50%, 0); }
-.bookCaption > span { padding-left: 4px; }
 .emptySlot { position: relative; width: 72px; height: 302px; border: 0; padding: 0; background: transparent; }
 .emptyOutline { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: .8; opacity: .1; transition: opacity 220ms ease; }
 .plus { position: absolute; width: 21px; height: 21px; top: 46%; left: 50%; transform: translate(-50%, -50%); fill: none; stroke: currentColor; stroke-width: 1; opacity: .6; transition: opacity 220ms ease, transform 220ms ease; }
@@ -55,14 +48,11 @@
 .emptySlot:disabled { opacity: .3; }
 .shelfEdge { position: absolute; left: 0; right: 0; bottom: 44px; height: 24px; pointer-events: none; }
 .shelfEdge svg { width: 100%; height: 100%; fill: none; stroke: var(--shelf-ink); stroke-width: .9; stroke-linecap: round; stroke-linejoin: round; }
-.shelfDetails { display: flex; align-items: center; justify-content: space-between; min-height: 32px; margin-top: -8px; padding-inline: 16px; }
-.shelfDetails h1 { display: flex; align-items: baseline; gap: 16px; font-size: 10px; font-weight: 400; text-transform: uppercase; letter-spacing: .19em; }
-.shelfDetails h1 span { color: var(--shelf-muted); font-size: 10px; letter-spacing: .02em; text-transform: none; }
+.shelfDetails { display: flex; align-items: center; justify-content: flex-end; min-height: 32px; margin-top: -8px; padding-inline: 16px; }
 .scrollControls { display: flex; gap: 12px; }
 .scrollControls button { display: grid; place-items: center; width: 36px; height: 36px; font-size: 24px; font-family: Georgia, serif; background: transparent; border: 0; }
 .scrollControls button:disabled { opacity: .2; }
 .hint { margin: 26px 0 0; text-align: center; color: var(--shelf-muted); font-family: Georgia, serif; font-size: 14px; font-style: italic; line-height: 1.8; }
-.hint span { margin-left: 4px; }
 .processing { display: flex; align-items: flex-start; gap: 20px; width: min(100%, 510px); margin: 34px auto 0; padding-top: 25px; border-top: 1px solid #403a3128; }
 .progressRing { position: relative; flex: 0 0 48px; width: 48px; height: 48px; }
 .progressRing svg { display: block; width: 100%; height: 100%; transform: rotate(-90deg); fill: none; stroke-width: 1.5; }
@@ -93,9 +83,7 @@
 @media (max-width: 600px) {
   .inner { padding: 90px 16px 40px; }
   .shelfArea { margin-top: 0; }
-  .close { top: 18px; right: 18px; }
   .hint { font-size: 13px; margin-top: 20px; }
-  .hint span { display: block; margin: 0; }
   .titleCard { padding: 26px; }
 }
 @media (prefers-reduced-motion: reduce) {
