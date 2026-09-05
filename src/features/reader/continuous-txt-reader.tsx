@@ -3,7 +3,8 @@
 import { Fragment, forwardRef, memo, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { splitSourceRange } from './artifact-placement';
 import { resolveTxtAnchor } from './source-anchor';
-import type { SourceAnchor } from '@/shared/schemas';
+import { EnhancementPicker, type PickerPosition } from './enhancement-picker';
+import type { RouteKind, SourceAnchor } from '@/shared/schemas';
 import { createTxtRenderChunks, findTxtBlock, type TxtRenderChunk } from './txt-document';
 import { ReadingMenu } from './reading-menu';
 import { chineseFonts, defaultReadingFonts, englishFonts, parseReadingFonts, type ReadingFonts } from './reading-fonts';
@@ -106,10 +107,13 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   activeAnchor: SourceAnchor | null;
   onSelection: (selection: TxtSelectionRange) => void;
   slots?: ReaderSlot[];
-}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, slots=EMPTY_SLOTS }, ref) {
+  onEnhance: (route: RouteKind) => void;
+  enhancementBusy: boolean;
+}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText), [sourceText]);
   const scroller = useRef<HTMLDivElement>(null);
   const documentRoot = useRef<HTMLDivElement>(null);
+  const [pickerPosition, setPickerPosition] = useState<PickerPosition | null>(null);
   const nativeSelection = useRef<TxtSelectionRange|null>(null);
   // Source spans can split when a slot appears. Rebind the native range to the
   // same source offsets so copying and Shift-selection survive that render.
@@ -284,8 +288,46 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   }
   function captureSelection() {
     const range=selectedSource();
-    if(range){nativeSelection.current=range;onSelection(range);}
+    if(range && range.quote.length <= 20000){
+      const nativeRange=window.getSelection()?.getRangeAt(0);
+      const bounds=scroller.current?.getBoundingClientRect();
+      const rect=nativeRange?.getClientRects()[0];
+      if(rect&&bounds){
+        const left=Math.max(bounds.left+8,Math.min(rect.left+rect.width/2-104,bounds.right-216,window.innerWidth-216));
+        const top=rect.top-62>Math.max(bounds.top+64,8)?rect.top-62:Math.min(rect.bottom+10,window.innerHeight-64);
+        setPickerPosition({left,top});
+      }
+      nativeSelection.current=range;onSelection(range);
+    }else setPickerPosition(null);
   }
+  useEffect(() => {
+    const dismiss = () => setPickerPosition(null);
+    const pointer = (event: PointerEvent) => {
+      if (!(event.target instanceof Element) || !event.target.closest('[aria-label="Reading enhancements"]')) dismiss();
+    };
+    const keyboard = (event: KeyboardEvent) => { if(event.key==='Escape') dismiss(); };
+    document.addEventListener('pointerdown', pointer);
+    document.addEventListener('keydown', keyboard);
+    window.addEventListener('resize', dismiss);
+    const scroll=scroller.current;
+    scroll?.addEventListener('scroll',dismiss,{passive:true});
+    window.addEventListener('scroll',dismiss,{passive:true});
+    return () => {
+      document.removeEventListener('pointerdown', pointer);
+      document.removeEventListener('keydown', keyboard);
+      window.removeEventListener('resize', dismiss);
+      scroll?.removeEventListener('scroll',dismiss);
+      window.removeEventListener('scroll',dismiss);
+    };
+  }, []);
+  useEffect(() => {
+    const keyboardSelection = (event: KeyboardEvent) => {
+      if (event.shiftKey && ['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'].includes(event.key)) captureSelection();
+      else if (window.getSelection()?.isCollapsed) setPickerPosition(null);
+    };
+    document.addEventListener('keyup', keyboardSelection);
+    return () => document.removeEventListener('keyup', keyboardSelection);
+  });
   // Native document selections need not focus the reader, so copy can target
   // document/body rather than bubble through the reading element.
   useEffect(()=>{
@@ -301,6 +343,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     data-chinese-font={fonts.chinese}
     style={{ '--font-reading': `${englishFonts.find(font => font.id === fonts.english)!.family}, ${chineseFonts.find(font => font.id === fonts.chinese)!.family}, serif` } as CSSProperties}
   >
+    <EnhancementPicker position={pickerPosition} busy={enhancementBusy} onChoose={route=>{setPickerPosition(null);onEnhance(route);}}/>
     <div className="txt-reader-masthead">
       <ReadingMenu fonts={fonts} onChange={changeFonts} onUpload={onUpload} onReset={onReset}/>
     </div>
@@ -313,8 +356,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     </header>
     <div
       ref={documentRoot}
-      onMouseUp={event=>{if(!(event.target as Element).closest('[data-reader-artifact]'))captureSelection();}}
-      onKeyUp={event=>{if(event.shiftKey&&!(event.target as Element).closest('[data-reader-artifact]'))captureSelection();}}
+      onPointerUp={event=>{if(!(event.target as Element).closest('[data-reader-artifact]'))captureSelection();}}
       onCopy={event=>{const range=selectedSource();if(range){event.preventDefault();event.clipboardData.setData('text/plain',range.quote);}}}
       className="txt-reader-body"
       data-testid="book-text"

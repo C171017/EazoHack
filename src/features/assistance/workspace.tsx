@@ -5,22 +5,16 @@ import type { BookPreview } from '../reader/book-preview';
 import { readUploadedBook, type UploadedBook } from '../reader/upload-book';
 import { PdfWorkspace } from '../reader/pdf/pdf-workspace';
 import { Button } from '@/ui/components/button';
-import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type Artifact, type RouteKind, type RouteRun } from '@/shared/schemas';
+import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type Artifact, type RouteKind } from '@/shared/schemas';
 import { createWorkspaceRepository, type WorkspaceSnapshot } from '../persistence';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
 import { readMap } from '../book-graph/map-data';
 import { initialView } from '../book-graph/projection';
 import { resolveTxtAnchor } from '../reader/source-anchor';
-import { ArtifactView } from './artifact-view';
+import { ArtifactView, artifactLabel } from './artifact-view';
 import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange, type ReaderSlot } from '../reader/continuous-txt-reader';
 import { placementsFor, type ArtifactPlacement } from '../reader/artifact-placement';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
-const routes: {kind:RouteKind;label:string;symbol:string;supported:boolean}[] = [
-  {kind:'interactive_ui',label:'Explanation',symbol:'↔',supported:true},
-  {kind:'generated_image',label:'Image',symbol:'▧',supported:false},
-  {kind:'concept_diagram',label:'Concept diagram',symbol:'◇',supported:true},
-  {kind:'source_discovery',label:'Sources',symbol:'⌕',supported:false},
-];
 
 export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstrap}) {
   const [uploaded, setUploaded] = useState<UploadedBook | null>(null);
@@ -40,9 +34,6 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
   const [selections,setSelections] = useState<Selection[]>([]);
   const [placements,setPlacements] = useState<ArtifactPlacement[]>([]);
   const [anchors,setAnchors] = useState<SourceAnchor[]>([]);
-  const [selectedRoutes,setSelectedRoutes] = useState<RouteKind[]>(['interactive_ui','concept_diagram']);
-  const [runs,setRuns] = useState<RouteRun[]>([]);
-  const [runSelectionId,setRunSelectionId] = useState<string|null>(null);
   const [requests,setRequests]=useState<Record<string,{routes:RouteKind[];message:string;failed:boolean}>>({});
   const [artifacts,setArtifacts] = useState<Artifact[]>([]);
   const [saved,setSaved] = useState<WorkspaceSnapshot|null>(null);
@@ -50,7 +41,6 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
   const [notice,setNotice] = useState('Select a passage to begin.');
   const [interactionState,setInteractionState] = useState<WorkspaceSnapshot['interactionState']>({});
   const [ready,setReady] = useState(false);
-  const [panelOpen,setPanelOpen] = useState(false);
   const activeRequest = useRef(0);
   const sourceRequest = useRef(0);
   useEffect(()=>{
@@ -73,22 +63,21 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
   const captureSelection = useCallback((range:TxtSelectionRange) => {
     const existing=anchors.find(anchor=>selection?.anchorIds.includes(anchor.id));
     const locator=existing?.locators[0];
-    if(locator?.kind==='txt'&&locator.startOffset===range.startOffset&&locator.endOffset===range.endOffset){setPanelOpen(true);return;}
+    if(locator?.kind==='txt'&&locator.startOffset===range.startOffset&&locator.endOffset===range.endOffset){return;}
     try {
       const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId,fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset:range.startOffset,endOffset:range.endOffset}],quote:range.quote,prefix:range.prefix,suffix:range.suffix,resolution:'exact'});
       const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId,anchorIds:[anchor.id],selectedText:range.quote,contextSnapshot:`Complete TXT source: ${title}`,createdAt:new Date().toISOString()});
       sourceRequest.current++;setMapAnchor(null);setMapView(current=>current?{...current,readerAnchorId:null}:null);setSelection(next);setSelections(current=>[next,...current]);setAnchors(current=>[...current,anchor]);
-      setPanelOpen(true);
-      setNotice('Passage selected. Choose how Gemini should help you explore it.');
+      setNotice('Passage selected. Choose an enhancement beside the selection.');
     } catch {
       setNotice('Select a non-empty passage shorter than 20,000 characters.');
     }
   },[preview.extractionVersion,preview.fileHash,selection,anchors,bookId,title]);
-  async function exercise(target:Selection|null=selection, kinds:RouteKind[]=selectedRoutes) {
+  async function exercise(target:Selection|null=selection, kinds:RouteKind[]=[]) {
     if(!target||!kinds.length||busy)return;
     const frozen=target, ticket=++activeRequest.current;
     setRequests(current=>({...current,[frozen.id]:{routes:kinds,message:'Generating assistance…',failed:false}}));
-    setBusy(true);setRunSelectionId(frozen.id);setRuns([]);setNotice('Gemini 3.8 Flash is reading the selected passage…');
+    setBusy(true);setNotice('Gemini 3.8 Flash is reading the selected passage…');
     try {
       const planResponse=await fetch('/api/route-plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({selection:frozen,routes:kinds,mode:'real'})});
       const planBody=await planResponse.json();if(!planResponse.ok)throw new Error(planBody.error?.message??'Route plan rejected');
@@ -97,10 +86,13 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       const nextArtifacts=ArtifactSchema.array().parse(body.artifacts);
       if(nextArtifacts.some(artifact=>artifact.selectionId!==frozen.id||artifact.bookId!==frozen.bookId||artifact.anchorIds.some(id=>!frozen.anchorIds.includes(id))))throw new Error('Result selection mismatch');
       if(ticket!==activeRequest.current)return;
-      setRuns(RouteRunSchema.array().parse(body.runs));setArtifacts(current=>[...current,...nextArtifacts]);
+      setArtifacts(current=>[...current,...nextArtifacts]);
       setPlacements(current=>[...current,...placementsFor(nextArtifacts,anchors).map((p,i)=>({...p,order:Math.max(-1,...current.map(p=>p.order))+1+i}))]);
       const failures=RouteRunSchema.array().parse(body.runs).filter(run=>run.status==='failed'||run.status==='cancelled');
-      setRequests(current=>({...current,[frozen.id]:{routes:failures.map(r=>r.route),message:failures.length?failures.map(r=>`${r.route}: ${r.error?.message??r.status}`).join(' '):'Results added. Generated material is unverified.',failed:failures.length>0}}));
+      setRequests(current=>{
+        if(failures.length)return {...current,[frozen.id]:{routes:failures.map(r=>r.route),message:failures.map(r=>`${r.route}: ${r.error?.message??r.status}`).join(' '),failed:true}};
+        const next={...current};delete next[frozen.id];return next;
+      });
       setNotice('Results added to their original passage.');
     }catch(error){if(ticket===activeRequest.current){const message=error instanceof Error?error.message:'Request failed';setNotice(message);setRequests(current=>({...current,[frozen.id]:{routes:kinds,message,failed:true}}));}}
     finally{if(ticket===activeRequest.current)setBusy(false);}
@@ -122,7 +114,6 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
     requestAnimationFrame(()=>{if(ticket===sourceRequest.current)reader.current?.scrollToOffset(locator.startOffset,window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth');});
   }
   const activeAnchor=mapAnchor??anchors.find(a=>selection?.anchorIds.includes(a.id));
-  const validHighlight=!!resolveTxtAnchor(activeAnchor,{...preview,bookId:graph.bookId});
 
   const slots:ReaderSlot[]=[];
   for(const placement of [...placements].sort((a,b)=>a.order-b.order)){
@@ -131,7 +122,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
     const locator=resolveTxtAnchor(anchor,{...preview,bookId:graph.bookId});
     if(!artifact||!locator||locator.endOffset!==placement.offset)continue;
     slots.push({id:artifact.id,offset:placement.offset,content:<>
-      <div className="mb-2 flex gap-3 text-xs"><button aria-expanded={!placement.collapsed} onClick={()=>setPlacements(current=>current.map(p=>p.artifactId===artifact.id?{...p,collapsed:!p.collapsed}:p))}>{placement.collapsed?'Expand':'Collapse'} {artifact.kind.replaceAll('_',' ')}</button><button className="ml-auto" onClick={()=>{setArtifacts(current=>current.filter(a=>a.id!==artifact.id));setPlacements(current=>current.filter(p=>p.artifactId!==artifact.id));setInteractionState(current=>{const state={...current};delete state[artifact.id];return state;});}}>Remove</button></div>
+      <div className="mb-2 flex gap-3 text-xs"><button aria-expanded={!placement.collapsed} onClick={()=>setPlacements(current=>current.map(p=>p.artifactId===artifact.id?{...p,collapsed:!p.collapsed}:p))}>{placement.collapsed?'Expand':'Collapse'} {artifactLabel(artifact)}</button><button className="ml-auto" onClick={()=>{setArtifacts(current=>current.filter(a=>a.id!==artifact.id));setPlacements(current=>current.filter(p=>p.artifactId!==artifact.id));setInteractionState(current=>{const state={...current};delete state[artifact.id];return state;});}}>Remove</button></div>
       <div hidden={placement.collapsed}><ArtifactView artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/></div>
     </>});
   }
@@ -142,31 +133,18 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
     slots.push({id:`request-${id}`,offset:locator.endOffset,content:<div role="status" className="rounded-lg border border-line p-3 text-xs">{status.message}{status.failed&&<Button disabled={busy} onClick={()=>void exercise(selected,status.routes)}>Retry failed routes</Button>}</div>});
   }
   const unresolvedArtifacts=artifacts.filter(a=>!slots.some(s=>s.id===a.id));
-  const selectedLocator=resolveTxtAnchor(anchors.find(a=>selection?.anchorIds.includes(a.id)),{...preview,bookId:graph.bookId});
-  if(panelOpen&&selectedLocator)slots.push({id:'passage-controls',offset:selectedLocator.endOffset,content:(<div id="passage-panel" className="flex flex-col rounded-panel border border-line bg-paper shadow-panel">
-          <div className="flex shrink-0 items-center justify-between border-b border-line px-5 py-3">
-            <div><h2 className="text-xs font-semibold uppercase tracking-widest text-moss">A passage to explore</h2><p className="mt-1 text-[10px] text-muted">{selection?`${selection.selectedText.length} characters selected`:'Nothing selected'}</p></div>
-            <button type="button" aria-expanded="true" aria-controls="passage-panel" onClick={()=>setPanelOpen(false)} className="flex items-center gap-2 rounded-lg px-3 py-2 text-[11px] font-medium text-muted transition hover:bg-mist hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-moss"><span>Hide panel</span><span aria-hidden="true">⌄</span></button>
-          </div>
-          <div className="min-h-0 flex-1 overflow-y-auto p-5">
-            <p role="status" className="mb-3 text-[10px] text-muted">{notice}</p>
-            <div>
-              {selection?<blockquote className="max-h-24 overflow-auto border-l-2 border-moss pl-3 font-reading text-sm leading-6">{selection.selectedText}</blockquote>:<p className="font-reading text-lg text-muted">Every question starts somewhere.<br/><span className="text-sm">Highlight a passage in the book to get started.</span></p>}
-              {selection&&!validHighlight&&<p className="mt-3 text-xs text-warning">The saved quote could not be located in this source version. Original selected text is preserved.</p>}<div className="mt-5 border-t border-line pt-4"><p className="mb-3 text-[11px] text-muted">Gemini 3.8 Flash · selected text is sent to Google Vertex AI</p>
-                <div className="flex flex-wrap gap-2">{routes.map(route=><label key={route.kind} title={route.supported?undefined:'Not connected in this release'} className={`flex items-center gap-2 rounded-lg border border-line bg-mist px-2.5 py-2 text-[11px] ${route.supported?'cursor-pointer':'cursor-not-allowed opacity-45'}`}><input type="checkbox" disabled={!route.supported} checked={selectedRoutes.includes(route.kind)} onChange={()=>setSelectedRoutes(current=>current.includes(route.kind)?current.filter(kind=>kind!==route.kind):[...current,route.kind])} className="accent-moss"/><span className="text-moss">{route.symbol}</span>{route.label}</label>)}</div>
-                <div className="mt-4 flex flex-wrap items-center gap-2"><Button variant="primary" disabled={!ready||!selection||!selectedRoutes.length||busy} onClick={()=>void exercise()}>{busy?'Asking Gemini…':'Explore with Gemini'} <span>↗</span></Button><Button disabled={!ready||!selection||busy} onClick={save}>Save locally</Button></div>
-              </div>
-            </div>
-            <div className="mt-4 space-y-3">{runSelectionId===selection?.id&&runs.filter(run=>run.status==='failed'||run.status==='cancelled').map(run=><div key={run.id} className="rounded-xl border border-line bg-mist p-4 text-xs text-warning"><strong>{routes.find(route=>route.kind===run.route)?.label}: {run.status}</strong><p className="mt-1">{run.error?.message}</p></div>)}</div>
-            {saved&&<div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-[11px] text-muted"><span>One local reading checkpoint · {saved.artifacts.length} results</span><Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);const sourceTicket=++sourceRequest.current;setMapAnchor(null);if(saved.mapView?.graphVersion===graph.graphVersion&&saved.mapView.readerAnchorId)void readMap<{anchor:SourceAnchor}>(graph.version,{kind:'anchor',id:saved.mapView.readerAnchorId}).then(result=>{if(sourceTicket===sourceRequest.current)setMapAnchor(result.anchor);}).catch(()=>{});setMapView(saved.mapView?.graphVersion===graph.graphVersion?saved.mapView:null);setSelections(saved.selections);setPlacements(placementsFor(saved.artifacts,saved.anchors,saved.placements));setSelection(saved.selections[0]??null);setAnchors(saved.anchors);setArtifacts(saved.artifacts);setInteractionState(saved.interactionState);setRuns([]);setNotice('Opened the saved checkpoint.');const position=saved.readerPosition?.fileHash===preview.fileHash&&saved.readerPosition.extractionVersion===preview.extractionVersion?saved.readerPosition.startOffset:0;reader.current?.scrollToOffset(position,'smooth');}}>Revisit ↗</Button></div>}
-          </div>
-        </div>)});
 
   return <main className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
     <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
       <section className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} saved results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
-        <ContinuousTxtReader ref={reader} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} slots={slots}/>
+        <details className="px-5 py-2 text-xs text-muted"><summary className="cursor-pointer">Reading session</summary>
+          <p role="status" className="py-2">{notice}</p>
+          <p className="pb-2">Explanation and Diagram send the selected passage to Google Vertex AI. Interactive panel and Illustration are not connected yet.</p>
+          <Button disabled={!ready||busy} onClick={save}>Save locally</Button>
+          {saved&&<Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);const sourceTicket=++sourceRequest.current;setMapAnchor(null);if(saved.mapView?.graphVersion===graph.graphVersion&&saved.mapView.readerAnchorId)void readMap<{anchor:SourceAnchor}>(graph.version,{kind:'anchor',id:saved.mapView.readerAnchorId}).then(result=>{if(sourceTicket===sourceRequest.current)setMapAnchor(result.anchor);}).catch(()=>{});setMapView(saved.mapView?.graphVersion===graph.graphVersion?saved.mapView:null);setSelections(saved.selections);setPlacements(placementsFor(saved.artifacts,saved.anchors,saved.placements));setSelection(saved.selections[0]??null);setAnchors(saved.anchors);setArtifacts(saved.artifacts);setInteractionState(saved.interactionState);setNotice('Opened the saved checkpoint.');const position=saved.readerPosition?.fileHash===preview.fileHash&&saved.readerPosition.extractionVersion===preview.extractionVersion?saved.readerPosition.startOffset:0;reader.current?.scrollToOffset(position,'smooth');}}>Reopen saved checkpoint</Button>}
+        </details>
+        <ContinuousTxtReader ref={reader} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={route=>void exercise(selection,[route])} enhancementBusy={busy||!ready} slots={slots}/>
       </section>
       <section className="relative min-h-[960px] flex-1 overflow-hidden bg-paper lg:min-h-0" aria-label="Exploration workspace">
         <div className="absolute inset-0">{ready&&(graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} onViewChange={setMapView} onSource={readMapSource}/>)}</div>

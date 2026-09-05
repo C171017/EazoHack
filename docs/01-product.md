@@ -1,6 +1,6 @@
 # 产品与交互
 
-> 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Illustration, and Interactive panel**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](19-enhancement-methods.md).
+> 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Interactive panel, and Illustration**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](19-enhancement-methods.md).
 
 > Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
 
@@ -25,8 +25,8 @@
 | --- | --- | --- |
 | Explanation | 结构化文字解释，配合清晰的标题、段落、列表、表格与提示块 | 优先迭代；模型生成内容结构，应用负责样式 |
 | Diagram | 纯代码可渲染的 SVG、概念关系图、时间线、流程图及图表 | 第二优先；正确关系与可读布局优先 |
-| Illustration | 图片模型生成的插图 | 独立图片模型与 inference provider |
 | Interactive panel | 原文内嵌的交互界面、控件与模拟；以后可能扩展 Three.js 场景 | 保留 D10 经校验配置与已测试组件的运行边界；Three.js 尚未选定或实现 |
+| Illustration | 图片模型生成的插图 | 独立图片模型与 inference provider |
 
 Research brief/source discovery 暂缓，不再属于当前四类。出处锚定仍适用于所有产物；解释必须区分原文依据与模型补充。既有 runtime 路线、schema 和 provider 尚未随本次文档更新迁移。
 

@@ -1,5 +1,11 @@
 import type { Artifact, InteractiveUiConfig } from '@/shared/schemas';
 type State = Record<string,string|number|boolean|null>;
+export function artifactLabel(artifact: Artifact): string {
+  if (artifact.kind === 'concept_diagram') return 'Diagram';
+  if (artifact.kind === 'generated_image') return 'Illustration';
+  if (artifact.kind === 'interactive_ui') return artifact.payload.components.some(item => item.component === 'ParameterSlider') ? 'Interactive panel' : 'Explanation';
+  return 'Sources';
+}
 export function InteractiveConfig({config,state,onStateChange}:{config:InteractiveUiConfig;state:State;onStateChange:(state:State)=>void}) {
   return <div className="space-y-4">{config.components.map((item,index)=>{
     switch(item.component) {
@@ -20,7 +26,7 @@ export function InteractiveConfig({config,state,onStateChange}:{config:Interacti
   })}<p className="border-t border-line pt-3 text-[10px] leading-5 text-muted">{config.validationStatus} · {config.assumptions.join(' ')}</p></div>;
 }
 export function ArtifactView({artifact,state,onStateChange}:{artifact:Artifact;state:State;onStateChange:(state:State)=>void}) {
-  return <article className="rounded-panel border border-line bg-paper p-5"><div className="mb-4 flex flex-col gap-2 text-[10px] uppercase tracking-widest"><span>{artifact.kind.replaceAll('_',' ')}</span><span className="text-moss">{artifact.provenance.label}</span></div>
+  return <article className="rounded-panel border border-line bg-paper p-5"><div className="mb-4 flex flex-col gap-2 text-[10px] uppercase tracking-widest"><span>{artifactLabel(artifact)}</span><span className="text-moss">{artifact.provenance.label}</span></div>
     {artifact.kind==='interactive_ui'&&<InteractiveConfig config={artifact.payload} state={state} onStateChange={onStateChange}/>}
     {artifact.kind==='generated_image'&&(artifact.payload.status==='ready'?<figure>
       {/* Persisted data URLs have no remote image host and reserve their intrinsic ratio. */}
