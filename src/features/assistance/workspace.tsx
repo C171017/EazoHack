@@ -165,7 +165,6 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
   return <main className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
     <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
       <section className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
-        <div className="flex items-center gap-3 border-b border-line px-5 py-3"><p role="status" className="flex-1 text-xs text-muted">{notice}</p><Button disabled={!ready} onClick={save}>Save locally</Button>{selection&&<Button onClick={()=>{setPanelOpen(true);if(selectedLocator)reader.current?.scrollToOffset(selectedLocator.startOffset);}}>Passage</Button>}</div>
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} saved results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <ContinuousTxtReader ref={reader} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} slots={slots}/>
       </section>
