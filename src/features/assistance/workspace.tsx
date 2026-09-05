@@ -30,6 +30,8 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
   const [anchors,setAnchors] = useState<SourceAnchor[]>([]);
   const [selectedRoutes,setSelectedRoutes] = useState<RouteKind[]>(['interactive_ui','concept_diagram']);
   const [runs,setRuns] = useState<RouteRun[]>([]);
+  const [runSelectionId,setRunSelectionId] = useState<string|null>(null);
+  const [requests,setRequests]=useState<Record<string,{routes:RouteKind[];message:string;failed:boolean}>>({});
   const [artifacts,setArtifacts] = useState<Artifact[]>([]);
   const [saved,setSaved] = useState<WorkspaceSnapshot|null>(null);
   const [busy,setBusy] = useState(false);
@@ -57,6 +59,9 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
     return ()=>{alive=false;void repository.close();};
   },[graph.graphVersion,graph.version,preview.extractionVersion,preview.fileHash]);
   const captureSelection = useCallback((range:TxtSelectionRange) => {
+    const existing=anchors.find(anchor=>selection?.anchorIds.includes(anchor.id));
+    const locator=existing?.locators[0];
+    if(locator?.kind==='txt'&&locator.startOffset===range.startOffset&&locator.endOffset===range.endOffset){setPanelOpen(true);return;}
     try {
       const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset:range.startOffset,endOffset:range.endOffset}],quote:range.quote,prefix:range.prefix,suffix:range.suffix,resolution:'exact'});
       const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',anchorIds:[anchor.id],selectedText:range.quote,contextSnapshot:'Complete TXT source; Benjamin Jowett third edition.',createdAt:new Date().toISOString()});
@@ -66,13 +71,14 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
     } catch {
       setNotice('Select a non-empty passage shorter than 20,000 characters.');
     }
-  },[preview.extractionVersion,preview.fileHash]);
-  async function exercise() {
-    if(!selection||!selectedRoutes.length||busy)return;
-    const frozen=selection, ticket=++activeRequest.current;
-    setBusy(true);setRuns([]);setNotice('Gemini 3.8 Flash is reading the selected passage…');
+  },[preview.extractionVersion,preview.fileHash,selection,anchors]);
+  async function exercise(target:Selection|null=selection, kinds:RouteKind[]=selectedRoutes) {
+    if(!target||!kinds.length||busy)return;
+    const frozen=target, ticket=++activeRequest.current;
+    setRequests(current=>({...current,[frozen.id]:{routes:kinds,message:'Generating assistance…',failed:false}}));
+    setBusy(true);setRunSelectionId(frozen.id);setRuns([]);setNotice('Gemini 3.8 Flash is reading the selected passage…');
     try {
-      const planResponse=await fetch('/api/route-plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({selection:frozen,routes:selectedRoutes,mode:'real'})});
+      const planResponse=await fetch('/api/route-plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({selection:frozen,routes:kinds,mode:'real'})});
       const planBody=await planResponse.json();if(!planResponse.ok)throw new Error(planBody.error?.message??'Route plan rejected');
       const response=await fetch('/api/assist/all',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({selection:frozen,plan:planBody.plan,mode:'real'})});
       const body=await response.json();if(!response.ok)throw new Error(body.error?.message??'Gemini request failed');
@@ -81,8 +87,10 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
       if(ticket!==activeRequest.current)return;
       setRuns(RouteRunSchema.array().parse(body.runs));setArtifacts(current=>[...current,...nextArtifacts]);
       setPlacements(current=>[...current,...placementsFor(nextArtifacts,anchors).map((p,i)=>({...p,order:Math.max(-1,...current.map(p=>p.order))+1+i}))]);
-      setNotice('Gemini response complete. Generated material remains unverified until you review it.');
-    }catch(error){if(ticket===activeRequest.current)setNotice(error instanceof Error?error.message:'Request failed');}
+      const failures=RouteRunSchema.array().parse(body.runs).filter(run=>run.status==='failed'||run.status==='cancelled');
+      setRequests(current=>({...current,[frozen.id]:{routes:failures.map(r=>r.route),message:failures.length?failures.map(r=>`${r.route}: ${r.error?.message??r.status}`).join(' '):'Results added. Generated material is unverified.',failed:failures.length>0}}));
+      setNotice('Results added to their original passage.');
+    }catch(error){if(ticket===activeRequest.current){const message=error instanceof Error?error.message:'Request failed';setNotice(message);setRequests(current=>({...current,[frozen.id]:{routes:kinds,message,failed:true}}));}}
     finally{if(ticket===activeRequest.current)setBusy(false);}
   }
   async function save() {
@@ -115,6 +123,13 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
       <div hidden={placement.collapsed}><ArtifactView artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/></div>
     </>});
   }
+  for(const [id,status] of Object.entries(requests)){
+    const selected=selections.find(s=>s.id===id),anchor=anchors.find(a=>selected?.anchorIds.includes(a.id));
+    const locator=resolveTxtAnchor(anchor,{...preview,bookId:graph.bookId});
+    if(!locator||!selected)continue;
+    slots.push({id:`request-${id}`,offset:locator.endOffset,content:<div role="status" className="rounded-lg border border-line p-3 text-xs">{status.message}{status.failed&&<Button disabled={busy} onClick={()=>void exercise(selected,status.routes)}>Retry failed routes</Button>}</div>});
+  }
+  const unresolvedArtifacts=artifacts.filter(a=>!slots.some(s=>s.id===a.id));
   const selectedLocator=resolveTxtAnchor(anchors.find(a=>selection?.anchorIds.includes(a.id)),{...preview,bookId:graph.bookId});
   if(panelOpen&&selectedLocator)slots.push({id:'passage-controls',offset:selectedLocator.endOffset,content:(<div id="passage-panel" className="flex flex-col rounded-panel border border-line bg-paper shadow-panel">
           <div className="flex shrink-0 items-center justify-between border-b border-line px-5 py-3">
@@ -127,10 +142,10 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
               {selection?<blockquote className="max-h-24 overflow-auto border-l-2 border-moss pl-3 font-reading text-sm leading-6">{selection.selectedText}</blockquote>:<p className="font-reading text-lg text-muted">Every question starts somewhere.<br/><span className="text-sm">Highlight a passage in the book to get started.</span></p>}
               {selection&&!validHighlight&&<p className="mt-3 text-xs text-warning">The saved quote could not be located in this source version. Original selected text is preserved.</p>}<div className="mt-5 border-t border-line pt-4"><p className="mb-3 text-[11px] text-muted">Gemini 3.8 Flash · selected text is sent to Google Vertex AI</p>
                 <div className="flex flex-wrap gap-2">{routes.map(route=><label key={route.kind} title={route.supported?undefined:'Not connected in this release'} className={`flex items-center gap-2 rounded-lg border border-line bg-mist px-2.5 py-2 text-[11px] ${route.supported?'cursor-pointer':'cursor-not-allowed opacity-45'}`}><input type="checkbox" disabled={!route.supported} checked={selectedRoutes.includes(route.kind)} onChange={()=>setSelectedRoutes(current=>current.includes(route.kind)?current.filter(kind=>kind!==route.kind):[...current,route.kind])} className="accent-moss"/><span className="text-moss">{route.symbol}</span>{route.label}</label>)}</div>
-                <div className="mt-4 flex flex-wrap items-center gap-2"><Button variant="primary" disabled={!ready||!selection||!selectedRoutes.length||busy} onClick={exercise}>{busy?'Asking Gemini…':'Explore with Gemini'} <span>↗</span></Button><Button disabled={!ready||!selection||busy} onClick={save}>Save locally</Button></div>
+                <div className="mt-4 flex flex-wrap items-center gap-2"><Button variant="primary" disabled={!ready||!selection||!selectedRoutes.length||busy} onClick={()=>void exercise()}>{busy?'Asking Gemini…':'Explore with Gemini'} <span>↗</span></Button><Button disabled={!ready||!selection||busy} onClick={save}>Save locally</Button></div>
               </div>
             </div>
-            <div className="mt-4 space-y-3">{runs.filter(run=>run.status==='failed'||run.status==='cancelled').map(run=><div key={run.id} className="rounded-xl border border-line bg-mist p-4 text-xs text-warning"><strong>{routes.find(route=>route.kind===run.route)?.label}: {run.status}</strong><p className="mt-1">{run.error?.message}</p></div>)}</div>
+            <div className="mt-4 space-y-3">{runSelectionId===selection?.id&&runs.filter(run=>run.status==='failed'||run.status==='cancelled').map(run=><div key={run.id} className="rounded-xl border border-line bg-mist p-4 text-xs text-warning"><strong>{routes.find(route=>route.kind===run.route)?.label}: {run.status}</strong><p className="mt-1">{run.error?.message}</p></div>)}</div>
             {saved&&<div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-[11px] text-muted"><span>One local reading checkpoint · {saved.artifacts.length} results</span><Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);const sourceTicket=++sourceRequest.current;setMapAnchor(null);if(saved.mapView?.graphVersion===graph.graphVersion&&saved.mapView.readerAnchorId)void readMap<{anchor:SourceAnchor}>(graph.version,{kind:'anchor',id:saved.mapView.readerAnchorId}).then(result=>{if(sourceTicket===sourceRequest.current)setMapAnchor(result.anchor);}).catch(()=>{});setMapView(saved.mapView?.graphVersion===graph.graphVersion?saved.mapView:null);setSelections(saved.selections);setPlacements(placementsFor(saved.artifacts,saved.anchors,saved.placements));setSelection(saved.selections[0]??null);setAnchors(saved.anchors);setArtifacts(saved.artifacts);setInteractionState(saved.interactionState);setRuns([]);setNotice('Opened the saved checkpoint.');const position=saved.readerPosition?.fileHash===preview.fileHash&&saved.readerPosition.extractionVersion===preview.extractionVersion?saved.readerPosition.startOffset:0;reader.current?.scrollToOffset(position,'smooth');}}>Revisit ↗</Button></div>}
           </div>
         </div>)});
@@ -139,6 +154,7 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
     <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
       <section className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         <div className="flex items-center gap-3 border-b border-line px-5 py-3"><p role="status" className="flex-1 text-xs text-muted">{notice}</p><Button disabled={!ready} onClick={save}>Save locally</Button>{selection&&<Button onClick={()=>{setPanelOpen(true);if(selectedLocator)reader.current?.scrollToOffset(selectedLocator.startOffset);}}>Passage</Button>}</div>
+        {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} saved results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <ContinuousTxtReader ref={reader} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} slots={slots}/>
       </section>
       <section className="relative min-h-[960px] flex-1 overflow-hidden bg-paper lg:min-h-0" aria-label="Exploration workspace">

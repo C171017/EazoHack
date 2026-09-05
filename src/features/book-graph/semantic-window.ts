@@ -12,6 +12,17 @@ export function zoomAt(view:MapView,zoom:number,focus:{x:number;y:number},size:S
   const next=Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,zoom)),ratio=next/view.zoom;
   return {...view,zoom:next,x:focus.x-size.width/2-(focus.x-size.width/2-view.x)*ratio,y:focus.y-size.height/2-(focus.y-size.height/2-view.y)*ratio};
 }
+// Manual zoom always anchors the viewport centre. Recover the centred overview
+// progressively on zoom-out, including views previously panned or explicitly located.
+export function zoomCentered(view:MapView,zoom:number,size:Size):MapView {
+  const next=zoomAt(view,zoom,{x:size.width/2,y:size.height/2},size);
+  if(next.zoom<=ZOOM_POLICY.minZoom)return {...next,x:0,y:0};
+  if(next.zoom<view.zoom){
+    const recovery=(next.zoom-ZOOM_POLICY.minZoom)/(view.zoom-ZOOM_POLICY.minZoom);
+    return {...next,x:view.x*recovery,y:view.y*recovery};
+  }
+  return next;
+}
 export function zoomLevel(zoom:number,previous:number,maxDepth:number) {
   let level=previous;
   while(level<maxDepth&&zoom>=ZOOM_POLICY.step**(level+1))level++;

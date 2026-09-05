@@ -46,8 +46,8 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string}
 }
 
 // Separate capture and release radii prevent jitter when leaving a magnetic plane.
-export const SNAP_ENTER = Math.PI / 18; // 10 degrees
-export const SNAP_EXIT = Math.PI / 12; // 15 degrees
+export const SNAP_ENTER = Math.PI / 6; // 30 degrees
+export const SNAP_EXIT = Math.PI * 2 / 9; // 40 degrees
 export type SnapTarget = {projection:'xy'|'xz'|'yz';yaw:number;pitch:number;distance:number};
 export function nearestProjection(camera:Pick<MapView,'yaw'|'pitch'>):SnapTarget {
   const quarter=Math.PI/2;

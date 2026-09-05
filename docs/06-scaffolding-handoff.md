@@ -1,5 +1,7 @@
 # 项目脚手架交接计划
 
+> Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
+
 > 2026-09-05 D14 supersession：下文的 `assistance` 产物面板描述属于历史脚手架。最新产品布局要求产物通过 `ArtifactPlacement` 锚定并进入左侧原文阅读流；右侧保留地图。不要据旧目录说明继续扩展右侧结果面板。见 [内嵌产物决策](17-inline-reader-artifacts.md)。
 
 > PDF 后续衔接（2026-09-05）：下文是初始脚手架任务，不再作为后来获授权的 PDF 四层处理之禁令。TXT 已交另一任务负责。继续 PDF/整书工作前阅读 [11-pdf-whole-book-analysis.md](11-pdf-whole-book-analysis.md)：全来源保留、先检查提取器再 OCR、阅读按需任务与全量分析分开、章节与证据回链。新说明是设计/测量记录，不是实现验收。

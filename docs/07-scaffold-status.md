@@ -1,5 +1,7 @@
 # Scaffold implementation status
 
+> Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
+
 > Product supersession · 2026-09-05: the current passage panel described below is now a migration target. The approved design anchors generated images, interactive UI, diagrams and source cards inside the left reading stream while the right side remains the book map. This is not implemented yet. Native DOM remains the canonical source-text renderer; a whole-reader Pretext rewrite is not selected. See [inline reader artifact decision](17-inline-reader-artifacts.md).
 
 > Latest delivery: [semantic zoom and local Gemini hierarchy](15-semantic-zoom-implementation.md) replaces spatial paging with five layers and bounded viewport requests. See that record for current tests, build, data, and device-test limits.

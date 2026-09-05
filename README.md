@@ -1,5 +1,7 @@
 # Eazo · Nonlinear reading workspace
 
+> Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](docs/18-inline-reader-implementation.md).
+
 A local workspace for **read → select → explore → save**. The foundation is TypeScript, React, Next.js, Tailwind CSS, Zod and IndexedDB. The React/SVG 3D map reads a saved, source-anchored Gemini analysis of the Republic TXT, with three canonical 2D projections. Whole-book analysis accepts plain text only for this MVP; PDF conversion is a separate upstream concern.
 
 Latest approved product direction: generated images, interactive UI and concept diagrams belong in the **left reading stream**, anchored at the selected passage; the right side remains the book map. The current passage-panel implementation has not yet been migrated. Native DOM text remains the canonical reader renderer; Pretext is optional for bounded measurement/layout problems, not a whole-reader replacement. See [inline reader artifacts and text-layout decision](docs/17-inline-reader-artifacts.md).

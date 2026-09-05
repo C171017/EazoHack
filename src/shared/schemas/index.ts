@@ -67,7 +67,13 @@ export const ReferenceSchema = z.discriminatedUnion("scope", [
   z.object({ ...ReferenceBase, scope: z.literal("book"), anchorId: Id }).strict(),
   z.object({ ...ReferenceBase, scope: z.literal("external"), url: z.string().url().refine((url) => /^https?:\/\//.test(url), "Only HTTP sources are allowed") }).strict(),
 ]);
-export const GeneratedImageSchema = z.object({ status: z.literal("placeholder"), resource: z.null(), prompt: Text, caption: Text }).strict();
+export const GeneratedImageSchema = z.discriminatedUnion('status', [
+  z.object({ status: z.literal('placeholder'), resource: z.null(), prompt: Text, caption: Text }).strict(),
+  z.object({ status: z.literal('ready'), resource: z.object({
+    dataUrl: z.string().max(14_000_000).regex(/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/),
+    width: z.number().int().positive().max(16384), height: z.number().int().positive().max(16384),
+  }).strict(), prompt: Text, caption: Text }).strict(),
+]);
 export const SourceDiscoverySchema = z.object({ status: z.enum(["no_results", "results"]), scope: z.enum(["undecided", "book", "external", "both"]), query: Text, references: z.array(ReferenceSchema).max(30), summary: Text }).strict().superRefine((value, ctx) => {
   if ((value.status === "no_results" && value.references.length > 0) || (value.status === "results" && value.references.length === 0)) ctx.addIssue({ code: "custom", message: "Discovery status must match references" });
   if (value.scope === "undecided" && value.references.length > 0) ctx.addIssue({ code: "custom", message: "Unresolved scope cannot return references" });

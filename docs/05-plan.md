@@ -1,5 +1,7 @@
 # 十小时范围、演示与验收
 
+> Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
+
 > 2026-09-05 D14 最新布局：段落辅助结果应在左侧原文的对应锚点内嵌，右侧保留地图；现有 passage panel 待迁移。首版使用原生 DOM 的块级 artifact slot，不以全阅读器 Pretext 重写作为前置条件。详见 [内嵌产物决策](17-inline-reader-artifacts.md)。
 
 > 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.

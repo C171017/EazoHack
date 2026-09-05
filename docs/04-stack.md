@@ -1,5 +1,7 @@
 # 已确认技术选型
 
+> Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
+
 > 2026-09-05 D14：左侧阅读器将承载锚定到选文的图片、交互 UI、概念图与来源卡片；右侧保留整书地图。原生 DOM 继续渲染规范原文。Pretext 不是全阅读器依赖，只可在独立基准通过后用于局部测量。详见 [内嵌产物决策](17-inline-reader-artifacts.md)。
 
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.

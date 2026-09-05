@@ -90,7 +90,7 @@ test('magnetic pull is continuous and deliberate drags can escape either pole',(
   const raw={yaw:.08,pitch:.06},attracted=magneticPose(raw);
   assert.ok(nearestProjection(attracted).distance<nearestProjection(raw).distance);
   assert.deepEqual(magneticPose({yaw:.5,pitch:.4}),{yaw:.5,pitch:.4});
-  for(const pitch of [-Math.PI/2,Math.PI/2])for(const dy of [-60,60]){
+  for(const pitch of [-Math.PI/2,Math.PI/2])for(const dy of [-130,130]){
     const pulled=orbitFrom({yaw:0,pitch},0,dy);
     assert.ok(Math.abs(pulled.pitch-pitch)>SNAP_EXIT);
     assert.ok(Math.abs(pulled.pitch)<=Math.PI/2);
@@ -100,4 +100,14 @@ test('magnetic settling progresses smoothly to exact alignment without opacity c
   assert.equal(springProgress(0),0);assert.equal(springProgress(520),1);
   let last=0;for(let t=16;t<=520;t+=16){const next=springProgress(t);assert.ok(next>=last&&next<=1);last=next;}
   assert.ok(springProgress(16)<.05);
+});
+
+test('wide magnetic capture attracts all three planes at 25 degrees',()=>{
+  for(const projection of ['xy','xz','yz'] as const){
+    const pose={...orientation(projection),yaw:orientation(projection).yaw+25*Math.PI/180};
+    const target=nearestProjection(pose);
+    assert.equal(target.projection,projection);
+    assert.ok(target.distance<SNAP_ENTER);
+    assert.ok(nearestProjection(magneticPose(pose)).distance<target.distance);
+  }
 });

@@ -1,5 +1,7 @@
 # 架构、数据流与出处锚点
 
+> Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
+
 > 2026-09-05 D14：段落辅助产物的规范位置改为左侧原文内嵌，右侧保留整书地图。来源仍用原生 DOM 与精确锚点；Pretext 不作为全阅读器渲染器。详见 [内嵌产物与文字布局](17-inline-reader-artifacts.md)。
 
 > 2026-09-05: 叶节点已有持久出处锚点；现已接通点击/键盘激活后自动跳转并高亮原文，包含版本、引文与偏移校验。详见 [叶节点出处导航与验证](16-leaf-source-navigation.md)。

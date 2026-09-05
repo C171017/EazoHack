@@ -6,7 +6,7 @@ import os from 'node:os';
 import { GraphSchema, MapViewSchema, type Graph } from '../src/shared/schemas';
 import { leafEntry, clusterEntry, validateHierarchy, ZOOM_POLICY, type MapEntry, type Hierarchy } from '../src/shared/zoom-hierarchy';
 import { initialView, orbitFrom } from '../src/features/book-graph/projection';
-import { baseScale, semanticWindow, zoomAt, zoomLevel, toScreen, PageCache } from '../src/features/book-graph/semantic-window';
+import { baseScale, semanticWindow, zoomAt, zoomCentered, zoomLevel, toScreen, PageCache } from '../src/features/book-graph/semantic-window';
 import { transitionPlan } from '../src/features/book-graph/node-transition';
 import { buildHierarchy, spatialBatches, validateGroups } from '../src/server/book-analysis/hierarchy-run';
 import { createMapStore, mapBootstrap, visibleLinks, nodeDetail } from '../src/server/book-map/store';
@@ -36,11 +36,11 @@ test('hierarchy preserves all accepted leaves and rejects membership, count, bou
     (h:Hierarchy)=>{h.entries[0].summary='Corrupted leaf';},
   ]){const copy=structuredClone(h);mutate(copy);assert.throws(()=>validateHierarchy(copy,graph));}
 });
-test('pinch preserves focal point, clamp and saved camera range; orbit never changes fit scale',()=>{
+test('explicit navigation preserves focal point, clamp and saved camera range; orbit never changes fit scale',()=>{
   const size={width:900,height:600},view={...initialView('test'),x:40,y:-22};
   const point={x:.7,y:3,z:.65},focus=toScreen(point,view,size,[0,1]);
   const next=zoomAt(view,8,focus,size);const projected=toScreen(point,next,size,[0,1]);assert.ok(Math.hypot(projected.x-focus.x,projected.y-focus.y)<1e-8);
-  assert.equal(zoomAt(view,100,focus,size).zoom,48);assert.equal(zoomAt(view,.01,focus,size).zoom,.5);
+  assert.equal(zoomAt(view,100,focus,size).zoom,48);assert.equal(zoomAt(view,.01,focus,size).zoom,1);
   assert.equal(MapViewSchema.parse(next).zoom,8);
   const rotated={...next,...orbitFrom(next,200,80)};assert.equal(rotated.zoom,next.zoom);assert.equal(baseScale(size)*rotated.zoom,baseScale(size)*next.zoom);
 });
@@ -98,4 +98,20 @@ test('hierarchy pipeline reviews, resumes without new calls, and never replaces 
   const pointer=await readFile(path.join(outputRoot,'current-map.json'),'utf8');
   await assert.rejects(buildHierarchy({graph,outputRoot,model:'different',generate:async()=>{throw new Error('provider offline');}}));
   assert.equal(await readFile(path.join(outputRoot,'current-map.json'),'utf8'),pointer);
+});
+
+test('manual zoom holds the centre and recovers the overview after panning',()=>{
+  const size={width:900,height:600},view=initialView('test');
+  const centre={x:.5,y:2,z:.5};
+  for(const zoom of [1,2,8,48]){
+    const next=zoomCentered(view,zoom,size);
+    assert.deepEqual(toScreen(centre,next,size,[0,1]),{x:450,y:300});
+  }
+  const panned={...view,zoom:8,x:700,y:-240};
+  const halfway=zoomCentered(panned,4,size);
+  assert.ok(Math.abs(halfway.x)<Math.abs(panned.x));
+  assert.ok(Math.abs(halfway.y)<Math.abs(panned.y));
+  const overview=zoomCentered(halfway,.01,size);
+  assert.equal(overview.zoom,1);assert.equal(overview.x,0);assert.equal(overview.y,0);
+  assert.equal(zoomCentered(view,100,size).zoom,48);
 });

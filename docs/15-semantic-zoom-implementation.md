@@ -4,7 +4,7 @@ Delivered 2026-09-05 against [the approved hierarchy design](14-semantic-zoom-hi
 
 ## What is implemented
 
-- Trackpad pinch changes zoom around the gesture focus. Chromium/Edge use non-passive Ctrl/Meta-wheel handling; WebKit gesture events have a separate handler. Ordinary two-finger scrolling pans. Buttons and +/− use the same bounded zoom calculation. Drag orbits, Shift-drag pans, and magnetic projection alignment/keys 1–4 remain.
+- Trackpad pinch changes zoom around the canvas centre; zooming out progressively recentres panned content and returns to a centred overview at 100%. Chromium/Edge use non-passive Ctrl/Meta-wheel handling; WebKit gesture events have a separate handler. Ordinary two-finger scrolling pans. Buttons and +/− use the same bounded zoom calculation. Drag orbits, Shift-drag pans, and magnetic projection alignment/keys 1–4 remain.
 - Scale depends on viewport dimensions and explicit zoom, not the camera orientation or visible-node bounds. Dragging, releasing, snapping, fetching and replacing nodes never call fit-to-view. The inspector overlays the scene so opening it does not resize the map or push its controls off screen.
 - Zoom thresholds expand a non-overlapping cut of the hierarchy. If expansion would exceed the cap, a parent stays visible. Missing subtrees also retain their parents with loading/retry feedback. Node glyphs shrink toward lower zoom; a cancellable 260 ms transition moves children from/to parent display positions and interpolates opacity/radius. Reversing starts from the currently interpolated state. Reduced-motion mode switches immediately.
 - The server supplies a compact bootstrap containing the root summaries, bounds, source/graph/hierarchy identity, counts and theme labels. It does **not** serialize every occurrence, relationship and quotation into the client component. The full TXT reader still receives its complete text; the payload reduction reported below is for the graph, not the entire page.
@@ -25,7 +25,7 @@ These are implemented engineering budgets, **not certified capacities for M1/M2 
 | Labels / relation summaries | 18 / 64 maximum; fewer labels where viewport space requires it |
 | Cached child pages | 48, each at most 8 entries; selected detail and list response are kept separately, not an unbounded detail history |
 | Browse request page | 30 leaf entries |
-| Zoom range | 0.5×–48× |
+| Zoom range | 1×–48× |
 | Enter next detail level | `1.8 ** depth` — this book: 1.8×, 3.24×, 5.832×, 10.4976× |
 | Leave a detail level | Below 86% of its entry threshold |
 | Node transition | 260 ms, reversible/cancellable; immediate with reduced motion |

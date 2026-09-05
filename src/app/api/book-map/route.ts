@@ -27,14 +27,6 @@ export async function GET(request:Request) {
       if(!Number.isFinite(start)||!Number.isFinite(end)||start<0||end>1||start>end)return Response.json({error:'Invalid range'},{status:400});
       const links=visibleLinks(store,ids,{theme:q.get('theme'),role:q.get('role'),start,end});return json({links:links.slice(0,ZOOM_POLICY.edges),total:links.length});
     }
-    if(kind==='browse') {
-      const page=Number(q.get('page')??0);if(!Number.isSafeInteger(page)||page<0)return Response.json({error:'Invalid page'},{status:400});
-      const query=(q.get('q')??'').slice(0,200).toLocaleLowerCase(),theme=q.get('theme'),role=q.get('role');
-      const start=Number(q.get('start')??0),end=Number(q.get('end')??1);
-      if(!Number.isFinite(start)||!Number.isFinite(end)||start<0||end>1||start>end)return Response.json({error:'Invalid range'},{status:400});
-      const nodes=graph.nodes.filter(n=>(!query||`${n.label} ${n.summary}`.toLocaleLowerCase().includes(query))&&(!theme||n.themeTerritoryIds.includes(theme))&&(!role||n.sourceRole===role)&&(n.position.z===null||n.position.z>=start&&n.position.z<=end));
-      return json({nodes:nodes.slice(page*ZOOM_POLICY.pageSize,(page+1)*ZOOM_POLICY.pageSize).map(n=>entries.get(n.id)!),total:nodes.length});
-    }
     return Response.json({error:'Unknown map request'},{status:400});
   } catch(error) {
     console.error('Map request failed:',error instanceof Error?error.message:'Unknown error');
