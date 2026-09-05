@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes } from 'react';
 const variants = {
-  primary: 'bg-moss text-white hover:bg-ink',
-  secondary: 'border border-line bg-white text-ink hover:bg-mist',
+  primary: 'bg-moss text-black hover:bg-ink',
+  secondary: 'border border-line bg-mist text-ink hover:border-muted',
   ghost: 'text-muted hover:bg-mist hover:text-ink',
 } as const;
 export function Button({variant='secondary',className='',...props}: ButtonHTMLAttributes<HTMLButtonElement> & {variant?: keyof typeof variants}) {

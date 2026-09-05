@@ -11,7 +11,7 @@ npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). No credentials or environment variables are required. The dev server binds to loopback.
+Open [http://127.0.0.1:3000](http://127.0.0.1:3000). No credentials or environment variables are required. The dev server binds to loopback.
 
 ```sh
 npm run typecheck

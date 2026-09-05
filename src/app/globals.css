@@ -2,3 +2,11 @@
 @import "@xyflow/react/dist/style.css";
 @import "../ui/tokens/theme.css";
 @import "../ui/styles/graph.css";
+
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
