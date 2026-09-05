@@ -27,6 +27,18 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
   const selectedAncestors=new Set<string>();let ancestor=selectedEntry?.parentId;while(ancestor){selectedAncestors.add(ancestor);ancestor=index.get(ancestor)?.parentId;}
   const detail=useMapRequest<{detail:NodeDetail}>(graph.version,current.selectedNodeId&&selectedEntry?.kind==='occurrence'?{kind:'detail',id:current.selectedNodeId}:null);
   const selected=detail.data?.detail;
+  const [sourceActivation,setSourceActivation]=useState<{id:string;ticket:number}|null>(null);
+  const sourceTicket=useRef(0),consumedSource=useRef(0);
+  // Only an explicit activation jumps: restore, pan and detail refetch do not.
+  useEffect(()=>{
+    if(!sourceActivation||consumedSource.current===sourceActivation.ticket
+      ||current.selectedNodeId!==sourceActivation.id||selected?.node.id!==sourceActivation.id)return;
+    const anchor=selected.anchors.find(a=>a.id===selected.node.anchorIds[0]);
+    if(!anchor)return;
+    consumedSource.current=sourceActivation.ticket;
+    onViewChange({...current,readerAnchorId:anchor.id});
+    onSource(anchor);
+  },[sourceActivation,selected,current,onViewChange,onSource]);
   const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,list?null:{kind:'edges',id:windowed.nodes.map(n=>n.id),theme:current.themeFilter??'',role:current.roleFilter??'',start:String(range[0]),end:String(range[1])},140);
   const browse=useMapRequest<{nodes:MapEntry[];total:number}>(graph.version,list?{kind:'browse',page:String(browsePage),q:query,theme:current.themeFilter??'',role:current.roleFilter??'',start:String(range[0]),end:String(range[1])}:null,160);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
@@ -64,7 +76,11 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
     return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);};
   },[onViewChange,list]);
   const cancelMotion=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
-  const change=(patch:Partial<MapView>)=>{cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:next};onViewChange(next);};
+  const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch)setSourceActivation(null);cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:next};onViewChange(next);};
+  function activateLeaf(id:string) {
+    change({selectedNodeId:id});
+    setSourceActivation({id,ticket:++sourceTicket.current});
+  }
   function settle(from:MapView,target:Pick<MapView,'projection'|'yaw'|'pitch'>) {
     cancelMotion();const finish={...from,...target};
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){onViewChange(finish);return;}
@@ -82,6 +98,7 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
     change({...next,x:next.x+size.width/2-centre.x,y:next.y+size.height/2-centre.y,selectedNodeId:node.id});
   }
   async function locate(id:string) {
+    setSourceActivation(null);
     navigation.current?.abort();const controller=new AbortController();navigation.current=controller;setNavigationError(null);setNavigating(true);cancelMotion();
     try {
       const result=await readMap<{node:MapEntry;ancestors:string[];pages:Record<string,MapEntry[]>}>(graph.version,{kind:'locate',id},controller.signal);
@@ -89,7 +106,8 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
       data.install(result.pages);
       const zoom=Math.max(1,ZOOM_POLICY.step**result.ancestors.length*1.06),next={...latest.current.current,selectedNodeId:id,themeFilter:null,roleFilter:null,sourceScope:'book' as const,zoom,x:0,y:0};
       if(result.node.position){const p=toScreen(result.node.position,next,size,[0,1]);next.x=size.width/2-p.x;next.y=size.height/2-p.y;}
-      onViewChange(next);setList(false);
+      latest.current={...latest.current,current:next};onViewChange(next);setList(false);
+      if(result.node.kind==='occurrence')setSourceActivation({id,ticket:++sourceTicket.current});
     }catch(error){if(!controller.signal.aborted)setNavigationError(error instanceof Error?error.message:'Could not reveal node');}
     finally{if(!controller.signal.aborted)setNavigating(false);}
   }
@@ -131,7 +149,7 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
         <g aria-hidden="true">{edges.data?.links.map(edge=>{const a=points.find(p=>p.id===edge.source&&!p.exiting),b=points.find(p=>p.id===edge.target&&!p.exiting);return a&&b?<line key={edge.id} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line>:null;})}</g>
         {points.map(p=>{const color=COLORS[Math.max(0,graph.territories.findIndex(t=>t.id===p.node.themeIds[0]))%COLORS.length],label=labels.get(p.id),cluster=p.node.kind==='cluster';let depth=0,parent=p.node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}const radius=p.radius*Math.max(.75,Math.min(1.1,Math.sqrt(current.zoom/ZOOM_POLICY.step**depth)));return <g key={p.id} opacity={p.opacity} pointerEvents={p.exiting?'none':undefined} aria-hidden={p.exiting||undefined}>
           {label&&<line x1={p.x} y1={p.y} x2={label.labelX} y2={label.labelY+13} stroke={color} opacity=".25"/>}
-          <g data-node-id={p.id} data-node-kind={p.node.kind} className={`map-node${current.selectedNodeId===p.id||selectedAncestors.has(p.id)?' is-selected':''}`} role="button" tabIndex={p.exiting?-1:0} aria-label={`${p.label}${cluster?`, group of ${p.node.leafCount} notes. Activate to expand`:`, ${p.node.sourceLabel}`}`} aria-pressed={current.selectedNodeId===p.id||selectedAncestors.has(p.id)} onClick={()=>cluster?openCluster(p.node):change({selectedNodeId:p.id})} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(cluster)openCluster(p.node);else change({selectedNodeId:p.id});}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();e.stopPropagation();const direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const target=windowed.nodes[(windowed.nodes.findIndex(n=>n.id===p.id)+direction+windowed.nodes.length)%windowed.nodes.length];if(target)svg.current?.querySelector<SVGGElement>(`[data-node-id="${target.id}"]`)?.focus();}}}>
+          <g data-node-id={p.id} data-node-kind={p.node.kind} className={`map-node${current.selectedNodeId===p.id||selectedAncestors.has(p.id)?' is-selected':''}`} role="button" tabIndex={p.exiting?-1:0} aria-label={`${p.label}${cluster?`, group of ${p.node.leafCount} notes. Activate to expand`:`, ${p.node.sourceLabel}`}`} aria-pressed={current.selectedNodeId===p.id||selectedAncestors.has(p.id)} onClick={()=>cluster?openCluster(p.node):activateLeaf(p.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(cluster)openCluster(p.node);else activateLeaf(p.id);}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();e.stopPropagation();const direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const target=windowed.nodes[(windowed.nodes.findIndex(n=>n.id===p.id)+direction+windowed.nodes.length)%windowed.nodes.length];if(target)svg.current?.querySelector<SVGGElement>(`[data-node-id="${target.id}"]`)?.focus();}}}>
             <title>{p.label} · {cluster?`${p.node.leafCount} notes · ${p.node.summary}`:p.node.sourceLabel}</title>
             <circle cx={p.x} cy={p.y} r={radius+9} fill={color} opacity=".08"/>
             <circle cx={p.x} cy={p.y} r={radius} fill={cluster?'#17281e':color} stroke={color} strokeWidth="1.2"/>

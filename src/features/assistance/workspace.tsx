@@ -8,6 +8,7 @@ import { createWorkspaceRepository, type WorkspaceSnapshot } from '../persistenc
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
 import { readMap } from '../book-graph/map-data';
 import { initialView } from '../book-graph/projection';
+import { resolveTxtAnchor } from '../reader/source-anchor';
 import { ArtifactView } from './artifact-view';
 import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange } from '../reader/continuous-txt-reader';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
@@ -89,13 +90,15 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
     finally{await repository.close();}
   }
   function readMapSource(anchor:SourceAnchor) {
-    sourceRequest.current++;setMapAnchor(anchor);
-    const locator=anchor.locators.find(candidate=>candidate.kind==='txt');
-    if(locator?.kind==='txt')requestAnimationFrame(()=>reader.current?.scrollToOffset(locator.startOffset,window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'));
+    const ticket=++sourceRequest.current;
+    const locator=resolveTxtAnchor(anchor,{...preview,bookId:graph.bookId});
+    if(!locator){setNotice('This note’s passage could not be located in this source version.');return;}
+    setMapAnchor(anchor);
+    setNotice('Showing the note’s source passage.');
+    requestAnimationFrame(()=>{if(ticket===sourceRequest.current)reader.current?.scrollToOffset(locator.startOffset,window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth');});
   }
   const activeAnchor=mapAnchor??anchors[0];
-  const activeLocator=activeAnchor?.locators.find(candidate=>candidate.kind==='txt');
-  const validHighlight=activeAnchor?.fileHash===preview.fileHash&&activeAnchor?.extractionVersion===preview.extractionVersion&&activeLocator?.kind==='txt'&&preview.sourceText.slice(activeLocator.startOffset,activeLocator.endOffset)===activeAnchor.quote;
+  const validHighlight=!!resolveTxtAnchor(activeAnchor,{...preview,bookId:graph.bookId});
   return <main className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
     <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
       <section className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">

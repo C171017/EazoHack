@@ -1,6 +1,7 @@
 'use client';
 
 import { forwardRef, memo, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
+import { resolveTxtAnchor } from './source-anchor';
 import type { SourceAnchor } from '@/shared/schemas';
 import { createTxtRenderChunks, findTxtBlock, type TxtRenderChunk } from './txt-document';
 
@@ -102,14 +103,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   const alignmentFrame = useRef<number | null>(null);
   const [currentChunk, setCurrentChunk] = useState(0);
 
-  const locator = activeAnchor?.locators.find(candidate => candidate.kind === 'txt');
-  const highlight = activeAnchor
-    && activeAnchor.fileHash === fileHash
-    && activeAnchor.extractionVersion === extractionVersion
-    && locator?.kind === 'txt'
-    && sourceText.slice(locator.startOffset, locator.endOffset) === activeAnchor.quote
-      ? { startOffset: locator.startOffset, endOffset: locator.endOffset }
-      : null;
+  const highlight = resolveTxtAnchor(activeAnchor, { sourceText, fileHash, extractionVersion });
 
   useEffect(() => {
     const root = scroller.current;
@@ -166,9 +160,25 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       let stableFrames = 0;
       const align = () => {
         const rootRect = root.getBoundingClientRect();
-        const elementRect = element.getBoundingClientRect();
+        // A passage can begin well inside a long paragraph, including after a
+        // mark split. Align its text position rather than the paragraph's top.
+        let targetRect = element.getBoundingClientRect();
+        const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT);
+        let remaining = Math.max(0, offset - block!.startOffset);
+        for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+          const length = node.textContent?.length ?? 0;
+          if (remaining < length) {
+            const range = document.createRange();
+            range.setStart(node, remaining);
+            range.setEnd(node, remaining + 1);
+            const rect = range.getClientRects()[0];
+            if (rect) targetRect = rect;
+            break;
+          }
+          remaining -= length;
+        }
         const targetTop = rootRect.top + Math.min(150, rootRect.height * 0.24);
-        const delta = elementRect.top - targetTop;
+        const delta = targetRect.top - targetTop;
         if (Math.abs(delta) > 2) {
           stableFrames = 0;
           root.scrollBy({
