@@ -1,8 +1,10 @@
 'use client';
 
-import { forwardRef, memo, useEffect, useImperativeHandle, useMemo, useRef, useState } from 'react';
+import { forwardRef, memo, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import type { SourceAnchor } from '@/shared/schemas';
 import { createTxtRenderChunks, findTxtBlock, type TxtRenderChunk } from './txt-document';
+import { ReadingMenu } from './reading-menu';
+import { chineseFonts, defaultReadingFonts, englishFonts, parseReadingFonts, type ReadingFonts } from './reading-fonts';
 
 export type TxtSelectionRange = {
   startOffset: number;
@@ -100,7 +102,42 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   const documentRoot = useRef<HTMLDivElement>(null);
   const currentChunkRef = useRef(0);
   const alignmentFrame = useRef<number | null>(null);
-  const [currentChunk, setCurrentChunk] = useState(0);
+  const [fonts, setFonts] = useState<ReadingFonts>(defaultReadingFonts);
+  const fontPosition = useRef<{ element: HTMLElement; top: number } | null>(null);
+
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => {
+      try { setFonts(parseReadingFonts(localStorage.getItem('eazo-reading-fonts'))); } catch { /* Storage is optional. */ }
+    });
+    return () => cancelAnimationFrame(frame);
+  }, []);
+
+  useLayoutEffect(() => {
+    const position = fontPosition.current;
+    if (!position) return;
+    let active = true;
+    const align = () => {
+      if (active && scroller.current && position.element.isConnected) {
+        scroller.current.scrollTop += position.element.getBoundingClientRect().top - position.top;
+      }
+    };
+    align();
+    void document.fonts.ready.then(align);
+    return () => { active = false; };
+  }, [fonts]);
+
+  function changeFonts(next: ReadingFonts) {
+    if (fonts.english === next.english && fonts.chinese === next.chinese) return;
+    const root = scroller.current;
+    if (root && root.scrollTop > 0) {
+      const top = root.getBoundingClientRect().top + 110;
+      const block = [...root.querySelectorAll<HTMLElement>('[data-txt-block]')]
+        .find(element => element.getBoundingClientRect().bottom > top);
+      fontPosition.current = block ? { element: block, top: block.getBoundingClientRect().top } : null;
+    } else fontPosition.current = null;
+    setFonts(next);
+    try { localStorage.setItem('eazo-reading-fonts', JSON.stringify(next)); } catch { /* Reading still works without storage. */ }
+  }
 
   const locator = activeAnchor?.locators.find(candidate => candidate.kind === 'txt');
   const highlight = activeAnchor
@@ -128,7 +165,6 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       const next = Number((entry.target as HTMLElement).dataset.txtChunkIndex);
       if (Number.isInteger(next) && next !== currentChunkRef.current) {
         currentChunkRef.current = next;
-        setCurrentChunk(next);
       }
     }, { root, rootMargin: '-56px 0px -60% 0px' });
     content.querySelectorAll('[data-txt-chunk]').forEach((element, index) => {
@@ -205,23 +241,28 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     selection.removeAllRanges();
   }
 
-  const progress = sourceText.length
-    ? Math.round(((chunks[currentChunk]?.startOffset ?? 0) / sourceText.length) * 100)
-    : 0;
-
   return <div
     ref={scroller}
-    className="txt-reader-scroll min-h-0 flex-1 overflow-y-auto px-8 py-9 lg:px-12 xl:px-16"
+    className="txt-reader-scroll min-h-0 flex-1 overflow-y-auto"
+    data-english-font={fonts.english}
+    data-chinese-font={fonts.chinese}
+    style={{ '--font-reading': `${englishFonts.find(font => font.id === fonts.english)!.family}, ${chineseFonts.find(font => font.id === fonts.chinese)!.family}, serif` } as CSSProperties}
   >
-    <div className="mb-8 flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-muted"><span className="h-px w-8 bg-line"/>The Republic / Complete TXT source</div>
-    <h1 className="font-reading text-4xl">The Republic of Plato.</h1>
-    <p className="mt-3 mb-4 text-xs leading-6 text-muted">Complete supplied text · Benjamin Jowett, third edition<br/>Select any part of the original text to hold it in context.</p>
-    <div className="txt-reader-progress" aria-hidden="true">{progress}% · complete source</div>
+    <div className="txt-reader-masthead">
+      <ReadingMenu fonts={fonts} onChange={changeFonts}/>
+    </div>
+    <div className="txt-reader-page">
+    <header className="txt-reader-heading">
+      <p className="txt-reader-eyebrow">Plato · Translated by Benjamin Jowett</p>
+      <h1>The Republic of Plato.</h1>
+      <p className="txt-reader-edition">Third edition · Complete text</p>
+      <p className="txt-reader-hint">Select a passage to explore it.</p>
+    </header>
     <div
       ref={documentRoot}
       onMouseUp={captureSelection}
       onKeyUp={captureSelection}
-      className="font-reading text-[17px] leading-[1.95] selection:bg-highlight"
+      className="txt-reader-body"
       data-testid="book-text"
       role="document"
       aria-label="Complete TXT source"
@@ -235,7 +276,8 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
         return <TxtChunk key={chunk.id} chunk={chunk} sourceText={sourceText} highlight={chunkHighlight}/>;
       })}
     </div>
-    <div className="mt-10 border-t border-line pt-5 text-xs leading-6 text-muted">End of complete TXT source.</div>
+    <div className="txt-reader-end">End of complete text</div>
+    </div>
   </div>;
 });
 
