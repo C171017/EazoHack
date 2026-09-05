@@ -2,7 +2,8 @@ import { sourceWorld, type Point3 } from './projection';
 import { heatCount, type HeatFilter } from './reading-heat';
 import type { HeatPoint } from './heat-placement';
 
-export const HEAT_SIGMA = 32;
+// Compact halos retain the same peak intensity and smooth three-sigma falloff.
+export const HEAT_SIGMA = 20;
 export const HEAT_RADIUS = HEAT_SIGMA * 3;
 export const HEAT_MAX = 12;
 export const HEAT_GRID = [64, 48, 96] as const;

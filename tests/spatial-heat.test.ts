@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { buildHeatVolume, fieldDensity, heatKernel, heatRgb, HEAT_RADIUS, HEAT_GRID, HEAT_COLORS } from '../src/features/book-graph/heat-field';
+import { buildHeatVolume, fieldDensity, heatKernel, heatRgb, HEAT_RADIUS, HEAT_SIGMA, HEAT_GRID, HEAT_COLORS } from '../src/features/book-graph/heat-field';
 import { heatSourceIndex, type HeatPoint } from '../src/features/book-graph/heat-placement';
 import { project, orientation, sourceWorld } from '../src/features/book-graph/projection';
 import { loadMapStore, heatIndexPage } from '../src/server/book-map/store';
@@ -14,7 +14,7 @@ function point(id: string, position = { x: .5, y: 2, z: .5 }, weight = 1): HeatP
 
 test('one source is green with smooth spherical falloff and no hard boundary', () => {
   assert.equal(heatKernel(0), 1);
-  assert.ok(heatKernel(32 ** 2) > heatKernel(64 ** 2));
+  assert.ok(heatKernel(HEAT_SIGMA ** 2) > heatKernel((HEAT_SIGMA * 2) ** 2));
   assert.equal(heatKernel(HEAT_RADIUS ** 2), 0);
   assert.ok(heatKernel((HEAT_RADIUS - .001) ** 2) < .00001);
   const seeds = [{ position: p, weight: 1 }];
@@ -25,7 +25,7 @@ test('one source is green with smooth spherical falloff and no hard boundary', (
 });
 
 test('nearby sources fuse by adding scalar density before coloring', () => {
-  const seeds = [{position:{x:-16,y:0,z:0},weight:3},{position:{x:16,y:0,z:0},weight:3}];
+  const seeds = [{position:{x:-HEAT_SIGMA/2,y:0,z:0},weight:3},{position:{x:HEAT_SIGMA/2,y:0,z:0},weight:3}];
   const middle = fieldDensity(p,seeds);
   assert.ok(middle > 5 && middle < 6);
   assert.deepEqual(fieldDensity(p,[{position:p,weight:12}]),12);

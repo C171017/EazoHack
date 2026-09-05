@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import type { Graph } from './schemas';
 
-export const ZOOM_POLICY = { version:'zoom-v1', roots:8, children:8, maxDepth:6, nodes:36, transitions:72, edges:64, labels:18, cachePages:48, duration:260, step:1.8, hysteresis:.86, minZoom:1, maxZoom:48 } as const;
+export const ZOOM_POLICY = { version:'zoom-v1', roots:8, children:8, maxDepth:6, nodes:36, transitions:72, edges:64, labels:18, cachePages:48, duration:260, step:1.8, hysteresis:.86, minZoom:1.5, maxZoom:48 } as const;
 const Vec = z.object({x:z.number().finite(),y:z.number().finite(),z:z.number().finite()}).strict();
 export const MapEntrySchema = z.object({
   id:z.string(), parentId:z.string().nullable(), kind:z.enum(['cluster','occurrence']), label:z.string().min(1).max(500), summary:z.string().max(20_000),

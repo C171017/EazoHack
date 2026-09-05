@@ -1,4 +1,5 @@
 import type { Graph, MapView } from '../../shared/schemas';
+import { ZOOM_POLICY } from '../../shared/zoom-hierarchy';
 export type Point3 = {x:number;y:number;z:number};
 export const LEVELS = ['Detail / example','Claim','Concept','Argument','Core question'];
 export const PROJECTIONS = [
@@ -14,7 +15,7 @@ export function confineCamera(camera:Pick<MapView,'yaw'|'pitch'>) {
   return {yaw:Math.max(-Math.PI/2,Math.min(0,camera.yaw)),pitch:Math.max(0,Math.min(Math.PI/2,camera.pitch))};
 }
 export function initialView(graphVersion: string): MapView {
-  return {graphVersion,projection:'3d',axisConvention:'z-up-v1',...DEFAULT_CAMERA,x:0,y:0,zoom:1,selectedNodeId:null,readerAnchorId:null,sourceScope:'excerpt'};
+  return {graphVersion,projection:'3d',axisConvention:'z-up-v1',...DEFAULT_CAMERA,x:0,y:0,zoom:ZOOM_POLICY.minZoom,selectedNodeId:null,readerAnchorId:null,sourceScope:'excerpt'};
 }
 export function orientation(projection: MapView['projection']) {
   return projection === 'xz' ? {yaw:0,pitch:0} : projection === 'xy' ? {yaw:0,pitch:Math.PI/2} : projection === 'yz' ? {yaw:-Math.PI/2,pitch:0} : DEFAULT_CAMERA;

@@ -66,7 +66,7 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset, onLibrary }: {
         finally { setBusy(false); }
       }}/>
       <div className={styles.section} data-expanded={section === 'upload'}>
-        <button type="button" className={styles.option} style={{ '--item-index': 0 } as CSSProperties} aria-expanded={section === 'upload'} aria-controls={`${panelId}-upload`} onClick={() => { openedByHover.current = false; setSection(current => current === 'upload' ? null : 'upload'); }}><span className={styles.label}>Upload <span aria-hidden="true">⌄</span></span></button>
+        <button type="button" className={styles.option} style={{ '--item-index': 0 } as CSSProperties} aria-expanded={section === 'upload'} aria-controls={`${panelId}-upload`} onClick={() => { openedByHover.current = false; setSection(current => current === 'upload' ? null : 'upload'); }}><span className={styles.label}>Upload</span></button>
         <div id={`${panelId}-upload`} className={styles.submenu} inert={section !== 'upload'} aria-hidden={section !== 'upload'}><div className={styles.subcontent}>
           <button type="button" className={styles.option} style={{ '--item-index': 0 } as CSSProperties} disabled={busy} onClick={() => fileInput.current?.click()}><span className={styles.label}>{busy ? 'Opening…' : 'Choose a book'}</span></button>
           <p className={styles.hint}>TXT · up to 20 MB<br/>PDF · up to 100 MB</p>
@@ -74,7 +74,7 @@ export function ReadingMenu({ fonts, onChange, onUpload, onReset, onLibrary }: {
         </div></div>
       </div>
       <div className={styles.section} data-expanded={section === 'font'}>
-        <button type="button" className={styles.option} style={{ '--item-index': 1 } as CSSProperties} aria-expanded={section === 'font'} aria-controls={`${panelId}-font`} onClick={() => { openedByHover.current = false; setSection(current => current === 'font' ? null : 'font'); }}><span className={styles.label}>Font <span aria-hidden="true">⌄</span></span></button>
+        <button type="button" className={styles.option} style={{ '--item-index': 1 } as CSSProperties} aria-expanded={section === 'font'} aria-controls={`${panelId}-font`} onClick={() => { openedByHover.current = false; setSection(current => current === 'font' ? null : 'font'); }}><span className={styles.label}>Font</span></button>
         <div id={`${panelId}-font`} className={styles.submenu} inert={section !== 'font'} aria-hidden={section !== 'font'}><div className={styles.subcontent}>
       {[{ key: 'english', label: 'English', options: englishFonts }, { key: 'chinese', label: '简体中文', options: chineseFonts }].map((group, groupIndex) =>
         <div role="group" aria-label={`${group.label} font`} key={group.key} className={styles.group}>

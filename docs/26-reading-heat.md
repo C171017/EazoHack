@@ -30,11 +30,11 @@ source text or all graph edges. The server caches this index for the loaded map.
 ## Field and color
 
 In the graph's existing world units, each active leaf contributes a truncated
-spherical Gaussian with sigma 32 and radius 96:
+spherical Gaussian with sigma 20 and radius 60 (37.5% narrower than the initial version):
 
 ```
-K(d) = (exp(-d² / (2 × 32²)) - exp(-4.5)) / (1 - exp(-4.5)), d < 96
-K(d) = 0, d >= 96
+K(d) = (exp(-d² / (2 × 20²)) - exp(-4.5)) / (1 - exp(-4.5)), d < 60
+K(d) = 0, d >= 60
 H(p) = sum over leaves [generationCount × K(distance(p, leaf))]
 ```
 
@@ -68,7 +68,7 @@ translation as graph leaves. Cluster expansion never moves the heat sources.
   an inline result does not erase its generation history. Source-version mismatch
   is explicit. History is browser-local, not aggregated across devices/users.
 
-Local browser stress measurement on 2026-09-06: all 288 leaves at weight 12,
+Initial-radius browser stress measurement on 2026-09-06 (before the radius reduction): all 288 leaves at weight 12,
 1400 × 1000 viewport capped by the renderer. Field build 31.2 ms; 20 measured
 camera redraws after five warm-up draws averaged 0.9 ms, p95 1.2 ms, including
 `gl.finish` and a 1-pixel readback. These are local measurements, not universal

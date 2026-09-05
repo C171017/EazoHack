@@ -13,8 +13,8 @@ import { semanticWindow, toScreen, zoomCentered, zoomLevel } from './semantic-wi
 import { readMap, useMapPages, useMapRequest } from './map-data';
 import { useNodeTransition } from './node-transition';
 import { edgeVisibility, useEdgeTransition } from './edge-transition';
-import { HeatControls, HeatInspector, type ReadingHeatData } from './reading-heat-view';
-import { heatCount, type HeatFilter } from './reading-heat';
+import { HeatInspector, type ReadingHeatData } from './reading-heat-view';
+import { heatCount } from './reading-heat';
 import { buildHeatVolume } from './heat-field';
 import { SpatialHeat } from './spatial-heat';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
@@ -24,12 +24,10 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
   onViewChange:(view:MapView)=>void;onSource:(anchor:SourceAnchor)=>void;
 }) {
   const [size,setSize]=useState({width:0,height:0});
-  const [heatEnabled,setHeatEnabled]=useState(true);
-  const [heatFilter,setHeatFilter]=useState<HeatFilter>('all');
   const [heatSelection,setHeatSelection]=useState<string|null>(null);
   const heatPoints=heat?.points;
-  const heatField=useMemo(()=>heatPoints&&heatEnabled?buildHeatVolume(heatPoints,heatFilter):null,[heatPoints,heatEnabled,heatFilter]);
-  const heatTargets=useMemo(()=>[...(heatPoints??[])].filter(point=>heatCount(point,heatFilter)>0).sort((a,b)=>heatCount(b,heatFilter)-heatCount(a,heatFilter)).slice(0,128),[heatPoints,heatFilter]);
+  const heatField=useMemo(()=>heatPoints?buildHeatVolume(heatPoints,'all'):null,[heatPoints]);
+  const heatTargets=useMemo(()=>[...(heatPoints??[])].filter(point=>heatCount(point,'all')>0).sort((a,b)=>heatCount(b,'all')-heatCount(a,'all')).slice(0,128),[heatPoints]);
   const selectedHeat=heat?.points.find(point=>point.leaf.id===heatSelection);
   // Old checkpoints may contain filters whose controls have been removed.
   // Keep their camera and selection, but always display the whole source.
@@ -38,7 +36,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
     const migrated=view.axisConvention==='z-up-v1'?view:{...view,...orientation(view.projection),axisConvention:'z-up-v1' as const};
     return {...migrated,...confineCamera(migrated),themeFilter:null,roleFilter:null,sourceScope:'book',zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,migrated.zoom)),...(migrated.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!migrated.hierarchyVersion&&migrated.selectedNodeId?.startsWith('h-')?null:migrated.selectedNodeId};
   },[view,graph.graphVersion,graph.version]);
-  const current=useMemo(()=>saved.framing?saved:fitEntries(graph.roots,saved,size,readingProgress,heat?180:0),[saved,graph.roots,size,readingProgress,heat]);
+  const current=useMemo(()=>saved.framing?saved:fitEntries(graph.roots,saved,size,readingProgress),[saved,graph.roots,size,readingProgress]);
   useEffect(()=>{if(!saved.framing&&size.width>0&&size.height>0)onViewChange(current);},[saved.framing,current,size,onViewChange]);
   const previousExpanded=useRef<ReadonlySet<string>>(new Set());
   const [previousLevel,setPreviousLevel]=useState(0),[navigationError,setNavigationError]=useState<string|null>(null);
@@ -76,7 +74,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
   const animatedEdges=useEdgeTransition(edges.data?.links);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
-  const drag=useRef<{id:number;x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;moved:boolean}|null>(null);
+  const drag=useRef<{id:number;mode:'pan'|'orbit';x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;moved:boolean}|null>(null);
   const keyboardOrbit=useRef<MapView|null>(null);
   useEffect(()=>{latest.current={current,size};},[current,size]);
   useEffect(()=>{const f=requestAnimationFrame(()=>setPreviousLevel(level));return()=>cancelAnimationFrame(f);},[level]);
@@ -87,7 +85,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
   },[]);
   useEffect(()=>()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();},[]);
   // Native non-passive listener is required for trackpad pinch (ctrl+wheel).
-  // Plain wheel input is owned exclusively by the origin timeline control.
+  // Flat views use ordinary wheel/trackpad scrolling to pan in screen space.
   useEffect(()=>{
     const element=stage.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
@@ -95,11 +93,14 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
       if(!(event.target instanceof Element)||!event.target.closest('svg,.map-timeline-control'))return;
       event.preventDefault();if(gesture)return;
       const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
-      if(!event.ctrlKey&&!event.metaKey)return;
+      const pinch=event.ctrlKey||event.metaKey;
+      if(!pinch&&(latest.current.current.projection==='3d'||event.target.closest('.map-timeline-control')))return;
       if(frame.current!==null)cancelAnimationFrame(frame.current);
       navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
-      const next=zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size);
+      const next=pinch
+        ?zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size)
+        :{...view,x:view.x-(event.shiftKey&&!event.deltaX?event.deltaY:event.deltaX)*unit,y:view.y-(event.shiftKey&&!event.deltaX?0:event.deltaY)*unit};
       latest.current={current:next,size};onViewChange(next);
     };
     const gestureStart=(event:Event)=>{
@@ -121,7 +122,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
   }
   function settle(from:MapView,target:Pick<MapView,'projection'|'yaw'|'pitch'>) {
     cancelMotion();
-    const finish=fitEntries(windowed.nodes,{...from,...target,...confineCamera(target)},size,readingProgress,heat&&heatEnabled?180:0);
+    const finish=fitEntries(windowed.nodes,{...from,...target,...confineCamera(target)},size,readingProgress);
     const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(finish);return;}
     let start:number|undefined;const animate=(now:number)=>{
@@ -131,7 +132,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
     };frame.current=requestAnimationFrame(animate);
   }
   function finishDrag(){
-    const d=drag.current;drag.current=null;if(!d||!d.moved)return;
+    const d=drag.current;drag.current=null;if(!d||!d.moved||d.mode==='pan')return;
     const target=approachingProjection(d.motion.previous,d.motion.raw);
     // Align on entry; an intentional rotation within an already-flat view
     // should not be undone on release.
@@ -148,7 +149,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
       install({[node.id]:children});
       let depth=0,parent=node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}
       const next={...latest.current.current,zoom:Math.min(ZOOM_POLICY.maxZoom,Math.max(current.zoom,ZOOM_POLICY.step**(depth+1)*1.04)),selectedNodeId:node.id};
-      change(fitEntries(children,next,size,readingProgress,heat&&heatEnabled?180:0));
+      change(fitEntries(children,next,size,readingProgress));
     } catch(error){if(!controller.signal.aborted)setNavigationError(error instanceof Error?error.message:'Could not open this group');}
     finally{if(!controller.signal.aborted)setNavigating(false);}
   }
@@ -167,7 +168,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
     finally{if(!controller.signal.aborted)setNavigating(false);}
   }
   const screen=(p:Point3)=>screenWorld(p,current,size);
-  const obstacles=[...mapObstacles(current,size,0),...(heat?[{x:16,y:size.height-(heatEnabled?200:64),width:Math.min(580,size.width-32),height:heatEnabled?200:64}]:[]),...(heatSelection!==null?[{x:16,y:size.height-630,width:size.width-32,height:430}]:[])];
+  const obstacles=[...mapObstacles(current,size,0),...(heatSelection!==null?[{x:16,y:size.height-494,width:size.width-32,height:430}]:[])];
   const projectedPoints=animated.flatMap(item=>{
     if(!item.position)return [];
     const p=toScreen(item.position,current,size,range,readingProgress);
@@ -188,17 +189,17 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
   }}>
     <div ref={stage} className="map-stage">
       {graph.unplaced>0&&<UnplacedNotes version={graph.version} count={graph.unplaced} onLocate={id=>void locate(id)}/>}
-      {heat&&<HeatControls data={heat} enabled={heatEnabled} onEnabled={enabled=>{setHeatEnabled(enabled);if(!enabled)setHeatSelection(null);}} filter={heatFilter} onFilter={setHeatFilter} onSelect={index=>{change({selectedNodeId:null});setHeatSelection(index);}}/>}
       {heatField&&<SpatialHeat field={heatField} view={current} size={size} readingProgress={readingProgress}/>}
-      <svg style={{position:'relative'}} data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-fit-scale={current.framing?.scale??1} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
-        onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
+      <svg style={{position:'relative'}} data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-x={current.x} data-camera-y={current.y} data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-fit-scale={current.framing?.scale??1} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
+        onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;if(view.projection!=='3d'&&!e.altKey){change({x:view.x+(e.key==='ArrowRight'?-40:e.key==='ArrowLeft'?40:0),y:view.y+(e.key==='ArrowDown'?-40:e.key==='ArrowUp'?40:0)});return;}keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
         onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
         onBlur={()=>{keyboardOrbit.current=null;}}
         onPointerDown={e=>{
-          if(drag.current||(e.target as Element).closest('[data-node-id]')||e.button!==0||e.shiftKey)return;
+          if(drag.current||(e.target as Element).closest('[data-node-id]')||![0,1,2].includes(e.button)||(latest.current.current.projection==='3d'&&(e.button!==0||e.shiftKey)))return;
+          e.preventDefault();
           cancelMotion();keyboardOrbit.current=null;navigation.current?.abort();setNavigating(false);
           const view=latest.current.current;
-          drag.current={id:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),moved:false};
+          drag.current={id:e.pointerId,mode:view.projection!=='3d'&&!e.altKey?'pan':'orbit',x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),moved:false};
           e.currentTarget.setPointerCapture(e.pointerId);
         }}
         onPointerMove={e=>{
@@ -206,25 +207,28 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
           const dx=e.clientX-d.x,dy=e.clientY-d.y;
           if(Math.hypot(dx,dy)<3&&!d.moved)return;
           d.moved=true;
-          // Integrate deltas from the last event so reversing at the pole
-          // responds immediately, without consuming an overshoot dead zone.
-          d.motion=advanceOrbit(d.motion,e.clientX-d.lastX,e.clientY-d.lastY);
-          d.latest={...d.view,projection:'3d',...d.motion.display};
+          if(d.mode==='pan')d.latest={...d.view,x:d.view.x+dx,y:d.view.y+dy};
+          else {
+            // Integrate incremental deltas so reversal at a pole responds immediately.
+            d.motion=advanceOrbit(d.motion,e.clientX-d.lastX,e.clientY-d.lastY);
+            d.latest={...d.view,projection:'3d',...d.motion.display};
+          }
           d.lastX=e.clientX;d.lastY=e.clientY;
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
-        onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to expand or group ideas. Drag to orbit within the three grid fences. Panning is disabled. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
+        onContextMenu={e=>{if(current.projection!=='3d')e.preventDefault();}}
+        onPointerUp={e=>{if(drag.current?.id!==e.pointerId)return;finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
+        <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to expand or group ideas. In flat views, scroll with two fingers or drag to pan; mouse wheel scrolls vertically and Shift-wheel horizontally. Alt-drag or Alt-arrow keys orbit; in 3D, drag to orbit within the three grid fences. Arrow keys pan flat views. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#ADB5C0"/></marker></defs>
         <MapGrid size={size} projection={current.projection} screen={screen} modern={!!graph.axisVersion} readingProgress={readingProgress}/>
-        {heat&&heatEnabled&&<g data-heat-targets>{heatTargets.map(point=>{
+        {heat&&<g data-heat-targets>{heatTargets.map(point=>{
           const p=toScreen(point.leaf.position,current,size,[0,1],readingProgress);
           if(p.x<0||p.y<0||p.x>size.width||p.y>size.height)return null;
           const open=()=>{change({selectedNodeId:null});setHeatSelection(point.leaf.id);};
           return <circle key={point.leaf.id} data-heat-leaf={point.leaf.id} cx={p.x} cy={p.y} r="16" fill="transparent" role="button" tabIndex={0}
-            aria-label={`${point.leaf.label}: ${heatCount(point,heatFilter)} reading footprints`} style={{cursor:'pointer'}}
+            aria-label={`${point.leaf.label}: ${heatCount(point,'all')} reading footprints`} style={{cursor:'pointer'}}
             onPointerDown={e=>e.stopPropagation()} onClick={open} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();open();}}}>
-            <title>{point.leaf.label} · {heatCount(point,heatFilter)} generations</title>
+            <title>{point.leaf.label} · {heatCount(point,'all')} generations</title>
           </circle>;
         })}</g>}
         <g aria-hidden="true" pointerEvents="none">{animatedEdges.map(({link:edge,opacity})=>{const a=points.find(p=>p.id===edge.source),b=points.find(p=>p.id===edge.target);return a&&b?<g key={edge.id} opacity={edgeVisibility(opacity,a,b)}><line data-edge-id={edge.id} data-edge-source={edge.source} data-edge-target={edge.target} x1={a.anchorX} y1={a.anchorY} x2={b.anchorX} y2={b.anchorY} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line></g>:null;})}</g>
@@ -244,8 +248,8 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
       {(data.error||windowed.wanted.length>0)&&<div className="map-layer-status" aria-live="polite">{data.error?<><span>{data.error}</span> <button onClick={data.retry}>Retry loading</button></>:windowed.wanted.length?'Opening this part of the book…':null}</div>}
     </div>
     {restoredPath.error&&<p role="alert">{restoredPath.error} <button onClick={restoredPath.retry}>Retry</button></p>}{navigationError&&<p role="alert">{navigationError}</p>}{navigating&&<p role="status">Finding this note…</p>}
-    {heat&&heatEnabled&&selectedHeat&&!current.selectedNodeId&&<HeatInspector key={selectedHeat.leaf.id} point={selectedHeat} filter={heatFilter} onClose={()=>setHeatSelection(null)} onSource={source} onLocate={id=>{setHeatSelection(null);void locate(id);}}/>}
-    {current.selectedNodeId&&<section className="map-detail" style={heat?{bottom:heatEnabled?214:80}:undefined} aria-label={selectedEntry?.kind==='cluster'?'Selected group':'Selected occurrence'}>
+    {heat&&selectedHeat&&!current.selectedNodeId&&<HeatInspector key={selectedHeat.leaf.id} point={selectedHeat} filter="all" onClose={()=>setHeatSelection(null)} onSource={source} onLocate={id=>{setHeatSelection(null);void locate(id);}}/>}
+    {current.selectedNodeId&&<section className="map-detail" aria-label={selectedEntry?.kind==='cluster'?'Selected group':'Selected occurrence'}>
       <div className="map-title-row"><div><small>{selectedEntry?.kind==='cluster'?`${selectedEntry.leafCount} notes · generated summary`:selected?.node.sourceLabel??'Source occurrence'}</small><h3>{selectedEntry?.label??selected?.node.label??'Loading note…'}</h3></div><button aria-label="Close node details" onClick={()=>change({selectedNodeId:null})}>×</button></div>
       {selectedEntry?.kind==='cluster'?<><p>{selectedEntry.summary}</p><button className="map-source-button" onClick={()=>void openCluster(selectedEntry)}>Explore this group ↗</button><small> Grouping summarizes its children; it is not a new source passage.</small>{graph.axisVersion&&selectedEntry.bounds&&<p className="map-axis-range">Child range · Reasoning depth {axisRange(selectedEntry.bounds.min.x*4,selectedEntry.bounds.max.x*4)} · Generality {axisRange(selectedEntry.bounds.min.y,selectedEntry.bounds.max.y)}. The anchor represents a child position. Badges may shift slightly for readability; their connecting dots retain the exact position.</p>}</>:detail.error?<p role="alert">{detail.error} <button onClick={detail.retry}>Retry</button></p>:selected?<div className="map-detail-body"><div><blockquote>{selected.anchors.find(a=>a.id===selected.node.anchorIds[0])?.quote}</blockquote>{selected.node.axisAssessment?<p>X · Reasoning depth: {axisValue(selected.node.axisAssessment.reasoningDepth.value)}<br/>Y · Generality: {axisValue(selected.node.axisAssessment.generality.value)}</p>:<p>Legacy structure: {selected.node.structuralLevel===null?'Unclassified':LEVELS[selected.node.structuralLevel]}</p>}</div><div><p>{selected.node.summary}</p>{selected.node.anchorIds.map((id,i)=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>{i?'Additional evidence':'Read this passage'} ↗ </button>:null;})}
         <p>Shared concept: {selected.identity.label}</p><div className="map-related">{selected.identity.occurrenceIds.filter(id=>id!==selected.node.id).map(id=><button key={id} onClick={()=>void locate(id)}>{selected.neighbours.find(n=>n.id===id)?.label} ↗</button>)}</div>
