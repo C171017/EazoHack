@@ -24,6 +24,8 @@ test('real Republic page remains extractable with standard fonts and valid geome
     assert.match(repaired.text,/gentle to friends/);
     const prepared=prepareDocumentPage(300,raw,repaired);
     assert.notEqual(prepared.status,'ocr-deferred');
+    const preface=await doc.getPage(11),prefaceText=await preface.getTextContent();
+    assert.equal(hasAmbiguousLayout(extractNative(prefaceText,preface).fragments),false,'Variable OCR font sizes on one line must not create false gutters');
   } finally {await task.destroy();}
 });
 test('ordinary word runs across a full line are not mistaken for separate columns',()=>{

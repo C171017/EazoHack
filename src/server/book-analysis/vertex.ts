@@ -19,7 +19,9 @@ export function vertexSchema(schema: z.ZodType): unknown {
       if (actual.length === 1 && actual.length !== members.length) return { ...(convert(actual[0]) as object), nullable: true };
     }
     return Object.fromEntries(Object.entries(value)
-      .filter(([key]) => !['$schema', 'additionalProperties', 'minLength', 'maxLength'].includes(key))
+      // Large bounded arrays can exceed Vertex's schema grammar complexity budget.
+      // Enforce those upper bounds locally instead of compiling hundreds of states.
+      .filter(([key, entry]) => !['$schema', 'additionalProperties', 'minLength', 'maxLength'].includes(key) && !(key === 'maxItems' && typeof entry === 'number' && entry > 50))
       .map(([key, entry]) => [key, key === 'type' && typeof entry === 'string' ? entry.toUpperCase() : convert(entry)]));
   };
   return convert(z.toJSONSchema(schema));
@@ -42,7 +44,10 @@ export const generateStructured: Generate = async (system, prompt, schema, maxOu
       generationConfig: { responseMimeType: 'application/json', responseSchema: vertexSchema(schema), maxOutputTokens, thinkingConfig: { thinkingLevel: 'LOW' } },
     }),
   });
-  if (!response.ok) throw new ModelRequestError(`Vertex request failed (${response.status}).`, response.status === 429 || response.status >= 500);
+  if (!response.ok) {
+    const error = await response.json().catch(() => ({})) as { error?: { message?: string } };
+    throw new ModelRequestError(`Vertex request failed (${response.status}): ${error.error?.message?.slice(0, 1600) ?? 'No error detail.'}`, response.status === 429 || response.status >= 500);
+  }
   const body = await response.json() as {
     modelVersion?: string; responseId?: string; usageMetadata?: Record<string, number>;
     candidates?: { finishReason?: string; content?: { parts?: { text?: string; thought?: boolean }[] } }[];

@@ -1,5 +1,7 @@
 # 十小时范围、演示与验收
 
+> 2026-09-05 新增后续验收：[多层节点与语义缩放](14-semantic-zoom-hierarchy.md)。需在 M1/M2 MacBook Air 和同档 Windows 集显笔记本测量有界视口渲染、捏合阈值往返过渡、密集子树加载及缓存；验证拖动不自动缩放、全部已接受叶节点仍可达。数量、阈值及性能通过值待实测定值；本轮仅文档更新。
+
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
 
 

@@ -1,0 +1,35 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "e-9-2",
+        "reason": "The relation direction is backwards: the commentary in n-9-4 evaluates and challenges the Divided Line / dialectical theory (n-9-2), but the edge places n-9-2 as source challenging target n-9-4."
+      }
+    ],
+    "notes": "All target nodes accurately reflect the cited evidence. Edge e-9-2 was rejected due to inverted directionality between the concept being analyzed and the commentary challenging it."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2tObauO4EYyOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 56582,
+    "candidatesTokenCount": 133,
+    "totalTokenCount": 56715,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 56582
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 133
+      }
+    ]
+  },
+  "durationMs": 4954,
+  "requestHash": "6fd4656b50285edb3902a3ca454d7e3705bd69fdb432c5a751024a7bc86f3789"
+}

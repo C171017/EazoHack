@@ -1,0 +1,35 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "e-21-3",
+        "reason": "Reversed edge direction. Node n-21-5 (Socrates' Aporia and Self-Blame) challenges the hasty conclusion reached in n-21-3 (Superior Profit of Justice); n-21-3 does not challenge Socrates' realization of aporia."
+      }
+    ],
+    "notes": "All target nodes are solidly grounded in the cited dialogue and commentary passages, with appropriate attribution, level, and thematic categorization. Target edges correctly capture structural, logical, and cross-chunk relationships, with the exception of e-21-3, which reversed the direction of challenge between Socrates' methodological self-critique/aporia and the preceding conclusion regarding the profitability of justice."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "4dObaumNCIyOvdAP8N7L2Ag",
+  "usage": {
+    "promptTokenCount": 47316,
+    "candidatesTokenCount": 187,
+    "totalTokenCount": 47503,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47316
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 187
+      }
+    ]
+  },
+  "durationMs": 11798,
+  "requestHash": "442d7b855b3fe233b98784dc21b449f29359f47523fd19687052c2cb06e4ae22"
+}

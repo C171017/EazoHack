@@ -1,0 +1,203 @@
+{
+  "testedAt": "2026-09-05T08:36:53.660055+00:00",
+  "model": "gemini-3.8-flash",
+  "graphVersion": "text-graph-v1-19d6e62b3ceb-319034f3",
+  "sourceBytes": 1408419,
+  "sourceCharacters": 1408266,
+  "sourceSHA256": "19d6e62b3cebec70f7704700655052d906f02be75bcc9b3b2140ba5b2df66883",
+  "completedChunks": 46,
+  "totalChunks": 46,
+  "nodes": 288,
+  "identities": 77,
+  "edges": 213,
+  "anchors": 761,
+  "themes": [
+    "Editorial, Textual, and Publishing Context",
+    "The Nature and Definition of Justice",
+    "Founding and Architecture of the Ideal City",
+    "Education, Aesthetics, and Cultural Purgation",
+    "Psychology, Soul Tripartition, and Personal Virtue",
+    "Epistemology, Dialectic, and the Metaphysics of the Good",
+    "Regime Decline, Tyranny, and Eschatological Justice"
+  ],
+  "sourceRoles": {
+    "paratext": 15,
+    "commentary": 119,
+    "dialogue": 154
+  },
+  "levels": {
+    "0": 10,
+    "1": 99,
+    "3": 103,
+    "2": 65,
+    "4": 11
+  },
+  "rejectedNodes": 5,
+  "rejectedEdgesIncludingIncidentLinks": 17,
+  "recordedPipelineResponseAttempts": 63,
+  "recordedPipelineUsageIncludingRetries": {
+    "promptTokenCount": 1664971,
+    "candidatesTokenCount": 100462,
+    "totalTokenCount": 1765433
+  },
+  "usageNote": "Recorded pipeline responses only; excludes small manual schema diagnostic requests and failed HTTP requests with no usage response. Token counts are not a price quote.",
+  "reviews": [
+    {
+      "review": "review-1.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [
+        {
+          "id": "cross-1",
+          "reason": "Reversed edge direction or inappropriate relation type: n-4-1 is commentary reflecting on the dialogue, so n-4-1 does not develop the dialogue node n-19-3; rather n-19-3 exemplifies or provides the primary textual source for n-4-1."
+        }
+      ],
+      "notes": "Target nodes correctly capture their respective passages and reflect appropriate levels, roles, and themes. Edge cross-1 connects a commentary summary to the dialogue passage it discusses, mischaracterizing the relationship as 'develops' from commentary to original dialogue."
+    },
+    {
+      "review": "review-10.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [],
+      "notes": "All target nodes accurately reflect the editorial commentary, index apparatus, and transcriber paratext from the cited passages with appropriate source roles, levels, and themes. The support edges between the sub-analyses of Hellenic/innovative features and the dual composition summary are grounded in the text."
+    },
+    {
+      "review": "review-2.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [
+        {
+          "id": "e-9-2",
+          "reason": "The relation direction is backwards: the commentary in n-9-4 evaluates and challenges the Divided Line / dialectical theory (n-9-2), but the edge places n-9-2 as source challenging target n-9-4."
+        }
+      ],
+      "notes": "All target nodes accurately reflect the cited evidence. Edge e-9-2 was rejected due to inverted directionality between the concept being analyzed and the commentary challenging it."
+    },
+    {
+      "review": "review-3.json",
+      "rejectedNodes": [
+        {
+          "id": "n-13-2",
+          "reason": "The sourceRole is marked as commentary while speaker is set to Socrates; moreover, the passage is Jowett's summary of the dialogue rather than an editorial commentary speaker attribution, creating an inconsistent and overconfident attribution."
+        },
+        {
+          "id": "n-13-3",
+          "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+        },
+        {
+          "id": "n-13-4",
+          "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+        },
+        {
+          "id": "n-13-5",
+          "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+        },
+        {
+          "id": "n-13-6",
+          "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+        }
+      ],
+      "rejectedEdges": [
+        {
+          "id": "e-13-1",
+          "reason": "Depends on rejected nodes n-13-2 and n-13-3."
+        },
+        {
+          "id": "e-13-2",
+          "reason": "Depends on rejected nodes n-13-3 and n-13-4."
+        },
+        {
+          "id": "e-13-3",
+          "reason": "Depends on rejected nodes n-13-5 and n-13-6."
+        },
+        {
+          "id": "e-13-4",
+          "reason": "Depends on rejected node n-13-2."
+        }
+      ],
+      "notes": "Nodes n-13-2 through n-13-6 incorrectly assign 'Socrates' as speaker while specifying the role as 'commentary' on passages from Jowett's introductory analysis/summary of Republic X."
+    },
+    {
+      "review": "review-4.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [
+        {
+          "id": "e-16-1",
+          "reason": "The text for n-16-2 concerns infant mortality in foundling systems vs. natural family rearing, while n-16-3 critiques Plato's mistaken admiration of Sparta's suppression of individuality. While both are critical of Plato's institutions, neither passage establishes a grounding or 'supports' relation between them."
+        },
+        {
+          "id": "e-17-1",
+          "reason": "Node n-17-1 deals with simplicity and prevention in medicine and law, which does not directly develop into or form the basis of the metaphysical dialectic and the idea of the good in n-17-2 (as confirmed by the cited passage p-500166, which refers to training in music and gymnastic, not medicine and law)."
+        }
+      ],
+      "notes": "Reviewed target nodes and edges against cited evidence. Nodes accurately reflect their cited texts, structural levels, and thematic groupings. Edge e-16-1 was rejected because the two critiques are topical parallels rather than an evidential or supportive relation. Edge e-17-1 was rejected because medicine/law simplicity does not develop dialectic/Idea of Good."
+    },
+    {
+      "review": "review-5.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [
+        {
+          "id": "e-21-3",
+          "reason": "Reversed edge direction. Node n-21-5 (Socrates' Aporia and Self-Blame) challenges the hasty conclusion reached in n-21-3 (Superior Profit of Justice); n-21-3 does not challenge Socrates' realization of aporia."
+        }
+      ],
+      "notes": "All target nodes are solidly grounded in the cited dialogue and commentary passages, with appropriate attribution, level, and thematic categorization. Target edges correctly capture structural, logical, and cross-chunk relationships, with the exception of e-21-3, which reversed the direction of challenge between Socrates' methodological self-critique/aporia and the preceding conclusion regarding the profitability of justice."
+    },
+    {
+      "review": "review-6.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [],
+      "notes": "All target nodes and edges were verified against the provided passages and context. Textual grounding, attributions, structural levels, and relation typings are accurate."
+    },
+    {
+      "review": "review-7.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [
+        {
+          "id": "e-32-3",
+          "reason": "Reversed relation direction: n-32-4 (the parable of the ship) is introduced by Socrates to explain and support Adeimantus' observation in n-32-3 (the public indictment that philosophers seem useless), but the relationship in the dialogue is Socrates addressing and explaining Adeimantus' objection; more specifically, as categorized, n-32-4 answers or challenges the claim of roguery/uselessness being inherent to the philosopher, or in the current edge scheme Source n-32-4 -> Target n-32-3 as 'supports' misrepresents the dialectical flow where Adeimantus' challenge motivates Socrates' parable."
+        },
+        {
+          "id": "e-34-2",
+          "reason": "Reversed or misplaced edge relation: n-34-3 introduces the four faculties of the soul, building upon the contrast of reason and understanding in n-34-2, so n-34-2 develops into n-34-3 rather than n-34-3 developing n-34-2."
+        },
+        {
+          "id": "cross-26",
+          "reason": "Reversed or inappropriate edge type across roles: dialogue passage n-31-4 is claimed to 'support' Jowett's editorial commentary n-8-4, whereas the commentary node analyzes/summarizes the dialogue."
+        },
+        {
+          "id": "cross-28",
+          "reason": "Incorrect edge relation type: n-33-5 (dialogue analogy of the sun) does not 'define' n-9-1 (commentary summary of the sun analogy)."
+        },
+        {
+          "id": "cross-29",
+          "reason": "Incorrect edge relation type: n-33-6 (dialogue presentation of the divided line) does not 'define' n-9-2 (commentary summary of the divided line)."
+        }
+      ],
+      "notes": "Reviewed candidate nodes and edges against cited text passages. The substantive textual summaries and attributions of the nodes are well grounded in the Platonic text. Several cross-chunk edges connecting dialogue nodes to editorial commentary summaries incorrectly used 'defines' or 'supports' across ontological source roles, and internal developmental directions on the Line faculties were inverted."
+    },
+    {
+      "review": "review-8.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [],
+      "notes": "All target nodes and edges have been verified against their cited evidence and structural roles. Summaries accurately reflect the text without overstatement, speaker attribution to Socrates in dialogue is consistent with the passages, structural levels (from concrete detail/level 0 up to organizing framework/level 4) are plausible and well-supported, and edge types/directions follow sound evidential support and development."
+    },
+    {
+      "review": "review-9.json",
+      "rejectedNodes": [],
+      "rejectedEdges": [
+        {
+          "id": "e-44-4",
+          "reason": "Reversed direction or invalid dependency: n-44-5 is a paratextual index cataloguing guardian requirements, whereas n-44-4 is an overarching editorial essay synthesizing justice. An index entry does not develop an overarching synthetic argument; if anything, the general concept develops into or defines the roles."
+        },
+        {
+          "id": "e-45-2",
+          "reason": "Reversed or unsupported edge: n-45-2 and n-45-4 are both disparate index entries; an index catalog of citations on 'Philosopher' does not support another index catalog on 'Ruler' merely through co-reference to philosopher-kings."
+        },
+        {
+          "id": "e-45-3",
+          "reason": "Reversed or unsupported edge: n-45-5 is an editorial essay on psychology, whereas n-45-6 is a raw index entry listing occurrences of 'State'. An analytical commentary does not establish a directed 'supports' relation to a mere index listing."
+        }
+      ],
+      "notes": "Reviewed all 20 target nodes and 15 target edges across chunks 040 to 045. Target nodes accurately reflect their cited textual passages, levels, and source roles (distinguishing dialogue, paratextual indices, and editorial commentary). Edges connecting paratextual index lists as direct conceptual supports or developments of other entries were rejected due to unsupported directional structure between reference list entries and synthesis essays."
+    }
+  ],
+  "interpretationStatus": "Model-reviewed selective outline, not human-verified or exhaustive."
+}

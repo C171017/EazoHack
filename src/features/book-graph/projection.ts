@@ -30,13 +30,16 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string}
   const boxes: {x:number;y:number;width:number;height:number}[] = [];
   return points.map(p => {
     const w = Math.min(210,Math.max(100,p.label.length*6.1+18));
-    const x = Math.max(8,Math.min(width-w-8,p.x+13));
-    let y = Math.max(12,Math.min(height-30,p.y-12));
-    for(let i=0;i<40;i++) {
-      if(!boxes.some(b=>x < b.x+b.width+4 && x+w+4 > b.x && y < b.y+b.height+4 && y+26+4 > b.y)) break;
-      y += 30;
-      if(y>height-30) y=12;
-    }
+    const preferredX = Math.max(8,Math.min(width-w-8,p.x+13));
+    const preferredY = Math.max(12,Math.min(height-30,p.y-12));
+    const columns = Math.max(1,Math.floor((width-16)/218));
+    // Find the nearest free label slot anywhere in the scene. Only the labels
+    // move; source-derived points and the graph's XYZ values remain untouched.
+    const xs = [...new Set([preferredX,Math.max(8,Math.min(width-w-8,p.x-w-13)),...Array.from({length:columns},(_,i)=>8+i*218)])];
+    const ys = [...new Set([preferredY,...Array.from({length:Math.max(1,Math.floor((height-24)/30))},(_,i)=>12+i*30)])];
+    const slots=xs.flatMap(x=>ys.map(y=>({x,y,score:(x-preferredX)**2+(y-preferredY)**2}))).sort((a,b)=>a.score-b.score);
+    const slot=slots.find(({x,y})=>!boxes.some(b=>x < b.x+b.width+4 && x+w+4 > b.x && y < b.y+b.height+4 && y+26+4 > b.y));
+    const {x,y}=slot??{x:preferredX,y:preferredY};
     boxes.push({x,y,width:w,height:26});
     return {...p,labelX:x,labelY:y,width:w};
   });

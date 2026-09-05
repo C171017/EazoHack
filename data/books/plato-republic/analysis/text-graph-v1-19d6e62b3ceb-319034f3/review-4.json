@@ -1,0 +1,39 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "e-16-1",
+        "reason": "The text for n-16-2 concerns infant mortality in foundling systems vs. natural family rearing, while n-16-3 critiques Plato's mistaken admiration of Sparta's suppression of individuality. While both are critical of Plato's institutions, neither passage establishes a grounding or 'supports' relation between them."
+      },
+      {
+        "id": "e-17-1",
+        "reason": "Node n-17-1 deals with simplicity and prevention in medicine and law, which does not directly develop into or form the basis of the metaphysical dialectic and the idea of the good in n-17-2 (as confirmed by the cited passage p-500166, which refers to training in music and gymnastic, not medicine and law)."
+      }
+    ],
+    "notes": "Reviewed target nodes and edges against cited evidence. Nodes accurately reflect their cited texts, structural levels, and thematic groupings. Edge e-16-1 was rejected because the two critiques are topical parallels rather than an evidential or supportive relation. Edge e-17-1 was rejected because medicine/law simplicity does not develop dialectic/Idea of Good."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "4dObaradCduTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 42429,
+    "candidatesTokenCount": 290,
+    "totalTokenCount": 42719,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 42429
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 290
+      }
+    ]
+  },
+  "durationMs": 5287,
+  "requestHash": "bb08ef3df34e9168ef84ae5dcd9f63114fcbe3a377ddefbae1e5c29c5308a596"
+}

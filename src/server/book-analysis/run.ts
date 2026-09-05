@@ -1,9 +1,9 @@
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, rename, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, rename, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { z } from 'zod';
-import { ExtractSchema, PROMPT_VERSION, ReviewSchema, SynthesisSchema, type Candidate, type CandidateEdge, type Generate, type ModelReply, type Review } from './contracts';
-import { assembleGraph, validateSynthesis } from './graph';
+import { ExtractSchema, IdentityRepairSchema, PROMPT_VERSION, ReviewSchema, SynthesisSchema, type Candidate, type CandidateEdge, type Generate, type ModelReply, type Review } from './contracts';
+import { assembleGraph, missingIdentityNodes, validateSynthesis, validateSynthesisForRepair } from './graph';
 import { extractionPrompt, reviewPrompt, synthesisPrompt, SYSTEM } from './prompts';
 import { prepareText, validateExtraction } from './source';
 import { ModelRequestError } from './vertex';
@@ -43,12 +43,22 @@ export async function analyzeText(input: {
     const cached = await readJson(file) as ModelReply | null;
     const requestHash = createHash('sha256').update(JSON.stringify({ system: SYSTEM, prompt, schema: z.toJSONSchema(schema), tokens, model: input.model })).digest('hex');
     const invalidated = changedChunks.has(key) || changedChunks.size > 0 && !key.startsWith('chunk-');
-    if (cached && !invalidated && (!cached.requestHash || cached.requestHash === requestHash)) {
+    if (cached && !invalidated && cached.requestHash === requestHash) {
       if (cached.model !== input.model) throw new Error('Checkpoint model mismatch.');
       const value = validate(schema.parse(cached.value));
       cached.requestHash = requestHash;
       await writeJson(file, cached);
       replies.push({ key, reply: cached }); log(`${key}: restored`); return value;
+    }
+    // A complete provider reply may survive an interrupted write or a stricter
+    // prior validator. Revalidate matching attempts before spending another call.
+    const attempts = await readdir(path.join(root, 'attempts')).catch(() => [] as string[]);
+    for (const name of attempts.filter(n => n.startsWith(`${key}-`)).sort().reverse()) {
+      const reply = await readJson(path.join(root, 'attempts', name)) as ModelReply;
+      if (reply.requestHash !== requestHash || reply.model !== input.model || invalidated) continue;
+      let value: T;
+      try { value = validate(schema.parse(reply.value)); } catch { continue; }
+      await writeJson(file, reply); replies.push({ key, reply }); log(`${key}: recovered validated response`); return value;
     }
     let failure = '';
     for (let attempt = 1; attempt <= 3; attempt++) {
@@ -88,7 +98,22 @@ export async function analyzeText(input: {
     if (!nodes.length) throw new Error('No meaningful occurrences extracted.');
     const edges: CandidateEdge[] = extracted.flatMap((value, i) => value.edges.map((e, j) => ({ id: `e-${i + 1}-${j + 1}`, source: `n-${i + 1}-${e.sourceIndex + 1}`, target: `n-${i + 1}-${e.targetIndex + 1}`, type: e.type, rationale: e.rationale, passageIds: [...new Set(e.passageIds)] })));
     await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'running', phase: 'synthesizing', completedChunks: chunks.length });
-    const synthesis = await call('synthesis', synthesisPrompt(nodes, passages), SynthesisSchema, v => validateSynthesis(v, nodes), 24_576);
+    const draft = await call('synthesis', synthesisPrompt(nodes, passages), SynthesisSchema, v => validateSynthesisForRepair(v, nodes), 24_576);
+    const synthesis = structuredClone(draft);
+    const missing = missingIdentityNodes(synthesis, nodes);
+    if (missing.length) {
+      const repair = await call('identity-repair', `Assign EVERY target occurrence to one existing shared identity by its zero-based index, or use null to keep a separate identity when merging is not justified. Return exactly one assignment per target node. Never change other occurrences.\nTARGETS:\n${JSON.stringify(missing.map(n => ({ ...n, evidence: n.passageIds.map(id => passages.get(id)!.text) })))}\nEXISTING IDENTITIES:\n${JSON.stringify(synthesis.identities.map((i, index) => ({ index, label: i.label, members: nodes.filter(n => i.nodeIds.includes(n.id)).map(n => ({ label: n.label, summary: n.summary, sourceRole: n.sourceRole })) })))}`, IdentityRepairSchema, value => {
+        const ids = value.assignments.map(a => a.nodeId);
+        if (ids.length !== missing.length || new Set(ids).size !== missing.length || ids.some(id => !missing.some(n => n.id === id)) || value.assignments.some(a => a.identityIndex !== null && !synthesis.identities[a.identityIndex])) throw new Error('Identity repair must assign each missing target exactly once to a valid identity index or null.');
+        return value;
+      });
+      for (const assignment of repair.assignments) {
+        if (assignment.identityIndex === null) synthesis.identities.push({ label: missing.find(n => n.id === assignment.nodeId)!.identityLabel, nodeIds: [assignment.nodeId] });
+        else synthesis.identities[assignment.identityIndex].nodeIds.push(assignment.nodeId);
+      }
+    }
+    validateSynthesis(synthesis, nodes);
+    await writeJson(path.join(root, 'synthesis-resolved.json'), synthesis);
     for (const [index, e] of synthesis.crossEdges.entries()) {
       if (edges.some(existing => existing.source === e.source && existing.target === e.target && existing.type === e.type)) continue;
       edges.push({ ...e, id: `cross-${index + 1}`, passageIds: [...new Set(nodes.filter(n => n.id === e.source || n.id === e.target).flatMap(n => n.passageIds))] });

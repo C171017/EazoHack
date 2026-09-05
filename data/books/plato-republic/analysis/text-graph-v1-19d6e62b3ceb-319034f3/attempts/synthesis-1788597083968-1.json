@@ -1,0 +1,1116 @@
+{
+  "value": {
+    "themes": [
+      {
+        "label": "Paratextual Apparatus, Editorial History, and Critical Frameworks",
+        "rationale": "Encompasses the modern editorial apparatus, translation notes, paratextual front-matter and end-matter, structural indexes, and historiographical reflections evaluating the Republic against later philosophy and political theory.",
+        "nodeIds": [
+          "n-1-1",
+          "n-1-2",
+          "n-2-1",
+          "n-2-2",
+          "n-2-3",
+          "n-2-4",
+          "n-3-1",
+          "n-3-3",
+          "n-3-4",
+          "n-9-3",
+          "n-9-4",
+          "n-10-5",
+          "n-11-6",
+          "n-12-1",
+          "n-14-5",
+          "n-14-6",
+          "n-14-7",
+          "n-15-1",
+          "n-17-4",
+          "n-17-5",
+          "n-17-6",
+          "n-17-7",
+          "n-18-1",
+          "n-18-2",
+          "n-18-3",
+          "n-18-4",
+          "n-18-5",
+          "n-18-6",
+          "n-18-7",
+          "n-18-8",
+          "n-21-4",
+          "n-43-1",
+          "n-43-2",
+          "n-43-3",
+          "n-43-4",
+          "n-44-1",
+          "n-44-2",
+          "n-44-3",
+          "n-44-4",
+          "n-44-5",
+          "n-44-6",
+          "n-45-1",
+          "n-45-2",
+          "n-45-3",
+          "n-45-4",
+          "n-45-5",
+          "n-45-6",
+          "n-46-1",
+          "n-46-2",
+          "n-46-3",
+          "n-46-4",
+          "n-46-5"
+        ]
+      },
+      {
+        "label": "The Nature of Justice, Moral Motivation, and Traditional Ethics",
+        "rationale": "Focuses on the definitions of justice in Book I and Book II, the challenge of the Sophists, traditional Greek morality, Glaucon and Adeimantus's reformulation, and the demand to defend justice in itself apart from consequences.",
+        "nodeIds": [
+          "n-3-2",
+          "n-3-6",
+          "n-4-1",
+          "n-4-3",
+          "n-4-4",
+          "n-4-5",
+          "n-4-6",
+          "n-4-7",
+          "n-5-1",
+          "n-7-1",
+          "n-19-1",
+          "n-19-2",
+          "n-19-3",
+          "n-19-4",
+          "n-19-5",
+          "n-19-6",
+          "n-19-7",
+          "n-20-1",
+          "n-20-3",
+          "n-20-4",
+          "n-20-5",
+          "n-21-1",
+          "n-21-2",
+          "n-21-3",
+          "n-21-5",
+          "n-22-1",
+          "n-22-2",
+          "n-22-3",
+          "n-22-4",
+          "n-22-5"
+        ]
+      },
+      {
+        "label": "Construction of the Polis, Civic Specialization, and Class Structure",
+        "rationale": "Covers the origin of human association, economic division of labor, the shift to the luxurious state, the guardian class, the Noble Lie, and the radical institutional arrangements of communism and gender equality.",
+        "nodeIds": [
+          "n-3-5",
+          "n-5-2",
+          "n-5-3",
+          "n-5-4",
+          "n-6-3",
+          "n-6-4",
+          "n-6-6",
+          "n-7-5",
+          "n-8-1",
+          "n-8-2",
+          "n-15-2",
+          "n-15-3",
+          "n-15-4",
+          "n-15-5",
+          "n-15-6",
+          "n-15-7",
+          "n-16-1",
+          "n-16-2",
+          "n-16-3",
+          "n-22-6",
+          "n-22-7",
+          "n-22-8",
+          "n-23-1",
+          "n-23-2",
+          "n-26-1",
+          "n-26-3",
+          "n-26-4",
+          "n-26-5",
+          "n-27-1",
+          "n-27-2",
+          "n-29-1",
+          "n-29-2",
+          "n-29-3",
+          "n-29-4",
+          "n-29-5",
+          "n-29-6",
+          "n-30-1",
+          "n-30-2",
+          "n-36-6"
+        ]
+      },
+      {
+        "label": "Civic Education, Mimesis, and Cultural Purification",
+        "rationale": "Addresses the early education of citizens, the strict censorship of traditional mythology and theology, the regulation of musical styles and poetry, and the bodily discipline of gymnastic and medicine.",
+        "nodeIds": [
+          "n-4-2",
+          "n-5-5",
+          "n-5-6",
+          "n-5-7",
+          "n-5-8",
+          "n-6-1",
+          "n-6-5",
+          "n-6-7",
+          "n-13-7",
+          "n-14-1",
+          "n-14-2",
+          "n-16-7",
+          "n-17-1",
+          "n-20-2",
+          "n-23-4",
+          "n-23-5",
+          "n-23-6",
+          "n-24-1",
+          "n-24-2",
+          "n-24-3",
+          "n-24-4",
+          "n-24-5",
+          "n-24-6",
+          "n-25-1",
+          "n-25-2",
+          "n-25-3",
+          "n-25-4",
+          "n-25-5",
+          "n-25-6",
+          "n-26-2",
+          "n-27-3",
+          "n-41-1",
+          "n-41-3",
+          "n-41-4",
+          "n-41-6"
+        ]
+      },
+      {
+        "label": "Epistemology, Metaphysics, and the Philosopher-King",
+        "rationale": "Details the ascent from opinion to knowledge, the Line, Cave, and Sun allegories, the higher education in mathematical sciences and dialectic, and the role of the Idea of the Good.",
+        "nodeIds": [
+          "n-3-7",
+          "n-8-3",
+          "n-8-4",
+          "n-8-5",
+          "n-8-6",
+          "n-8-7",
+          "n-9-1",
+          "n-9-2",
+          "n-9-5",
+          "n-9-6",
+          "n-10-1",
+          "n-10-2",
+          "n-10-3",
+          "n-10-4",
+          "n-10-6",
+          "n-10-7",
+          "n-16-4",
+          "n-16-6",
+          "n-17-2",
+          "n-17-3",
+          "n-30-3",
+          "n-30-4",
+          "n-30-5",
+          "n-30-6",
+          "n-31-1",
+          "n-31-2",
+          "n-31-3",
+          "n-31-4",
+          "n-31-5",
+          "n-31-6",
+          "n-31-7",
+          "n-32-1",
+          "n-32-2",
+          "n-32-3",
+          "n-32-4",
+          "n-32-5",
+          "n-32-6",
+          "n-32-7",
+          "n-32-8",
+          "n-33-1",
+          "n-33-2",
+          "n-33-3",
+          "n-33-4",
+          "n-33-5",
+          "n-33-6",
+          "n-34-1",
+          "n-34-2",
+          "n-34-3",
+          "n-34-4",
+          "n-35-1",
+          "n-35-2",
+          "n-35-3",
+          "n-35-4",
+          "n-35-5",
+          "n-35-6",
+          "n-35-7",
+          "n-36-1",
+          "n-36-2",
+          "n-36-3",
+          "n-36-4",
+          "n-36-5",
+          "n-40-5",
+          "n-41-2"
+        ]
+      },
+      {
+        "label": "Psychology, Degeneracy of Regimes, and the Fate of the Soul",
+        "rationale": "Focuses on the tripartite division of the soul, the correspondence between character types and constitutional decay (timocracy to tyranny), the comparative misery of the tyrant, the nature of true pleasure, the critique of mimesis in the soul, and the eschatological reckoning in the Myth of Er.",
+        "nodeIds": [
+          "n-6-2",
+          "n-7-2",
+          "n-7-3",
+          "n-7-4",
+          "n-11-1",
+          "n-11-2",
+          "n-11-3",
+          "n-11-4",
+          "n-11-5",
+          "n-11-7",
+          "n-12-2",
+          "n-12-3",
+          "n-12-4",
+          "n-12-5",
+          "n-12-6",
+          "n-12-7",
+          "n-13-1",
+          "n-13-2",
+          "n-13-3",
+          "n-13-4",
+          "n-13-5",
+          "n-13-6",
+          "n-14-3",
+          "n-14-4",
+          "n-16-5",
+          "n-20-6",
+          "n-23-3",
+          "n-25-7",
+          "n-27-4",
+          "n-27-5",
+          "n-27-6",
+          "n-28-1",
+          "n-28-2",
+          "n-28-3",
+          "n-28-4",
+          "n-28-5",
+          "n-28-6",
+          "n-37-1",
+          "n-37-2",
+          "n-37-3",
+          "n-37-4",
+          "n-37-5",
+          "n-37-6",
+          "n-37-7",
+          "n-37-8",
+          "n-38-1",
+          "n-38-2",
+          "n-38-3",
+          "n-38-4",
+          "n-38-5",
+          "n-38-6",
+          "n-38-7",
+          "n-38-8",
+          "n-39-1",
+          "n-39-2",
+          "n-39-3",
+          "n-39-4",
+          "n-39-5",
+          "n-39-6",
+          "n-39-7",
+          "n-40-1",
+          "n-40-2",
+          "n-40-3",
+          "n-40-4",
+          "n-40-6",
+          "n-41-5",
+          "n-41-7",
+          "n-42-1",
+          "n-42-2",
+          "n-42-3",
+          "n-42-4",
+          "n-42-5",
+          "n-42-6",
+          "n-42-7"
+        ]
+      }
+    ],
+    "identities": [
+      {
+        "label": "Paratextual Edition and Publication Details",
+        "nodeIds": [
+          "n-1-1",
+          "n-1-2",
+          "n-2-1",
+          "n-2-2",
+          "n-2-3",
+          "n-2-4",
+          "n-46-5"
+        ]
+      },
+      {
+        "label": "Preeminence and Textual Architecture of the Republic",
+        "nodeIds": [
+          "n-3-1",
+          "n-3-3",
+          "n-3-4",
+          "n-14-5"
+        ]
+      },
+      {
+        "label": "The Dialogue's Search for Justice and Interlocutor Succession",
+        "nodeIds": [
+          "n-3-2",
+          "n-3-6",
+          "n-4-1",
+          "n-19-1",
+          "n-19-2",
+          "n-19-3",
+          "n-19-4"
+        ]
+      },
+      {
+        "label": "Portrait and Metamorphosis of Socrates",
+        "nodeIds": [
+          "n-3-7",
+          "n-21-4",
+          "n-21-5"
+        ]
+      },
+      {
+        "label": "Isomorphism of the Soul and the State",
+        "nodeIds": [
+          "n-3-5",
+          "n-5-2",
+          "n-16-5",
+          "n-22-6",
+          "n-37-2",
+          "n-45-6"
+        ]
+      },
+      {
+        "label": "The Analogy of the Arts and Craft Knowledge",
+        "nodeIds": [
+          "n-4-2",
+          "n-20-2",
+          "n-41-4",
+          "n-43-1"
+        ]
+      },
+      {
+        "label": "Thrasymachean Realism: Might as Right",
+        "nodeIds": [
+          "n-4-3",
+          "n-19-6",
+          "n-20-1",
+          "n-20-3"
+        ]
+      },
+      {
+        "label": "Dialectical Refutation of Injustice",
+        "nodeIds": [
+          "n-4-4",
+          "n-19-5",
+          "n-19-7",
+          "n-20-4",
+          "n-20-5",
+          "n-21-1",
+          "n-21-2",
+          "n-21-3",
+          "n-40-4"
+        ]
+      },
+      {
+        "label": "Contractarian and Conventionalist View of Justice",
+        "nodeIds": [
+          "n-4-5",
+          "n-22-2",
+          "n-22-3"
+        ]
+      },
+      {
+        "label": "Extrinsic Praise of Justice and Religious Mercantilism",
+        "nodeIds": [
+          "n-4-6",
+          "n-22-4"
+        ]
+      },
+      {
+        "label": "The Demand to Defend Justice in Itself",
+        "nodeIds": [
+          "n-4-7",
+          "n-5-1",
+          "n-22-1",
+          "n-22-5",
+          "n-44-4"
+        ]
+      },
+      {
+        "label": "Origin of the State and Division of Labour",
+        "nodeIds": [
+          "n-5-3",
+          "n-22-7",
+          "n-22-8"
+        ]
+      },
+      {
+        "label": "The Luxurious State and Emergence of Guardians",
+        "nodeIds": [
+          "n-5-4",
+          "n-23-1",
+          "n-23-2",
+          "n-23-3",
+          "n-26-3",
+          "n-44-5"
+        ]
+      },
+      {
+        "label": "Theological Canons and Divine Perfection",
+        "nodeIds": [
+          "n-5-5",
+          "n-23-5",
+          "n-23-6",
+          "n-44-1"
+        ]
+      },
+      {
+        "label": "Truth, Falsehood, and the Lie in the Soul",
+        "nodeIds": [
+          "n-5-6",
+          "n-24-2"
+        ]
+      },
+      {
+        "label": "Censorship of Poetry and Exclusion of Mimetic Art",
+        "nodeIds": [
+          "n-5-7",
+          "n-13-2",
+          "n-13-3",
+          "n-13-4",
+          "n-13-7",
+          "n-14-1",
+          "n-14-2",
+          "n-23-4",
+          "n-24-1",
+          "n-24-3",
+          "n-24-4",
+          "n-24-5",
+          "n-41-1",
+          "n-41-3",
+          "n-41-5",
+          "n-41-6",
+          "n-44-6",
+          "n-45-3"
+        ]
+      },
+      {
+        "label": "Musical Purgation and Harmonic Education",
+        "nodeIds": [
+          "n-5-8",
+          "n-24-6",
+          "n-25-1",
+          "n-25-2",
+          "n-25-3",
+          "n-25-4",
+          "n-45-1"
+        ]
+      },
+      {
+        "label": "Gymnastic, Bodily Simplicity, and Medicine",
+        "nodeIds": [
+          "n-6-1",
+          "n-6-5",
+          "n-17-1",
+          "n-25-5",
+          "n-25-6"
+        ]
+      },
+      {
+        "label": "Harmonizing Reason and Passion via Music and Gymnastic",
+        "nodeIds": [
+          "n-6-2",
+          "n-16-7",
+          "n-25-7"
+        ]
+      },
+      {
+        "label": "The Myth of the Metals and Class Transposition",
+        "nodeIds": [
+          "n-6-3",
+          "n-26-4"
+        ]
+      },
+      {
+        "label": "Guardian Communal Discipline and Prohibition of Property",
+        "nodeIds": [
+          "n-6-4",
+          "n-26-5"
+        ]
+      },
+      {
+        "label": "The Good and Happiness of the Whole State",
+        "nodeIds": [
+          "n-6-6",
+          "n-27-1",
+          "n-27-2"
+        ]
+      },
+      {
+        "label": "Primacy of Education over Legislation",
+        "nodeIds": [
+          "n-6-7",
+          "n-16-6",
+          "n-27-3",
+          "n-35-4",
+          "n-43-4"
+        ]
+      },
+      {
+        "label": "Duty, Utility, and the Ideal Good",
+        "nodeIds": [
+          "n-7-1",
+          "n-18-6",
+          "n-18-7",
+          "n-18-8"
+        ]
+      },
+      {
+        "label": "The Four Cardinal Virtues in the Polis",
+        "nodeIds": [
+          "n-7-2",
+          "n-27-4",
+          "n-27-5"
+        ]
+      },
+      {
+        "label": "Justice as Internal Order and Specialization",
+        "nodeIds": [
+          "n-7-3",
+          "n-27-6",
+          "n-28-1",
+          "n-28-4"
+        ]
+      },
+      {
+        "label": "Tripartite Theory of the Human Soul",
+        "nodeIds": [
+          "n-7-4",
+          "n-20-6",
+          "n-28-2",
+          "n-28-3",
+          "n-39-4",
+          "n-45-5"
+        ]
+      },
+      {
+        "label": "Equality of Female Guardians",
+        "nodeIds": [
+          "n-7-5",
+          "n-15-4",
+          "n-29-2",
+          "n-29-3",
+          "n-29-4"
+        ]
+      },
+      {
+        "label": "Abolition of the Private Family and Eugenic Mating",
+        "nodeIds": [
+          "n-8-1",
+          "n-15-5",
+          "n-15-6",
+          "n-15-7",
+          "n-16-1",
+          "n-16-2",
+          "n-29-1",
+          "n-29-5"
+        ]
+      },
+      {
+        "label": "Civic Unity as Organic Bodily Cohesion",
+        "nodeIds": [
+          "n-8-2",
+          "n-29-6",
+          "n-30-1",
+          "n-43-2"
+        ]
+      },
+      {
+        "label": "The Philosopher-King Paradox and Leadership",
+        "nodeIds": [
+          "n-8-3",
+          "n-9-6",
+          "n-16-4",
+          "n-26-1",
+          "n-30-4",
+          "n-32-1",
+          "n-33-3",
+          "n-35-5",
+          "n-45-4"
+        ]
+      },
+      {
+        "label": "Epistemological Separation of Knowledge and Opinion",
+        "nodeIds": [
+          "n-8-4",
+          "n-30-5",
+          "n-30-6",
+          "n-31-1",
+          "n-31-2",
+          "n-31-3",
+          "n-31-4",
+          "n-31-5",
+          "n-31-6",
+          "n-31-7"
+        ]
+      },
+      {
+        "label": "The Ship of State Parable and Philosophic Uselessness",
+        "nodeIds": [
+          "n-8-5",
+          "n-32-3",
+          "n-32-4"
+        ]
+      },
+      {
+        "label": "Corruption of Philosophic Natures and the Corrupting Multitude",
+        "nodeIds": [
+          "n-8-6",
+          "n-32-2",
+          "n-32-5",
+          "n-32-6",
+          "n-32-7",
+          "n-32-8",
+          "n-33-2"
+        ]
+      },
+      {
+        "label": "The Idea of the Good",
+        "nodeIds": [
+          "n-8-7",
+          "n-33-4",
+          "n-44-3"
+        ]
+      },
+      {
+        "label": "The Analogy of the Sun",
+        "nodeIds": [
+          "n-9-1",
+          "n-33-5"
+        ]
+      },
+      {
+        "label": "The Divided Line and Cognitive Faculties",
+        "nodeIds": [
+          "n-9-2",
+          "n-33-6",
+          "n-34-1",
+          "n-34-2",
+          "n-34-3",
+          "n-34-4"
+        ]
+      },
+      {
+        "label": "Allegory of the Cave and Conversive Education",
+        "nodeIds": [
+          "n-9-5",
+          "n-10-6",
+          "n-35-1",
+          "n-35-2",
+          "n-35-3"
+        ]
+      },
+      {
+        "label": "Preliminary Mathematical Sciences",
+        "nodeIds": [
+          "n-10-1",
+          "n-10-2",
+          "n-35-6",
+          "n-35-7",
+          "n-36-1",
+          "n-36-2"
+        ]
+      },
+      {
+        "label": "Dialectic as the Coping-Stone of Knowledge",
+        "nodeIds": [
+          "n-10-3",
+          "n-17-2",
+          "n-36-3",
+          "n-43-3"
+        ]
+      },
+      {
+        "label": "Guardian Educational Timeline and Perils of Premature Dialectic",
+        "nodeIds": [
+          "n-10-4",
+          "n-10-7",
+          "n-17-3",
+          "n-33-1",
+          "n-36-4",
+          "n-36-5"
+        ]
+      },
+      {
+        "label": "Sequence and Decay of Constitutions and Regimes",
+        "nodeIds": [
+          "n-11-1",
+          "n-11-7",
+          "n-28-6",
+          "n-37-1",
+          "n-44-2"
+        ]
+      },
+      {
+        "label": "Timocracy and the Timocratic Man",
+        "nodeIds": [
+          "n-11-2",
+          "n-37-3",
+          "n-37-4"
+        ]
+      },
+      {
+        "label": "Oligarchy and the Plight of Disenfranchised Drones",
+        "nodeIds": [
+          "n-11-3",
+          "n-37-5",
+          "n-37-6",
+          "n-37-7"
+        ]
+      },
+      {
+        "label": "Democracy, Lawless Liberty, and Democratic Character",
+        "nodeIds": [
+          "n-11-4",
+          "n-37-8",
+          "n-38-1",
+          "n-38-2",
+          "n-38-3",
+          "n-38-4",
+          "n-38-6"
+        ]
+      },
+      {
+        "label": "Tyranny and the Metamorphosis of the Demagogue",
+        "nodeIds": [
+          "n-11-5",
+          "n-38-5",
+          "n-38-7",
+          "n-38-8"
+        ]
+      },
+      {
+        "label": "The Geometrical Number and Cycle of Births",
+        "nodeIds": [
+          "n-12-1"
+        ]
+      },
+      {
+        "label": "The Tyrannical Character and Master Passion",
+        "nodeIds": [
+          "n-12-2",
+          "n-39-1"
+        ]
+      },
+      {
+        "label": "Absolute Misery of the Tyrant",
+        "nodeIds": [
+          "n-12-3",
+          "n-39-2",
+          "n-39-3"
+        ]
+      },
+      {
+        "label": "Taxonomy of Pleasures and True Satisfaction",
+        "nodeIds": [
+          "n-12-4",
+          "n-39-5",
+          "n-39-6",
+          "n-39-7",
+          "n-40-1"
+        ]
+      },
+      {
+        "label": "The 729-Fold Interval Between King and Tyrant",
+        "nodeIds": [
+          "n-12-5",
+          "n-13-1",
+          "n-40-2"
+        ]
+      },
+      {
+        "label": "Composite Image of the Soul and Inner Health",
+        "nodeIds": [
+          "n-12-6",
+          "n-28-5",
+          "n-40-3"
+        ]
+      },
+      {
+        "label": "The Heavenly Pattern of the Ideal Polity",
+        "nodeIds": [
+          "n-12-7",
+          "n-30-3",
+          "n-40-6"
+        ]
+      },
+      {
+        "label": "Proof of the Soul's Immortality",
+        "nodeIds": [
+          "n-13-5",
+          "n-41-7",
+          "n-42-1",
+          "n-42-2"
+        ]
+      },
+      {
+        "label": "Myth of Er and Posthumous Retribution",
+        "nodeIds": [
+          "n-13-6",
+          "n-14-4",
+          "n-42-3",
+          "n-42-4",
+          "n-42-5",
+          "n-42-6",
+          "n-42-7"
+        ]
+      },
+      {
+        "label": "Comparative Reception of Platonic Utopias",
+        "nodeIds": [
+          "n-15-2",
+          "n-15-3",
+          "n-16-3",
+          "n-17-7",
+          "n-18-1",
+          "n-18-2",
+          "n-18-3",
+          "n-18-4",
+          "n-18-5",
+          "n-46-1",
+          "n-46-2",
+          "n-46-3"
+        ]
+      },
+      {
+        "label": "Rules of Inter-Hellenic Warfare",
+        "nodeIds": [
+          "n-30-2"
+        ]
+      },
+      {
+        "label": "Comparative Analysis with the Laws and Statesman",
+        "nodeIds": [
+          "n-17-5",
+          "n-17-6"
+        ]
+      },
+      {
+        "label": "General Index of Virtue",
+        "nodeIds": [
+          "n-46-4"
+        ]
+      }
+    ],
+    "crossEdges": [
+      {
+        "source": "n-4-7",
+        "target": "n-22-5",
+        "type": "defines",
+        "rationale": "Chunk 4's analytical summary of the brothers' challenge defines the precise mandate and questions formally articulated in Adeimantus's speech in Chunk 22."
+      },
+      {
+        "source": "n-5-2",
+        "target": "n-22-6",
+        "type": "develops",
+        "rationale": "Chunk 5's commentary develops the methodological rationale of the 'large letters' analogy introduced by Socrates in Chunk 22."
+      },
+      {
+        "source": "n-22-8",
+        "target": "n-5-3",
+        "type": "supports",
+        "rationale": "Socrates' dialogue deduction of specialization in Chunk 22 provides the direct grounds for the economic division of labor theory analyzed in Chunk 5."
+      },
+      {
+        "source": "n-23-1",
+        "target": "n-5-4",
+        "type": "supports",
+        "rationale": "The dialogue emergence of the luxurious state in Chunk 23 grounds the commentary's claim in Chunk 5 that luxurious living generates war and guardians."
+      },
+      {
+        "source": "n-23-5",
+        "target": "n-5-5",
+        "type": "supports",
+        "rationale": "Socrates' first theological canon in Chunk 23 that God causes only good is directly formulated and analyzed in Chunk 5's discussion of theological censorship."
+      },
+      {
+        "source": "n-24-2",
+        "target": "n-5-6",
+        "type": "develops",
+        "rationale": "The dialogue's restriction of medicinal lying to rulers in Chunk 24 is analyzed and conceptually extended in Chunk 5's reflection on the 'lie in the soul'."
+      },
+      {
+        "source": "n-24-4",
+        "target": "n-5-7",
+        "type": "supports",
+        "rationale": "The dialogue prohibition against guardians imitating diverse or base roles in Chunk 24 provides the explicit grounds for the commentary's analysis in Chunk 5."
+      },
+      {
+        "source": "n-25-1",
+        "target": "n-5-8",
+        "type": "supports",
+        "rationale": "Socrates' selection of Dorian and Phrygian modes in Chunk 25 directly substantiates the commentary's discussion of harmonic purification in Chunk 5."
+      },
+      {
+        "source": "n-25-5",
+        "target": "n-6-1",
+        "type": "supports",
+        "rationale": "The rejection of valetudinarian coddling in Chunk 25's dialogue grounds the commentary's claims on physical training and simplicity in Chunk 6."
+      },
+      {
+        "source": "n-25-7",
+        "target": "n-6-2",
+        "type": "supports",
+        "rationale": "Socrates' argument in Chunk 25 that music and gymnastic harmonize spirit and philosophy grounds the commentary's psychological analysis in Chunk 6."
+      },
+      {
+        "source": "n-26-4",
+        "target": "n-6-3",
+        "type": "supports",
+        "rationale": "The dialogue presentation of the Phoenician tale in Chunk 26 supplies the basis for the commentary's treatment of the Myth of the Metals in Chunk 6."
+      },
+      {
+        "source": "n-26-5",
+        "target": "n-6-4",
+        "type": "supports",
+        "rationale": "The prohibition on guardian property in Chunk 26 grounds the commentary's account of guardian discipline in Chunk 6."
+      },
+      {
+        "source": "n-27-2",
+        "target": "n-6-6",
+        "type": "supports",
+        "rationale": "Socrates' defense that the constitution aims at the happiness of the whole state in Chunk 27 supports the commentary's claim in Chunk 6."
+      },
+      {
+        "source": "n-27-3",
+        "target": "n-6-7",
+        "type": "supports",
+        "rationale": "The dialogue claim in Chunk 27 that preserving music prevents legal ruin grounds the commentary's thesis on the primacy of education over legislation in Chunk 6."
+      },
+      {
+        "source": "n-27-6",
+        "target": "n-7-3",
+        "type": "supports",
+        "rationale": "Socrates' dialogue identification of justice as minding one's own business in Chunk 27 substantiates the commentary's definition of justice in Chunk 7."
+      },
+      {
+        "source": "n-28-3",
+        "target": "n-7-4",
+        "type": "supports",
+        "rationale": "The deduction of the three parts of the soul using contradiction and Leontius in Chunk 28 grounds the commentary's analysis of the tripartite soul in Chunk 7."
+      },
+      {
+        "source": "n-29-3",
+        "target": "n-7-5",
+        "type": "supports",
+        "rationale": "Socrates' distinction between accidental and relevant natural differences in Chunk 29 directly grounds the commentary's claim for equal roles for women in Chunk 7."
+      },
+      {
+        "source": "n-29-5",
+        "target": "n-8-1",
+        "type": "supports",
+        "rationale": "The detailed mating regulations and lotteries in Chunk 29 provide the textual foundation for the communal family system analyzed in Chunk 8."
+      },
+      {
+        "source": "n-30-1",
+        "target": "n-8-2",
+        "type": "supports",
+        "rationale": "Socrates' analogy of the injured finger and common usage of 'mine' in Chunk 30 supports the commentary's principle of organic civic unity in Chunk 8."
+      },
+      {
+        "source": "n-30-4",
+        "target": "n-8-3",
+        "type": "supports",
+        "rationale": "Socrates' dramatic proclamation of philosopher-kings in Chunk 30 directly supports the analysis of the philosopher-king paradox in Chunk 8."
+      },
+      {
+        "source": "n-31-4",
+        "target": "n-8-4",
+        "type": "supports",
+        "rationale": "The dialogue deduction separating knowledge and opinion by infallibility and objects in Chunk 31 supports the commentary's epistemological analysis in Chunk 8."
+      },
+      {
+        "source": "n-32-4",
+        "target": "n-8-5",
+        "type": "supports",
+        "rationale": "The parable of the mutinous crew and true pilot in Chunk 32 provides the exact evidence for the Parable of the Ship analyzed in Chunk 8."
+      },
+      {
+        "source": "n-32-5",
+        "target": "n-8-6",
+        "type": "supports",
+        "rationale": "The dialogue account of public assemblies corrupting gifted youths in Chunk 32 grounds the commentary on the corruption of philosophic natures in Chunk 8."
+      },
+      {
+        "source": "n-33-4",
+        "target": "n-8-7",
+        "type": "supports",
+        "rationale": "Socrates' proclamation in Chunk 33 that the Idea of the Good is the highest knowledge substantiates the commentary's introduction of the Good in Chunk 8."
+      },
+      {
+        "source": "n-33-5",
+        "target": "n-9-1",
+        "type": "supports",
+        "rationale": "The dialogue description of the Sun as the offspring of the Good in Chunk 33 grounds the commentary's analysis of the Sun analogy in Chunk 9."
+      },
+      {
+        "source": "n-33-6",
+        "target": "n-9-2",
+        "type": "supports",
+        "rationale": "The divided line proportioned in Chunk 33 provides the evidence for the commentary's schema of reality and cognition in Chunk 9."
+      },
+      {
+        "source": "n-35-1",
+        "target": "n-9-5",
+        "type": "supports",
+        "rationale": "The allegory of the chained captives in Chunk 35 serves as the source text for the commentary's summary of the Cave allegory in Chunk 9."
+      },
+      {
+        "source": "n-35-5",
+        "target": "n-9-6",
+        "type": "supports",
+        "rationale": "Socrates' argument that enlightened guardians must return to the cave in Chunk 35 grounds the commentary's claim on compelled descent in Chunk 9."
+      },
+      {
+        "source": "n-35-6",
+        "target": "n-10-1",
+        "type": "supports",
+        "rationale": "Socrates' explanation in Chunk 35 of how number and calculation arouse reflection on being substantiates the commentary's account in Chunk 10."
+      },
+      {
+        "source": "n-36-3",
+        "target": "n-10-3",
+        "type": "supports",
+        "rationale": "The dialogue designation of dialectic as the coping-stone of the sciences in Chunk 36 directly supports the commentary's analysis in Chunk 10."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "JtObaqqOC52Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 200325,
+    "candidatesTokenCount": 9553,
+    "totalTokenCount": 209878,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 200325
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9553
+      }
+    ]
+  },
+  "durationMs": 55416,
+  "requestHash": "dfae1142be6b0ff57e28d6af235a99f1a708e00cdbcb92fde479bf23b439e696"
+}

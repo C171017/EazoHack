@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { hasAmbiguousLayout } from './layout-quality';
 
-export const PDF_PIPELINE_VERSION = 'pdf-text-v2';
+export const PDF_PIPELINE_VERSION = 'pdf-text-v3';
 export const RectSchema = z.object({ x: z.number().min(0).max(1), y: z.number().min(0).max(1), width: z.number().positive().max(1), height: z.number().positive().max(1) }).strict()
   .refine(r => r.x + r.width <= 1.000001 && r.y + r.height <= 1.000001, 'Rectangle exceeds page');
 export type Rect = z.infer<typeof RectSchema>;

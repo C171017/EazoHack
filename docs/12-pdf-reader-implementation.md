@@ -51,7 +51,7 @@ The reader shows the service label and that page text/positions will be sent bef
 
 - Targeted automated coverage: embedded/no-text/damaged/manual OCR decisions, failed/cancelled extraction, quality warnings, validated layout order, source preservation, cross-page Unicode anchors, cache isolation, PDF range serving, asset traversal rejection and layout HTTP failures.
 - Browser checks in the Codex Chromium browser: the 628-page Republic; bounded canvases; exact native word selection; real local OCR of image-only and damaged-hidden-text fixtures; an OCR line selection; saving/reopening its highlight; mock assistance handoff; rotated-page rendering; 390×844 mobile and desktop resizing.
-- TypeScript, ESLint and production build checked. The build uses an isolated temporary project snapshot to avoid interfering with the shared dev server.
+- TypeScript, ESLint, isolated-snapshot production builds and a final project production build passed. The final deployment trace was checked for the PDF worker, OCR worker, WASM core and English language data.
 - No claim of complete Safari/Firefox/physical-device, screen-reader, full-book OCR or battery benchmarking. Full-document native extraction/export is separate concurrent work, documented by its owning task.
 
 To reproduce the synthetic PDF cases, run `tests/fixtures/make-pdf-reader-fixture.py` with Python, reportlab, Pillow, an output PDF path and optionally a TrueType font path. The file has good embedded text, an image-only page, a page with damaged hidden text, two columns, and a rotated page. It contains no user documents.

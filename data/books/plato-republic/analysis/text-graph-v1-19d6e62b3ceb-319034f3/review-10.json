@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes accurately reflect the editorial commentary, index apparatus, and transcriber paratext from the cited passages with appropriate source roles, levels, and themes. The support edges between the sub-analyses of Hellenic/innovative features and the dual composition summary are grounded in the text."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9dObavLWKMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 6888,
+    "candidatesTokenCount": 82,
+    "totalTokenCount": 6970,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6888
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 82
+      }
+    ]
+  },
+  "durationMs": 4334,
+  "requestHash": "0a6c7c7399a33c7a3a1d38327956e26fa337f680d68597e2750487f0d220ebf3"
+}

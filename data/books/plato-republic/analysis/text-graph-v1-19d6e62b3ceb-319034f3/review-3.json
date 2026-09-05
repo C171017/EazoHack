@@ -1,0 +1,68 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-13-2",
+        "reason": "The sourceRole is marked as commentary while speaker is set to Socrates; moreover, the passage is Jowett's summary of the dialogue rather than an editorial commentary speaker attribution, creating an inconsistent and overconfident attribution."
+      },
+      {
+        "id": "n-13-3",
+        "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+      },
+      {
+        "id": "n-13-4",
+        "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+      },
+      {
+        "id": "n-13-5",
+        "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+      },
+      {
+        "id": "n-13-6",
+        "reason": "The sourceRole is marked as commentary while speaker is set to Socrates, creating an inconsistent attribution for Jowett's summary text."
+      }
+    ],
+    "rejectedEdges": [
+      {
+        "id": "e-13-1",
+        "reason": "Depends on rejected nodes n-13-2 and n-13-3."
+      },
+      {
+        "id": "e-13-2",
+        "reason": "Depends on rejected nodes n-13-3 and n-13-4."
+      },
+      {
+        "id": "e-13-3",
+        "reason": "Depends on rejected nodes n-13-5 and n-13-6."
+      },
+      {
+        "id": "e-13-4",
+        "reason": "Depends on rejected node n-13-2."
+      }
+    ],
+    "notes": "Nodes n-13-2 through n-13-6 incorrectly assign 'Socrates' as speaker while specifying the role as 'commentary' on passages from Jowett's introductory analysis/summary of Republic X."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2tObaoHPFpqdvdAPkNqqkQc",
+  "usage": {
+    "promptTokenCount": 46198,
+    "candidatesTokenCount": 518,
+    "totalTokenCount": 46716,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46198
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 518
+      }
+    ]
+  },
+  "durationMs": 7256,
+  "requestHash": "47d37e528ee435c3d23ec62721300b57c7767e4b8ea2f90024760f266cb1186f"
+}

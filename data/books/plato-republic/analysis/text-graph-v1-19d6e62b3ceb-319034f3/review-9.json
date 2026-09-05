@@ -1,0 +1,43 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "e-44-4",
+        "reason": "Reversed direction or invalid dependency: n-44-5 is a paratextual index cataloguing guardian requirements, whereas n-44-4 is an overarching editorial essay synthesizing justice. An index entry does not develop an overarching synthetic argument; if anything, the general concept develops into or defines the roles."
+      },
+      {
+        "id": "e-45-2",
+        "reason": "Reversed or unsupported edge: n-45-2 and n-45-4 are both disparate index entries; an index catalog of citations on 'Philosopher' does not support another index catalog on 'Ruler' merely through co-reference to philosopher-kings."
+      },
+      {
+        "id": "e-45-3",
+        "reason": "Reversed or unsupported edge: n-45-5 is an editorial essay on psychology, whereas n-45-6 is a raw index entry listing occurrences of 'State'. An analytical commentary does not establish a directed 'supports' relation to a mere index listing."
+      }
+    ],
+    "notes": "Reviewed all 20 target nodes and 15 target edges across chunks 040 to 045. Target nodes accurately reflect their cited textual passages, levels, and source roles (distinguishing dialogue, paratextual indices, and editorial commentary). Edges connecting paratextual index lists as direct conceptual supports or developments of other entries were rejected due to unsupported directional structure between reference list entries and synthesis essays."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7dObaqHlHtCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 46192,
+    "candidatesTokenCount": 363,
+    "totalTokenCount": 46555,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46192
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 363
+      }
+    ]
+  },
+  "durationMs": 6672,
+  "requestHash": "9e59795f8866b5e054ecbd16cba35055cd754f66badfc078c313ca8bea029bc3"
+}

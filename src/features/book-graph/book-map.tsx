@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Graph, MapView, SourceAnchor } from '@/shared/schemas';
 import { initialView, LEVELS, magneticPose, nearestProjection, orbitFrom, SNAP_ENTER, SNAP_EXIT, springProgress, orientation, placeLabels, PROJECTIONS, project, worldPoint, type Point3 } from './projection';
-import { mapWindow, SPATIAL_PAGE_SIZE } from './map-window';
+import { mapWindow } from './map-window';
 
 const COLORS = ['#caaf7c','#84b7ad','#a398cb'];
 const AXES = [{key:'x',label:'X · Themes',color:'#caaf7c'},{key:'y',label:'Y · Structure',color:'#84b7ad'},{key:'z',label:'Z · Source order',color:'#a398cb'}] as const;
@@ -12,7 +12,8 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
 }) {
   const current = view?.graphVersion === graph.graphVersion ? view : {...initialView(graph.graphVersion), sourceScope: graph.analysis ? 'book' as const : 'excerpt' as const};
   const [size,setSize] = useState({width:800,height:550});
-  const windowed = mapWindow(graph, current, excerptRange);
+  const pageCapacity = Math.max(1, Math.floor((size.width-16)/218)*Math.floor((size.height-24)/30));
+  const windowed = mapWindow(graph, current, excerptRange, pageCapacity);
   const [list,setList] = useState(false);
   const stage = useRef<HTMLDivElement>(null);
   const svg = useRef<SVGSVGElement>(null);
@@ -88,7 +89,7 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
   const ends:Point3[]=[{...origin,x:280},{...origin,y:195},{...origin,z:230}];
   const choose=(id:string,focus=false)=>{
     const filteredIndex=windowed.filtered.findIndex(n=>n.id===id);
-    cancelMotion();change(filteredIndex>=0?{selectedNodeId:id,nodePage:Math.floor(filteredIndex/SPATIAL_PAGE_SIZE)}:{selectedNodeId:id,themeFilter:null,roleFilter:null,sourceScope:'book',nodePage:Math.floor(graph.nodes.findIndex(n=>n.id===id)/SPATIAL_PAGE_SIZE)});
+    cancelMotion();change(filteredIndex>=0?{selectedNodeId:id,nodePage:Math.floor(filteredIndex/windowed.pageSize)}:{selectedNodeId:id,themeFilter:null,roleFilter:null,sourceScope:'book',nodePage:Math.floor(graph.nodes.findIndex(n=>n.id===id)/windowed.pageSize)});
     if(focus)requestAnimationFrame(()=>svg.current?.querySelector<SVGGElement>(`[data-node-id="${id}"]`)?.focus());
   };
   function moveNode(id:string,direction:number) {
@@ -138,7 +139,7 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
           return <g key={axis.key}><line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={axis.color} strokeWidth="1.5"/><text x={b.x+8} y={b.y-12} fill={axis.color} className="map-axis-title">{axis.label}</text></g>;
         })}</g>
         <g className="map-axis-ticks" aria-hidden="true">
-          {current.projection!=='yz'&&graph.territories.map((t,i)=>{const p=screen({...origin,x:(t.centroidX-.5)*500});return <text key={t.id} x={p.x} y={p.y+26} textAnchor="middle" fill={COLORS[i%3]}><title>{t.label}</title>{t.label.length>24?`${t.label.slice(0,23)}…`:t.label}</text>;})}
+          {current.projection!=='yz'&&graph.territories.map((t,i)=>{const p=screen({...origin,x:(t.centroidX-.5)*500});return <text key={t.id} x={p.x} y={p.y+26} textAnchor="middle" fill={COLORS[i%3]}><title>{t.label}</title>{graph.analysis?`Theme ${i+1}`:t.label}</text>;})}
           {current.projection!=='xz'&&LEVELS.map((label,i)=>{const p=screen({...origin,y:(i/4-.5)*340});return <text key={label} x={p.x-10} y={p.y+4} textAnchor="end">{i} · {label}</text>;})}
           {current.projection!=='xy'&&[0,1].map(t=>{const p=screen({...origin,z:(t-.5)*400});return <text key={t} x={p.x} y={p.y+44} textAnchor="middle">{current.sourceScope==='excerpt'?(t?'329D · excerpt end':'327A · excerpt start'):(t?'Source end':'Source beginning')}</text>;})}
         </g>
@@ -173,8 +174,8 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
       </div></div>
     </section>}
     <footer className="map-footer">
-      {graph.analysis&&<div className="map-filters"><label>Theme <select aria-label="Theme filter" value={current.themeFilter??''} onChange={e=>change({themeFilter:e.target.value||null,nodePage:0})}><option value="">All themes</option>{graph.territories.map(t=><option key={t.id} value={t.id}>{t.label}</option>)}</select></label><label>Text <select aria-label="Text type filter" value={current.roleFilter??''} onChange={e=>change({roleFilter:(e.target.value||null) as MapView['roleFilter'],nodePage:0})}><option value="">All source text</option><option value="dialogue">Dialogue</option><option value="commentary">Commentary</option><option value="paratext">Front matter / apparatus</option></select></label></div>}
-      {!list&&windowed.pages>1&&<div className="map-pagination"><button aria-label="Previous map page" disabled={windowed.page===0} onClick={()=>change({nodePage:windowed.page-1})}>← Previous</button><span>Showing {windowed.page*SPATIAL_PAGE_SIZE+1}–{Math.min((windowed.page+1)*SPATIAL_PAGE_SIZE,windowed.filtered.length)} of {windowed.filtered.length} · same coordinates</span><button aria-label="Next map page" disabled={windowed.page===windowed.pages-1} onClick={()=>change({nodePage:windowed.page+1})}>Next →</button></div>}
+      {graph.analysis&&<div className="map-filters"><label>X theme <select aria-label="Theme filter" value={current.themeFilter??''} onChange={e=>change({themeFilter:e.target.value||null,nodePage:0})}><option value="">All themes</option>{graph.territories.map((t,i)=><option key={t.id} value={t.id}>{i+1} · {t.label}</option>)}</select></label><label>Text <select aria-label="Text type filter" value={current.roleFilter??''} onChange={e=>change({roleFilter:(e.target.value||null) as MapView['roleFilter'],nodePage:0})}><option value="">All source text</option><option value="dialogue">Dialogue</option><option value="commentary">Commentary</option><option value="paratext">Front matter / apparatus</option></select></label></div>}
+      {!list&&windowed.pages>1&&<div className="map-pagination"><button aria-label="Previous map page" disabled={windowed.page===0} onClick={()=>change({nodePage:windowed.page-1})}>← Previous</button><span>Showing {windowed.page*windowed.pageSize+1}–{Math.min((windowed.page+1)*windowed.pageSize,windowed.filtered.length)} of {windowed.filtered.length} · same coordinates</span><button aria-label="Next map page" disabled={windowed.page===windowed.pages-1} onClick={()=>change({nodePage:windowed.page+1})}>Next →</button></div>}
       <div className="map-footer-row"><label>Source range <select aria-label="Source range" value={current.sourceScope} onChange={e=>{cancelMotion();change({sourceScope:e.target.value as MapView['sourceScope'],nodePage:0});}}><option value="excerpt">Book I opening · expanded</option><option value="book">Entire source file</option></select></label><span>{graph.nodes.length} occurrences · {graph.territories.length} themes <button className="map-save-view" onClick={onSaveView}>Save view</button></span></div>
       <p aria-live="polite">{current.projection==='3d'?'3D space · Drag near a plane to snap':`${PROJECTIONS.find(p=>p.id===current.projection)?.hint} · Drag away to return to 3D`} · Shift-drag to pan</p>
       <p className="map-disclosure">{graph.analysis?`${graph.analysis.model} · ${graph.analysis.completedChunks}/${graph.analysis.totalChunks} text sections processed. Selective outline; model-reviewed, not human-verified.`:'Editorial sample, not whole-book analysis.'} Height means structure, not importance. Dashed links are model/editorial interpretations. {unknown.length>0&&<> {unknown.length} unplaced nodes in Browse nodes.</>}</p>

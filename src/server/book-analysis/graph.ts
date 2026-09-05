@@ -1,11 +1,28 @@
 import { GraphSchema, type Graph } from '../../shared/schemas';
 import { PROMPT_VERSION, type Candidate, type CandidateEdge, type Passage, type Review, type Synthesis } from './contracts';
 
+export function missingIdentityNodes(value: Synthesis, nodes: Candidate[]) {
+  const assigned = new Set(value.identities.flatMap(i => i.nodeIds));
+  return nodes.filter(n => !assigned.has(n.id));
+}
+
+// Validate all other constraints before a small, explicit model repair of omissions.
+// The temporary singleton groups here are not published or used as model decisions.
+export function validateSynthesisForRepair(value: Synthesis, nodes: Candidate[]) {
+  validateSynthesis({ ...value, identities: [...value.identities, ...missingIdentityNodes(value, nodes).map(n => ({ label: n.identityLabel, nodeIds: [n.id] }))] }, nodes);
+  return value;
+}
+
 export function validateSynthesis(value: Synthesis, nodes: Candidate[]) {
   const expected = new Set(nodes.map(n => n.id));
   for (const [kind, groups] of [['theme', value.themes], ['identity', value.identities]] as const) {
     const assignments = groups.flatMap(g => g.nodeIds);
-    if (assignments.length !== nodes.length || new Set(assignments).size !== nodes.length || assignments.some(id => !expected.has(id))) throw new Error(`Every occurrence must have exactly one ${kind}; assignments missing, duplicated, or unknown.`);
+    if (assignments.length !== nodes.length || new Set(assignments).size !== nodes.length || assignments.some(id => !expected.has(id))) {
+      const missing = [...expected].filter(id => !assignments.includes(id));
+      const duplicate = [...new Set(assignments.filter((id, i) => assignments.indexOf(id) !== i))];
+      const unknown = assignments.filter(id => !expected.has(id));
+      throw new Error(`Every occurrence must have exactly one ${kind}. Missing: ${missing.join(', ')}. Duplicated: ${duplicate.join(', ')}. Unknown: ${unknown.join(', ')}.`);
+    }
   }
   for (const edge of value.crossEdges) {
     if (!expected.has(edge.source) || !expected.has(edge.target) || edge.source === edge.target) throw new Error('Invalid cross-edge endpoints.');

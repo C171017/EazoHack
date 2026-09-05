@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges have been verified against their cited evidence and structural roles. Summaries accurately reflect the text without overstatement, speaker attribution to Socrates in dialogue is consistent with the passages, structural levels (from concrete detail/level 0 up to organizing framework/level 4) are plausible and well-supported, and edge types/directions follow sound evidential support and development."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7NObaq-wMtCSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 24038,
+    "candidatesTokenCount": 100,
+    "totalTokenCount": 24138,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 24038
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 100
+      }
+    ]
+  },
+  "durationMs": 3617,
+  "requestHash": "b2eaff580c4a8be5b35e1e7c7f5cb1d01c80f81d8115b56daa03599f0852d261"
+}

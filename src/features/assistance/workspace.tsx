@@ -1,12 +1,11 @@
 'use client';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
 import { Button } from '@/ui/components/button';
-import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type Artifact, type RouteKind, type RouteRun } from '@/shared/schemas';
+import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Graph, type Selection, type SourceAnchor, type Artifact, type RouteKind, type RouteRun } from '@/shared/schemas';
 import { createWorkspaceRepository, type WorkspaceSnapshot } from '../persistence';
 import { initialView } from '../book-graph/projection';
-import { createSampleGraph } from '../book-graph/sample-graph';
 import { ArtifactView } from './artifact-view';
 import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange } from '../reader/continuous-txt-reader';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
@@ -17,8 +16,7 @@ const routes: {kind:RouteKind;label:string;symbol:string;supported:boolean}[] = 
   {kind:'source_discovery',label:'Sources',symbol:'⌕',supported:false},
 ];
 const workspaceId = 'republic-scaffold-v1';
-export function Workspace({preview}:{preview:BookPreview}) {
-  const graph = useMemo(()=>createSampleGraph(preview),[preview]);
+export function Workspace({preview,graph}:{preview:BookPreview;graph:Graph}) {
   const [mapAnchor,setMapAnchor] = useState<SourceAnchor|null>(null);
   const [mapView,setMapView] = useState<WorkspaceSnapshot['mapView']>(null);
   const reader = useRef<ContinuousTxtReaderHandle>(null);
@@ -41,7 +39,7 @@ export function Workspace({preview}:{preview:BookPreview}) {
       if (!alive) return;
       if (snapshot) {
         setSaved(snapshot);setSelection(snapshot.selections[0]??null);setAnchors(snapshot.anchors);
-        setArtifacts(snapshot.artifacts);setMapView(snapshot.mapView);setMapAnchor(snapshot.mapView?.graphVersion===graph.graphVersion?(graph.anchors.find(a=>a.id===snapshot.mapView?.readerAnchorId)??null):null);setInteractionState(snapshot.interactionState);
+        setArtifacts(snapshot.artifacts);setMapView(snapshot.mapView?.graphVersion===graph.graphVersion?snapshot.mapView:null);setMapAnchor(snapshot.mapView?.graphVersion===graph.graphVersion?(graph.anchors.find(a=>a.id===snapshot.mapView?.readerAnchorId)??null):null);setInteractionState(snapshot.interactionState);
         setNotice('Restored your saved view, passage and results.');
         if (snapshot.readerPosition?.fileHash===preview.fileHash&&snapshot.readerPosition.extractionVersion===preview.extractionVersion) {
           requestAnimationFrame(()=>reader.current?.scrollToOffset(snapshot.readerPosition!.startOffset));
@@ -82,7 +80,7 @@ export function Workspace({preview}:{preview:BookPreview}) {
   async function save() {
     const repository=createWorkspaceRepository();
     try {
-      const snapshot=await repository.save({schemaVersion:1,id:workspaceId,bookId:'plato-republic',selections:selection?[selection]:[],anchors,artifacts:artifacts.map(artifact=>({...artifact,savedAt:new Date().toISOString()})),interactionState,graphViewport:null,mapView:mapView??initialView(graph.graphVersion),readerPosition:{fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,startOffset:reader.current?.getReadingPosition()??0},bookmarks:selection?.anchorIds??[],savedAt:new Date().toISOString()});
+      const snapshot=await repository.save({schemaVersion:1,id:workspaceId,bookId:'plato-republic',selections:selection?[selection]:[],anchors,artifacts:artifacts.map(artifact=>({...artifact,savedAt:new Date().toISOString()})),interactionState,graphViewport:null,mapView:mapView?.graphVersion===graph.graphVersion?mapView:{...initialView(graph.graphVersion),sourceScope:graph.analysis?'book':'excerpt'},readerPosition:{fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,startOffset:reader.current?.getReadingPosition()??0},bookmarks:selection?.anchorIds??[],savedAt:new Date().toISOString()});
       setSaved(snapshot);setNotice('Saved locally · view, passage and results.');
     }catch(error){setNotice(`Not saved: ${error instanceof Error?error.message:'Storage error'}`);}
     finally{await repository.close();}
@@ -119,7 +117,7 @@ export function Workspace({preview}:{preview:BookPreview}) {
               </div>
             </div>
             <div className="mt-4 space-y-3">{runs.filter(run=>run.status==='failed'||run.status==='cancelled').map(run=><div key={run.id} className="rounded-xl border border-line bg-mist p-4 text-xs text-warning"><strong>{routes.find(route=>route.kind===run.route)?.label}: {run.status}</strong><p className="mt-1">{run.error?.message}</p></div>)}{artifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</div>
-            {saved&&<div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-[11px] text-muted"><span>One local reading checkpoint · {saved.artifacts.length} results</span><Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);setMapAnchor(graph.anchors.find(a=>a.id===saved.mapView?.readerAnchorId)??null);setMapView(saved.mapView);setSelection(saved.selections[0]??null);setAnchors(saved.anchors);setArtifacts(saved.artifacts);setInteractionState(saved.interactionState);setRuns([]);setNotice('Opened the saved checkpoint.');const position=saved.readerPosition?.fileHash===preview.fileHash&&saved.readerPosition.extractionVersion===preview.extractionVersion?saved.readerPosition.startOffset:0;reader.current?.scrollToOffset(position,'smooth');}}>Revisit ↗</Button></div>}
+            {saved&&<div className="mt-5 flex items-center justify-between border-t border-line pt-4 text-[11px] text-muted"><span>One local reading checkpoint · {saved.artifacts.length} results</span><Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);setMapAnchor(graph.anchors.find(a=>a.id===saved.mapView?.readerAnchorId)??null);setMapView(saved.mapView?.graphVersion===graph.graphVersion?saved.mapView:null);setSelection(saved.selections[0]??null);setAnchors(saved.anchors);setArtifacts(saved.artifacts);setInteractionState(saved.interactionState);setRuns([]);setNotice('Opened the saved checkpoint.');const position=saved.readerPosition?.fileHash===preview.fileHash&&saved.readerPosition.extractionVersion===preview.extractionVersion?saved.readerPosition.startOffset:0;reader.current?.scrollToOffset(position,'smooth');}}>Revisit ↗</Button></div>}
           </div>
         </div>}
       </section>

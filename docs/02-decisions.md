@@ -15,6 +15,7 @@
 | D08 | 基础栈已确认；有界地图渲染器已实现 | TypeScript、React、Next.js App Router/Route Handlers、PDF.js（`pdfjs-dist`）、Zod、IndexedDB、React 组件 + SVG、Tailwind CSS；结构化模型路由 + 应用调度器，不引入 agent framework。本轮授权下经比较选用 React/SVG 三维坐标投影并移除 `@xyflow/react`；大图容量仍待验证 |
 | D10 | 交互 UI 运行边界已确认 | LLM 输出经 Zod 校验的配置/组件组合；只允许已测试组件注册表与预编译 Tailwind 变体，不执行任意模型代码或运行时 class |
 | D12 | 已确认 | 3D 坐标采用受约束动态语义：X=每书 3–7 个经证据支持的主题疆域；Y=具体细节→组织性结构；Z=可验证的来源进度。必须区分概念身份与带出处、带 Z 坐标的概念出现；位置不代替有类型、有证据的关系边 |
+| D13 | 设计已确认；本轮仅文档，待实现/测量 | 捏合缩放按阈值在叶节点与多层概括节点间连续转换；按视口加载并设显示上限；取消拖动自动缩放。LM 自底向上生成层级并自动提议深度，应用按实测预算校验。基线为 M1/M2 MacBook Air 与同档 Windows 集显笔记本，详见 [层级契约](14-semantic-zoom-hierarchy.md) |
 
 2026-09-05：用户明确授权更新文档并新增脚手架交接计划，未授权实现。四路意图、高亮输入、基础栈与受控交互 UI 是确认结果；不得重新降级为未确定愿景。
 
@@ -41,3 +42,5 @@
 2026-09-05 | User authorized scaffolding, delegation, local dev and visual verification, limited to finalized decisions and neutral foundations for open parts. Republic source acquisition is complete; demo processing scale, graph semantics and full-book analysis remain unverified. No routing policy, providers, search scope, activity metric or hosting was selected.
 
 2026-09-05 | D04/D08/D12 implementation | User authorized renderer evaluation and implementation using PoliMap meetings as reference. Selected React/SVG orthographic 3D projection; delivered source-backed editorial sample, camera/projection controls and checkpoint migration. See [implementation record](09-3d-implementation.md). Whole-book analysis and providers remain open.
+
+2026-09-05 | D13 | 设计确认，文档更新 | 用户要求先记录多层节点、捏合阈值、可逆聚合过渡、按视口加载与显示上限；取消拖动自动缩放；整书分析由 LM 自底向上生成概括并自动决定合适层数，实际性能由应用预算和基线设备测量约束 | `docs/14-semantic-zoom-hierarchy.md` 及产品空间、架构、分析、验收与 README 交叉引用。

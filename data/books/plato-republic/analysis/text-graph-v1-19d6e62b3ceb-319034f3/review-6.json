@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges were verified against the provided passages and context. Textual grounding, attributions, structural levels, and relation typings are accurate."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "4dObau7iCMuUvdAP-LyRyQc",
+  "usage": {
+    "promptTokenCount": 53112,
+    "candidatesTokenCount": 54,
+    "totalTokenCount": 53166,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53112
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54
+      }
+    ]
+  },
+  "durationMs": 3630,
+  "requestHash": "c2e2ea6414c0a30a1939f1231966971f5ead17d368fc069b1ed09e20b10e53c2"
+}

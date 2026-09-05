@@ -1,0 +1,51 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "e-32-3",
+        "reason": "Reversed relation direction: n-32-4 (the parable of the ship) is introduced by Socrates to explain and support Adeimantus' observation in n-32-3 (the public indictment that philosophers seem useless), but the relationship in the dialogue is Socrates addressing and explaining Adeimantus' objection; more specifically, as categorized, n-32-4 answers or challenges the claim of roguery/uselessness being inherent to the philosopher, or in the current edge scheme Source n-32-4 -> Target n-32-3 as 'supports' misrepresents the dialectical flow where Adeimantus' challenge motivates Socrates' parable."
+      },
+      {
+        "id": "e-34-2",
+        "reason": "Reversed or misplaced edge relation: n-34-3 introduces the four faculties of the soul, building upon the contrast of reason and understanding in n-34-2, so n-34-2 develops into n-34-3 rather than n-34-3 developing n-34-2."
+      },
+      {
+        "id": "cross-26",
+        "reason": "Reversed or inappropriate edge type across roles: dialogue passage n-31-4 is claimed to 'support' Jowett's editorial commentary n-8-4, whereas the commentary node analyzes/summarizes the dialogue."
+      },
+      {
+        "id": "cross-28",
+        "reason": "Incorrect edge relation type: n-33-5 (dialogue analogy of the sun) does not 'define' n-9-1 (commentary summary of the sun analogy)."
+      },
+      {
+        "id": "cross-29",
+        "reason": "Incorrect edge relation type: n-33-6 (dialogue presentation of the divided line) does not 'define' n-9-2 (commentary summary of the divided line)."
+      }
+    ],
+    "notes": "Reviewed candidate nodes and edges against cited text passages. The substantive textual summaries and attributions of the nodes are well grounded in the Platonic text. Several cross-chunk edges connecting dialogue nodes to editorial commentary summaries incorrectly used 'defines' or 'supports' across ontological source roles, and internal developmental directions on the Line faculties were inverted."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "7dObau62I9CSvdAPwKS2sAw",
+  "usage": {
+    "promptTokenCount": 36258,
+    "candidatesTokenCount": 543,
+    "totalTokenCount": 36801,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 36258
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 543
+      }
+    ]
+  },
+  "durationMs": 8473,
+  "requestHash": "54678734ce756f573af570d79317cb34017c23ff40573916f0b2125c80e4bf57"
+}

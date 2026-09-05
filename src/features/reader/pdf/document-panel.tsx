@@ -6,7 +6,7 @@ import { readDocumentPage, writeDocumentPage } from './document-cache';
 import { readPageCache } from './cache';
 import { extractNative, nativeItems } from './runtime';
 import { repairNativeSpacing } from './geometry';
-import { preparePage } from './model';
+import { assessText, PageTextSchema } from './model';
 import { createPdfSelection, type PdfSelection } from './selection';
 
 function download(name:string,body:string,type:string) {
@@ -43,8 +43,8 @@ export function DocumentPanel({doc,hash,title,onSelection,onJump}:{doc:PDFDocume
         signal.throwIfAborted();
         const result=prepareDocumentPage(index,native,repaired,recognized);
         await writeDocumentPage(hash,result).catch(()=>{if(alive.current)setNotice('Local cache unavailable. Keep this tab open or download your results.');});
-        // PDF.js shares page proxies with the reader; do not clean up a page
-        // that may currently be rendering there.
+        // PDF.js defers cleanup while a render is active (cleanup returns false).
+        page.cleanup();
         return result;
       },abort.signal,next=>{latest.current=next;if(alive.current)setValue(next);});
     } finally {controller.current=null;}
@@ -60,10 +60,10 @@ export function DocumentPanel({doc,hash,title,onSelection,onJump}:{doc:PDFDocume
       const source=current.source;
       // Share the reader's version when source text matches. Content hashes in
       // extractionId prevent rebinding if OCR subsequently changes that text.
-      const page=await preparePage({fileHash:hash,pageIndex:preview,language:'eng',native:source},async()=>source,new AbortController().signal);
-      page.version=current.extractionVersion??value.version;
-      page.reviewRequired=current.status!=='ready';
-      if(current.method==='ocr'){page.method='ocr';page.ocr=source;}
+      const page=PageTextSchema.parse({fileHash:hash,pageIndex:preview,language:'eng',native:source,source,
+        version:current.extractionVersion??value.version,method:current.method==='ocr'?'ocr':'embedded',
+        reason:current.method==='ocr'?'manual-ocr':'good-embedded',ocr:current.method==='ocr'?source:null,
+        quality:assessText(source),reviewRequired:current.status!=='ready',layout:null});
       onSelection(await createPdfSelection(hash,[page],{page:preview,offset:from},{page:preview,offset:to}));
       selection.removeAllRanges();
     } catch(error) {setNotice(error instanceof Error?error.message:'Could not select text');}
@@ -78,7 +78,7 @@ export function DocumentPanel({doc,hash,title,onSelection,onJump}:{doc:PDFDocume
     <h3>PDF to plain text</h3>
     <p>Extract all pages on this device. Embedded text comes first, then spacing repair. Pages needing OCR stay marked for later; previously recognized local text can be reused.</p>
     <div className="pdf-actions"><button disabled={value.status==='running'} onClick={()=>void run()}>{value.status==='idle'?'Extract all pages':'Resume / retry unresolved pages'}</button>{value.status==='running'&&<button onClick={()=>controller.current?.abort()}>Cancel extraction</button>}</div>
-    <p role="status">{coverage.processed} / {coverage.total} pages checked · {coverage.ready} ready · {coverage.review} need review · {coverage.deferred} OCR deferred · {coverage.failed} failed{value.status==='cancelled'?' · Cancelled':''}</p>
+    <p role="status">{coverage.processed} / {coverage.total} pages checked · {value.pages.filter(p=>p.source?.text.trim()).length} with text · {coverage.review} need review · {coverage.deferred} OCR deferred · {coverage.failed} failed{value.status==='cancelled'?' · Cancelled':''}</p>
     {notice&&<p role="status" className="pdf-warning">{notice}</p>}
     {coverage.processed>0&&<>
       <p className="pdf-small">{coverage.ready===coverage.total?'All pages have usable text by heuristic checks.':'Text is partial or needs review.'} Images are retained in the PDF; their content has not been analyzed. Download the coverage file alongside the text to retain page locations and missing-page status.</p>

@@ -1,0 +1,4 @@
+{
+  "attempt": 2,
+  "error": "Every occurrence must have exactly one theme; assignments missing, duplicated, or unknown."
+}

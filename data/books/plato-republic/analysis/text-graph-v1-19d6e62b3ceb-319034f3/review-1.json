@@ -1,0 +1,35 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "cross-1",
+        "reason": "Reversed edge direction or inappropriate relation type: n-4-1 is commentary reflecting on the dialogue, so n-4-1 does not develop the dialogue node n-19-3; rather n-19-3 exemplifies or provides the primary textual source for n-4-1."
+      }
+    ],
+    "notes": "Target nodes correctly capture their respective passages and reflect appropriate levels, roles, and themes. Edge cross-1 connects a commentary summary to the dialogue passage it discusses, mischaracterizing the relationship as 'develops' from commentary to original dialogue."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2dObapX8KaGdx9gP1MGDcA",
+  "usage": {
+    "promptTokenCount": 43630,
+    "candidatesTokenCount": 157,
+    "totalTokenCount": 43787,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 43630
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 157
+      }
+    ]
+  },
+  "durationMs": 4983,
+  "requestHash": "ef0648bdcf099e7d8d2b7b0d5e8f22affa29401debf21219c22dcf78a08f0759"
+}

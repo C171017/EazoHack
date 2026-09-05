@@ -1,0 +1,45 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-12-6",
+        "identityIndex": 66
+      },
+      {
+        "nodeId": "n-14-6",
+        "identityIndex": 75
+      },
+      {
+        "nodeId": "n-23-4",
+        "identityIndex": 17
+      },
+      {
+        "nodeId": "n-39-4",
+        "identityIndex": 64
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "1tObarOUDduTx9gPvbXwqQo",
+  "usage": {
+    "promptTokenCount": 18586,
+    "candidatesTokenCount": 128,
+    "totalTokenCount": 18714,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 18586
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 128
+      }
+    ]
+  },
+  "durationMs": 4010,
+  "requestHash": "daad5079ce220b64caacb46302e00145758ae00fdf3b791d1797e67a5f8694df"
+}

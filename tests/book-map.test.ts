@@ -61,7 +61,9 @@ test('excerpt range changes camera scale, never source coordinates',()=>{
 test('overlapping projection labels separate without moving semantic points',()=>{
   const points=Array.from({length:9},(_,i)=>({id:String(i),x:100,y:100,label:`Occurrence ${i}`}));
   const placed=placeLabels(points,700,500);
-  assert.equal(new Set(placed.map(p=>p.labelY)).size,9);
+  for(const [i,a] of placed.entries())for(const b of placed.slice(i+1)) {
+    assert.ok(a.labelX+a.width<=b.labelX || b.labelX+b.width<=a.labelX || a.labelY+26<=b.labelY || b.labelY+26<=a.labelY);
+  }
   assert.ok(placed.every(p=>p.x===100&&p.y===100));
 });
 test('saved 3D view round-trips and old 2D checkpoints remain readable',()=>{

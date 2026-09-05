@@ -1,6 +1,6 @@
 import { assessText, PDF_PIPELINE_VERSION, TextSourceSchema, type PageText, type TextSource } from './model';
 
-export const DOCUMENT_TEXT_VERSION = 'pdf-document-text-v2';
+export const DOCUMENT_TEXT_VERSION = 'pdf-document-text-v3';
 export type DocumentPage = {
   pageIndex: number;
   status: 'pending' | 'ready' | 'needs-review' | 'ocr-deferred' | 'failed';

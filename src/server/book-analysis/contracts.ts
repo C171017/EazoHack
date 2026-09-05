@@ -28,6 +28,7 @@ export const SynthesisSchema = z.object({
   }).strict()).max(30),
 }).strict();
 export type Synthesis = z.infer<typeof SynthesisSchema>;
+export const IdentityRepairSchema = z.object({ assignments: z.array(z.object({ nodeId: z.string(), identityIndex: z.number().int().nonnegative().nullable() }).strict()).min(1).max(500) }).strict();
 export const ReviewSchema = z.object({
   rejectedNodes: z.array(z.object({ id: z.string(), reason: Note }).strict()),
   rejectedEdges: z.array(z.object({ id: z.string(), reason: Note }).strict()),

@@ -1,0 +1,4 @@
+{
+  "attempt": 3,
+  "error": "Every occurrence must have exactly one identity; assignments missing, duplicated, or unknown."
+}
