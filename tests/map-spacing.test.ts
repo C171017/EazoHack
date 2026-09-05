@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { MapViewSchema } from '../src/shared/schemas';
 import { type Hierarchy, type MapEntry, clusterEntry } from '../src/shared/zoom-hierarchy';
-import { initialView, orientation, placeLabels } from '../src/features/book-graph/projection';
+import { initialView, orientation, placeLabels, placeClusterHandles } from '../src/features/book-graph/projection';
 import { fitEntries } from '../src/features/book-graph/map-framing';
 import { semanticWindow, toScreen, zoomAt } from '../src/features/book-graph/semantic-window';
 
@@ -60,4 +60,13 @@ test('spare space expands children early, crowding retains the parent, and expli
   assert.deepEqual(semanticWindow([crowded],pages,view,size,[0,1],2).nodes.map(n=>n.id),['parent']);
   assert.deepEqual(semanticWindow([crowded],pages,{...view,selectedNodeId:'parent'},size,[0,1],2).nodes.map(n=>n.id),['a','b']);
   assert.deepEqual(semanticWindow([parent],new Map(),view,size,[0,1],0).wanted,['parent']);
+});
+
+test('cluster offsets are bounded, deterministic and preserve semantic anchors beside controls',()=>{
+  const input=[{id:'b',x:200,y:200,radius:15,cluster:true},{id:'a',x:200,y:200,radius:15,cluster:true}];
+  const control={x:180,y:165,width:40,height:70};
+  const result=placeClusterHandles(input,704,720,[control]);
+  for(const p of result){assert.equal(p.anchorX,200);assert.equal(p.anchorY,200);assert.ok(Math.hypot(p.x-200,p.y-200)<=64.001);assert.ok(p.x<control.x||p.x>control.x+control.width||p.y<control.y||p.y>control.y+control.height);}
+  assert.ok(Math.hypot(result[0].x-result[1].x,result[0].y-result[1].y)>40);
+  assert.deepEqual(placeClusterHandles([...input].reverse(),704,720,[control]).reverse(),result);
 });

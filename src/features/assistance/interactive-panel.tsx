@@ -38,7 +38,7 @@ export function InteractivePanel({ config, state, onStateChange }: { config: Pan
       <div className="flex flex-wrap gap-2">
         {explorer.states.map((item, i) => <button key={i} type="button" aria-pressed={i === index} aria-controls={`${id}-result`}
           className={`${buttonClass} ${i === index ? 'enhancement-heading bg-mist font-medium' : 'text-muted'}`}
-          onClick={() => select(i)}>{isSequence ? `${i + 1}. ` : ''}{item.label}</button>)}
+          onClick={() => select(i)}>{isSequence ? `${i + 1}. ${item.label.replace(/^\(?\d+[.)]\s+/u, '')}` : item.label}</button>)}
       </div>
     </fieldset>
     {isSequence ? <div className="space-y-2">

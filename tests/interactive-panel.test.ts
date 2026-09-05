@@ -84,7 +84,9 @@ test('explorer renders changing results, baseline comparison, escaped text, and 
   assert.ok(!render({ activeIndex: 1 }).includes('<img'));
   config.explorer.mode = 'sequence';
   config.explorer.states[1].basis = 'passage';
+  config.explorer.states[1].label = '2. Explore the consequence';
   const sequence = render({ activeIndex: 1 });
+  assert.ok(!sequence.includes('2. 2.'));
   assert.match(sequence, /type="range"/);
   assert.match(sequence, /aria-valuetext="Step 2:/);
   assert.match(sequence, /disabled="">Next step/);

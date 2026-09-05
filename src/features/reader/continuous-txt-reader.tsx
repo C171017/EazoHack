@@ -53,9 +53,14 @@ const TxtChunk = memo(function TxtChunk({
     data-txt-start={chunk.startOffset}
     data-txt-end={chunk.endOffset}
   >
-    {chunk.blocks.map(block => <div id={block.id} key={block.id} className={block.continuation ? 'txt-source-block txt-source-block-continuation' : 'txt-source-block'}>
+    {chunk.blocks.map(block => <div id={block.id} key={block.id}
+      data-txt-kind={block.kind}
+      className={`txt-source-block${block.continuation ? ' txt-source-block-continuation' : ''}`}>
       {splitSourceRange(block.startOffset, block.endOffset, slots.map(s=>s.offset)).map(part=>{
       return <Fragment key={part.startOffset}><span
+        className="txt-source-content"
+        role={['title', 'heading', 'subheading'].includes(block.kind) ? 'heading' : undefined}
+        aria-level={block.kind === 'subheading' ? 3 : ['title', 'heading'].includes(block.kind) ? 2 : undefined}
         data-txt-block
         data-txt-start={part.startOffset}
         data-txt-end={part.endOffset}
@@ -149,7 +154,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   onEnhance: (route: RouteKind) => void;
   enhancementBusy: boolean;
 }>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
-  const chunks = useMemo(() => createTxtRenderChunks(sourceText), [sourceText]);
+  const chunks = useMemo(() => createTxtRenderChunks(sourceText, undefined, title), [sourceText, title]);
   const chunkEnhancements = useMemo(() => chunks.map(chunk => {
     const matches = enhancements.filter(h => h.startOffset < chunk.endOffset && h.endOffset > chunk.startOffset);
     return matches.length ? matches : EMPTY_HIGHLIGHTS;

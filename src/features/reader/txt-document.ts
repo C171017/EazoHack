@@ -1,3 +1,5 @@
+import { formatTxtRanges, type TxtBlockKind } from './txt-formatting';
+
 export const TXT_RENDER_CHUNK_TARGET = 16_000;
 
 export type TxtBlock = {
@@ -5,6 +7,7 @@ export type TxtBlock = {
   startOffset: number;
   endOffset: number;
   continuation: boolean;
+  kind: TxtBlockKind;
 };
 
 export type TxtRenderChunk = {
@@ -14,12 +17,10 @@ export type TxtRenderChunk = {
   blocks: TxtBlock[];
 };
 
-function paragraphBlocks(text: string, targetSize: number): TxtBlock[] {
+function paragraphBlocks(text: string, targetSize: number, title?: string): TxtBlock[] {
   const blocks: TxtBlock[] = [];
-  let start = 0;
-  const separator = /\n{2,}/g;
 
-  function addBlock(blockStart: number, blockEnd: number) {
+  function addBlock(blockStart: number, blockEnd: number, kind: TxtBlockKind) {
     let cursor = blockStart;
     let continuation = false;
     while (blockEnd - cursor > targetSize * 2) {
@@ -31,6 +32,7 @@ function paragraphBlocks(text: string, targetSize: number): TxtBlock[] {
         startOffset: cursor,
         endOffset: split,
         continuation,
+        kind,
       });
       cursor = split;
       continuation = true;
@@ -41,16 +43,14 @@ function paragraphBlocks(text: string, targetSize: number): TxtBlock[] {
         startOffset: cursor,
         endOffset: blockEnd,
         continuation,
+        kind,
       });
     }
   }
 
-  for (const match of text.matchAll(separator)) {
-    const end = (match.index ?? start) + match[0].length;
-    addBlock(start, end);
-    start = end;
+  for (const range of formatTxtRanges(text, title)) {
+    addBlock(range.startOffset, range.endOffset, range.kind);
   }
-  if (start < text.length) addBlock(start, text.length);
   return blocks;
 }
 
@@ -61,6 +61,7 @@ function paragraphBlocks(text: string, targetSize: number): TxtBlock[] {
 export function createTxtRenderChunks(
   text: string,
   targetSize = TXT_RENDER_CHUNK_TARGET,
+  title?: string,
 ): TxtRenderChunk[] {
   if (!text.length) return [];
   if (!Number.isSafeInteger(targetSize) || targetSize < 1_000) {
@@ -85,7 +86,7 @@ export function createTxtRenderChunks(
     currentSize = 0;
   };
 
-  for (const block of paragraphBlocks(text, targetSize)) {
+  for (const block of paragraphBlocks(text, targetSize, title)) {
     const size = block.endOffset - block.startOffset;
     if (current.length && currentSize + size > targetSize) flush();
     current.push(block);

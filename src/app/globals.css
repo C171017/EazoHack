@@ -165,6 +165,83 @@
   margin-bottom: 1.5rem;
 }
 
+.txt-source-content { display: block; }
+
+/* A fixed typographic hierarchy, driven by source-formatting rules. Styling
+   stays on source spans so inserted assistance keeps its own presentation. */
+.txt-source-block[data-txt-kind='title'] > .txt-source-content {
+  margin-block: 2.25rem 1.75rem;
+  font-size: 1.75em;
+  line-height: 1.25;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.txt-source-block[data-txt-kind='heading'] > .txt-source-content {
+  margin-block: 3rem 1.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--color-line);
+  font-size: 1.45em;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.025em;
+  text-wrap: balance;
+}
+
+.txt-source-block[data-txt-kind='subheading'] > .txt-source-content {
+  margin-block: 2rem 0.75rem;
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.4;
+  text-wrap: balance;
+}
+
+.txt-source-block[data-txt-kind='frontmatter'] { margin-bottom: 0.75rem; }
+.txt-source-block[data-txt-kind='frontmatter'] > .txt-source-content {
+  font-size: 0.82em;
+  line-height: 1.65;
+  letter-spacing: 0.035em;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.txt-source-block[data-txt-kind='dedication'] > .txt-source-content {
+  max-width: 30em;
+  margin: 2.5rem auto;
+  font-size: 0.85em;
+  line-height: 1.8;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.txt-source-block[data-txt-kind='metadata'] > .txt-source-content {
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.63em;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.txt-source-block[data-txt-kind='note'] > .txt-source-content {
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--color-line);
+  font-size: 0.85em;
+  line-height: 1.65;
+}
+
+.txt-source-block[data-txt-kind='separator'] > .txt-source-content {
+  margin-block: 2rem;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.txt-source-block:is([data-txt-kind='verse'], [data-txt-kind='list']) > .txt-source-content {
+  white-space: pre-line;
+  padding-inline-start: 1.25rem;
+  line-height: 1.65;
+}
+
 /* Assistance sits outside source spans so source offsets remain immutable. */
 .reader-artifact { margin: 1rem 0; font-family: sans-serif; line-height: 1.5; font-size: 14px; overflow-wrap: anywhere; }
 .reader-artifact button { cursor: pointer; }
