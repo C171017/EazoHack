@@ -6,6 +6,7 @@
 .option:hover, .option:focus-visible { background: color-mix(in srgb, var(--enhancement-color) 18%, var(--color-paper)); }
 .option:focus-visible { outline: 2px solid var(--enhancement-color); outline-offset: 3px; }
 .option[aria-disabled='true'] { cursor: not-allowed; }
+.shortcut { position: absolute; bottom: -8px; padding: 1px 4px; border-radius: 4px; background: var(--color-paper); color: var(--enhancement-color); font: 10px/1.2 Arial,sans-serif; pointer-events: none; }
 .tooltip { position: absolute; top: 54px; width: max-content; max-width: 200px; padding: 6px 9px; border-radius: 7px; background: var(--color-paper); color: var(--color-ink); font: 12px/1.5 Arial,sans-serif; box-shadow: 0 3px 14px #0001; opacity: 0; visibility: hidden; pointer-events: none; }
 .option:first-child .tooltip { left: 0; }
 .option:last-child .tooltip { right: 0; }

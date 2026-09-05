@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
-import { initialView, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, placeLabels, PROJECTIONS, project, type Point3 } from './projection';
+import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, placeLabels, PROJECTIONS, project, type Point3 } from './projection';
 import { MapGrid } from './map-grid';
 import { baseScale, semanticWindow, toScreen, zoomAt, zoomCentered, zoomLevel } from './semantic-window';
 import { readMap, useMapPages, useMapRequest } from './map-data';
@@ -17,7 +17,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   const current=useMemo<MapView>(()=>{
     if(view?.graphVersion!==graph.graphVersion||(view.hierarchyVersion&&view.hierarchyVersion!==graph.version))return {...initialView(graph.graphVersion),hierarchyVersion:graph.version,sourceScope:'book' as const};
     const migrated=view.axisConvention==='z-up-v1'?view:{...view,...orientation(view.projection),axisConvention:'z-up-v1' as const};
-    return {...migrated,themeFilter:null,roleFilter:null,sourceScope:'book',zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,migrated.zoom)),...(migrated.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!migrated.hierarchyVersion&&migrated.selectedNodeId?.startsWith('h-')?null:migrated.selectedNodeId};
+    return {...migrated,...confineCamera(migrated),themeFilter:null,roleFilter:null,sourceScope:'book',zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,migrated.zoom)),...(migrated.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!migrated.hierarchyVersion&&migrated.selectedNodeId?.startsWith('h-')?null:migrated.selectedNodeId};
   },[view,graph.graphVersion,graph.version]);
   const [size,setSize]=useState({width:800,height:550});
   const [previousLevel,setPreviousLevel]=useState(0),[navigationError,setNavigationError]=useState<string|null>(null);
@@ -90,8 +90,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   }
   function settle(from:MapView,target:Pick<MapView,'projection'|'yaw'|'pitch'>) {
     cancelMotion();
-    const yaw=target.yaw+Math.round((from.yaw-target.yaw)/(2*Math.PI))*2*Math.PI;
-    const finish={...from,...target,yaw};
+    const finish={...from,...target,...confineCamera(target)};
     const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(finish);return;}
     let start:number|undefined;const animate=(now:number)=>{
@@ -172,7 +171,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
         onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Pinch to expand or group ideas. Scroll with two fingers to pan. Drag to orbit; Shift-drag pans. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. Vertical position means progression through the source; depth means structure, not importance.</desc>
+        <desc>Pinch to expand or group ideas. Scroll with two fingers to pan. Drag to orbit within the three grid fences; Shift-drag pans. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. Vertical position means progression through the source; depth means structure, not importance.</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8ca996"/></marker></defs>
         <MapGrid screen={screen}/>
         <g aria-hidden="true">{edges.data?.links.map(edge=>{const a=points.find(p=>p.id===edge.source&&!p.exiting),b=points.find(p=>p.id===edge.target&&!p.exiting);return a&&b?<line key={edge.id} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line>:null;})}</g>

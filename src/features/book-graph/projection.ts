@@ -8,11 +8,16 @@ export const PROJECTIONS = [
   {id:'yz',label:'Y × Z',hint:'Structure development'},
 ] as const;
 export const DEFAULT_CAMERA = {yaw:-0.58,pitch:0.36};
+// The default view looks into the positive XYZ octant bounded by the grids.
+// Orthographic pan/zoom only change framing; these angles fix the viewing side.
+export function confineCamera(camera:Pick<MapView,'yaw'|'pitch'>) {
+  return {yaw:Math.max(-Math.PI/2,Math.min(0,camera.yaw)),pitch:Math.max(0,Math.min(Math.PI/2,camera.pitch))};
+}
 export function initialView(graphVersion: string): MapView {
   return {graphVersion,projection:'3d',axisConvention:'z-up-v1',...DEFAULT_CAMERA,x:0,y:0,zoom:1,selectedNodeId:null,readerAnchorId:null,sourceScope:'excerpt'};
 }
 export function orientation(projection: MapView['projection']) {
-  return projection === 'xz' ? {yaw:0,pitch:0} : projection === 'xy' ? {yaw:0,pitch:-Math.PI/2} : projection === 'yz' ? {yaw:Math.PI/2,pitch:0} : DEFAULT_CAMERA;
+  return projection === 'xz' ? {yaw:0,pitch:0} : projection === 'xy' ? {yaw:0,pitch:Math.PI/2} : projection === 'yz' ? {yaw:-Math.PI/2,pitch:0} : DEFAULT_CAMERA;
 }
 // Orthographic Z-up camera: X is horizontal, Z/source is vertical, and
 // Y/structure supplies depth. Semantic coordinates are never recalculated.
@@ -51,22 +56,18 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string}
 export const SNAP_ENTER = (48 * Math.PI) / 180;
 export type SnapTarget = {projection:'xy'|'xz'|'yz';yaw:number;pitch:number;distance:number};
 export function nearestProjection(camera:Pick<MapView,'yaw'|'pitch'>):SnapTarget {
-  const quarter=Math.PI/2;
-  const yaw=Math.round(camera.yaw/quarter)*quarter;
-  const side:SnapTarget={projection:Math.abs(Math.round(yaw/quarter)%2)===0?'xz':'yz',yaw,pitch:0,distance:Math.hypot(camera.yaw-yaw,camera.pitch)};
-  const pitch=camera.pitch<0?-quarter:quarter;
-  // Top capture (X x Y, looking along vertical Z) depends only on tilt. Once released, settle to the nearest
-  // perpendicular heading (at most 45 degrees), including reversed views.
-  const top:SnapTarget={projection:'xy',yaw,pitch,distance:Math.abs(camera.pitch-pitch)};
+  const pose=confineCamera(camera),quarter=Math.PI/2;
+  const yaw=pose.yaw<-quarter/2?-quarter:0;
+  const side:SnapTarget={projection:yaw===0?'xz':'yz',yaw,pitch:0,distance:Math.hypot(pose.yaw-yaw,pose.pitch)};
+  const top:SnapTarget={projection:'xy',yaw,pitch:quarter,distance:quarter-pose.pitch};
   return side.distance<=top.distance?side:top;
 }
 export function orbitFrom(start:Pick<MapView,'yaw'|'pitch'>,dx:number,dy:number) {
-  const pole=Math.PI/2;
-  // Always preserve input direction, even when another gesture starts at a pole.
-  const requested=start.pitch+dy*.006;
-  const pitch=Math.max(-pole,Math.min(pole,requested));
-  return {yaw:start.yaw+dx*.006,pitch};
+  const pose=confineCamera(start);
+  // Clamp each incremental input so a fence never accumulates an overshoot.
+  return confineCamera({yaw:pose.yaw+dx*.006,pitch:pose.pitch+dy*.006});
 }
+
 function distanceToPlane(camera:Pick<MapView,'yaw'|'pitch'>,target:SnapTarget) {
   return target.projection==='xy'?Math.abs(camera.pitch-target.pitch):Math.hypot(camera.yaw-target.yaw,camera.pitch-target.pitch);
 }
@@ -77,6 +78,7 @@ export function approachingProjection(from:Pick<MapView,'yaw'|'pitch'>,to:Pick<M
   return target.distance<=SNAP_ENTER&&target.distance<=distanceToPlane(from,target)+1e-8?target:null;
 }
 export function magneticPose(camera:Pick<MapView,'yaw'|'pitch'>,previous?:Pick<MapView,'yaw'|'pitch'>) {
+  camera=confineCamera(camera);
   const target=nearestProjection(camera);
   if(previous&&target.distance>distanceToPlane(previous,target)+1e-8)return {yaw:camera.yaw,pitch:camera.pitch};
   const proximity=Math.max(0,1-target.distance/SNAP_ENTER);
@@ -87,7 +89,7 @@ export function magneticPose(camera:Pick<MapView,'yaw'|'pitch'>,previous?:Pick<M
 type CameraPose=Pick<MapView,'yaw'|'pitch'>;
 export type OrbitMotion={raw:CameraPose;display:CameraPose;previous:CameraPose;directionX:number;directionY:number};
 export function beginOrbit(camera:CameraPose):OrbitMotion {
-  const pose={yaw:camera.yaw,pitch:camera.pitch};
+  const pose=confineCamera(camera);
   return {raw:pose,display:pose,previous:pose,directionX:0,directionY:0};
 }
 export function advanceOrbit(motion:OrbitMotion,dx:number,dy:number):OrbitMotion {
