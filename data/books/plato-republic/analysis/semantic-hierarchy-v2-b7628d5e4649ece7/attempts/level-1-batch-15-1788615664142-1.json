@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-25-7",
+          "n-27-2",
+          "n-28-4",
+          "n-28-5",
+          "n-29-3"
+        ],
+        "label": "Civic Order and Soul Harmony",
+        "summary": "Socrates describes justice and virtue as internal systemic harmonies balancing bodily and spirited elements within both individuals and the state. Proper civic arrangement directs diverse natures toward collective well-being rather than segmented benefit.",
+        "rationale": "These Book III–V passages address the internal structural harmony of the city and soul, emphasizing balanced education, natural aptitudes, and systemic health."
+      },
+      {
+        "childIds": [
+          "n-32-2",
+          "n-32-5",
+          "n-32-8",
+          "n-33-1",
+          "n-33-2"
+        ],
+        "label": "Nature and Education of Rulers",
+        "summary": "Discussions center on the innate disposition of true philosophers and the societal corruptions that deform their development under ordinary regimes. Socrates prescribes a rigorous, lifelong educational scheme to protect potential rulers and reconcile public suspicion with genuine wisdom.",
+        "rationale": "A close group of Book VI passages examining the philosophical character, its vulnerability to cultural corruption, its proper life stages of training, and its relation to the multitude."
+      },
+      {
+        "childIds": [
+          "n-34-2",
+          "n-35-5",
+          "n-36-3"
+        ],
+        "label": "Dialectical Ascent and Rule",
+        "summary": "Dialectic is distinguished from hypothetical sciences as the supreme study ascending directly to the first principle and the Good. Once philosophers attain this vision, they must return to civic governance to order the commonwealth justly.",
+        "rationale": "Coherent thematic transition from Books VI–VII covering the highest stage of cognition (dialectic) and the obligation of enlightened thinkers to govern."
+      },
+      {
+        "childIds": [
+          "n-37-1"
+        ],
+        "label": "Four Imperfect Constitutions",
+        "summary": "Socrates resumes the project of comparing four principal inferior constitutions—Cretan/Spartan (timocracy), oligarchy, democracy, and tyranny—and their matching human characters to determine the relative happiness of justice versus injustice.",
+        "rationale": "This Book VIII opening marks a distinct transition to the analysis of political decline and degenerating regimes, standing separate from the surrounding epistemology and aesthetics."
+      },
+      {
+        "childIds": [
+          "n-41-1",
+          "n-41-3",
+          "n-41-5",
+          "n-41-6"
+        ],
+        "label": "Critique of Mimetic Poetry",
+        "summary": "Socrates rejects imitative arts, arguing they produce illusions twice removed from truth and foster irrational passions within the human soul. This longstanding conflict between philosophy and poetry permits the latter's return only if its moral utility can be demonstrated.",
+        "rationale": "These Book X passages form a unified critique of mimetic art and dramatic poetry based on metaphysical distance from forms and psychological destabilization."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "6Bucau2lHemj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 12130,
+    "candidatesTokenCount": 699,
+    "totalTokenCount": 12829,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12130
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 699
+      }
+    ]
+  },
+  "durationMs": 8103,
+  "requestHash": "c28363ded5057c936debce9b32ad23b10b66df5cdd0ee3beb3e22e97d41bf74d"
+}

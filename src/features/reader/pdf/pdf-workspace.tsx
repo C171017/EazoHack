@@ -11,6 +11,7 @@ import { loadPdfRuntime } from './runtime';
 import { validateLayout, type PageText } from './model';
 import { writePageCache } from './cache';
 import { extractionId, type PdfSelection } from './selection';
+import { recordSelectionActivity } from '../../persistence/selection-activity';
 import './pdf.css';
 
 type Input = { id:number; title:string; hash:string; data?:Uint8Array };
@@ -93,7 +94,11 @@ function PdfSession({input}:{input:Input}) {
     return()=>{alive=false;for(const c of pending)c.abort();void task?.destroy();};
   },[input]);
   const updatePage=useCallback((p:PageText)=>setPage(p),[]);
-  const select=useCallback((value:PdfSelection)=>{generation.current++;setChosen(value);setArtifacts([]);setAssistBusy(false);setNotice(value.provenance.some(p=>p.reviewRequired)?'Check the recognized quotation against the page before using it.':'Passage selected.');},[]);
+  const select=useCallback((value:PdfSelection)=>{
+    generation.current++;setChosen(value);setArtifacts([]);setAssistBusy(false);
+    setNotice(value.provenance.some(p=>p.reviewRequired)?'Check the recognized quotation against the page before using it.':'Passage selected.');
+    void recordSelectionActivity(value.selection,value.anchors).catch(()=>setNotice('Passage selected, but its selection time could not be saved on this device.'));
+  },[]);
   function save() {
     try {
       localStorage.setItem(`eazo-pdf-checkpoint:${input.hash}`,JSON.stringify({hash:input.hash,page:currentPage,selection:chosen?.selection??null,anchors:chosen?.anchors??[],provenance:chosen?.provenance??[]}));

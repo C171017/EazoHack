@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-4-3",
+          "n-19-4",
+          "n-19-6",
+          "n-20-1",
+          "n-20-2",
+          "n-20-3"
+        ],
+        "label": "Rulership, Interest, and Justice",
+        "summary": "Commentary and dialogue from Book I explore competing accounts of justice, contrasting Polemarchus's definition of aiding friends and harming foes with Thrasymachus's claim that justice serves the stronger ruler. Socrates counters by arguing that true arts and rulers inherently minister to the welfare of their subjects rather than themselves.",
+        "rationale": "Gathers Book I discussions and introductory commentary analyzing definitions of justice based on power, ruler advantage, and craft service."
+      },
+      {
+        "childIds": [
+          "n-20-4",
+          "n-20-5",
+          "n-20-6",
+          "n-21-1"
+        ],
+        "label": "Virtue, Soul, and Common Action",
+        "summary": "Socrates refutes Thrasymachus by showing that true craftsmen do not seek to overreach their peers and that injustice engenders discord that prevents united action. He identifies justice as the proper excellence and functioning of the soul, contrasting it with the weakness of injustice.",
+        "rationale": "Collects the concluding sequence of Book I arguments where Socrates establishes the virtue of justice through the non-overreaching craftsman, social cohesion, and the soul's function."
+      },
+      {
+        "childIds": [
+          "n-22-1",
+          "n-22-7"
+        ],
+        "label": "Origins of Needs and Goods",
+        "summary": "Glaucon introduces a threefold taxonomy of goods to probe the nature of justice, while Socrates outlines the emergence of the state from fundamental human interdependence and material needs.",
+        "rationale": "Combines early Book II foundational inquiries regarding the categorization of goods and the mutual needs generating human society."
+      },
+      {
+        "childIds": [
+          "n-14-2",
+          "n-15-4",
+          "n-16-7",
+          "n-17-2",
+          "n-17-3",
+          "n-17-4"
+        ],
+        "label": "Philosophic and Civic Education",
+        "summary": "Introductory commentaries analyze Plato's holistic proposals for human development, covering the moral role of poetry, equal physical and mental training for women, and the integration of music and gymnastic. The essays also address advanced education culminating in the dialectical vision of the good, the challenge of lifelong self-improvement, and ancient cyclical conceptions of history.",
+        "rationale": "Synthesizes the thematic cluster of introductory commentaries evaluating Platonic education, social roles, dialectic, and the historical outlook of antiquity."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "whucaq29GKyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 15428,
+    "candidatesTokenCount": 584,
+    "totalTokenCount": 16012,
+    "cachedContentTokenCount": 11640,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15428
+      }
+    ],
+    "cacheTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11640
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 584
+      }
+    ]
+  },
+  "durationMs": 7422,
+  "requestHash": "a7816916a3d4636bb7500f51842f27b7dc87fe2f8b405e723788b078d7f32b8a"
+}

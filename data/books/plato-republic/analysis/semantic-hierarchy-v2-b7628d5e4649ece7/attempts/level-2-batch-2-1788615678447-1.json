@@ -1,0 +1,91 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-6-1",
+          "h-level-1-batch-5-2",
+          "h-level-1-batch-7-1"
+        ],
+        "label": "Civic Class Roles & Guardian Life",
+        "summary": "Socrates establishes civic virtues through functional specialization, judicial observation, and class division reinforced by the Myth of the Metals. Stringent curbs on dramatic imitation and private property are placed upon the guardians, prompting Adeimantus to question whether defenders denied personal wealth can be happy.",
+        "rationale": "These clusters cover Books III-IV debates on city classes, the selection and mythic justification of rulers and auxiliaries, and the austere conditions imposed on guardians."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-5-3",
+          "h-level-1-batch-7-2",
+          "h-level-1-batch-6-2"
+        ],
+        "label": "Gender, Community & Warfare",
+        "summary": "In response to Adeimantus's interruptions regarding the sharing of women and children, Socrates proposes equal education and administrative roles for women and establishes communal family structures to maximize civic cohesion. He further prescribes regulations governing inter-Hellenic conflict, distinguishing internal discord from foreign war.",
+        "rationale": "These clusters encompass the Book V transition where communal life, female guardians, and Hellenic rules of warfare are presented in reply to interlocutors' demands."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-3",
+          "h-level-1-batch-7-3",
+          "h-level-1-batch-7-4",
+          "h-level-1-batch-8-1"
+        ],
+        "label": "Philosopher-Kings & Curriculum",
+        "summary": "Socrates defines true philosophers by their devotion to eternal truth rather than sensory imitations, defending the feasibility of philosopher-rulers over corrupt alternatives. To educate them, he lays out a rigorous higher curriculum progressing through mathematical sciences to dialectic, guarded by strict age requirements.",
+        "rationale": "These clusters unify Books V through VII discussions defining the philosophical nature, the political legitimacy of philosopher-rulers, and the sequential curriculum of higher abstract education."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-2",
+          "h-level-1-batch-8-3",
+          "h-level-1-batch-8-4",
+          "n-39-7",
+          "n-40-2"
+        ],
+        "label": "Regime Decline & True Pleasure",
+        "summary": "Socrates charts the generational degeneration of regimes and corresponding psychological types through timocracy, oligarchy, democracy, and tyranny. He contrasts the enslaved, miserable existence of the tyrant with the superior, unmixed pleasures experienced by the philosopher, concluding with mathematical comparisons of their respective happiness.",
+        "rationale": "This sequence addresses the political and psychological decline across Books VIII and IX, capped by the analytical and mathematical assessments of tyrannical versus philosophical pleasure."
+      },
+      {
+        "childIds": [
+          "n-42-5"
+        ],
+        "label": "Cosmic Spindle of Necessity",
+        "summary": "Souls witness the cosmic structure turned by the spindle of Necessity, governed by eight rotating concentric whorls, the sirens' harmonies, and the three Fates who guide past, present, and future.",
+        "rationale": "This single occurrence presents the cosmic vision in the Myth of Er at the end of Book X and remains separate from the political and editorial commentary groups."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-5",
+          "h-level-1-batch-5-5",
+          "h-level-1-batch-6-6",
+          "n-46-5"
+        ],
+        "label": "Editorial Apparatus & Notes",
+        "summary": "Modern editorial commentary and index entries synthesize Plato's views on poetry, art censorship, guardian requirements, and the composite historical elements of the ideal state. In addition, transcriber editorial notes explain typographic adjustments, collation practices, and Greek transliteration systems.",
+        "rationale": "This group gathers paratextual and editorial apparatus material at the close of the volume, spanning commentary analyses, thematic index entries, and transcription notes."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9RucavWZCv6j0ckPo6j4sA0",
+  "usage": {
+    "promptTokenCount": 38085,
+    "candidatesTokenCount": 1031,
+    "totalTokenCount": 39116,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 38085
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1031
+      }
+    ]
+  },
+  "durationMs": 9667,
+  "requestHash": "cdedd40ab07d5db1cdf84f95e25c5a095fe7f91d681c7738c2a5c489d018f72a"
+}

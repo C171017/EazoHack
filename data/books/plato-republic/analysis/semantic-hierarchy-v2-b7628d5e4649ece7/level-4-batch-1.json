@@ -1,0 +1,73 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-3-batch-1-2",
+          "h-level-3-batch-2-1"
+        ],
+        "label": "Commentary on Dialectic & State",
+        "summary": "These analytical essays and critical commentaries examine the structural architecture and core philosophical doctrines of the Republic. They trace the evolution of Platonic ethics, the metaphysics of the philosopher-king and the Good, comparative utopian traditions, and regime decay.",
+        "rationale": "Brings together comprehensive modern scholarly overviews and thematic commentaries that evaluate Plato's philosophical architecture and political theory from an external, analytical perspective."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-3",
+          "h-level-3-batch-2-2"
+        ],
+        "label": "Genesis of Justice and State",
+        "summary": "Focusing on Books I through IV, these dialogues and commentaries explore initial disputes regarding justice, its definition in the soul, and the construction of the primitive through luxurious commonwealth. They chart early civic education, theological and poetic censorship, and the alignment of the tripartite soul with civic virtues.",
+        "rationale": "Unites the dialogue sections and accompanying narrative commentary covering the foundational debates on justice, state genesis, and early guardian education (Books I–IV)."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-4",
+          "h-level-3-batch-2-3"
+        ],
+        "label": "Philosopher-Kings & Metaphysics",
+        "summary": "Focusing on Books V through VII, these sections detail the communal institutions of the guardian class, the equality of women, and the central paradox of the philosopher-king. They articulate the metaphysical ascent from opinion to knowledge of the Forms and the Idea of the Good via mathematics and dialectic.",
+        "rationale": "Combines the central books of the Republic (Books V–VII) addressing the social arrangements of rulers and the theoretical ascent to the Good."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-5",
+          "h-level-3-batch-2-4"
+        ],
+        "label": "Constitutional Decay & Immortality",
+        "summary": "These texts cover Books VIII through X, examining the psychological and political degeneration of regimes from timocracy to tyranny, the nature of true pleasure, and the banishment of mimetic poetry. They conclude with demonstrations of the soul's immortality and the cosmic vision of retribution in the Myth of Er.",
+        "rationale": "Brings together the culmination of the dialogue (Books VIII–X), focusing on regime degeneration, critique of the arts, and the afterlife."
+      },
+      {
+        "childIds": [
+          "h-level-3-batch-1-1"
+        ],
+        "label": "Editorial Apparatus & Notes",
+        "summary": "Covers publication prefaces, dedications, acknowledgments, transcriber conventions, and synthesized modern editorial index notes on Plato's political and artistic theories.",
+        "rationale": "Retained as a separate paratextual singleton group, distinct in function and content from the philosophical dialogues and overarching analytical essays."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MhycaujCIJ2Nx9gPhr2j8A8",
+  "usage": {
+    "promptTokenCount": 167178,
+    "candidatesTokenCount": 748,
+    "totalTokenCount": 167926,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 167178
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 748
+      }
+    ]
+  },
+  "durationMs": 14152,
+  "requestHash": "57605d0838efa90460a17aed2b20581e340fbd061e4f3eaad8408401829cc278"
+}

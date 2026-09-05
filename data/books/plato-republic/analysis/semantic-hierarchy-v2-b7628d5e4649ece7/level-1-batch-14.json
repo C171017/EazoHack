@@ -1,0 +1,75 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-6",
+          "n-27-5",
+          "n-27-6",
+          "n-28-3"
+        ],
+        "label": "Virtue and the Soul in State",
+        "summary": "Socrates establishes divine immutability and truthfulness as ethical standards while defining civic temperance, justice, and the tripartite division of the soul in terms of harmonious order and proper function.",
+        "rationale": "These early dialogue sections from Books II and IV construct the foundational concepts of virtue, divine nature, civic roles, and the inner structure of the human soul."
+      },
+      {
+        "childIds": [
+          "n-30-4",
+          "n-31-2",
+          "n-31-4",
+          "n-31-5",
+          "n-31-7"
+        ],
+        "label": "Philosopher-Kings and Epistemology",
+        "summary": "Socrates introduces the rule of philosophers and rigorously distinguishes true knowledge of eternal forms from the fallible opinions of dreamers who focus on sensory particulars.",
+        "rationale": "All five items come from Book V, detailing the philosopher-king paradox and the epistemological separation between knowledge, opinion, and their respective objects."
+      },
+      {
+        "childIds": [
+          "n-33-6",
+          "n-39-6",
+          "n-42-6",
+          "n-42-7"
+        ],
+        "label": "Reality, Pleasure, and Destiny",
+        "summary": "Across later books, Socrates divides intelligible and visible reality, exposes intermediate rest as an illusion of pleasure, and illustrates the soul's fateful choices and rebirth in the myth of Er.",
+        "rationale": "These dialogue passages from Books VI, IX, and X trace the ascent of understanding, the nature of true versus relative pleasure, and the ultimate destiny and choices of immortal souls."
+      },
+      {
+        "childIds": [
+          "n-43-3",
+          "n-44-1",
+          "n-44-3",
+          "n-44-4",
+          "n-45-5"
+        ],
+        "label": "Editorial Syntheses of Themes",
+        "summary": "Editorial notes synthesize Plato's central metaphysical and ethical doctrines, covering dialectical method, divine nature, the Idea of the Good, civic and psychic justice, and Platonic psychology.",
+        "rationale": "These nodes belong to the editorial apparatus and paratext, providing retrospective philosophical summaries of dialectic, theology, metaphysics, justice, and the soul."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3RucapbqC5mdx9gP8fnjmQE",
+  "usage": {
+    "promptTokenCount": 13613,
+    "candidatesTokenCount": 625,
+    "totalTokenCount": 14238,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13613
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 625
+      }
+    ]
+  },
+  "durationMs": 7451,
+  "requestHash": "7ac5ebb7748500cf2a987d94c66c64174592d904ac6690c41839758606291cb9"
+}

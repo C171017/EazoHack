@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-23-5",
+          "n-24-3",
+          "n-25-3",
+          "n-25-4",
+          "n-27-3"
+        ],
+        "label": "Education and Poetic Forms",
+        "summary": "Discussions center on foundational civic training, addressing theological principles of divine goodness, poetic modes of imitation and narration, and the essential role of musical simplicity and harmony in shaping virtuous character.",
+        "rationale": "These entries from Books II through IV examine the moral regulation of poetry, music, and early civic education."
+      },
+      {
+        "childIds": [
+          "n-28-2",
+          "n-29-6",
+          "n-32-4",
+          "n-37-2"
+        ],
+        "label": "State Structure and the Soul",
+        "summary": "This grouping links psychological principles—such as non-contradiction—with the composition and governance of the state, including civic unity, the parable of the ship of state, and the direct correspondence between regime types and individual characters.",
+        "rationale": "These sections develop the systemic analogy between psychological faculties and political order across Books IV, V, VI, and VIII."
+      },
+      {
+        "childIds": [
+          "n-30-3",
+          "n-31-1",
+          "n-31-3",
+          "n-31-6"
+        ],
+        "label": "Epistemology and Forms",
+        "summary": "These passages define cognitive faculties, contrast the unified nature of ideal Forms with the fluctuating ambiguities of sensory particulars, and evaluate ideals as enduring standards beyond imperfect earthly realizations.",
+        "rationale": "Focuses on the core epistemological and metaphysical distinctions introduced in Book V regarding Forms, particulars, and cognitive powers."
+      },
+      {
+        "childIds": [
+          "n-33-4",
+          "n-33-5",
+          "n-35-1",
+          "n-35-2"
+        ],
+        "label": "The Good and the Cave Allegory",
+        "summary": "Socrates establishes the supreme knowledge of the Good through the analogy of the sun, presenting the allegory of prisoners in the cave and detailing their arduous perceptual ascent to the illuminating source of reality.",
+        "rationale": "Encompasses the interconnected central metaphors of Books VI and VII concerning the Good, the Sun, and the Cave."
+      },
+      {
+        "childIds": [
+          "n-41-7"
+        ],
+        "label": "Immortality of the Soul",
+        "summary": "Socrates turns the conversation from earthly virtue to its eternal significance, proposing to an astonished Glaucon that the human soul is immortal and imperishable.",
+        "rationale": "This single Book X passage addresses the eschatological argument for the soul's immortality, distinct in theme and source position from the earlier epistemological and civic dialogues."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3BucaqqeMKyJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 10285,
+    "candidatesTokenCount": 703,
+    "totalTokenCount": 10988,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10285
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 703
+      }
+    ]
+  },
+  "durationMs": 7490,
+  "requestHash": "87404a00fd23c8e5d4a09d6fc45c6b02c58f98958fbf7796fcdddef316da80e9"
+}

@@ -4,6 +4,7 @@ import type { PDFDocumentProxy } from 'pdfjs-dist';
 import { PdfPage } from './pdf-page';
 import { LocalOcr, sourceRect } from './runtime';
 import { createPdfSelection, selectionEndpoint, type PdfSelection } from './selection';
+import { selectionTimestamp } from '../../persistence/selection-activity';
 import type { PageText, Rect } from './model';
 import type { SourceAnchor } from '@/shared/schemas';
 
@@ -85,6 +86,7 @@ export function PdfReader({doc,fileHash,onSelection,onPageText,onPageChange,anch
     root.current?.querySelector(`[data-pdf-page="${page}"]`)?.scrollIntoView({block:'start',behavior:'instant'});
   },[jumpTo,doc]);
   const capture=async()=>{
+    const selectedAt=selectionTimestamp();
     const selection=window.getSelection();
     if(!selection?.rangeCount||selection.isCollapsed)return;
     const range=selection.getRangeAt(0).cloneRange();
@@ -109,7 +111,7 @@ export function PdfReader({doc,fileHash,onSelection,onPageText,onPageChange,anch
         const unique=new Map(selected.map(r=>[`${r.x},${r.y},${r.width},${r.height}`,r]));
         rectangles.set(i,[...unique.values()].map(r=>sourceRect(viewport,base,[r.left-rect.left,r.top-rect.top,r.right-rect.left,r.bottom-rect.top])));
       }
-      const result=await createPdfSelection(fileHash,[...data.current.values()],start,end,rectangles);
+      const result=await createPdfSelection(fileHash,[...data.current.values()],start,end,rectangles,selectedAt);
       onSelection(result);window.getSelection()?.removeAllRanges();
     }catch(e){onNotice(e instanceof Error?e.message:'Could not capture selection.');}
   };

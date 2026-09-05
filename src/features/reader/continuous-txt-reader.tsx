@@ -140,6 +140,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   const documentRoot = useRef<HTMLDivElement>(null);
   const [pickerPosition, setPickerPosition] = useState<PickerPosition | null>(null);
   const nativeSelection = useRef<NativeSourceSelection|null>(null);
+  const lastCapturedRange = useRef<string|null>(null);
   // Source spans can split when a slot appears. Rebind the native range to the
   // same source offsets so copying and Shift-selection survive that render.
   useLayoutEffect(()=>{
@@ -300,9 +301,14 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       suffix: sourceText.slice(endOffset, endOffset + 40),
     };
   }
-  function captureSelection() {
+  function captureSelection(fromKeyboard = false) {
     const range=selectedSource();
     if(range && range.quote.length <= 20000){
+      const key=`${range.startOffset}:${range.endOffset}`;
+      // Releasing Shift after a pointer selection (or without adjusting it)
+      // is not a second selection gesture. New pointer selections still count.
+      if(fromKeyboard && lastCapturedRange.current===key)return;
+      lastCapturedRange.current=key;
       const selection = window.getSelection();
       const original = selection?.getRangeAt(0);
       const backward = !!original && selection?.anchorNode === original.endContainer && selection.anchorOffset === original.endOffset;
@@ -343,11 +349,16 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     const keyboardSelection = (event: KeyboardEvent) => {
       // Keep native adjustment while Shift is held; snapping every arrow key
       // would prevent shrinking a selection by less than a whole word.
-      if (event.key === 'Shift') captureSelection();
+      if (event.key === 'Shift') captureSelection(true);
       else if (window.getSelection()?.isCollapsed) setPickerPosition(null);
     };
     document.addEventListener('keyup', keyboardSelection);
-    return () => document.removeEventListener('keyup', keyboardSelection);
+    const clear = () => { if(window.getSelection()?.isCollapsed)lastCapturedRange.current=null; };
+    document.addEventListener('selectionchange',clear);
+    return () => {
+      document.removeEventListener('keyup', keyboardSelection);
+      document.removeEventListener('selectionchange',clear);
+    };
   });
   // Native document selections need not focus the reader, so copy can target
   // document/body rather than bubble through the reading element.

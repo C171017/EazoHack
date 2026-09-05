@@ -1,0 +1,97 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-1-1"
+        ],
+        "label": "Front Matter and Preface",
+        "summary": "Covers publication details, dedications, acknowledgments, and editorial arrangements regarding revisions and future volumes of Plato's works.",
+        "rationale": "Retained as a singleton representing external editorial paratext, distinct from theoretical and textual analysis of the dialogue."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-1",
+          "h-level-1-batch-3-2",
+          "h-level-1-batch-3-5",
+          "h-level-1-batch-1-2"
+        ],
+        "label": "Republic Commentary & Dialectic",
+        "summary": "These commentaries survey the macro-structure and philosophical evolution of the Republic, charting the trajectory of moral definitions, the demands placed upon justice, and Plato's deductive dialectic in relation to ancient and modern methods of thought and artistic critique.",
+        "rationale": "Groups high-level introductory commentaries addressing dialogue architecture, moral progression, dialectical method, and historical evaluation."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-3",
+          "h-level-1-batch-3-4",
+          "h-level-1-batch-4-1",
+          "h-level-1-batch-4-2"
+        ],
+        "label": "Ideal City and Guardianship",
+        "summary": "These accounts outline the construction of the ideal polity through the state-individual analogy, detailing guardian selection, early educational censorship, communal institutions, and the advanced curriculum designed to elevate dialectical philosopher-rulers.",
+        "rationale": "Brings together sections centered on the institutional design, social structure, and comprehensive education of the guardian and ruler classes."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-3",
+          "h-level-1-batch-4-4",
+          "h-level-1-batch-1-3"
+        ],
+        "label": "Degeneration and Mysticism",
+        "summary": "These passages examine the political and psychological decline of states and individuals from timocracy to tyranny, the extreme misery of the tyrannical man, and the symbolic cosmological and mathematical formulas embedded in Plato's mythological visions.",
+        "rationale": "Focuses on the later books' exploration of systemic corruption, tyrannical degradation, and speculative numerical and astral symbolism."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-1-4",
+          "h-level-1-batch-2-1"
+        ],
+        "label": "Comparative Political Polities",
+        "summary": "These analyses review the foundational models, radical institutional paradoxes, and Spartan influences in Plato's Republic, tracing how its vision of governance compares with other Platonic texts and subsequent historical political traditions.",
+        "rationale": "Combines thematic commentaries evaluating Plato's political models in comparison to historical and successive philosophical polities."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-2",
+          "h-level-1-batch-2-3",
+          "h-level-1-batch-2-4"
+        ],
+        "label": "Dialectical Search for Justice",
+        "summary": "Following opening discussions on wealth and moral duty, Socrates encounters aporia when assessing the profits of justice before defining its essence, prompting Adeimantus to demand an evaluation of how justice and injustice intrinsically shape the soul.",
+        "rationale": "Groups Book I and early Book II dialogue sequences examining the initial dialectical refutations, Socratic perplexity, and the demand for an internal definition of justice."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-5",
+          "h-level-1-batch-5-1"
+        ],
+        "label": "Guardian Curricular Governance",
+        "summary": "In structuring civic guardian education, Socrates prescribes strict limits on narrative representations of death and statecraft deceit, while eliminating mournful and complex musical modes in favour of sober, temperate harmonies and simple instruments.",
+        "rationale": "Unites dialogue-based reforms that regulate poetic themes, civic truthfulness, and musical modes to instill temperance and courage in the guardians."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9Rucau6vDpmdx9gP8fnjmQE",
+  "usage": {
+    "promptTokenCount": 56687,
+    "candidatesTokenCount": 818,
+    "totalTokenCount": 57505,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 56687
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 818
+      }
+    ]
+  },
+  "durationMs": 9667,
+  "requestHash": "b71c404c99b3a0e5079c45ffab544421a240c457373b10be537e02286b4f29b1"
+}

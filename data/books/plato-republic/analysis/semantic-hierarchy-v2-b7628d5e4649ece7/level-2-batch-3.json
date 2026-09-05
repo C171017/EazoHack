@@ -1,0 +1,98 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-10-1",
+          "h-level-1-batch-11-1",
+          "h-level-1-batch-12-1"
+        ],
+        "label": "Early Foundations and Soul Care",
+        "summary": "These commentaries examine the introductory definitions of justice, social contract theory, and political origins, balancing external rules with the moral purity of the soul. They address the lie in the soul and explore the harmonization of reason and physical nature through gymnastics, music, and medical restraint.",
+        "rationale": "Groups early thematic commentaries covering the definitions of justice in Books I–II and the psycho-physical care of body and soul in Book III."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-2",
+          "h-level-1-batch-12-3"
+        ],
+        "label": "Civic Order and Soul Harmony",
+        "summary": "These passages define justice and civic unity across both the individual soul and the commonwealth, establishing that political order aims at the good of the whole rather than sectional interest. Functional division of labor and the harmony of the tripartite soul enable both psyche and state to operate as integrated organisms.",
+        "rationale": "Binds the structural accounts of the state's welfare, internal civic order, and the corresponding tripartite division of the soul in Book IV."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-4",
+          "h-level-1-batch-12-5",
+          "h-level-1-batch-11-2"
+        ],
+        "label": "Philosopher-Kings and the Good",
+        "summary": "This sequence addresses the core paradox of philosopher-rulers and their vulnerability to social corruption, alongside the metaphysical distinction between knowledge and opinion. It details the ascent to the supreme Idea of the Good via the Sun, Line, and Cave analogies, culminating in dialectical education and the compelled return to govern.",
+        "rationale": "Unites the central epistemological, metaphysical, and political doctrines of Books V–VII centered on the philosopher-king and the Idea of the Good."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-3",
+          "h-level-1-batch-11-4"
+        ],
+        "label": "Political Decay and Pleasures",
+        "summary": "These discussions trace the progressive decline of constitutions and character from timocracy to tyranny, tracking the moral deterioration driven by master passions. They contrast this disorder with the rational hierarchy of pleasures, the composite image of the soul, and the celestial pattern of the ideal city.",
+        "rationale": "Covers Books VIII–IX, focusing on the degeneration of the state and soul alongside the rational analysis of pleasures."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-5",
+          "h-level-1-batch-10-2",
+          "h-level-1-batch-9-4",
+          "h-level-1-batch-12-6"
+        ],
+        "label": "Critiques and Broader Ideals",
+        "summary": "These commentaries critique Plato's radical social proposals—such as the abolition of families and state breeding—while analyzing his banishment of imitative poetry and the state-individual analogy. They explore Platonic thought as a visionary framework for lifelong self-education, abstract universals, and transcendent ideals.",
+        "rationale": "Combines general reflective and critical commentaries on the Republic's social institutions, educational programs, and overarching metaphysical ideals."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-1",
+          "h-level-1-batch-9-2",
+          "h-level-1-batch-11-6"
+        ],
+        "label": "Book I Dialogues on Justice",
+        "summary": "Socrates engages with Polemarchus and Thrasymachus regarding whether justice serves the stronger ruler, harms enemies, or produces advantage. Through the craft analogy and arguments on civic discord, Socrates establishes that arts serve their subjects and that justice is the vital excellence and happiness of the soul.",
+        "rationale": "Gathers the direct Book I dialogue debates between Socrates, Polemarchus, and Thrasymachus."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-3",
+          "h-level-1-batch-10-3",
+          "h-level-1-batch-10-4"
+        ],
+        "label": "Book II Contract and City Genesis",
+        "summary": "Glaucon restates the case for injustice using the classification of goods, social contract theory, and the Gyges ring thought experiment. In response, Socrates initiates the large-letter analogy of the state, tracing the genesis of society from human interdependence to the luxurious city requiring guardian censorship.",
+        "rationale": "Groups the Book II dialogue progression from Glaucon's challenge to Socrates' founding of the primitive and luxurious cities."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BBycava2D-mj0ckPuMG7mAc",
+  "usage": {
+    "promptTokenCount": 55240,
+    "candidatesTokenCount": 1194,
+    "totalTokenCount": 56434,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 55240
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1194
+      }
+    ]
+  },
+  "durationMs": 13992,
+  "requestHash": "b770faf77304f4781fc70bab710638b195fc657a71d9c3698b7a57ef123b6b43"
+}

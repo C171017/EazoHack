@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-1-1",
+          "h-level-2-batch-2-6"
+        ],
+        "label": "Editorial Apparatus & Notes",
+        "summary": "Covers publication prefaces, dedications, acknowledgments, transcriber conventions, and synthesized modern editorial index notes on Plato's political and artistic theories.",
+        "rationale": "Combines paratextual and scholarly editorial material located at the extremities of the edition."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-2",
+          "h-level-2-batch-1-5",
+          "h-level-2-batch-1-4"
+        ],
+        "label": "Macro-Analyses and Influences",
+        "summary": "Broad essays examine the architecture and dialectic of the Republic, compare Plato's ideal polity with Spartan and subsequent historical utopias, and trace the psychological and cosmological dimensions of regime degeneration.",
+        "rationale": "Collects high-level commentary clusters analyzing the overarching philosophical structure, historical parallels, and psychological declines."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-1-6",
+          "h-level-2-batch-1-7",
+          "h-level-2-batch-1-3"
+        ],
+        "label": "Foundations of Justice & City",
+        "summary": "Beginning with the aporia over justice and the demand to examine its inherent nature in the soul, these sections trace the construction of the ideal city and the early curricular censorship required to train guardian protectors.",
+        "rationale": "Groups the initial dialectical search for justice in Books I-II with the construction of the first city and primary guardian education."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-1",
+          "h-level-2-batch-2-2",
+          "h-level-2-batch-2-3"
+        ],
+        "label": "Guardian Society & Leadership",
+        "summary": "Details the division of classes through the Myth of the Metals, communal institutions including the equality of women and shared families, and the advanced dialectical and mathematical curriculum designed to produce philosopher-kings.",
+        "rationale": "Covers the core institutional regulations of the ideal state and the development of philosopher-rulers across Books III through VII."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-4",
+          "n-42-5"
+        ],
+        "label": "Regime Decline & Afterlife",
+        "summary": "Socrates traces the decay of states into tyranny alongside the misery of the tyrannical man, culminating in the cosmological vision of the Spindle of Necessity and the afterlife rewards of justice.",
+        "rationale": "Brings together the culminating themes of Book IX regime decline and pleasure with Book X's Myth of Er and cosmic Necessity."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Fhycat-oJ6yJ0ckPtsevOA",
+  "usage": {
+    "promptTokenCount": 88371,
+    "candidatesTokenCount": 704,
+    "totalTokenCount": 89075,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 88371
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 704
+      }
+    ]
+  },
+  "durationMs": 8885,
+  "requestHash": "b9ed3ff48ac7a71f4c8ea44dfa8ab9313b12e78800899bd542382166219c2d07"
+}

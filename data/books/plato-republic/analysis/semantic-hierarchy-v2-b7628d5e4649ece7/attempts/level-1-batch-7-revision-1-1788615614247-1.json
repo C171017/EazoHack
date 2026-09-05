@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-24-5",
+          "n-26-5",
+          "n-27-1"
+        ],
+        "label": "Guardian Austerity and Objections",
+        "summary": "Socrates restricts dramatic imitation to virtuous models and prohibits guardians from owning private property or wealth, leading Adeimantus to object that such restrictions make the city's defenders unhappy.",
+        "rationale": "These Book III–IV passages share a focus on the austere conditions of guardian life, spanning poetic censorship, property prohibitions, and the immediate objection to their lack of material rewards."
+      },
+      {
+        "childIds": [
+          "n-28-6",
+          "n-29-2",
+          "n-29-4",
+          "n-30-1"
+        ],
+        "label": "Constitutions and Gender Equality",
+        "summary": "Socrates establishes five forms of state and soul, demonstrates that governing faculties exist across both sexes to warrant identical guardian education for women, and defines ideal civic unity as common feeling.",
+        "rationale": "These Book IV–V occurrences center on structural governance, constitutional division, gender integration in guardian duties, and the body-like cohesion of the polis."
+      },
+      {
+        "childIds": [
+          "n-32-1",
+          "n-32-6",
+          "n-32-7",
+          "n-33-3",
+          "n-36-6"
+        ],
+        "label": "Philosopher-Kings and Founding",
+        "summary": "Socrates identifies philosophers as ideal rulers despite widespread corruption and unworthy pretenders, arguing that an ideal state can be realized if a philosopher takes power and begins by educating citizens under ten years old.",
+        "rationale": "These passages from Books VI and VII trace the complete political arc of philosopher-rulers: their qualifications, corrupting environments, quiet retreat, and the practical method for founding the clean-slate regime."
+      },
+      {
+        "childIds": [
+          "n-34-4",
+          "n-35-6",
+          "n-35-7",
+          "n-36-1",
+          "n-36-2"
+        ],
+        "label": "Curriculum of Higher Studies",
+        "summary": "Following assent to the faculties of cognition, Socrates details a sequence of mathematical studies—arithmetic, plane and solid geometry, astronomy, and harmonics—designed to turn the soul away from sensation toward eternal being.",
+        "rationale": "These Book VI–VII passages form a unified pedagogical sequence detailing the cognitive schema and subsequent mathematical curriculum for dialectical training."
+      },
+      {
+        "childIds": [
+          "n-40-2"
+        ],
+        "label": "The 729-Fold Interval",
+        "summary": "Socrates calculates by cubing distances that a king lives 729 times more pleasantly than a tyrant, who is furthest removed from law and reason.",
+        "rationale": "This Book IX singleton stands distinct in both theme and source location, presenting a specific mathematical calculation measuring the divergence in pleasure between the royal and tyrannical lives."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "txucatmaHump0ckPidKHEA",
+  "usage": {
+    "promptTokenCount": 10711,
+    "candidatesTokenCount": 743,
+    "totalTokenCount": 11454,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10711
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 743
+      }
+    ]
+  },
+  "durationMs": 7288,
+  "requestHash": "db1939f61e726a2aefa3b5365d31a207ccd6a8e7d1d9cd53c15ebed452ec8777"
+}

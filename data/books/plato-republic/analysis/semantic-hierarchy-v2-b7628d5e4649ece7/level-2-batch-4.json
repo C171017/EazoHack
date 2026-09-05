@@ -1,0 +1,98 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-13-1",
+          "h-level-1-batch-14-1",
+          "h-level-1-batch-15-1"
+        ],
+        "label": "Virtue, Soul, and Civic Order",
+        "summary": "Socrates establishes ethical, theological, and aesthetic standards through early education, music, and divine principles. These disciplines form the foundation for civic temperance and justice, establishing harmonious proportion across the tripartite soul and classes of the state.",
+        "rationale": "These clusters trace early foundational training, the division and harmony of the soul, and corresponding civic justice across Books II through IV."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-13-2",
+          "h-level-1-batch-13-3",
+          "h-level-1-batch-14-2",
+          "h-level-1-batch-15-2"
+        ],
+        "label": "Philosopher-Kings and the Forms",
+        "summary": "Socrates links state governance with psychological rigor, justifying the controversial paradox of philosopher-kings. True philosophers are distinguished from lovers of opinion by their cognitive grasp of eternal Forms, requiring protective education against social corruption.",
+        "rationale": "Focuses on Books V and VI, uniting political rule with epistemology, Forms, and the necessary nature and training of philosopher-rulers."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-13-4",
+          "h-level-1-batch-16-1",
+          "h-level-1-batch-15-3"
+        ],
+        "label": "The Good, Cave, and Dialectic",
+        "summary": "Knowledge of the ultimate Good is framed through the Sun analogy and the Cave allegory, describing the soul's ascent from shadows to intellectual truth. Dialectic is exalted as the unhypothetical coping-stone that equips enlightened philosophers to descend and justly govern.",
+        "rationale": "Covers the central metaphysical core of Books VI and VII: the Sun, Cave, divided line, and dialectical conversion."
+      },
+      {
+        "childIds": [
+          "n-37-1",
+          "h-level-1-batch-16-2",
+          "h-level-1-batch-16-3"
+        ],
+        "label": "Regimes, Pleasures, and Reason",
+        "summary": "Socrates analyzes the four degraded constitutions alongside their corresponding character types, showing how unchecked appetite precipitates tyranny. Psychological proofs demonstrate that true satisfaction and justice depend on subjecting appetitive elements to the inner divine rule of reason.",
+        "rationale": "Unites the degradation of regimes in Books VIII–IX with the psychic evaluation of pleasures and internal governance."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-16-4",
+          "h-level-1-batch-15-5"
+        ],
+        "label": "Poetry and Mimetic Illusion",
+        "summary": "Imitative art is critically dissected as a thrice-removed copy lacking genuine knowledge of reality. Socrates banishes mimetic poetry for catering to the irrational, grieving aspects of the soul, welcoming it back only if its moral benefit can be defended in prose.",
+        "rationale": "Combines the Book X metaphysical and ethical critiques of mimesis and the ancient quarrel between poetry and philosophy."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-3",
+          "n-41-7",
+          "h-level-1-batch-16-5",
+          "n-42-4"
+        ],
+        "label": "Immortality and Eschatology",
+        "summary": "Socrates argues for the indestructible immortality of the soul, revealing its pure nature apart from bodily afflictions. External rewards and cosmic justice are affirmed through the myth of Er, which depicts post-mortem judgment, tenfold retribution, and the fateful choice of future lives.",
+        "rationale": "Groups the Book X eschatological sequence, proving immortality and narrating posthumous rewards, judgment, and cosmic destiny."
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-4"
+        ],
+        "label": "Editorial Syntheses of Themes",
+        "summary": "Editorial notes synthesize Plato's central metaphysical and ethical doctrines, covering dialectical method, divine nature, the Idea of the Good, civic and psychic justice, and Platonic psychology.",
+        "rationale": "Retained as a separate commentary cluster because it comprises editorial paratext synthesizing themes rather than direct narrative dialogue."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BBycavO-CqGdx9gP1MGDcA",
+  "usage": {
+    "promptTokenCount": 34850,
+    "candidatesTokenCount": 1098,
+    "totalTokenCount": 35948,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 34850
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1098
+      }
+    ]
+  },
+  "durationMs": 12247,
+  "requestHash": "17999506fde179d4386242958b4b64011a205165a2288b2310b36c1a6859fc2a"
+}

@@ -50,7 +50,9 @@ test('ambiguous columns are flagged and layout proposals can neither drop nor in
 test('cross-page anchors retain exact UTF-16 ranges, PDF identities and text versions',async()=>{
   const p0=await preparePage(input(source('Alpha 🙂 beta.')),async()=>source(''),signal);
   const p1=await preparePage({...input(source('Gamma delta.')),pageIndex:1},async()=>source(''),signal);
-  const selection=await createPdfSelection(p0.fileHash,[p0,p1],{page:0,offset:6},{page:1,offset:5});
+  const capturedAt='2026-09-05T10:11:12Z';
+  const selection=await createPdfSelection(p0.fileHash,[p0,p1],{page:0,offset:6},{page:1,offset:5},undefined,capturedAt);
+  assert.equal(selection.selection.createdAt,capturedAt);
   assert.equal(selection.selection.selectedText,'🙂 beta.\nGamma');assert.equal(selection.anchors.length,2);
   assert.equal(selection.anchors[1].locators[0].kind,'pdf');assert.equal(selection.anchors[1].quote,'Gamma');
   await assert.rejects(createPdfSelection('wrong',[p0,p1],{page:0,offset:0},{page:1,offset:3}),/ready/);

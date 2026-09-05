@@ -1,5 +1,6 @@
 import { SelectionSchema, SourceAnchorSchema, type Selection, type SourceAnchor } from '@/shared/schemas';
 import type { PageText, Rect } from './model';
+import { selectionTimestamp } from '../../persistence/selection-activity';
 
 export type PdfSelection = { selection: Selection; anchors: SourceAnchor[]; provenance: { pageIndex: number; method: string; reviewRequired: boolean }[] };
 export async function extractionId(page: PageText): Promise<string> {
@@ -9,7 +10,7 @@ export async function extractionId(page: PageText): Promise<string> {
   return `${page.version}:${page.method}:${page.language}:${hash.slice(0,24)}`;
 }
 
-export async function createPdfSelection(hash: string, pages: PageText[], start: { page: number; offset: number }, end: { page: number; offset: number }, rectangles?: Map<number, Rect[]>): Promise<PdfSelection> {
+export async function createPdfSelection(hash: string, pages: PageText[], start: { page: number; offset: number }, end: { page: number; offset: number }, rectangles?: Map<number, Rect[]>, selectedAt = selectionTimestamp()): Promise<PdfSelection> {
   if (start.page > end.page || (start.page===end.page && start.offset>=end.offset)) throw new Error('Select a nonempty passage.');
   if(end.page-start.page>=100) throw new Error('Select a passage of fewer than 100 pages.');
   const anchors: SourceAnchor[] = [];
@@ -29,7 +30,7 @@ export async function createPdfSelection(hash: string, pages: PageText[], start:
   }
   const selectedText=anchors.map(a=>a.quote).join('\n');
   if(!selectedText.trim()||selectedText.length>20000) throw new Error('Choose a passage of 1–20,000 characters.');
-  const selection=SelectionSchema.parse({ id:crypto.randomUUID(),bookId:`pdf:${hash}`,anchorIds:anchors.map(a=>a.id),selectedText,contextSnapshot:JSON.stringify({format:'pdf',provenance}),createdAt:new Date().toISOString() });
+  const selection=SelectionSchema.parse({ id:crypto.randomUUID(),bookId:`pdf:${hash}`,anchorIds:anchors.map(a=>a.id),selectedText,contextSnapshot:JSON.stringify({format:'pdf',provenance}),createdAt:selectedAt });
   return {selection,anchors,provenance};
 }
 

@@ -47,4 +47,15 @@ The new stage is source-grounded but does not claim exhaustive dependency discov
 
 ## Verification
 
-TypeScript, ESLint and the current 95-test suite pass, including source-preserving reassessment, fractional/unknown coordinates, correction/review checkpoints, invalid prerequisites, corrupted checkpoint rejection, unplaced access, representative group ranges and legacy hierarchy compatibility. Production build, live reassessment and browser results are recorded below once complete.
+TypeScript, ESLint and the current 99-test suite pass, including source-preserving reassessment, fractional/unknown coordinates, correction/review checkpoints, invalid prerequisites, corrupted checkpoint rejection, unplaced access, representative group ranges and legacy hierarchy compatibility. The isolated production build also passed with `NODE_OPTIONS="--dns-result-order=ipv4first --no-network-family-autoselection"` to work around the host's font-download connection stall. The running dev server's `.next` directory was not used. Live map and browser results follow below.
+
+
+## Published Republic result and browser verification
+
+- Published graph: `axis-consistency-v1-b5ee0f8270c2ca8c`; map: `semantic-hierarchy-v2-b7628d5e4649ece7`.
+- Preserved all 288 accepted occurrences, 213 original typed relations, identities, themes, exact source text/anchors and Z coordinates. Final known coordinates: 288; unplaced: 0; prerequisite-depth conflicts: 0.
+- The reviewed hierarchy has five layers and five roots; successive frontiers are 288 → 79 → 27 → 9 → 5.
+- Browser QA at 1600×1000 passed all four view modes with unchanged zoom, visible new axis explanations, group range readouts and lines, leaf selection, per-axis source-evidence activation, and stale-version rejection (HTTP 409). No browser page errors occurred. The checked source occurrence was n-2-3.
+- Revalidated the published graph against the immutable original source and validated complete hierarchy reachability, derived positions/ranges and node counts.
+- The earlier 30 distinct X–Y positions become 30 distinct positions under entirely different semantics. The largest exact semantic tie is 48 occurrences (previously 27); these are underlying projected coordinates, not simultaneously rendered glyph counts. This release therefore does NOT claim that the axis change alone reduces density. Bounded semantic zoom, distinct labels, source navigation and group ranges preserve inspectability; genuine score ties are retained rather than perturbed.
+- Local implementation only; no deployment was performed. Old published snapshots and interrupted candidate builds remain available with their provenance.

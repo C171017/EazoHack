@@ -1,0 +1,82 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-36-4",
+          "n-36-5"
+        ],
+        "label": "Dialectical Education Stages",
+        "summary": "Socrates establishes a rigorous, age-graded curriculum of service and training to avoid the dangers of premature dialectic, which otherwise breeds lawlessness and moral skepticism in the young.",
+        "rationale": "Both passages from Book VII address the structured timing, risks, and institutional stages of dialectical philosophical education."
+      },
+      {
+        "childIds": [
+          "n-37-3",
+          "n-37-4",
+          "n-37-5",
+          "n-37-6",
+          "n-37-7"
+        ],
+        "label": "Decline to Timocracy & Oligarchy",
+        "summary": "Traced from the breakdown of the ideal city due to miscalculated breeding, Socrates details the spirited timocratic character and the subsequent fall into oligarchy, marked by property qualifications, economic division, unproductive drones, and avaricious souls.",
+        "rationale": "Covers the first two phases of political degeneration in Book VIII, charting the transition from the ideal city through timocracy to oligarchical governance and character."
+      },
+      {
+        "childIds": [
+          "n-37-8",
+          "n-38-1",
+          "n-38-2",
+          "n-38-4",
+          "n-38-6"
+        ],
+        "label": "Genesis and Nature of Democracy",
+        "summary": "Arising from impoverished revolt against wealthy oligarchs, democracy institutes liberty, equal power by lot, and diverse constitutions, while fostering unstable individuals governed by unnecessary desires across three distinct civic classes.",
+        "rationale": "Encompasses the entire discussion in Book VIII of the emergence, societal structure, and personal psychology of democracy."
+      },
+      {
+        "childIds": [
+          "n-38-7",
+          "n-38-8",
+          "n-39-1",
+          "n-39-2",
+          "n-39-5"
+        ],
+        "label": "Tyranny and Philosophic Pleasure",
+        "summary": "Socrates contrasts the descent into tyranny—where a popular champion transforms into a paranoid ruler driven by lawless appetites—with the sovereign, misery-free life of the philosopher, who alone possesses the wisdom and experience to judge true pleasure.",
+        "rationale": "Groups the Book VIII–IX analysis of the tyrant's political and psychological servitude alongside the direct dialectical contrast provided by the philosopher's judgment on pleasures."
+      },
+      {
+        "childIds": [
+          "n-42-4"
+        ],
+        "label": "Posthumous Judgement of Er",
+        "summary": "Socrates narrates the journey of Er, recounting the post-mortem judgement of souls, tenfold retributions or rewards for deeds, and the terrifying eternal fate of incurable tyrants like Ardiaeus.",
+        "rationale": "Maintained as a singleton because this Book X eschatological myth stands thematically and textually distinct from the preceding dialectical examinations of political regimes and pleasure."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "thucapWaJKGdx9gP1MGDcA",
+  "usage": {
+    "promptTokenCount": 13223,
+    "candidatesTokenCount": 690,
+    "totalTokenCount": 13913,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13223
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 690
+      }
+    ]
+  },
+  "durationMs": 8031,
+  "requestHash": "d6b87260e1ab8bc23cf7967fb71d412bd16cc7e023785ea0c1f2861eadef5657"
+}

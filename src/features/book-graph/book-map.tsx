@@ -40,7 +40,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   const selected=detail.data?.detail;
   const [sourceActivation,setSourceActivation]=useState<{id:string;ticket:number}|null>(null);
   const sourceTicket=useRef(0),consumedSource=useRef(0);
-  // Only an explicit activation jumps: restore, pan and detail refetch do not.
+  // Only an explicit activation jumps: restore, camera changes and detail refetch do not.
   useEffect(()=>{
     if(!sourceActivation||consumedSource.current===sourceActivation.ticket
       ||current.selectedNodeId!==sourceActivation.id||selected?.node.id!==sourceActivation.id)return;
@@ -54,7 +54,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   const animatedEdges=useEdgeTransition(edges.data?.links);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
-  const drag=useRef<{id:number;x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;pan:boolean;moved:boolean}|null>(null);
+  const drag=useRef<{id:number;x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;moved:boolean}|null>(null);
   const keyboardOrbit=useRef<MapView|null>(null);
   useEffect(()=>{latest.current={current,size};},[current,size]);
   useEffect(()=>{const f=requestAnimationFrame(()=>setPreviousLevel(level));return()=>cancelAnimationFrame(f);},[level]);
@@ -64,16 +64,16 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   },[]);
   useEffect(()=>()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();},[]);
   // Native non-passive listener is required for trackpad pinch (ctrl+wheel).
-  // Plain two-finger scrolling pans. Neither operation asks the server to fit.
+  // Ignore plain scrolling; only pinch changes the view.
   useEffect(()=>{
     const element=svg.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
     const wheel=(event:WheelEvent)=>{
-      event.preventDefault();if(gesture)return;if(frame.current!==null)cancelAnimationFrame(frame.current);
+      event.preventDefault();if(gesture||(!event.ctrlKey&&!event.metaKey))return;if(frame.current!==null)cancelAnimationFrame(frame.current);
       navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
       const unit=event.deltaMode===1?16:event.deltaMode===2?size.height:1;
-      const next=event.ctrlKey||event.metaKey?zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size):{...view,x:view.x-event.deltaX*unit,y:view.y-event.deltaY*unit};
+      const next=zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size);
       latest.current={current:next,size};onViewChange(next);
     };
     const gestureStart=(event:Event)=>{
@@ -105,7 +105,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
     };frame.current=requestAnimationFrame(animate);
   }
   function finishDrag(){
-    const d=drag.current;drag.current=null;if(!d||d.pan||!d.moved)return;
+    const d=drag.current;drag.current=null;if(!d||!d.moved)return;
     const target=approachingProjection(d.motion.previous,d.motion.raw);
     // Align on entry; an intentional rotation within an already-flat view
     // should not be undone on release.
@@ -156,10 +156,10 @@ export function BookMap({graph,view,onViewChange,onSource}:{
         onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
         onBlur={()=>{keyboardOrbit.current=null;}}
         onPointerDown={e=>{
-          if(drag.current||(e.target as Element).closest('[data-node-id]')||e.button!==0)return;
+          if(drag.current||(e.target as Element).closest('[data-node-id]')||e.button!==0||e.shiftKey)return;
           cancelMotion();keyboardOrbit.current=null;navigation.current?.abort();setNavigating(false);
           const view=latest.current.current;
-          drag.current={id:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),pan:e.shiftKey,moved:false};
+          drag.current={id:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),moved:false};
           e.currentTarget.setPointerCapture(e.pointerId);
         }}
         onPointerMove={e=>{
@@ -167,24 +167,17 @@ export function BookMap({graph,view,onViewChange,onSource}:{
           const dx=e.clientX-d.x,dy=e.clientY-d.y;
           if(Math.hypot(dx,dy)<3&&!d.moved)return;
           d.moved=true;
-          if(d.pan)d.latest={...d.view,x:d.view.x+dx,y:d.view.y+dy};
-          else {
-            // Integrate deltas from the last event so reversing at the pole
-            // responds immediately, without consuming an overshoot dead zone.
-            d.motion=advanceOrbit(d.motion,e.clientX-d.lastX,e.clientY-d.lastY);
-            d.latest={...d.view,projection:'3d',...d.motion.display};
-          }
+          // Integrate deltas from the last event so reversing at the pole
+          // responds immediately, without consuming an overshoot dead zone.
+          d.motion=advanceOrbit(d.motion,e.clientX-d.lastX,e.clientY-d.lastY);
+          d.latest={...d.view,projection:'3d',...d.motion.display};
           d.lastX=e.clientX;d.lastY=e.clientY;
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
         onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Pinch to expand or group ideas. Scroll with two fingers to pan. Drag to orbit within the three grid fences; Shift-drag pans. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
+        <desc>Pinch to expand or group ideas. Drag to orbit within the three grid fences. Panning is disabled. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8ca996"/></marker></defs>
         <MapGrid screen={screen} modern={!!graph.axisVersion}/>
-        {graph.axisVersion&&selectedEntry?.kind==='cluster'&&selectedEntry.bounds&&selectedEntry.position&&<g data-axis-range="selected-group" aria-hidden="true" pointerEvents="none">{(['x','y'] as const).map((axis,i)=>{
-          const a=toScreen({...selectedEntry.position!,[axis]:selectedEntry.bounds!.min[axis]},current,size,range),b=toScreen({...selectedEntry.position!,[axis]:selectedEntry.bounds!.max[axis]},current,size,range);
-          return <line key={axis} x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={COLORS[i]} strokeWidth="2" opacity=".55"/>;
-        })}</g>}
         <g aria-hidden="true" pointerEvents="none">{animatedEdges.map(({link:edge,opacity})=>{const a=points.find(p=>p.id===edge.source),b=points.find(p=>p.id===edge.target);return a&&b?<g key={edge.id} opacity={edgeVisibility(opacity,a,b)}><line data-edge-id={edge.id} data-edge-source={edge.source} data-edge-target={edge.target} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line></g>:null;})}</g>
         {points.map(p=>{const color=COLORS[Math.max(0,graph.territories.findIndex(t=>t.id===p.node.themeIds[0]))%COLORS.length],label=labels.get(p.id),cluster=p.node.kind==='cluster';let depth=0,parent=p.node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}const radius=p.radius*Math.max(.75,Math.min(1.1,Math.sqrt(current.zoom/ZOOM_POLICY.step**depth)));return <g key={p.id} opacity={p.opacity} pointerEvents={p.exiting?'none':undefined} aria-hidden={p.exiting||undefined}>
           {label&&<line x1={p.x} y1={p.y} x2={label.labelX} y2={label.labelY+13} stroke={color} opacity=".25"/>}

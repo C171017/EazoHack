@@ -1,0 +1,71 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-3-1",
+          "h-level-2-batch-3-2",
+          "h-level-2-batch-3-3",
+          "h-level-2-batch-3-4",
+          "h-level-2-batch-3-5"
+        ],
+        "label": "Commentaries on Platonic Thought",
+        "summary": "This sequence gathers extensive philosophical commentaries analyzing the core themes of the Republic, spanning early ethical foundations and the care of the soul, civic harmony and functional order, and the metaphysics of philosopher-kings and the Idea of the Good. They evaluate the progressive decline of political regimes and soul types alongside critical appraisals of Plato's radical social institutions, educational models, and transcendent ideals.",
+        "rationale": "All five children represent introductory and reflective commentaries on the Republic (spanning early volumes, civic structure, metaphysics, political decay, and overarching critiques), situated at similar lower Z coordinates."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-3-6",
+          "h-level-2-batch-3-7",
+          "h-level-2-batch-4-1"
+        ],
+        "label": "Origins of Justice and the State",
+        "summary": "These dialogues cover Books I through IV, examining initial debates on whether justice serves the stronger and exploring the genesis of the state from basic needs to a luxurious commonwealth. They chart the formation of civic harmony, censorship of narratives, and musical and gymnastic education that align the tripartite soul with civic classes.",
+        "rationale": "These groups trace the early-to-middle dialogue books, tracking the discussion from Book I debates with Thrasymachus through Book II contract theories and city building, up to Book IV civic order."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-2",
+          "h-level-2-batch-4-3"
+        ],
+        "label": "Philosopher-Kings and Metaphysics",
+        "summary": "Focusing on Books V through VII, these passages examine the paradox of the philosopher-king, the distinction between true knowledge of eternal Forms and mere opinion, and the corruption of gifted natures. They elaborate the ascent to the Idea of the Good through the Sun, Divided Line, and Cave allegories, culminating in dialectic as the highest science.",
+        "rationale": "Both child groups encompass the central metaphysical and epistemological climax of the dialogue (Books V–VII), detailing the nature of the philosopher-ruler, the intelligible realm, and dialectical training."
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-4",
+          "h-level-2-batch-4-5",
+          "h-level-2-batch-4-6",
+          "h-level-1-batch-14-4"
+        ],
+        "label": "Regimes, Poetry, and Immortality",
+        "summary": "Covering the later books and editorial summaries, these sections investigate constitutional degeneration into tyranny, the psychological proofs of rational pleasure, and the banishment of mimetic poetry as an appeal to the inferior soul. They conclude with arguments for the immortality of the soul, cosmic retribution in the myth of Er, and overarching editorial syntheses of Platonic doctrines.",
+        "rationale": "These children cover the concluding books (Books VIII–X) addressing political decay, the critique of mimetic art, and eschatological immortality, paired with the final editorial syntheses at the end of the text."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FhycatmANJmdx9gP8fnjmQE",
+  "usage": {
+    "promptTokenCount": 83658,
+    "candidatesTokenCount": 825,
+    "totalTokenCount": 84483,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 83658
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 825
+      }
+    ]
+  },
+  "durationMs": 12995,
+  "requestHash": "5adb15db991d913a00e5290ed3093c825e927866b8a8c83c6b728c5ffee6ca07"
+}
