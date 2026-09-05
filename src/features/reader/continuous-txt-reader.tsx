@@ -99,6 +99,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   const scroller = useRef<HTMLDivElement>(null);
   const documentRoot = useRef<HTMLDivElement>(null);
   const currentChunkRef = useRef(0);
+  const alignmentFrame = useRef<number | null>(null);
   const [currentChunk, setCurrentChunk] = useState(0);
 
   const locator = activeAnchor?.locators.find(candidate => candidate.kind === 'txt');
@@ -137,6 +138,10 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     return () => observer.disconnect();
   }, [chunks]);
 
+  useEffect(() => () => {
+    if (alignmentFrame.current !== null) cancelAnimationFrame(alignmentFrame.current);
+  }, []);
+
   useImperativeHandle(ref, () => ({
     getReadingPosition() {
       const root = scroller.current;
@@ -156,8 +161,26 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       const block = findTxtBlock(chunks, offset);
       const element = block ? document.getElementById(block.id) : null;
       if (!root || !element) return;
-      const top = root.scrollTop + element.getBoundingClientRect().top - root.getBoundingClientRect().top - 70;
-      root.scrollTo({ top: Math.max(0, top), behavior });
+      if (alignmentFrame.current !== null) cancelAnimationFrame(alignmentFrame.current);
+      let attempt = 0;
+      let stableFrames = 0;
+      const align = () => {
+        const rootRect = root.getBoundingClientRect();
+        const elementRect = element.getBoundingClientRect();
+        const targetTop = rootRect.top + Math.min(150, rootRect.height * 0.24);
+        const delta = elementRect.top - targetTop;
+        if (Math.abs(delta) > 2) {
+          stableFrames = 0;
+          root.scrollBy({
+            top: delta,
+            behavior: attempt === 0 && Math.abs(delta) < root.clientHeight * 2 ? behavior : 'auto',
+          });
+        } else stableFrames += 1;
+        attempt += 1;
+        if (attempt < 90 && stableFrames < 4) alignmentFrame.current = requestAnimationFrame(align);
+        else alignmentFrame.current = null;
+      };
+      align();
     },
   }), [chunks]);
 

@@ -37,6 +37,21 @@ export function createMockRoutePlan(input: unknown): RoutePlan {
   return plan;
 }
 
+/** Manual route choice for the first production provider; model-directed routing remains a separate product decision. */
+export function createRoutePlan(input: unknown): RoutePlan {
+  const request = RoutePlanRequestSchema.parse(input);
+  if (request.mode === "mock") return createMockRoutePlan(request);
+  return RoutePlanSchema.parse({
+    id: crypto.randomUUID(),
+    selectionId: request.selection.id,
+    routes: request.routes,
+    reasonByRoute: Object.fromEntries(request.routes.map((kind) => [kind, "Explicitly requested by the reader."])),
+    dependsOn: request.dependsOn,
+    trigger: { mode: "manual", requestedRoutes: request.routes, requestedAt: new Date().toISOString() },
+    routerVersion: "manual-v1",
+  });
+}
+
 /** Check the entire DAG before starting any provider. */
 export function validateDependencies(plan: RoutePlan): void {
   const active = new Set<RouteKind>();

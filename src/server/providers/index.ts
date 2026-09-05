@@ -5,11 +5,12 @@ import {
   type Selection,
 } from "../../shared/schemas";
 import { makeMockArtifact } from "../../shared/fixtures";
+import { createVertexGeminiProvider } from "./vertex-gemini";
 
 export type ProviderMode = "mock" | "real";
 export type ProviderError = RunError;
 export type ProviderResult<T> = {
-  provenance: { provider: "mock" | "not_configured"; label: string };
+  provenance: { provider: "mock" | "vertex_ai" | "not_configured"; label: string };
   timing: { startedAt: string; durationMs: number };
 } & ({ ok: true; payload: T } | { ok: false; error: ProviderError });
 
@@ -28,14 +29,15 @@ export function createProvider(
   kind: RouteKind,
   mode: ProviderMode,
 ): Provider<Selection, Artifact> {
+  if (mode === "real") return createVertexGeminiProvider(kind);
   return {
     async run(selection, context) {
       const startedAt = new Date().toISOString();
       const started = performance.now();
       const metadata = () => ({
         provenance: {
-          provider: mode === "mock" ? ("mock" as const) : ("not_configured" as const),
-          label: mode === "mock" ? "Fixture / mock — no service called" : "Real provider not configured",
+          provider: "mock" as const,
+          label: "Fixture / mock — no service called",
         },
         timing: { startedAt, durationMs: Math.round(performance.now() - started) },
       });
@@ -43,9 +45,6 @@ export function createProvider(
       await Promise.resolve();
       if (context.signal?.aborted) {
         return { ...metadata(), ok: false, error: { code: "cancelled", message: "Run cancelled.", retryable: true } };
-      }
-      if (mode === "real") {
-        return { ...metadata(), ok: false, error: { code: "not_configured", message: "No real provider is configured for this route.", retryable: false } };
       }
       if (context.simulateFailure) {
         return { ...metadata(), ok: false, error: { code: "provider_failed", message: "Intentional fixture failure. Other routes remain independent.", retryable: true } };

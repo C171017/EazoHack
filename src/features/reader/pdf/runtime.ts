@@ -59,6 +59,7 @@ export class LocalOcr {
   private worker: OcrWorker | null = null;
   private idle: ReturnType<typeof setTimeout> | null = null;
   private disposed = false;
+  activate() { this.disposed=false; }
   async recognize(page: PDFPageProxy, signal: AbortSignal): Promise<TextSource> {
     const job = this.tail.catch(() => {}).then(() => this.run(page,signal));
     this.tail = job;

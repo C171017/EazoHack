@@ -23,7 +23,7 @@ const RouteMap = z.partialRecord(RouteKindSchema, ShortText);
 const DependencyMap = z.partialRecord(RouteKindSchema, z.array(RouteKindSchema).max(4));
 export const RoutePlanSchema = z.object({
   id: Id, selectionId: Id, routes: z.array(RouteKindSchema).min(1).max(4), reasonByRoute: RouteMap, dependsOn: DependencyMap,
-  trigger: z.object({ mode: z.literal("mock_manual"), requestedRoutes: z.array(RouteKindSchema).min(1).max(4), requestedAt: IsoDate }).strict(), routerVersion: Id,
+  trigger: z.object({ mode: z.enum(["mock_manual", "manual"]), requestedRoutes: z.array(RouteKindSchema).min(1).max(4), requestedAt: IsoDate }).strict(), routerVersion: Id,
 }).strict().superRefine((plan, ctx) => {
   const selected = new Set(plan.routes);
   if (selected.size !== plan.routes.length) ctx.addIssue({ code: "custom", message: "Routes must be unique", path: ["routes"] });
@@ -74,7 +74,7 @@ export const SourceDiscoverySchema = z.object({ status: z.enum(["no_results", "r
   if (value.scope === "book" && value.references.some((ref) => ref.scope !== "book")) ctx.addIssue({ code: "custom", message: "External source exceeds book scope" });
   if (value.scope === "external" && value.references.some((ref) => ref.scope !== "external")) ctx.addIssue({ code: "custom", message: "Book source exceeds external scope" });
 });
-const ArtifactBase = { id: Id, bookId: Id, selectionId: Id, routeRunId: Id, nodeIds: UniqueIds, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Artifact needs source anchors"), graphVersion: Id.optional(), provider: z.enum(["mock", "not_configured"]), schemaVersion: z.literal("1"), createdAt: IsoDate, savedAt: IsoDate.nullable(), provenance: z.object({ provider: z.literal("mock"), label: ShortText }).strict() };
+const ArtifactBase = { id: Id, bookId: Id, selectionId: Id, routeRunId: Id, nodeIds: UniqueIds, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Artifact needs source anchors"), graphVersion: Id.optional(), provider: z.enum(["mock", "vertex_ai", "not_configured"]), schemaVersion: z.literal("1"), createdAt: IsoDate, savedAt: IsoDate.nullable(), provenance: z.object({ provider: z.enum(["mock", "vertex_ai"]), label: ShortText }).strict() };
 export const ArtifactSchema = z.discriminatedUnion("kind", [
   z.object({ ...ArtifactBase, kind: z.literal("interactive_ui"), payload: InteractiveUiConfigSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("generated_image"), payload: GeneratedImageSchema }).strict(),

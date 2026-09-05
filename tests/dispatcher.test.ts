@@ -67,12 +67,13 @@ test("cycle, empty selection and mismatched selection are rejected before provid
   assert.equal(invoked, 0);
 });
 
-test("real adapters return not_configured without falling back to fixtures", async () => {
+test("real adapters use the Vertex boundary and fail closed without credentials", async () => {
   assert.throws(() => createMockRoutePlan({ selection: fixtureSelection, routes: ["interactive_ui"], mode: "real" }), RoutingNotConfiguredError);
   const result = await dispatchRoutePlan({ ...input(), mode: "real" });
-  assert.equal(result.provider, "not_configured");
+  assert.equal(result.provider, "vertex_ai");
   assert.deepEqual(result.artifacts, []);
-  assert.ok(result.runs.every((run) => run.status === "failed" && run.error?.code === "not_configured"));
+  assert.ok(result.runs.every((run) => run.status === "failed"));
+  assert.equal(result.runs.find((run) => run.route === "generated_image")?.error?.code, "not_configured");
 });
 
 test("cancelled runs discard late provider output and permit a new retry", async () => {
@@ -146,6 +147,8 @@ test("HTTP handlers enforce schema, route identity and body-size limits", async 
   const wrongKind = await assistPost(json({ selection: fixtureSelection, plan }), { params: Promise.resolve({ kind: "generated_image" }) });
   assert.equal(wrongKind.status, 400);
   assert.equal((await planPost(json({ selection: fixtureSelection, routes: ["interactive_ui"], code: "run()" }))).status, 400);
-  assert.equal((await planPost(json({ selection: fixtureSelection, routes: ["interactive_ui"], mode: "real" }))).status, 503);
+  const realPlanResponse = await planPost(json({ selection: fixtureSelection, routes: ["interactive_ui"], mode: "real" }));
+  assert.equal(realPlanResponse.status, 200);
+  assert.equal((await realPlanResponse.json()).provider, "vertex_ai");
   assert.equal((await planPost(json({ padding: "x".repeat(129 * 1024) }))).status, 413);
 });
