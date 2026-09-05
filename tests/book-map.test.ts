@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { GraphSchema, MapViewSchema } from '../src/shared/schemas';
 import { createSampleGraph } from '../src/features/book-graph/sample-graph';
 import { getBookPreview } from '../src/features/reader/book-preview';
-import { initialView, orientation, nearestProjection, magneticPose, orbitFrom, SNAP_ENTER, SNAP_EXIT, springProgress, project, worldPoint, placeLabels } from '../src/features/book-graph/projection';
+import { initialView, orientation, nearestProjection, beginOrbit, advanceOrbit, approachingProjection, magneticPose, orbitFrom, SNAP_ENTER, springProgress, project, worldPoint, placeLabels } from '../src/features/book-graph/projection';
 import { WorkspaceSnapshotSchema } from '../src/features/persistence';
 
 let preview: Awaited<ReturnType<typeof getBookPreview>>;
@@ -84,15 +84,15 @@ test('magnetic alignment finds all three planes and reversed views without a ful
     [{yaw:Math.PI*4+.03,pitch:.01},'xy'],
   ] as const){const target=nearestProjection(pose);assert.equal(target.projection,mode);assert.ok(target.distance<SNAP_ENTER);assert.ok(Math.abs(target.yaw-pose.yaw)<.05);}
   assert.ok(nearestProjection({yaw:.5,pitch:.4}).distance>SNAP_ENTER);
-  assert.ok(SNAP_EXIT>SNAP_ENTER);
 });
-test('magnetic pull is continuous and deliberate drags can escape either pole',()=>{
+test('magnetic pull is continuous and reversing input leaves either pole',()=>{
   const raw={yaw:.08,pitch:.06},attracted=magneticPose(raw);
   assert.ok(nearestProjection(attracted).distance<nearestProjection(raw).distance);
   assert.deepEqual(magneticPose({yaw:.5,pitch:.4}),{yaw:.5,pitch:.4});
-  for(const pitch of [-Math.PI/2,Math.PI/2])for(const dy of [-130,130]){
+  for(const pitch of [-Math.PI/2,Math.PI/2]){
+    const dy=-Math.sign(pitch)*130;
     const pulled=orbitFrom({yaw:0,pitch},0,dy);
-    assert.ok(Math.abs(pulled.pitch-pitch)>SNAP_EXIT);
+    assert.ok(Math.abs(pulled.pitch-pitch)>.7);
     assert.ok(Math.abs(pulled.pitch)<=Math.PI/2);
   }
 });
@@ -104,10 +104,91 @@ test('magnetic settling progresses smoothly to exact alignment without opacity c
 
 test('wide magnetic capture attracts all three planes at 25 degrees',()=>{
   for(const projection of ['xy','xz','yz'] as const){
-    const pose={...orientation(projection),yaw:orientation(projection).yaw+25*Math.PI/180};
+    const base=orientation(projection),offset=25*Math.PI/180;
+    const pose=projection==='xz'?{...base,pitch:base.pitch+offset}:{...base,yaw:base.yaw+offset};
     const target=nearestProjection(pose);
     assert.equal(target.projection,projection);
     assert.ok(target.distance<SNAP_ENTER);
     assert.ok(nearestProjection(magneticPose(pose)).distance<target.distance);
   }
+});
+
+test('top-down capture works at every heading and chooses the nearest perpendicular',()=>{
+  for(const yaw of [-7,-Math.PI,-Math.PI/2,-.58,0,.8,Math.PI/2,9]){
+    for(const sign of [-1,1]){
+      const pose={yaw,pitch:sign*(Math.PI/2-.15)},target=nearestProjection(pose);
+      assert.equal(target.projection,'xz');
+      assert.ok(Math.abs(target.yaw-yaw)<=Math.PI/4+1e-8);
+      assert.ok(Math.abs(target.yaw/(Math.PI/2)-Math.round(target.yaw/(Math.PI/2)))<1e-8);
+      assert.equal(magneticPose(pose).yaw,yaw);
+      assert.ok(target.distance<SNAP_ENTER);
+      const flat={yaw:target.yaw,pitch:target.pitch};
+      const a=project({x:10,y:-100,z:20},flat),b=project({x:10,y:100,z:20},flat);
+      assert.ok(Math.hypot(a.x-b.x,a.y-b.y)<1e-8);
+    }
+  }
+});
+test('an uninterrupted vertical drag reaches the pole without bouncing back',()=>{
+  for(const sign of [-1,1]){
+    const start={yaw:Math.PI/2,pitch:sign*.36};
+    let previous=0;
+    for(const dy of [50,150,250,350,600]){
+      const pose=orbitFrom(start,0,sign*dy);
+      assert.ok(Math.abs(pose.pitch)>=previous);previous=Math.abs(pose.pitch);
+      assert.ok(Math.abs(pose.pitch)<=Math.PI/2);
+    }
+    assert.equal(previous,Math.PI/2);
+  }
+});
+test('separate arrow steps leave a plane and snap when approaching the next',()=>{
+  let pose=orientation('xy');
+  for(let i=0;i<3;i++){
+    const next=orbitFrom(pose,0,-20);
+    assert.equal(approachingProjection(pose,next),null);
+    pose=next;
+  }
+  assert.ok(pose.pitch<-.35);
+  let captured=false;
+  for(let i=0;i<12;i++){
+    const next=orbitFrom(pose,0,-20),target=approachingProjection(pose,next);
+    if(target){assert.equal(target.projection,'xz');captured=true;break;}
+    pose=next;
+  }
+  assert.ok(captured);
+  const top=orientation('xz'),away=orbitFrom(top,0,20);
+  assert.equal(approachingProjection(top,away),null);
+});
+
+test('turning within the top plane does not count as leaving it',()=>{
+  const from={...orientation('xz'),projection:'xz' as const};
+  const rotated=orbitFrom(from,250,0);
+  assert.equal(approachingProjection(from,rotated)?.projection,'xz');
+  assert.equal(nearestProjection(rotated).projection,'xz');
+  assert.equal(approachingProjection(from,orbitFrom(from,0,150)),null);
+});
+
+test('continued gestures at either pole never reverse their direction',()=>{
+  for(const sign of [-1,1]){
+    let motion=beginOrbit({yaw:.8,pitch:sign*1.4});
+    for(let i=0;i<30;i++)motion=advanceOrbit(motion,0,sign*10);
+    assert.equal(motion.display.pitch,sign*Math.PI/2);
+    // Lift the pointer, start another gesture, and continue in the same direction.
+    motion=beginOrbit(motion.display);
+    for(let i=0;i<30;i++)motion=advanceOrbit(motion,0,sign*10);
+    assert.equal(motion.display.pitch,sign*Math.PI/2);
+    // Reversing responds on the first pixel, regardless of accumulated overshoot.
+    motion=advanceOrbit(motion,0,-sign);
+    assert.ok(Math.abs(motion.display.pitch)<Math.PI/2);
+    assert.ok(Math.abs(motion.display.pitch-sign*Math.PI/2)<=.006001);
+    assert.equal(approachingProjection(motion.previous,motion.raw),null);
+  }
+});
+test('reversing within the magnetic range has no jump or release bounce',()=>{
+  let motion=beginOrbit({yaw:.8,pitch:-1});
+  for(let i=0;i<10;i++)motion=advanceOrbit(motion,0,-3);
+  const before=motion.display;
+  motion=advanceOrbit(motion,0,1);
+  assert.ok(motion.display.pitch>before.pitch);
+  assert.ok(motion.display.pitch-before.pitch<=.006001);
+  assert.equal(approachingProjection(motion.previous,motion.raw),null);
 });

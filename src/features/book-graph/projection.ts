@@ -45,31 +45,60 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string}
   });
 }
 
-// Separate capture and release radii prevent jitter when leaving a magnetic plane.
+// A wide capture radius encourages flat views; direction decides whether to snap.
 export const SNAP_ENTER = Math.PI / 6; // 30 degrees
-export const SNAP_EXIT = Math.PI * 2 / 9; // 40 degrees
 export type SnapTarget = {projection:'xy'|'xz'|'yz';yaw:number;pitch:number;distance:number};
 export function nearestProjection(camera:Pick<MapView,'yaw'|'pitch'>):SnapTarget {
   const quarter=Math.PI/2;
   const yaw=Math.round(camera.yaw/quarter)*quarter;
   const side:SnapTarget={projection:Math.abs(Math.round(yaw/quarter)%2)===0?'xy':'yz',yaw,pitch:0,distance:Math.hypot(camera.yaw-yaw,camera.pitch)};
-  const poleYaw=Math.round(camera.yaw/Math.PI)*Math.PI;
   const pitch=camera.pitch<0?-quarter:quarter;
-  const top:SnapTarget={projection:'xz',yaw:poleYaw,pitch,distance:Math.hypot(camera.yaw-poleYaw,camera.pitch-pitch)};
+  // Top capture depends only on tilt. Once released, settle to the nearest
+  // perpendicular heading (at most 45 degrees), including reversed views.
+  const top:SnapTarget={projection:'xz',yaw,pitch,distance:Math.abs(camera.pitch-pitch)};
   return side.distance<=top.distance?side:top;
 }
 export function orbitFrom(start:Pick<MapView,'yaw'|'pitch'>,dx:number,dy:number) {
+  const pole=Math.PI/2;
+  // Always preserve input direction, even when another gesture starts at a pole.
   const requested=start.pitch+dy*.006;
-  // Either drag direction can pull away from a top/bottom projection.
-  const wrapped=((requested+Math.PI/2)%(2*Math.PI)+2*Math.PI)%(2*Math.PI);
-  const pitch=wrapped<=Math.PI?wrapped-Math.PI/2:3*Math.PI/2-wrapped;
+  const pitch=Math.max(-pole,Math.min(pole,requested));
   return {yaw:start.yaw+dx*.006,pitch};
 }
-export function magneticPose(camera:Pick<MapView,'yaw'|'pitch'>) {
+function distanceToPlane(camera:Pick<MapView,'yaw'|'pitch'>,target:SnapTarget) {
+  return target.projection==='xz'?Math.abs(camera.pitch-target.pitch):Math.hypot(camera.yaw-target.yaw,camera.pitch-target.pitch);
+}
+export function approachingProjection(from:Pick<MapView,'yaw'|'pitch'>,to:Pick<MapView,'yaw'|'pitch'>) {
+  const target=nearestProjection(to);
+  // Discrete arrow taps must accumulate when leaving a plane, rather than
+  // snapping every step back to the place it started.
+  return target.distance<=SNAP_ENTER&&target.distance<=distanceToPlane(from,target)+1e-8?target:null;
+}
+export function magneticPose(camera:Pick<MapView,'yaw'|'pitch'>,previous?:Pick<MapView,'yaw'|'pitch'>) {
   const target=nearestProjection(camera);
+  if(previous&&target.distance>distanceToPlane(previous,target)+1e-8)return {yaw:camera.yaw,pitch:camera.pitch};
   const proximity=Math.max(0,1-target.distance/SNAP_ENTER);
   const pull=.55*proximity*proximity;
-  return {yaw:camera.yaw+(target.yaw-camera.yaw)*pull,pitch:camera.pitch+(target.pitch-camera.pitch)*pull};
+  // Do not steer yaw during a top-entry drag; align it in the release animation.
+  return {yaw:target.projection==='xz'?camera.yaw:camera.yaw+(target.yaw-camera.yaw)*pull,pitch:camera.pitch+(target.pitch-camera.pitch)*pull};
+}
+type CameraPose=Pick<MapView,'yaw'|'pitch'>;
+export type OrbitMotion={raw:CameraPose;display:CameraPose;previous:CameraPose;directionX:number;directionY:number};
+export function beginOrbit(camera:CameraPose):OrbitMotion {
+  const pose={yaw:camera.yaw,pitch:camera.pitch};
+  return {raw:pose,display:pose,previous:pose,directionX:0,directionY:0};
+}
+export function advanceOrbit(motion:OrbitMotion,dx:number,dy:number):OrbitMotion {
+  const directionX=Math.sign(dx),directionY=Math.sign(dy);
+  // On reversal, start at the displayed pose instead of jumping back across
+  // the magnetic offset. Keep unmodified raw coordinates for continued input.
+  const base={
+    yaw:directionX&&motion.directionX&&directionX!==motion.directionX?motion.display.yaw:motion.raw.yaw,
+    pitch:directionY&&motion.directionY&&directionY!==motion.directionY?motion.display.pitch:motion.raw.pitch,
+  };
+  const raw=orbitFrom(base,dx,dy);
+  const previous=raw.yaw!==motion.raw.yaw||raw.pitch!==motion.raw.pitch?base:motion.previous;
+  return {raw,previous,display:magneticPose(raw,previous),directionX:directionX||motion.directionX,directionY:directionY||motion.directionY};
 }
 export function springProgress(elapsedMs:number) {
   const t=Math.min(1,Math.max(0,elapsedMs/520));

@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
-import { initialView, LEVELS, magneticPose, nearestProjection, orbitFrom, SNAP_ENTER, SNAP_EXIT, springProgress, orientation, placeLabels, PROJECTIONS, project, type Point3 } from './projection';
+import { initialView, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, placeLabels, PROJECTIONS, project, type Point3 } from './projection';
 import { baseScale, semanticWindow, toScreen, zoomAt, zoomCentered, zoomLevel } from './semantic-window';
 import { readMap, useMapPages, useMapRequest } from './map-data';
 import { useNodeTransition } from './node-transition';
@@ -42,7 +42,8 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
   const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,{kind:'edges',id:windowed.nodes.map(n=>n.id),theme:current.themeFilter??'',role:current.roleFilter??'',start:String(range[0]),end:String(range[1])},140);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
-  const drag=useRef<{id:number;x:number;y:number;view:MapView;latest:MapView;pan:boolean;exited:boolean;moved:boolean}|null>(null);
+  const drag=useRef<{id:number;x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;pan:boolean;moved:boolean}|null>(null);
+  const keyboardOrbit=useRef<MapView|null>(null);
   useEffect(()=>{latest.current={current,size};},[current,size]);
   useEffect(()=>{const f=requestAnimationFrame(()=>setPreviousLevel(level));return()=>cancelAnimationFrame(f);},[level]);
   useEffect(()=>{
@@ -81,15 +82,25 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
     setSourceActivation({id,ticket:++sourceTicket.current});
   }
   function settle(from:MapView,target:Pick<MapView,'projection'|'yaw'|'pitch'>) {
-    cancelMotion();const finish={...from,...target};
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){onViewChange(finish);return;}
+    cancelMotion();
+    const yaw=target.yaw+Math.round((from.yaw-target.yaw)/(2*Math.PI))*2*Math.PI;
+    const finish={...from,...target,yaw};
+    const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(finish);return;}
     let start:number|undefined;const animate=(now:number)=>{
       start??=now;const elapsed=now-start,ease=springProgress(elapsed);
-      onViewChange(elapsed>=520?finish:{...from,projection:'3d',yaw:from.yaw+(target.yaw-from.yaw)*ease,pitch:from.pitch+(target.pitch-from.pitch)*ease});
+      publish(elapsed>=520?finish:{...from,projection:'3d',yaw:from.yaw+(finish.yaw-from.yaw)*ease,pitch:from.pitch+(finish.pitch-from.pitch)*ease});
       if(elapsed<520)frame.current=requestAnimationFrame(animate);else frame.current=null;
     };frame.current=requestAnimationFrame(animate);
   }
-  function finishDrag(){const d=drag.current;drag.current=null;if(!d||d.pan||!d.moved)return;const target=nearestProjection(d.latest),threshold=d.view.projection!=='3d'&&!d.exited?SNAP_EXIT:SNAP_ENTER;if(target.distance<=threshold&&(!d.exited||target.projection!==d.view.projection))settle(d.latest,target);}
+  function finishDrag(){
+    const d=drag.current;drag.current=null;if(!d||d.pan||!d.moved)return;
+    const target=approachingProjection(d.motion.previous,d.motion.raw);
+    // Align on entry; an intentional rotation within an already-flat view
+    // should not be undone on release.
+    if(target?.projection==='xz'&&d.view.projection==='xz'&&Math.abs(d.motion.raw.pitch-d.view.pitch)<1e-8)target.yaw=d.motion.raw.yaw;
+    if(target)settle(d.latest,target);
+  }
   function zoom(factor:number){const {current:view,size}=latest.current;change(zoomCentered(view,view.zoom*factor,size));}
   function openCluster(node:MapEntry) {
     const centre=node.position?toScreen(node.position,current,size,range):{x:size.width/2,y:size.height/2};
@@ -130,10 +141,31 @@ export function BookMap({graph,excerptRange,view,onViewChange,onSource,onSaveVie
     <div className="map-topbar"><div><small>THE REPUBLIC · BOOK ATLAS</small><h2>{level===0?'The shape of the book':level<graph.depth?'Inside the ideas':'A closer reading'}</h2></div></div>
     <div ref={stage} className="map-stage">
       <svg ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
-        onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();change({...orbitFrom(current,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
-        onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const target=nearestProjection(current);if(target.distance<=SNAP_ENTER)settle(current,target);}}}
-        onPointerDown={e=>{if(drag.current||(e.target as Element).closest('[data-node-id]')||e.button!==0)return;cancelMotion();navigation.current?.abort();setNavigating(false);drag.current={id:e.pointerId,x:e.clientX,y:e.clientY,view:current,latest:current,pan:e.shiftKey,exited:false,moved:false};e.currentTarget.setPointerCapture(e.pointerId);}}
-        onPointerMove={e=>{const d=drag.current;if(!d||d.id!==e.pointerId)return;const dx=e.clientX-d.x,dy=e.clientY-d.y;if(Math.hypot(dx,dy)<3&&!d.moved)return;d.moved=true;if(d.pan){d.latest={...d.view,x:d.view.x+dx,y:d.view.y+dy};onViewChange(d.latest);return;}const raw=orbitFrom(d.view,dx,dy);if(d.view.projection!=='3d'&&Math.hypot(raw.yaw-d.view.yaw,raw.pitch-d.view.pitch)>SNAP_EXIT)d.exited=true;d.latest={...d.view,projection:'3d',...(d.view.projection!=='3d'?raw:magneticPose(raw))};onViewChange(d.latest);}}
+        onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
+        onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xz'&&from?.projection==='xz'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
+        onBlur={()=>{keyboardOrbit.current=null;}}
+        onPointerDown={e=>{
+          if(drag.current||(e.target as Element).closest('[data-node-id]')||e.button!==0)return;
+          cancelMotion();keyboardOrbit.current=null;navigation.current?.abort();setNavigating(false);
+          const view=latest.current.current;
+          drag.current={id:e.pointerId,x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),pan:e.shiftKey,moved:false};
+          e.currentTarget.setPointerCapture(e.pointerId);
+        }}
+        onPointerMove={e=>{
+          const d=drag.current;if(!d||d.id!==e.pointerId)return;
+          const dx=e.clientX-d.x,dy=e.clientY-d.y;
+          if(Math.hypot(dx,dy)<3&&!d.moved)return;
+          d.moved=true;
+          if(d.pan)d.latest={...d.view,x:d.view.x+dx,y:d.view.y+dy};
+          else {
+            // Integrate deltas from the last event so reversing at the pole
+            // responds immediately, without consuming an overshoot dead zone.
+            d.motion=advanceOrbit(d.motion,e.clientX-d.lastX,e.clientY-d.lastY);
+            d.latest={...d.view,projection:'3d',...d.motion.display};
+          }
+          d.lastX=e.clientX;d.lastY=e.clientY;
+          latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
+        }}
         onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
         <desc>Pinch to expand or group ideas. Scroll with two fingers to pan. Drag to orbit; Shift-drag pans. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. Height means structure, not importance.</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8ca996"/></marker></defs>

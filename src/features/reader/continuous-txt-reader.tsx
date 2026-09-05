@@ -96,13 +96,17 @@ function boundaryOffset(node: Node, offset: number, edge: 'start' | 'end', root:
 }
 
 const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
+  title?: string;
+  bookId?: string;
+  onUpload: (file: File) => Promise<void>;
+  onReset?: () => void;
   sourceText: string;
   fileHash: string;
   extractionVersion: string;
   activeAnchor: SourceAnchor | null;
   onSelection: (selection: TxtSelectionRange) => void;
   slots?: ReaderSlot[];
-}>(function ContinuousTxtReader({ sourceText, fileHash, extractionVersion, activeAnchor, onSelection, slots=EMPTY_SLOTS }, ref) {
+}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, slots=EMPTY_SLOTS }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText), [sourceText]);
   const scroller = useRef<HTMLDivElement>(null);
   const documentRoot = useRef<HTMLDivElement>(null);
@@ -298,13 +302,13 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     style={{ '--font-reading': `${englishFonts.find(font => font.id === fonts.english)!.family}, ${chineseFonts.find(font => font.id === fonts.chinese)!.family}, serif` } as CSSProperties}
   >
     <div className="txt-reader-masthead">
-      <ReadingMenu fonts={fonts} onChange={changeFonts}/>
+      <ReadingMenu fonts={fonts} onChange={changeFonts} onUpload={onUpload} onReset={onReset}/>
     </div>
     <div className="txt-reader-page">
     <header className="txt-reader-heading">
-      <p className="txt-reader-eyebrow">Plato · Translated by Benjamin Jowett</p>
-      <h1>The Republic of Plato.</h1>
-      <p className="txt-reader-edition">Third edition · Complete text</p>
+      <p className="txt-reader-eyebrow">{bookId === "plato-republic" ? "Plato · Translated by Benjamin Jowett" : "Your uploaded book"}</p>
+      <h1>{title}</h1>
+      <p className="txt-reader-edition">{bookId === "plato-republic" ? "Third edition · Complete text" : "Complete text"}</p>
       <p className="txt-reader-hint">Select a passage to explore it.</p>
     </header>
     <div

@@ -2,6 +2,8 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
+import { readUploadedBook, type UploadedBook } from '../reader/upload-book';
+import { PdfWorkspace } from '../reader/pdf/pdf-workspace';
 import { Button } from '@/ui/components/button';
 import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type Artifact, type RouteKind, type RouteRun } from '@/shared/schemas';
 import { createWorkspaceRepository, type WorkspaceSnapshot } from '../persistence';
@@ -19,8 +21,18 @@ const routes: {kind:RouteKind;label:string;symbol:string;supported:boolean}[] = 
   {kind:'concept_diagram',label:'Concept diagram',symbol:'◇',supported:true},
   {kind:'source_discovery',label:'Sources',symbol:'⌕',supported:false},
 ];
-const workspaceId = 'republic-scaffold-v1';
+
 export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstrap}) {
+  const [uploaded, setUploaded] = useState<UploadedBook | null>(null);
+  async function upload(file: File) { setUploaded(await readUploadedBook(file)); }
+  if (uploaded?.kind === 'pdf') return <PdfWorkspace key={uploaded.hash} initialInput={{ id: 1, title: uploaded.title, hash: uploaded.hash, data: uploaded.data }} onReturn={() => setUploaded(null)} />;
+  const activeGraph: MapBootstrap = uploaded ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
+  return <TextWorkspace key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? 'The Republic of Plato.'} onUpload={upload} onReset={uploaded ? () => setUploaded(null) : undefined} />;
+}
+
+function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: BookPreview; graph: MapBootstrap; title: string; onUpload: (file: File) => Promise<void>; onReset?: () => void}) {
+  const bookId = graph.bookId;
+  const workspaceId = bookId === 'plato-republic' ? 'republic-scaffold-v1' : `reading:${bookId}`;
   const [mapAnchor,setMapAnchor] = useState<SourceAnchor|null>(null);
   const [mapView,setMapView] = useState<WorkspaceSnapshot['mapView']>(null);
   const reader = useRef<ContinuousTxtReaderHandle>(null);
@@ -57,21 +69,21 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
       setReady(true);
     }).catch(error=>{if(alive){setNotice(`Local restore failed: ${error.message}`);setReady(true);}});
     return ()=>{alive=false;void repository.close();};
-  },[graph.graphVersion,graph.version,preview.extractionVersion,preview.fileHash]);
+  },[graph.graphVersion,graph.version,preview.extractionVersion,preview.fileHash,workspaceId]);
   const captureSelection = useCallback((range:TxtSelectionRange) => {
     const existing=anchors.find(anchor=>selection?.anchorIds.includes(anchor.id));
     const locator=existing?.locators[0];
     if(locator?.kind==='txt'&&locator.startOffset===range.startOffset&&locator.endOffset===range.endOffset){setPanelOpen(true);return;}
     try {
-      const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset:range.startOffset,endOffset:range.endOffset}],quote:range.quote,prefix:range.prefix,suffix:range.suffix,resolution:'exact'});
-      const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId:'plato-republic',anchorIds:[anchor.id],selectedText:range.quote,contextSnapshot:'Complete TXT source; Benjamin Jowett third edition.',createdAt:new Date().toISOString()});
+      const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId,fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset:range.startOffset,endOffset:range.endOffset}],quote:range.quote,prefix:range.prefix,suffix:range.suffix,resolution:'exact'});
+      const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId,anchorIds:[anchor.id],selectedText:range.quote,contextSnapshot:`Complete TXT source: ${title}`,createdAt:new Date().toISOString()});
       sourceRequest.current++;setMapAnchor(null);setMapView(current=>current?{...current,readerAnchorId:null}:null);setSelection(next);setSelections(current=>[next,...current]);setAnchors(current=>[...current,anchor]);
       setPanelOpen(true);
       setNotice('Passage selected. Choose how Gemini should help you explore it.');
     } catch {
       setNotice('Select a non-empty passage shorter than 20,000 characters.');
     }
-  },[preview.extractionVersion,preview.fileHash,selection,anchors]);
+  },[preview.extractionVersion,preview.fileHash,selection,anchors,bookId,title]);
   async function exercise(target:Selection|null=selection, kinds:RouteKind[]=selectedRoutes) {
     if(!target||!kinds.length||busy)return;
     const frozen=target, ticket=++activeRequest.current;
@@ -96,7 +108,7 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
   async function save() {
     const repository=createWorkspaceRepository();
     try {
-      const snapshot=await repository.save({schemaVersion:1,id:workspaceId,bookId:'plato-republic',selections,anchors,placements,artifacts:artifacts.map(artifact=>({...artifact,savedAt:new Date().toISOString()})),interactionState,graphViewport:null,mapView:mapView?.graphVersion===graph.graphVersion&&(!mapView.hierarchyVersion||mapView.hierarchyVersion===graph.version)?{...mapView,hierarchyVersion:graph.version}:{...initialView(graph.graphVersion),hierarchyVersion:graph.version,sourceScope:graph.analysis?'book':'excerpt'},readerPosition:{fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,startOffset:reader.current?.getReadingPosition()??0},bookmarks:selection?.anchorIds??[],savedAt:new Date().toISOString()});
+      const snapshot=await repository.save({schemaVersion:1,id:workspaceId,bookId,selections,anchors,placements,artifacts:artifacts.map(artifact=>({...artifact,savedAt:new Date().toISOString()})),interactionState,graphViewport:null,mapView:mapView?.graphVersion===graph.graphVersion&&(!mapView.hierarchyVersion||mapView.hierarchyVersion===graph.version)?{...mapView,hierarchyVersion:graph.version}:{...initialView(graph.graphVersion),hierarchyVersion:graph.version,sourceScope:graph.analysis?'book':'excerpt'},readerPosition:{fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,startOffset:reader.current?.getReadingPosition()??0},bookmarks:selection?.anchorIds??[],savedAt:new Date().toISOString()});
       setSaved(snapshot);setNotice('Saved locally · view, passage and results.');
     }catch(error){setNotice(`Not saved: ${error instanceof Error?error.message:'Storage error'}`);}
     finally{await repository.close();}
@@ -155,10 +167,10 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
       <section className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         <div className="flex items-center gap-3 border-b border-line px-5 py-3"><p role="status" className="flex-1 text-xs text-muted">{notice}</p><Button disabled={!ready} onClick={save}>Save locally</Button>{selection&&<Button onClick={()=>{setPanelOpen(true);if(selectedLocator)reader.current?.scrollToOffset(selectedLocator.startOffset);}}>Passage</Button>}</div>
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} saved results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
-        <ContinuousTxtReader ref={reader} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} slots={slots}/>
+        <ContinuousTxtReader ref={reader} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} slots={slots}/>
       </section>
       <section className="relative min-h-[960px] flex-1 overflow-hidden bg-paper lg:min-h-0" aria-label="Exploration workspace">
-        <div className="absolute inset-0">{ready&&(graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can keep reading and exploring selected passages. Reload when the map analysis is ready.</p><button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button></div>:<BookMap key={graph.version} graph={graph} excerptRange={[preview.startOffset/preview.totalCharacters,(preview.startOffset+preview.text.length)/preview.totalCharacters]} view={mapView} onViewChange={setMapView} onSource={readMapSource} onSaveView={save}/>)}</div>
+        <div className="absolute inset-0">{ready&&(graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p><button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button></div>:<BookMap key={graph.version} graph={graph} excerptRange={[preview.startOffset/preview.totalCharacters,(preview.startOffset+preview.text.length)/preview.totalCharacters]} view={mapView} onViewChange={setMapView} onSource={readMapSource} onSaveView={save}/>)}</div>
 
       </section>
     </div>

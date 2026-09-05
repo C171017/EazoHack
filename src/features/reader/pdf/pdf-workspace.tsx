@@ -17,8 +17,8 @@ type Input = { id:number; title:string; hash:string; data?:Uint8Array };
 const SAMPLE:Input = {id:0,title:'The Republic · Jowett, 1888',hash:'8ec6c7f6a61e5697251515ec55bf746f45837c1527c4a663a020d0e171b21401'};
 const SavedSchema=z.object({hash:z.string(),page:z.number().int().nonnegative(),selection:SelectionSchema.nullable(),anchors:z.array(SourceAnchorSchema),provenance:z.array(z.object({pageIndex:z.number().int().nonnegative(),method:z.string(),reviewRequired:z.boolean()}))});
 
-export function PdfWorkspace() {
-  const [input,setInput]=useState<Input>(SAMPLE);
+export function PdfWorkspace({initialInput = SAMPLE, onReturn}: {initialInput?: Input; onReturn?: () => void}) {
+  const [input,setInput]=useState<Input>(initialInput);
   const [notice,setNotice]=useState('');
   const ticket=useRef(0);
   async function open(file:File|undefined) {
@@ -36,7 +36,7 @@ export function PdfWorkspace() {
     }catch(e){if(id===ticket.current)setNotice(e instanceof Error?e.message:'Could not open PDF.');}
   }
   return <main className="pdf-workspace">
-    <header className="pdf-header"><Link href="/">← Text workspace</Link><h1>{input.title}</h1>
+    <header className="pdf-header">{onReturn ? <button onClick={onReturn}>← Text workspace</button> : <Link href="/">← Text workspace</Link>}<h1>{input.title}</h1>
       <label className="pdf-file-button">Open PDF<input type="file" accept="application/pdf,.pdf" onChange={e=>{void open(e.target.files?.[0]);e.target.value='';}}/></label>
       <button onClick={()=>{ticket.current++;setInput({...SAMPLE,id:ticket.current});setNotice('');}}>Open Republic</button>
     </header>
