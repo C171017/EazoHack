@@ -67,10 +67,10 @@ test("cycle, empty selection and mismatched selection are rejected before provid
   assert.equal(invoked, 0);
 });
 
-test("real adapters use the Vertex boundary and fail closed without credentials", async () => {
+test("real adapters use independent provider boundaries and fail closed without credentials", async () => {
   assert.throws(() => createMockRoutePlan({ selection: fixtureSelection, routes: ["interactive_ui"], mode: "real" }), RoutingNotConfiguredError);
   const result = await dispatchRoutePlan({ ...input(), mode: "real" });
-  assert.equal(result.provider, "vertex_ai");
+  assert.equal(result.provider, "mixed");
   assert.deepEqual(result.artifacts, []);
   assert.ok(result.runs.every((run) => run.status === "failed"));
   assert.equal(result.runs.find((run) => run.route === "generated_image")?.error?.code, "not_configured");

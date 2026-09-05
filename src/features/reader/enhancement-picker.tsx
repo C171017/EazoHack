@@ -9,7 +9,7 @@ export const enhancementOptions = [
   { id: 'explanation', label: ENHANCEMENTS.explanation.label, route: 'interactive_ui', color: ENHANCEMENTS.explanation.ink },
   { id: 'diagram', label: ENHANCEMENTS.diagram.label, route: 'concept_diagram', color: ENHANCEMENTS.diagram.ink },
   { id: 'interactive', label: ENHANCEMENTS.interactive.label, route: null, color: ENHANCEMENTS.interactive.ink },
-  { id: 'illustration', label: ENHANCEMENTS.illustration.label, route: null, color: ENHANCEMENTS.illustration.ink },
+  { id: 'illustration', label: ENHANCEMENTS.illustration.label, route: 'generated_image', color: ENHANCEMENTS.illustration.ink },
 ] as const;
 
 export type PickerPosition = { left: number; top: number };

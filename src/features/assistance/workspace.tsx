@@ -73,7 +73,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
     if(selection&&existing&&resolveTxtAnchor(existing,preview)&&locator?.kind==='txt'&&locator.startOffset===range.startOffset&&locator.endOffset===range.endOffset){record(selection,[existing]);return;}
     try {
       const anchor=SourceAnchorSchema.parse({id:crypto.randomUUID(),bookId,fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,locators:[{kind:'txt',startOffset:range.startOffset,endOffset:range.endOffset}],quote:range.quote,prefix:range.prefix,suffix:range.suffix,resolution:'exact'});
-      const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId,anchorIds:[anchor.id],selectedText:range.quote,contextSnapshot:`Complete TXT source: ${title}`,createdAt:selectedAt});
+      const next=SelectionSchema.parse({id:crypto.randomUUID(),bookId,anchorIds:[anchor.id],selectedText:range.quote,contextSnapshot:`Book: ${title}\nBefore selection: ${range.prefix}\nAfter selection: ${range.suffix}`,createdAt:selectedAt});
       sourceRequest.current++;setMapAnchor(null);setMapView(current=>current?{...current,readerAnchorId:null}:null);setSelection(next);setSelections(current=>[next,...current]);setAnchors(current=>[...current,anchor]);
       setNotice('Passage selected. Choose an enhancement beside the selection.');
       record(next,[anchor]);
@@ -85,12 +85,12 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
     if(!target||!kinds.length||busy)return;
     const frozen=target, ticket=++activeRequest.current;
     setRequests(current=>({...current,[frozen.id]:{routes:kinds,message:'Generating assistance…',failed:false}}));
-    setBusy(true);setNotice('Gemini 3.8 Flash is reading the selected passage…');
+    setBusy(true);setNotice(kinds.includes('generated_image') ? 'Creating an illustration of the selected passage…' : 'Reading the selected passage…');
     try {
       const planResponse=await fetch('/api/route-plan',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({selection:frozen,routes:kinds,mode:'real'})});
       const planBody=await planResponse.json();if(!planResponse.ok)throw new Error(planBody.error?.message??'Route plan rejected');
       const response=await fetch('/api/assist/all',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({selection:frozen,plan:planBody.plan,mode:'real'})});
-      const body=await response.json();if(!response.ok)throw new Error(body.error?.message??'Gemini request failed');
+      const body=await response.json();if(!response.ok)throw new Error(body.error?.message??'Generation request failed');
       const nextArtifacts=ArtifactSchema.array().parse(body.artifacts);
       if(nextArtifacts.some(artifact=>artifact.selectionId!==frozen.id||artifact.bookId!==frozen.bookId||artifact.anchorIds.some(id=>!frozen.anchorIds.includes(id))))throw new Error('Result selection mismatch');
       if(ticket!==activeRequest.current)return;

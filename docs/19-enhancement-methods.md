@@ -21,7 +21,7 @@ Models and inference providers are separate choices. Each method may have its ow
 
 ## Implementation status
 
-The TXT reader now reveals four colored SVG icon buttons beside the selected text: blue speech bubble (Explanation), green hierarchy (Diagram), purple clicking pointer (Interactive panel), and amber palette (Illustration). The floating picker uses feathered blur and staggered motion, with reduced-motion support. It dismisses on Escape, outside pointer input, scrolling, or resize. Mouse/pointer selection and keyboard Shift-arrow extension preserve canonical source offsets.
+The TXT reader now reveals four colored SVG icon buttons beside the selected text: cobalt speech bubble (Explanation), emerald hierarchy (Diagram), orchid clicking pointer (Interactive panel), and gold palette (Illustration). The floating picker uses feathered blur and staggered motion, with reduced-motion support. It dismisses on Escape, outside pointer input, scrolling, or resize. Mouse/pointer selection and keyboard Shift-arrow extension preserve canonical source offsets.
 
 Explanation and Diagram launch their existing providers directly, using the legacy `interactive_ui` and `concept_diagram` route IDs respectively. Interactive panel and Illustration remain visible with unavailable hints and cannot submit requests. No provider or saved-artifact schema migration is implied. The text reader has no Reading session panel or checkpoint save/restore flow; generated results and retry controls remain attached to the original passage. Its reading and enhancement state lasts for the current mounted workspace. The separate PDF workspace retains its existing controls.
 
@@ -30,3 +30,5 @@ Explanation and Diagram launch their existing providers directly, using the lega
 See [model/provider shortlist](20-generation-model-research.md) for current research, weighted scores and citations. Global backend access was confirmed for this comparison. No model has been selected for implementation by this research.
 
 Latest selection proposal: [API-first, cost-aware shortlist](21-api-cost-model-shortlist.md), reflecting the user's lighter-harness constraint. Provider choices remain unapproved.
+
+Approved color implementation: see [color decisions](23-color-design-decisions.md). Generated TXT marks retain their enhancement identity across selection changes and undo/redo; overlapping methods have separate underline segments.

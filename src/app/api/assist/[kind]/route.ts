@@ -1,6 +1,9 @@
 import { DispatchRequestSchema, dispatchRoutePlan } from "../../../../server/dispatcher";
 import { readJson, requestError } from "../../../../server/http";
 
+export const runtime = "nodejs";
+export const maxDuration = 120;
+
 export async function POST(request: Request, context: { params: Promise<{ kind: string }> }) {
   try {
     const { kind } = await context.params;

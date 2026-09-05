@@ -12,7 +12,7 @@ import {
   type RouteRun,
   type Selection,
 } from "../../shared/schemas";
-import { createProvider, type Provider, type ProviderError, type ProviderMode } from "../providers";
+import { dispatchProvider, createProvider, type Provider, type ProviderError, type ProviderMode } from "../providers";
 import { validateDependencies } from "../routing";
 
 export const DispatchRequestSchema = z.object({
@@ -25,7 +25,7 @@ export type DispatchRequest = z.input<typeof DispatchRequestSchema>;
 export type DispatchResult = {
   runs: RouteRun[];
   artifacts: Artifact[];
-  provider: "mock" | "vertex_ai" | "not_configured";
+  provider: "mock" | "vertex_ai" | "fal" | "mixed" | "not_configured";
   requestSnapshot: { selection: Selection; plan: RoutePlan };
 };
 export interface DispatchOptions {
@@ -106,7 +106,7 @@ async function execute(
     const priorSelection = SelectionSchema.parse(retry.previous.requestSnapshot.selection);
     const priorPlan = RoutePlanSchema.parse(retry.previous.requestSnapshot.plan);
     if (JSON.stringify(priorSelection) !== JSON.stringify(selection) || JSON.stringify(priorPlan) !== JSON.stringify(plan)) throw new Error("Retry must preserve the original selection and plan snapshots.");
-    if (retry.previous.provider !== (mode === "mock" ? "mock" : "vertex_ai")) throw new Error("Retry mode must match the original run.");
+    if (retry.previous.provider !== dispatchProvider(mode, plan.routes)) throw new Error("Retry mode must match the original run.");
     if (!retry.retryKinds.length || new Set(retry.retryKinds).size !== retry.retryKinds.length) throw new Error("Choose unique failed or cancelled routes to retry.");
     const priorRuns = retry.previous.runs.map((run) => RouteRunSchema.parse(run));
     if (priorRuns.length !== plan.routes.length || new Set(priorRuns.map((run) => run.route)).size !== priorRuns.length) throw new Error("Retry requires the complete previous route result.");
@@ -178,7 +178,7 @@ async function execute(
         } else {
           const artifact = validateArtifact(result.payload, selection, run);
           if (mode === "mock" && (result.provenance.provider !== "mock" || artifact.provider !== "mock")) throw new Error("Mock mode returned non-mock output.");
-          if (mode === "real" && (result.provenance.provider !== "vertex_ai" || artifact.provider !== "vertex_ai")) throw new Error("Real mode returned output from the wrong provider.");
+          if (mode === "real" && (result.provenance.provider !== (kind === "generated_image" ? "fal" : "vertex_ai") || artifact.provider !== result.provenance.provider || artifact.provenance.provider !== result.provenance.provider)) throw new Error("Real mode returned output from the wrong provider.");
           artifacts.push(artifact);
           run.artifactIds = [artifact.id];
           run.status = "complete";
@@ -197,7 +197,7 @@ async function execute(
   return {
     runs: plan.routes.map((kind) => RouteRunSchema.parse(runs.get(kind))),
     artifacts,
-    provider: mode === "mock" ? "mock" : "vertex_ai",
+    provider: dispatchProvider(mode, plan.routes),
     requestSnapshot: structuredClone({ selection, plan }),
   };
 }

@@ -2,10 +2,11 @@
 import {useEffect,useRef} from 'react';
 import {TimelineScroll,timelineWheelDelta} from './timeline-scroll';
 
-export function TimelineControl({x,y,progress,height,onScroll}:{x:number;y:number;progress:number;height:number;onScroll:(delta:number)=>void}) {
+export function TimelineControl({x,y,progress,height,onScroll,visible}:{x:number;y:number;visible:boolean;progress:number;height:number;onScroll:(delta:number)=>void}) {
   const target=useRef<HTMLDivElement>(null);
   useEffect(()=>{
     const element=target.current;if(!element)return;
+    if(!visible){element.blur();return;}
     const motion=new TimelineScroll();let frame:number|null=null,lastFrame=0;
     const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
     const stop=()=>{if(frame!==null)cancelAnimationFrame(frame);frame=null;motion.reset();element.removeAttribute('data-scrolling');};
@@ -35,9 +36,9 @@ export function TimelineControl({x,y,progress,height,onScroll}:{x:number;y:numbe
     window.addEventListener('pointerdown',stop,true);
     window.addEventListener('blur',stop);
     return()=>{stop();element.removeEventListener('wheel',wheel);element.removeEventListener('keydown',key);element.removeEventListener('pointerleave',stop);element.removeEventListener('blur',stop);window.removeEventListener('pointerdown',stop,true);window.removeEventListener('blur',stop);};
-  },[onScroll,height]);
+  },[onScroll,height,visible]);
   const percent=Math.max(0,Math.min(100,progress*100));
-  return <div ref={target} className="map-timeline-control" style={{left:x,top:y}} tabIndex={0} role="scrollbar" aria-label="Book timeline: scroll vertically" aria-orientation="vertical" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Number(percent.toFixed(1))} aria-valuetext={`${percent.toFixed(1)}% through the book`} aria-controls="book-source-scroll" onPointerDown={event=>{event.preventDefault();event.currentTarget.focus();}}>
+  return <div ref={target} className="map-timeline-control" data-hidden={!visible} aria-hidden={!visible} inert={!visible} style={{left:x,top:y}} tabIndex={visible?0:-1} role="scrollbar" aria-label="Book timeline: scroll vertically" aria-orientation="vertical" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Number(percent.toFixed(1))} aria-valuetext={`${percent.toFixed(1)}% through the book`} aria-controls="book-source-scroll" onPointerDown={event=>{event.preventDefault();event.currentTarget.focus();}}>
     <span className="map-timeline-rail" aria-hidden="true"><span/><i/><span/></span>
   </div>;
 }

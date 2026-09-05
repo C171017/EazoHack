@@ -200,7 +200,7 @@ export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScro
           </g>
         </g>;})}
       </svg>
-      <TimelineControl {...screen(ORIGIN)} progress={readingProgress} height={size.height} onScroll={onScrollSource}/>
+      <TimelineControl {...screen(ORIGIN)} visible={current.pitch < Math.PI / 2 - .12} progress={readingProgress} height={size.height} onScroll={onScrollSource}/>
       {(data.error||windowed.wanted.length>0||!windowed.nodes.length)&&<div className="map-layer-status" aria-live="polite">{data.error?<><span>{data.error}</span> <button onClick={data.retry}>Retry loading</button></>:windowed.wanted.length?'Opening this part of the book…':null} {!windowed.nodes.length&&!windowed.wanted.length&&<button onClick={()=>change({x:0,y:0,zoom:1})}>Return to overview</button>}</div>}
     </div>
     {restoredPath.error&&<p role="alert">{restoredPath.error} <button onClick={restoredPath.retry}>Retry</button></p>}{navigationError&&<p role="alert">{navigationError}</p>}{navigating&&<p role="status">Finding this note…</p>}

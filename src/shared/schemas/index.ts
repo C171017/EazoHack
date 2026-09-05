@@ -73,7 +73,9 @@ export const GeneratedImageSchema = z.discriminatedUnion('status', [
   z.object({ status: z.literal('ready'), resource: z.object({
     dataUrl: z.string().max(14_000_000).regex(/^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+/]+={0,2}$/),
     width: z.number().int().positive().max(16384), height: z.number().int().positive().max(16384),
-  }).strict(), prompt: Text, caption: Text }).strict(),
+  }).strict(), prompt: Text, caption: Text,
+    generation: z.object({ model: ShortText, seed: z.number().int().nonnegative(), promptVersion: Id }).strict().optional(),
+  }).strict(),
 ]);
 export const SourceDiscoverySchema = z.object({ status: z.enum(["no_results", "results"]), scope: z.enum(["undecided", "book", "external", "both"]), query: Text, references: z.array(ReferenceSchema).max(30), summary: Text }).strict().superRefine((value, ctx) => {
   if ((value.status === "no_results" && value.references.length > 0) || (value.status === "results" && value.references.length === 0)) ctx.addIssue({ code: "custom", message: "Discovery status must match references" });
@@ -81,7 +83,7 @@ export const SourceDiscoverySchema = z.object({ status: z.enum(["no_results", "r
   if (value.scope === "book" && value.references.some((ref) => ref.scope !== "book")) ctx.addIssue({ code: "custom", message: "External source exceeds book scope" });
   if (value.scope === "external" && value.references.some((ref) => ref.scope !== "external")) ctx.addIssue({ code: "custom", message: "Book source exceeds external scope" });
 });
-const ArtifactBase = { id: Id, bookId: Id, selectionId: Id, routeRunId: Id, nodeIds: UniqueIds, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Artifact needs source anchors"), graphVersion: Id.optional(), provider: z.enum(["mock", "vertex_ai", "not_configured"]), schemaVersion: z.literal("1"), createdAt: IsoDate, savedAt: IsoDate.nullable(), provenance: z.object({ provider: z.enum(["mock", "vertex_ai"]), label: ShortText }).strict() };
+const ArtifactBase = { id: Id, bookId: Id, selectionId: Id, routeRunId: Id, nodeIds: UniqueIds, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Artifact needs source anchors"), graphVersion: Id.optional(), provider: z.enum(["mock", "vertex_ai", "fal", "not_configured"]), schemaVersion: z.literal("1"), createdAt: IsoDate, savedAt: IsoDate.nullable(), provenance: z.object({ provider: z.enum(["mock", "vertex_ai", "fal"]), label: ShortText }).strict() };
 export const ArtifactSchema = z.discriminatedUnion("kind", [
   z.object({ ...ArtifactBase, kind: z.literal("interactive_ui"), payload: InteractiveUiConfigSchema }).strict(),
   z.object({ ...ArtifactBase, kind: z.literal("generated_image"), payload: GeneratedImageSchema }).strict(),
