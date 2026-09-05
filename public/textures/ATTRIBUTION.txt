@@ -11,3 +11,10 @@ License: https://creativecommons.org/licenses/by-sa/3.0/
 Collection license statement:
 https://github.com/Atlemo/SubtlePatterns/blob/master/README.md
 Subtle Patterns is created and curated by Atle Mo.
+
+Warm book paper (warm-book-v1-*.avif, *.webp, *.jpg)
+Generated with the built-in imagegen tool on 2026-09-05 for EazoHack.
+User-selected candidate A. These files are derived from the generated image,
+not from Light Paper Fibers above.
+Source and exact prompt: design/paper-candidates/a-warm-book-paper.png and README.md.
+Export recipe: scripts/prepare-paper-texture.mjs.

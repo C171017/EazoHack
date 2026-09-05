@@ -1,0 +1,38 @@
+[
+  {
+    "filename": "warm-book-v1-600.avif",
+    "width": 600,
+    "height": 600,
+    "bytes": 22632
+  },
+  {
+    "filename": "warm-book-v1-600.webp",
+    "width": 600,
+    "height": 600,
+    "bytes": 27876
+  },
+  {
+    "filename": "warm-book-v1-600.jpg",
+    "width": 600,
+    "height": 600,
+    "bytes": 51721
+  },
+  {
+    "filename": "warm-book-v1-1200.avif",
+    "width": 1200,
+    "height": 1200,
+    "bytes": 141249
+  },
+  {
+    "filename": "warm-book-v1-1200.webp",
+    "width": 1200,
+    "height": 1200,
+    "bytes": 172078
+  },
+  {
+    "filename": "warm-book-v1-1200.jpg",
+    "width": 1200,
+    "height": 1200,
+    "bytes": 285368
+  }
+]
