@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Credential-free Eazo reading workspace scaffold",
   "scripts": {
-    "dev": "next dev --hostname 127.0.0.1",
-    "build": "next build",
+    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "build": "next build --webpack",
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
@@ -28,5 +28,21 @@
     "react-dom": "^19.2.8",
     "zod": "^4.5.4"
   },
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.4",
+    "fake-indexeddb": "^6.2.5",
+    "postcss": "^8.5.28",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
 }

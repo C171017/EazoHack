@@ -1,5 +1,8 @@
 # 决策登记
 
+> 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
+
+
 ## 已确认与变更
 
 | 编号 | 状态 | 结论 |
@@ -26,3 +29,7 @@
 | 7 / D11 | 模型版本、图片/检索服务及运行环境？ | 基础栈已锁；具体模型、服务商、图片 API、搜索服务和托管仍待后续决定与预检 |
 
 每次确认追加：`日期 | D编号 | 状态 | 用户结论 | 影响文档`。当前没有选定具体模型、价格、外部检索范围、服务商或托管。文档更新已获授权；脚手架与实现尚未开始。
+
+## Implementation authorization update
+
+2026-09-05 | User authorized scaffolding, delegation, local dev and visual verification, limited to finalized decisions and neutral foundations for open parts. Republic source acquisition is complete; demo processing scale, graph semantics and full-book analysis remain unverified. No routing policy, providers, search scope, activity metric or hosting was selected.

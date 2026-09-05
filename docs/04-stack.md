@@ -1,5 +1,8 @@
 # 已确认技术选型
 
+> 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
+
+
 核对日期：2026-09-05。以下基础栈与默认架构已获批准，适用于高亮输入、四路辅助和整书地图。D06/D09/D05 的演示深度、检索范围和触发策略仍待定；具体模型、服务商和托管未选择。
 
 ## 锁定组合

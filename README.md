@@ -1,22 +1,53 @@
-# Eazo Hack：非线性阅读工作台
+# Eazo · Nonlinear reading workspace
 
-状态：**核心体验与基础技术栈已确认；仅授权文档更新**。更新于 2026-09-05。当前没有应用实现、工程脚手架或已安装依赖。
+A local, credential-free scaffold for **read → select → explore → save**. The approved stack is TypeScript, React, Next.js App Router/Route Handlers, Tailwind CSS, Zod, PDF.js, React Flow 2D, and IndexedDB.
 
-读者在左侧原书正常阅读，遇到不理解的内容时选择并高亮文字。路由机制依据这段选文，选择一种或组合多种辅助：实时生成交互 UI、生成图片、SVG/概念图/思维导图、查找来源或支持性参考。读者探索后把产物保存到原文及相关地图上下文。
+## Run locally
 
-**已确认闭环：阅读 → 高亮 → 路由到一种或多种辅助 → 探索 → 保存。** 右侧整书网络和缩小后的空间书签/活动热度愿景保留。手动截图和周期采集不属于 MVP。
+Requires Node.js 22.13 or newer (installed PDF.js requires this version on Node 22).
 
-## 阅读顺序
+```sh
+npm ci
+npm run dev
+```
 
-| 文档 | 用途 |
+Open [http://localhost:3000](http://localhost:3000). No credentials or environment variables are required. The dev server binds to loopback.
+
+```sh
+npm run typecheck
+npm run lint
+npm test
+npm run build
+```
+
+Stop the dev server before running a production build; they share `.next`.
+
+## Available now
+
+- Two-pane desktop workspace with an exact Book I excerpt from the downloaded Republic. Select text across lines/paragraphs; offsets use UTF-16 positions in the LF-normalized complete source.
+- Explicitly labeled React Flow **fixture topology**, separate from any real book knowledge graph.
+- Shared validated contracts for anchors, selections, multi-route plans, task states, four artifact variants, references and graph data.
+- Mock Route Handlers and replaceable providers, independent partial failures, dependency validation, cancellation and retry foundations. Real mode reports `not_configured`.
+- Controlled React/SVG renderers; no model-supplied HTML, code or Tailwind classes. The image fixture is an honest placeholder and source fixture performs no retrieval.
+- One IndexedDB checkpoint containing the selected passage, mock artifacts, interaction state, viewport and anchor bookmarks. Save errors are visible; refresh restores the checkpoint. Saving replaces the prior checkpoint.
+
+This is a scaffold, not a completed four-provider product. The route checkboxes and run button are developer fixture controls, not a finalized routing or trigger policy. Generated-looking results are not evidence of real generation.
+
+## Still open / deferred
+
+Routing triggers, overrides and combination policy; actual models/providers; source-discovery scope; route demo depth; full-book parsing/analysis and graph semantics; PDF viewer integration; activity metrics; deployment. The Republic source is acquired; processing scale and coverage have not been claimed. No external model, image, or search services are configured.
+
+## Documentation
+
+| Document | Purpose |
 | --- | --- |
-| [产品与交互](docs/01-product.md) | 已确认体验、四类辅助与空间语义 |
-| [决策登记](docs/02-decisions.md) | 已确认记录及后续讨论顺序 |
-| [架构与数据](docs/03-architecture.md) | 分离整书图谱与选文路由，锚点和多产物保存 |
-| [技术选型](docs/04-stack.md) | 已锁基础栈、四路能力与实现边界 |
-| [十小时计划](docs/05-plan.md) | 四路意图、待定深度、阶段出口与验收 |
-| [脚手架交接计划](docs/06-scaffolding-handoff.md) | 下一位实现者的目录、依赖、接口、任务与门禁 |
+| [Product](docs/01-product.md) | Confirmed experience and open interactions |
+| [Decisions](docs/02-decisions.md) | Locked stack and unresolved choices |
+| [Architecture](docs/03-architecture.md) | Module boundaries and provenance |
+| [Stack](docs/04-stack.md) | Approved technology constraints |
+| [Demo plan](docs/05-plan.md) | Future acceptance gates |
+| [Scaffolding handoff](docs/06-scaffolding-handoff.md) | Original handoff and implementation boundaries |
+| [Implementation status](docs/07-scaffold-status.md) | Actual delivered scope and validation |
+| [Book source](data/books/plato-republic/SOURCE.md) | Unmodified source and checksum |
 
-交互 UI 已确定为：LLM 生成经 Zod 校验的配置与已测试 React 组件组合，不运行模型生成代码；组件变体拥有预编译 Tailwind 样式，模型不能发明运行时 class。下一项高影响讨论是 **D06：十小时内四路辅助各做到什么深度？** 来源查找限定书内还是包含外部资料仍待决定。
-
-“已确认”来自用户决定；“建议”是可修改的工程方案；“待决”尚无结论。基础栈获批不等于已选模型版本、服务商、图片 API、搜索服务或托管环境，也不等于已开始脚手架或实现。
+The newer documentation was recovered from the existing local handoff worktree. The current user's instruction supersedes its historical documentation-only authorization and first-gate stop language; unresolved product decisions remain open.

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { ArtifactSchema, ConceptDiagramSchema, GraphSchema, InteractiveUiConfigSchema, ReferenceSchema, ROUTE_KINDS, RoutePlanSchema, SelectionSchema, SourceAnchorSchema } from "../src/shared/schemas";
+import { AnalysisRunSchema, ArtifactSchema, ConceptDiagramSchema, GraphSchema, InteractiveUiConfigSchema, ReferenceSchema, ROUTE_KINDS, RoutePlanSchema, SelectionSchema, SourceAnchorSchema } from "../src/shared/schemas";
 import { FIXTURE_DATE, fixtureAnchors, fixtureSelection, makeMockArtifact } from "../src/shared/fixtures";
 
 const plan = { id: "plan-test", selectionId: fixtureSelection.id, routes: [...ROUTE_KINDS], reasonByRoute: Object.fromEntries(ROUTE_KINDS.map((route) => [route, "Explicit mock test"])), dependsOn: {}, trigger: { mode: "mock_manual", requestedRoutes: [...ROUTE_KINDS], requestedAt: FIXTURE_DATE }, routerVersion: "mock-v1" };
@@ -60,4 +60,11 @@ test("references require the correct locator and reject executable URLs", () => 
   assert.equal(ReferenceSchema.safeParse({ ...ref, scope: "book" }).success, false);
   assert.equal(ReferenceSchema.safeParse({ ...ref, scope: "external", url: "javascript:alert(1)" }).success, false);
   assert.equal(ReferenceSchema.safeParse({ ...ref, scope: "book", anchorId: fixtureAnchors[0].id }).success, true);
+});
+
+test("analysis coverage cannot silently omit declared chunks or add unknown chunks", () => {
+  const analysis = { id: "analysis", bookId: fixtureSelection.bookId, chunkIds: ["chunk-1", "chunk-2"], completedChunkIds: ["chunk-1"], status: "complete", modelLabel: "mock", promptVersion: "fixture-v1" };
+  assert.equal(AnalysisRunSchema.safeParse(analysis).success, false);
+  assert.equal(AnalysisRunSchema.safeParse({ ...analysis, completedChunkIds: ["chunk-1", "unknown"] }).success, false);
+  assert.equal(AnalysisRunSchema.safeParse({ ...analysis, completedChunkIds: ["chunk-1", "chunk-2"] }).success, true);
 });

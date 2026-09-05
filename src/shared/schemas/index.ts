@@ -94,6 +94,17 @@ export const GraphSchema = z.object({ id: Id, bookId: Id, version: Id, anchorIds
   if (graph.edges.some((e) => e.provenance === "book_supported" && e.evidenceAnchorIds.length === 0)) ctx.addIssue({ code: "custom", message: "Book-supported relations need evidence" });
 });
 
+export const ChunkSchema = z.object({ id: Id, bookId: Id, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Chunk needs source anchors"), textHash: Text, status: z.enum(["pending", "running", "complete", "failed"]), error: RunErrorSchema.optional() }).strict();
+export const AnalysisRunSchema = z.object({ id: Id, bookId: Id, chunkIds: UniqueIds, completedChunkIds: UniqueIds, status: z.enum(["pending", "running", "complete", "failed", "cancelled"]), modelLabel: ShortText, promptVersion: Id }).strict().superRefine((run, ctx) => {
+  const chunks = new Set(run.chunkIds);
+  if (run.completedChunkIds.some((id) => !chunks.has(id))) ctx.addIssue({ code: "custom", message: "Completed chunks must belong to the analysis run" });
+  if (run.status === "complete" && run.completedChunkIds.length !== run.chunkIds.length) ctx.addIssue({ code: "custom", message: "Complete analysis requires full declared chunk coverage" });
+});
+export const ViewportSchema = z.object({ x: z.number().finite(), y: z.number().finite(), zoom: z.number().positive().finite() }).strict();
+export const BookmarkSchema = z.object({ id: Id, bookId: Id, graphVersion: Id, viewport: ViewportSchema, selectedNodeId: Id.optional(), readerAnchorId: Id.optional(), label: ShortText }).strict();
+// Raw events only. No activity score, event vocabulary, or ranking policy is chosen here.
+export const ActivityEventSchema = z.object({ id: Id, bookId: Id, nodeId: Id.optional(), anchorId: Id.optional(), type: ShortText, timestamp: IsoDate }).strict();
+
 export type Book = z.infer<typeof BookSchema>;
 export type SourceAnchor = z.infer<typeof SourceAnchorSchema>;
 export type Selection = z.infer<typeof SelectionSchema>;
@@ -105,3 +116,8 @@ export type InteractiveUiConfig = z.infer<typeof InteractiveUiConfigSchema>;
 export type ConceptDiagram = z.infer<typeof ConceptDiagramSchema>;
 export type Reference = z.infer<typeof ReferenceSchema>;
 export type Graph = z.infer<typeof GraphSchema>;
+export type Chunk = z.infer<typeof ChunkSchema>;
+export type AnalysisRun = z.infer<typeof AnalysisRunSchema>;
+export type Viewport = z.infer<typeof ViewportSchema>;
+export type Bookmark = z.infer<typeof BookmarkSchema>;
+export type ActivityEvent = z.infer<typeof ActivityEventSchema>;

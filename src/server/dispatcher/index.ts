@@ -4,6 +4,7 @@ import {
   RouteKindSchema,
   RoutePlanSchema,
   RouteRunSchema,
+  RunErrorSchema,
   SelectionSchema,
   type Artifact,
   type RouteKind,
@@ -139,8 +140,14 @@ async function execute(
     emit(run);
   }
   const finishError = (run: RouteRun, error: ProviderError) => {
-    run.status = error.code === "cancelled" ? "cancelled" : "failed";
-    run.error = error;
+    const checked = RunErrorSchema.safeParse(error);
+    const validated = checked.success ? checked.data : {
+      code: "invalid_output" as const,
+      message: "Provider returned an invalid error response.",
+      retryable: false,
+    };
+    run.status = validated.code === "cancelled" ? "cancelled" : "failed";
+    run.error = validated;
     emit(run);
   };
   const work = new Map<RouteKind, Promise<void>>();

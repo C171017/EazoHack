@@ -1,5 +1,8 @@
 # 产品与交互
 
+> 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
+
+
 ## 已确认的核心体验
 
 桌面网页面向约 16:9 / 16:10 屏幕：左侧是接近 macOS Preview 感觉的原书阅读器；右侧是整本书的节点与关系网络，支持非线性探索。输入愿景包括 PDF、文本及其他可处理文件，首发格式仍待决定。

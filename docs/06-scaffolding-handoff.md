@@ -1,5 +1,8 @@
 # 项目脚手架交接计划
 
+> 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
+
+
 状态：**文档获授权，脚手架未开始。** 本计划只定义下一步边界；不得据此声称真实模型、图片或搜索服务可用。
 
 ## 下一位实现者的起始任务

@@ -1,5 +1,8 @@
 # 架构、数据流与出处锚点
 
+> 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
+
+
 已确认的是高亮输入、可组合的四路辅助、整书地图愿景，以及结构化模型路由 + 应用调度器的默认架构。以下接口仍是待脚手架化的契约，不是已实现能力。
 
 ## 整书到图谱

@@ -1,5 +1,8 @@
 # 十小时范围、演示与验收
 
+> 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
+
+
 这是未来获准实现后的工程提案，本轮只更新文档。高亮输入、四路辅助、基础栈与配置驱动交互 UI 已确认；路由触发、每路深度、模型、示例书及来源查找范围待决。脚手架也尚未开始。
 
 ## 产品范围与待定演示深度
