@@ -12,22 +12,28 @@
 
 .txt-reader-pane {
   /* Reader-local colors leave the exploration workspace and PDF viewer alone. */
-  --color-paper: #f3eddf;
+  --color-paper: #f6f2e6;
   --color-ink: #302a23;
   --color-muted: #756b5e;
   --color-line: #ded6c6;
   --color-highlight: #d5ddbe;
   --font-reading: Georgia, 'Noto Serif SC', 'Songti SC', SimSun, serif;
-  /* Light Paper Fibers by Jorge Fuentes, via Subtle Patterns / Transparent
-     Textures. Attribution: /textures/ATTRIBUTION.txt. One cached, static tile. */
-  --reader-surface: linear-gradient(90deg, #b5a07816, transparent 5%, transparent 95%, #9b83581f),
-    url('/textures/light-paper-fibers.png');
+  /* A: generated warm book paper. One 600 CSS-pixel tile at every viewport
+     width keeps the fibers the same size; only the source resolution changes.
+     The JPEG also covers browsers without typed image-set support. */
+  --reader-material: url('/textures/warm-book-v1-600.jpg');
+  /* Lighting is ABOVE the opaque image. Keep it horizontal so the sticky
+     masthead and sheet share the same illumination without a visible seam. */
+  --reader-light: linear-gradient(90deg, #78603e1c, transparent 4%,
+    #fffdf51a 24%, transparent 65%, #80674108 93%, #6c523023);
+  --reader-surface: var(--reader-light), var(--reader-material);
+  --reader-surface-size: 100% 100%, 600px 600px;
   color: var(--color-ink);
-  background: var(--color-paper);
-  background-image: var(--reader-surface);
-  background-size: 100% 100%, 500px 300px;
-  box-shadow: inset 1px 0 #fffaf0, inset -3px 0 #d8cbb4,
-    inset -5px 0 #fff8e980, inset -7px 0 #c9b99940;
+  /* A narrow, quiet surround makes the sheet's thickness visible. */
+  padding: clamp(10px, 1.1vw, 18px) clamp(14px, 1.4vw, 23px)
+    clamp(14px, 1.4vw, 23px) clamp(10px, 1.1vw, 18px);
+  background: #252820;
+  border-color: #34382f;
   color-scheme: light;
   height: 78vh;
   height: 78svh;
@@ -35,11 +41,39 @@
   max-height: 56rem;
 }
 
+@supports (background-image: image-set(url('/textures/warm-book-v1-600.avif') type('image/avif') 1x)) {
+  .txt-reader-pane {
+    /* Native selection: first supported format at the chosen pixel density.
+       Cap at 2x rather than downloading a huge texture on 3x phones. */
+    --reader-material: image-set(
+      url('/textures/warm-book-v1-600.avif') type('image/avif') 1x,
+      url('/textures/warm-book-v1-1200.avif') type('image/avif') 2x,
+      url('/textures/warm-book-v1-600.webp') type('image/webp') 1x,
+      url('/textures/warm-book-v1-1200.webp') type('image/webp') 2x,
+      url('/textures/warm-book-v1-600.jpg') type('image/jpeg') 1x,
+      url('/textures/warm-book-v1-1200.jpg') type('image/jpeg') 2x
+    );
+  }
+}
+
 .txt-reader-scroll {
+  background-color: var(--color-paper);
+  background-image: var(--reader-surface);
+  background-size: var(--reader-surface-size);
+  background-repeat: no-repeat, repeat;
+  /* The tile and lighting stay on the viewport-sized scroll surface, never
+     on the full book. No filters, blend modes or scroll-driven effects. */
+  border: 1px solid #fffbeecc;
+  border-right-color: #c9bfa7;
+  border-radius: 1px;
+  box-shadow: inset 1px 0 #fffdf466, inset 0 -1px #b6a88e55,
+    2px 1px 0 #e2d9c4, 3px 2px 0 #a79b83,
+    4px 3px 0 #e9e0cc, 5px 4px 0 #8c806b,
+    4px 8px 14px #00000038;
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
-  scrollbar-color: #c7beac transparent;
+  scrollbar-color: #b9ab90 transparent;
 }
 
 .txt-reader-masthead {
@@ -52,7 +86,8 @@
   padding: 1rem clamp(1.5rem, 3.5vw, 3.5rem);
   background-color: var(--color-paper);
   background-image: var(--reader-surface);
-  background-size: 100% 100%, 500px 300px;
+  background-size: var(--reader-surface-size);
+  background-repeat: no-repeat, repeat;
 }
 
 .txt-reader-scroll[data-english-font='allura'] .txt-reader-body { font-size: 1.65rem; line-height: 1.65; }
@@ -141,5 +176,19 @@
     height: auto;
     min-height: 0;
     max-height: none;
+  }
+}
+
+@media (max-width: 40rem) {
+  .txt-reader-pane {
+    padding: 7px 10px 11px 7px;
+  }
+}
+
+@media (forced-colors: active) {
+  .txt-reader-scroll,
+  .txt-reader-masthead {
+    background-image: none;
+    box-shadow: none;
   }
 }
