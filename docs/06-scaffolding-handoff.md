@@ -1,5 +1,7 @@
 # 项目脚手架交接计划
 
+> 2026-09-05 D14 supersession：下文的 `assistance` 产物面板描述属于历史脚手架。最新产品布局要求产物通过 `ArtifactPlacement` 锚定并进入左侧原文阅读流；右侧保留地图。不要据旧目录说明继续扩展右侧结果面板。见 [内嵌产物决策](17-inline-reader-artifacts.md)。
+
 > PDF 后续衔接（2026-09-05）：下文是初始脚手架任务，不再作为后来获授权的 PDF 四层处理之禁令。TXT 已交另一任务负责。继续 PDF/整书工作前阅读 [11-pdf-whole-book-analysis.md](11-pdf-whole-book-analysis.md)：全来源保留、先检查提取器再 OCR、阅读按需任务与全量分析分开、章节与证据回链。新说明是设计/测量记录，不是实现验收。
 
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
@@ -22,7 +24,7 @@ src/
   features/
     reader/                          # PDF.js、文字层、Selection/SourceAnchor
     book-graph/                      # 当前 React Flow fixture；生产目标已由 D04/D12 改为 3D + 三个二维投影
-    assistance/                      # 路由 UI、RouteRun 状态、产物面板
+    assistance/                      # 路由 UI、RouteRun 状态；历史右侧面板待迁移为 reader artifact slots
     artifacts/
       interactive-ui/               # 注册表组件与 config renderer
       generated-image/              # 图片状态/Blob 展示
@@ -57,6 +59,7 @@ tests/
 - `RoutePlanSchema`：固定 route enum、数组可多选、每路理由、依赖与触发快照。
 - `RouteRunSchema`：独立状态机 `pending/running/complete/failed/cancelled`，含 error 与 artifactIds。
 - `ArtifactSchema`：以 kind 作为 discriminated union；始终绑定 selectionId/anchorIds，nodeIds 可空。
+- `ArtifactPlacementSchema`：绑定 artifact/selection/anchor 与精确来源 offset；应用控制合法 mode/order，模型不能提供任意坐标或样式。
 - `InteractiveUiConfigSchema`：schemaVersion、允许的 component key、受限 props、内容、假设和 validationStatus；明确拒绝 code/html/script/className。
 - `ConceptDiagramSchema`：受限节点/边/分组、引用与布局提示；检查端点、ID、数量和文本长度。
 - `ReferenceSchema` 与 `GraphSchema`：区分书内 anchor、外部 URL、支持关系、验证状态与生成推断。
@@ -76,7 +79,7 @@ tests/
 1. **骨架门禁**：无凭据启动；双栏壳可见；四路 mock 可单独/组合进入独立状态；typecheck、lint、schema contract tests 通过；源码不存在任意代码执行入口或动态 Tailwind class。完成后停下复核。
 2. **阅读门禁**：PDF.js 文字层可选择；跨行/重复引文/刷新恢复；空选区不能路由；跨页保留多个 anchor。
 3. **调度门禁**：RoutePlan 校验，多路依赖/并发/取消/重试正确；selection 切换不串产物；一路失败不影响其他路线。
-4. **渲染门禁**：交互 UI 只由注册表配置渲染且边界参数有测试；概念图引用/端点校验后由 React + SVG 渲染。
+4. **渲染门禁**：交互 UI 只由注册表配置渲染且边界参数有测试；概念图引用/端点校验后由 React + SVG 渲染；产物在左侧正确锚定，原文选择、复制与偏移不包含产物内容。
 5. **保存门禁**：IndexedDB 可恢复多种 artifact、交互状态、锚点、图视口和书签；写入失败可见；地图未完成仍可保存。
 6. **真实集成门禁**：仅在模型、图片、搜索范围和服务商获批后逐路接入；分别记录权限、延迟、失败和真实/预生成状态。
 7. **演示门禁**：按 `05-plan.md` 明确四路各自深度与状态，验证桌面尺寸、出处、重启恢复和三分钟闭环。

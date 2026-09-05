@@ -2,6 +2,8 @@
 
 A local workspace for **read → select → explore → save**. The foundation is TypeScript, React, Next.js, Tailwind CSS, Zod and IndexedDB. The React/SVG 3D map reads a saved, source-anchored Gemini analysis of the Republic TXT, with three canonical 2D projections. Whole-book analysis accepts plain text only for this MVP; PDF conversion is a separate upstream concern.
 
+Latest approved product direction: generated images, interactive UI and concept diagrams belong in the **left reading stream**, anchored at the selected passage; the right side remains the book map. The current passage-panel implementation has not yet been migrated. Native DOM text remains the canonical reader renderer; Pretext is optional for bounded measurement/layout problems, not a whole-reader replacement. See [inline reader artifacts and text-layout decision](docs/17-inline-reader-artifacts.md).
+
 ## Run locally
 
 Requires Node.js 22.13 or newer (installed PDF.js requires this version on Node 22).
@@ -61,6 +63,7 @@ Still open: routing policy, source discovery, image services, richer relation ta
 | [PDF and whole-book analysis](docs/11-pdf-whole-book-analysis.md) | Full-source scope, extraction/OCR, chapter discovery, graph evidence, timing measurements and open choices |
 | [Semantic zoom hierarchy](docs/14-semantic-zoom-hierarchy.md) | Approved multi-level analysis, pinch thresholds, viewport budgets, transitions and baseline-device acceptance |
 | [Semantic zoom implementation](docs/15-semantic-zoom-implementation.md) | Delivered controls, loading budgets, Gemini hierarchy, generated data and measured validation |
+| [Inline reader artifacts](docs/17-inline-reader-artifacts.md) | Latest placement contract and scoped Pretext decision |
 | [Book source](data/books/plato-republic/SOURCE.md) | Unmodified source and checksum |
 
 The newer documentation was recovered from the existing local handoff worktree. The current user's instruction supersedes its historical documentation-only authorization and first-gate stop language; unresolved product decisions remain open.

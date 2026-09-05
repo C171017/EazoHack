@@ -16,6 +16,7 @@
 | D10 | 交互 UI 运行边界已确认 | LLM 输出经 Zod 校验的配置/组件组合；只允许已测试组件注册表与预编译 Tailwind 变体，不执行任意模型代码或运行时 class |
 | D12 | 已确认 | 3D 坐标采用受约束动态语义：X=每书 3–7 个经证据支持的主题疆域；Y=具体细节→组织性结构；Z=可验证的来源进度。必须区分概念身份与带出处、带 Z 坐标的概念出现；位置不代替有类型、有证据的关系边 |
 | D13 | 已实现并完成本地验证；基线设备性能待测 | 捏合缩放按阈值在叶节点与多层概括节点间连续转换；按视口加载并设显示上限；取消拖动自动缩放。LM 自底向上生成层级并自动提议深度，应用按实测预算校验。基线为 M1/M2 MacBook Air 与同档 Windows 集显笔记本，详见 [层级契约](14-semantic-zoom-hierarchy.md) |
+| D14 | 产品布局已确认；实现待迁移 | 选文生成的图片、交互 UI、概念图和来源卡片锚定并插入左侧原文阅读流；右侧保留整书地图。来源文字不被产物改写。原生 DOM 是整本阅读器的规范渲染路径；Pretext 仅作为可选、隔离的局部测量工具，不采用全阅读器重写。详见 [内嵌产物决策](17-inline-reader-artifacts.md) |
 
 2026-09-05：用户明确授权更新文档并新增脚手架交接计划，未授权实现。四路意图、高亮输入、基础栈与受控交互 UI 是确认结果；不得重新降级为未确定愿景。
 
@@ -46,3 +47,5 @@
 2026-09-05 | D13 | 设计确认，文档更新 | 用户要求先记录多层节点、捏合阈值、可逆聚合过渡、按视口加载与显示上限；取消拖动自动缩放；整书分析由 LM 自底向上生成概括并自动决定合适层数，实际性能由应用预算和基线设备测量约束 | `docs/14-semantic-zoom-hierarchy.md` 及产品空间、架构、分析、验收与 README 交叉引用。
 
 2026-09-05 | D13 implementation | User authorized UI/loading first, followed by Gemini hierarchy refinement, a live run and local review. Delivered five layers over all 288 accepted leaves, bounded subtree/detail loading, reversible pinch thresholds and stable zoom during drag. Tests/build and local browser checks passed; M1/M2 and Windows device benchmarks remain pending. See [implementation record](15-semantic-zoom-implementation.md).
+
+2026-09-05 | D14 | 已确认，文档更新 | 用户将段落辅助的最终位置从右侧结果面板更新为左侧原文内嵌：高亮后生成的图片、交互 UI 与概念图回到对应段落；右侧继续作为整书地图。采用 anchor-aware 原生 DOM 阅读流，不把 Pretext 扩大为整本阅读器渲染器；当前代码尚待迁移 | `README.md`、`docs/01-product.md`、`docs/02-decisions.md`、`docs/03-architecture.md`、`docs/04-stack.md`、`docs/05-plan.md`、`docs/06-scaffolding-handoff.md`、`docs/07-scaffold-status.md`、`docs/10-gemini-production.md`、`docs/12-pdf-reader-implementation.md`、`docs/17-inline-reader-artifacts.md`

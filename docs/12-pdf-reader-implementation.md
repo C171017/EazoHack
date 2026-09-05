@@ -1,5 +1,7 @@
 # PDF reader and four-stage page text pipeline
 
+> Product placement update · 2026-09-05: future assistance artifacts belong in the PDF reflow reading stream at their SourceAnchor, not inside or on top of the immutable original PDF page. The current PDF workspace has not implemented these slots. See [inline reader artifacts](17-inline-reader-artifacts.md).
+
 Entry point: `/pdf`. The PDF work is isolated from the TXT reader. `PdfReader` accepts a PDF.js document and its SHA-256 fingerprint; `onSelection` emits the existing `Selection` and PDF `SourceAnchor` contracts. `PdfWorkspace` supplies a local file picker, the Republic sample, passage inspection, explicit local checkpoints and mock assistance for integration testing.
 
 ## Implemented page paths

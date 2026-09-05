@@ -1,5 +1,7 @@
 # 架构、数据流与出处锚点
 
+> 2026-09-05 D14：段落辅助产物的规范位置改为左侧原文内嵌，右侧保留整书地图。来源仍用原生 DOM 与精确锚点；Pretext 不作为全阅读器渲染器。详见 [内嵌产物与文字布局](17-inline-reader-artifacts.md)。
+
 > 2026-09-05: 叶节点已有持久出处锚点；现已接通点击/键盘激活后自动跳转并高亮原文，包含版本、引文与偏移校验。详见 [叶节点出处导航与验证](16-leaf-source-navigation.md)。
 
 > 2026-09-05 implementation: semantic zoom, bounded viewport loading and the Gemini-generated five-layer Republic hierarchy are now delivered locally. See [current implementation and verification](15-semantic-zoom-implementation.md). Earlier pending/paging notes below are historical; baseline-device benchmarks remain pending.
@@ -30,8 +32,8 @@
 1. 读者在原书划选并高亮文字，建立 Selection 与一个或多个 SourceAnchor（跨页选区不能压成单页）。冻结选文、周边背景及可选用户问题；空选区不路由，也不以当前节点替代。
 2. 路由器读取选文及必要背景，生成 RoutePlan，包含一种或多种路线、理由、顺序/依赖。高亮即启动还是点击后启动由 D05 决定；建议先明确点击求助。
 3. 为每路创建独立 RouteRun：interactive_ui、generated_image、concept_diagram、source_discovery。相互独立的路线可并发，有依赖则顺序执行；单路失败不丢弃其他结果。用户换选区后，旧结果仍绑定原 selectionId，不能挂到新段落。
-4. 各路验证后分别展示：交互 UI 的行为/参数、图片产物、概念图结构、参考资料与支持关系。建议可独立保存或保存整组，并保留请求快照、路线来源和生成状态。
-5. 保存先关联原文锚点，地图完成后可添加概念关联；地图尚未完成不阻塞求助。整书图谱与段落路由共享出处契约，拥有不同任务状态、重试和版本。
+4. 各路验证后建立 `ArtifactPlacement`，把交互 UI、图片、概念图或来源卡片锚定到选区结束偏移附近，并插入左侧原文阅读流。右侧地图不作为结果的长期主容器。产物可独立保存或保存整组，并保留请求快照、路线来源和生成状态。
+5. 保存先关联原文锚点及稳定 placement；地图完成后可添加概念关联。地图尚未完成不阻塞求助。整书图谱与段落路由共享出处契约，拥有不同任务状态、重试和版本。
 
 所有产物保留选文作为 grounding，标记书中依据、模型补充及未验证内容；这不要求每次执行来源查找。source_discovery 才主动寻找资料，其范围为待决值，未确认时不能自动启用外部搜索。引用结果记录定位/链接、摘录与支持关系；检索为空时显示无结果，不编造参考。
 
@@ -61,6 +63,7 @@
 | RoutePlan | `id, selectionId, routes[], reasonByRoute, trigger, routerVersion`；路线去重且可多选，规则及组合上限待决；服务端 Zod 校验 |
 | RouteRun | `id, planId, route, status, dependsOn[], error?, artifactIds[]`；独立 pending/running/complete/failed/cancelled |
 | Artifact | `id, bookId, selectionId, routeRunId, nodeIds[], anchorIds, graphVersion?, kind, payload, provider?, modelLabel?, schemaVersion, createdAt, savedAt`；原文关联必有，节点可暂空，模型标识记录实际值 |
+| ArtifactPlacement | `artifactId, selectionId, anchorId, offset, mode, order, collapsed`；offset 属于不可变来源版本，首版 mode 为选区后块级插入，模型不得输出任意 DOM 坐标或 CSS |
 | Reference | `id, scope, anchorId?, url?, title, excerpt?, supportRelation, verificationStatus, retrievedAt`；书内需锚点，外部需实际来源链接；scope 选择受 D09 约束 |
 | Bookmark | `id, bookId, graphVersion, mapView{graphVersion,projection,yaw,pitch,x,y,zoom,sourceScope}, selectedNodeId?, readerAnchorId?, label` |
 | ActivityEvent | `id, bookId, nodeId?, anchorId?, type, timestamp`；原始事件与派生强度分开，去重后统计 |

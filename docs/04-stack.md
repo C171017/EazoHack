@@ -1,5 +1,7 @@
 # 已确认技术选型
 
+> 2026-09-05 D14：左侧阅读器将承载锚定到选文的图片、交互 UI、概念图与来源卡片；右侧保留整书地图。原生 DOM 继续渲染规范原文。Pretext 不是全阅读器依赖，只可在独立基准通过后用于局部测量。详见 [内嵌产物决策](17-inline-reader-artifacts.md)。
+
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
 
 
@@ -15,6 +17,7 @@
 | 整书图谱 | 共享 3D 坐标模型 + React/SVG 正交投影；自由 3D 与三个规范投影 | 已比较 CSS 3D、Canvas、WebGL 与 SVG，并实现有出处的九节点样本；React Flow 已移除。大图容量仍须验证，详见 09-3d-implementation.md |
 | 模型边界 | 结构化模型路由 + 应用调度器 | 模型提出计划/数据，应用执行路线、状态和 provider；不采用 agent framework |
 | 产物渲染 | React 组件 + SVG | 交互 UI 与概念图为受控数据驱动渲染；图片和来源路线保留独立 provider |
+| 阅读流产物定位 | SourceAnchor + 应用控制的 ArtifactPlacement + 原生 DOM | 产物按 UTF-16 来源偏移进入左侧阅读流；不改写原文。首版块级插入依赖浏览器布局，不要求 Pretext |
 | 保存 | IndexedDB | 本机保存结构化数据和 Blob；不承诺云同步 |
 | 样式 | Tailwind CSS + 少量定向自定义 CSS | 自定义 CSS 仅用于 PDF text layer、高亮与 SVG/三维投影集成等边界 |
 
@@ -38,6 +41,10 @@ PDF 和图谱组件在浏览器端，Route Handlers 保持服务端 provider/密
 PDF/整书提取方案见 [11-pdf-whole-book-analysis.md](11-pdf-whole-book-analysis.md)：PDF.js 保持阅读基础栈；先改善原生文字提取，再对确有需要的页面 OCR。pdfplumber、Mistral Document AI、Docling 是本次研究候选，不因写入文档而成为锁定依赖或部署服务。整书任务执行位置、持久执行机制与预算仍需选择。段落辅助接入见 [10-gemini-production.md](10-gemini-production.md)，其模型选择不自动决定整书分析服务。
 
 不在本轮选择：编码模型版本、生产模型版本、服务提供商、图片 API、搜索服务、托管、外部来源范围、demo 书/大小、四路深度与活动语义。脚手架必须用明确标注的 mock 在无凭据条件下运行；真实 provider 未配置时报告 `not_configured`，不能暗示接通。
+
+## Pretext 边界
+
+不采用 Pretext 手工排版整本左侧原文。浏览器原生 DOM 继续负责文本换行、Selection、复制、查找与可访问性；实际插入 React 产物仍会改变 DOM 布局，Pretext 不能替代 artifact placement。允许在项目自有 `text-metrics` 接口后进行局部实验：离屏 TXT 块高度预测、SVG 多语言标签尺寸、或以后获批的动态障碍物绕排。任何依赖都需精确锁版本、字体加载后运行，并通过来源偏移、浏览器和基线设备回归。
 
 ## 何时重新评估
 

@@ -1,5 +1,7 @@
 # 产品与交互
 
+> 2026-09-05 最新产品布局：选文生成的图片、交互 UI、概念图及可保存来源卡片应锚定并插入左侧原文阅读流；右侧继续承载整书地图。当前右侧 passage panel 是待迁移的实现现状，不是最终布局。完整边界见 [左侧原文内嵌产物与文字布局决策](17-inline-reader-artifacts.md)。
+
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
 
 
@@ -28,7 +30,9 @@
 
 ## 建议交互布局
 
-左右约 45:55，可拖动分隔线；左侧翻页、缩放、文字层及可持久高亮。右侧保留地图，辅助结果在可收起面板中展开；组合结果各有状态，可独立探索与保存。保存时段落关联必有，概念关联可后补；地图尚未处理完成不阻止选文求助。
+左右约 45:55，可拖动分隔线；左侧翻页、缩放、文字层及可持久高亮，且成为段落辅助产物的长期容器。用户高亮后，生成图片、交互 UI、概念图及来源卡片按 Selection/SourceAnchor 插入对应选文处；同一选文的组合结果各有状态，可独立折叠、探索、重试与保存。右侧保留整书地图、节点详情和出处导航，不再把辅助结果的可收起面板作为最终主容器。保存时段落关联必有，概念关联可后补；地图尚未处理完成不阻止选文求助。
+
+“插入原文”是渲染层锚定，不是改写来源文件。大型产物默认在选区结束位置以块级卡片进入阅读流；应用可按来源偏移切分渲染片段，但复制、选择、quote 和 hash 仍只来自原文。原生 DOM 继续承担整本阅读器的换行、选择与可访问性；Pretext 不作为全阅读器基础，只在经测量证明需要时用于局部高度预测、SVG 标签或特殊文字绕排。
 
 从地图回原文时保存返回位置。多个出处展示列表；原书表述、模型解释和检索资料使用不同标签。保存产物不必立即变成大节点，可先作为相关位置的卡片/徽标。生成的交互 UI 是产品要求。已确认实现边界是：模型生成结构、内容、参数与组件组合，经 schema 校验后由已测试 React 组件渲染；不运行模型生成的任意代码，也不接受模型发明的 Tailwind class。
 

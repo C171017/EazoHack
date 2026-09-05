@@ -1,5 +1,7 @@
 # Gemini 3.8 Flash production setup
 
+> Product placement update · 2026-09-05: validated assistance artifacts should be persisted with an `ArtifactPlacement` and rendered at the selected passage in the left reading stream. The existing right-side passage panel is a migration target; provider behavior and validation remain unchanged. See [inline reader artifacts](17-inline-reader-artifacts.md).
+
 The application uses `gemini-3.8-flash` through Vertex AI from server Route Handlers. Selected book text and its context are sent to Google only after the reader clicks **Explore with Gemini**. Credentials never enter the browser bundle.
 
 ## Implemented boundary

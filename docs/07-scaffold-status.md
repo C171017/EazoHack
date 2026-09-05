@@ -1,5 +1,7 @@
 # Scaffold implementation status
 
+> Product supersession · 2026-09-05: the current passage panel described below is now a migration target. The approved design anchors generated images, interactive UI, diagrams and source cards inside the left reading stream while the right side remains the book map. This is not implemented yet. Native DOM remains the canonical source-text renderer; a whole-reader Pretext rewrite is not selected. See [inline reader artifact decision](17-inline-reader-artifacts.md).
+
 > Latest delivery: [semantic zoom and local Gemini hierarchy](15-semantic-zoom-implementation.md) replaces spatial paging with five layers and bounded viewport requests. See that record for current tests, build, data, and device-test limits.
 
 ## PDF / whole-book documentation clarification · 2026-09-05
@@ -54,11 +56,12 @@ Actual route selection logic, trigger/override/combination policy, live provider
 
 ## Next implementation boundaries
 
-1. Confirm routing interaction/policy and desired demonstration depth before replacing the mock controls.
-2. Extend the implemented React/SVG 3D renderer only after measuring representative larger graphs; preserve immutable source and version derived data. The current spatial guard is 80 occurrences, with a full node-list fallback above that limit.
-3. Integrate/verify the reader format and cross-page behavior independently from assistance.
-4. Select and preflight real providers/source scope, then extend mock-only artifact payloads with validated durable resources.
-5. Expand checkpoint persistence to a saved-artifact library and source-file Blob storage when that product flow is chosen.
+1. Add validated `ArtifactPlacement` persistence and migrate generated results from the right passage panel into anchor-aware slots in the left reader; preserve immutable source text and exact selection behavior.
+2. Confirm routing interaction/policy and desired demonstration depth before replacing the mock controls.
+3. Extend the implemented React/SVG 3D renderer only after measuring representative larger graphs; preserve immutable source and version derived data. The current spatial guard is 80 occurrences, with a full node-list fallback above that limit.
+4. Integrate/verify the PDF reflow reader's artifact slots independently from the immutable original-page canvas/text layer.
+5. Select and preflight real providers/source scope, then extend mock-only artifact payloads with validated durable resources.
+6. Expand checkpoint persistence to a saved-artifact library and source-file Blob storage when that product flow is chosen.
 
 No commit or push was performed by this scaffolding task. Other concurrent task commits were observed and preserved; remaining edits are available in the working tree.
 
