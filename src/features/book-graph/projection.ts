@@ -9,16 +9,17 @@ export const PROJECTIONS = [
 ] as const;
 export const DEFAULT_CAMERA = {yaw:-0.58,pitch:0.36};
 export function initialView(graphVersion: string): MapView {
-  return {graphVersion,projection:'3d',...DEFAULT_CAMERA,x:0,y:0,zoom:1,selectedNodeId:null,readerAnchorId:null,sourceScope:'excerpt'};
+  return {graphVersion,projection:'3d',axisConvention:'z-up-v1',...DEFAULT_CAMERA,x:0,y:0,zoom:1,selectedNodeId:null,readerAnchorId:null,sourceScope:'excerpt'};
 }
 export function orientation(projection: MapView['projection']) {
-  return projection === 'xy' ? {yaw:0,pitch:0} : projection === 'xz' ? {yaw:0,pitch:-Math.PI/2} : projection === 'yz' ? {yaw:Math.PI/2,pitch:0} : DEFAULT_CAMERA;
+  return projection === 'xz' ? {yaw:0,pitch:0} : projection === 'xy' ? {yaw:0,pitch:-Math.PI/2} : projection === 'yz' ? {yaw:Math.PI/2,pitch:0} : DEFAULT_CAMERA;
 }
-// Orthographic camera: rotate one world, never recalculate semantic coordinates.
+// Orthographic Z-up camera: X is horizontal, Z/source is vertical, and
+// Y/structure supplies depth. Semantic coordinates are never recalculated.
 export function project(point: Point3, camera: Pick<MapView,'yaw'|'pitch'>) {
-  const x = point.x*Math.cos(camera.yaw)+point.z*Math.sin(camera.yaw);
-  const depth = -point.x*Math.sin(camera.yaw)+point.z*Math.cos(camera.yaw);
-  return {x,y:-point.y*Math.cos(camera.pitch)+depth*Math.sin(camera.pitch),depth:point.y*Math.sin(camera.pitch)+depth*Math.cos(camera.pitch)};
+  const x = point.x*Math.cos(camera.yaw)+point.y*Math.sin(camera.yaw);
+  const depth = -point.x*Math.sin(camera.yaw)+point.y*Math.cos(camera.yaw);
+  return {x,y:-point.z*Math.cos(camera.pitch)+depth*Math.sin(camera.pitch),depth:point.z*Math.sin(camera.pitch)+depth*Math.cos(camera.pitch)};
 }
 export function worldPoint(node: Graph['nodes'][number], range: [number,number]): Point3|null {
   const {x,y,z} = node.position;
@@ -46,16 +47,17 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string}
 }
 
 // A wide capture radius encourages flat views; direction decides whether to snap.
-export const SNAP_ENTER = Math.PI / 6; // 30 degrees
+// 48 degrees is a 60% increase over the original 30-degree threshold.
+export const SNAP_ENTER = (48 * Math.PI) / 180;
 export type SnapTarget = {projection:'xy'|'xz'|'yz';yaw:number;pitch:number;distance:number};
 export function nearestProjection(camera:Pick<MapView,'yaw'|'pitch'>):SnapTarget {
   const quarter=Math.PI/2;
   const yaw=Math.round(camera.yaw/quarter)*quarter;
-  const side:SnapTarget={projection:Math.abs(Math.round(yaw/quarter)%2)===0?'xy':'yz',yaw,pitch:0,distance:Math.hypot(camera.yaw-yaw,camera.pitch)};
+  const side:SnapTarget={projection:Math.abs(Math.round(yaw/quarter)%2)===0?'xz':'yz',yaw,pitch:0,distance:Math.hypot(camera.yaw-yaw,camera.pitch)};
   const pitch=camera.pitch<0?-quarter:quarter;
-  // Top capture depends only on tilt. Once released, settle to the nearest
+  // Top capture (X x Y, looking along vertical Z) depends only on tilt. Once released, settle to the nearest
   // perpendicular heading (at most 45 degrees), including reversed views.
-  const top:SnapTarget={projection:'xz',yaw,pitch,distance:Math.abs(camera.pitch-pitch)};
+  const top:SnapTarget={projection:'xy',yaw,pitch,distance:Math.abs(camera.pitch-pitch)};
   return side.distance<=top.distance?side:top;
 }
 export function orbitFrom(start:Pick<MapView,'yaw'|'pitch'>,dx:number,dy:number) {
@@ -66,7 +68,7 @@ export function orbitFrom(start:Pick<MapView,'yaw'|'pitch'>,dx:number,dy:number)
   return {yaw:start.yaw+dx*.006,pitch};
 }
 function distanceToPlane(camera:Pick<MapView,'yaw'|'pitch'>,target:SnapTarget) {
-  return target.projection==='xz'?Math.abs(camera.pitch-target.pitch):Math.hypot(camera.yaw-target.yaw,camera.pitch-target.pitch);
+  return target.projection==='xy'?Math.abs(camera.pitch-target.pitch):Math.hypot(camera.yaw-target.yaw,camera.pitch-target.pitch);
 }
 export function approachingProjection(from:Pick<MapView,'yaw'|'pitch'>,to:Pick<MapView,'yaw'|'pitch'>) {
   const target=nearestProjection(to);
@@ -80,7 +82,7 @@ export function magneticPose(camera:Pick<MapView,'yaw'|'pitch'>,previous?:Pick<M
   const proximity=Math.max(0,1-target.distance/SNAP_ENTER);
   const pull=.55*proximity*proximity;
   // Do not steer yaw during a top-entry drag; align it in the release animation.
-  return {yaw:target.projection==='xz'?camera.yaw:camera.yaw+(target.yaw-camera.yaw)*pull,pitch:camera.pitch+(target.pitch-camera.pitch)*pull};
+  return {yaw:target.projection==='xy'?camera.yaw:camera.yaw+(target.yaw-camera.yaw)*pull,pitch:camera.pitch+(target.pitch-camera.pitch)*pull};
 }
 type CameraPose=Pick<MapView,'yaw'|'pitch'>;
 export type OrbitMotion={raw:CameraPose;display:CameraPose;previous:CameraPose;directionX:number;directionY:number};

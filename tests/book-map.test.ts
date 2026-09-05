@@ -45,7 +45,7 @@ test('unknown coordinates remain null and do not appear at the origin',()=>{
 });
 test('canonical projections use one world, preserving visible axes and suppressing only depth',()=>{
   const point={x:70,y:30,z:100};
-  for(const [mode,expected] of [['xy',{x:70,y:-30}],['xz',{x:70,y:-100}],['yz',{x:100,y:-30}]] as const){
+  for(const [mode,expected] of [['xy',{x:70,y:-30}],['xz',{x:70,y:-100}],['yz',{x:30,y:-100}]] as const){
     const p=project(point,orientation(mode));
     assert.ok(Math.abs(p.x-expected.x)<1e-9);assert.ok(Math.abs(p.y-expected.y)<1e-9);
   }
@@ -77,18 +77,18 @@ test('saved 3D view round-trips and old 2D checkpoints remain readable',()=>{
 
 test('magnetic alignment finds all three planes and reversed views without a full-turn jump',()=>{
   for(const [pose,mode] of [
-    [{yaw:.04,pitch:.03},'xy'],
+    [{yaw:.04,pitch:.03},'xz'],
     [{yaw:Math.PI/2-.03,pitch:.02},'yz'],
-    [{yaw:.02,pitch:-Math.PI/2+.03},'xz'],
-    [{yaw:Math.PI+.02,pitch:.02},'xy'],
-    [{yaw:Math.PI*4+.03,pitch:.01},'xy'],
+    [{yaw:.02,pitch:-Math.PI/2+.03},'xy'],
+    [{yaw:Math.PI+.02,pitch:.02},'xz'],
+    [{yaw:Math.PI*4+.03,pitch:.01},'xz'],
   ] as const){const target=nearestProjection(pose);assert.equal(target.projection,mode);assert.ok(target.distance<SNAP_ENTER);assert.ok(Math.abs(target.yaw-pose.yaw)<.05);}
-  assert.ok(nearestProjection({yaw:.5,pitch:.4}).distance>SNAP_ENTER);
+  assert.ok(nearestProjection({yaw:.75,pitch:.55}).distance>SNAP_ENTER);
 });
 test('magnetic pull is continuous and reversing input leaves either pole',()=>{
   const raw={yaw:.08,pitch:.06},attracted=magneticPose(raw);
   assert.ok(nearestProjection(attracted).distance<nearestProjection(raw).distance);
-  assert.deepEqual(magneticPose({yaw:.5,pitch:.4}),{yaw:.5,pitch:.4});
+  assert.deepEqual(magneticPose({yaw:.75,pitch:.55}),{yaw:.75,pitch:.55});
   for(const pitch of [-Math.PI/2,Math.PI/2]){
     const dy=-Math.sign(pitch)*130;
     const pulled=orbitFrom({yaw:0,pitch},0,dy);
@@ -102,10 +102,10 @@ test('magnetic settling progresses smoothly to exact alignment without opacity c
   assert.ok(springProgress(16)<.05);
 });
 
-test('wide magnetic capture attracts all three planes at 25 degrees',()=>{
+test('60% wider magnetic capture attracts all three planes at 40 degrees',()=>{
   for(const projection of ['xy','xz','yz'] as const){
-    const base=orientation(projection),offset=25*Math.PI/180;
-    const pose=projection==='xz'?{...base,pitch:base.pitch+offset}:{...base,yaw:base.yaw+offset};
+    const base=orientation(projection),offset=40*Math.PI/180;
+    const pose=projection==='xy'?{...base,pitch:base.pitch+offset}:{...base,yaw:base.yaw+offset};
     const target=nearestProjection(pose);
     assert.equal(target.projection,projection);
     assert.ok(target.distance<SNAP_ENTER);
@@ -113,17 +113,27 @@ test('wide magnetic capture attracts all three planes at 25 degrees',()=>{
   }
 });
 
+test('magnetic capture retains a clear boundary near 48 degrees',()=>{
+  const radians=(degrees:number)=>degrees*Math.PI/180;
+  const inside={yaw:radians(34),pitch:radians(33)};
+  const outside={yaw:radians(35),pitch:radians(35)};
+  assert.ok(nearestProjection(inside).distance<SNAP_ENTER);
+  assert.ok(nearestProjection(outside).distance>SNAP_ENTER);
+  assert.ok(nearestProjection(magneticPose(inside)).distance<nearestProjection(inside).distance);
+  assert.deepEqual(magneticPose(outside),outside);
+});
+
 test('top-down capture works at every heading and chooses the nearest perpendicular',()=>{
   for(const yaw of [-7,-Math.PI,-Math.PI/2,-.58,0,.8,Math.PI/2,9]){
     for(const sign of [-1,1]){
       const pose={yaw,pitch:sign*(Math.PI/2-.15)},target=nearestProjection(pose);
-      assert.equal(target.projection,'xz');
+      assert.equal(target.projection,'xy');
       assert.ok(Math.abs(target.yaw-yaw)<=Math.PI/4+1e-8);
       assert.ok(Math.abs(target.yaw/(Math.PI/2)-Math.round(target.yaw/(Math.PI/2)))<1e-8);
       assert.equal(magneticPose(pose).yaw,yaw);
       assert.ok(target.distance<SNAP_ENTER);
       const flat={yaw:target.yaw,pitch:target.pitch};
-      const a=project({x:10,y:-100,z:20},flat),b=project({x:10,y:100,z:20},flat);
+      const a=project({x:10,y:20,z:-100},flat),b=project({x:10,y:20,z:100},flat);
       assert.ok(Math.hypot(a.x-b.x,a.y-b.y)<1e-8);
     }
   }
@@ -141,7 +151,7 @@ test('an uninterrupted vertical drag reaches the pole without bouncing back',()=
   }
 });
 test('separate arrow steps leave a plane and snap when approaching the next',()=>{
-  let pose=orientation('xy');
+  let pose=orientation('xz');
   for(let i=0;i<3;i++){
     const next=orbitFrom(pose,0,-20);
     assert.equal(approachingProjection(pose,next),null);
@@ -151,20 +161,21 @@ test('separate arrow steps leave a plane and snap when approaching the next',()=
   let captured=false;
   for(let i=0;i<12;i++){
     const next=orbitFrom(pose,0,-20),target=approachingProjection(pose,next);
-    if(target){assert.equal(target.projection,'xz');captured=true;break;}
+    if(target){assert.equal(target.projection,'xy');captured=true;break;}
     pose=next;
   }
   assert.ok(captured);
-  const top=orientation('xz'),away=orbitFrom(top,0,20);
+  const top=orientation('xy'),away=orbitFrom(top,0,20);
   assert.equal(approachingProjection(top,away),null);
 });
 
 test('turning within the top plane does not count as leaving it',()=>{
-  const from={...orientation('xz'),projection:'xz' as const};
+  const from={...orientation('xy'),projection:'xy' as const};
   const rotated=orbitFrom(from,250,0);
-  assert.equal(approachingProjection(from,rotated)?.projection,'xz');
-  assert.equal(nearestProjection(rotated).projection,'xz');
-  assert.equal(approachingProjection(from,orbitFrom(from,0,150)),null);
+  assert.equal(approachingProjection(from,rotated)?.projection,'xy');
+  assert.equal(nearestProjection(rotated).projection,'xy');
+  assert.equal(approachingProjection(from,orbitFrom(from,0,80)),null);
+  assert.equal(approachingProjection(from,orbitFrom(from,0,150))?.projection,'xz');
 });
 
 test('continued gestures at either pole never reverse their direction',()=>{

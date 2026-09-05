@@ -1,5 +1,7 @@
 # 产品与交互
 
+> 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Illustration, and Interactive panel**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](19-enhancement-methods.md).
+
 > Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
 
 > 2026-09-05 最新产品布局：选文生成的图片、交互 UI、概念图及可保存来源卡片应锚定并插入左侧原文阅读流；右侧继续承载整书地图。当前右侧 passage panel 是待迁移的实现现状，不是最终布局。完整边界见 [左侧原文内嵌产物与文字布局决策](17-inline-reader-artifacts.md)。
@@ -17,30 +19,22 @@
 
 手动截图和周期自动采集均在 MVP 之外，不再是竞争输入方案。此前“选概念 → 回原文 → 请求解释”的图谱优先闭环已被此次确认替代。
 
-## 四类辅助：均为已确认产品意图
+## 四类辅助：2026-09-05 最新确认
 
-| 路线 | 体验 | 尚待决定的实现深度 |
+| 类型 | 体验 | 实现边界 |
 | --- | --- | --- |
-| interactive_ui | LLM 实时生成可操作的交互 UI；例如操作经济学图形，理解完全竞争、寡头或垄断 | 已定为生成经校验的配置与已测试 React 组件组合；演示覆盖哪些情形仍待定 |
-| generated_image | 生成图像来说明选文 | 图片模型、风格、延迟、保存方式 |
-| concept_diagram | SVG、概念关系图或思维导图 | 图形语法、编辑能力、布局与验证 |
-| source_discovery | 查找来源或支持性参考资料 | 书内、外部或两者；检索服务与引用验证 |
+| Explanation | 结构化文字解释，配合清晰的标题、段落、列表、表格与提示块 | 优先迭代；模型生成内容结构，应用负责样式 |
+| Diagram | 纯代码可渲染的 SVG、概念关系图、时间线、流程图及图表 | 第二优先；正确关系与可读布局优先 |
+| Illustration | 图片模型生成的插图 | 独立图片模型与 inference provider |
+| Interactive panel | 原文内嵌的交互界面、控件与模拟；以后可能扩展 Three.js 场景 | 保留 D10 经校验配置与已测试组件的运行边界；Three.js 尚未选定或实现 |
 
-同一段可同时需要交互 UI 与概念图，或图片与参考资料。路由器不能被设计成只允许四选一。选择规则、组合数量、先后/并发、用户能否修改路线，以及高亮后直接启动还是再点击“帮助我理解”，均是待讨论的交互与工程细节。建议显示路线和简短理由，允许改选；启动时机不应被误记为已批准的自动生成策略。
+Research brief/source discovery 暂缓，不再属于当前四类。出处锚定仍适用于所有产物；解释必须区分原文依据与模型补充。既有 runtime 路线、schema 和 provider 尚未随本次文档更新迁移。
 
-建议路由信号：变量变化/因果探索偏向交互 UI，具象场景偏向图片，层级/比较/关系偏向概念图，证据需求偏向来源查找。它们只是候选规则，需用真实选文评估；不应根据关键词机械固定路线。
+所有产物锚定到左侧选文；右侧保留整书地图。同一选文可生成多种产物，各自保持进度、失败、重试、保存与折叠状态。原文不可被生成内容改写；复制与引用继续只使用规范来源文字。大型产物默认在选区结束处以块级卡片显示。
 
-## 建议交互布局
+路由、触发时机、组合数量与用户改选仍待决定。教学模拟必须表达假设、变量含义和适用边界；代码可运行不等于机制正确。此次讨论没有授权执行任意模型 JavaScript 或加入 Three.js。
 
-左右约 45:55，可拖动分隔线；左侧翻页、缩放、文字层及可持久高亮，且成为段落辅助产物的长期容器。用户高亮后，生成图片、交互 UI、概念图及来源卡片按 Selection/SourceAnchor 插入对应选文处；同一选文的组合结果各有状态，可独立折叠、探索、重试与保存。右侧保留整书地图、节点详情和出处导航，不再把辅助结果的可收起面板作为最终主容器。保存时段落关联必有，概念关联可后补；地图尚未处理完成不阻止选文求助。
-
-“插入原文”是渲染层锚定，不是改写来源文件。大型产物默认在选区结束位置以块级卡片进入阅读流；应用可按来源偏移切分渲染片段，但复制、选择、quote 和 hash 仍只来自原文。原生 DOM 继续承担整本阅读器的换行、选择与可访问性；Pretext 不作为全阅读器基础，只在经测量证明需要时用于局部高度预测、SVG 标签或特殊文字绕排。
-
-从地图回原文时保存返回位置。多个出处展示列表；原书表述、模型解释和检索资料使用不同标签。保存产物不必立即变成大节点，可先作为相关位置的卡片/徽标。生成的交互 UI 是产品要求。已确认实现边界是：模型生成结构、内容、参数与组件组合，经 schema 校验后由已测试 React 组件渲染；不运行模型生成的任意代码，也不接受模型发明的 Tailwind class。
-
-教学模拟应显示假设、参数含义与适用限制。LLM 能生成可操作界面，不意味着其中方程、经济机制或结论已被验证；例如不能把随意绘制的曲线包装成可靠的市场模型。建议先验证一个窄主题的模型与边界，再让 LLM 生成解释和界面组合。
-
-**来源 grounding 与来源查找不同：** 每份产物都应保留选文锚点，并区分书中依据与生成补充；只有 source_discovery 路线负责主动找资料。选文锚点并不证明所有生成内容正确，找到一份资料也不意味着它支持相关结论。外部检索范围尚未批准。
+完整定义见 [四类辅助](19-enhancement-methods.md)；模型与提供商的候选、权重、来源及未验证项见 [模型研究](20-generation-model-research.md)。候选排名不是生产选型确认。
 
 ## 整书地图与活动层
 

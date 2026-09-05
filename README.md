@@ -1,5 +1,7 @@
 # Eazo · Nonlinear reading workspace
 
+> 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Illustration, and Interactive panel**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](docs/19-enhancement-methods.md).
+
 > Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](docs/18-inline-reader-implementation.md).
 
 A local workspace for **read → select → explore → save**. The foundation is TypeScript, React, Next.js, Tailwind CSS, Zod and IndexedDB. The React/SVG 3D map reads a saved, source-anchored Gemini analysis of the Republic TXT, with three canonical 2D projections. Whole-book analysis accepts plain text only for this MVP; PDF conversion is a separate upstream concern.
@@ -53,6 +55,9 @@ Still open: routing policy, source discovery, image services, richer relation ta
 
 | Document | Purpose |
 | --- | --- |
+| [Four enhancement methods](docs/19-enhancement-methods.md) | Current taxonomy, priorities and boundaries |
+| [Model/provider research](docs/20-generation-model-research.md) | Three candidates per method, weighted ratings and evidence |
+| [API-first model shortlist](docs/21-api-cost-model-shortlist.md) | Revised recommendations for a lighter harness and cost sensitivity |
 | [Product](docs/01-product.md) | Confirmed experience and open interactions |
 | [Decisions](docs/02-decisions.md) | Locked stack and unresolved choices |
 | [Architecture](docs/03-architecture.md) | Module boundaries and provenance |

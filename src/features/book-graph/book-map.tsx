@@ -13,7 +13,11 @@ export function BookMap({graph,view,onViewChange,onSource}:{
 }) {
   // Old checkpoints may contain filters whose controls have been removed.
   // Keep their camera and selection, but always display the whole source.
-  const current=useMemo<MapView>(()=>view?.graphVersion===graph.graphVersion&&(!view.hierarchyVersion||view.hierarchyVersion===graph.version)?{...view,themeFilter:null,roleFilter:null,sourceScope:'book',zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,view.zoom)),...(view.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!view.hierarchyVersion&&view.selectedNodeId?.startsWith('h-')?null:view.selectedNodeId}:{...initialView(graph.graphVersion),hierarchyVersion:graph.version,sourceScope:'book' as const},[view,graph.graphVersion,graph.version]);
+  const current=useMemo<MapView>(()=>{
+    if(view?.graphVersion!==graph.graphVersion||(view.hierarchyVersion&&view.hierarchyVersion!==graph.version))return {...initialView(graph.graphVersion),hierarchyVersion:graph.version,sourceScope:'book' as const};
+    const migrated=view.axisConvention==='z-up-v1'?view:{...view,...orientation(view.projection),axisConvention:'z-up-v1' as const};
+    return {...migrated,themeFilter:null,roleFilter:null,sourceScope:'book',zoom:Math.max(ZOOM_POLICY.minZoom,Math.min(ZOOM_POLICY.maxZoom,migrated.zoom)),...(migrated.zoom<ZOOM_POLICY.minZoom?{x:0,y:0}:{}),hierarchyVersion:graph.version,selectedNodeId:!migrated.hierarchyVersion&&migrated.selectedNodeId?.startsWith('h-')?null:migrated.selectedNodeId};
+  },[view,graph.graphVersion,graph.version]);
   const [size,setSize]=useState({width:800,height:550});
   const [previousLevel,setPreviousLevel]=useState(0),[navigationError,setNavigationError]=useState<string|null>(null);
   const [navigating,setNavigating]=useState(false);
@@ -100,7 +104,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
     const target=approachingProjection(d.motion.previous,d.motion.raw);
     // Align on entry; an intentional rotation within an already-flat view
     // should not be undone on release.
-    if(target?.projection==='xz'&&d.view.projection==='xz'&&Math.abs(d.motion.raw.pitch-d.view.pitch)<1e-8)target.yaw=d.motion.raw.yaw;
+    if(target?.projection==='xy'&&d.view.projection==='xy'&&Math.abs(d.motion.raw.pitch-d.view.pitch)<1e-8)target.yaw=d.motion.raw.yaw;
     if(target)settle(d.latest,target);
   }
   function zoom(factor:number){const {current:view,size}=latest.current;change(zoomCentered(view,view.zoom*factor,size));}
@@ -133,18 +137,17 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   const labelPoints=[...points].filter(p=>!p.exiting).sort((a,b)=>Number(b.id===current.selectedNodeId)-Number(a.id===current.selectedNodeId)||Number(b.node.kind==='cluster')-Number(a.node.kind==='cluster')).slice(0,labelCap);
   const labels=new Map(placeLabels(labelPoints,size.width,size.height).map(p=>[p.id,p]));
   const screen=(p:Point3)=>{const q=project(p,current),scale=baseScale(size)*current.zoom;return {x:size.width/2+q.x*scale+current.x,y:size.height/2+q.y*scale+current.y};};
-  const grid=useMemo(()=>Array.from({length:11},(_,i)=>[{a:{x:-250+i*50,y:-170,z:-200},b:{x:-250+i*50,y:-170,z:200}},{a:{x:-250,y:-170,z:-200+i*40},b:{x:250,y:-170,z:-200+i*40}}]).flat(),[]);
+  const grid=useMemo(()=>Array.from({length:11},(_,i)=>[{a:{x:-250+i*50,y:-170,z:-200},b:{x:-250+i*50,y:170,z:-200}},{a:{x:-250,y:-170+i*34,z:-200},b:{x:250,y:-170+i*34,z:-200}}]).flat(),[]);
   const source=(anchor:SourceAnchor)=>{change({readerAnchorId:anchor.id});onSource(anchor);};
   return <div className="book-map" onKeyDown={e=>{
     if((e.target as HTMLElement).closest('input,select,textarea'))return;
     const i=['1','2','3','4'].indexOf(e.key);if(i>=0){e.preventDefault();const projection=PROJECTIONS[i].id;settle(current,{projection,...orientation(projection)});}
     if(e.key==='+'||e.key==='='){e.preventDefault();zoom(1.35);}if(e.key==='-'){e.preventDefault();zoom(1/1.35);}
   }}>
-    <div className="map-topbar"><div><small>THE REPUBLIC · BOOK ATLAS</small><h2>{level===0?'The shape of the book':level<graph.depth?'Inside the ideas':'A closer reading'}</h2></div></div>
     <div ref={stage} className="map-stage">
       <svg ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
         onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
-        onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xz'&&from?.projection==='xz'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
+        onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
         onBlur={()=>{keyboardOrbit.current=null;}}
         onPointerDown={e=>{
           if(drag.current||(e.target as Element).closest('[data-node-id]')||e.button!==0)return;
@@ -169,7 +172,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
         onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Pinch to expand or group ideas. Scroll with two fingers to pan. Drag to orbit; Shift-drag pans. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. Height means structure, not importance.</desc>
+        <desc>Pinch to expand or group ideas. Scroll with two fingers to pan. Drag to orbit; Shift-drag pans. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. Vertical position means progression through the source; depth means structure, not importance.</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8ca996"/></marker></defs>
         <g className="map-grid" aria-hidden="true">{grid.map((l,i)=>{const a=screen(l.a),b=screen(l.b);return <line key={i} x1={a.x} y1={a.y} x2={b.x} y2={b.y}/>;})}</g>
         <g aria-hidden="true">{[{label:'X · Themes',end:{x:280,y:-170,z:-200}},{label:'Y · Structure',end:{x:-250,y:195,z:-200}},{label:'Z · Source',end:{x:-250,y:-170,z:230}}].map((a,i)=>{

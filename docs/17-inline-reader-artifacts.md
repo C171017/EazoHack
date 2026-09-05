@@ -1,5 +1,7 @@
 # 左侧原文内嵌产物与文字布局决策
 
+> 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Illustration, and Interactive panel**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](19-enhancement-methods.md).
+
 > Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
 
 状态：**2026-09-05 产品方向已确认，尚未实现。** 本文取代旧文档中“辅助结果主要显示在右侧可收起面板”的布局描述；当前代码仍是右侧 passage panel，不能把现状写成已交付的新设计。

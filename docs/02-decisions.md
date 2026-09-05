@@ -1,5 +1,7 @@
 # 决策登记
 
+> 2026-09-05 latest scope: the four enhanced-reading methods are **Explanation, Diagram, Illustration, and Interactive panel**. Research briefs/source discovery are deferred. Iterate Explanation first, then Diagram; Three.js is a future option. This supersedes older product-scope lists below, not their runtime implementation history. See [confirmed method definitions](19-enhancement-methods.md).
+
 > Latest delivery · 2026-09-05: inline artifact slots are now implemented in the main TXT reader, with persistent placement, collapse state and source-only copying. Earlier statements below that the right-side passage panel awaits migration are superseded for TXT. PDF remains separate. See [implementation and verification](18-inline-reader-implementation.md).
 
 > 2026-09-05 implementation update: The user subsequently authorized scaffolding and local verification. Historical “documentation only / not started / stop for review” wording below describes the earlier handoff. See [current implementation status](07-scaffold-status.md); open decisions remain open.
@@ -13,7 +15,7 @@
 | D03 | 输入/来源范围已确认；处理规模与部署待验证 | 当前接受纯文本与 PDF，全部随附内容保留。PDF 四层文字处理已获实现授权；阅读按需处理不能代替全量分析。详见 11-pdf-whole-book-analysis.md |
 | D04 | 已确认，替代 2D 默认 | 整书地图采用共享 3D 空间及三个规范二维投影：X×Y、X×Z、Y×Z；相反方向不另算视图，自由 3D 只用于总览与投影切换。当前使用 React/SVG 三维坐标投影与有出处的编辑样本；不代表整书分析已完成 |
 | D05 | 输入已确认；触发细节待决 | MVP 以左侧原书选中/高亮文字作为上下文。截图与周期采集在 MVP 外；节点/当前页不能替代选文 |
-| D06 | 产品范围已确认；实现深度待决 | 路由器可组合实时生成交互 UI、生成图片、SVG/概念图/思维导图、来源查找四路；撤销此前 SVG-only 默认范围 |
+| D06 | 产品范围已确认；实现深度待决 | 四类为 Explanation、Diagram、Illustration、Interactive panel，可组合；Explanation 优先，其次 Diagram；research brief/source discovery 暂缓。模型/provider 候选见 20-generation-model-research.md |
 | D08 | 基础栈已确认；有界地图渲染器已实现 | TypeScript、React、Next.js App Router/Route Handlers、PDF.js（`pdfjs-dist`）、Zod、IndexedDB、React 组件 + SVG、Tailwind CSS；结构化模型路由 + 应用调度器，不引入 agent framework。本轮授权下经比较选用 React/SVG 三维坐标投影并移除 `@xyflow/react`；大图容量仍待验证 |
 | D10 | 交互 UI 运行边界已确认 | LLM 输出经 Zod 校验的配置/组件组合；只允许已测试组件注册表与预编译 Tailwind 变体，不执行任意模型代码或运行时 class |
 | D12 | 已确认 | 3D 坐标采用受约束动态语义：X=每书 3–7 个经证据支持的主题疆域；Y=具体细节→组织性结构；Z=可验证的来源进度。必须区分概念身份与带出处、带 Z 坐标的概念出现；位置不代替有类型、有证据的关系边 |
@@ -51,3 +53,5 @@
 2026-09-05 | D13 implementation | User authorized UI/loading first, followed by Gemini hierarchy refinement, a live run and local review. Delivered five layers over all 288 accepted leaves, bounded subtree/detail loading, reversible pinch thresholds and stable zoom during drag. Tests/build and local browser checks passed; M1/M2 and Windows device benchmarks remain pending. See [implementation record](15-semantic-zoom-implementation.md).
 
 2026-09-05 | D14 | 已确认，文档更新 | 用户将段落辅助的最终位置从右侧结果面板更新为左侧原文内嵌：高亮后生成的图片、交互 UI 与概念图回到对应段落；右侧继续作为整书地图。采用 anchor-aware 原生 DOM 阅读流，不把 Pretext 扩大为整本阅读器渲染器；当前代码尚待迁移 | `README.md`、`docs/01-product.md`、`docs/02-decisions.md`、`docs/03-architecture.md`、`docs/04-stack.md`、`docs/05-plan.md`、`docs/06-scaffolding-handoff.md`、`docs/07-scaffold-status.md`、`docs/10-gemini-production.md`、`docs/12-pdf-reader-implementation.md`、`docs/17-inline-reader-artifacts.md`
+
+2026-09-05 | D06/D09/D11/D14 | 用户确认并授权更新文档 | 四类调整为 Explanation、Diagram、Illustration、Interactive panel；Explanation 优先迭代，其次 Diagram；research brief/source discovery 暂缓。Three.js 是未来交互面板候选；D10 受控运行边界保留。模型及 inference provider 进入研究阶段，尚未选定；本次不迁移代码 | [四类定义](19-enhancement-methods.md)。

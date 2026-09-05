@@ -149,6 +149,7 @@ export const GraphSchema = z.object({
 
 export const MapViewSchema = z.object({
   graphVersion: Id, hierarchyVersion: Id.optional(), projection: z.enum(['3d','xy','xz','yz']),
+  axisConvention: z.literal('z-up-v1').optional(),
   yaw: z.number().finite(), pitch: z.number().finite().min(-Math.PI/2).max(Math.PI/2),
   x: z.number().finite(), y: z.number().finite(), zoom: z.number().min(0.5).max(48),
   selectedNodeId: Id.nullable(), readerAnchorId: Id.nullable().default(null), sourceScope: z.enum(['excerpt','book']),
