@@ -1,4 +1,4 @@
-import { loadMapStore, nodeDetail, visibleLinks, unplacedNotes } from '@/server/book-map/store';
+import { loadMapStore, nodeDetail, visibleLinks, unplacedNotes, heatIndexPage } from '@/server/book-map/store';
 import { ZOOM_POLICY } from '@/shared/zoom-hierarchy';
 export const runtime='nodejs';
 export async function GET(request:Request) {
@@ -8,6 +8,11 @@ export async function GET(request:Request) {
     if(q.get('version')!==hierarchy.version)return Response.json({error:'Map version changed. Reload to open the new version.'},{status:409});
     const json=(body:object)=>Response.json({version:hierarchy.version,...body},{headers:{'Cache-Control':'private, no-store'}});
     const id=q.get('id')??'',kind=q.get('kind');
+    if(kind==='heat-index') {
+      const offset=Number(q.get('offset')??0);
+      if(!Number.isSafeInteger(offset)||offset<0)return Response.json({error:'Invalid heat index offset'},{status:400});
+      return json(heatIndexPage(store,offset));
+    }
     if(kind==='unplaced') {
       const offset=Number(q.get('offset')??0);
       if(!Number.isInteger(offset)||offset<0)return Response.json({error:'Invalid unplaced offset'},{status:400});

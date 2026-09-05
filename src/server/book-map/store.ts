@@ -4,9 +4,16 @@ import { GraphSchema, type Graph } from '../../shared/schemas';
 import { validateHierarchy, type Hierarchy, type MapBootstrap, type NodeDetail, type MapLink } from '../../shared/zoom-hierarchy';
 import { validateGraphSource } from '../book-analysis/graph';
 import { getBookPreview } from '../../features/reader/book-preview';
+import { heatSourceIndex, type HeatIndex } from '../../features/book-graph/heat-placement';
 const root=path.join(process.cwd(),'data/books/plato-republic/analysis');
 export type MapStore={graph:Graph;hierarchy:Hierarchy;entries:Map<string,Hierarchy['entries'][number]>;descendants:Map<string,Set<string>>};
 let cache:{stamp:number;promise:Promise<MapStore>}|undefined;
+const heatIndexes = new WeakMap<MapStore, HeatIndex>();
+export function heatIndexPage(store: MapStore, offset = 0) {
+  let index = heatIndexes.get(store);
+  if (!index) { index = heatSourceIndex(store.graph); heatIndexes.set(store, index); }
+  return { ...index, offset, total: index.leaves.length, leaves: index.leaves.slice(offset, offset + 512) };
+}
 export function createMapStore(graph:Graph,hierarchy:Hierarchy):MapStore {
   const entries=new Map(hierarchy.entries.map(n=>[n.id,n])),descendants=new Map<string,Set<string>>();
   function leaves(id:string):Set<string>{let found=descendants.get(id);if(!found){found=new Set(hierarchy.children[id]?.flatMap(child=>[...leaves(child)])??[id]);descendants.set(id,found);}return found;}

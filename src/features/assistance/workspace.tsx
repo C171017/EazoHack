@@ -3,6 +3,8 @@ import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'r
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
 import { readUploadedBook, type UploadedBook } from '../reader/upload-book';
+import { BookLibrary } from '../reader/book-library';
+import { bookLibrary, uploadedBookId } from '../reader/book-library-store';
 import { PdfWorkspace } from '../reader/pdf/pdf-workspace';
 import { Button } from '@/ui/components/button';
 import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type RouteKind } from '@/shared/schemas';
@@ -16,23 +18,33 @@ import { enhancementHistoryReducer, emptyEnhancementHistory } from './enhancemen
 import { ArtifactView } from './artifact-view';
 import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange, type ReaderSlot } from '../reader/continuous-txt-reader';
 import { placementsFor } from '../reader/artifact-placement';
-import { completedFootprints, readingHeat } from '../book-graph/reading-heat';
+import { completedFootprints } from '../book-graph/reading-heat';
 import { useReadingFootprints } from '../book-graph/use-reading-footprints';
+import { useHeatPlacement } from '../book-graph/use-heat-placement';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 
 export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstrap}) {
   const [uploaded, setUploaded] = useState<UploadedBook | null>(null);
-  async function upload(file: File) { setUploaded(await readUploadedBook(file)); }
-  if (uploaded?.kind === 'pdf') return <PdfWorkspace key={uploaded.hash} initialInput={{ id: 1, title: uploaded.title, hash: uploaded.hash, data: uploaded.data }} onReturn={() => setUploaded(null)} />;
-  const activeGraph: MapBootstrap = uploaded ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
-  return <TextWorkspace key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? 'The Republic of Plato.'} onUpload={upload} onReset={uploaded ? () => setUploaded(null) : undefined} />;
+  const [libraryOpen, setLibraryOpen] = useState(false);
+  async function upload(file: File) {
+    const book = await readUploadedBook(file);
+    await bookLibrary.save(book);
+    setUploaded(book);
+  }
+  const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
+  return <>
+    {uploaded?.kind === 'pdf' ? <PdfWorkspace key={uploaded.hash} initialInput={{ id: 1, title: uploaded.title, hash: uploaded.hash, data: uploaded.data.slice() }} onReturn={() => setUploaded(null)} onLibrary={() => setLibraryOpen(true)} /> :
+      <TextWorkspace key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? 'The Republic of Plato.'} onUpload={upload} onReset={uploaded ? () => setUploaded(null) : undefined} onLibrary={() => setLibraryOpen(true)} />}
+    {libraryOpen && <BookLibrary currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={book => { setUploaded(book); setLibraryOpen(false); }} onClose={() => setLibraryOpen(false)} />}
+  </>;
 }
 
-function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: BookPreview; graph: MapBootstrap; title: string; onUpload: (file: File) => Promise<void>; onReset?: () => void}) {
+function TextWorkspace({preview, graph, title, onUpload, onReset, onLibrary}: {preview: BookPreview; graph: MapBootstrap; title: string; onUpload: (file: File) => Promise<void>; onReset?: () => void; onLibrary: () => void}) {
   const bookId = graph.bookId;
   const footprints = useReadingFootprints(bookId);
   const recordFootprints = footprints.record;
-  const heat = useMemo(() => readingHeat(footprints.events, { ...preview, bookId }), [footprints.events, preview, bookId]);
+  const heatSource = useMemo(() => ({ ...preview, bookId }), [preview, bookId]);
+  const heat = useHeatPlacement(graph.version, footprints.events, heatSource, !graph.unavailable);
   const [mapAnchor,setMapAnchor] = useState<SourceAnchor|null>(null);
   const [mapView,setMapView] = useState<WorkspaceSnapshot['mapView']>(null);
   const reader = useRef<ContinuousTxtReaderHandle>(null);
@@ -173,10 +185,10 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
-        <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
+        <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} onLibrary={onLibrary} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
       <section className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
-        <div className="absolute inset-0">{graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error,loading:footprints.loading,retry:footprints.retry}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
+        <div className="absolute inset-0">{graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
 
       </section>
     </div>

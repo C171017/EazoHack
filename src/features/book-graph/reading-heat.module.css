@@ -7,16 +7,15 @@
 .filters button { display: flex; gap: 5px; align-items: center; padding: 4px 7px; border: 1px solid #3b4553; border-radius: 6px; background: #1c242e; color: #b6c2d0; }
 .filters button[aria-pressed='true'] { color: #f2f6fb; border-color: #a8bdce; background: #303e4e; }
 .filters i,.legend i,.breakdown i { display: inline-block; width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-.strip { display: flex; height: 20px; gap: 1px; }
-.strip button { flex: 1; min-width: 0; border-radius: 1px; border: 0; padding: 0; }
-.strip button:disabled { cursor: default; }
+.notePicker { margin-top: 9px; }
+.notePicker select { width: 100%; color: #dce2eb; background: #1c242e; border: 1px solid #3b4553; border-radius: 5px; padding: 5px 7px; font-size: 11px; }
+.notePicker select:focus-visible { outline: 2px solid #dce2eb; outline-offset: 2px; }
 .legend { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-top: 5px; color: #acbacb; font-size: 10px; }
 .legend > div { display: flex; gap: 9px; }
+.legend .gradient { flex: 1; min-width: 65px; height: 8px; margin: auto 0; border-radius: 4px; background: linear-gradient(90deg,#26bd5b,#ffe041,#ff892b,#ef3535); }
 .legend span { display: inline-flex; gap: 4px; align-items: center; }
 .legend i { border-radius: 2px; border: 1px solid #91a6bf44; width: 9px; height: 9px; }
 .hint { margin: 7px 0 0; color: #aebac9; font-size: 10px; }
-.segment { cursor: pointer; }
-.segment:hover { stroke: #e5f4fd; stroke-width: 1.5px; }
 .inspector { position: absolute; z-index: 5; left: 16px; right: 16px; bottom: 204px; max-height: min(420px,45%); overflow: auto; border: 1px solid #4d6075; border-radius: 12px; padding: 14px; background: #171d25fa; color: #dce2eb; box-shadow: 0 12px 40px #0008; font: 12px/1.6 Arial,sans-serif; }
 .inspector h3 { font-weight: 600; }
 .inspector .header button { font-size: 24px; line-height: 1; padding: 0 5px; }

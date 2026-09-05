@@ -1,7 +1,6 @@
 import { z } from 'zod';
 import { ArtifactSchema, SourceAnchorSchema, type Artifact, type RouteRun, type SourceAnchor } from '../../shared/schemas';
 import { routeEnhancement, type EnhancementKind } from '../../shared/enhancements';
-import { resolveTxtAnchor } from '../reader/source-anchor';
 
 export const FootprintSchema = z.object({
   id: z.string().min(1), bookId: z.string().min(1), createdAt: z.string().datetime(),
@@ -41,49 +40,7 @@ export function mergeFootprints(...groups: ReadingFootprint[][]): ReadingFootpri
     .sort((a, b) => b.createdAt.localeCompare(a.createdAt) || a.id.localeCompare(b.id));
 }
 
-export const HEAT_BIN_COUNT = 50;
-export const HEAT_STEPS = [
-  { min: 0, label: '0', color: '#242e3b' },
-  { min: 1, label: '1', color: '#345e85' },
-  { min: 2, label: '2', color: '#467ea7' },
-  { min: 3, label: '3–5', color: '#619fc7' },
-  { min: 6, label: '6–10', color: '#95c6e1' },
-  { min: 11, label: '11+', color: '#dcf1fc' },
-] as const;
-export function heatColor(count: number) {
-  return HEAT_STEPS.findLast(step => count >= step.min)?.color ?? HEAT_STEPS[0].color;
-}
-export type HeatBin = {
-  index: number; start: number; end: number; events: ReadingFootprint[];
-  counts: Record<EnhancementKind, number>;
-};
-export function heatCount(bin: HeatBin, filter: HeatFilter) {
-  return filter === 'all' ? bin.events.length : bin.counts[filter];
-}
-export function binLabel(bin: HeatBin) {
-  return `${Math.round(bin.start * 100)}–${Math.round(bin.end * 100)}% of book`;
-}
-
-/** Fixed source bins, never screen-space proximity. Multi-anchor runs get one
- * source-length-weighted midpoint; stale or unresolved source versions are excluded. */
-export function readingHeat(events: ReadingFootprint[], source: HeatSource) {
-  const bins: HeatBin[] = Array.from({ length: HEAT_BIN_COUNT }, (_, index) => ({
-    index, start: index / HEAT_BIN_COUNT, end: (index + 1) / HEAT_BIN_COUNT,
-    events: [], counts: { explanation: 0, diagram: 0, interactive: 0, illustration: 0 },
-  }));
-  let excluded = 0;
-  for (const event of mergeFootprints(events)) {
-    if (event.bookId !== source.bookId) continue;
-    const ranges = event.anchors.map(a => resolveTxtAnchor(a, source));
-    if (ranges.some(r => !r) || !ranges.length) { excluded++; continue; }
-    let weighted = 0, length = 0;
-    for (const r of ranges) if (r) {
-      const span = r.endOffset - r.startOffset;
-      weighted += (r.startOffset + r.endOffset) / 2 * span; length += span;
-    }
-    const index = Math.min(HEAT_BIN_COUNT - 1, Math.floor(weighted / length / source.sourceText.length * HEAT_BIN_COUNT));
-    const bin = bins[index];
-    bin.events.push(event); bin.counts[event.kind]++;
-  }
-  return { bins, excluded };
+/** Exact generation count; density falloff is applied separately in 3D. */
+export function heatCount(point: { events: ReadingFootprint[]; counts: Record<EnhancementKind, number> }, filter: HeatFilter) {
+  return filter === 'all' ? point.events.length : point.counts[filter];
 }

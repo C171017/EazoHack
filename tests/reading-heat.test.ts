@@ -1,12 +1,15 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import { IDBFactory, IDBObjectStore } from 'fake-indexeddb';
-import { completedFootprints, readingHeat, heatColor, heatCount, mergeFootprints, FootprintSchema } from '../src/features/book-graph/reading-heat';
+import { completedFootprints, heatCount, mergeFootprints, FootprintSchema } from '../src/features/book-graph/reading-heat';
+import { placeFootprints, nearestHeatLeaf, unionRanges, type HeatIndex } from '../src/features/book-graph/heat-placement';
+import { heatRgb } from '../src/features/book-graph/heat-field';
 import { createFootprintRepository } from '../src/features/persistence/reading-footprints';
 import { makeMockArtifact } from '../src/shared/fixtures';
 import type { RouteKind, RouteRun, Selection, SourceAnchor } from '../src/shared/schemas';
 
 const source = { bookId: 'heat-test', fileHash: 'heat-source', extractionVersion: 'txt-lf-v1', sourceText: 'x'.repeat(10000) };
+const index: HeatIndex = { ...source, sourceLength: source.sourceText.length, leaves: Array.from({ length: 50 }, (_, i) => ({ id: `leaf-${i}`, label: `Leaf ${i}`, position: { x: .5, y: 2, z: (i + .5) / 50 }, ranges: [{ start: i * 200, end: (i + 1) * 200 }] })) };
 function generation(id: string, route: RouteKind = 'interactive_ui', startOffset = 1100, endOffset = startOffset + 10) {
   const anchor: SourceAnchor = { id: `anchor-${id}`, ...source, locators: [{ kind: 'txt', startOffset, endOffset }], quote: source.sourceText.slice(startOffset, endOffset), prefix: '', suffix: '', resolution: 'exact' };
   // Source text belongs to the resolver, not the serialized anchor.
@@ -23,7 +26,7 @@ test('only completed supported generations count; multiple outputs count once an
   const events = completedFootprints([{ ...g.run, artifactIds: [g.artifact.id, second.id] }], [g.artifact, second], [g.anchor]);
   assert.equal(events.length, 1); assert.equal(events[0].artifacts.length, 2);
   assert.equal(mergeFootprints(events, events).length, 1);
-  assert.equal(readingHeat([...events, ...events], source).bins[5].events.length, 1);
+  assert.equal(placeFootprints([...events, ...events], source, index).points[0].events.length, 1);
   for (const status of ['pending', 'running', 'failed', 'cancelled'] as const)
     assert.deepEqual(completedFootprints([{ ...g.run, status }], [g.artifact], [g.anchor]), []);
   assert.deepEqual(completedFootprints([g.run], [], [g.anchor]), []);
@@ -33,35 +36,51 @@ test('only completed supported generations count; multiple outputs count once an
 test('four method filters share absolute counts and a fixed color scale', () => {
   const events = ['interactive_ui', 'concept_diagram', 'interactive_panel', 'generated_image'].flatMap((route, index) =>
     Array.from({ length: index + 1 }, (_, i) => generation(`${route}-${i}`, route as RouteKind).event()));
-  const bin = readingHeat(events, source).bins[5];
+  const bin = placeFootprints(events, source, index).points[0];
   assert.equal(heatCount(bin, 'all'), 10);
   assert.deepEqual(bin.counts, { explanation: 1, diagram: 2, interactive: 3, illustration: 4 });
   assert.equal(heatCount(bin, 'diagram'), 2);
-  assert.equal(heatColor(3), heatColor(5));
-  assert.notEqual(heatColor(2), heatColor(3));
-  assert.equal(heatColor(11), heatColor(999));
+  assert.notDeepEqual(heatRgb(3), heatRgb(5));
+  assert.notDeepEqual(heatRgb(2), heatRgb(3));
+  assert.deepEqual(heatRgb(12), heatRgb(999));
   // Adding a hotspot cannot renormalize another bin's color.
   const extra = generation('extra', 'interactive_ui', 9000).event();
-  assert.equal(heatColor(readingHeat([...events, extra], source).bins[5].events.length), heatColor(10));
+  assert.deepEqual(heatRgb(placeFootprints([...events, extra], source, index).points[0].events.length), heatRgb(10));
 });
 
-test('source midpoint handles boundaries and long selections without counting one generation many times', () => {
-  const events = [generation('first', 'interactive_ui', 0, 2).event(), generation('boundary', 'interactive_ui', 199, 201).event(),
-    generation('last', 'interactive_ui', 9998, 10000).event(), generation('long', 'interactive_ui', 0, 8000).event()];
-  const { bins } = readingHeat(events, source);
-  assert.equal(bins[0].events.length, 1); assert.equal(bins[1].events.length, 1);
-  assert.equal(bins[49].events.length, 1); assert.equal(bins[20].events.length, 1);
-  assert.equal(bins.reduce((sum, bin) => sum + bin.events.length, 0), 4);
+test('placement uses overlap first, nearest text gap second, and deterministic ties', () => {
+  const a = index.leaves[0], b = index.leaves[1];
+  assert.equal(nearestHeatLeaf([{ start: 190, end: 240 }], [a,b])?.leaf.id, b.id);
+  // The nearest center is not a substitute for nearest interval distance.
+  const long = { ...a, ranges: [{start:0,end:1000}] }, short = {...b,ranges:[{start:1020,end:1030}]};
+  assert.equal(nearestHeatLeaf([{ start: 999, end: 1001 }], [long,short])?.leaf.id, long.id);
+  assert.equal(nearestHeatLeaf([{ start: 1014, end: 1016 }], [long,short])?.leaf.id, short.id);
+  const tied = { ...a, id: 'a-first' };
+  assert.equal(nearestHeatLeaf([{start:50,end:60}], [a,tied])?.leaf.id, 'a-first');
+  assert.equal(nearestHeatLeaf([{start:50,end:60}], [tied,a])?.leaf.id, 'a-first');
+  assert.deepEqual(unionRanges([{start:0,end:10},{start:5,end:20}]), [{start:0,end:20}]);
+  const longEvent = generation('long', 'interactive_ui', 0, 8000).event();
+  assert.equal(placeFootprints([longEvent],source,index).points.reduce((sum,p)=>sum+p.events.length,0),1);
+});
+
+test('nearest unplaced leaf and incompatible source index remain explicitly unmapped', () => {
+  const event = generation('unplaced').event();
+  assert.equal(placeFootprints([event],source,{...index,leaves:index.leaves.map(l=>l.id==='leaf-5'?{...l,position:null}:l)}).unmapped,1);
+  assert.equal(placeFootprints([event],source,{...index,fileHash:'older'}).unmapped,1);
+  assert.equal(placeFootprints([event],source,null).unmapped,1);
+  // A gap fallback is recorded for inspection, rather than claimed as an overlap.
+  const placed=placeFootprints([event],source,{...index,leaves:[index.leaves[0]]});
+  assert.equal(placed.points[0].nearest,1);
 });
 
 test('stale hashes, extraction versions, quotes and unresolved anchors cannot create misplaced heat', () => {
   const original = generation('source').event();
   for (const patch of [{ fileHash: 'changed' }, { extractionVersion: 'changed' }, { quote: 'changed' }, { resolution: 'unresolved' as const }]) {
     const event = { ...original, anchors: [{ ...original.anchors[0], ...patch }] };
-    const result = readingHeat([event], source);
-    assert.equal(result.excluded, 1); assert.equal(result.bins.flatMap(b => b.events).length, 0);
+    const result = placeFootprints([event], source, index);
+    assert.equal(result.excluded, 1); assert.equal(result.points.flatMap(b => b.events).length, 0);
   }
-  assert.equal(readingHeat([{ ...original, bookId: 'another-book' }], source).excluded, 0);
+  assert.equal(placeFootprints([{ ...original, bookId: 'another-book' }], source, index).excluded, 0);
   assert.throws(() => FootprintSchema.parse({ ...original, anchors: [] }));
   assert.throws(() => FootprintSchema.parse({ ...original, kind: 'diagram' }));
   assert.throws(() => FootprintSchema.parse({ ...original, id: 'wrong-run' }));
@@ -76,7 +95,7 @@ test('footprints and their generated results survive reload, repeated saves, and
   const reopened = createFootprintRepository({ indexedDB });
   const saved = await reopened.list(source.bookId);
   assert.deepEqual(mergeFootprints(saved), mergeFootprints([a, b]));
-  assert.equal(readingHeat(saved, source).bins[5].events.length, 2);
+  assert.equal(placeFootprints(saved, source, index).points[0].events.length, 2);
   assert.deepEqual(await reopened.list('different-book'), []);
   await reopened.close();
 });

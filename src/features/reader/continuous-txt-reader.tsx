@@ -143,6 +143,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   bookId?: string;
   onUpload: (file: File) => Promise<void>;
   onReset?: () => void;
+  onLibrary: () => void;
   sourceText: string;
   fileHash: string;
   extractionVersion: string;
@@ -153,7 +154,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   onReadingPosition?: (offset: number) => void;
   onEnhance: (route: RouteKind) => void;
   enhancementBusy: boolean;
-}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
+}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, onLibrary, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText, undefined, title), [sourceText, title]);
   const chunkEnhancements = useMemo(() => chunks.map(chunk => {
     const matches = enhancements.filter(h => h.startOffset < chunk.endOffset && h.endOffset > chunk.startOffset);
@@ -390,7 +391,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   >
     <EnhancementPicker position={pickerPosition} busy={enhancementBusy} onChoose={route=>{setPickerPosition(null);nativeSelection.current=null;window.getSelection()?.removeAllRanges();onEnhance(route);}}/>
     <div className="txt-reader-masthead">
-      <ReadingMenu fonts={fonts} onChange={changeFonts} onUpload={onUpload} onReset={onReset}/>
+      <ReadingMenu fonts={fonts} onChange={changeFonts} onUpload={onUpload} onReset={onReset} onLibrary={onLibrary}/>
     </div>
     <div className="txt-reader-page">
     <header className="txt-reader-heading">
