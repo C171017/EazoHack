@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type CSSProperties } from 'react';
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
 import { readUploadedBook, type UploadedBook } from '../reader/upload-book';
@@ -10,12 +10,12 @@ import type { WorkspaceSnapshot } from '../persistence';
 import { recordSelectionActivity, selectionTimestamp } from '../persistence/selection-activity';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
 import { resolveTxtAnchor } from '../reader/source-anchor';
-import { artifactEnhancement, routeEnhancement, enhancementStyle } from '@/shared/enhancements';
+import { artifactEnhancement, routeEnhancement } from '@/shared/enhancements';
 import type { EnhancementHighlight } from '../reader/enhancement-highlights';
 import { enhancementHistoryReducer, emptyEnhancementHistory } from './enhancement-history';
-import { ArtifactView, artifactLabel } from './artifact-view';
+import { ArtifactView } from './artifact-view';
 import { ContinuousTxtReader, type ContinuousTxtReaderHandle, type TxtSelectionRange, type ReaderSlot } from '../reader/continuous-txt-reader';
-import { placementsFor, type ArtifactPlacement } from '../reader/artifact-placement';
+import { placementsFor } from '../reader/artifact-placement';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 
 export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstrap}) {
@@ -37,7 +37,6 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
   const [selections,setSelections] = useState<Selection[]>([]);
   const [history, dispatchEnhancements] = useReducer(enhancementHistoryReducer, emptyEnhancementHistory);
   const { artifacts, placements, interactionState } = history.present;
-  const setPlacements = useCallback((update: (current: ArtifactPlacement[]) => ArtifactPlacement[]) => dispatchEnhancements({ type: 'update', update: state => ({ ...state, placements: update(state.placements) }) }), []);
   const setInteractionState = useCallback((update: (current: WorkspaceSnapshot['interactionState']) => WorkspaceSnapshot['interactionState']) => dispatchEnhancements({ type: 'update', update: state => ({ ...state, interactionState: update(state.interactionState) }) }), []);
   const [anchors,setAnchors] = useState<SourceAnchor[]>([]);
   const [requests,setRequests]=useState<Record<string,{routes:RouteKind[];message:string;failed:boolean}>>({});
@@ -142,7 +141,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
   }, [artifacts, anchors, preview, bookId, requests, selections]);
 
   // Camera updates must not rebuild reader props. Keep every assistance input
-  // in the dependency list so selection, retry, collapse and undo stay current.
+  // in the dependency list so selection, retry and undo stay current.
   const slots = useMemo(() => {
     const slots:ReaderSlot[]=[];
     for(const placement of [...placements].sort((a,b)=>a.order-b.order)){
@@ -150,10 +149,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       const anchor=anchors.find(a=>a.id===placement.anchorId);
       const locator=resolveTxtAnchor(anchor,{...preview,bookId});
       if(!artifact||!locator||locator.endOffset!==placement.offset)continue;
-      slots.push({id:artifact.id,offset:placement.offset,content:<>
-        <div className="enhancement-heading mb-2 flex gap-3 text-xs" data-enhancement={artifactEnhancement(artifact) ?? undefined} style={enhancementStyle(artifactEnhancement(artifact)) as CSSProperties}><button aria-expanded={!placement.collapsed} onClick={()=>setPlacements(current=>current.map(p=>p.artifactId===artifact.id?{...p,collapsed:!p.collapsed}:p))}>{placement.collapsed?'Expand':'Collapse'} {artifactLabel(artifact)}</button></div>
-        <div hidden={placement.collapsed}><ArtifactView artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/></div>
-      </>});
+      slots.push({id:artifact.id,offset:placement.offset,content:<ArtifactView artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>});
     }
     for(const [id,status] of Object.entries(requests)){
       const selected=selections.find(s=>s.id===id),anchor=anchors.find(a=>selected?.anchorIds.includes(a.id));
@@ -162,7 +158,7 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
       slots.push({id:`request-${id}`,offset:locator.endOffset,content:<div role="status" className="rounded-lg border border-line p-3 text-xs">{status.message}{status.failed&&<Button disabled={busy} onClick={()=>void exercise(selected,status.routes)}>Retry failed routes</Button>}</div>});
     }
     return slots;
-  }, [placements,artifacts,anchors,preview,bookId,interactionState,setPlacements,setInteractionState,requests,selections,busy,exercise]);
+  }, [placements,artifacts,anchors,preview,bookId,interactionState,setInteractionState,requests,selections,busy,exercise]);
   const unresolvedArtifacts=useMemo(()=>artifacts.filter(a=>!slots.some(s=>s.id===a.id)),[artifacts,slots]);
 
   return <main className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">

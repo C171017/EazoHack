@@ -9,9 +9,9 @@ function generation(id: string) {
   return { type: 'generate' as const, artifacts, placements: placementsFor(artifacts, fixtureAnchors) };
 }
 
-test('undo removes latest generation; redo restores placement, collapse and interaction state', () => {
+test('undo removes latest generation; redo restores placement and interaction state', () => {
   let history = reduce(reduce(empty, generation('first')), generation('second'));
-  history = reduce(history, { type: 'update', update: state => ({ ...state, placements: state.placements.map(p => ({ ...p, collapsed: true })), interactionState: { second: { steps: 4 } } }) });
+  history = reduce(history, { type: 'update', update: state => ({ ...state, interactionState: { second: { steps: 4 } } }) });
   const before = history.present;
   history = reduce(history, { type: 'undo' });
   assert.deepEqual(history.present.artifacts.map(a => a.id), ['first']);

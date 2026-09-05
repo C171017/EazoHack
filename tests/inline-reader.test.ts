@@ -13,12 +13,12 @@ test('multiple inline cuts retain every source character including Unicode and p
   assert.deepEqual(ranges.map(r=>r.endOffset),[5,8,12,text.length]);
 });
 
-test('placements migrate legacy TXT results and persist independent collapsed states',async()=>{
+test('placements migrate legacy TXT results and discard retired collapse state',async()=>{
   const artifacts=['interactive_ui','concept_diagram'].map(kind=>makeMockArtifact(kind as 'interactive_ui'|'concept_diagram',fixtureSelection,`run-${kind}`));
   const placements=placementsFor(artifacts,fixtureAnchors);
   assert.equal(placements.length,2);
   assert.equal(placements[0].selectionId,fixtureSelection.id);
-  placements[0].collapsed=true;
+  assert.deepEqual(WorkspaceSnapshotSchema.parse({schemaVersion:1,id:"legacy",bookId:fixtureSelection.bookId,selections:[fixtureSelection],anchors:fixtureAnchors,artifacts,placements:placements.map(p=>({...p,collapsed:true})),savedAt:new Date().toISOString()}).placements,placements);
   const snapshot=WorkspaceSnapshotSchema.parse({schemaVersion:1,id:'inline-test',bookId:fixtureSelection.bookId,selections:[fixtureSelection],anchors:fixtureAnchors,artifacts,placements,savedAt:new Date().toISOString()});
   const repository=createWorkspaceRepository({indexedDB:new IDBFactory()});
   await repository.save(snapshot);
