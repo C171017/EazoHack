@@ -63,3 +63,9 @@ No commit or push was performed by this scaffolding task. Other concurrent task 
 - Visual checks found and corrected broad SVG node hit targets and the mobile passage-control overlap. All labels have distinct button hit targets; connector lines do not intercept clicks.
 - Reduced-motion behavior is implemented via `prefers-reduced-motion`; no OS preference change or physical low-performance device test was performed. No production-scale benchmark is claimed.
 - Existing multiline original-text selection still opens the passage panel; both Interactive UI and Concept diagram mock routes completed and saved together in live Chrome. The raw source and PoliMap repository were not edited. No commit or push performed.
+
+## Magnetic view navigation update
+
+Removed the four projection buttons. Dragging now orbits in every view; near-plane attraction and a 520ms spring settle replace explicit visual view controls. Capture radius is 10°, departure radius is 15°; Shift-drag remains pan. Camera values stay continuous, including reversed views/full yaw turns, and projection labels switch only after settling. Keyboard shortcuts and reduced-motion support remain. Tests: 38 passing, including nearest-plane, pole-exit and spring-continuity checks.
+
+Live browser verification confirmed pointer-driven capture into X×Y, Y×Z and X×Z, small-drag return to the same plane, and deliberate exit remaining in free 3D. TypeScript, lint and the isolated production build passed.

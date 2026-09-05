@@ -41,3 +41,34 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string}
     return {...p,labelX:x,labelY:y,width:w};
   });
 }
+
+// Separate capture and release radii prevent jitter when leaving a magnetic plane.
+export const SNAP_ENTER = Math.PI / 18; // 10 degrees
+export const SNAP_EXIT = Math.PI / 12; // 15 degrees
+export type SnapTarget = {projection:'xy'|'xz'|'yz';yaw:number;pitch:number;distance:number};
+export function nearestProjection(camera:Pick<MapView,'yaw'|'pitch'>):SnapTarget {
+  const quarter=Math.PI/2;
+  const yaw=Math.round(camera.yaw/quarter)*quarter;
+  const side:SnapTarget={projection:Math.abs(Math.round(yaw/quarter)%2)===0?'xy':'yz',yaw,pitch:0,distance:Math.hypot(camera.yaw-yaw,camera.pitch)};
+  const poleYaw=Math.round(camera.yaw/Math.PI)*Math.PI;
+  const pitch=camera.pitch<0?-quarter:quarter;
+  const top:SnapTarget={projection:'xz',yaw:poleYaw,pitch,distance:Math.hypot(camera.yaw-poleYaw,camera.pitch-pitch)};
+  return side.distance<=top.distance?side:top;
+}
+export function orbitFrom(start:Pick<MapView,'yaw'|'pitch'>,dx:number,dy:number) {
+  const requested=start.pitch+dy*.006;
+  // Either drag direction can pull away from a top/bottom projection.
+  const wrapped=((requested+Math.PI/2)%(2*Math.PI)+2*Math.PI)%(2*Math.PI);
+  const pitch=wrapped<=Math.PI?wrapped-Math.PI/2:3*Math.PI/2-wrapped;
+  return {yaw:start.yaw+dx*.006,pitch};
+}
+export function magneticPose(camera:Pick<MapView,'yaw'|'pitch'>) {
+  const target=nearestProjection(camera);
+  const proximity=Math.max(0,1-target.distance/SNAP_ENTER);
+  const pull=.55*proximity*proximity;
+  return {yaw:camera.yaw+(target.yaw-camera.yaw)*pull,pitch:camera.pitch+(target.pitch-camera.pitch)*pull};
+}
+export function springProgress(elapsedMs:number) {
+  const t=Math.min(1,Math.max(0,elapsedMs/520));
+  return t===1?1:1-(1+10*t)*Math.exp(-10*t);
+}

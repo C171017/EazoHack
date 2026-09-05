@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { GraphSchema, MapViewSchema } from '../src/shared/schemas';
 import { createSampleGraph } from '../src/features/book-graph/sample-graph';
 import { getBookPreview } from '../src/features/reader/book-preview';
-import { initialView, orientation, project, worldPoint, placeLabels } from '../src/features/book-graph/projection';
+import { initialView, orientation, nearestProjection, magneticPose, orbitFrom, SNAP_ENTER, SNAP_EXIT, springProgress, project, worldPoint, placeLabels } from '../src/features/book-graph/projection';
 import { WorkspaceSnapshotSchema } from '../src/features/persistence';
 
 let preview: Awaited<ReturnType<typeof getBookPreview>>;
@@ -71,4 +71,31 @@ test('saved 3D view round-trips and old 2D checkpoints remain readable',()=>{
   assert.equal(WorkspaceSnapshotSchema.parse(legacy).mapView,null);
   assert.deepEqual(WorkspaceSnapshotSchema.parse({...legacy,mapView:view}).mapView,view);
   assert.equal(MapViewSchema.safeParse({...view,zoom:Infinity}).success,false);
+});
+
+test('magnetic alignment finds all three planes and reversed views without a full-turn jump',()=>{
+  for(const [pose,mode] of [
+    [{yaw:.04,pitch:.03},'xy'],
+    [{yaw:Math.PI/2-.03,pitch:.02},'yz'],
+    [{yaw:.02,pitch:-Math.PI/2+.03},'xz'],
+    [{yaw:Math.PI+.02,pitch:.02},'xy'],
+    [{yaw:Math.PI*4+.03,pitch:.01},'xy'],
+  ] as const){const target=nearestProjection(pose);assert.equal(target.projection,mode);assert.ok(target.distance<SNAP_ENTER);assert.ok(Math.abs(target.yaw-pose.yaw)<.05);}
+  assert.ok(nearestProjection({yaw:.5,pitch:.4}).distance>SNAP_ENTER);
+  assert.ok(SNAP_EXIT>SNAP_ENTER);
+});
+test('magnetic pull is continuous and deliberate drags can escape either pole',()=>{
+  const raw={yaw:.08,pitch:.06},attracted=magneticPose(raw);
+  assert.ok(nearestProjection(attracted).distance<nearestProjection(raw).distance);
+  assert.deepEqual(magneticPose({yaw:.5,pitch:.4}),{yaw:.5,pitch:.4});
+  for(const pitch of [-Math.PI/2,Math.PI/2])for(const dy of [-60,60]){
+    const pulled=orbitFrom({yaw:0,pitch},0,dy);
+    assert.ok(Math.abs(pulled.pitch-pitch)>SNAP_EXIT);
+    assert.ok(Math.abs(pulled.pitch)<=Math.PI/2);
+  }
+});
+test('magnetic settling progresses smoothly to exact alignment without opacity changes',()=>{
+  assert.equal(springProgress(0),0);assert.equal(springProgress(520),1);
+  let last=0;for(let t=16;t<=520;t+=16){const next=springProgress(t);assert.ok(next>=last&&next<=1);last=next;}
+  assert.ok(springProgress(16)<.05);
 });
