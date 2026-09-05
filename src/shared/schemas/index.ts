@@ -85,14 +85,59 @@ export const ArtifactSchema = z.discriminatedUnion("kind", [
   if (artifact.kind === "concept_diagram" && [...artifact.payload.nodes, ...artifact.payload.edges].some((item) => item.anchorIds.some((id) => !allowed.has(id)))) ctx.addIssue({ code: "custom", message: "Diagram references anchors outside the artifact selection", path: ["payload"] });
 });
 
-export const GraphSchema = z.object({ id: Id, bookId: Id, version: Id, anchorIds: UniqueIds, nodes: z.array(z.object({ id: Id, label: ShortText, summary: Text, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Concept needs evidence"), position: z.object({ x: z.number().finite(), y: z.number().finite() }).strict() }).strict()).max(1000), edges: z.array(z.object({ id: Id, source: Id, target: Id, type: ShortText, evidenceAnchorIds: UniqueIds, rationale: Text, provenance: z.enum(["book_supported", "model_inferred", "mock"]) }).strict()).max(3000) }).strict().superRefine((graph, ctx) => {
-  const nodes = new Set(graph.nodes.map((n) => n.id)); const anchors = new Set(graph.anchorIds);
-  const ids = [...graph.nodes, ...graph.edges].map((item) => item.id);
-  if (new Set(ids).size !== ids.length) ctx.addIssue({ code: "custom", message: "Graph IDs must be unique" });
-  if (graph.nodes.some((n) => n.anchorIds.some((id) => !anchors.has(id))) || graph.edges.some((e) => e.evidenceAnchorIds.some((id) => !anchors.has(id)))) ctx.addIssue({ code: "custom", message: "Graph references unknown anchors" });
-  if (graph.edges.some((e) => !nodes.has(e.source) || !nodes.has(e.target))) ctx.addIssue({ code: "custom", message: "Graph references unknown nodes" });
-  if (graph.edges.some((e) => e.provenance === "book_supported" && e.evidenceAnchorIds.length === 0)) ctx.addIssue({ code: "custom", message: "Book-supported relations need evidence" });
+const Unit = z.number().finite().min(0).max(1);
+const Evidence = z.object({ rationale: Text, ruleVersion: Id, confidence: Unit.nullable(), anchorIds: UniqueIds.refine(ids => ids.length > 0, "Coordinate evidence required") }).strict();
+export const GraphSchema = z.object({
+  id: Id, bookId: Id, graphVersion: Id, fileHash: Text, extractionVersion: Id,
+  sourceLength: z.number().int().positive(),
+  anchors: z.array(SourceAnchorSchema).max(1000),
+  territories: z.array(z.object({ id: Id, label: ShortText, centroidX: Unit, anchorIds: UniqueIds.refine(ids => ids.length > 0), coverage: Unit, evidence: Evidence, orderLocked: z.literal(true) }).strict()).min(1).max(7),
+  identities: z.array(z.object({ id: Id, label: ShortText, summary: Text, occurrenceIds: UniqueIds.refine(ids => ids.length > 0) }).strict()).max(500),
+  nodes: z.array(z.object({
+    id: Id, identityId: Id, kind: z.literal('occurrence'), label: ShortText, summary: Text,
+    anchorIds: UniqueIds.refine(ids => ids.length > 0), themeTerritoryIds: UniqueIds,
+    structuralLevel: z.number().int().min(0).max(4).nullable(),
+    position: z.object({ x: Unit.nullable(), y: z.number().int().min(0).max(4).nullable(), z: Unit.nullable() }).strict(),
+    evidence: Evidence, sourceLabel: ShortText,
+  }).strict()).max(500),
+  edges: z.array(z.object({ id: Id, source: Id, target: Id, type: ShortText, evidenceAnchorIds: UniqueIds.refine(ids => ids.length > 0), rationale: Text, provenance: z.enum(['book_supported', 'model_inferred', 'editorial', 'mock']) }).strict()).max(1500),
+}).strict().superRefine((graph, ctx) => {
+  const fail = (message: string) => ctx.addIssue({code:'custom',message});
+  const anchors = new Map(graph.anchors.map(a => [a.id,a]));
+  const nodes = new Map(graph.nodes.map(n => [n.id,n]));
+  const identities = new Map(graph.identities.map(n => [n.id,n]));
+  const themes = new Set(graph.territories.map(t => t.id));
+  const ids = [...graph.anchors,...graph.nodes,...graph.identities,...graph.edges,...graph.territories].map(n => n.id);
+  if(new Set(ids).size !== ids.length) fail('Graph IDs must be unique');
+  const known = (ids: string[]) => ids.every(id => anchors.has(id));
+  for(const a of graph.anchors) {
+    if(a.bookId !== graph.bookId || a.fileHash !== graph.fileHash || a.extractionVersion !== graph.extractionVersion) fail('Anchor source version mismatch');
+    if(a.locators.some(l => l.kind === 'txt' && l.endOffset > graph.sourceLength)) fail('Anchor exceeds source');
+  }
+  for(const t of graph.territories) if(!known(t.anchorIds) || !known(t.evidence.anchorIds)) fail('Territory references unknown evidence');
+  if(graph.territories.some((t,i) => i > 0 && t.centroidX <= graph.territories[i-1].centroidX)) fail('Territory order must be locked and increasing');
+  for(const identity of graph.identities) if(identity.occurrenceIds.some(id => nodes.get(id)?.identityId !== identity.id)) fail('Identity must link its occurrences');
+  for(const n of graph.nodes) {
+    if(!known(n.anchorIds) || !known(n.evidence.anchorIds)) fail('Node references unknown anchors');
+    if(!identities.get(n.identityId)?.occurrenceIds.includes(n.id)) fail('Occurrence must link its identity');
+    if(n.themeTerritoryIds.some(id => !themes.has(id))) fail('Unknown territory');
+    if(n.position.y !== n.structuralLevel) fail('Y must equal canonical structural level');
+    if(n.position.x !== null && !n.themeTerritoryIds.length) fail('Known X needs a territory');
+    // TXT scaffold: source progress always derives from its first exact source anchor.
+    const anchor = anchors.get(n.anchorIds[0]);
+    const locator = anchor?.locators[0];
+    if(n.position.z !== null && (anchor?.resolution !== 'exact' || locator?.kind !== 'txt' || Math.abs(n.position.z - locator.startOffset / graph.sourceLength) > 1e-10)) fail('Z must derive from an exact source anchor');
+  }
+  for(const e of graph.edges) if(!nodes.has(e.source) || !nodes.has(e.target) || !known(e.evidenceAnchorIds)) fail('Relation endpoints and evidence must exist');
 });
+
+export const MapViewSchema = z.object({
+  graphVersion: Id, projection: z.enum(['3d','xy','xz','yz']),
+  yaw: z.number().finite(), pitch: z.number().finite().min(-Math.PI/2).max(Math.PI/2),
+  x: z.number().finite(), y: z.number().finite(), zoom: z.number().min(0.5).max(2.5),
+  selectedNodeId: Id.nullable(), readerAnchorId: Id.nullable().default(null), sourceScope: z.enum(['excerpt','book']),
+}).strict();
+export type MapView = z.infer<typeof MapViewSchema>;
 
 export const ChunkSchema = z.object({ id: Id, bookId: Id, anchorIds: UniqueIds.refine((ids) => ids.length > 0, "Chunk needs source anchors"), textHash: Text, status: z.enum(["pending", "running", "complete", "failed"]), error: RunErrorSchema.optional() }).strict();
 export const AnalysisRunSchema = z.object({ id: Id, bookId: Id, chunkIds: UniqueIds, completedChunkIds: UniqueIds, status: z.enum(["pending", "running", "complete", "failed", "cancelled"]), modelLabel: ShortText, promptVersion: Id }).strict().superRefine((run, ctx) => {

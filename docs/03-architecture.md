@@ -13,6 +13,8 @@
 4. 所有块完成后，把候选摘要分批合并、去重，再做跨章关系整理。合并仍保留原始出处；摘要再压缩时不丢弃覆盖清单。整书处理不等于一次请求塞进全部内容。
 5. 校验节点和边的 ID、类型、引用与证据；计算布局并保存版本。展示“已处理 X/Y 块”；部分失败标明不完整。没有证据的边不发布为事实，也不强行把图接成一个连通分量。
 
+6. 从通过校验的图生成受约束的三维空间：X 为主题疆域，Y 为具体细节→组织性结构，Z 为来源进度。X 的主题名称与位置按每本书动态生成，但只能遵守 [3D 整书地图契约](08-book-map-3d.md) 的覆盖、区分、证据和稳定性规则；Y 使用规范结构层级并允许书型化显示名称；Z 从 SourceAnchor 计算。三个二维投影必须读取同一组节点、边和坐标，不能维护各自的模型事实副本。
+
 建议仅承诺一个经过预检、可在预算内完整覆盖的短书演示；分块覆盖只代表文本进入了处理流程，不代表每个概念都已被准确提取。超出预检范围先提示不支持，不静默截断。暂不引入向量数据库：段落辅助以用户选文为主，相关段落/图邻居可补充上下文。书内或外部来源查找的范围另见 D09。
 
 ## 选文辅助：独立于整书流水线
@@ -27,7 +29,7 @@
 
 交互 UI 实时生成是确认意图，且运行边界已经确定：模型只输出受版本控制的配置、内容、参数与组件组合；服务端以 Zod 校验，客户端只解析允许列表中的已测试 React 组件。组件 variant 映射到源码中预编译的 Tailwind class，模型不得提交 class 名、HTML、JavaScript 或表达式。教学模拟须保存假设、方程/规则来源与验证状态；可操作性不等于模型正确。书文是分析资料，不作为执行指令。
 
-概念图采用同一受控数据驱动原则：模型输出节点、边、分组和可选注释，经 Zod 校验与引用完整性检查后，由 React 组件和 SVG 渲染。它与右侧 React Flow 整书网络共享视觉 token，但不共享运行状态，也不将段落图自动提升为整书事实。
+概念图采用同一受控数据驱动原则：模型输出节点、边、分组和可选注释，经 Zod 校验与引用完整性检查后，由 React 组件和 SVG 渲染。它与右侧 3D 整书地图共享视觉 token，但不共享运行状态，也不将段落图自动提升为整书事实。旧 React Flow fixture 已由 React/SVG 三维坐标投影替换；样本内容不代表全书分析。
 
 ## 路由与调度边界
 
@@ -44,14 +46,15 @@
 | Book | `id, fileHash, title, format, extractionVersion, pageCount?, createdAt`；指纹区分同名不同版本 |
 | SourceAnchor | `id, bookId, fileHash, extractionVersion, locator, quote, prefix, suffix, resolution`；定位详见下表 |
 | Chunk | `id, bookId, anchorIds, textHash, status, error?`；状态 pending/running/complete/failed |
-| Node | `id, bookId, graphVersion, type, label, summary, anchorIds, position{x,y}`；概念至少一个有效出处 |
+| Node | `id, bookId, graphVersion, kind(identity|occurrence), type, label, summary, anchorIds, themeTerritoryIds, structuralLevel, position{x,y,z}, coordinateConfidence`；概念身份至少连接一个有出处的 occurrence；只有 occurrence 的 Z 可直接由来源位置确定 |
 | Edge | `id, source, target, type, evidenceAnchorIds, rationale, provenance`；端点存在，关系方向按标签解释；`provenance=model_inferred` 明示推断 |
+| ThemeTerritory | `id, bookId, graphVersion, label, summary, anchorIds, centroidX, coverage, confidence, orderLocked`；每书顶层通常 3–7 个，必须有跨片段证据且与其他顶层主题可区分 |
 | Selection | `id, bookId, anchorIds, selectedText, contextSnapshot, createdAt`；必有非空选文，跨页可有多个锚点 |
 | RoutePlan | `id, selectionId, routes[], reasonByRoute, trigger, routerVersion`；路线去重且可多选，规则及组合上限待决；服务端 Zod 校验 |
 | RouteRun | `id, planId, route, status, dependsOn[], error?, artifactIds[]`；独立 pending/running/complete/failed/cancelled |
 | Artifact | `id, bookId, selectionId, routeRunId, nodeIds[], anchorIds, graphVersion?, kind, payload, provider?, modelLabel?, schemaVersion, createdAt, savedAt`；原文关联必有，节点可暂空，模型标识记录实际值 |
 | Reference | `id, scope, anchorId?, url?, title, excerpt?, supportRelation, verificationStatus, retrievedAt`；书内需锚点，外部需实际来源链接；scope 选择受 D09 约束 |
-| Bookmark | `id, bookId, graphVersion, viewport{x,y,zoom}, selectedNodeId?, readerAnchorId?, label` |
+| Bookmark | `id, bookId, graphVersion, mapView{graphVersion,projection,yaw,pitch,x,y,zoom,sourceScope}, selectedNodeId?, readerAnchorId?, label` |
 | ActivityEvent | `id, bookId, nodeId?, anchorId?, type, timestamp`；原始事件与派生强度分开，去重后统计 |
 | AnalysisRun | `id, bookId, chunkIds, completedChunkIds, status, modelLabel, promptVersion`；支持覆盖检查与失败恢复 |
 
@@ -75,10 +78,12 @@
 
 解析次序：核对文件和提取版本 → 校验偏移处引文 → 使用同页引文及前后文查找唯一匹配 → 无唯一匹配则 `resolution=page_only` 或 `unresolved`。PDF 可降级到准确页码和出处卡片，但界面必须显示“仅定位到页”；TXT 无匹配则未定位。高亮选文是核心功能，必须在支持的文件上完成可重复定位与显示；无法恢复时保留原选文并明确提示修复。仅页定位是错误降级，不算高亮验收通过。
 
-图谱重生成形成新版本。保存产物仍引用旧的稳定出处，不凭同名概念自动迁移；首版建议冻结一个图版本，重分析需另存。自动布局不因活动变化重排，保证空间记忆。
+图谱重生成形成新版本。保存产物仍引用旧的稳定出处，不凭同名概念自动迁移；首版建议冻结一个图版本，重分析需另存。接受一个图版本后，主题顺序、轴方向和主要坐标不因活动变化或小幅增量分析重排，保证空间记忆。若重分析确需改变主题疆域，应形成新版本并显示变化，而不是静默旋转、翻转或换序。
 
 ## 边界与保存
 
 浏览器负责文件、选文、高亮、渲染、图谱状态和本地保存；Next.js Route Handlers 负责整书分析、结构化路由、调度入口与四路 provider 适配/校验，密钥仅在服务端配置。启动分析会发送提取文本，段落辅助发送选文及明确界定的补充背景，页面应说明这些行为。外部检索仅在范围确认后接入，图片服务的数据处理条款也需接入时核对。本轮文档工作不需要凭据。
 
 本地 IndexedDB 保存文件 Blob、锚点、图谱、产物和事件；刷新恢复，不承诺跨设备同步或永久存储。写入失败需显示未保存；演示前做导出备份，内容包括图、锚点、产物与书签，原书可凭指纹重新选择。用户删除一本书时连同本地关联记录删除；外部模型服务的数据处理条款需接入时另核对，不能声称端到端只在本机。
+
+当前 GraphSchema 将 identity 与 occurrence 分表，锚点存于 graph.anchors，版本由 graphVersion 统一约束。当前 TXT 路径验证 Z=首个精确锚点偏移/sourceLength，Y=structuralLevel。来源、图与旧视口的迁移边界见 [实现记录](09-3d-implementation.md)。

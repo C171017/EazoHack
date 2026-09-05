@@ -36,6 +36,14 @@
 
 ## 整书地图与活动层
 
-整书经 LLM 形成连接结构的愿景不变。节点语义、边类型和 2D/3D 待决；建议知识类书以概念为节点、章节为分组，少量带依据关系。布局表示组织和导航，不暗示掌握程度；不为连通强加关系。
+整书地图已确定采用一个共享的三维空间，而不是独立复制事实的多张图。三个轴的产品语义固定为：X 是随书动态生成的主题疆域，Y 从具体细节走向组织性结构，Z 从书的开头走向结尾。系统可进入三个规范二维投影：X×Y 概念地图、X×Z 主题发展、Y×Z 结构发展。相反观察方向只是同一投影的反向，不另算新视图；自由三维视角用于空间总览和视图切换，不引入第四套语义。
+
+“动态”受固定规则约束。X 始终回答“这是什么主题”，但每本书可生成约 3–7 个有出处、跨段落出现且彼此可区分的主题疆域；相近主题相邻，接受一个图谱版本后不因小幅重算随意翻转或换序。Y 始终回答“这是具体材料还是组织更多材料的结构”，可按书型把同一层级显示为场景→模式→主题、观察→机制→理论或例子→主张→框架。Z 只由可验证的章节、页码、段落和规范化来源位置计算，不把故事内部年代或历史年代混入阅读顺序。
+
+整书地图必须区分“概念身份”和“出处中的概念出现”。例如“正义”可有一个共享身份，但在第 1、4、10 章分别有带 SourceAnchor 的出现节点；Z 坐标属于出现节点，身份把这些出现连接起来。位置用于组织和导航，不自行证明支持、反驳、定义、因果或发展关系；这些关系必须由有方向、有类型且带证据的边说明。完整规则见 [3D 整书地图契约](08-book-map-3d.md)。
 
 缩小时展示探索过的区域、空间书签与活动强度。建议书签保存地图视口与原文位置，活动记录高亮求助、探索辅助、保存等主动事件。指标仍待 D07 决定：可试按段落统计事件并映射到概念，需避免一段关联多节点后重复夸大热度。色阶仅表示活动，不能将停留时间、点击或生成次数等同于理解。
+
+## 2026-09-05 3D implementation update
+
+The authorized canvas migration is now implemented with React/SVG projections of shared XYZ data, replacing the old React Flow fixture. See [renderer decision and delivered boundaries](09-3d-implementation.md). Historical renderer-pending statements above predate this implementation. Whole-book analysis, live providers and final relation taxonomy remain open.

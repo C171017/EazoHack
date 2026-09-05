@@ -9,8 +9,8 @@ Updated 2026-09-05. The current user authorized scaffolding, subagents, local de
 - Zod contracts for the book, PDF/TXT anchor locators, selections, route plans/runs, all four artifact kinds, references, graphs, chunk coverage, analysis runs, bookmarks and raw activity events. Raw activity fields do not define metrics or heatmaps.
 - Explicit mock route controls and provider interfaces, application dispatch, DAG validation, isolated errors, frozen request snapshots, cancellation and retry foundations. Real routing/provider mode reports `not_configured`; no fallback impersonates real output.
 - A registered React configuration renderer and controlled SVG fixture diagram. Image output is labeled as a placeholder; source output states no search occurred. **Real integrations: 0/4. Mock contracts: 4/4.**
-- React Flow fixture topology with independent zoom. It illustrates application route relationships, not extracted claims about Plato.
-- IndexedDB checkpoint repository with schema/binding validation and transaction commit handling. UI saves one replaceable checkpoint containing one selection, anchors, all current mock artifacts, slider state, map viewport and anchor bookmarks. It restores after refresh and reports failures. No cloud persistence, permanent-storage promise, or multi-checkpoint library.
+- React/SVG rendering of a shared 3D coordinate model: orbit/pan/zoom, three canonical projections, keyboard navigation, collision-separated labels, source inspector and node list. Nine editorial occurrences in three themes, with five identities and exact source anchors. React Flow has been removed.
+- IndexedDB checkpoint repository with schema/binding validation and transaction commit handling. UI saves one replaceable checkpoint containing one selection, anchors, all current mock artifacts, slider state, 3D map camera/projection/selected occurrence/source range/reader anchor and bookmarks. It restores after refresh and reports failures. No cloud persistence, permanent-storage promise, or multi-checkpoint library.
 
 ## Validation actually performed
 
@@ -34,7 +34,7 @@ Cancellation and retry are verified at dispatcher level; their production UI pol
 
 ## Environment and dependencies
 
-Node used: 22.22.3. Direct versions locked in package-lock.json: Next.js 16.3.4, React/React DOM 19.2.8, Zod 4.5.4, React Flow 12.11.6, PDF.js 6.3.289, Tailwind 4.3.3, TypeScript 6.0.3. PDF.js's Node engine requires >=22.13.0. PDF.js is installed for the approved boundary but its viewer is deferred. Tests use Node's test runner with tsx and fake-indexeddb. The install audit reported zero known vulnerabilities at installation time.
+Node used: 22.22.3. Direct versions locked in package-lock.json: Next.js 16.3.4, React/React DOM 19.2.8, Zod 4.5.4, PDF.js 6.3.289, Tailwind 4.3.3, TypeScript 6.0.3. PDF.js's Node engine requires >=22.13.0. PDF.js is installed for the approved boundary but its viewer is deferred. Tests use Node's test runner with tsx and fake-indexeddb. The install audit reported zero known vulnerabilities at installation time.
 
 The setup follows the [official Next.js installation documentation](https://nextjs.org/docs/app/getting-started/installation) and [Tailwind Next.js PostCSS guide](https://tailwindcss.com/docs/installation/framework-guides/nextjs). No hosted fonts or external runtime service dependencies are needed.
 
@@ -42,14 +42,24 @@ Turbopack's CSS worker hit a local sandbox port-binding restriction, including a
 
 ## Intentionally unresolved
 
-Actual route selection logic, trigger/override/combination policy, live providers/models, source-discovery scope, per-route demo depth, full-book navigation/extraction/analysis, semantic book graph, activity aggregation/heatmap, hosting. The handoff's PDF fixture/viewer work and complete PDF reader remain deferred; the initial programmatic source fixture and real TXT excerpt support this scaffold's contract checks.
+Actual route selection logic, trigger/override/combination policy, live providers/models, source-discovery scope, per-route demo depth, full-book navigation/extraction/analysis, relation taxonomy, large-graph renderer capacity, activity aggregation/heatmap, hosting. The 3D axes and projections are decided in [the 3D book-map contract](08-book-map-3d.md); they are now implemented on a bounded source-backed editorial sample. The handoff's PDF fixture/viewer work and complete PDF reader remain deferred; the initial programmatic source fixture and real TXT excerpt support this scaffold's contract checks.
 
 ## Next implementation boundaries
 
 1. Confirm routing interaction/policy and desired demonstration depth before replacing the mock controls.
-2. Define full Republic processing coverage and graph semantics; preserve immutable source and version derived data.
+2. Extend the implemented React/SVG 3D renderer only after measuring representative larger graphs; preserve immutable source and version derived data. The current spatial guard is 80 occurrences, with a full node-list fallback above that limit.
 3. Integrate/verify the reader format and cross-page behavior independently from assistance.
 4. Select and preflight real providers/source scope, then extend mock-only artifact payloads with validated durable resources.
 5. Expand checkpoint persistence to a saved-artifact library and source-file Blob storage when that product flow is chosen.
 
 No commit or push was performed by this scaffolding task. Other concurrent task commits were observed and preserved; remaining edits are available in the working tree.
+
+## 3D migration verification · 2026-09-05
+
+- Renderer comparison and implementation choices: [09-3d-implementation.md](09-3d-implementation.md).
+- `npm test`: 35 passing tests, including eight new graph/projection/legacy-checkpoint checks. Source integrity test still verifies the original SHA-256.
+- TypeScript and ESLint: passed. Production Webpack build passed in an isolated temporary checkout using the same locked dependencies, avoiding the running server's `.next` directory.
+- Live Chrome checks: 3D and all three projection controls; selection retained across projection changes; exact source highlight; arrow-key relation traversal; view-only checkpoint save/reload; mobile node-list browsing and saving at 390×844; desktop projection readability at 1440×900 and the user's default display.
+- Visual checks found and corrected broad SVG node hit targets and the mobile passage-control overlap. All labels have distinct button hit targets; connector lines do not intercept clicks.
+- Reduced-motion behavior is implemented via `prefers-reduced-motion`; no OS preference change or physical low-performance device test was performed. No production-scale benchmark is claimed.
+- Existing multiline original-text selection still opens the passage panel; both Interactive UI and Concept diagram mock routes completed and saved together in live Chrome. The raw source and PoliMap repository were not edited. No commit or push performed.

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { AnalysisRunSchema, ArtifactSchema, ConceptDiagramSchema, GraphSchema, InteractiveUiConfigSchema, ReferenceSchema, ROUTE_KINDS, RoutePlanSchema, SelectionSchema, SourceAnchorSchema } from "../src/shared/schemas";
+import { AnalysisRunSchema, ArtifactSchema, ConceptDiagramSchema, InteractiveUiConfigSchema, ReferenceSchema, ROUTE_KINDS, RoutePlanSchema, SelectionSchema, SourceAnchorSchema } from "../src/shared/schemas";
 import { FIXTURE_DATE, fixtureAnchors, fixtureSelection, makeMockArtifact } from "../src/shared/fixtures";
 
 const plan = { id: "plan-test", selectionId: fixtureSelection.id, routes: [...ROUTE_KINDS], reasonByRoute: Object.fromEntries(ROUTE_KINDS.map((route) => [route, "Explicit mock test"])), dependsOn: {}, trigger: { mode: "mock_manual", requestedRoutes: [...ROUTE_KINDS], requestedAt: FIXTURE_DATE }, routerVersion: "mock-v1" };
@@ -44,15 +44,13 @@ test("interactive configs reject executable fields and invalid parameters", () =
   assert.equal(InteractiveUiConfigSchema.safeParse({ ...artifact.payload, components: [{ component: "ParameterSlider", props: { label: "x", min: 0, max: 1, value: 2, step: 1, unit: "" } }] }).success, false);
 });
 
-test("diagram and graph integrity reject dangling endpoints, duplicate IDs and ungrounded facts", () => {
+test("diagram integrity rejects dangling endpoints, duplicate IDs and ungrounded facts", () => {
   const artifact = makeMockArtifact("concept_diagram", fixtureSelection, "run-diagram");
   if (artifact.kind !== "concept_diagram") throw new Error("Wrong fixture kind");
   assert.equal(ConceptDiagramSchema.safeParse({ ...artifact.payload, edges: [{ ...artifact.payload.edges[0], target: "missing" }] }).success, false);
   assert.equal(ConceptDiagramSchema.safeParse({ ...artifact.payload, nodes: [artifact.payload.nodes[0], artifact.payload.nodes[0]] }).success, false);
   assert.equal(ArtifactSchema.safeParse({ ...artifact, payload: { ...artifact.payload, nodes: [{ ...artifact.payload.nodes[0], anchorIds: ["unrelated-selection-anchor"] }, ...artifact.payload.nodes.slice(1)] } }).success, false);
-  const graph = { id: "g", bookId: fixtureSelection.bookId, version: "1", anchorIds: fixtureSelection.anchorIds, nodes: [{ id: "n", label: "Node", summary: "Test", anchorIds: fixtureSelection.anchorIds, position: { x: 0, y: 0 } }], edges: [{ id: "e", source: "n", target: "n", type: "test", evidenceAnchorIds: [], rationale: "Test", provenance: "book_supported" }] };
-  assert.equal(GraphSchema.safeParse(graph).success, false);
-  assert.equal(GraphSchema.safeParse({ ...graph, edges: [] }).success, true);
+
 });
 
 test("references require the correct locator and reject executable URLs", () => {

@@ -19,7 +19,7 @@ src/
     api/assist/[kind]/route.ts       # 四路调度入口；只调用 dispatcher
   features/
     reader/                          # PDF.js、文字层、Selection/SourceAnchor
-    book-graph/                      # React Flow 整书 2D 网络
+    book-graph/                      # 当前 React Flow fixture；生产目标已由 D04/D12 改为 3D + 三个二维投影
     assistance/                      # 路由 UI、RouteRun 状态、产物面板
     artifacts/
       interactive-ui/               # 注册表组件与 config renderer
@@ -47,7 +47,7 @@ tests/
 
 ## 初始依赖
 
-锁定的直接依赖类别：Next.js、React、React DOM、TypeScript、Tailwind CSS、`pdfjs-dist`、Zod、`@xyflow/react`。测试、lint、格式化和 IndexedDB helper 的具体包/version 由脚手架者在当时官方兼容矩阵下选择并记录，未经决定不提前写死。不要安装 agent framework、3D、向量数据库、云数据库、认证或任意代码执行依赖。
+历史脚手架锁定的直接依赖类别：Next.js、React、React DOM、TypeScript、Tailwind CSS、`pdfjs-dist`、Zod、`@xyflow/react`。后续 D04/D12 已把生产整书地图改为 3D + 三个二维投影；`@xyflow/react` 仅描述现有 fixture，不再锁定生产地图实现。测试、lint、格式化、IndexedDB helper 与 3D renderer 的具体包/version 必须按当时兼容矩阵评估并记录，不因产品决定提前写死。不要安装 agent framework、向量数据库、云数据库、认证或任意代码执行依赖。
 
 ## 共享 schema 与接口
 
@@ -82,3 +82,7 @@ tests/
 ## 明确留待决定
 
 来源查找是仅书内还是含外部；模型/图片/搜索供应商与具体版本；路由触发时机、用户覆盖方式、组合上限与执行顺序；demo 书与规模；四路各自十小时深度与“活动”语义；部署/托管。任何一项未定时使用可见的 mock/未配置状态，不替用户做产品决定。
+
+## 2026-09-05 3D implementation update
+
+The authorized canvas migration is now implemented with React/SVG projections of shared XYZ data, replacing the old React Flow fixture. See [renderer decision and delivered boundaries](09-3d-implementation.md). Historical renderer-pending statements above predate this implementation. Whole-book analysis, live providers and final relation taxonomy remain open.

@@ -21,7 +21,6 @@
   },
   "homepage": "https://github.com/C171017/EazoHack#readme",
   "dependencies": {
-    "@xyflow/react": "^12.11.6",
     "next": "^16.3.4",
     "pdfjs-dist": "^6.3.289",
     "react": "^19.2.8",
