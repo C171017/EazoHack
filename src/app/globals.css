@@ -48,12 +48,15 @@
   top: 0;
   z-index: 10;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
-  padding: 1rem clamp(1.5rem, 3.5vw, 3.5rem);
-  background-color: var(--color-paper);
-  background-image: var(--reader-surface);
-  background-size: 100% 100%, 500px 300px;
+  height: 0;
+  padding-inline: clamp(1.5rem, 3.5vw, 3.5rem);
+  pointer-events: none;
+}
+
+.txt-reader-masthead > * {
+  margin-top: 1rem;
+  pointer-events: auto;
 }
 
 .txt-reader-scroll[data-english-font='allura'] .txt-reader-body { font-size: 1.65rem; line-height: 1.65; }

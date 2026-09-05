@@ -3,6 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
 import { initialView, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, placeLabels, PROJECTIONS, project, type Point3 } from './projection';
+import { MapGrid } from './map-grid';
 import { baseScale, semanticWindow, toScreen, zoomAt, zoomCentered, zoomLevel } from './semantic-window';
 import { readMap, useMapPages, useMapRequest } from './map-data';
 import { useNodeTransition } from './node-transition';
@@ -137,7 +138,6 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   const labelPoints=[...points].filter(p=>!p.exiting).sort((a,b)=>Number(b.id===current.selectedNodeId)-Number(a.id===current.selectedNodeId)||Number(b.node.kind==='cluster')-Number(a.node.kind==='cluster')).slice(0,labelCap);
   const labels=new Map(placeLabels(labelPoints,size.width,size.height).map(p=>[p.id,p]));
   const screen=(p:Point3)=>{const q=project(p,current),scale=baseScale(size)*current.zoom;return {x:size.width/2+q.x*scale+current.x,y:size.height/2+q.y*scale+current.y};};
-  const grid=useMemo(()=>Array.from({length:11},(_,i)=>[{a:{x:-250+i*50,y:-170,z:-200},b:{x:-250+i*50,y:170,z:-200}},{a:{x:-250,y:-170+i*34,z:-200},b:{x:250,y:-170+i*34,z:-200}}]).flat(),[]);
   const source=(anchor:SourceAnchor)=>{change({readerAnchorId:anchor.id});onSource(anchor);};
   return <div className="book-map" onKeyDown={e=>{
     if((e.target as HTMLElement).closest('input,select,textarea'))return;
@@ -174,11 +174,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
         onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
         <desc>Pinch to expand or group ideas. Scroll with two fingers to pan. Drag to orbit; Shift-drag pans. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. Vertical position means progression through the source; depth means structure, not importance.</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8ca996"/></marker></defs>
-        <g className="map-grid" aria-hidden="true">{grid.map((l,i)=>{const a=screen(l.a),b=screen(l.b);return <line key={i} x1={a.x} y1={a.y} x2={b.x} y2={b.y}/>;})}</g>
-        <g aria-hidden="true">{[{label:'X · Themes',end:{x:280,y:-170,z:-200}},{label:'Y · Structure',end:{x:-250,y:195,z:-200}},{label:'Z · Source',end:{x:-250,y:-170,z:230}}].map((a,i)=>{
-          if(current.projection==='xy'&&i===2||current.projection==='xz'&&i===1||current.projection==='yz'&&i===0)return null;
-          const start=screen({x:-250,y:-170,z:-200}),end=screen(a.end);return <g key={a.label}><line x1={start.x} y1={start.y} x2={end.x} y2={end.y} stroke={COLORS[i]} opacity=".4"/><text x={end.x+8} y={end.y-8} fill={COLORS[i]} className="map-axis-title">{a.label}</text></g>;
-        })}</g>
+        <MapGrid screen={screen}/>
         <g aria-hidden="true">{edges.data?.links.map(edge=>{const a=points.find(p=>p.id===edge.source&&!p.exiting),b=points.find(p=>p.id===edge.target&&!p.exiting);return a&&b?<line key={edge.id} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line>:null;})}</g>
         {points.map(p=>{const color=COLORS[Math.max(0,graph.territories.findIndex(t=>t.id===p.node.themeIds[0]))%COLORS.length],label=labels.get(p.id),cluster=p.node.kind==='cluster';let depth=0,parent=p.node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}const radius=p.radius*Math.max(.75,Math.min(1.1,Math.sqrt(current.zoom/ZOOM_POLICY.step**depth)));return <g key={p.id} opacity={p.opacity} pointerEvents={p.exiting?'none':undefined} aria-hidden={p.exiting||undefined}>
           {label&&<line x1={p.x} y1={p.y} x2={label.labelX} y2={label.labelY+13} stroke={color} opacity=".25"/>}
