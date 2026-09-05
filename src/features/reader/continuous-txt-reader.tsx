@@ -1,6 +1,7 @@
 'use client';
 
 import { Fragment, forwardRef, memo, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
+import { readingLine, readingOffset } from './reading-position';
 import { splitSourceRange } from './artifact-placement';
 import { resolveTxtAnchor } from './source-anchor';
 import { snapSelectionToWords } from './word-selection';
@@ -20,6 +21,7 @@ export type TxtSelectionRange = {
 
 export type ContinuousTxtReaderHandle = {
   getReadingPosition(): number;
+  scrollBy(delta: number): void;
   scrollToOffset(offset: number, behavior?: ScrollBehavior): void;
 };
 
@@ -132,9 +134,10 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   activeAnchor: SourceAnchor | null;
   onSelection: (selection: TxtSelectionRange) => void;
   slots?: ReaderSlot[];
+  onReadingPosition?: (offset: number) => void;
   onEnhance: (route: RouteKind) => void;
   enhancementBusy: boolean;
-}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS }, ref) {
+}>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onUpload, onReset, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, onReadingPosition }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText), [sourceText]);
   const scroller = useRef<HTMLDivElement>(null);
   const documentRoot = useRef<HTMLDivElement>(null);
@@ -149,7 +152,6 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     nativeSelection.current=null;
     restoreSourceSelection(root, saved);
   });
-  const currentChunkRef = useRef(0);
   const alignmentFrame = useRef<number | null>(null);
   const [fonts, setFonts] = useState<ReadingFonts>(defaultReadingFonts);
   const fontPosition = useRef<{ element: HTMLElement; top: number } | null>(null);
@@ -191,30 +193,25 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   const highlight = resolveTxtAnchor(activeAnchor, { sourceText, fileHash, extractionVersion });
 
   useEffect(() => {
-    const root = scroller.current;
-    const content = documentRoot.current;
-    if (!root || !content || !chunks.length || typeof IntersectionObserver === 'undefined') return;
-    const visible = new Map<Element, IntersectionObserverEntry>();
-    const observer = new IntersectionObserver(entries => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) visible.set(entry.target, entry);
-        else visible.delete(entry.target);
-      }
-      if (!visible.size) return;
-      const rootTop = root.getBoundingClientRect().top + 72;
-      const ordered = [...visible.values()].sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
-      const entry = ordered.filter(candidate => candidate.boundingClientRect.top <= rootTop).at(-1) ?? ordered[0];
-      const next = Number((entry.target as HTMLElement).dataset.txtChunkIndex);
-      if (Number.isInteger(next) && next !== currentChunkRef.current) {
-        currentChunkRef.current = next;
-      }
-    }, { root, rootMargin: '-56px 0px -60% 0px' });
-    content.querySelectorAll('[data-txt-chunk]').forEach((element, index) => {
-      (element as HTMLElement).dataset.txtChunkIndex = String(index);
-      observer.observe(element);
-    });
-    return () => observer.disconnect();
-  }, [chunks]);
+    const root = scroller.current, content = documentRoot.current;
+    if (!root || !content || !onReadingPosition) return;
+    let frame: number | null = null;
+    const report = () => {
+      if (frame !== null) return;
+      frame = requestAnimationFrame(() => {
+        frame = null;
+        onReadingPosition(readingOffset(root, content, sourceText.length));
+      });
+    };
+    root.addEventListener('scroll', report, {passive: true});
+    const observer = new ResizeObserver(report);
+    observer.observe(root); observer.observe(content);
+    report();
+    return () => {
+      root.removeEventListener('scroll', report); observer.disconnect();
+      if (frame !== null) cancelAnimationFrame(frame);
+    };
+  }, [sourceText.length, onReadingPosition]);
 
   useEffect(() => () => {
     if (alignmentFrame.current !== null) cancelAnimationFrame(alignmentFrame.current);
@@ -222,17 +219,13 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
 
   useImperativeHandle(ref, () => ({
     getReadingPosition() {
-      const root = scroller.current;
-      const chunk = chunks[currentChunkRef.current] ?? chunks[0];
-      if (!root || !chunk) return 0;
-      const line = root.getBoundingClientRect().top + 88;
-      const chunkElement = document.getElementById(chunk.id);
-      let position = chunk.startOffset;
-      for (const element of chunkElement?.querySelectorAll<HTMLElement>('[data-txt-block]') ?? []) {
-        if (element.getBoundingClientRect().top > line) break;
-        position = Number(element.dataset.txtStart);
-      }
-      return position;
+      const root = scroller.current, content = documentRoot.current;
+      return root && content ? Math.floor(readingOffset(root, content, sourceText.length)) : 0;
+    },
+    scrollBy(delta) {
+      if (alignmentFrame.current !== null) cancelAnimationFrame(alignmentFrame.current);
+      alignmentFrame.current = null;
+      scroller.current?.scrollBy({top: delta, behavior: 'instant'});
     },
     scrollToOffset(offset, behavior = 'auto') {
       const root = scroller.current;
@@ -244,7 +237,6 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       let attempt = 0;
       let stableFrames = 0;
       const align = () => {
-        const rootRect = root.getBoundingClientRect();
         // A passage can begin well inside a long paragraph, including after a
         // mark split. Align its text position rather than the paragraph's top.
         let targetRect = element.getBoundingClientRect();
@@ -262,7 +254,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
           }
           remaining -= length;
         }
-        const targetTop = rootRect.top + Math.min(150, rootRect.height * 0.24);
+        const targetTop = readingLine(root);
         const delta = targetRect.top - targetTop;
         if (Math.abs(delta) > 2) {
           stableFrames = 0;
@@ -277,7 +269,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       };
       align();
     },
-  }), [chunks]);
+  }), [chunks, sourceText.length]);
 
   function selectedSource() {
     const selection = window.getSelection();

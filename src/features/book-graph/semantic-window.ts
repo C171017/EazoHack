@@ -1,11 +1,11 @@
 import type { MapView } from '../../shared/schemas';
 import { ZOOM_POLICY, type MapEntry, type Bounds } from '../../shared/zoom-hierarchy';
-import { project, type Point3 } from './projection';
+import { project, sourceWorld, type Point3 } from './projection';
 export type Size={width:number;height:number};
 export function baseScale(size:Size) { return Math.max(.08,Math.min((size.width-180)/660,(size.height-100)/500)); }
-export function toWorld(p:Point3,range:[number,number]):Point3 {return {x:(p.x-.5)*500,y:(p.y/4-.5)*340,z:((p.z-range[0])/(range[1]-range[0])-.5)*400};}
-export function toScreen(p:Point3,view:MapView,size:Size,range:[number,number]) {
-  const q=project(toWorld(p,range),view),scale=baseScale(size)*view.zoom;
+export const toWorld = sourceWorld;
+export function toScreen(p:Point3,view:MapView,size:Size,range:[number,number],readingProgress=.5) {
+  const q=project(toWorld(p,range,readingProgress),view),scale=baseScale(size)*view.zoom;
   return {x:size.width/2+q.x*scale+view.x,y:size.height/2+q.y*scale+view.y};
 }
 export function zoomAt(view:MapView,zoom:number,focus:{x:number;y:number},size:Size):MapView {
@@ -29,8 +29,8 @@ export function zoomLevel(zoom:number,previous:number,maxDepth:number) {
   while(level>0&&zoom<ZOOM_POLICY.step**level*ZOOM_POLICY.hysteresis)level--;
   return Math.min(level,maxDepth);
 }
-function intersects(bounds:Bounds,view:MapView,size:Size,range:[number,number],pad=0) {
-  const corners=[bounds.min.x,bounds.max.x].flatMap(x=>[bounds.min.y,bounds.max.y].flatMap(y=>[bounds.min.z,bounds.max.z].map(z=>toScreen({x,y,z},view,size,range))));
+function intersects(bounds:Bounds,view:MapView,size:Size,range:[number,number],pad=0,readingProgress=.5) {
+  const corners=[bounds.min.x,bounds.max.x].flatMap(x=>[bounds.min.y,bounds.max.y].flatMap(y=>[bounds.min.z,bounds.max.z].map(z=>toScreen({x,y,z},view,size,range,readingProgress))));
   return Math.max(...corners.map(p=>p.x))>=-pad&&Math.min(...corners.map(p=>p.x))<=size.width+pad&&Math.max(...corners.map(p=>p.y))>=-pad&&Math.min(...corners.map(p=>p.y))<=size.height+pad;
 }
 export function matchesEntry(n:MapEntry,view:MapView,range:[number,number]) {
@@ -38,10 +38,10 @@ export function matchesEntry(n:MapEntry,view:MapView,range:[number,number]) {
 }
 // Traverse cached intersecting branches only. The frontier is a non-overlapping cut:
 // budgets retain a parent instead of dropping siblings. Missing pages retain parents.
-export function semanticWindow(roots:MapEntry[],pages:ReadonlyMap<string,MapEntry[]>,view:MapView,size:Size,range:[number,number],level:number) {
+export function semanticWindow(roots:MapEntry[],pages:ReadonlyMap<string,MapEntry[]>,view:MapView,size:Size,range:[number,number],level:number,readingProgress=.5) {
   const cap=Math.min(ZOOM_POLICY.nodes,level===0?8:level===1?20:36);
   const wanted:string[]=[], used:string[]=[];
-  const visible=(n:MapEntry)=>matchesEntry(n,view,range)&&n.bounds!==null&&intersects(n.bounds,view,size,range,0);
+  const visible=(n:MapEntry)=>matchesEntry(n,view,range)&&n.bounds!==null&&intersects(n.bounds,view,size,range,0,readingProgress);
   const selectedPath=new Set<string>();
   if(view.selectedNodeId){
     const parents=new Map([...pages.values()].flat().map(n=>[n.id,n.parentId]));
@@ -59,8 +59,8 @@ export function semanticWindow(roots:MapEntry[],pages:ReadonlyMap<string,MapEntr
     if(frontier.length-1+next.length>cap)continue;
     frontier.splice(i,1,...next.map(node=>({node,depth:depth+1})));i--;
   }
-  // A cluster bounds may intersect while its centre lies outside. Show a viewport
-  // representative at the clipped centre, but never clamp an offscreen leaf.
+  // A cluster bounds may intersect while its representative is outside. Keep
+  // traversing its visible children; the renderer never changes source height.
   return {nodes:frontier.map(n=>n.node),wanted,used,cap};
 }
 export class PageCache {

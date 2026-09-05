@@ -8,7 +8,7 @@ export const PROJECTIONS = [
   {id:'yz',label:'Y × Z',hint:'Generality through the source'},
 ] as const;
 export const DEFAULT_CAMERA = {yaw:-0.58,pitch:0.36};
-// The default view looks into the positive XYZ octant bounded by the grids.
+// The default view looks into the XY corner; source extends above and below it.
 // Orthographic pan/zoom only change framing; these angles fix the viewing side.
 export function confineCamera(camera:Pick<MapView,'yaw'|'pitch'>) {
   return {yaw:Math.max(-Math.PI/2,Math.min(0,camera.yaw)),pitch:Math.max(0,Math.min(Math.PI/2,camera.pitch))};
@@ -26,10 +26,19 @@ export function project(point: Point3, camera: Pick<MapView,'yaw'|'pitch'>) {
   const depth = -point.x*Math.sin(camera.yaw)+point.y*Math.cos(camera.yaw);
   return {x,y:-point.z*Math.cos(camera.pitch)+depth*Math.sin(camera.pitch),depth:point.z*Math.sin(camera.pitch)+depth*Math.cos(camera.pitch)};
 }
-export function worldPoint(node: Graph['nodes'][number], range: [number,number]): Point3|null {
+export const SOURCE_Z_SPAN = 800;
+// Earlier source sits above the fixed reading plane; later source below it.
+export function sourceHeight(progress:number,readingProgress:number) {
+  return (readingProgress-progress)*SOURCE_Z_SPAN;
+}
+export function sourceWorld(p:Point3,range:[number,number],readingProgress=.5):Point3 {
+  const span=Math.max(Number.EPSILON,range[1]-range[0]);
+  return {x:(p.x-.5)*500,y:(p.y/4-.5)*340,z:sourceHeight((p.z-range[0])/span,readingProgress)};
+}
+export function worldPoint(node: Graph['nodes'][number], range: [number,number],readingProgress=.5): Point3|null {
   const {x,y,z} = node.position;
   if(x === null || y === null || z === null) return null;
-  return {x:(x-.5)*500,y:(y/4-.5)*340,z:((z-range[0])/(range[1]-range[0])-.5)*400};
+  return sourceWorld({x,y,z},range,readingProgress);
 }
 // Leader lines offset labels only; points always retain their semantic positions.
 export function placeLabels<T extends {id:string;x:number;y:number;label:string}>(points: T[], width:number,height:number) {

@@ -5,7 +5,7 @@ import path from 'node:path';
 import os from 'node:os';
 import { GraphSchema, MapViewSchema, type Graph } from '../src/shared/schemas';
 import { leafEntry, clusterEntry, validateHierarchy, ZOOM_POLICY, type MapEntry, type Hierarchy } from '../src/shared/zoom-hierarchy';
-import { initialView, orbitFrom } from '../src/features/book-graph/projection';
+import { initialView, orbitFrom, orientation, sourceHeight, SOURCE_Z_SPAN } from '../src/features/book-graph/projection';
 import { baseScale, semanticWindow, zoomAt, zoomCentered, zoomLevel, toScreen, PageCache } from '../src/features/book-graph/semantic-window';
 import { transitionPlan } from '../src/features/book-graph/node-transition';
 import { buildHierarchy, spatialBatches, validateGroups } from '../src/server/book-analysis/hierarchy-run';
@@ -13,6 +13,29 @@ import { createMapStore, mapBootstrap, visibleLinks, nodeDetail } from '../src/s
 
 import { createSampleGraph } from '../src/features/book-graph/sample-graph';
 import { getBookPreview } from '../src/features/reader/book-preview';
+
+test('reading plane tracks source progress with earlier notes above and forward reading moving nodes upward',()=>{
+  const size={width:900,height:600};
+  for(const projection of ['3d','xz','yz'] as const) {
+    const view={...initialView('test'),projection,...orientation(projection)};
+    for(const progress of [0,.25,.5,.9,1]) {
+      const here=toScreen({x:.5,y:2,z:progress},view,size,[0,1],progress);
+      assert.deepEqual(here,{x:450,y:300});
+      const earlier=toScreen({x:.5,y:2,z:progress-.1},view,size,[0,1],progress);
+      const later=toScreen({x:.5,y:2,z:progress+.1},view,size,[0,1],progress);
+      assert.ok(earlier.y<here.y&&later.y>here.y);
+      const next=toScreen({x:.5,y:2,z:progress+.1},view,size,[0,1],progress+.05);
+      assert.equal(next.x,later.x);
+      assert.ok(next.y<later.y);
+    }
+  }
+  assert.equal(sourceHeight(0,.3)-sourceHeight(1,.3),SOURCE_Z_SPAN);
+  assert.equal(sourceHeight(0,.8)-sourceHeight(1,.8),SOURCE_Z_SPAN);
+  const top={...initialView('test'),...orientation('xy')};
+  const before=toScreen({x:.3,y:1,z:.7},top,size,[0,1],.2);
+  const after=toScreen({x:.3,y:1,z:.7},top,size,[0,1],.8);
+  assert.ok(Math.hypot(after.x-before.x,after.y-before.y)<1e-8);
+});
 let graph:Graph;
 before(async()=>{
   const sample=createSampleGraph(await getBookPreview()),copies=Array.from({length:32},(_,i)=>i);

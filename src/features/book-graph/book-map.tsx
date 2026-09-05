@@ -12,8 +12,8 @@ import { readMap, useMapPages, useMapRequest } from './map-data';
 import { useNodeTransition } from './node-transition';
 import { edgeVisibility, useEdgeTransition } from './edge-transition';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
-export function BookMap({graph,view,onViewChange,onSource}:{
-  graph:MapBootstrap;view:MapView|null;
+export function BookMap({graph,view,onViewChange,onSource,readingProgress,onScrollSource}:{
+  graph:MapBootstrap;view:MapView|null;readingProgress:number;onScrollSource:(delta:number)=>void;
   onViewChange:(view:MapView)=>void;onSource:(anchor:SourceAnchor)=>void;
 }) {
   // Old checkpoints may contain filters whose controls have been removed.
@@ -28,7 +28,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   const [navigating,setNavigating]=useState(false);
   const level=zoomLevel(current.zoom,previousLevel,graph.depth);
   const range:[number,number]=[0,1];
-  const data=useMapPages(graph.version,pages=>semanticWindow(graph.roots,pages,current,size,range,level));
+  const data=useMapPages(graph.version,pages=>semanticWindow(graph.roots,pages,current,size,range,level,readingProgress));
   const {windowed,install}=data;
   const index=useMemo(()=>new Map([...graph.roots,...[...data.pages.values()].flat()].map(n=>[n.id,n])),[graph.roots,data.pages]);
   const animated=useNodeTransition(windowed.nodes,index);
@@ -47,9 +47,13 @@ export function BookMap({graph,view,onViewChange,onSource}:{
     const anchor=selected.anchors.find(a=>a.id===selected.node.anchorIds[0]);
     if(!anchor)return;
     consumedSource.current=sourceActivation.ticket;
-    onViewChange({...current,readerAnchorId:anchor.id});
+    // A source jump changes the note's height to the reading plane. Frame that
+    // destination, rather than retaining the old (possibly offscreen) height.
+    const position=selectedEntry?.position;
+    const target=position?toScreen(position,current,size,[0,1],position.z):null;
+    onViewChange({...current,readerAnchorId:anchor.id,...(target?{x:current.x+size.width/2-target.x,y:current.y+size.height/2-target.y}:{})});
     onSource(anchor);
-  },[sourceActivation,selected,current,onViewChange,onSource]);
+  },[sourceActivation,selected,selectedEntry,current,size,onViewChange,onSource]);
   const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,{kind:'edges',id:windowed.nodes.map(n=>n.id).sort(),start:'0',end:'1'},140);
   const animatedEdges=useEdgeTransition(edges.data?.links);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
@@ -64,15 +68,17 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   },[]);
   useEffect(()=>()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();},[]);
   // Native non-passive listener is required for trackpad pinch (ctrl+wheel).
-  // Ignore plain scrolling; only pinch changes the view.
+  // Plain scrolling moves the reader; its live source offset moves every node.
   useEffect(()=>{
     const element=svg.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
     const wheel=(event:WheelEvent)=>{
-      event.preventDefault();if(gesture||(!event.ctrlKey&&!event.metaKey))return;if(frame.current!==null)cancelAnimationFrame(frame.current);
+      event.preventDefault();if(gesture)return;
+      const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
+      if(!event.ctrlKey&&!event.metaKey){onScrollSource(event.deltaY*unit);return;}
+      if(frame.current!==null)cancelAnimationFrame(frame.current);
       navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
-      const unit=event.deltaMode===1?16:event.deltaMode===2?size.height:1;
       const next=zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size);
       latest.current={current:next,size};onViewChange(next);
     };
@@ -86,7 +92,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
     element.addEventListener('wheel',wheel,{passive:false});
     element.addEventListener('gesturestart',gestureStart,{passive:false});element.addEventListener('gesturechange',gestureChange,{passive:false});element.addEventListener('gestureend',gestureEnd,{passive:false});
     return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);};
-  },[onViewChange]);
+  },[onViewChange,onScrollSource]);
   const cancelMotion=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
   const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch)setSourceActivation(null);cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:next};onViewChange(next);};
   function activateLeaf(id:string) {
@@ -114,7 +120,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   }
   function zoom(factor:number){const {current:view,size}=latest.current;change(zoomCentered(view,view.zoom*factor,size));}
   function openCluster(node:MapEntry) {
-    const centre=node.position?toScreen(node.position,current,size,range):{x:size.width/2,y:size.height/2};
+    const centre=node.position?toScreen(node.position,current,size,range,readingProgress):{x:size.width/2,y:size.height/2};
     const next=zoomAt(current,Math.max(current.zoom*1.65,ZOOM_POLICY.step**(level+1)*1.04),centre,size);
     change({...next,x:next.x+size.width/2-centre.x,y:next.y+size.height/2-centre.y,selectedNodeId:node.id});
   }
@@ -126,7 +132,7 @@ export function BookMap({graph,view,onViewChange,onSource}:{
       if(controller.signal.aborted)return;
       data.install(result.pages);
       const zoom=Math.max(1,ZOOM_POLICY.step**result.ancestors.length*1.06),next={...latest.current.current,selectedNodeId:id,...(result.node.position?{zoom,x:0,y:0}:{})};
-      if(result.node.position){const p=toScreen(result.node.position,next,size,[0,1]);next.x=size.width/2-p.x;next.y=size.height/2-p.y;}
+      if(result.node.position){const p=toScreen(result.node.position,next,size,[0,1],result.node.kind==='occurrence'?result.node.position.z:readingProgress);next.x=size.width/2-p.x;next.y=size.height/2-p.y;}
       latest.current={...latest.current,current:next};onViewChange(next);
       if(result.node.kind==='occurrence')setSourceActivation({id,ticket:++sourceTicket.current});
     }catch(error){if(!controller.signal.aborted)setNavigationError(error instanceof Error?error.message:'Could not reveal node');}
@@ -134,9 +140,11 @@ export function BookMap({graph,view,onViewChange,onSource}:{
   }
   const points=animated.flatMap(item=>{
     if(!item.position)return [];
-    const p=toScreen(item.position,current,size,range);
-    if(item.node.kind==='occurrence'&&(p.x<0||p.y<0||p.x>size.width||p.y>size.height))return [];
-    return [{...item,id:item.node.id,label:item.node.label,x:Math.max(24,Math.min(size.width-24,p.x)),y:Math.max(48,Math.min(size.height-24,p.y))}];
+    const p=toScreen(item.position,current,size,range,readingProgress);
+    // Clamping a marker to the viewport would pin it in place while reading
+    // and give it a false source height. Let all markers leave the viewport.
+    if(p.x<0||p.y<0||p.x>size.width||p.y>size.height)return [];
+    return [{...item,id:item.node.id,label:item.node.label,x:p.x,y:p.y}];
   });
   const labelCap=Math.max(1,Math.min(ZOOM_POLICY.labels,Math.floor((size.width-16)/218)*Math.floor((size.height-80)/34)));
   const labelPoints=[...points].filter(p=>!p.exiting).sort((a,b)=>Number(b.id===current.selectedNodeId)-Number(a.id===current.selectedNodeId)||Number(b.node.kind==='cluster')-Number(a.node.kind==='cluster')).slice(0,labelCap);
@@ -149,9 +157,9 @@ export function BookMap({graph,view,onViewChange,onSource}:{
     if(e.key==='+'||e.key==='='){e.preventDefault();zoom(1.35);}if(e.key==='-'){e.preventDefault();zoom(1/1.35);}
   }}>
     <div ref={stage} className="map-stage">
-      <details className="map-axis-key"><summary>{graph.axisVersion?'X · Reasoning depth   /   Y · Generality':'Legacy map · Themes / Structure'}</summary><p>{graph.axisVersion?'Farther along X: more prior reasoning within this book. Farther along Y: a broader class of cases. Z follows source order. Colors identify topics. Ratings are interpretive; greater distance does not mean more important or more correct.':'This saved map uses the previous topic and structure coordinates. New meanings appear only after source review and rebuilding.'}</p></details>
+      <details className="map-axis-key"><summary>{graph.axisVersion?'X · Reasoning depth   /   Y · Generality':'Legacy map · Themes / Structure'}</summary><p>{graph.axisVersion?'Farther along X: more prior reasoning within this book. Farther along Y: a broader class of cases. Z spans the whole book: earlier passages above, later passages below. The horizontal plane is your current reading position. Scroll either pane to read onward. Colors identify topics. Ratings are interpretive; greater distance does not mean more important or more correct.':'This saved map uses the previous topic and structure coordinates. New meanings appear only after source review and rebuilding.'}</p></details>
       {graph.unplaced>0&&<UnplacedNotes version={graph.version} count={graph.unplaced} onLocate={id=>void locate(id)}/>}
-      <svg data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
+      <svg data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
         onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
         onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
         onBlur={()=>{keyboardOrbit.current=null;}}
@@ -175,9 +183,9 @@ export function BookMap({graph,view,onViewChange,onSource}:{
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
         onPointerUp={e=>{finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Pinch to expand or group ideas. Drag to orbit within the three grid fences. Panning is disabled. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
+        <desc>Scroll to read onward in both panes. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to expand or group ideas. Drag to orbit within the three grid fences. Panning is disabled. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#8ca996"/></marker></defs>
-        <MapGrid screen={screen} modern={!!graph.axisVersion}/>
+        <MapGrid screen={screen} modern={!!graph.axisVersion} readingProgress={readingProgress}/>
         <g aria-hidden="true" pointerEvents="none">{animatedEdges.map(({link:edge,opacity})=>{const a=points.find(p=>p.id===edge.source),b=points.find(p=>p.id===edge.target);return a&&b?<g key={edge.id} opacity={edgeVisibility(opacity,a,b)}><line data-edge-id={edge.id} data-edge-source={edge.source} data-edge-target={edge.target} x1={a.x} y1={a.y} x2={b.x} y2={b.y} className="map-edge" markerEnd="url(#map-arrow)"><title>{edge.type} · {edge.count} source relations</title></line></g>:null;})}</g>
         {points.map(p=>{const color=COLORS[Math.max(0,graph.territories.findIndex(t=>t.id===p.node.themeIds[0]))%COLORS.length],label=labels.get(p.id),cluster=p.node.kind==='cluster';let depth=0,parent=p.node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}const radius=p.radius*Math.max(.75,Math.min(1.1,Math.sqrt(current.zoom/ZOOM_POLICY.step**depth)));return <g key={p.id} opacity={p.opacity} pointerEvents={p.exiting?'none':undefined} aria-hidden={p.exiting||undefined}>
           {label&&<line x1={p.x} y1={p.y} x2={label.labelX} y2={label.labelY+13} stroke={color} opacity=".25"/>}

@@ -32,6 +32,8 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
   const [mapAnchor,setMapAnchor] = useState<SourceAnchor|null>(null);
   const [mapView,setMapView] = useState<WorkspaceSnapshot['mapView']>(null);
   const reader = useRef<ContinuousTxtReaderHandle>(null);
+  const [readingPosition, setReadingPosition] = useState(0);
+  const scrollReader = useCallback((delta: number) => reader.current?.scrollBy(delta), []);
   const [selection,setSelection] = useState<Selection|null>(null);
   const [selections,setSelections] = useState<Selection[]>([]);
   const [history, dispatchEnhancements] = useReducer(enhancementHistoryReducer, emptyEnhancementHistory);
@@ -177,10 +179,10 @@ function TextWorkspace({preview, graph, title, onUpload, onReset}: {preview: Boo
           <Button disabled={!ready||busy} onClick={save}>Save locally</Button>
           {saved&&<Button variant="ghost" onClick={()=>{activeRequest.current++;setBusy(false);const sourceTicket=++sourceRequest.current;setMapAnchor(null);if(saved.mapView?.graphVersion===graph.graphVersion&&saved.mapView.readerAnchorId)void readMap<{anchor:SourceAnchor}>(graph.version,{kind:'anchor',id:saved.mapView.readerAnchorId}).then(result=>{if(sourceTicket===sourceRequest.current)setMapAnchor(result.anchor);}).catch(()=>{});setMapView(saved.mapView?.graphVersion===graph.graphVersion?saved.mapView:null);setSelections(saved.selections);setSelection(saved.selections[0]??null);setAnchors(saved.anchors);dispatchEnhancements({type:'reset',state:{artifacts:saved.artifacts,placements:placementsFor(saved.artifacts,saved.anchors,saved.placements),interactionState:saved.interactionState}});setRequests({});setNotice('Opened the saved checkpoint.');const position=saved.readerPosition?.fileHash===preview.fileHash&&saved.readerPosition.extractionVersion===preview.extractionVersion?saved.readerPosition.startOffset:0;reader.current?.scrollToOffset(position,'smooth');}}>Reopen saved checkpoint</Button>}
         </details>
-        <ContinuousTxtReader ref={reader} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy||!ready} slots={slots}/>
+        <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onUpload={onUpload} onReset={onReset} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy||!ready} slots={slots}/>
       </section>
       <section className="relative min-h-[960px] flex-1 overflow-hidden bg-paper lg:min-h-0" aria-label="Exploration workspace">
-        <div className="absolute inset-0">{ready&&(graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} onViewChange={setMapView} onSource={readMapSource}/>)}</div>
+        <div className="absolute inset-0">{ready&&(graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>)}</div>
 
       </section>
     </div>

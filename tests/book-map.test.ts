@@ -55,7 +55,7 @@ test('canonical projections use one world, preserving visible axes and suppressi
 });
 test('excerpt range changes camera scale, never source coordinates',()=>{
   const range:[number,number]=[preview.startOffset/preview.totalCharacters,(preview.startOffset+preview.text.length)/preview.totalCharacters];
-  assert.equal(worldPoint(graph.nodes[0],range)!.z,-200);
+  assert.equal(worldPoint(graph.nodes[0],range)!.z,400);
   assert.notEqual(worldPoint(graph.nodes[0],range)!.z,worldPoint(graph.nodes[0],[0,1])!.z);
 });
 test('overlapping projection labels separate without moving semantic points',()=>{
