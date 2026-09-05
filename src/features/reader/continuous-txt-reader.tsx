@@ -32,6 +32,7 @@ const TxtChunk = memo(function TxtChunk({
   return <section
     id={chunk.id}
     className="txt-render-chunk"
+    style={highlight ? { contentVisibility: 'visible' } : undefined}
     data-txt-chunk
     data-txt-start={chunk.startOffset}
     data-txt-end={chunk.endOffset}
