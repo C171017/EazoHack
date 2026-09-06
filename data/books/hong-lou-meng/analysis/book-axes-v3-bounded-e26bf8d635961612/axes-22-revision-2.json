@@ -1,0 +1,559 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-82-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "黛玉结合袭人试探中所提香菱（n-80-3中遭遇）与尤二姐之苦，进一步推导出关于妻妾/偏房家庭内部权力争斗的见解（东风压西风），属于在局部情境和已知个案上的进一步局部推论。",
+            "anchorIds": [
+              "p-603803"
+            ],
+            "prerequisiteNodeIds": [
+              "n-80-3"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "林黛玉提出‘家庭之事，不是东风压了西风，就是西风压了东风’，触及古代家庭内部妻妾与长幼权力关系的普遍规则，超越了一两个人，属于带有领域普遍性质但主要局限在家庭伦理范畴的断言。",
+            "anchorIds": [
+              "p-603803"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-82-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "婆子无心的一句‘一对儿’，黛玉由此直接触发终身无托、长辈无动静的现实忧思，属于由偶发事件引发的直接联想与感触。",
+            "anchorIds": [
+              "p-604230",
+              "p-604875"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "完全局限于黛玉一人在潇湘馆听见婆子言语后产生的特定心理活动与个人处境感伤。",
+            "anchorIds": [
+              "p-604875"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-82-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "黛玉恶梦集中反映了其长期以来的无依无靠之感（父母亡故、贾雨村主媒、贾母冷拒、宝玉剖心），是将长期积压的焦虑进行具象化呈现的心理发展。",
+            "anchorIds": [
+              "p-605088",
+              "p-606529"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "黛玉个体的梦境叙事与极度个人化的心理幻象。",
+            "anchorIds": [
+              "p-605088"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-82-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "恶梦惊魂后受凉夜嗽，加之紫鹃安慰话反向刺激勾起梦境，导致心绪剧震而咳血，直接由n-82-5的恶梦事件承接发展而来。",
+            "anchorIds": [
+              "p-606842"
+            ],
+            "prerequisiteNodeIds": [
+              "n-82-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "叙述林黛玉具体的病势恶化与咯血场景。",
+            "anchorIds": [
+              "p-606842"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-82-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "探春和湘云因闻知黛玉夜间咯血而前去探视，探春当场推断解说为‘肺火上炎’以宽其心，承接自黛玉吐血情节。",
+            "anchorIds": [
+              "p-608149",
+              "p-607672"
+            ],
+            "prerequisiteNodeIds": [
+              "n-82-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "具体描绘探春、湘云在潇湘馆探病的言行与互动细节。",
+            "anchorIds": [
+              "p-608149"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-83-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "黛玉在惊梦病重（n-82-5、n-82-6）的极其脆弱敏感状态下，听到窗外婆子骂外孙女，立即误判并疑心冲己而来，导致肝肠崩裂，是在病态疑惧心理下的局部主观推演。",
+            "anchorIds": [
+              "p-609031",
+              "p-609557"
+            ],
+            "prerequisiteNodeIds": [
+              "n-82-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "描述黛玉特定一次惊疑晕厥的戏剧性场景。",
+            "anchorIds": [
+              "p-609031"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-83-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "王太医诊脉后，结合黛玉六脉弦迟，分析病机（郁结致心气衰、肝木克土肺金受殃），并引用内经论证鳖血拌炒柴胡的制衡药理，形成完整的中医病机论断推理。",
+            "anchorIds": [
+              "p-611032",
+              "p-611821",
+              "p-611960"
+            ],
+            "prerequisiteNodeIds": [
+              "n-82-6"
+            ]
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "包含王太医对虚劳郁结之症的中医辨证施治药理原则（柴胡配鳖血之制），虽落于黛玉病案，但其医理具有专类病症的普适性。",
+            "anchorIds": [
+              "p-611821",
+              "p-611960"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-83-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "凤姐根据贾府账面实际‘出的多进的少’的内囊亏空，对比外间附会讹传的泼天富贵，推演出‘人怕出名猪怕壮’的虚名隐患与不可开支月钱之例的管家判断。",
+            "anchorIds": [
+              "p-612235"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "阐述豪门‘虚名在外、内里亏空’所招致的社会舆论与现实危险，引出普遍的管家危机警示（人怕出名猪怕壮）。",
+            "anchorIds": [
+              "p-612235"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-83-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "奉旨入宫探视生病的元妃，元妃与贾母等相对垂泪，直接叙述元妃深宫骨肉睽隔的感伤与日常省问。",
+            "anchorIds": [
+              "p-614555",
+              "p-613535"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.7,
+            "rationale": "元妃感叹皇家骨肉反不如民间亲近，虽有一句慨叹，但主要记录贾府亲眷入宫探疾的具体场面。",
+            "anchorIds": [
+              "p-614555"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-83-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "夏金桂因薛蟠外出而借酒借题发作欺凌宝蟾，薛姨妈与宝钗前去相劝反遭冷嘲热讽，系家庭风波的当场起衅与叙述展开，无前序推论依赖。",
+            "anchorIds": [
+              "p-615350",
+              "p-616008",
+              "p-616797"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "描述夏金桂在薛家闺阃闹事、宝钗隐忍退让及薛姨妈气病的具体家庭风波。",
+            "anchorIds": [
+              "p-616008",
+              "p-616797"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-84-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "贾母因元妃惦念宝玉，向贾政提出为宝玉择配的标准（重品貌心性不重家世），贾政则以需先立品为由应答，属于直接的议事提议。",
+            "anchorIds": [
+              "p-617539"
+            ],
+            "prerequisiteNodeIds": [
+              "n-83-4"
+            ]
+          },
+          "generality": {
+            "value": 1.6,
+            "rationale": "聚焦于贾母对贾宝玉这一特定人物择偶标准和成长期待的说明。",
+            "anchorIds": [
+              "p-617539"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-84-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "贾政逐篇审查代儒修改宝玉的八股文稿，就破题、承题的扣题严谨度（如‘幼’与‘十五’之辨）及书理进行详细评点与命题测试，系当场展开的文本推理剖析。",
+            "anchorIds": [
+              "p-618720",
+              "p-620093"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.3,
+            "rationale": "涉及八股制艺破题的规范和标准（分清界限、扣准题旨），适用于科举时文的评判规则。",
+            "anchorIds": [
+              "p-618720"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-84-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "贾母根据薛姨妈当面陈述金桂改名闹事中宝钗的表现，就地评析宝钗的‘温厚和平、百里挑一’与黛玉的‘心重、欠宽厚尽让’，推论宝钗做媳妇必得上下宾服。",
+            "anchorIds": [
+              "p-620772",
+              "p-621797"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "贾母对薛宝钗和林黛玉两位特定闺阁人物性格特质及作为儿媳资格的比较论断。",
+            "anchorIds": [
+              "p-620772",
+              "p-621797"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-84-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "门客保媒张家小姐，邢夫人打听到张家要女婿入赘当家，贾母根据宝玉在贾府的娇养地位立即推论拒绝‘断使不得’。",
+            "anchorIds": [
+              "p-622679",
+              "p-622010"
+            ],
+            "prerequisiteNodeIds": [
+              "n-84-1"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "关于南韶道张家与宝玉提亲事件的具体应对决定。",
+            "anchorIds": [
+              "p-622679"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-84-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "王熙凤在贾母否决张家提亲（n-84-4）并在前日极口夸赞宝钗（n-84-3）的背景下，借‘宝玉’与‘金锁’挑明宝玉与宝钗乃现成姻缘，直接切中贾母心意。",
+            "anchorIds": [
+              "p-623140"
+            ],
+            "prerequisiteNodeIds": [
+              "n-84-3",
+              "n-84-4"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "王熙凤借金玉之说挑明薛宝钗与贾宝玉的婚配可能，限定于这两人的婚姻决策。",
+            "anchorIds": [
+              "p-623140"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-84-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾环到凤姐处看牛黄药吊子，失手打翻弄灭炭火，激怒凤姐痛骂，展现赵姨娘贾环房与凤姐房的新旧矛盾爆发。",
+            "anchorIds": [
+              "p-623998",
+              "p-624640"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "特定生活争端场景：打翻巧姐药铫引发争吵冲突。",
+            "anchorIds": [
+              "p-623998"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-85-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "贾家父子赴北静王府祝寿，水溶单留宝玉叙谈，通报吴巡抚保举贾政之喜讯并仿制通灵玉佩相赠，叙述直接的外交互动。",
+            "anchorIds": [
+              "p-625059",
+              "p-625628"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "叙述北静王府祝寿、单独接见宝玉赠玉的单一外交社交事件。",
+            "anchorIds": [
+              "p-625628"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-85-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "承接北静王透露的保举喜讯（n-85-1），随后林之孝与贾芸分别证实工部郎中缺拟由贾政出任，贾政谢恩拜客，贾府升官喜事坐实。",
+            "anchorIds": [
+              "p-626108",
+              "p-628841",
+              "p-630260"
+            ],
+            "prerequisiteNodeIds": [
+              "n-85-1"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "贾政升任工部郎中这一特定政治职衔升迁及贾府门庭庆贺。",
+            "anchorIds": [
+              "p-626108",
+              "p-630260"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-85-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "宝玉探视黛玉，凤姐戏谑二人‘相敬如宾’，宝玉冒失提到贾芸提亲之话引发误会与笑谈，属于日常对话交流，无复杂的先导推理依赖。",
+            "anchorIds": [
+              "p-629671",
+              "p-627171"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "宝黛在贾母堂前的特定日常戏谑与误解对白场景。",
+            "anchorIds": [
+              "p-629671"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-85-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "贾母将王子腾送来的贺戏合并为双喜同庆（贾政升官与黛玉生日），盛排筵席，属于家庭具体事务安排与庆贺场景叙述。",
+            "anchorIds": [
+              "p-630260",
+              "p-630649"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.6,
+            "rationale": "贾府为庆升官与黛玉庆生合办的单场大型宴席场面。",
+            "anchorIds": [
+              "p-630649"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-85-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "通过新戏《冥升》中嫦娥‘未嫁而逝升引月宫’的故事和唱词，在文本层面上形成对红尘虚幻的隐喻与象征伏笔，属于作品艺术寓意的直接暗示，无前置推论节点。",
+            "anchorIds": [
+              "p-631138"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "戏文词句‘人间只道风情好，那知道秋月春花容易抛’揭示了红尘幻灭的普遍哲理，同时作为针对青年女子红颜薄命的艺术寓言。",
+            "anchorIds": [
+              "p-631138"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-85-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "忽报薛蟠在外打死人被捕，薛家诸人仓皇退席，属于外部独立突发的直接案发叙事事件，并无前序推理依赖。",
+            "anchorIds": [
+              "p-631373",
+              "p-631677"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "薛蟠命案突发以及薛家内宅惊惶骚动的单一突发事态。",
+            "anchorIds": [
+              "p-631373",
+              "p-631677"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-85-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "薛家面临人命危局（n-85-6），薛姨妈欲盲目送钱，宝钗理智分析‘越给钱越闹的凶’，果断指派薛蝌聘请刀笔先生谋求将‘故杀’翻为‘误伤’，体现出周密危机公关推论。",
+            "anchorIds": [
+              "p-631677",
+              "p-632570",
+              "p-632673"
+            ],
+            "prerequisiteNodeIds": [
+              "n-85-6"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "针对薛蟠人命官司提出的具体法律周旋与脱罪计策。",
+            "anchorIds": [
+              "p-631677",
+              "p-632570"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-86-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "小厮向薛姨妈转述薛蟠在酒肆嫌换酒慢、怒砸张三致死的具体事发口供，交代案情起因。",
+            "anchorIds": [
+              "p-632850"
+            ],
+            "prerequisiteNodeIds": [
+              "n-85-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "薛蟠在城南酒肆打死张三这一单一偶发命案事实的陈述。",
+            "anchorIds": [
+              "p-632850"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "btycaoHlIaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 41201,
+    "candidatesTokenCount": 5319,
+    "totalTokenCount": 46520,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41201
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5319
+      }
+    ]
+  },
+  "durationMs": 23646,
+  "requestHash": "1dd2c2dd1f51f968f9ebc88bd95d3ac8d8dbe46ad048dd295cbf758046c2032d"
+}

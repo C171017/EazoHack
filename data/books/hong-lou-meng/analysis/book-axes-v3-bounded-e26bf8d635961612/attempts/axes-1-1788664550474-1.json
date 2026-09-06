@@ -1,0 +1,805 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-1-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "作者在开卷直陈作书的本旨与初衷，作为全书的序言式前置说明，属于直接提出的元陈述，无需依赖前文推理。",
+            "anchorIds": [
+              "p-23"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 10,
+            "rationale": "界定整部《红楼梦》（《石头记》）全书的创作立意、记述对象和核心基调，涵盖全书整体。",
+            "anchorIds": [
+              "p-23"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "开篇神话设定，直接叙述女娲炼石遗弃青埂峰及二仙点化顽石的过程，属于无前置论证的起点性叙事设定。",
+            "anchorIds": [
+              "p-591",
+              "p-723"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "针对青埂峰下这一块未用之石动凡心被化为美玉的特定神话事件。",
+            "anchorIds": [
+              "p-591",
+              "p-723"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "在顽石入世录奇的既定设定下，空空道人见石并就体裁、朝代、风月笔墨进行质询与论辩，由石头做出系统反驳后道人始悟并抄录，包含一轮完整的问答推理。",
+            "anchorIds": [
+              "p-1711",
+              "p-2464"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-2"
+            ]
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "石头关于野史、才子佳人书之弊端及本书记真情、去熟套的论述，跨越并批判了传统市井小说与传奇文本的通用惯例，具有较广的文类叙事理论意义。",
+            "anchorIds": [
+              "p-1711",
+              "p-2464"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "直接在神话框架中交代神瑛侍者浇灌绛珠草与还泪公案的起因，是对二仙携石入世背景的直接因果说明。",
+            "anchorIds": [
+              "p-2979"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "陈述神瑛侍者与绛珠仙子二人之间特殊的还泪前缘宿命公案。",
+            "anchorIds": [
+              "p-2979"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "承接甄士隐梦中得见宝玉，醒后遇癞头僧跛足道，僧人直接对英莲命运做出判词与火灾预警，包含梦境与现实的初步推验关联。",
+            "anchorIds": [
+              "p-3747",
+              "p-4103",
+              "p-4401"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-2",
+              "n-1-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "聚焦于甄士隐之女英莲个人的命运谶语及甄家元宵火灾的具体事件。",
+            "anchorIds": [
+              "p-3747",
+              "p-4103",
+              "p-4401"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "士隐见雨村言谈抱负，推论其非久居人下，遂出资相助；雨村果于五鼓不辞而别，属情节层面的直接推断与实施。",
+            "anchorIds": [
+              "p-5811",
+              "p-4929"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "记录甄士隐与贾雨村两位特定人物在中秋之夜的交际赠资与赴考事件。",
+            "anchorIds": [
+              "p-5811",
+              "p-4929"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "士隐经历失女、火灾、投岳遭嫌等一系列现实变故，结合僧道前谶与《好了歌》的当头棒喝，顿悟并写出注疏，完成从执迷到彻悟的完整因果推演。",
+            "anchorIds": [
+              "p-7225",
+              "p-6534",
+              "p-7404"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-5"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "《好了歌解注》从家族兴衰、生死无常、荣枯反转等广泛人世现象中提炼出宿命与幻灭的普遍哲理。",
+            "anchorIds": [
+              "p-7225",
+              "p-6534",
+              "p-7404"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "雨村科举及第荣归，于到任后追查旧恩召见封家，直接兑现前文赴考的情节线索。",
+            "anchorIds": [
+              "p-7793"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-6"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "记录贾雨村到任胡州知府后差人传唤封肃查访旧恩的具体叙事交接。",
+            "anchorIds": [
+              "p-7793"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "承接雨村到任与娇杏偶顾，由纳妾、生子至嫡妻亡故扶正，叙述因偶然一顾引发命运剧变的因果关联。",
+            "anchorIds": [
+              "p-8555",
+              "p-8214",
+              "p-8659"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-8"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "关于娇杏个人由婢女变为官夫人的命运特例叙述（“偶因一著错，便为人上人”）。",
+            "anchorIds": [
+              "p-8555",
+              "p-8214",
+              "p-8659"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "叙述雨村贪酷革职后游历维扬，通过旧友谋得林如海家西宾席位的情节发展，为直接叙事承接。",
+            "anchorIds": [
+              "p-8673",
+              "p-8931",
+              "p-9268"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-1"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "讲述贾雨村个人的仕途波折与落脚林府任教的特定经历。",
+            "anchorIds": [
+              "p-8673",
+              "p-8931",
+              "p-9268"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "雨村漫游偶遇残破智通寺，见门联而心生警悟并推断庙中老僧必有阅历，为一次简短的局部推理尝试。",
+            "anchorIds": [
+              "p-9531"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-2"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "门联“身后有馀忘缩手，眼前无路想回头”表达了对贪得无厌、不知进退的人世行为的警醒箴言。",
+            "anchorIds": [
+              "p-9531"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "冷子兴结合金陵老宅与京中荣宁二府的人丁、排场、财务及子弟表现，综合推理出贾府表面赫奕实则“内囊已尽、一代不如一代”的衰颓真相。",
+            "anchorIds": [
+              "p-10069"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "界定宁荣贾府整个大家族整体在特定历史阶段下的经济与子弟衰亡规律。",
+            "anchorIds": [
+              "p-10069"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "冷子兴向雨村系统平铺介绍宁荣两府历代世系名位与宝玉降生异象，属于直接铺陈介绍性家谱事实。",
+            "anchorIds": [
+              "p-10733"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-4"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "涵盖贾府宁荣两门数代特定嫡系成员的名录与谱系结构。",
+            "anchorIds": [
+              "p-10733"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "冷子兴转述贾宝玉周岁抓周行为及清爽/浊臭言论，得出“将来色鬼无疑”的常人庸俗推论。",
+            "anchorIds": [
+              "p-11305"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "聚焦于贾宝玉个人的怪诞性格特征与早期言行行为。",
+            "anchorIds": [
+              "p-11305"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "雨村反驳冷子兴对宝玉的平庸评判，从天地阴阳正邪二气运行、搏击感发构建出一套完整的人物生成因果体系，推导出情痴情种、逸士奇优的本质。",
+            "anchorIds": [
+              "p-11636"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-6"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "提出一套解释历史上各朝各代非仁非恶、聪秀乖僻特殊人物（如阮籍、嵇康、唐伯虎、卓文君等）的普遍人性与哲学分类法则。",
+            "anchorIds": [
+              "p-11636"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "雨村以自己在金陵甄府亲身经历的甄宝玉痴狂行径作为经验论据，直接印证并落实其建立的“正邪两赋”理论。",
+            "anchorIds": [
+              "p-12484",
+              "p-12310"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-7"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "主要聚焦于金陵甄宝玉这一特定人物的具体言行反常事例及其与贾宝玉的镜像映射。",
+            "anchorIds": [
+              "p-12484",
+              "p-12310"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "冷子兴谋划、如海引荐、贾政看信相助，雨村借黛玉进京之机谋得应天府补缺，为数个情节前提组合而成的因果推进。",
+            "anchorIds": [
+              "p-14057",
+              "p-14235",
+              "p-14814"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-2",
+              "n-2-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "涉及贾雨村谋缺起复及林如海托付黛玉的具体官场与家族人事事件。",
+            "anchorIds": [
+              "p-14057",
+              "p-14235",
+              "p-14814"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "黛玉因母亲常言及目睹贾府门第排场不同寻常，推理出自身寄人篱下须谨慎自律，产生“步步留心、时时在意”的心态。",
+            "anchorIds": [
+              "p-14998",
+              "p-14656"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记录林黛玉初入荣国府特定时刻的所见所感与心理戒备。",
+            "anchorIds": [
+              "p-14998",
+              "p-14656"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "贾母迎黛玉相拥痛哭，引见府中主要女眷并询问病情，属于典型的初见交际与情节展开。",
+            "anchorIds": [
+              "p-15600",
+              "p-15829",
+              "p-16106"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-2"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "黛玉初见贾母及荣府诸位舅母姊妹的具体生活场景。",
+            "anchorIds": [
+              "p-15600",
+              "p-15829",
+              "p-16106"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "通过王熙凤未见其人先闻其声的声势、奢华服饰与奉承贾母体贴黛玉的对白，直接展现其管家地位与精明手腕。",
+            "anchorIds": [
+              "p-16388",
+              "p-17163"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "刻画王熙凤这一核心人物独特的性格作风与管家权势。",
+            "anchorIds": [
+              "p-16388",
+              "p-17163"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "王夫人向黛玉嘱咐家中“混世魔王”宝玉的性情行止，黛玉结合母训做出应对推想。",
+            "anchorIds": [
+              "p-18609",
+              "p-17375",
+              "p-18960"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "特定家庭生活场景中长辈对特定晚辈性格的叮嘱与防范告诫。",
+            "anchorIds": [
+              "p-18609",
+              "p-17375",
+              "p-18960"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "承接前文神瑛绛珠神话设定（旧相识）及宝玉秉性，二人初见因宝玉问玉引发砸玉风波，贾母情急编言哄解，是性格与宿命交织的必然冲突推理。",
+            "anchorIds": [
+              "p-20634",
+              "p-19977"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-4",
+              "n-2-6",
+              "n-3-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记录宝黛初次相会、赠字及发狂摔玉的特定戏剧性情节。",
+            "anchorIds": [
+              "p-20634",
+              "p-19977"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "黛玉因摔玉自责而落泪，袭人以前情与宝玉平日惯性推言宽慰，并说明宝玉之玉的降生奇闻。",
+            "anchorIds": [
+              "p-22091",
+              "p-21533",
+              "p-21716"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-6"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "夜宿碧纱橱内袭人与黛玉谈心安慰的具体场景。",
+            "anchorIds": [
+              "p-22091",
+              "p-21533",
+              "p-21716"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "黛玉偶见王夫人处金陵来信，探春等告知薛蟠人命案由，作为引入新支线剧情的情报引入节点。",
+            "anchorIds": [
+              "p-22426"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-3"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "薛蟠在金陵打死人命、王子腾唤取进京的具体传闻事件。",
+            "anchorIds": [
+              "p-22426"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.6,
+            "rationale": "叙述者以旁白形式交代李纨的身世、家教（“女子无才便有德”）及其在贾府守节持家的生存状态，属于直接介绍性背景说明。",
+            "anchorIds": [
+              "p-22716",
+              "p-22644"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "关于李纨个人生活境况与性格特征的特定人物小传。",
+            "anchorIds": [
+              "p-22716",
+              "p-22644"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "门子阻止雨村发签拿人，通过出示护官符并分析本地四大家族“一荣俱荣、一损俱损”的利益网，推论出不可依法办案的官场自保逻辑。",
+            "anchorIds": [
+              "p-23676",
+              "p-23998",
+              "p-24062"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-1",
+              "n-3-8"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "揭示金陵乃至各省地方官场中豪门士族垄断特权、互为奥援的普遍潜规则与利益同盟结构。",
+            "anchorIds": [
+              "p-23676",
+              "p-23998",
+              "p-24062"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "雨村权衡贾王二府恩情、个人仕途安危与门子计谋，摒弃道德法律顾忌，设计扶乩与暴病假象枉法了结薛案并充发门子，构成完整的利益权衡推演与执行。",
+            "anchorIds": [
+              "p-25726",
+              "p-26127",
+              "p-25300"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-5",
+              "n-4-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "叙述贾雨村审理薛蟠打死冯渊案并远斥门子的特定司法舞弊事件。",
+            "anchorIds": [
+              "p-25726",
+              "p-26127",
+              "p-25300"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "警幻仙姑承宁荣二公之嘱，针对世俗将宝玉误为色鬼之见，建立“皮肤淫滥”与“意淫”的辨析推论，并授以警幻妹兼美以行劝诫与训导。",
+            "anchorIds": [
+              "p-35278",
+              "p-34994"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-7"
+            ]
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "警幻辨析“好色即淫，知情更淫”与“意淫”，给出了全书关于情爱与欲望最高层级的哲学界定与范式分类。",
+            "anchorIds": [
+              "p-35278",
+              "p-34994"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.6,
+            "rationale": "宝玉从太虚幻境梦醒后，将警幻所传之意象与技巧投射于现实，与袭人由默契推向实际偷试，是幻境启蒙直接在现实层面的演化落地。",
+            "anchorIds": [
+              "p-36356",
+              "p-36141"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-5",
+              "n-3-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "宝玉与袭人二人初试云雨情并加深主婢亲密关系的特定个人事件。",
+            "anchorIds": [
+              "p-36356",
+              "p-36141"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "凤姐接见远亲刘姥姥，根据王夫人交代并权衡贾府排场与实际艰难，以资助银两和体面话圆满应付，为日常治家谋略的实际操作。",
+            "anchorIds": [
+              "p-42745",
+              "p-42986",
+              "p-42293"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-4"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "记录王熙凤接济刘姥姥二十两银子这一特定的人情往来事件，同时透出豪门“大有大的艰难”。",
+            "anchorIds": [
+              "p-42745",
+              "p-42986",
+              "p-42293"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "焦大以当年救主功臣自居，在派差不公与被捆惩罚下积怨爆发，揭露宁国府主仆乱伦衰败丑事，印证了冷子兴关于儿孙一代不如一代的推论。",
+            "anchorIds": [
+              "p-50029",
+              "p-49598",
+              "p-50515"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "揭示焦大醉骂及宁国府内贾珍、贾蓉等主子具体丑恶行径的事件。",
+            "anchorIds": [
+              "p-50029",
+              "p-49598",
+              "p-50515"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "宝钗细看通灵玉引出莺儿话头，宝玉复观金锁，二人印证吉谶金玉相对，使神话层面的谶语在现实互动中形成因果对照。",
+            "anchorIds": [
+              "p-52669",
+              "p-51737",
+              "p-53008"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-2",
+              "n-3-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "聚焦于宝玉与宝钗两人佩戴之玉与锁铭文互相对照的金玉良缘谶语特指。",
+            "anchorIds": [
+              "p-52669",
+              "p-51737",
+              "p-53008"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "w9qcasjtGL2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 26916,
+    "candidatesTokenCount": 5856,
+    "totalTokenCount": 32772,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 26916
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5856
+      }
+    ]
+  },
+  "durationMs": 35535,
+  "requestHash": "4a81586da6cedb3b7cf33a2357a7776dfdf18037fd102b8be2f74b7b9e9bf3db"
+}

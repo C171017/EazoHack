@@ -1,0 +1,563 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-35-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾母针对王熙凤与诸姐妹处世性格即席发挥，从'不大说话'与'嘴乖'的对比中，直接推论得出对宝钗的肯定评价，属于基于即时言谈的直接推论。",
+            "anchorIds": [
+              "p-233260"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.1,
+            "rationale": "论断聚焦于贾府四位姑娘与宝钗、凤姐等数位具体家族女性的性格优劣比照，属于小范围明确对象的比较。",
+            "anchorIds": [
+              "p-233260"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "宝玉因金钏之死自感惭愧歉疚，根据玉钏的面色情绪，有意识地支开众人并装假哄尝，是一次有明确因果意图的局部化解策略。",
+            "anchorIds": [
+              "p-235163",
+              "p-234731"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "此为宝玉在怡红院病榻前哄玉钏喝汤化怨的单一具体事件。",
+            "anchorIds": [
+              "p-235163"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "婆子们依据宝玉烫手反问玉钏以及日常言行的直观表现，即时得出宝玉'外相好、里头糊涂'的讥评。",
+            "anchorIds": [
+              "p-235878",
+              "p-236504"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "评价针对贾宝玉一个人的特定性格特质（呆气、糊涂）。",
+            "anchorIds": [
+              "p-236504"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "莺儿与宝钗由器物饰品搭配的审美经验出发，直接提议用金线黑珠儿线络玉，为经验审美层面的直接判断。",
+            "anchorIds": [
+              "p-237399",
+              "p-236803"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "具体探讨为宝玉通灵宝玉和汗巾子打络子的色彩方案与工艺搭配。",
+            "anchorIds": [
+              "p-237399"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "宝钗由王夫人单送两碗菜且免磕头的异乎寻常之举，敏锐推知王夫人已有暗定提拔袭人的意图，包含局部侦测与推导。",
+            "anchorIds": [
+              "p-237962"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "涉及王夫人与袭人两人之间的主仆名分与特定提拔暗示。",
+            "anchorIds": [
+              "p-237962"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "宝玉由贾母免其见客的庇护令出发，结合平素对功名禄鬼的厌恶，反推并确立唯林黛玉自幼不劝他仕途经济，因而视黛玉为真知己。",
+            "anchorIds": [
+              "p-238491"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "阐述贾宝玉个人对读书出仕的根本反叛态度及对林黛玉的深沉敬爱定位。",
+            "anchorIds": [
+              "p-238491"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "王夫人承袭了袭人先前'防嫌'建言的信赖，并结合金钏空缺后众人争夺月例的局面，权衡后决定以自身月例暗中补给袭人，完成了对袭人准姨娘身份的决断。",
+            "anchorIds": [
+              "p-239339",
+              "p-238979"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3",
+              "n-35-8"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "针对袭人个人的地位提拔、月例配额与未来姨娘名分的安排。",
+            "anchorIds": [
+              "p-239339"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "宝玉在梦中痛斥金玉之说而强调木石姻缘，宝钗在榻旁代刺兜肚闻之怔住，这是内心情感在潜意识与突发机缘中的直接显露与撞击。",
+            "anchorIds": [
+              "p-241056",
+              "p-242052",
+              "p-241775"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "记录宝玉梦呓与宝钗在怡红院床前代绣鸳鸯兜肚的具体戏剧性场景。",
+            "anchorIds": [
+              "p-241056",
+              "p-242052"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "宝玉从对世俗忠烈价值的驳斥展开论述，层层推论出文官死谏武官死战实为'邀名弃君/国'之虚伪，进而提出自己以死于众女清泪为正死的人生假想。",
+            "anchorIds": [
+              "p-242267"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "否定封建伦理中'文死谏、武死战'作为普遍大义的道德范式，提出了颠覆性的生死价值论。",
+            "anchorIds": [
+              "p-242267"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝玉在梨香院目睹龄官因身世感怀对贾蔷雀儿发怒、贾蔷甘心顺从放雀，直接观察到两人之间独一无二的情感维系。",
+            "anchorIds": [
+              "p-243247",
+              "p-243671"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "发生在梨香院中龄官、贾蔷与贾宝玉三者之间的一段具体纠葛。",
+            "anchorIds": [
+              "p-243247",
+              "p-243671"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "宝玉将昨夜对袭人夸言的'求全'狂想与在梨香院亲见龄官独钟贾蔷的情形相互印证，完成了从自恋情意到'情各有分定'的完整人生认知转折。",
+            "anchorIds": [
+              "p-244424"
+            ],
+            "prerequisiteNodeIds": [
+              "n-36-4",
+              "n-36-5"
+            ]
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "得出了普遍适用的情感哲学原理：天下情缘各有限度与分定，各人只能得属于自己的情泪，破除了贪全之执念。",
+            "anchorIds": [
+              "p-244424"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "探春借大观园闲适时节与旧日古人结社风雅之典，发出倡导诗社的信函，属于由古推今的直接倡议。",
+            "anchorIds": [
+              "p-245452",
+              "p-245296"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "探春写给宝玉并号召大观园诸姊妹结成诗社的一封具体花笺倡议。",
+            "anchorIds": [
+              "p-245452"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "众人商定规矩，依据各自住处、才性及典故互起雅号，并按擅长分工设立社长与监场职务。",
+            "anchorIds": [
+              "p-246409",
+              "p-247197"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-1"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "覆盖大观园海棠诗社全体初创成员的一套称谓与社团组织规则。",
+            "anchorIds": [
+              "p-246409",
+              "p-247197"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "李纨根据'含蓄浑厚'与'风流别致'等诗学批评准则，对宝钗、黛玉等人的白海棠诗进行具体评定与排定座次。",
+            "anchorIds": [
+              "p-247791",
+              "p-248237",
+              "p-249091"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "海棠社首次以两盆白海棠为题限韵作诗并评卷的具体活动。",
+            "anchorIds": [
+              "p-247791",
+              "p-249091"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "湘云次日抵园后依据前日诗规限韵顷刻和就两首，众人根据其诗作水准直接接纳其入社。",
+            "anchorIds": [
+              "p-251923",
+              "p-252412"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "湘云补作海棠诗并入社的特定事件。",
+            "anchorIds": [
+              "p-251923"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "宝钗考虑到湘云家境局促且不能作主（承接早先对湘云困境的观察），推理得出若湘云硬要做东必招抱怨，故周密设计以薛家螃蟹设宴代为操办。",
+            "anchorIds": [
+              "p-252412"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-4",
+              "n-37-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "关于湘云在园中做东设宴的具体方案设计。",
+            "anchorIds": [
+              "p-252412"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "宝钗针对前人咏菊落套与险韵束缚诗意的弊病，推导出'以人为主、以菊为宾'的脉络与'不拘韵'的诗社规章，系统设计了十二题。",
+            "anchorIds": [
+              "p-253149"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-2"
+            ]
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "提出了一套完整的题材构思章法（以人为主、以物为宾，虚实相配）及大观园菊花诗赛规程。",
+            "anchorIds": [
+              "p-253149"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "按宝钗、湘云前番筹划，在藕香榭依水铺陈赏桂茶酒席面，长辈应邀入宴。",
+            "anchorIds": [
+              "p-254365",
+              "p-254657"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "贾母携众人进大观园藕香榭赏桂花吃茶酒的具体集会过程。",
+            "anchorIds": [
+              "p-254365",
+              "p-254657"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "贾母由水亭匾联引发童年落水往事回忆，凤姐借寿星头上窝儿即景生情巧言奉承。",
+            "anchorIds": [
+              "p-254851"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "宴席上贾母回忆旧事与王熙凤承欢取笑的单一言语场景。",
+            "anchorIds": [
+              "p-254851"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "叙述宴席吃蟹、湘云体恤丫鬟与姨娘、平儿抹凤姐蟹黄等生动场面，基本属纯写实叙事。",
+            "anchorIds": [
+              "p-255338"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "藕香榭走廊与宴席各处吃蟹嬉闹的具体场景互动。",
+            "anchorIds": [
+              "p-255338"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "依照昨夜宝钗与湘云拟好的十二个题目与不拘韵规则，长辈散后众人各自挑选题目标注别号完成创作。",
+            "anchorIds": [
+              "p-256530",
+              "p-256928"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "海棠社众人挑选并誊录十二首菊花诗的比赛现场。",
+            "anchorIds": [
+              "p-256928"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "李纨评判十二首菊花诗，以'题目新，诗也新，立意更新'及'不露堆砌生硬'为准则推论，定黛玉三首冠绝全场。",
+            "anchorIds": [
+              "p-258789"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "评定本场大观园十二首菊花诗作的高下名次及名句警句赏析。",
+            "anchorIds": [
+              "p-258789"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "众人以小题大做之寄托标准评阅宝钗《螃蟹咏》，推论其'眼前道路无经纬，皮里春秋空黑黄'为食蟹绝唱且极具世道讽刺力。",
+            "anchorIds": [
+              "p-259406",
+              "p-259816",
+              "p-259925"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "螃蟹诗借物讽世，其涵盖与讽喻的对象为一切横行无道、居心险恶的世路小人。",
+            "anchorIds": [
+              "p-259816",
+              "p-259925"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "李纨等由平儿佩带的总钥匙为由头，并列举鸳鸯、彩霞、袭人等行事，归纳推断出主子得势与门庭周全皆依赖这些得力丫鬟为膀臂天理。",
+            "anchorIds": [
+              "p-260438",
+              "p-260020"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "针对贾府豪门贵族内部高层主子与核心大丫鬟（平儿、鸳鸯、袭人、彩霞）之间的共生职能机制与相处之道提出归纳概括。",
+            "anchorIds": [
+              "p-260438"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "YducatrGEqGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 35488,
+    "candidatesTokenCount": 5057,
+    "totalTokenCount": 40545,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 35488
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5057
+      }
+    ]
+  },
+  "durationMs": 30761,
+  "requestHash": "ad62a0a5bbe65aaa3bc2332f72973c53eb017c1004d7ea898834181eb9d7b185"
+}

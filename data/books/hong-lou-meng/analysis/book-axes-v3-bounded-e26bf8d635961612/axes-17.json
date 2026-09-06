@@ -1,0 +1,535 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-62-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly introduced event of multiple birthdays coinciding and the group deciding to pool money for Ping'er, requiring no inferential deduction.",
+            "anchorIds": [
+              "p-435378"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Describes a single specific celebration event and social gathering within the Jia household.",
+            "anchorIds": [
+              "p-435378"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Baochai draws an immediate deduction from the recent theft incident that locking doors prevents servants cutting through and causing trouble.",
+            "anchorIds": [
+              "p-437031"
+            ],
+            "prerequisiteNodeIds": [
+              "n-61-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "States an advisory principle of household caution applied specifically to locking the garden gate and dealing with theft investigations.",
+            "anchorIds": [
+              "p-437031"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Narrative depiction of the banquet drinking games (shefu and finger-guessing) without extended prior reasoning.",
+            "anchorIds": [
+              "p-437695"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "Pertains to a concrete party scene and specific literary games played at the Hongxiangpu pavilion.",
+            "anchorIds": [
+              "p-437695"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "A direct scenic depiction of Shi Xiangyun sleeping drunk on a stone bench surrounded by fallen peony petals.",
+            "anchorIds": [
+              "p-440920"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Covers a single iconic tableau and isolated event involving Xiangyun.",
+            "anchorIds": [
+              "p-440920"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Daiyu observes Tanchun's handling of affairs and performs a reasoned evaluation inferring that the Jia family's expenditures exceed its income.",
+            "anchorIds": [
+              "p-441326"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "Applies a financial assessment to the entire Jia household estate rather than a single isolated moment.",
+            "anchorIds": [
+              "p-441326"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Baoyu devises a simple practical solution to replace Xiangling's soiled pomegranate skirt using an identical spare from Xiren.",
+            "anchorIds": [
+              "p-443754"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "Focuses strictly on an individual incident involving Xiangling's stained skirt in the garden.",
+            "anchorIds": [
+              "p-443754"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly presents the narrative starting action of the evening banquet in Yihongyuan and drawing flower poem divinations.",
+            "anchorIds": [
+              "p-448174"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Records a specific private party gathering in Baoyu's courtyard.",
+            "anchorIds": [
+              "p-448174"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Connects the textual lots and poem lines drawn during the banquet to symbolic foretellings of each character's future character and destiny.",
+            "anchorIds": [
+              "p-448668",
+              "p-449164",
+              "p-450081"
+            ],
+            "prerequisiteNodeIds": [
+              "n-63-1"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "Covers the general life trajectories and dispositions of several primary female characters in the novel.",
+            "anchorIds": [
+              "p-448668",
+              "p-449164",
+              "p-450081"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Xiuyan explains the philosophical and literary origin of Miaoyu's self-appellation 'person outside the threshold', guiding Baoyu to infer the fitting reply.",
+            "anchorIds": [
+              "p-452050"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Concerns Miaoyu's eccentric personal stance and Baoyu's specific social response.",
+            "anchorIds": [
+              "p-452050"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "Presents the playful cross-dressing of Fangguan and other actresses, along with Baoyu's lighthearted rationale for their foreign and male aliases.",
+            "anchorIds": [
+              "p-452969"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Covers a playful game of naming and dressing within the inner garden circle.",
+            "anchorIds": [
+              "p-452969"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative presentation of Jia Jing's sudden death from swallowing alchemical elixirs and You Shi taking charge.",
+            "anchorIds": [
+              "p-454499"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Pertains to a specific death and funeral event in the Ningguo mansion.",
+            "anchorIds": [
+              "p-454499"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Jia Rong flirts with the You sisters, rationalizing his dissolute conduct by appealing to past dynastic and familial precedents of debauchery.",
+            "anchorIds": [
+              "p-456091"
+            ],
+            "prerequisiteNodeIds": [
+              "n-63-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Reflects the moral decay and lack of decorum among the Ningguo house's young masters during mourning.",
+            "anchorIds": [
+              "p-456091"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Baoyu notices the sacrificial offerings and tear stains, deducing Daiyu's hidden sorrow and seeking to comfort her without causing irritation.",
+            "anchorIds": [
+              "p-458445",
+              "p-459508"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A private encounter between Baoyu and Daiyu in the Xiaoxiang Pavilion.",
+            "anchorIds": [
+              "p-459508"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative introduction of Daiyu composing the five poems on historical beauties out of personal empathy.",
+            "anchorIds": [
+              "p-459929"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Deals with five historical women reflecting on the shared fate of talented and beautiful women.",
+            "anchorIds": [
+              "p-459929"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Baochai formulates a literary critique of poetry, evaluating Daiyu's work through contrast with Wang Anshi and Ouyang Xiu.",
+            "anchorIds": [
+              "p-460832"
+            ],
+            "prerequisiteNodeIds": [
+              "n-64-2"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Asserts a general literary principle regarding the art of poetic interpretation and overturning historical tropes.",
+            "anchorIds": [
+              "p-460832"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Jia Rong analyzes Jia Lian's infatuation, the obstacles posed by Wang Xifeng, and devises an elaborate scheme to secretly establish a second household.",
+            "anchorIds": [
+              "p-462904",
+              "p-463351"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "A scheme targeted at a specific illicit marriage arrangement for Jia Lian and Second Sister You.",
+            "anchorIds": [
+              "p-463351"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Jia Lian pursues Second Sister You and uses the betel nut exchange to signal affection by passing his nine-dragon jade pendant.",
+            "anchorIds": [
+              "p-463992",
+              "p-464392"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "A specific flirtatious interaction between Jia Lian and Second Sister You in the Ning mansion.",
+            "anchorIds": [
+              "p-463992"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Execution of Jia Rong's scheme, buying out Zhang Hua's prior betrothal and acquiring the house in Little Huazhi Lane.",
+            "anchorIds": [
+              "p-466023"
+            ],
+            "prerequisiteNodeIds": [
+              "n-64-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Specific transactional steps taken to clear legal and familial obstacles for the marriage.",
+            "anchorIds": [
+              "p-466023"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Culmination of the conspiracy as Jia Lian brings Second Sister You into the rented quarters and performs the clandestine wedding.",
+            "anchorIds": [
+              "p-466569"
+            ],
+            "prerequisiteNodeIds": [
+              "n-64-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Details a concrete secret marriage ceremony and cohabitation.",
+            "anchorIds": [
+              "p-466569"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Jia Lian decides to entrust his private savings to Second Sister You and plans for her eventual integration after Xifeng's death.",
+            "anchorIds": [
+              "p-466798"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Pertains to domestic arrangements and financial provisions inside Jia Lian's secret household.",
+            "anchorIds": [
+              "p-466798"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative presentation of Jia Zhen seizing the opportunity of Jia Lian's absence to visit the new house and flirt with Third Sister You.",
+            "anchorIds": [
+              "p-467106"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "A single private evening scene at the Little Huazhi Lane residence.",
+            "anchorIds": [
+              "p-467106"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "Third Sister You unmasks Jia Zhen and Jia Lian's hypocrisy and fear of Xifeng, turning their predatory game upside down.",
+            "anchorIds": [
+              "p-467859",
+              "p-469582"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-3"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Deals with Third Sister You's defiance and the dynamics between the You sisters and the Jia brothers.",
+            "anchorIds": [
+              "p-467859"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Third Sister You resolves her future path, rejecting casual matches and affirming that she will only marry a man she genuinely respects.",
+            "anchorIds": [
+              "p-469582"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-4"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Expresses an individual life decision and personal moral code for her own destiny.",
+            "anchorIds": [
+              "p-469582"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Xing'er provides an analytical exposition of Rongguo mansion's social power structure, contrasting Xifeng's cruelty, Ping'er's balance, and the personalities of the young ladies.",
+            "anchorIds": [
+              "p-471220"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Synthesizes character traits and internal domestic politics across major figures in the Rongguo house from a servant's perspective.",
+            "anchorIds": [
+              "p-471220"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3tucatawJaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 34154,
+    "candidatesTokenCount": 4194,
+    "totalTokenCount": 38348,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 34154
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4194
+      }
+    ]
+  },
+  "durationMs": 22646,
+  "requestHash": "e61da2abe95805c093a3db9efabf26e781d5a14c4bb401187d81acca159d4a55"
+}

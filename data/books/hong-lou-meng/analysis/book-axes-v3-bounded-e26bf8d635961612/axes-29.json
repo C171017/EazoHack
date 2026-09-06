@@ -1,0 +1,595 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-109-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Direct narrative event depicting Yingchun's death due to Sun Shaozu's abuse, following directly on her previous farewell and foreboding (n-109-2).",
+            "anchorIds": [
+              "p-790949"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative episode concerning Yingchun's death and her mistreatment in the Sun household.",
+            "anchorIds": [
+              "p-790949"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "Direct observation and narrative progression recording Grandmother Jia's critical illness and preparatory funeral arrangements made by Jia Zheng and Jia Lian.",
+            "anchorIds": [
+              "p-791660",
+              "p-792408"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single specific event regarding Grandmother Jia's worsening condition and the initial preparations.",
+            "anchorIds": [
+              "p-791660",
+              "p-792408"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Narrative climax following Grandmother Jia's illness in n-109-7, reporting her dying words to Baoyu, Jia Lan, and Fengjie, and her subsequent passing.",
+            "anchorIds": [
+              "p-792737"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-7"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single concrete scene detailing Grandmother Jia's deathbed exhortations and demise.",
+            "anchorIds": [
+              "p-792737"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Yuanyang reacts to Grandmother Jia's death (n-110-1) and Jia Zheng's frugality by beseeching Fengjie to manage a respectable funeral, offering her own inheritance.",
+            "anchorIds": [
+              "p-793693"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single dialogue between Yuanyang and Wang Xifeng regarding the arrangements for Grandmother Jia's funeral.",
+            "anchorIds": [
+              "p-793693"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Jia Lian conveys Jia Zheng and Lady Xing's decisions on funds to Fengjie, explaining the logistical deadlock caused by withheld funds and defaulting servants.",
+            "anchorIds": [
+              "p-794764"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-1",
+              "n-110-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific discussion between Jia Lian and Fengjie about financial constraints for the current funeral.",
+            "anchorIds": [
+              "p-794764"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Lady Xing and Lady Wang place blame on Fengjie for the chaotic funeral, arising from the deadlock established in n-110-3 and Yuanyang's weeping.",
+            "anchorIds": [
+              "p-795822"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-2",
+              "n-110-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific scene of reproaches directed by Lady Xing and Lady Wang towards Wang Xifeng.",
+            "anchorIds": [
+              "p-795822"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Directly develops the managerial conflict from n-110-3 and n-110-4, showing the servants' passive resistance and Fengjie having to humble herself and plead with them.",
+            "anchorIds": [
+              "p-796369"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-3",
+              "n-110-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific scene between Wang Xifeng and the female servants during Grandmother Jia's funeral.",
+            "anchorIds": [
+              "p-796369"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Li Wan analyzes Fengjie's plight (synthesizing the financial pinch and servants' insolence) and observes broader contrasts (Jia Lan vs. Baoyu and Jia Huan; hiring carriages) to deduce the overall decline of the Jia estate.",
+            "anchorIds": [
+              "p-797312",
+              "p-797887"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-4",
+              "n-110-5"
+            ]
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "Li Wan articulates a localized reflection on the Jia family's social and financial decline based on specific family members and logistical failures.",
+            "anchorIds": [
+              "p-797312",
+              "p-797887"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "The culmination of physical exhaustion and severe psychological pressure from Lady Xing's sarcastic accusation results in Fengjie spitting blood and collapsing.",
+            "anchorIds": [
+              "p-799196"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-4",
+              "n-110-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific event where Fengjie collapses and vomits blood from grief and rage.",
+            "anchorIds": [
+              "p-799196"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Yuanyang, despairing over her fate without Grandmother Jia and unwilling to face future abuse by Lady Xing and others, commits suicide, with Qin Keqing's spirit guiding her.",
+            "anchorIds": [
+              "p-800169",
+              "p-801119"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific event of Yuanyang hanging herself to follow Grandmother Jia in death.",
+            "anchorIds": [
+              "p-800169",
+              "p-801119"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Following Yuanyang's suicide (n-111-1), Jia Zheng, Baoyu, and Baochai praise her virtue, arrange her coffin, and the funeral procession proceeds to Tiekan Temple.",
+            "anchorIds": [
+              "p-801441",
+              "p-801958"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative scene recounting the reaction to Yuanyang's suicide, her encoffinment, and the departure of the funeral procession.",
+            "anchorIds": [
+              "p-801441",
+              "p-801958"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Desperate for gambling funds and knowing the mansion is emptied out for the funeral (n-111-2), He San collaborates with thieves to raid the Jia residence.",
+            "anchorIds": [
+              "p-802630"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative interaction where He San plots with outlaws in a gambling den.",
+            "anchorIds": [
+              "p-802630"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "Miaoyu visits Xichun to keep her company while guarding the house, and they play go and drink tea late into the night.",
+            "anchorIds": [
+              "p-804348",
+              "p-803701"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific scene depicting Miaoyu and Xichun talking and playing chess at night.",
+            "anchorIds": [
+              "p-804348",
+              "p-803701"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Building on the thieves' infiltration (n-111-3) and Miaoyu/Xichun's vigil (n-111-4), Bao Yong intervenes, fights off the robbers with a wooden staff, and kills one bandit.",
+            "anchorIds": [
+              "p-804348",
+              "p-805742"
+            ],
+            "prerequisiteNodeIds": [
+              "n-107-6",
+              "n-111-3",
+              "n-111-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A concrete action scene where Bao Yong single-handedly repels the band of thieves.",
+            "anchorIds": [
+              "p-804348",
+              "p-805742"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "In the aftermath of the burglary (n-111-5), military officers survey the scene, while an ill Fengjie discovers Grandmother Jia's storehouses stripped and orders night-watch women arrested.",
+            "anchorIds": [
+              "p-806262",
+              "p-806486"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific investigation and enforcement scene at Rongguo Mansion the morning after the burglary.",
+            "anchorIds": [
+              "p-806262",
+              "p-806486"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Follows the burglary and arrests from n-111-6; Bao Yong vocally denounces Buddhist nuns for bringing disaster, shaming Xichun, while Jia Lian returns to inventory losses.",
+            "anchorIds": [
+              "p-807175",
+              "p-806738",
+              "p-809102"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A particular episode where Jia Lian investigates the burglary, checks the inventory, and Bao Yong curses nuns in the courtyard.",
+            "anchorIds": [
+              "p-807175",
+              "p-806738",
+              "p-809102"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "The bandits regroup after Bao Yong kills He San (n-111-5) and decide to flee to maritime pirates, but plot first to kidnap Miaoyu after spotting her during the robbery.",
+            "anchorIds": [
+              "p-807810",
+              "p-808011"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific meeting of the criminal gang plotting to abduct Miaoyu before fleeing.",
+            "anchorIds": [
+              "p-807810",
+              "p-808011"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Carrying out the plan developed in n-112-2, the bandits infiltrate Cuilong Hermitage, drug Miaoyu with stupefying incense, and abduct her out of the capital.",
+            "anchorIds": [
+              "p-810111",
+              "p-810479"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative scene depicting Miaoyu's abduction by bandits.",
+            "anchorIds": [
+              "p-810111",
+              "p-810479"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Prompted by the burglary guilt, Bao Yong's public accusations (n-112-1), and the tragic abduction of Miaoyu (n-112-3), Xichun reflects on the doomed fate of her sisters and cuts her hair to enter nunhood.",
+            "anchorIds": [
+              "p-811239",
+              "p-811541"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-1",
+              "n-112-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific event showing Xichun cutting off her hair in determination to become a Buddhist nun.",
+            "anchorIds": [
+              "p-811239",
+              "p-811541"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "A sudden dramatic manifestation where Aunt Zhao falls violently ill and confesses in delirium her past witchcraft scheme against Baoyu and Fengjie.",
+            "anchorIds": [
+              "p-812302",
+              "p-812713"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative scene of Aunt Zhao's sudden affliction, demonic possession, and confession at Tiekan Temple.",
+            "anchorIds": [
+              "p-812302",
+              "p-812713"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Jia Zheng learns of the theft, orders Zhou Rui bound, and witnessing Fengjie's decline and Aunt Zhao's condition (n-112-5), laments the inexorable downfall of the house.",
+            "anchorIds": [
+              "p-813309",
+              "p-813539"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-1",
+              "n-112-5"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Jia Zheng reflects on the state of ruin across the family household upon learning of domestic treachery and illness.",
+            "anchorIds": [
+              "p-813309",
+              "p-813539"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Develops immediately from Aunt Zhao's illness and violent seizure in n-112-5, culminating in her agonizing death, which prompts Concubine Zhou to reflect on the plight of concubines.",
+            "anchorIds": [
+              "p-813792"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-5"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Concubine Zhou draws a small reflective conclusion about the shared grim destiny of concubines, rooted in Zhao's death.",
+            "anchorIds": [
+              "p-813792"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Fengjie, already physically ruined (n-110-7) and terrified by the rumor of Aunt Zhao's retributive death (n-113-1), hallucinates You Erjie demanding her life and admits remorse.",
+            "anchorIds": [
+              "p-814263",
+              "p-814942"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-7",
+              "n-113-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific scene of Wang Xifeng suffering remorse and hallucinations of You Erjie.",
+            "anchorIds": [
+              "p-814263",
+              "p-814942"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Under the terror of spectral retribution (n-113-2), Fengjie turns to Granny Liu as a spiritual protector, begging her to pray and entrusting Qiaojie to her care.",
+            "anchorIds": [
+              "p-817400",
+              "p-815101",
+              "p-815577"
+            ],
+            "prerequisiteNodeIds": [
+              "n-113-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific domestic dialogue where Fengjie entrusts her daughter Qiaojie to Granny Liu.",
+            "anchorIds": [
+              "p-817400",
+              "p-815101",
+              "p-815577"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "rdycaoHCOb2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 31077,
+    "candidatesTokenCount": 4142,
+    "totalTokenCount": 35219,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 31077
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4142
+      }
+    ]
+  },
+  "durationMs": 21786,
+  "requestHash": "d05808cd5c34940978e3b28545a5b9ad349535e743f10588be9007ab7a463ada"
+}

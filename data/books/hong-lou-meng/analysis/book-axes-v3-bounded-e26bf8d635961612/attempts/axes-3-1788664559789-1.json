@@ -1,0 +1,591 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-8-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Baochai presents a localized physiological explanation deducing that because liquor's nature is hot, drinking it cold causes it to congeal internally and draw warmth harmfully from the vital organs.",
+            "anchorIds": [
+              "p-53681"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Her claim articulates a general medical and dietary rule governing how cold versus heated wine interacts with human bodily physiology.",
+            "anchorIds": [
+              "p-53681"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct narrative depiction of Baoyu's drunken tantrum upon discovering Li Momo drank his special tea, followed immediately by Xiren placating him.",
+            "anchorIds": [
+              "p-56403",
+              "p-55672",
+              "p-56058"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a single domestic emotional disturbance within the Jiangyun pavilion involving specific individuals.",
+            "anchorIds": [
+              "p-56403",
+              "p-55672",
+              "p-56058"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative sequence recording Qin Zhong's formal presentation to the matriarch and the subsequent family arrangements for his school admission.",
+            "anchorIds": [
+              "p-56966",
+              "p-57187"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Refers to a specific social encounter and formal arrangement for Qin Zhong to attend school with Baoyu.",
+            "anchorIds": [
+              "p-56966",
+              "p-57187"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative account describing Baoyu taking leave of Xiren, Jia Zheng, and Daiyu on his departure for the clan academy.",
+            "anchorIds": [
+              "p-57636",
+              "p-58278",
+              "p-58606"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Describes one specific morning routine and departure episode involving identified household members.",
+            "anchorIds": [
+              "p-57636",
+              "p-58278",
+              "p-58606"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Expository passage analyzing the organizational premise of the Jia school contrasted with its moral degeneration and social dynamics.",
+            "anchorIds": [
+              "p-58606",
+              "p-59294"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies across the restricted collective environment of the Jia clan school and its enrolled students and hangers-on.",
+            "anchorIds": [
+              "p-58606",
+              "p-59294"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative of an altercation where Jin Rong mocks Qin Zhong and Xianglian, followed by Jia Rui's biased intervention due to personal grudges.",
+            "anchorIds": [
+              "p-59294"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Pertains to a single classroom dispute and interpersonal confrontation.",
+            "anchorIds": [
+              "p-59294"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Depicts Jia Qiang's private instigation of Mingyan, setting off an escalating physical brawl among the students and attendants.",
+            "anchorIds": [
+              "p-59294",
+              "p-61089",
+              "p-61459"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Covers a discrete scuffle and brawl within the schoolroom.",
+            "anchorIds": [
+              "p-59294",
+              "p-61089",
+              "p-61459"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Records the intervention of senior servant Li Gui, who rebukes Jia Rui and forces Jin Rong into a formal kowtow apology.",
+            "anchorIds": [
+              "p-61997",
+              "p-62587",
+              "p-62921"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific settlement resolving the immediate schoolroom fracas.",
+            "anchorIds": [
+              "p-61997",
+              "p-62587",
+              "p-62921"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Internal reaction and spoken complaints of Jin Rong following his humiliating forced apology at the school.",
+            "anchorIds": [
+              "p-63175"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains to Jin Rong's enduring posture and resentment toward Qin Zhong and Baoyu beyond the immediate moment.",
+            "anchorIds": [
+              "p-63175"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Mrs. Hu lays out practical arguments regarding tuition, meals, family financial dependence, and patron subsidies to dissuade her son from complaining.",
+            "anchorIds": [
+              "p-63367"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Addresses the specific socioeconomic position and pragmatic choices of Jin Rong and his household.",
+            "anchorIds": [
+              "p-63367"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative recounting Aunt Huang's indignation upon hearing about the school incident and her impetuous decision to confront the Ning mansion.",
+            "anchorIds": [
+              "p-63821",
+              "p-63668"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Covers a particular scene of domestic communication and intent to confront a relation.",
+            "anchorIds": [
+              "p-63821",
+              "p-63668"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Madam You explains Qin Keqing's symptoms, tracing them inferentially to her sensitive disposition and excessive worry.",
+            "anchorIds": [
+              "p-64147"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Diagnoses Qin Keqing's chronic emotional makeup and physical decline.",
+            "anchorIds": [
+              "p-64147"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative detailing Aunt Huang suppressing her planned grievance after learning of Qin Keqing's illness and receiving hospitable treatment.",
+            "anchorIds": [
+              "p-64923"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single social interaction and psychological defusing during Aunt Huang's visit.",
+            "anchorIds": [
+              "p-64923"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct narrative account of Jia Zhen discussing the incompetence of ordinary physicians and dispatching an invitation to scholar-physician Zhang Youshi.",
+            "anchorIds": [
+              "p-65219"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Details a specific decision and familial consultation regarding finding a medical consultant.",
+            "anchorIds": [
+              "p-65219"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Zhang Youshi develops a multi-step diagnostic argument, connecting detailed pulse readouts to organ dynamics, mental overexertion, and systemic symptoms.",
+            "anchorIds": [
+              "p-67029",
+              "p-67451"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-6"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "Applies comprehensive traditional medical principles of pulse interpretation, organ correspondence, and psychosomatic etiology to evaluate an illness.",
+            "anchorIds": [
+              "p-67029",
+              "p-67451"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The physician formulates a specific herbal prescription and prognostic timetable directly based on his diagnostic evaluation.",
+            "anchorIds": [
+              "p-67905",
+              "p-67790"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Provides a targeted prescription and survival prognosis explicitly tailored to Qin Keqing's immediate case.",
+            "anchorIds": [
+              "p-67905",
+              "p-67790"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative scene describing the familial gathering and banquet hosted at the Ning mansion to commemorate Jia Jing's birthday.",
+            "anchorIds": [
+              "p-68246",
+              "p-68495"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single commemorative feast and set of social interactions.",
+            "anchorIds": [
+              "p-68246",
+              "p-68495"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Scene showing Wang Xifeng and Baoyu visiting Qin Keqing's bedside, observing her physical deterioration and exchanging words of reassurance.",
+            "anchorIds": [
+              "p-70229",
+              "p-70392",
+              "p-70932"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single sickroom visit and dialogue between specific characters.",
+            "anchorIds": [
+              "p-70229",
+              "p-70392",
+              "p-70932"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Narrative recounting Jia Rui's flirtatious approach toward Xifeng in the garden and Xifeng immediately deducing his intentions and forming a retaliatory plan.",
+            "anchorIds": [
+              "p-71450",
+              "p-71659"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific encounter in the Huifang garden between Xifeng and Jia Rui.",
+            "anchorIds": [
+              "p-71450",
+              "p-71659"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Narrative detailing Xifeng's second visit after the winter solstice, her private assessment to prepare funeral arrangements, and her softened report to the Dowager.",
+            "anchorIds": [
+              "p-73230",
+              "p-73454"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A situational assessment of Qin Keqing's declining health trajectory and family preparations.",
+            "anchorIds": [
+              "p-73230",
+              "p-73454"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Domestic scene where Xifeng learns from Ping'er of Jia Rui's persistent visits and explicitly resolves to entrap and punish him.",
+            "anchorIds": [
+              "p-73782"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single conversation and scheme agreed upon by Xifeng and Ping'er.",
+            "anchorIds": [
+              "p-73782"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative account of Xifeng executing her trap by luring Jia Rui into an unheated passageway overnight, resulting in his exposure and punishment at home.",
+            "anchorIds": [
+              "p-74591",
+              "p-74188",
+              "p-74870"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A concrete nocturnal prank and physical ordeal inflicted on Jia Rui.",
+            "anchorIds": [
+              "p-74591",
+              "p-74188",
+              "p-74870"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Recounts the second trap where Jia Rong and Jia Qiang intercept Jia Rui, extort debt notes from him, and subject him to a dousing of foul waste.",
+            "anchorIds": [
+              "p-75597",
+              "p-76009",
+              "p-76452"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific ambush and extortion episode targeting Jia Rui.",
+            "anchorIds": [
+              "p-75597",
+              "p-76009",
+              "p-76452"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Synthesizes the physical toll of exposure, debt terror, and obsessive passion leading into chronic illness, alongside Xifeng's withholding of medicine.",
+            "anchorIds": [
+              "p-76692"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains to Jia Rui's comprehensive pathological collapse and ongoing demise.",
+            "anchorIds": [
+              "p-76692"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3tqcasLiEqKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 23760,
+    "candidatesTokenCount": 3610,
+    "totalTokenCount": 27370,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 23760
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3610
+      }
+    ]
+  },
+  "durationMs": 17822,
+  "requestHash": "7a88b4a74fc0a2229e1df782a8f95040d01b83a621458f6ae366d7eb33d34b09"
+}

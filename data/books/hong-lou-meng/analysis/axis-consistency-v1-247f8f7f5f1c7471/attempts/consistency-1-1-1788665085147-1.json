@@ -1,0 +1,564 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-1-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "A straightforward narrative depiction of Jia Yucun's poetic ambition, Zhen Shiyin's generous offer of travel funds, and Yucun's departure. It is directly introduced without requiring internal inferential deduction or prior reasoning steps.",
+            "anchorIds": [
+              "p-5811",
+              "p-4929"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Describes a concrete, localized historical encounter and financial transaction between Shiyin and Yucun in the temple quarters.",
+            "anchorIds": [
+              "p-5811",
+              "p-4929"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Yucun reads the couplet at Zhitong Temple ('身后有馀忘缩手，眼前无路想回头') and performs an immediate local inference that its simple words convey a deeper hidden meaning born of someone who has suffered severe reversals in life.",
+            "anchorIds": [
+              "p-9531"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.5,
+            "rationale": "While framed around a specific temple visit, the couplet formulates an ethical maxim about human greed and inability to retreat before disaster strikes.",
+            "anchorIds": [
+              "p-9531"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Leng Zixing combines social observation and internal insight to explain why the Jia mansion's apparent outward grandeur masks severe internal economic and generational decay, developing a complete local deduction.",
+            "anchorIds": [
+              "p-10069"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Provides a structural analysis of an aristocratic clan during institutional decline, characterizing the common plight of high-ranking houses.",
+            "anchorIds": [
+              "p-10069"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Leng Zixing delivers a purely factual and genealogical account of the two branches of the Jia house (Ning and Rong) and their descendants without developing inferential arguments.",
+            "anchorIds": [
+              "p-10733"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "A comprehensive factual mapping of the branches, titles, and progeny of the two ducal houses of Ning and Rong.",
+            "anchorIds": [
+              "p-10733"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Yucun invokes his experience with Zhen Baoyu as an empirical instantiation to confirm his preceding 'positive and negative humors' cosmological theory (n-2-7, depth 3.0). To preserve inferential order, the supporting instance cannot have lower depth than the theory it substantiates.",
+            "anchorIds": [
+              "p-12484",
+              "p-12310"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A detailed case study of the specific behavior and sayings of the young Zhen Baoyu of Jinling.",
+            "anchorIds": [
+              "p-12484",
+              "p-12310"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Builds upon Daiyu's arrival and entrance into the matriarch's rooms (n-3-3, depth 1.0), as Wang Xifeng's ostentatious arrival, bold manners, and interaction with Daiyu and Lady Wang represent an immediate continuous development in the scene.",
+            "anchorIds": [
+              "p-16388",
+              "p-17163"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Portrays the distinct personality, mannerisms, and authority of a specific individual, Wang Xifeng.",
+            "anchorIds": [
+              "p-16388",
+              "p-17163"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Occurs late at night directly following Baoyu's jade-smashing episode (n-3-6, depth 2.5); Daiyu's distress and weeping, and Xiren's explanations, are immediate direct narrative consequences of that event.",
+            "anchorIds": [
+              "p-22091",
+              "p-21533",
+              "p-21716"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a private nighttime conversation between Daiyu and the maid Xiren in the Green Gauze Closet.",
+            "anchorIds": [
+              "p-22091",
+              "p-21533",
+              "p-21716"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Presents the direct arrival of external news regarding Xue Pan's homicide in Jinling, introduced factually without preceding internal deduction.",
+            "anchorIds": [
+              "p-22426"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Concerns a particular criminal event and family consultation involving the Xue family.",
+            "anchorIds": [
+              "p-22426"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "The gate clerk draws an immediate practical inference regarding local official survival, explaining the 'Hu Guan Fu' list of the four prominent families to Yucun upon his contemplation of issuing an arrest warrant.",
+            "anchorIds": [
+              "p-23676",
+              "p-23998",
+              "p-24062"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Presents a formulaic rule governing a specific class (all local officials and the four monopolistic gentry families) within the province/officialdom setting.",
+            "anchorIds": [
+              "p-23676",
+              "p-24062"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Forms the narrative climax of the supernatural dream instruction in chapter 5, depending directly on Jinghuan's discourse on lust and pairing with Keqing (n-5-5, depth 3.0). It cannot be scored lower than its prerequisite.",
+            "anchorIds": [
+              "p-35668",
+              "p-35992"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Captures a single concrete awakening scene and reaction at a specific moment.",
+            "anchorIds": [
+              "p-35668",
+              "p-35992"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Directly develops out of Baoyu's awakening from the dream in n-5-6 (depth 3.0) and the instructions from Jinghuan in n-5-5 (depth 3.0), as Xiren discovers his nocturnal emission and they mutually agree to practice what was learned.",
+            "anchorIds": [
+              "p-36356",
+              "p-36141"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-5",
+              "n-5-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a singular specific episode of intimacy between Baoyu and Xiren.",
+            "anchorIds": [
+              "p-36356"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Granny Liu assesses her son-in-law's despondency and the household's winter poverty, deducing an immediate practical scheme to exploit the past clan connection with Lady Wang.",
+            "anchorIds": [
+              "p-37454",
+              "p-36592"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains to Granny Liu's own peasant family household and their strategy to seek aid from the Wang/Jia family.",
+            "anchorIds": [
+              "p-37454"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrates the delivery of palace flowers by Zhou Rui's wife, culminating in Daiyu's immediate caustic inference from the delivery sequence that she has received what others passed over.",
+            "anchorIds": [
+              "p-44749",
+              "p-46812",
+              "p-45351"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Describes a specific domestic episode of flower delivery and Daiyu's barbed reaction on that evening.",
+            "anchorIds": [
+              "p-46812"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Zhou Rui's wife sees Xiangling outside Lixiang Courtyard, drawing an immediate visual comparison to Qin Keqing and inferring the tragedy of Xiangling's forgotten parentage.",
+            "anchorIds": [
+              "p-45091"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on Xiangling's individual physical appearance, forgotten background, and tragic status.",
+            "anchorIds": [
+              "p-45091"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Depicts Baoyu and Qin Zhong's mutual impressions during their first encounter at the Ning mansion, each immediately drawing self-deprecating inferences upon seeing the other's grace and circumstance.",
+            "anchorIds": [
+              "p-48229",
+              "p-48521"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts one first meeting scene between Baoyu and Qin Zhong at the Ning mansion.",
+            "anchorIds": [
+              "p-48229",
+              "p-48521"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Drunken Jiao Da lashes out at the management and exposes Ning mansion scandals in immediate vindictive reaction to being ordered to escort Qin Zhong into the night.",
+            "anchorIds": [
+              "p-50029",
+              "p-49598",
+              "p-50515"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A critique centered on the specific masters and corrupt conduct inside the Ningguo mansion.",
+            "anchorIds": [
+              "p-50029",
+              "p-50515"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Baochai formulates a complete local physiological argument to persuade Baoyu, deducing that since wine is hot by nature, cold wine congeals and drains vital energy from internal organs to warm it.",
+            "anchorIds": [
+              "p-53681"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Her claim articulates a general medical and dietary rule governing how cold versus heated wine interacts with human bodily physiology.",
+            "anchorIds": [
+              "p-53681"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Depicts Baoyu's immediate drunken fury upon learning his nurse drank his tea, and Xiren's quick tactical reasoning to deflect his anger by threatening that all maidservants leave too.",
+            "anchorIds": [
+              "p-56403",
+              "p-55672",
+              "p-56058"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a single domestic emotional disturbance within the Jiangyun pavilion involving specific individuals.",
+            "anchorIds": [
+              "p-56403",
+              "p-55672",
+              "p-56058"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Implements and resolves the agreement made between Baoyu and Qin Zhong to attend school together (n-7-5, depth 2.0), incorporating the matriarch's approval and Qin Ye's preparations.",
+            "anchorIds": [
+              "p-56966",
+              "p-57187"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Refers to a specific social encounter and formal arrangement for Qin Zhong to attend school with Baoyu.",
+            "anchorIds": [
+              "p-56966",
+              "p-57187"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "The narrator provides an analytical overview deducing why the clan academy, though founded on benevolent lineage principles, naturally descended into chaotic moral degeneracy.",
+            "anchorIds": [
+              "p-58606",
+              "p-59294"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Applies across the restricted collective environment of the Jia clan school and its enrolled students and hangers-on.",
+            "anchorIds": [
+              "p-58606",
+              "p-59294"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-9-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Develops directly from the mixed social and moral environment of the clan school described in n-9-2 (depth 1.5), depicting Jin Rong's harassment of Qin Zhong and Xianglian and Jia Rui's biased intervention.",
+            "anchorIds": [
+              "p-59294"
+            ],
+            "prerequisiteNodeIds": [
+              "n-9-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Pertains to a single classroom dispute and interpersonal confrontation.",
+            "anchorIds": [
+              "p-59294"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Aunt Huang reacts to Mrs. Hu's recounting of Jin Rong's humiliation at school (n-10-2, depth 2.0), resolving to go to the Ning mansion to demand justice. Its inferential depth matches the prerequisite from which her decision arises.",
+            "anchorIds": [
+              "p-63821",
+              "p-63668"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Covers a particular scene of domestic communication and intent to confront a relation.",
+            "anchorIds": [
+              "p-63821",
+              "p-63668"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Aunt Huang backs down and changes her attitude entirely after hearing Madam You recount Qin Keqing's grave illness (n-10-4, depth 1.5), using a two-step deduction that pressing her complaint would invite ruin and that she is being treated warmly by Jia Zhen and You Shi.",
+            "anchorIds": [
+              "p-64923"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single social interaction and psychological defusing during Aunt Huang's visit.",
+            "anchorIds": [
+              "p-64923"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-10-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Directly develops out of Qin Keqing's illness recounted in n-10-4 (depth 1.5); Jia Zhen evaluates the failure of current doctors and infers the need to invite Zhang Youshi based on Feng Ziying's recommendation.",
+            "anchorIds": [
+              "p-65219"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Details a specific decision and familial consultation regarding finding a medical consultant.",
+            "anchorIds": [
+              "p-65219"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5tycatyHOKGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 54862,
+    "candidatesTokenCount": 4852,
+    "totalTokenCount": 59714,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 54862
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4852
+      }
+    ]
+  },
+  "durationMs": 22863,
+  "requestHash": "0477437fc00db2517818db22e667bfca10b8aad11e1a0e5540182b2fd35855bd"
+}

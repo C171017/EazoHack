@@ -1,0 +1,643 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-66-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "尤三姐直接驳斥兴儿对贾宝玉'糊涂、外清内浊'的看法，依据自身近距离观察提出直接推断，推理链条短，稍高于最基础观察但属于单步引申。",
+            "anchorIds": [
+              "p-473423"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "评析针对贾宝玉一个具体人物的品格与一贯待人行为，属于关于具名个体的界定。",
+            "anchorIds": [
+              "p-473423"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "在表达自择如意夫婿的前提下，尤三姐直接向二姐与贾琏点明意中人柳湘莲并折簪明誓，依赖前文立志自择夫婿的前提，属直接的行动表态与推断。",
+            "anchorIds": [
+              "p-474958",
+              "p-474371"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-5"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "针对尤三姐个人的择偶誓言与人生决断，兼涉柳湘莲一人，具体事件范围高度受限。",
+            "anchorIds": [
+              "p-474958",
+              "p-474371"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "贾琏在平安州偶遇柳湘莲与薛蟠，直接借机代尤三姐议婚并索取信物鸳鸯剑，直接依据尤三姐非柳不嫁之托进行推进行动。",
+            "anchorIds": [
+              "p-475269"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-2"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记叙平安州路途上贾琏、薛蟠与柳湘莲相遇议婚并授剑这一特定事件与场景。",
+            "anchorIds": [
+              "p-475269"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "尤三姐见到贾琏带回的鸳鸯剑信物后喜出望外，直接确信自身终身有托并改变行径，由得剑直接引发反应。",
+            "anchorIds": [
+              "p-476246"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "聚焦尤三姐接剑自喜、悬剑于绣房这一单一具体场景及个体心境。",
+            "anchorIds": [
+              "p-476246"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "柳湘莲向贾宝玉核实女方底细后，因宝玉'一对尤物'与东府名声的言谈推断尤三姐品行不端，进而推理退婚索剑，属于有明确推求和理由支撑的局部推断。",
+            "anchorIds": [
+              "p-476829"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "描述柳湘莲对贾府内闱评价与退婚索剑的特定交涉场景。",
+            "anchorIds": [
+              "p-476829"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "尤三姐在听闻湘莲退亲之意后，推断对方嫌其淫奔无耻、已无可挽回，进而拔剑自尽以死明志，是基于湘莲退婚行动的决绝反应。",
+            "anchorIds": [
+              "p-476829"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-4",
+              "n-66-5"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "描写尤三姐当面还剑自刎这一极为具体悲壮的单一场景事件。",
+            "anchorIds": [
+              "p-476829"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "柳湘莲在目睹尤三姐刚烈自刎后极度悔恨，又经荒庙幻境中三姐告别与跛足道人言语点拨，推演出断发弃世遁入空门的结果。",
+            "anchorIds": [
+              "p-478072"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "聚焦柳湘莲感悟断发跟从道人离去的具体经历与个人终局。",
+            "anchorIds": [
+              "p-478072"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "薛家得知尤三姐自刎与湘莲出家事件后展开议论，宝钗据此得出无可奈何听凭命定的态度并提出设宴酬谢伙计的务实建议，属事件触发后的直接反应。",
+            "anchorIds": [
+              "p-478627",
+              "p-479025"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-6",
+              "n-66-7"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "描述薛家母子对柳尤变故的应对以及处理自家经商伙计酬谢的具体事宜。",
+            "anchorIds": [
+              "p-478627",
+              "p-479025"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "薛蟠所带土特产箱子送达，宝钗过目并打点分送贾府众人，主要为具体的日常叙事动作，推理层级低。",
+            "anchorIds": [
+              "p-479623",
+              "p-480263"
+            ],
+            "prerequisiteNodeIds": [
+              "n-67-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "记叙宝钗分送江南土物这一特定家族人情往来事件。",
+            "anchorIds": [
+              "p-479623",
+              "p-480263"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "黛玉由眼前江南土产直接触发对身世飘零、双亲亡故的感伤，宝玉与紫鹃随之进行安慰，依赖见土仪这一直接前件。",
+            "anchorIds": [
+              "p-480389",
+              "p-480792",
+              "p-482075"
+            ],
+            "prerequisiteNodeIds": [
+              "n-67-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记录林黛玉睹物伤怀及与宝玉、宝钗交往的特定日常生活情境。",
+            "anchorIds": [
+              "p-480389",
+              "p-480792",
+              "p-482075"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "赵姨娘因贾环亦得分得土仪而推想宝钗为人周全，企图借此往王夫人处讨好却遭冷遇，由分送土仪直接引出的局部事件。",
+            "anchorIds": [
+              "p-482534"
+            ],
+            "prerequisiteNodeIds": [
+              "n-67-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记叙赵姨娘逢迎王夫人碰壁的特定家庭矛盾场景。",
+            "anchorIds": [
+              "p-482534"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "袭人园中见老祝妈赶蜂并提醒供鲜规矩，随后至凤姐处察觉下人密语而告退，属于直接的生活观察与叙事交代，推理极浅。",
+            "anchorIds": [
+              "p-483714",
+              "p-484280"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "记述袭人在园中管理小规矩及探视凤姐院落的具体事件。",
+            "anchorIds": [
+              "p-483714",
+              "p-484280"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "凤姐通过察言观色及对旺儿、兴儿的威逼盘问，层层追查得出贾琏偷娶尤二姐及退亲张华的详尽实情，展现凤姐的主动审讯推理过程。",
+            "anchorIds": [
+              "p-484820",
+              "p-485485"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "关于凤姐盘问查清贾琏私置外室这一特定家族秘密事件。",
+            "anchorIds": [
+              "p-484820",
+              "p-485485"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "在兴儿全盘招认后，凤姐权衡利害封锁消息，与平儿私下计较并心生处置策略，是针对审讯结果形成的下一步行动决断。",
+            "anchorIds": [
+              "p-485485",
+              "p-487507"
+            ],
+            "prerequisiteNodeIds": [
+              "n-67-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "描摹凤姐获悉外室真相后谋划私计的特定节点。",
+            "anchorIds": [
+              "p-485485",
+              "p-487507"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-68-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "凤姐实施既定计策，趁贾琏不在以退为进，装出贤良大度、自责有屈的姿态诱使尤二姐入园居住，逻辑推进环环相扣。",
+            "anchorIds": [
+              "p-487744",
+              "p-488139",
+              "p-488912"
+            ],
+            "prerequisiteNodeIds": [
+              "n-67-7"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "针对凤姐巧言赚取尤二姐入大观园的具体骗局与行动。",
+            "anchorIds": [
+              "p-487744",
+              "p-488139",
+              "p-488912"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-68-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "凤姐撤换尤二姐随从、换上恶仆善姐并暗中授意怠慢，表面继续示好以堵其嘴，属于赚入大观园后的后续实施步骤。",
+            "anchorIds": [
+              "p-489609",
+              "p-489945"
+            ],
+            "prerequisiteNodeIds": [
+              "n-68-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "叙述尤二姐入园后受善姐怠慢凌辱及凤姐两面做派的特定环境。",
+            "anchorIds": [
+              "p-489609",
+              "p-489945"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-68-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "凤姐利用审讯得知的张华旧聘线索，出资并授计旺儿唆使张华赴官府控告贾琏违旨停妻再娶，是一项周密策划的法律与舆论圈套。",
+            "anchorIds": [
+              "p-490560",
+              "p-490984"
+            ],
+            "prerequisiteNodeIds": [
+              "n-67-6",
+              "n-67-7"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记叙唆使张华告状这一具体的阴谋设计与衙门过付流程。",
+            "anchorIds": [
+              "p-490560",
+              "p-490984"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-68-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "借助官司立案声势，凤姐借题发挥直扑宁国府，哭闹寻死并痛斥尤氏与贾蓉，将自己置于受害者道德高地以形成极限施压。",
+            "anchorIds": [
+              "p-491697",
+              "p-492246",
+              "p-492891"
+            ],
+            "prerequisiteNodeIds": [
+              "n-68-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "描写凤姐大闹宁国府、痛骂贾蓉尤氏的特定戏剧性场面。",
+            "anchorIds": [
+              "p-491697",
+              "p-492246",
+              "p-492891"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-68-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "凤姐在声势压服后转颜示弱，迫使尤氏与贾蓉承担五百两打点银两并全盘听凭其在贾母面前编造谎言遮饰，达到敲诈与控制的目的。",
+            "anchorIds": [
+              "p-493296",
+              "p-495004"
+            ],
+            "prerequisiteNodeIds": [
+              "n-68-4"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "记录凤姐勒索宁府五百两银子并定下贾母跟前遮饰口径的特定妥协交易。",
+            "anchorIds": [
+              "p-493296",
+              "p-495004"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "凤姐按宁府编排说辞带二姐拜见贾母使之合法化，暗中又继续调唆张华逐客，见官断受阻恐张华翻案遂密谋杀人灭口，是一连串权谋推演与反制。",
+            "anchorIds": [
+              "p-495229"
+            ],
+            "prerequisiteNodeIds": [
+              "n-68-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "针对尤二姐进见贾母及凤姐密谋除掉张华的特定家族权谋事件。",
+            "anchorIds": [
+              "p-495229"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "面对贾赦赐妾秋桐的新变数，凤姐迅速调整策略，将两妾矛盾转化为武器，推行'借剑杀人'挑唆秋桐折磨二姐，并设计让贾母厌弃二姐，包含多重因果算计。",
+            "anchorIds": [
+              "p-497960",
+              "p-497060",
+              "p-497470"
+            ],
+            "prerequisiteNodeIds": [
+              "n-68-2",
+              "n-69-1"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "描述凤姐利用秋桐借剑杀人、逐步摧残尤二姐的特定内宅斗争手段。",
+            "anchorIds": [
+              "p-497960",
+              "p-497060",
+              "p-497470"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "二姐受气成疾后梦见三姐劝杀妒妇，二姐据自己过往之失推断今日之报皆系必然、誓不造杀业，展现其自省认命的伦理推导与抉择。",
+            "anchorIds": [
+              "p-498739"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-6",
+              "n-69-2"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "展现尤二姐托梦对话中的宿命观与因果报应观念，适用于其自身罪感认知。",
+            "anchorIds": [
+              "p-498739"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "庸医胡君荣误诊下虎狼药致二姐堕胎，凤姐趁势借助算命打卦将冲犯名头扣在属兔的秋桐头上，进一步恶化二姐与秋桐的矛盾，属于借力打力的连环操作。",
+            "anchorIds": [
+              "p-499258"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记录胡君荣下药打胎与凤姐借属相冲犯挑拨秋桐的特定内宅阴谋波折。",
+            "anchorIds": [
+              "p-499258"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "男胎既坠、身心交瘁且日受零气，尤二姐全面权衡自己已无可悬心且决计不能好，推断不如一死以保干净，毅然吞生金自逝，是整条迫害链条的终点总结。",
+            "anchorIds": [
+              "p-500740",
+              "p-500460"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-3",
+              "n-69-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描写尤二姐吞金自尽这一悲剧结局的具体场景与个案结果。",
+            "anchorIds": [
+              "p-500740",
+              "p-500460"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "贾琏在二姐死后悲痛发誓复仇，面对凤姐借故克扣银两与贾母薄葬之令，幸赖平儿暗赠碎银得以赊购好棺治丧，直接承接二姐之死并推进后续。",
+            "anchorIds": [
+              "p-501123",
+              "p-502065"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "叙述贾琏为尤二姐办丧事及平儿暗中相助银两的特定事件过程。",
+            "anchorIds": [
+              "p-501123",
+              "p-502065"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "交代将尤二姐葬于尤三姐墓侧，并叙及贾府因年终甄别丫头指配小厮各遇阻碍的事务，属于情节过渡与后置处置记录。",
+            "anchorIds": [
+              "p-502324"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "记录葬尤二姐及荣国府指配单身小厮丫头的一组具体家政安排。",
+            "anchorIds": [
+              "p-502324"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "49ucavv4JaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 31385,
+    "candidatesTokenCount": 4819,
+    "totalTokenCount": 36204,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 31385
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4819
+      }
+    ]
+  },
+  "durationMs": 26328,
+  "requestHash": "30d3cafc02df0e5527878af211c818dac37afd8ecb64bd2400ba087e28ca04af"
+}

@@ -1,0 +1,596 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-94-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "紫鹃向鸳鸯探听傅家亲事后产生直接省思，判定天下图宝玉而黛玉痴心，从而推导出专心侍奉黛玉的个案决策。",
+            "anchorIds": [
+              "p-685374",
+              "p-685869"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "论断聚焦于紫鹃个人的心理认知与针对林黛玉侍奉的态度决定。",
+            "anchorIds": [
+              "p-685374",
+              "p-685869"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "主要呈现初冬海棠反常绽放的客观事实，辅以贾府各人基于常识或预兆的即时揣测与判断。",
+            "anchorIds": [
+              "p-686375"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "指怡红院海棠花反季盛开这一具体奇异事件及众人现场反应。",
+            "anchorIds": [
+              "p-686375"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "承接海棠开花事件，贾母命众人赋诗赏花，属于对前一场景的直接后续记叙。",
+            "anchorIds": [
+              "p-687303",
+              "p-687674",
+              "p-687830"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描摹一次特定的家族赏花宴席及赋诗送礼的场景。",
+            "anchorIds": [
+              "p-687303",
+              "p-687674",
+              "p-687830"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "赏花散席换装后发现通灵宝玉遗失并引发怡红院内部排查与惊恐，属于局部动作与直接后果。",
+            "anchorIds": [
+              "p-688130"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记叙宝玉失玉这一突发性特定历史事件。",
+            "anchorIds": [
+              "p-688130"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "基于宝玉失玉的前提，李纨主张搜身，探春进一步推理出必是熟人恶作剧并疑及贾环，进而诱导与盘诘贾环。",
+            "anchorIds": [
+              "p-688911",
+              "p-689457",
+              "p-689865"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "限定于大观园内针对失玉展开搜身、怀疑贾环与赵姨娘大闹的具体纷争。",
+            "anchorIds": [
+              "p-688911",
+              "p-689457",
+              "p-689865"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "凤姐结合失玉情境及盗窃者畏罪毁玉的心理作策略推断，王夫人据此定策暗访限期，包含完备的谋略分析推理。",
+            "anchorIds": [
+              "p-690670"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-5"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "虽属特定案件应对，但蕴含了针对偷窃者心理进行掩饰暗访的家族内务处理策略。",
+            "anchorIds": [
+              "p-690670"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "失玉后下人采取封锁门户并经由拆字算命推断当铺赎玉，是依据丢失事件做出的直接迷信占断推演。",
+            "anchorIds": [
+              "p-691268",
+              "p-692154"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "涉及为寻玉而展开测字与听闻消息的具体场景。",
+            "anchorIds": [
+              "p-691268",
+              "p-692154"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-95-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "承接前文岫烟提议求妙玉扶乩，扶乩降乩语‘青埂峰’，引发众人对乩语隐义的一轮诠释推论。",
+            "anchorIds": [
+              "p-692786",
+              "p-693123",
+              "p-693159"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-8"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记录妙玉扶乩求玉及众人释读乩语的具象事件。",
+            "anchorIds": [
+              "p-692786",
+              "p-693123",
+              "p-693159"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-95-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "黛玉结合‘金玉良缘’传闻与海棠反常开花两项已知信息，进行心理权衡与推理，得出既喜金玉破又忧不祥的矛盾心境。",
+            "anchorIds": [
+              "p-693655"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-3",
+              "n-94-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "专门刻画黛玉个体因失玉产生的深层心绪起伏。",
+            "anchorIds": [
+              "p-693655"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-95-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "元妃因痰疾突然暴崩的外部叙事推进，属于直接引入的重大转折事件，无复杂前置推理链。",
+            "anchorIds": [
+              "p-693907",
+              "p-694480"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "元春病逝这一贾府历史转折的关键具体事件。",
+            "anchorIds": [
+              "p-693907",
+              "p-694480"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-95-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "因失玉病因持续作用，宝玉逐步发展出神魂失散、痴呆言语的病理表征，是从失玉到身体病变的阶段性发展推理。",
+            "anchorIds": [
+              "p-694940",
+              "p-695974"
+            ],
+            "prerequisiteNodeIds": [
+              "n-94-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "关于贾宝玉个人病症恶化及神智变化状态的描述。",
+            "anchorIds": [
+              "p-694940",
+              "p-695974"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-95-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "贾母在发现宝玉病重神魂失散后，判断寻常查访无济于事，从而决策移住避祟并下令悬赏万两寻玉，贾政则根据声誉考量揭榜。",
+            "anchorIds": [
+              "p-695974",
+              "p-696994",
+              "p-697366"
+            ],
+            "prerequisiteNodeIds": [
+              "n-95-4"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "贾母对宝玉失玉采取的家族重赏与庇护行动。",
+            "anchorIds": [
+              "p-695974",
+              "p-696994",
+              "p-697366"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-95-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "悬榜引来市井送假玉，众人根据色泽等判断难定，而宝玉接玉即知非真，贾母推论其诈赏原委并主张宽待以安人心。",
+            "anchorIds": [
+              "p-697716",
+              "p-698251"
+            ],
+            "prerequisiteNodeIds": [
+              "n-95-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "假玉骗赏的具体风波及其平息处置过程。",
+            "anchorIds": [
+              "p-697716",
+              "p-698251"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "贾母统合宝玉失玉病重、贾政将赴外任、算命金命帮扶及国孝家规等多重现实约束，推导出越礼娶宝钗冲喜的应急方案。",
+            "anchorIds": [
+              "p-700068"
+            ],
+            "prerequisiteNodeIds": [
+              "n-95-4"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "贾母针对宝玉冲喜与贾府近期家族婚事制定的变通决策。",
+            "anchorIds": [
+              "p-700068"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "袭人知悉冲喜决定后，回顾宝玉对黛玉的深情前因，论证娶宝钗将导致‘冲喜变催命’，从而跪求王夫人转圜筹划。",
+            "anchorIds": [
+              "p-701638",
+              "p-702141"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-1"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "袭人针对宝玉黛玉私情对冲喜婚事所构成的隐患陈词。",
+            "anchorIds": [
+              "p-701638",
+              "p-702141"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "凤姐在王夫人陈告袭人顾虑的基础上，针对宝玉心病设计出‘假称娶黛玉以安其心，实际迎娶宝钗’的掉包计完整策略。",
+            "anchorIds": [
+              "p-702613"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-2"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "用于解决贾宝玉婚事危机的特定家族欺瞒计策。",
+            "anchorIds": [
+              "p-702613"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "傻大姐在山石后哭泣并无意中向黛玉泄露娶宝姑娘冲喜且隐瞒林姑娘的机密，属于偶发事件带来的直接信息泄露。",
+            "anchorIds": [
+              "p-703452"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "傻大姐失言泄密与黛玉偶然听闻的单个具体场景。",
+            "anchorIds": [
+              "p-703452"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "黛玉听闻机关后心神大震，恍惚中前往怡红院探宝玉，二人失常问答‘为林姑娘病了’，是对泄密震荡的心智病态反应。",
+            "anchorIds": [
+              "p-704354",
+              "p-704730"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "宝黛二人相见对坐傻笑、互诉病由的精神失常状态。",
+            "anchorIds": [
+              "p-704354",
+              "p-704730"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "从探望宝玉的心智迷失到回潇湘馆门前瞬间倒地呕血，是心病重压引发的直接致命生理崩解。",
+            "anchorIds": [
+              "p-705431"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "黛玉归馆门口呕血昏迷的单点危机事件。",
+            "anchorIds": [
+              "p-705431"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "黛玉呕血苏醒后忆及傻大姐之言，从数年心病与求生无望推论出‘反不伤心，惟求速死以完此债’的彻底绝望。",
+            "anchorIds": [
+              "p-705684",
+              "p-706016"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "林黛玉面临情断生死时的个体心理决绝状态。",
+            "anchorIds": [
+              "p-705684",
+              "p-706016"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "贾母探病认定黛玉生心病难愈且起嫌隙，遂与凤姐、薛姨妈加速定案掉包成亲，是家族长辈根据利益取舍做出的决策。",
+            "anchorIds": [
+              "p-706423",
+              "p-707627"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "贾府决策层决定放弃黛玉、从速完结宝钗婚事的合议策略。",
+            "anchorIds": [
+              "p-706423",
+              "p-707627"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "凤姐依据掉包计策实操试探，以‘娶林妹妹’诱使宝玉狂喜好转，上下人等据此维持假局以成冲喜之谋。",
+            "anchorIds": [
+              "p-706986",
+              "p-708743"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-3",
+              "n-97-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "凤姐试探哄骗宝玉及准备过礼礼仪的诈术实施场景。",
+            "anchorIds": [
+              "p-706986",
+              "p-708743"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "黛玉在无人问津的绝望孤境下，彻底割断与宝玉往日情分，决绝将定情旧帕与一生诗稿投火焚毁。",
+            "anchorIds": [
+              "p-709714",
+              "p-710125"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "黛玉焚毁旧帕和诗稿这一极具仪式感的决绝绝情行为。",
+            "anchorIds": [
+              "p-709714",
+              "p-710125"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "紫鹃经多方探看证实宝玉当夜娶亲实情，在悲愤中确认黛玉已处弥留之际，紧急请托孀居避嫌的李纨照料后事。",
+            "anchorIds": [
+              "p-710125",
+              "p-711517",
+              "p-711784"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-4",
+              "n-97-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "潇湘馆冷落凄凉与李纨、平儿奔赴料理黛玉后事的悲剧现场。",
+            "anchorIds": [
+              "p-710125",
+              "p-711517",
+              "p-711784"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "dtycareQBaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 29763,
+    "candidatesTokenCount": 4150,
+    "totalTokenCount": 33913,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 29763
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4150
+      }
+    ]
+  },
+  "durationMs": 23526,
+  "requestHash": "32c612afcad6496e09a484c39867beb0b532a58a32603c96de1f1985ed8d556f"
+}

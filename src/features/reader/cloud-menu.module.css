@@ -9,3 +9,5 @@
 .trigger:focus-visible, .google:focus-visible { outline: 1.5px solid currentColor; outline-offset: 4px; border-radius: 3px; }
 .error { position: absolute; top: 100%; right: 52px; width: min(240px, calc(100vw - 100px)); font-size: 13px; line-height: 1.5; }
 @media (prefers-reduced-motion: reduce) { .options, .google { transition: opacity 120ms ease; transition-delay: 0ms !important; transform: none; } }
+
+.menu[data-open='true'] .google:disabled { opacity: .5; cursor: wait; }

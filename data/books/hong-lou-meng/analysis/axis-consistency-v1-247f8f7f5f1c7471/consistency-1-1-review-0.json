@@ -1,0 +1,69 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-2-8",
+        "reason": "Invalid prerequisite and flawed reasoning depth rationale. Zhen Baoyu's idiosyncratic childhood behavior in Jinling is a narrated empirical anecdote from Jia Yucun's past tutoring experience, which serves as an illustrative example rather than a deductive consequence that logically depends on the cosmological theory in n-2-7. Confusing an illustrative instantiation with an inferential chain whose depth must exceed the theoretical claim violates the definition of reasoning depth."
+      },
+      {
+        "nodeId": "n-3-4",
+        "reason": "Spurious prerequisite. Wang Xifeng's dramatic and ostentatious arrival in Chapter 3 is a direct narrative scene continuation and character introduction; it does not inferentially depend upon or deduce conclusions from Daiyu's prior entrance and tears with the matriarch in n-3-3. Temporal or narrative sequence was conflated with an inferential dependency."
+      },
+      {
+        "nodeId": "n-3-7",
+        "reason": "Spurious prerequisite. The bedtime conversation between Daiyu and Xiren in the Green Gauze Closet narrates immediate domestic comforting following the earlier disturbance; it is narrative plot progression rather than an inferential reasoning step depending deductively on n-3-6 as a logical prerequisite."
+      },
+      {
+        "nodeId": "n-5-6",
+        "reason": "Spurious prerequisite and flawed reasoning depth rationale. Baoyu waking up in terror from the nightmare at the Ford of Error and shouting Keqing's name is a dramatic scene depiction and narrative resolution of the dream sequence, not a multi-step logical inference depending upon Jinghuan's discourse in n-5-5. The justification that a narrative climax cannot be scored lower than a preceding speech mechanically conflates narrative sequence with inferential reasoning depth."
+      },
+      {
+        "nodeId": "n-6-1",
+        "reason": "Spurious prerequisites and erroneous reasoning depth. Baoyu and Xiren's first intimate encounter is a concrete narrative event following Baoyu's nocturnal emission. While the characters imitate what Baoyu experienced in the dream, depicting this act does not constitute a depth-3 sequence of logical reasoning dependent on n-5-5 and n-5-6."
+      },
+      {
+        "nodeId": "n-8-6",
+        "reason": "Spurious prerequisite. The formal visit of Qin Zhong to the Jia mansion and Qin Ye preparing the tuition/gift for Jia Dairu is the social and narrative execution of schooling plans, not an inferential deduction depending on n-7-5 as a reasoning prerequisite."
+      },
+      {
+        "nodeId": "n-9-3",
+        "reason": "Spurious prerequisite. The classroom altercation between Jin Rong, Qin Zhong, Xianglian, and Jia Rui is a narrative dramatization of schoolroom conflict, not an inferential deduction derived from the sociological expository overview in n-9-2."
+      },
+      {
+        "nodeId": "n-10-3",
+        "reason": "Spurious prerequisite and flawed rationale. Aunt Huang's emotional outburst and decision to go to the Ning mansion to demand justice is an immediate impulsive emotional reaction to her sister-in-law's complaint, not an inferential reasoning step depending on Mrs. Hu's pragmatic calculations in n-10-2, nor does reasoning depth mechanically match prerequisites."
+      },
+      {
+        "nodeId": "n-10-5",
+        "reason": "Spurious prerequisite. Aunt Huang's change of attitude upon hearing about Qin Keqing's critical illness and being treated politely by Jia Zhen and Madam You is a localized social retreat and face-saving reaction within the immediate scene, not an inferential prerequisite deduction from n-10-4."
+      },
+      {
+        "nodeId": "n-10-6",
+        "reason": "Spurious prerequisite. Jia Zhen's conversation with Madam You and his decision to consult Zhang Youshi on Feng Ziying's recommendation is narrative plot development regarding seeking medical help, not an inferential reasoning deduction depending on Madam You's speech to Aunt Huang in n-10-4."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "_dycavDOPL2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 58447,
+    "candidatesTokenCount": 933,
+    "totalTokenCount": 59380,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 58447
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 933
+      }
+    ]
+  },
+  "durationMs": 8199,
+  "requestHash": "af192964f4c8ac9b319f7880f8bf288068a3d30c16b98b561b4a509e6315c4cd"
+}

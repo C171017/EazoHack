@@ -1,0 +1,579 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-101-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "凤姐因昨夜大观园见鬼（已在n-101-1发生）受惊，听了散花寺姑子大了对菩萨除邪显圣的鼓吹后，素不信神鬼的心理产生动摇，决定前去抽签验证，属于承接前一事件的单层心理转折推断。",
+            "anchorIds": [
+              "p-739348"
+            ],
+            "prerequisiteNodeIds": [
+              "n-101-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "叙述凤姐个人在特定时间（听了大了的话后）产生求签动念的具体心路与事件。",
+            "anchorIds": [
+              "p-739348"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "紧承去散花寺求签之行，记载其抽得第三十三签衣锦还乡签及签诗与众人附和的吉兆，是一步直接情节展开。",
+            "anchorIds": [
+              "p-740183",
+              "p-740512",
+              "p-740565"
+            ],
+            "prerequisiteNodeIds": [
+              "n-101-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记载散花寺求签抽中特定签词这一具体独立事件。",
+            "anchorIds": [
+              "p-740183",
+              "p-740512",
+              "p-740565"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "基于凤姐所求之签（n-101-6），宝钗看出‘衣锦还乡’背后隐含的隐忧与异兆，做出了与常人不同的反向文本解读推理。",
+            "anchorIds": [
+              "p-740782"
+            ],
+            "prerequisiteNodeIds": [
+              "n-101-6"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "宝钗对凤姐这一特定命运签文的个人预判与解读。",
+            "anchorIds": [
+              "p-740782"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "承接前文定议探春远嫁（n-100-4），王夫人向宝钗托付家事并安排探春启程辞行，属于承接此前婚嫁议决后的具体行动步骤。",
+            "anchorIds": [
+              "p-741051",
+              "p-741499"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "记述探春辞别远嫁及王夫人与宝钗托付家务的具体家庭场面。",
+            "anchorIds": [
+              "p-741051",
+              "p-741499"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "交代众姊妹搬离后大观园的荒凉背景，尤氏送探春归途触景感怀，回家后得病谵语狂乱，是一组由景致变迁引致人物心理和生理反应的情节推理。",
+            "anchorIds": [
+              "p-741589"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "涉及尤氏穿园染病及大观园当时特定萧索场景的描写。",
+            "anchorIds": [
+              "p-741589"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "毛半仙依据尤氏发病时间和周易未济卦、六壬魄化课进行术数推演，断定旧宅有伏虎作怪并预测日后病愈时间，是结合具体术数理则做出的较完整局部推断。",
+            "anchorIds": [
+              "p-741922"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-2"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "术士为尤氏一人病情进行术数卜算和断语。",
+            "anchorIds": [
+              "p-741922"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "整合尤氏得病（n-102-2）、毛半仙占验（n-102-3）以及凤姐见鬼、贾珍父子相继患病与吴贵媳妇暴死等多桩离奇变故，贾府上下层层推演认定大观园闹鬼致使全园封锁，是一连串局部推论汇聚的结果。",
+            "anchorIds": [
+              "p-743139",
+              "p-743893"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-2",
+              "n-102-3"
+            ]
+          },
+          "generality": {
+            "value": 2.3,
+            "rationale": "涵盖贾府宁荣两府下人、主子群体在数月间疑神疑鬼、园中废弃的普遍恐慌状态。",
+            "anchorIds": [
+              "p-743139",
+              "p-743893"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "承接两府妖言滋蔓（n-102-4），贾赦本欲破除迷信却在入园查验时被家人误认的野鸡吓退，进而做出请道纪司大张旗鼓设坛驱妖的行动决策。",
+            "anchorIds": [
+              "p-743893",
+              "p-744537",
+              "p-744775"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-4"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "贾赦受惊及道士在大观园正殿建醮做法驱邪的特定事件。",
+            "anchorIds": [
+              "p-743893",
+              "p-744537",
+              "p-744775"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "在设坛法事完毕（n-102-5）后，贾珍以‘妖聚成形散成气’的理论弹压贾蓉等人的质疑，并通过这场法事从心理机制上平息了两府上下对妖异的疑惧，形成病愈人定的因果结局。",
+            "anchorIds": [
+              "p-745091"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-5"
+            ]
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "涵盖贾府上下对法事效果的心理认同与风波平息过程，并伴随贾珍关于妖气的抽象解释。",
+            "anchorIds": [
+              "p-745091"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "承接江西粮道任上李十儿等家人舞弊的背景（n-99-5），贾琏打探并证实贾政被江西节度使参奏失察重征、朝廷降三级令其即日回京的官场结果，是此前劣迹发展的直接因果。",
+            "anchorIds": [
+              "p-745408",
+              "p-745631"
+            ],
+            "prerequisiteNodeIds": [
+              "n-99-5"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "关涉朝廷对贾政一人所任江西粮道职事的处分敕命与回京调令。",
+            "anchorIds": [
+              "p-745408",
+              "p-745631"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "王夫人针对贾政被参降旨回京的事实（n-102-7），综合跟从家人在外招摇瞒主捞钱的弊端，推导出外任凶险、回京任职反能保全性命与家声的完整论断。",
+            "anchorIds": [
+              "p-745992"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-7"
+            ]
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "王夫人对贾政此类官宦子弟放外任与在京任职利弊差异提出的评述与原则。",
+            "anchorIds": [
+              "p-745992"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "薛家婆子突至贾府向王夫人慌忙报丧，宣布夏金桂暴毙，属于直接引出的突发故事情节起点。",
+            "anchorIds": [
+              "p-746378"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "关于薛家婆子报信夏金桂身亡的单个场景。",
+            "anchorIds": [
+              "p-746378"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "承接金桂暴毙（n-103-2），夏母与儿子前来薛家借机索命讹诈，贾琏带家奴赶到并以刑部相验与男女规矩压服夏家，展开情节对抗。",
+            "anchorIds": [
+              "p-748608",
+              "p-749291"
+            ],
+            "prerequisiteNodeIds": [
+              "n-103-2"
+            ]
+          },
+          "generality": {
+            "value": 0.6,
+            "rationale": "薛、夏两家冲突与贾琏临场处置的特定事件。",
+            "anchorIds": [
+              "p-748608",
+              "p-749291"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "在夏家索命对抗（n-103-4）中，宝钗等人主导搜检金桂房室，查出财物被空及包砒霜纸包，直接推翻夏家的无端指责并使夏母心虚。",
+            "anchorIds": [
+              "p-750271",
+              "p-750546"
+            ],
+            "prerequisiteNodeIds": [
+              "n-103-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "查抄金桂房间首饰与搜查药纸的特定侦查场景。",
+            "anchorIds": [
+              "p-750271",
+              "p-750546"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "结合此前金桂恨香菱（n-100-3）的动机与房内搜出砒霜的证据（n-103-5），宝蟾供述出金桂本欲下毒害香菱、因宝蟾嫌香菱不配喝汤暗换放盐碗而导致金桂自毙的闭环真相。",
+            "anchorIds": [
+              "p-750927"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-3",
+              "n-103-5"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "阐明夏金桂一人因下毒算计失误而自食恶果的具体事实经过。",
+            "anchorIds": [
+              "p-750927"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "在金桂自毙真相大白（n-103-6）且偷盗首饰被揭露后，夏家母子反成理屈惧罪之方，贾琏顺势施压促成夏家主动去刑部具结免验，平息命案风波。",
+            "anchorIds": [
+              "p-751655"
+            ],
+            "prerequisiteNodeIds": [
+              "n-103-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "夏家母子惧罪私了、具结免验并薛家入殓的结局。",
+            "anchorIds": [
+              "p-751655"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾雨村因公至急流津，在荒庙偶遇打坐的甄士隐，甄士隐以暗语禅机对其点拨，雨村半疑半悟，属于一个直接生发的机缘情节起点。",
+            "anchorIds": [
+              "p-751935",
+              "p-752361"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "雨村与士隐二人在渡口荒庙相遇对话的单一离奇事件。",
+            "anchorIds": [
+              "p-751935",
+              "p-752361"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-104-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "记述倪二醉酒躺街冲撞雨村官轿，自恃放诞被雨村下令重责并收押，为独立的市井与官场冲突情节，无复杂先前推论支撑。",
+            "anchorIds": [
+              "p-753186"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "倪二醉酒冲撞贾雨村仪仗受罚的单一街头事件。",
+            "anchorIds": [
+              "p-753186"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-104-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "承接急流津相遇（n-103-8）后庙宇起火，衙役探查回禀火后无尸骸骨殖、蒲团成灰，雨村据此确信士隐仙去，属于基于现场汇报的推理断定。",
+            "anchorIds": [
+              "p-755307",
+              "p-752906"
+            ],
+            "prerequisiteNodeIds": [
+              "n-103-8"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "贾雨村对甄士隐生死去向的个案判定。",
+            "anchorIds": [
+              "p-755307",
+              "p-752906"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-104-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "贾政因江西粮道被参回京谢罪（n-102-7），主上面询云南私带军火（鲍音）与强占民妇（贾范）二案，贾政由此推知主上已紧盯贾氏劣迹，进而戒饬贾珍贾琏等后辈要小心谨饬。",
+            "anchorIds": [
+              "p-755682",
+              "p-757391"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-7"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "涉及贾氏整个家族在朝廷与圣眷面前所处政治危机的洞察与防范警示。",
+            "anchorIds": [
+              "p-755682",
+              "p-757391"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-105-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "贾政内廷感受到的朝廷隐忧（n-104-4）终于爆发，锦衣府赵全与西平王奉旨包围贾府并查抄贾赦家产，赵全借机欲扩大抄查，是朝廷惩治贾府劣迹由潜隐走向明朗的关键落实节点。",
+            "anchorIds": [
+              "p-759171"
+            ],
+            "prerequisiteNodeIds": [
+              "n-104-4"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "记录奉旨查抄贾赦世职与荣国府被围查的重大政治家变事件。",
+            "anchorIds": [
+              "p-759171"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-105-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "在赵全意图尽抄两府（n-105-1）的危机下，北静王奉旨赶到传旨剥夺赵全查抄权，与西平王商定严格限定查抄范围于贾赦名下，安抚贾政，是查抄过程中扭转局面的政治干预步骤。",
+            "anchorIds": [
+              "p-760638"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "北静王和西平王对查抄贾府范围的临时行政与司法处置。",
+            "anchorIds": [
+              "p-760638"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-105-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "抄家番役闯入大宅（n-105-1）引发后宅震动，贾母宴饮中断骇至气绝，凤姐病中吓厥，是查抄外力直接催折内宅精神支柱的情节必然展开。",
+            "anchorIds": [
+              "p-761234",
+              "p-761695"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-1"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "描摹贾母、凤姐等内宅女性在抄家突降时的惊骇病危场面。",
+            "anchorIds": [
+              "p-761234",
+              "p-761695"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-105-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.5,
+            "rationale": "在两王主持清点登帐（n-105-2）过程中，面对东跨所搜出的违禁重利借券，贾琏为保护叔父贾政挺身认下借券在己房中，遂被看守并案，完成了责任归属的当场裁决。",
+            "anchorIds": [
+              "p-761890"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-2"
+            ]
+          },
+          "generality": {
+            "value": 0.7,
+            "rationale": "查点贾赦家产物资名录及贾琏现场承担重利罪责的司法记录情境。",
+            "anchorIds": [
+              "p-761890"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "j9ycapazJ4Kbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 29860,
+    "candidatesTokenCount": 4581,
+    "totalTokenCount": 34441,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 29860
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4581
+      }
+    ]
+  },
+  "durationMs": 27731,
+  "requestHash": "94cd3c4051300f0639782de6fde95bb9e07bf0e77798f441614c775b66519f75"
+}

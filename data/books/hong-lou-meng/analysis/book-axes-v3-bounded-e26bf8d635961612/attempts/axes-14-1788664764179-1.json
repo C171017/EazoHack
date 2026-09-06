@@ -1,0 +1,575 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-50-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "贾母踏雪至芦雪广看诗并催问惜春作画进度，是直接观察到的叙事行为，紧承众人作诗后发生，包含直接动作推演（即景提议作灯谜、移步暖香坞），属直接推演与记录。",
+            "anchorIds": [
+              "p-343800",
+              "p-344447"
+            ],
+            "prerequisiteNodeIds": [
+              "n-50-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述贾母雪天至芦雪广看梅作谜并赴暖香坞催惜春作画这一单一具体事件情境。",
+            "anchorIds": [
+              "p-343800",
+              "p-344447"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "薛姨妈由贾母细询宝琴年庚八字推察其意在为宝玉求配，并由此引出已受梅家之约的解释，是一处基于言行细节展开的局部推理与应对。",
+            "anchorIds": [
+              "p-345008",
+              "p-346027"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-2",
+              "n-50-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "具体涉及贾母、薛姨妈、宝琴及宝玉之间的议婚意向与梅家婚约这一具体事件与个别人物。",
+            "anchorIds": [
+              "p-345008",
+              "p-346027"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "紧承前日贾母提议作春灯谜，众人次日于暖香坞各自制谜猜谜，属于叙事展开与直接即兴创作推演。",
+            "anchorIds": [
+              "p-346399",
+              "p-347404"
+            ],
+            "prerequisiteNodeIds": [
+              "n-50-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描绘暖香坞中众人各自出谜、猜谜的具体聚会活动情景。",
+            "anchorIds": [
+              "p-346399",
+              "p-347404"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "宝钗以史传无据欲削怀古诗后二首，黛玉与李纨结合世俗戏文、关帝庙及《广舆记》名胜古迹形成机制进行多步论证，反驳正史局限并确立留存之合理性，形成完整的局部小推论链。",
+            "anchorIds": [
+              "p-347550",
+              "p-348040"
+            ],
+            "prerequisiteNodeIds": [
+              "n-50-6"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "论述古迹传闻与文学/戏曲演义在民间口耳相传、穿凿形成的普遍文化规律，超越单首诗而涉及世俗传说的普遍机制。",
+            "anchorIds": [
+              "p-348040"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "凤姐从袭人回家省亲的穿戴行李推想至外人对贾府当家声名的评判，进而展开调度并赠送皮褂、包袱，是一处清晰的基于当家立场的局部实用推论与决策。",
+            "anchorIds": [
+              "p-348801",
+              "p-348596",
+              "p-348471"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "阐述贾府掌家体统与奴仆外出装裹的具体行为准则，结合了凤姐特定的管家手段。",
+            "anchorIds": [
+              "p-348801",
+              "p-348596"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "平儿观察到岫烟在大雪中独穿旧毡之寒酸，对比众人皆穿大红羽缎，推知其艰难寒苦，从而利用取衣契机请示凤姐转赠斗篷，是一段明晰的观察与善意推论。",
+            "anchorIds": [
+              "p-349373"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-2",
+              "n-51-2"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "限于平儿对邢岫烟冬衣窘况的具体体恤与赠衣事件。",
+            "anchorIds": [
+              "p-349373"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "由晴雯贪凉单衣夜出唬人受风直接推导至次日感冒伤风发热，是直接的生活因果观察与叙事交代。",
+            "anchorIds": [
+              "p-350942",
+              "p-351675"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记录晴雯一人在特定冬夜受凉致病的具体起因和经过。",
+            "anchorIds": [
+              "p-350942",
+              "p-351675"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "宝玉依据药方中的枳实、麻黄推断庸医不顾弱质男女虚实妄用峻剂，结合自身以往患病经历推导出该药不适合晴雯，进而决定另延王太医并减药调治。",
+            "anchorIds": [
+              "p-352821",
+              "p-352315",
+              "p-353554"
+            ],
+            "prerequisiteNodeIds": [
+              "n-51-4"
+            ]
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "关于娇弱闺阁女子伤风服药宜温和疏散、禁绝虎狼猛药的特定病理经验判定。",
+            "anchorIds": [
+              "p-352821",
+              "p-353554"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "凤姐结合冬日严寒姑娘们往返二门空心吃风致病的顾虑，推导出设立园中小厨房调停饮食的必要性，并论证分例平衡不致多费。",
+            "anchorIds": [
+              "p-354072"
+            ],
+            "prerequisiteNodeIds": [
+              "n-51-4"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "针对大观园中诸位姑娘冬日就餐保健与杂务分例调配的行政管理举措。",
+            "anchorIds": [
+              "p-354072"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "贾母叹凤姐太伶俐恐非福寿之兆，凤姐即席引贾母福寿双全为证驳回世俗所谓“太伶俐活不长”的常理，完成机智的就地辩驳。",
+            "anchorIds": [
+              "p-354461"
+            ],
+            "prerequisiteNodeIds": [
+              "n-51-6"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "围绕世俗“太伶俐活不长”的普遍迷信/观念展开个案反驳与幽默化解。",
+            "anchorIds": [
+              "p-354461"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝琴回忆并叙述自己童年在西海沿子所见西洋真真国女子的面貌、服饰与汉诗，为见闻叙述与转述。",
+            "anchorIds": [
+              "p-357286",
+              "p-358213",
+              "p-358266"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描述西洋特定女子的一段异域见闻及其所作的一首五言律诗。",
+            "anchorIds": [
+              "p-357286",
+              "p-358213"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾母因宝玉将赴舅舅寿宴且天阴欲雪，考量其装束后特命鸳鸯取出俄罗斯雀金呢赐予宝玉，鸳鸯依令取出且对宝玉回避（承接誓绝绝婚背景）。",
+            "anchorIds": [
+              "p-359148"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-6"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "涉及贾母赐宝玉孔雀呢氅衣出行拜寿的具体家常事件。",
+            "anchorIds": [
+              "p-359148"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "晴雯由镯子失窃一事严惩坠儿并立即立威驱逐，麝月据贾府规矩（老太太吩咐直呼小名、上下有别）严词斥退坠儿母亲的挑剔，展开了有条理的管教辩驳。",
+            "anchorIds": [
+              "p-360206",
+              "p-360849"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "怡红院房中处置丫鬟盗窃与弹压三门外下人媳妇的内房家规适用。",
+            "anchorIds": [
+              "p-360206",
+              "p-360849"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "晴雯辨认出外间工匠皆不识的雀金呢材质与界线织法，在无人能补、宝玉次日必穿的困境下推演出自行动手织补之法并拼命实施完成。",
+            "anchorIds": [
+              "p-361674"
+            ],
+            "prerequisiteNodeIds": [
+              "n-51-4",
+              "n-52-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记叙重病高烧的晴雯通宵为宝玉缝补雀金呢烧痕这一独一无二的具体事件。",
+            "anchorIds": [
+              "p-361674"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "王太医根据晴雯劳力神虚改方益神养血，文中明确提炼总结出贾府世传以“净饿为主、服药为辅”调理风寒咳嗽的家常医理秘法。",
+            "anchorIds": [
+              "p-362756"
+            ],
+            "prerequisiteNodeIds": [
+              "n-51-6",
+              "n-52-6"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "概括贾宅全府上下普遍适用的伤风咳嗽调理准则（“净饿为主，次则服药调养”）。",
+            "anchorIds": [
+              "p-362756"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾珍向尤氏阐述领取朝廷春祭银两的目的并非银钱数额，而是朝廷恩典体面与列祖遗泽，并据此安排回禀祖母及焚化布袋的仪式程式。",
+            "anchorIds": [
+              "p-363643",
+              "p-363855",
+              "p-364136"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "阐述世袭贵族家庭对待皇家春祭恩赐的礼法意义与对待天恩的家族观念。",
+            "anchorIds": [
+              "p-363643"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "贾珍与贾蓉由乌进孝所报年成灾情与收租数额，逐层推演分析出两府尤其是荣府因贵妃省亲筑园、年例冗杂、进少出多所导致的“外强中干”与财政亏空实质。",
+            "anchorIds": [
+              "p-364410",
+              "p-364891"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "揭示荣宁两府乃至同类世家大族在繁华表象下经济收支失衡、外强中干的整体经济生存危机。",
+            "anchorIds": [
+              "p-364891"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾珍根据年物分配“赈济无进益子侄”的宗旨，当面揭露贾芹管庙已有分例且胡作非为，判定其无资格冒领并当众训诫。",
+            "anchorIds": [
+              "p-366014"
+            ],
+            "prerequisiteNodeIds": [
+              "n-53-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "宗族族长对族中领物规则的执行及对个别荒唐子弟的管理处置。",
+            "anchorIds": [
+              "p-366014"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "详细展现贾氏宗祠按品级、昭穆、长幼、男女长幼分班献祭、传供的严格礼仪规制，宝琴在场观察印证皇恩浩荡与宗族威严。",
+            "anchorIds": [
+              "p-366648",
+              "p-366952",
+              "p-367112"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "展现贾府除夕祭祖宗祠礼制全貌，体现明清世家大族宗族祭祀的典范仪轨。",
+            "anchorIds": [
+              "p-366648",
+              "p-367112"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "祭祖礼毕后，荣府正堂按规矩行礼拜年、散钱、设合欢宴，次日五更入朝贺宴，叙述顺畅展开并体现秩序安排。",
+            "anchorIds": [
+              "p-368168"
+            ],
+            "prerequisiteNodeIds": [
+              "n-53-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "贾府除夕到正月初一合家受礼、行礼、合欢家宴的岁时年节生活规程。",
+            "anchorIds": [
+              "p-368168"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "叙写元宵夜宴陈设、族众来人因由分析（贫富顾忌）及文豹机趣讨喜贾母掷钱赏戏的欢庆场面，包含直接的族情心理记述。",
+            "anchorIds": [
+              "p-369064",
+              "p-369697",
+              "p-370233"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "涉及贾母元宵夜宴的具体场景陈设、宗族亲疏心理及撒钱赏戏的节庆活动。",
+            "anchorIds": [
+              "p-369697",
+              "p-370233"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾珍、贾琏率众子弟按长幼昭穆次序依次给长辈、亲友敬酒奉觞，体现儒家孝悌与宗法长幼规矩在宴席上的直接遵行。",
+            "anchorIds": [
+              "p-370945"
+            ],
+            "prerequisiteNodeIds": [
+              "n-53-7"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "反映大家族内子弟于尊长宴席前排班敬酒的特定仪节规矩。",
+            "anchorIds": [
+              "p-370945"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾母因袭人未随侍生疑，王夫人回以热孝，凤姐据看屋防险、回屋安歇、礼数保全三方面益处进行论证说服贾母；宝玉体谅袭人与鸳鸯叙旧而回避，展示缜密的人情考量。",
+            "anchorIds": [
+              "p-371286",
+              "p-372097"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-6"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "涉及袭人母丧守孝礼俗及凤姐在大节庆中对奴仆看管院落的周全安排。",
+            "anchorIds": [
+              "p-371286"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "贾母听《凤求鸾》开头，立足世宦家族治家现实（人口森严、礼教防范、仆妇环侍），从文学创作心理（妒富、意淫）反推才子佳人书虚妄荒谬，构建了一套完整深入的文学批评批判体系。",
+            "anchorIds": [
+              "p-373596"
+            ],
+            "prerequisiteNodeIds": [
+              "n-53-7"
+            ]
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "针对中国传统“才子佳人”小说全品类套路的批判，提出文学创作违背生活真理与门第常理的文艺批评通则。",
+            "anchorIds": [
+              "p-373596"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "mtucavOTNIKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 29780,
+    "candidatesTokenCount": 5393,
+    "totalTokenCount": 35173,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 29780
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5393
+      }
+    ]
+  },
+  "durationMs": 33873,
+  "requestHash": "b9eadf5002cb901d9966e7746e54d011211b1852ba640b667f8b2cb785f5f897"
+}

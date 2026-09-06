@@ -1,0 +1,566 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-105-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Jiao Da's desperate lamentation directly conveys firsthand observation of the Ning mansion being ransacked and its masters arrested, serving as an immediate situational report to Jia Zheng.",
+            "anchorIds": [
+              "p-763405"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Describes the specific catastrophe and immediate scene of devastation at the Ning mansion.",
+            "anchorIds": [
+              "p-763405"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-105-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Xue Ke reports concrete intelligence gathered from the yamen regarding imperial censors impeaching Jia Zhen and Jia She, forming an immediate factual report of external proceedings.",
+            "anchorIds": [
+              "p-764192",
+              "p-763405"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the specific impeachment charges levied against Jia She and Jia Zhen by censors.",
+            "anchorIds": [
+              "p-764192",
+              "p-763405"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "北静王府长史 conveys the imperial decree granting clemency to Rongguo Mansion based on the earlier memorial regarding Jia Zheng's fear and imperial grace towards late Concubine Yuan.",
+            "anchorIds": [
+              "p-764822"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-2",
+              "n-105-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Pertains to a specific imperial legal verdict and disposition concerning Rongguo Mansion and Jia Lian.",
+            "anchorIds": [
+              "p-764822"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Jia Lian responds to Jia Zheng's interrogation about usury by deflecting blame onto household stewards and existing deficits, forming a local defensive argument.",
+            "anchorIds": [
+              "p-765164"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-4",
+              "n-106-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Applies strictly to Jia Lian's personal defense regarding the confiscated loan tickets within Rongguo Mansion.",
+            "anchorIds": [
+              "p-765164"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Fengjie reflects on her life, realizing that her accumulation of wealth brought disaster and dreading that the Zhang Hua lawsuit might resurface to implicate Jia Lian.",
+            "anchorIds": [
+              "p-766824"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-6",
+              "n-106-2"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Covers Fengjie's personal life choices, guilt, and marital vulnerability beyond a single scene.",
+            "anchorIds": [
+              "p-766824"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "In response to family ruin and trials, Grandmother Jia deduces that the calamity stems from generational unbridled luxury and offers her own life to heaven to redeem her descendants.",
+            "anchorIds": [
+              "p-767749"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-3"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Addresses the overarching fate and moral guilt of the Jia household clan across multiple generations.",
+            "anchorIds": [
+              "p-767749"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Jia Zheng audits the ledgers and roster, inferring that the mansion's bankruptcy was structurally inevitable due to chronic overspending, deceitful servants, and living beyond their means.",
+            "anchorIds": [
+              "p-769430"
+            ],
+            "prerequisiteNodeIds": [
+              "n-106-2"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Characterizes the structural economic crisis of the entire Rongguo household economy.",
+            "anchorIds": [
+              "p-769430"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "The imperial court adjudicates the formal penalties for Jia She and Jia Zhen based on legal reviews of the specific charges and ancestral merit.",
+            "anchorIds": [
+              "p-770327"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A specific legal adjudication directed at the primary male leaders of the Jia clan.",
+            "anchorIds": [
+              "p-770327"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Synthesizing the recent audit and loss of official stipends, Jia Zheng explains to Grandmother Jia the inescapable reality that the family has exhausted both internal reserves and external credit.",
+            "anchorIds": [
+              "p-771109"
+            ],
+            "prerequisiteNodeIds": [
+              "n-106-5",
+              "n-107-1"
+            ]
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "Assesses the overall insolvency and impending collapse of the entire Jia clan's finances.",
+            "anchorIds": [
+              "p-771109"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Grandmother Jia analyzes the root causes of their decline, acknowledges the empty facade, and formulates a comprehensive plan to distribute private funds, downsize staff, and retrench.",
+            "anchorIds": [
+              "p-772577",
+              "p-772279"
+            ],
+            "prerequisiteNodeIds": [
+              "n-107-2"
+            ]
+          },
+          "generality": {
+            "value": 2.1,
+            "rationale": "A broad family policy dictating economic management, property division, and staff reorganization across all branches of the Rong and Ning estates.",
+            "anchorIds": [
+              "p-772577",
+              "p-772279"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Recognizing Fengjie's severe despair and illness following the raid, Grandmother Jia visits to relieve her psychological burden and allocate emergency funds.",
+            "anchorIds": [
+              "p-774197",
+              "p-773872"
+            ],
+            "prerequisiteNodeIds": [
+              "n-106-3",
+              "n-107-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the interpersonal reconciliation and emotional restoration of Wang Fengjie.",
+            "anchorIds": [
+              "p-774197",
+              "p-773872"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Follows the emperor's unexpected favor restoring the hereditary title to Jia Zheng after Jia She's forfeiture, prompting Jia Zheng to attempt surrendering the imperial estate.",
+            "anchorIds": [
+              "p-775138"
+            ],
+            "prerequisiteNodeIds": [
+              "n-107-1"
+            ]
+          },
+          "generality": {
+            "value": 0.6,
+            "rationale": "Pertains to Jia Zheng's official status, succession to the hereditary title, and the fluctuating social reaction of associates.",
+            "anchorIds": [
+              "p-775138"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Bao Yong overhears citizens discuss Jia Yucun's betrayal, infers Yucun is an ungrateful villain, berates him publicly, and is consequently reassigned by Jia Zheng to prevent unrest.",
+            "anchorIds": [
+              "p-775569"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A specific episode detailing Bao Yong's loyal outburst against Jia Yucun and his subsequent punishment.",
+            "anchorIds": [
+              "p-775569"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "Demonstrates the practical consequences of Grandmother Jia's retrenchment plan: despite Fengjie's efforts and Jia Zheng's austerity, the reduced budget creates constant shortages and widespread servant discontent.",
+            "anchorIds": [
+              "p-776588"
+            ],
+            "prerequisiteNodeIds": [
+              "n-107-3"
+            ]
+          },
+          "generality": {
+            "value": 1.6,
+            "rationale": "Describes the persistent living conditions and pervasive dissatisfaction across all domestic quarters of Rongguo Mansion post-raid.",
+            "anchorIds": [
+              "p-776588"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Reflecting on Xiangyun's marriage and the scattered misfortunes of related families, Grandmother Jia seeks to break the prevailing depression by hosting a birthday feast for Baochai.",
+            "anchorIds": [
+              "p-776871"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-1"
+            ]
+          },
+          "generality": {
+            "value": 0.7,
+            "rationale": "Concerns Grandmother Jia's emotional reaction and specific domestic initiative to organize Baochai's celebration.",
+            "anchorIds": [
+              "p-776871"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Direct narrative depiction of the forced cheerfulness during Baochai's birthday gathering, where the company reluctantly drinks and plays dice drinking games.",
+            "anchorIds": [
+              "p-779071",
+              "p-779841"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Covers a single domestic banquet scene among the remaining female family members.",
+            "anchorIds": [
+              "p-779071",
+              "p-779841"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "Li Wan's dice roll of 'Twelve Beauties' triggers Baoyu's internal recollection of the Dream of the Red Chamber roster; comparing that prophetic dream to the deceased Daiyu and scattered sisters, he slips away in grief.",
+            "anchorIds": [
+              "p-779841"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Expresses Baoyu's psychological contemplation of the tragic dispersion of the 'Twelve Beauties of Jinling'.",
+            "anchorIds": [
+              "p-779841"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Wandering into the desolate garden, Baoyu connects the physical neglect of the Xiaoxiang Lodge with servants' ghost rumors, concluding he is responsible for Daiyu's death and weeping openly.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nocturnal scene of Baoyu visiting Daiyu's former residence in Daguanyuan.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Following Baoyu's recovery from the garden, Grandmother Jia infers the risk of relapse and reprimands Xiren, prompting Baochai to investigate the true cause of Baoyu's distress.",
+            "anchorIds": [
+              "p-783110"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the immediate aftermath of Baoyu's garden excursion within Grandmother Jia's and Baochai's quarters.",
+            "anchorIds": [
+              "p-783110"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Baoyu overhears Baochai's conversation dismissing spirit manifestations and deduces that sleeping alone outside might invite Daiyu's spirit into his dreams, though the night passes without a dream.",
+            "anchorIds": [
+              "p-783629"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nighttime vigil by Baoyu in his outer bedroom.",
+            "anchorIds": [
+              "p-783629"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "Yingchun's tearful departure directly displays Sun Shaozu's ongoing abuse, leading her to foresee that she may never return to the Jia household alive.",
+            "anchorIds": [
+              "p-784672"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Depicts Yingchun's personal farewell and her tragic foreboding regarding her marriage.",
+            "anchorIds": [
+              "p-784672"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Baoyu observes Wu'er's appearance, links her memory to Qingwen's tragic death and unfulfilled love, and impulsively projects his longing for Qingwen onto Wu'er.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nighttime interaction between Baoyu and Wu'er in the outer room.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "Baochai deduces that Baoyu's psychological affliction stems from unresolved obsessive attachment, reasoning that 'curing passion with passion' and gentle accommodation will redirect his devotion and consummate their marriage.",
+            "anchorIds": [
+              "p-788708",
+              "p-787996"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Characterizes the psychological turning point and subsequent harmonious state of Baoyu and Baochai's marriage.",
+            "anchorIds": [
+              "p-788708",
+              "p-787996"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Grandmother Jia recalls her ancestral Han jade ring and gives it to Baoyu as a replacement for his lost jade and reward for his filial care, before her health deteriorates.",
+            "anchorIds": [
+              "p-789148"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "An event concerning a specific ancestral heirloom given by Grandmother Jia to Baoyu.",
+            "anchorIds": [
+              "p-789148"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "o9ycatv6EIuKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 33392,
+    "candidatesTokenCount": 4652,
+    "totalTokenCount": 38044,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 33392
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4652
+      }
+    ]
+  },
+  "durationMs": 24911,
+  "requestHash": "dfeb90527738783bc4c66e5addb9f61f29948ed75af72ddb32266bc9928ec02c"
+}

@@ -1,0 +1,622 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-16-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "It builds directly on the decision to construct the separate villa and arrange for the provincial visit, locally coordinating the procurement of young actresses and instruments and Fengjie's maneuver to plant trusted servants.",
+            "anchorIds": [
+              "p-99492",
+              "p-99347",
+              "p-99770"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Describes a specific domestic procurement trip to Suzhou and a local administrative arrangement within the Jia household.",
+            "anchorIds": [
+              "p-99492",
+              "p-99347",
+              "p-99770"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A direct immediate practical consequence and planning step following the imperial decree permitting imperial concubines to visit their families.",
+            "anchorIds": [
+              "p-100161",
+              "p-98746"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Concerns the specific surveying, architectural design, and land amalgamation across the Ning and Rong mansions for Grand View Garden.",
+            "anchorIds": [
+              "p-100161",
+              "p-98746"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly narrated scene of Qin Zhong's deathbed encounter and his dying exhortation to Baoyu, introduced without prior formal deduction within the text.",
+            "anchorIds": [
+              "p-101170",
+              "p-101010"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Depicts a singular dramatic deathbed moment between Qin Zhong and Baoyu, containing advice directed specifically at Baoyu's personal pursuit of worldly success.",
+            "anchorIds": [
+              "p-101170",
+              "p-101010"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "A developed local inference: because the garden construction is completed and awaiting imperial visit, poetic couplets and plaques must be drafted provisionally, leading Jia Zheng to test Baoyu upon encountering him.",
+            "anchorIds": [
+              "p-101825",
+              "p-102432"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Focuses on the specific occasion of inspecting Grand View Garden upon its architectural completion.",
+            "anchorIds": [
+              "p-101825",
+              "p-102432"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Baoyu engages in an explicit aesthetic justification: because this spot is merely an entry barrier rather than the main landscape, following the principle of reciting the old over forging the new, he selects the classical line 'Qu jing tong you chu'.",
+            "anchorIds": [
+              "p-102953",
+              "p-102620"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-1"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Applies a general rule of landscape aesthetics ('reciting the old beats forging the new') specifically to the entry scenic threshold of Grand View Garden.",
+            "anchorIds": [
+              "p-102953",
+              "p-102620"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Contains a short deductive aesthetic argument: analyzing Ouyang Xiu's use of 'xie' and rejecting it as too crude for an imperial villa, deducing that 'Qin Fang' provides proper restraint and decorum.",
+            "anchorIds": [
+              "p-103288",
+              "p-103848"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-1"
+            ]
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "Formulates aesthetic conventions for imperial villa naming while applying them to this particular pavilion and couplet.",
+            "anchorIds": [
+              "p-103288",
+              "p-103848"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Baoyu reasons that as the first resting residence of the royal concubine, the plaque must explicitly offer imperial eulogy rather than stale conventional literary allusions.",
+            "anchorIds": [
+              "p-104085",
+              "p-103866"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-1"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Pertains to the specific poetic designation and couplet of the bamboo lodge (later Xiaoxiang Pavilion) in the context of the imperial visitation.",
+            "anchorIds": [
+              "p-104085",
+              "p-103866"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Involves an explicit sequential argument about aesthetics: analyzing natural geomancy vs artificiality, demonstrating that a rustic village without natural mountain veins or water source constitutes forced contrivance.",
+            "anchorIds": [
+              "p-105809",
+              "p-105411",
+              "p-105635"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-1"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Articulates an aesthetic theory defining 'natural' (tianran) in garden architecture and landscape design, contrasting organic environment with artificial contrivance.",
+            "anchorIds": [
+              "p-105809",
+              "p-105411",
+              "p-105635"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Baoyu applies his literary and botanical erudition to identify rare plants from classical texts and argues against vulgar literary naming clichés.",
+            "anchorIds": [
+              "p-106545",
+              "p-107412",
+              "p-107430"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-1"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Applies classical poetic botany from the Chuci and Wenxuan to this specific courtyard complex.",
+            "anchorIds": [
+              "p-106545",
+              "p-107412",
+              "p-107430"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Baoyu reasons that because plantain and crabapple are juxtaposed, leaving either color out in the title fails to capture the scene, deducing 'Hong Xiang Lv Yu'.",
+            "anchorIds": [
+              "p-107949",
+              "p-108780"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on naming this particular courtyard and the physical exploration and getting lost within its interior mirror-and-partition layout.",
+            "anchorIds": [
+              "p-107949",
+              "p-108780"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "An immediate emotional and narrative reaction: following the servants' stripping of Baoyu's accessories upon leaving the garden tour, Daiyu mistakenly infers her pouch was given away.",
+            "anchorIds": [
+              "p-109839",
+              "p-109576",
+              "p-110345"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a singular emotional spat and reconciliation between Baoyu and Daiyu over a handcrafted sachet.",
+            "anchorIds": [
+              "p-109839",
+              "p-109576",
+              "p-110345"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "A direct sequel to Jia Qiang's mission assigned in Chapter 16, reporting the arrival of the Suzhou actresses and the invitation of Miaoyu.",
+            "anchorIds": [
+              "p-110623"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Recounts the specific domestic hiring of a troupe and the formal invitation of Miaoyu to the family convent.",
+            "anchorIds": [
+              "p-110623"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The fruition of the grand construction process and imperial protocol preparations culminating in Yuanchun's arrival on the Lantern Festival.",
+            "anchorIds": [
+              "p-111983",
+              "p-112619",
+              "p-111555"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Describes the specific ceremonial spectacle, decor, and private lamentation of luxury during Yuanchun's visitation night.",
+            "anchorIds": [
+              "p-111983",
+              "p-112619",
+              "p-111555"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Yuanchun directly contrasts her luxurious imperial captivity with rural domestic kinship upon meeting her family.",
+            "anchorIds": [
+              "p-113725"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Generalizes about the sacrifice of natural human affection and family joy required by high court status versus peasant life.",
+            "anchorIds": [
+              "p-113725"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Direct consequence of Yuanchun reviewing the provisional titles drafted during the Chapter 17 tour, officially conferring names and setting poetic examinations.",
+            "anchorIds": [
+              "p-114958",
+              "p-115196"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-7",
+              "n-18-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A specific decree renaming the pavilions and ordering the siblings to compose commemorative poems.",
+            "anchorIds": [
+              "p-114958",
+              "p-115196"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Baochai detects Yuanchun's dislike of 'lv yu' and reasons that Baoyu should replace it with the classical allusion 'lv la', while Daiyu steps in to ghostwrite 'Xing Lian Zai Wang'.",
+            "anchorIds": [
+              "p-115971",
+              "p-116422",
+              "p-116877"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Refers to a specific collaborative incident during the imperial poetry examination.",
+            "anchorIds": [
+              "p-115971",
+              "p-116422",
+              "p-116877"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Chronological conclusion of the visitation ceremony: watching plays, distributing gifts according to rank, and returning to court.",
+            "anchorIds": [
+              "p-117873",
+              "p-117165",
+              "p-117472"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Details the specific gifts awarded to members and retainers of the Jia household and the departure of the imperial concubine.",
+            "anchorIds": [
+              "p-117873",
+              "p-117165",
+              "p-117472"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Narrative begins with Baoyu impulsively sneaking out to visit Xiren's home, introduced as an immediate spontaneous incident without prior reasoning dependencies.",
+            "anchorIds": [
+              "p-119327",
+              "p-120040",
+              "p-120340"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "Describes a single clandestine visit by Baoyu to Xiren's family house.",
+            "anchorIds": [
+              "p-119327",
+              "p-120040",
+              "p-120340"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "Follows Baoyu's absence from his room and Nanny Li's simmering resentment over losing authority and prestige to young maidservants.",
+            "anchorIds": [
+              "p-121191",
+              "p-120340",
+              "p-121542"
+            ],
+            "prerequisiteNodeIds": [
+              "n-19-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A specific domestic spat involving Nanny Li eating the bowl of curd set aside for Xiren.",
+            "anchorIds": [
+              "p-121191",
+              "p-120340",
+              "p-121542"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Xiren consciously devises a psychological strategy: calculating Baoyu's deep attachment to invent a redemption lie to lower his arrogance and test his loyalty.",
+            "anchorIds": [
+              "p-122242",
+              "p-122533",
+              "p-123519"
+            ],
+            "prerequisiteNodeIds": [
+              "n-19-2"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "A deliberate psychological maneuver and dialogue specifically directed at manipulating Baoyu's temper.",
+            "anchorIds": [
+              "p-122242",
+              "p-122533",
+              "p-123519"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Building on the psychological capitulation achieved in n-19-3, Xiren systematically extracts three solemn behavioral commitments from Baoyu.",
+            "anchorIds": [
+              "p-123519",
+              "p-123894",
+              "p-124132"
+            ],
+            "prerequisiteNodeIds": [
+              "n-19-3"
+            ]
+          },
+          "generality": {
+            "value": 1.6,
+            "rationale": "Sets down moral and behavioral rules governing Baoyu's conduct towards studies, speech, and Confucian decorum.",
+            "anchorIds": [
+              "p-123519",
+              "p-123894",
+              "p-124132"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "A scene directly introduced as Baoyu visits Daiyu while she rests, leading into banter over scents.",
+            "anchorIds": [
+              "p-125421",
+              "p-125002",
+              "p-125844"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "An intimate, single-scene interaction between Baoyu and Daiyu in her bedroom.",
+            "anchorIds": [
+              "p-125421",
+              "p-125002",
+              "p-125844"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-19-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Baoyu devises an improvised allegorical fable on the spot to keep Daiyu awake after meals and playfully tease her.",
+            "anchorIds": [
+              "p-126128",
+              "p-126919",
+              "p-127025"
+            ],
+            "prerequisiteNodeIds": [
+              "n-19-5"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "A playful impromptu parable told exclusively to tease Daiyu in one moment.",
+            "anchorIds": [
+              "p-126128",
+              "p-126919",
+              "p-127025"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "Nanny Li's outburst directly builds upon her accumulated grievances over Qianxue's dismissal and the previous day's curd incident.",
+            "anchorIds": [
+              "p-127487",
+              "p-127783"
+            ],
+            "prerequisiteNodeIds": [
+              "n-19-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Depicts an explicit conflict scene where Nanny Li berates Xiren in Baoyu's quarters.",
+            "anchorIds": [
+              "p-127487",
+              "p-127783"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Dducave0OaKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 29637,
+    "candidatesTokenCount": 5098,
+    "totalTokenCount": 34735,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 29637
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5098
+      }
+    ]
+  },
+  "durationMs": 28073,
+  "requestHash": "28c43fba046f162ec8d63b6d91dea5f40edda90ee8dc65e13c0acc9272219530"
+}

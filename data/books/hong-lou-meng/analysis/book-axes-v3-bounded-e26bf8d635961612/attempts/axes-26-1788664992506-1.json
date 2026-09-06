@@ -1,0 +1,566 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-97-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Directly links to and executes the deception tactic outlined in the drop-swap scheme (n-96-3), arranging Xueyan to substitute as the bride's escort to hoodwink Baoyu.",
+            "anchorIds": [
+              "p-711784",
+              "p-713321",
+              "p-713832"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Specifies a single concrete operational stratagem/event involving borrowing Xueyan to attend the wedding ceremony.",
+            "anchorIds": [
+              "p-711784",
+              "p-713832"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Local narrative consequence directly caused by the execution of the drop-swap trick (n-97-6, n-97-3), revealing Baochai and inducing Baoyu's immediate relapse.",
+            "anchorIds": [
+              "p-714130",
+              "p-715020"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Pertains specifically to the event of Baoyu uncovering the veil in the bridal chamber and falling into delirium.",
+            "anchorIds": [
+              "p-714130"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Narrative development following Baoyu's relapse (n-97-7), where the doctor Bi Zhian is called to diagnose and prescribe medicine.",
+            "anchorIds": [
+              "p-715589",
+              "p-715943"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Refers to a specific medical episode and diagnosis of Baoyu's acute illness.",
+            "anchorIds": [
+              "p-715943"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Baochai deduces that concealing Daiyu's death maintains Baoyu in an unresolved limbo; she makes an intentional, calculated disclosure to force a clean emotional break.",
+            "anchorIds": [
+              "p-716119"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A dialogue interaction and interpersonal intervention specifically directed from Baochai to Baoyu.",
+            "anchorIds": [
+              "p-716119"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Directly triggered by Baochai's blunt announcement of Daiyu's death (n-98-2), leading to Baoyu's visionary descent into the underworld and spiritual awakening.",
+            "anchorIds": [
+              "p-716863"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-2"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Relates to Baoyu's specific dream-state encounter, though it involves mythological assertions about the fate of souls.",
+            "anchorIds": [
+              "p-716863"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Retrospective narration of the exact moment and physical passing of Daiyu at Xiaoxiang Guan while the wedding was underway.",
+            "anchorIds": [
+              "p-718274",
+              "p-718509",
+              "p-718735"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts the single specific scene of Daiyu's death and her last words.",
+            "anchorIds": [
+              "p-718509"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Inference following Daiyu's death (n-98-4) where Grandmother Jia weighs emotional attachment and patriarchal priorities, choosing not to visit Xiaoxiang Guan because Baoyu takes precedence.",
+            "anchorIds": [
+              "p-718910",
+              "p-719157",
+              "p-719630"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-4"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Details Grandmother Jia's attitude and decision regarding kinship priorities in the handling of Daiyu's funeral.",
+            "anchorIds": [
+              "p-719157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Baoyu, upon recovering some clarity after his dream and hearing of Daiyu's death (n-98-3), insists on mourning at Xiaoxiang Guan, where Zijuan recounts the burning of the manuscripts.",
+            "anchorIds": [
+              "p-719835",
+              "p-720350",
+              "p-720642"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-3",
+              "n-97-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A concrete mourning scene at Xiaoxiang Guan involving Baoyu, Zijuan, and the surrounding family members.",
+            "anchorIds": [
+              "p-720350"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Proceeds from Baoyu's physical recovery and the expiration of mourning obligations (n-98-6), leading Jia Mu and Aunt Xue to arrange the formal consummation.",
+            "anchorIds": [
+              "p-720893"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "An agreement between two matrons on scheduling a wedding consummation for a specific couple.",
+            "anchorIds": [
+              "p-720893"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Follows the discussion of consummation and grief over Daiyu (n-98-7), where Fengjie uses comedic mimicry to dispel sadness and finalize the date.",
+            "anchorIds": [
+              "p-721507"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single domestic conversation and comedic anecdote within Grandmother Jia's room.",
+            "anchorIds": [
+              "p-721507"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "A local persuasive exchange where Li Shi'er argues from bureaucratic survival and systemic corruption, causing Jia Zheng to abandon his strict principles.",
+            "anchorIds": [
+              "p-724569"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "Analyzes systemic bureaucratic survival and corruption codes within local administration, applied directly to Jia Zheng's official post.",
+            "anchorIds": [
+              "p-724569"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Directly tracks the immediate downstream consequences of Jia Zheng's concession to Li Shi'er (n-99-4), showing how staff usurp power while Jia Zheng remains complacent.",
+            "anchorIds": [
+              "p-725805"
+            ],
+            "prerequisiteNodeIds": [
+              "n-99-4"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Focuses on the state of affairs within Jia Zheng's grain circuit administration in Jiangxi.",
+            "anchorIds": [
+              "p-725805"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "Introduction of Zhou Qiong's letter proposing marriage between his son and Tanchun, based on previous casual talk in the capital.",
+            "anchorIds": [
+              "p-725941",
+              "p-726013",
+              "p-726218"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific marriage proposal letter and Jia Zheng's initial private deliberation on it.",
+            "anchorIds": [
+              "p-726013",
+              "p-726218"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Jia Zheng's reading and anxious reaction to the imperial gazette reporting Xue Pan's homicide case, fearing his prior intercession will be exposed.",
+            "anchorIds": [
+              "p-726403",
+              "p-726525",
+              "p-727003"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Relates to Jia Zheng's personal discovery of legal developments in Xue Pan's specific manslaughter trial.",
+            "anchorIds": [
+              "p-726403",
+              "p-727003"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Combines Zhou Qiong's proposal (n-99-6) with external political backing from the governor, prompted by Li Shi'er to proceed with Tanchun's alliance.",
+            "anchorIds": [
+              "p-727486"
+            ],
+            "prerequisiteNodeIds": [
+              "n-99-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A decision by Jia Zheng to send word home to accept the marriage proposal for Tanchun.",
+            "anchorIds": [
+              "p-727486"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "Tracks the aftermath in the capital of the Board of Punishments review mentioned in the gazette (n-99-7), outlining the bankruptcy of the Xue shops and Baochai's counsel.",
+            "anchorIds": [
+              "p-727819"
+            ],
+            "prerequisiteNodeIds": [
+              "n-99-7"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Depicts the domestic collapse, economic distress, and character coping strategies within the Xue household.",
+            "anchorIds": [
+              "p-727819"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A self-contained dramatic incident where Xia Jingui's seduction of Xue Ke is interrupted by Xiangling's approach, prompting deep-seated enmity.",
+            "anchorIds": [
+              "p-730152",
+              "p-729662"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a specific interpersonal dispute and attempted seduction in the Xue household courtyard.",
+            "anchorIds": [
+              "p-730152"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Builds upon Jia Zheng's message (n-100-1), in which Grandmother Jia and Lady Wang weigh the sorrow of distant separation against Yingchun's tragic nearby marriage, resolving to agree.",
+            "anchorIds": [
+              "p-730636"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-1"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "A matriarchal decision resolving Tanchun's distant marriage based on reflections on aristocratic daughters' marital fates.",
+            "anchorIds": [
+              "p-730636"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Reaction to the decision of Tanchun's marriage (n-100-4), displaying Zhao Yiniang's petty jealousy and schadenfreude toward her daughter.",
+            "anchorIds": [
+              "p-731509"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A single domestic confrontation between Zhao Yiniang and Tanchun.",
+            "anchorIds": [
+              "p-731509"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Synthesizes cumulative family dispersals—Daiyu's death (n-98-4), Yingchun's abuse, and Tanchun's distant marriage (n-100-4)—inducing Baoyu's relapse and Baochai's pragmatic reproof.",
+            "anchorIds": [
+              "p-731779"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-4",
+              "n-98-4"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Reflects Baoyu's general sentiment regarding the tragic inevitable dispersal of the sisters of the Rongguo mansion.",
+            "anchorIds": [
+              "p-731779"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "An eerie apparition in Daganyuan where Fengjie encounters the ghost of Qin Keqing, reproaching her for neglecting the long-term ancestral foundation.",
+            "anchorIds": [
+              "p-733554",
+              "p-733106"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single ghostly encounter experienced by Wang Xifeng in the nighttime garden.",
+            "anchorIds": [
+              "p-733554"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "Inference drawn by Fengjie following her nocturnal fright (n-101-1) and nurse Li's mistreatment of Dajie'er, leading her to reflect somberly on her impending death.",
+            "anchorIds": [
+              "p-734473"
+            ],
+            "prerequisiteNodeIds": [
+              "n-101-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Reflects Wang Xifeng's self-evaluation of her life, health, and fate, shared in confidence with Ping'er.",
+            "anchorIds": [
+              "p-734473"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "A domestic spat provoked by Jia Lian's frustrating errand on behalf of Wang Ren's official deficits, uncovering Wang family tensions.",
+            "anchorIds": [
+              "p-735449",
+              "p-736791"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A private argument between Jia Lian, Wang Xifeng, and Ping'er over Wang Ren's character and debts.",
+            "anchorIds": [
+              "p-735449",
+              "p-736791"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Fengjie notices the intimacy of Baoyu and Baochai and, reminded of Qingwen by the golden peacock cloak, proposes transferring Liu Wu'er to Baoyu's room as a surrogate.",
+            "anchorIds": [
+              "p-737724"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A specific domestic staffing decision proposed by Fengjie for Baoyu's courtyard.",
+            "anchorIds": [
+              "p-737724"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "idycau_vOqKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 31791,
+    "candidatesTokenCount": 4712,
+    "totalTokenCount": 36503,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 31791
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4712
+      }
+    ]
+  },
+  "durationMs": 22911,
+  "requestHash": "330e1ec59658c10c2c887b31c55eaf4b0c8b0ae1f219fce5524fc5a2c0663e0f"
+}

@@ -1,0 +1,567 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-69-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Directly triggered by and follows immediately upon You Erjie's death (n-69-5), depicting Jia Lian's grief, Ping'er's aid, and the funeral arrangements.",
+            "anchorIds": [
+              "p-501123",
+              "p-502065"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a specific sequence of domestic events regarding You Erjie's burial and financial disputes within the Jia household.",
+            "anchorIds": [
+              "p-501123",
+              "p-502065"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Follows the conclusion of You Erjie's burial following her death (n-69-6) and connects to the household staff allocation (marriage matching).",
+            "anchorIds": [
+              "p-502324"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Involves specific historical burial arrangements for You Erjie and screening of specific maidservants across the mansion.",
+            "anchorIds": [
+              "p-502324"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "A fresh springtime narrative episode initiating Daiyu's composition of the Peach Blossom poem and founding of the Peach Blossom poetry club, requiring no complex prior chain.",
+            "anchorIds": [
+              "p-503334",
+              "p-503651",
+              "p-504203"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Describes a specific literary gathering and poetry composition scene among the garden girls.",
+            "anchorIds": [
+              "p-503334",
+              "p-503651",
+              "p-504203"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly introduced narrative event beginning with Jia Zheng's letter of scheduled return and Baoyu's cramming.",
+            "anchorIds": [
+              "p-504555",
+              "p-505352"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Concerns Baoyu's personal habits and recurrent academic evasion during this timeframe.",
+            "anchorIds": [
+              "p-504555",
+              "p-505352"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "An immediate creative reaction to the seasonal change and drifting willow catkins, following the reconstituted poetic activities of the garden (n-70-2).",
+            "anchorIds": [
+              "p-505692",
+              "p-505733",
+              "p-505775"
+            ],
+            "prerequisiteNodeIds": [
+              "n-70-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific poetic composition and decision to set the willow catkin theme on a spring afternoon.",
+            "anchorIds": [
+              "p-505692",
+              "p-505733",
+              "p-505775"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Develops directly from Xiangyun's initiation of the catkin poetry competition (n-70-4), assessing the submissions to crown Baochai winner.",
+            "anchorIds": [
+              "p-505959",
+              "p-506839",
+              "p-506897"
+            ],
+            "prerequisiteNodeIds": [
+              "n-70-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Presents a single poetry contest event at Xiaoxiang Hall and the judging of the poems.",
+            "anchorIds": [
+              "p-505959",
+              "p-506839",
+              "p-506897"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly triggered by an external broken kite landing on the bamboos right after the poetry gathering, initiating a new garden leisure activity without inferential prerequisite.",
+            "anchorIds": [
+              "p-507013",
+              "p-507320",
+              "p-507927"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Details a specific afternoon kite-flying scene in Daguanyuan with symbolic kite-cutting.",
+            "anchorIds": [
+              "p-507013",
+              "p-507320",
+              "p-507927"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-71-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct starting premise for Chapter 71, introducing the grand occasion and schedule of Lady Jia's 80th birthday celebrations.",
+            "anchorIds": [
+              "p-508723"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Refers to a specific multi-day festive state of the two Jia mansions, involving protocol for various classes of guests.",
+            "anchorIds": [
+              "p-508723"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-71-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "An immediate local event during the birthday banquet (n-71-1), where the visiting Princess Dowager of Nan'an summons and inspects the daughters.",
+            "anchorIds": [
+              "p-509796"
+            ],
+            "prerequisiteNodeIds": [
+              "n-71-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific social interaction and gift exchange scene in Jiayin Hall.",
+            "anchorIds": [
+              "p-509796"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-71-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Occurs on the night of the birthday feast (n-71-1), where the lapse in garden security directly occasions You Shi's encounter with the insolent gatekeepers.",
+            "anchorIds": [
+              "p-510757",
+              "p-512224"
+            ],
+            "prerequisiteNodeIds": [
+              "n-71-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A concrete altercation between East Mansion's mistress and Rongguo housemaids/servants.",
+            "anchorIds": [
+              "p-510757",
+              "p-512224"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-71-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Builds on Madam Xing's accumulated grievances and Zhou Rui's wife arresting the old maids (n-71-3), leading to Madam Xing's public calculated humiliation of Fengjie.",
+            "anchorIds": [
+              "p-513287"
+            ],
+            "prerequisiteNodeIds": [
+              "n-71-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A singular public scene of rebuke before relatives during the concluding banquet.",
+            "anchorIds": [
+              "p-513287"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-71-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Jia Mu analyzes Madam Xing's true motives regarding Fengjie's humiliation (n-71-4) and infers the snobbish disposition of the servants toward poor relatives.",
+            "anchorIds": [
+              "p-515487"
+            ],
+            "prerequisiteNodeIds": [
+              "n-71-4"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Enunciates a general observation about the servants' worldly snobbery ('one rich heart, two eyes of status') across the household.",
+            "anchorIds": [
+              "p-515487"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-71-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "An accidental, firsthand visual discovery by Yuanyang in the garden at night, requiring no inferential antecedents.",
+            "anchorIds": [
+              "p-516922"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single specific clandestine tryst witnessed behind the rocks.",
+            "anchorIds": [
+              "p-516922"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Directly develops Yuanyang's promise and reaction following her accidental discovery of Siqi's secret (n-71-6).",
+            "anchorIds": [
+              "p-517838",
+              "p-517697"
+            ],
+            "prerequisiteNodeIds": [
+              "n-71-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains to the personal moral stance, oath, and ongoing relationship between Yuanyang and Siqi.",
+            "anchorIds": [
+              "p-517838",
+              "p-517697"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Ping'er explains the hidden development of Fengjie's severe chronic illness to Yuanyang during their private conversation in n-72-1.",
+            "anchorIds": [
+              "p-517838"
+            ],
+            "prerequisiteNodeIds": [
+              "n-72-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Characterizes Fengjie's medical condition, psychological stubbornness, and behavioral tendencies over several months.",
+            "anchorIds": [
+              "p-517838"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Jia Lian calculates the huge expenditures of Jia Mu's birthday (n-71-1) and upcoming gifts, deducing the necessity of borrowing items from Jia Mu via Yuanyang.",
+            "anchorIds": [
+              "p-519372"
+            ],
+            "prerequisiteNodeIds": [
+              "n-71-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific secret financial transaction and scheme between Jia Lian and Yuanyang.",
+            "anchorIds": [
+              "p-519372"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly presented external event where palace eunuchs arrive demanding money, showcasing ongoing extortion.",
+            "anchorIds": [
+              "p-522880"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Reflects the recurring pattern of extortion by palace eunuchs and the family's pawning response.",
+            "anchorIds": [
+              "p-522880"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Lin Zhixiao observes the rising deficit and redundant servants, putting forward a structured retrenchment plan to Jia Lian.",
+            "anchorIds": [
+              "p-523625"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Proposes a systematic household-wide policy for reducing domestic retainers, maids, and food allowances across all branches.",
+            "anchorIds": [
+              "p-523625"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct consequence of Cai Xia being released from the mansion (part of servant allocation / retrenchment) and Wang'er's wife seizing the opportunity to exploit Fengjie's backing.",
+            "anchorIds": [
+              "p-524781",
+              "p-521535",
+              "p-524515"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Describes a specific coerced matrimonial proposal involving Cai Xia, Wang'er's son, and Lady Wang's concubine Zhao.",
+            "anchorIds": [
+              "p-524781",
+              "p-521535",
+              "p-524515"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-73-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Introduced directly by Xiaoque's warning visit, provoking Baoyu's immediate panicked midnight study.",
+            "anchorIds": [
+              "p-525304",
+              "p-525505"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single night's panic and study scene at Yihong Hall.",
+            "anchorIds": [
+              "p-525304",
+              "p-525505"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-73-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Qingwen exploits the startle from an alleged intruder during Baoyu's nocturnal studying (n-73-1) to fabricate an illness, which cascades into Jia Mu ordering a probe into gambling.",
+            "anchorIds": [
+              "p-526489"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Details the detection and disciplinary action against a specific ring of night gamblers and wet nurses in the garden.",
+            "anchorIds": [
+              "p-526489"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-73-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "An unexpected finding by the simpleton maid Sha Dajie while catching crickets, which Madam Xing intercepts.",
+            "anchorIds": [
+              "p-528006"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single physical incident of finding the obscene pouch in the garden rockery.",
+            "anchorIds": [
+              "p-528006"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-73-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Madam Xing reacts to the punishment of Yingchun's wet nurse in the gambling crackdown (n-73-2), using it to berate Yingchun's lifelong spinelessness compared to Tanchun.",
+            "anchorIds": [
+              "p-528006"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A character assessment and comparative evaluation of Yingchun's personal character versus Tanchun's.",
+            "anchorIds": [
+              "p-528006"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-73-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Directly motivated by the wet nurse's arrest in n-73-2; her daughter-in-law attempts extortion and avoids redeeming the pawned golden phoenix.",
+            "anchorIds": [
+              "p-529943"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific domestic confrontation over the stolen golden phoenix in Yingchun's quarters.",
+            "anchorIds": [
+              "p-529943"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "99ucaqMci4rH2A_p5Mj4CQ",
+  "usage": {
+    "promptTokenCount": 36432,
+    "candidatesTokenCount": 3742,
+    "totalTokenCount": 40174,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 36432
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3742
+      }
+    ]
+  },
+  "durationMs": 18751,
+  "requestHash": "05660662a6dafcfd2aa09e0dc9587d463d53637ed278a5be6c716c111a97f66d"
+}

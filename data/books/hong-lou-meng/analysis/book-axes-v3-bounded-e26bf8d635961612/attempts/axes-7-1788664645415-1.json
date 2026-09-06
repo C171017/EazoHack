@@ -1,0 +1,591 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-24-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾芸在荣府门前向宝玉请安，宝玉随口戏称其像儿子，贾芸即刻机变奉承认父，为直接叙述的单次事件，无先前推论链条。",
+            "anchorIds": [
+              "p-151693",
+              "p-151990"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述的是贾芸与宝玉、贾琏在荣国府门前碰面认作父子的特定事件场景。",
+            "anchorIds": [
+              "p-151693",
+              "p-151990"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾芸因欲谋事向母舅卜世仁赊借冰麝遭拒，是直接交代的情节事件，没有依赖前面的论证演绎。",
+            "anchorIds": [
+              "p-153078",
+              "p-153440",
+              "p-153602"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "具体描写贾芸去卜世仁香料铺赊药碰壁的具体场景与对话。",
+            "anchorIds": [
+              "p-153078",
+              "p-153440",
+              "p-153602"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "倪二碰遇贾芸，因得知贾芸在卜世仁处受挫受辱而激于义愤，免息借银，属于对前一情节的直接反应与推断行动。",
+            "anchorIds": [
+              "p-154306",
+              "p-154554",
+              "p-155028"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记录倪二在街巷中免息借银给贾芸的单一具体偶发事件。",
+            "anchorIds": [
+              "p-154306",
+              "p-154554",
+              "p-155028"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "贾芸利用倪二处借得的银两买下冰麝，针对凤姐喜好排场与端阳节令所需，编造一套辞令进献，建立在借得银两的先决条件上。",
+            "anchorIds": [
+              "p-155293",
+              "p-155693",
+              "p-156065"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描摹贾芸在荣国府后院迎面进献王熙凤冰麝的具体情境。",
+            "anchorIds": [
+              "p-155293",
+              "p-155693",
+              "p-156065"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "贾芸在外书房等候宝玉，小红路过相遇并产生爱慕与梦境，为随情节自然展开的接触与心理萌动。",
+            "anchorIds": [
+              "p-156548",
+              "p-156758",
+              "p-158823"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描写小红与贾芸在绮霰斋门前的初遇及小红当晚的心动入梦。",
+            "anchorIds": [
+              "p-156548",
+              "p-156758",
+              "p-158823"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "凤姐次日派给贾芸大观园种花差事，直接依赖于前日贾芸送香取悦凤姐所建立的信任与好感。",
+            "anchorIds": [
+              "p-157098",
+              "p-157356",
+              "p-157610"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "具体叙述凤姐在车前派给贾芸种树批银领对牌的单一事件。",
+            "anchorIds": [
+              "p-157098",
+              "p-157356",
+              "p-157610"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "小红趁无人倒茶给宝玉，被回房的秋纹、碧痕发现并遭严厉训斥，为怡红院内部权力倾轧的直接呈现，无复杂推演链。",
+            "anchorIds": [
+              "p-158128",
+              "p-158333",
+              "p-158823"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述小红在怡红院侍茶及随后在房内被秋纹、碧痕辱骂的具体事件。",
+            "anchorIds": [
+              "p-158128",
+              "p-158333",
+              "p-158823"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝玉因昨日初见小红，次日晨起寻看，并推想直接唤她会令袭人等寒心且不知其心性，属于紧承前文的小范围心智考量。",
+            "anchorIds": [
+              "p-159597"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-7"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描写宝玉晨起隔窗寻找并观察小红的具体心理与情态。",
+            "anchorIds": [
+              "p-159597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾环在王夫人房中抄经，因见宝玉与彩霞玩笑亲热而心生嫉恨，故意推倒油灯烫伤宝玉，为突发性冲突描写。",
+            "anchorIds": [
+              "p-160899",
+              "p-160572"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "王夫人卧房内贾环推灯烫伤宝玉的特定具体场景。",
+            "anchorIds": [
+              "p-160899",
+              "p-160572"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "马道婆以宝玉烫伤为由头进府，利用促狭鬼作祟的托辞诱导贾母，得出每日许下五斤香油供佛的约定，属局部言辞欺诈推导。",
+            "anchorIds": [
+              "p-161500"
+            ],
+            "prerequisiteNodeIds": [
+              "n-25-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述马道婆与贾母在荣府关于宝玉烫伤与供油消灾的具体交涉。",
+            "anchorIds": [
+              "p-161500"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "赵姨娘因长期嫉恨凤姐宝玉，借马道婆在府之机，二人达成五百两欠契并立下纸鬼纸人魇魔法，由情势诱发谋划。",
+            "anchorIds": [
+              "p-163201",
+              "p-162851"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "具体记叙赵姨娘与马道婆在房中密谋、写欠契并交付纸鬼纸人的事件。",
+            "anchorIds": [
+              "p-163201",
+              "p-162851"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "宝玉凤姐突然中魇发狂，是赵姨娘与马道婆暗中施魇作法的直接后果实现。",
+            "anchorIds": [
+              "p-165142",
+              "p-165668",
+              "p-165919"
+            ],
+            "prerequisiteNodeIds": [
+              "n-25-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描绘宝玉与凤姐中邪持刀发狂、贾府上下大乱并准备后事的场景。",
+            "anchorIds": [
+              "p-165142",
+              "p-165668",
+              "p-165919"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "僧道二人根据宝玉被声色货利所迷而失灵的因由，持诵摩弄通灵宝玉并悬于门槛，化解了中邪危局，是施魇-发狂-解厄因果链的闭合。",
+            "anchorIds": [
+              "p-166850",
+              "p-167062",
+              "p-167233"
+            ],
+            "prerequisiteNodeIds": [
+              "n-25-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记录癞头和尚与跛足道人登门持诵宝玉以除邪祟的特定降真解厄事件。",
+            "anchorIds": [
+              "p-166850",
+              "p-167062",
+              "p-167233"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "红玉面对佳蕙的不平，由园中赏赐与人际攀附的现状，引申出“千里搭长棚，没有个不散的筵席”的人生归结，属于就现实处境作出的局部哲学感悟。",
+            "anchorIds": [
+              "p-168396",
+              "p-168184"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "提出“千里搭长棚，没有个不散的筵席，各人干各人的去了”，概括了大家族人际关系与聚散无常的广泛规律。",
+            "anchorIds": [
+              "p-168396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾芸借进园之机在蜂腰桥与红玉对视传情，并由坠儿转交拾得的手帕，承接此前外书房初见与凤姐派种花差事的因果前提。",
+            "anchorIds": [
+              "p-170545",
+              "p-169437"
+            ],
+            "prerequisiteNodeIds": [
+              "n-24-6",
+              "n-24-8"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "具体记叙贾芸、红玉与坠儿在蜂腰桥与蘅芜苑附近转帕传情的个人情节。",
+            "anchorIds": [
+              "p-170545",
+              "p-169437"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "宝玉探潇湘馆，见黛玉春困，引用西厢曲词戏笑致黛玉羞恼哭泣，为二人日常言语交涉与摩擦的直接描摹。",
+            "anchorIds": [
+              "p-171836",
+              "p-171359"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "潇湘馆内宝黛二人因戏词玩笑而致恼泣发誓的特定场景。",
+            "anchorIds": [
+              "p-171836",
+              "p-171359"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "薛蟠谎称贾政传唤骗宝玉出园赴宴，席间错认唐寅款识为庚黄，为单一事件性叙述。",
+            "anchorIds": [
+              "p-172264",
+              "p-172968"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记叙薛蟠设宴吃藕食瓜、席间说笑字画的特定饮宴场面。",
+            "anchorIds": [
+              "p-172264",
+              "p-172968"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "晴雯因与碧痕拌嘴迁怒而闭门回绝黛玉，黛玉由门外笑语推想宝玉记恨白天之事，展现误会产生的局部心理推论过程。",
+            "anchorIds": [
+              "p-174386",
+              "p-174226"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述黛玉夜扣怡红院院门遭晴雯回绝不开的特定事件。",
+            "anchorIds": [
+              "p-174386",
+              "p-174226"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "黛玉闭门遭拒后，由眼前闭门受冷落联想并深化到父母双亡、客居依人的孤苦无依之悲，是由具体事件引发的感伤推衍。",
+            "anchorIds": [
+              "p-174386",
+              "p-174965"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "围绕林黛玉一人孤苦寄居、身世凄凉的个体心境与命运感伤。",
+            "anchorIds": [
+              "p-174386",
+              "p-174965"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "介绍芒种节大观园依古俗祭饯花神的闺中盛况，为时令民俗与园中全景背景的直接交代。",
+            "anchorIds": [
+              "p-175191"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "介绍交芒种节祭饯花神的尚古习俗及整个大观园女儿们的普遍庆祝方式，覆盖节日习俗层面。",
+            "anchorIds": [
+              "p-175191"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝钗见宝玉先入潇湘馆，依据宝黛自幼熟稔无嫌隙及黛玉多心多嫌的秉性，推断自己跟进不便，决定折返。",
+            "anchorIds": [
+              "p-175578"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "关于宝钗针对宝黛二人相处性格特征做出的具体避嫌行为考量。",
+            "anchorIds": [
+              "p-175578"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "宝钗扑蝶至滴翠亭，偷听到红玉与坠儿传帕私语，推断红玉眼空心大必会恼羞成怒，故急中生智使出金蝉脱壳之计嫁祸林黛玉。",
+            "anchorIds": [
+              "p-175885",
+              "p-176075",
+              "p-176468"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描写滴翠亭宝钗戏蝶偷听、假装寻黛玉脱身的特定场面。",
+            "anchorIds": [
+              "p-175885",
+              "p-176075",
+              "p-176468"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "凤姐因红玉回话四五门子事情条理分明、利落简断，推断其为人精明能干，当场提出欲调至身边使唤。",
+            "anchorIds": [
+              "p-177112",
+              "p-177972",
+              "p-178309"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记录红玉在李纨房中给凤姐回话并获得赏识提拔意向的具体经过。",
+            "anchorIds": [
+              "p-177112",
+              "p-177972",
+              "p-178309"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "探春托宝玉买朴拙玩意，因作鞋引发对赵姨娘阴微鄙贱见识的斥责，并申明自己只认父母、不认偏庶的宗法伦理立场。",
+            "anchorIds": [
+              "p-179528",
+              "p-180047"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "涉及探春个人对自身嫡庶身份定位及贾府内生母与子女伦理关系的原则阐述。",
+            "anchorIds": [
+              "p-179528",
+              "p-180047"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "LNucatzAK6GLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 28050,
+    "candidatesTokenCount": 4451,
+    "totalTokenCount": 32501,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 28050
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4451
+      }
+    ]
+  },
+  "durationMs": 25658,
+  "requestHash": "cdd5bc114773819111ae1818ac03f9c4d661e5764bbd7e166d44fcaa468d2c92"
+}

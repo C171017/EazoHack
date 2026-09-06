@@ -1,0 +1,45 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-84-2",
+        "reason": "prerequisiteNodeIds contains 'n-82-2' (代儒讲义警顽心), but in n-84-2, Jia Zheng is inspecting Baoyu's八股 (eight-legged essay) exercises and setting a new prompt directly based on Baoyu's written work ('吾十有五而志于学' etc.). The text makes no inferential dependency on Jia Dairu's specific moral lecture/exegesis on '后生可畏' and '好德如好色' in n-82-2."
+      },
+      {
+        "nodeId": "n-85-3",
+        "reason": "prerequisiteNodeIds names 'n-85-2' (贾政报升工部郎中) as a direct reasoning prerequisite. While Jia Zheng's promotion is the temporal/narrative occasion for the visit and conversation, Baoyu visiting Daiyu, Fengjie joking about '相敬如宾', and Baoyu blurting out Jia Yun's proposal involve no logical derivation or inferential premise from the event of Jia Zheng's official promotion itself; narrative sequence/occasion is conflated with reasoning dependency."
+      },
+      {
+        "nodeId": "n-85-4",
+        "reason": "prerequisiteNodeIds lists 'n-85-2' as an inferential prerequisite. Jia Mu holding a joint celebration feast combines Jia Zheng's promotion and Daiyu's birthday simply as concurrent calendar events ('双喜同庆'). This is a narrative plot combination and practical family arrangement, not a conclusion or inferential derivation dependent on prior arguments in n-85-2."
+      },
+      {
+        "nodeId": "n-85-6",
+        "reason": "prerequisiteNodeIds names 'n-85-4' (the feast). Xue Pan killing someone outside in a tavern is an entirely independent sudden event that happens to interrupt the ongoing feast. Treating the feast as a reasoning prerequisite for Xue Pan's murder and arrest confuses narrative interruption/simultaneity with logical inferential dependency."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "StycatWlKb2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 41333,
+    "candidatesTokenCount": 486,
+    "totalTokenCount": 41819,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 41333
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 486
+      }
+    ]
+  },
+  "durationMs": 6080,
+  "requestHash": "1dc25288cdd65dcf9f4f0fb5da8ef42205d3b0faa63ad591539befc9758ff991"
+}

@@ -1,0 +1,581 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-10-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Directly depends on Zhang Youshi's detailed multi-step diagnostic evaluation of Qin Keqing's pulse and psychosomatic etiology (n-10-7, depth 3.0). The formulation of 'Yiqi Yangrong Bupi Hegang Tang' and the seasonal prognosis (safe through winter, expected recovery after the spring equinox) represent a direct therapeutic deduction continuing from that diagnostic baseline.",
+            "anchorIds": [
+              "p-67905",
+              "p-67790"
+            ],
+            "prerequisiteNodeIds": [
+              "n-10-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Provides a targeted prescription and survival prognosis explicitly tailored to Qin Keqing's immediate case.",
+            "anchorIds": [
+              "p-67905",
+              "p-67790"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-11-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "Builds on Jia Rui's initial flirtatious encounter with Xifeng in the Huifang garden (n-11-3, depth 1.5). Upon hearing from Ping'er that Jia Rui is persistently inquiring and attempting to visit, Xifeng forms an explicit plan to set a trap and punish him.",
+            "anchorIds": [
+              "p-73782"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single conversation and scheme agreed upon by Xifeng and Ping'er.",
+            "anchorIds": [
+              "p-73782"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Builds on Jia Rui's physical and moral deterioration to the point of fatal collapse (n-12-3, depth 2.0). The lame Taoist arrives offering the 'Wind-and-Moon Mirror' as a targeted spiritual remedy for his karmic/lustful disease, explicitly instructing him only to look at the back side.",
+            "anchorIds": [
+              "p-77208"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-3"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "While presented as a specific remedy for Jia Rui, the mirror is described as having broader efficacy for 'talented youth and profligates' who suffer from lustful delusion, though tied specifically to this supernatural object.",
+            "anchorIds": [
+              "p-77208"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Removed prerequisite n-12-5: Jia Dai-ru settling the burial of Jia Rui and Lin Ruhai's letter summoning Daiyu are introduced as fresh sequential chronicle facts in the narrative without any inferential dependency on the supernatural mechanics of Jia Rui's death in the mirror. Internal reasoning is 0 as this is direct sequential plot narration.",
+            "anchorIds": [
+              "p-78043",
+              "p-78185"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Covers two specific narrative transitional events concerning particular characters (Jia Rui's funeral and Daiyu's departure).",
+            "anchorIds": [
+              "p-78043",
+              "p-78185"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Qin Keqing's dream apparition formulates an elaborate multi-step strategic argument: deriving from universal cyclical principles ('when the moon is full it wanes', 'extreme rise entails fall') the concrete clan policy of securing sacrificial land and establishing family schools around the ancestral tombs to safeguard survival against future dynastic confiscation.",
+            "anchorIds": [
+              "p-78564",
+              "p-78859",
+              "p-79253"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "Presents a strategic principle of perpetual estate hedging against dynastic confiscation and decline, applied to prominent aristocratic families.",
+            "anchorIds": [
+              "p-78564",
+              "p-78859",
+              "p-79253"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "Depends on the established trajectory of Qin Keqing's fatal illness and the anticipation of her demise recorded in n-11-4 (depth 1.5). Her sudden passing produces the immediate grief, Baoyu's coughing of blood, and Jia Zhen's vow to spare no expense.",
+            "anchorIds": [
+              "p-79347",
+              "p-79435"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Focuses on the immediate bereavement of the Jia household upon one specific death.",
+            "anchorIds": [
+              "p-79347",
+              "p-79435"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Directly implements and enforces the institutional regulations established in n-14-1 (depth 3.4). Xifeng calculates that leniency on the first violation will destroy systemic compliance ('if I forgive you now, no one can be managed later'), executing public flogging and salary suspension specifically to establish inviolable authority.",
+            "anchorIds": [
+              "p-85986",
+              "p-85385"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "An act of punitive discipline against a specific servant, consciously executed as an exemplary enforcement for the whole household staff.",
+            "anchorIds": [
+              "p-85986",
+              "p-85385"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Follows Jia Zhen's commitment to lavish spending and acquisition of imperial boards (n-13-3, depth 1.8) and Jia Rong's purchased imperial guard credential (n-13-4, depth 2.0). The resulting funeral procession displays the newly purchased fifth-rank regalia alongside the alliance of the Eight Dukes.",
+            "anchorIds": [
+              "p-88218",
+              "p-88084"
+            ],
+            "prerequisiteNodeIds": [
+              "n-13-3",
+              "n-13-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Depicts one grand ceremonial funeral procession and its participants.",
+            "anchorIds": [
+              "p-88218",
+              "p-88084"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Baoyu encounters unfamiliar farm tools and spinning wheels, deducing an immediate connection to the classical line 'every grain represents bitter toil', followed by spontaneous affection for Er Yatou. A single inferential step from concrete observation to poetic quote.",
+            "anchorIds": [
+              "p-90477",
+              "p-90887"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A discrete vignette of Baoyu and Qin Zhong pausing in a rural village during the procession.",
+            "anchorIds": [
+              "p-90477",
+              "p-90887"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative exposition setting up the party's lodging at Shuiyue Convent and noting the background mutual attraction between Qin Zhong and Zhineng. Contains no inferential steps or text-internal dependencies.",
+            "anchorIds": [
+              "p-91123"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Relates a specific accommodation choice and interpersonal playful flirtation.",
+            "anchorIds": [
+              "p-91123"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative presentation of the sudden imperial summon and the surprise announcement of Yuanchun's promotion to Noble Consort Xuande. It is an unprompted starting event with no prior inferential chain.",
+            "anchorIds": [
+              "p-94567",
+              "p-94787"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "One specific historical turning point for the Jia family: the imperial promotion of Yuanchun.",
+            "anchorIds": [
+              "p-94567",
+              "p-94787"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly implements the imperial policy on consort home visits expounded by Jia Lian (n-16-4, depth 2.6). Clan managers, Jia Lian, and Shan Ziye survey the adjoining grounds, reasoning that combining Huifang Garden with the Rong mansion east compound utilizes existing waterways and rocks to save resources.",
+            "anchorIds": [
+              "p-100161",
+              "p-98746"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Concerns the specific surveying, architectural design, and land amalgamation across the Ning and Rong mansions for Grand View Garden.",
+            "anchorIds": [
+              "p-100161",
+              "p-98746"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Directly triggered by the conclusion of the garden inspection in n-17-7 (depth 2.2), where the page boys boldly strip all of Baoyu's accessories outside the garden. Daiyu sees his accessories missing, infers her pouch was given away, and cuts the unfinished sachet in frustration before reconciliation.",
+            "anchorIds": [
+              "p-109839",
+              "p-109576",
+              "p-110345"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a singular emotional spat and reconciliation between Baoyu and Daiyu over a handcrafted sachet.",
+            "anchorIds": [
+              "p-109839",
+              "p-109576",
+              "p-110345"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Follows the lavish visual and ceremonial arrival at the villa in n-18-3 (depth 2.0). Faced with her grandmother and mother behind the screen, Yuanchun contrasts this gilded estrangement with rustic poverty, reasoning that peasant families with coarse clothes at least enjoy natural familial warmth.",
+            "anchorIds": [
+              "p-113725"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-3"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Generalizes about the sacrifice of natural human affection and family joy required by high court status versus peasant life.",
+            "anchorIds": [
+              "p-113725"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Builds jointly upon the tour's provisional plaque designations (n-17-7, depth 2.2) and Yuanchun's arrival into the finished estate (n-18-3, depth 2.0). Yuanchun officially confirms or alters the site names ('Daguan Yuan', 'Xiaoxiang Guan', 'Yihong Yuan', etc.) and commands formal poetic composition.",
+            "anchorIds": [
+              "p-114958",
+              "p-115196"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-7",
+              "n-18-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A specific decree renaming the pavilions and ordering the siblings to compose commemorative poems.",
+            "anchorIds": [
+              "p-114958",
+              "p-115196"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Concludes the full sequence of the imperial visitation ceremony initiated in n-18-3 (depth 2.0), distributing ranked rewards, honoring theatrical performances, and executing the mandatory ritual departure at dawn.",
+            "anchorIds": [
+              "p-117873",
+              "p-117165",
+              "p-117472"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Details the specific gifts awarded to members and retainers of the Jia household and the departure of the imperial concubine.",
+            "anchorIds": [
+              "p-117873",
+              "p-117165",
+              "p-117472"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "Directly responds to Nanny Li's public eruption against Xiren (n-20-1, depth 1.4). Wang Xifeng deduces the risk of disturbing the matriarch on a festive day, intervening with psychological deflection and food/wine to smoothly usher Nanny Li away.",
+            "anchorIds": [
+              "p-127783"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "该事件仅针对李嬷嬷因袭人躺卧而大吵大闹的特定单一场景及当场平息过程，属于具体的单一情节叙述。",
+            "anchorIds": [
+              "p-127783"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct descriptive scene of Baoyu finding Sheyue alone, combing her hair, and being mocked by Qingwen upon her return. Introduces an immediate vignette with no internal deductions or antecedent prerequisites.",
+            "anchorIds": [
+              "p-128703",
+              "p-129094",
+              "p-129353"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指怡红院内宝玉、麝月与晴雯三人在特定夜晚的一次篦头互动与言语交锋，限定于具体场景。",
+            "anchorIds": [
+              "p-128703",
+              "p-129094",
+              "p-129353"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Contains developed internal reasoning: the narrator explicitly analyzes Baoyu's philosophical premise that the refined spiritual essence of mountains and rivers is concentrated purely in daughters, leaving males as mere dregs and濁物, explaining why he refuses to exert brotherly discipline over Jia Huan.",
+            "anchorIds": [
+              "p-129353"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.3,
+            "rationale": "文本在此处提出了宝玉审视一切‘世间男子与女儿’的总体价值信条（清浊之辨），跨越具体人物而上升为具有哲学/伦理色彩的贯穿性观念，但带有宝玉个人独特的认知界定。",
+            "anchorIds": [
+              "p-129353"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Directly builds on the aftermath of Jia Huan's petty gamble and tears in n-20-4 (depth 2.2). Hearing Zhao Yiniang curse Jia Huan for attempting to mix with higher tables, Xifeng steps in to enforce clan hierarchy, reprimanding Zhao Yiniang for improper scolding and chastising Jia Huan for base lack of dignity.",
+            "anchorIds": [
+              "p-130624"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-4"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "涉及王熙凤对赵姨娘、贾环母子行为失体与尊卑分寸的特定处置，虽言及主庶与规矩，但主要针对贾环个人的训诫与管束。",
+            "anchorIds": [
+              "p-130624"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Baoyu formulates a structured two-pronged defense to comfort the weeping Daiyu: establishing that paternal cousin bonds precede maternal cousin ties ('qin bu jian shu') and long-term intimate upbringing precedes newer arrivals ('xian bu jian hou'), joined with an appeal to mutual heart-knowledge.",
+            "anchorIds": [
+              "p-131205",
+              "p-131461",
+              "p-131760"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "论述核心在于宝玉与黛玉、宝钗之间的亲疏次序界定以及宝黛二人独特的情感承诺，限定于宝黛二人长期关系格局。",
+            "anchorIds": [
+              "p-131205",
+              "p-131461",
+              "p-131760"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative and witty dialogue scene: Xiangyun arrives, Daiyu mocks her lisp, and Xiangyun retorts by wishing Daiyu a lisping husband. Direct banter with no inferential prerequisite.",
+            "anchorIds": [
+              "p-132221"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "仅为闺阁中湘云与黛玉、宝玉之间的一场特定玩笑打趣生活场景。",
+            "anchorIds": [
+              "p-132221"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Xiren observes Baoyu spending the morning at Daiyu's dressing table tasting rouge and fooling around, and makes a deliberate pedagogical decision to act cold and feign detachment to make him recognize his lack of boundaries.",
+            "anchorIds": [
+              "p-134026",
+              "p-133819"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "聚焦于袭人与宝玉之间特定的主仆/情伴互动方式及针对宝玉无节制行径的个别劝诫。",
+            "anchorIds": [
+              "p-134026",
+              "p-133819"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Directly targets Baoyu's continuation of the Zhuangzi chapter (n-21-2, depth 2.3). Daiyu reads his manuscript and derives a pointed poetic critique, identifying the underlying flaw that Baoyu blames the maidens' beauty and wit rather than repenting his own lack of wisdom.",
+            "anchorIds": [
+              "p-136060",
+              "p-136131"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "黛玉题绝句专门针对宝玉续篇中‘作践南华’与怪罪他人的特定文本与言论。",
+            "anchorIds": [
+              "p-136060",
+              "p-136131"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "6tycarzGCqGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 65352,
+    "candidatesTokenCount": 6017,
+    "totalTokenCount": 71369,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 65352
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6017
+      }
+    ]
+  },
+  "durationMs": 32436,
+  "requestHash": "3935cbedeaf17761551a7305a2823acbb8e233a3892cbd87a978ccd38ee7a6f3"
+}

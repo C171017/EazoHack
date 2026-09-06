@@ -1,0 +1,575 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-73-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "In p-530875 and p-531679, Tanchun intervenes in the dispute over Yingchun's gold hair ornament by establishing the premise of mutual dignity ('物伤其类') and sending for Ping'er to handle the unruly servant. This directly follows from the confrontation in n-73-5, functioning as a locally developed inference and action.",
+            "anchorIds": [
+              "p-530875",
+              "p-531679"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "It applies directly to a small bounded circle within the household hierarchy: specifically the treatment and discipline of upper servants and maidservants within Yingchun and Tanchun's quarters.",
+            "anchorIds": [
+              "p-530875",
+              "p-531679"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-73-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "In p-531679, Yingchun responds immediately to the turmoil and Ping'er's query by citing her retreat into the Taishang Ganying Pian and refusing to arbitrate or punish, forming an immediate personal rationalization from her passive stance.",
+            "anchorIds": [
+              "p-531679"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-6"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "It reflects Yingchun's individual philosophical defense and character-specific disposition toward interpersonal conflict across moments, situated between a single scene and a personal constant.",
+            "anchorIds": [
+              "p-531679"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "In p-534369, Lady Wang confronts Xifeng based on the purse found by Xing Furen (n-73-3). Xifeng constructs a five-point deductive rebuttal (analyzing stitching quality, unsuitability of carrying it, servants, concubines) that fully clears herself and redirects the strategy to secret investigation.",
+            "anchorIds": [
+              "p-534369"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-3"
+            ]
+          },
+          "generality": {
+            "value": 2.4,
+            "rationale": "Her logical defense delineates specific categories of women and maids within the Rongguo household who could potentially possess such an item.",
+            "anchorIds": [
+              "p-534369"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "In p-536073 and p-536949, Wang Shanbao's wife seizes the occasion of Lady Wang's investigation to launch an accusation against Qingwen, prompting Lady Wang to recall a previous scene and immediately cross-examine Qingwen.",
+            "anchorIds": [
+              "p-536073",
+              "p-536949"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-1"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "The accusation and scolding focus squarely on Qingwen as a named individual, though reflecting general suspicion towards alluring maids.",
+            "anchorIds": [
+              "p-536073",
+              "p-536949"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "In p-537732, when searchers arrive at the Happy Red Court, Qingwen reacts immediately and defiantly to the insult of being suspected by dumping her own trunk out to vindicate herself.",
+            "anchorIds": [
+              "p-537732"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "This captures a single dramatic event and confrontation during the nighttime search in Baoyu's quarters.",
+            "anchorIds": [
+              "p-537732"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "In p-539032, Tanchun resists the search of her servants' quarters by framing the search within the larger political context of the Zhen family's fall and deducing the macro-fate of the clan ('百足之虫，死而不僵...先从家里自杀自灭起来'). This forms a structured local argument culminating in her slap to Wang Shanbao's wife.",
+            "anchorIds": [
+              "p-539032"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-1"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Tanchun articulates a structural political principle regarding aristocratic dynastic decline and internal family decay spanning broad classes of elite households.",
+            "anchorIds": [
+              "p-539032"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "In p-540590, the physical evidence found in Siqi's trunk directly reveals the secret affair previously witnessed by Yuanyang in n-71-6 and n-72-1, creating poetic justice by entrapping the instigator Wang Shanbao's wife.",
+            "anchorIds": [
+              "p-540590"
+            ],
+            "prerequisiteNodeIds": [
+              "n-71-6",
+              "n-72-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Relates to a specific discovery of contraband letters and items within Siqi's personal trunk and the immediate humiliation of her grandmother.",
+            "anchorIds": [
+              "p-540590"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "In p-540590 and p-542397, after Ruhua is caught holding items, Xichun refuses leniency and deduces from the rampant scandals of the Ningguo House that self-preservation requires complete severance ('不作狠心人难得自了汉').",
+            "anchorIds": [
+              "p-540590",
+              "p-542397"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-4"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Xichun asserts a general moral strategy of absolute non-involvement and severing ties to avoid pollution across family branches.",
+            "anchorIds": [
+              "p-540590",
+              "p-542397"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "In p-543663, You Shi receives news of the Zhen family's fall from official gazettes and observes their women arriving in panic, making an immediate inference to avoid Lady Wang's quarters.",
+            "anchorIds": [
+              "p-543663"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Applies to the specific unfolding crisis of the Zhen household and its immediate reverberation upon the Rongguo mansion's inner circle.",
+            "anchorIds": [
+              "p-543663"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.5,
+            "rationale": "In p-544956 and p-544530, reacting to Baochai moving out and the previous night's search (n-74-4), Tanchun generalizes that Jia family members behave like 'black-eyed chickens' waiting to devour each other, justifying Baochai's departure through a synthesis of recent conflicts.",
+            "anchorIds": [
+              "p-544956",
+              "p-544530"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-4"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Formulates a domain-level critique characterizing the vicious, cannibalistic internal relations of the entire Jia clan.",
+            "anchorIds": [
+              "p-544956",
+              "p-544530"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "In p-544956, grandmother Jia notices extra dishes and fine rice shortages, prompting Lady Wang and Yuanyang to infer and explain the straitened domestic budget from bad harvests and tight living ('可著头做帽子').",
+            "anchorIds": [
+              "p-544956"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Pertains to the domestic economic constraints and provisioning system for the entirety of the Rongguo mansion.",
+            "anchorIds": [
+              "p-544956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "In p-547300 and p-548971, the narrative recounts how Jia Zhen's archery practice devolved into gambling and drinking, leading to Xing Dequan's drunken venting against Lady Xing's hoarding of family assets.",
+            "anchorIds": [
+              "p-547300",
+              "p-548971"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.1,
+            "rationale": "Pertains to the circle of young gentlemen and relatives gathered at the Ningguo estate and Xing Dequan's private grievance against his sister.",
+            "anchorIds": [
+              "p-547300",
+              "p-548971"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "In p-549766, during the moonlit banquet in the Huifang Garden, the sudden eerie sigh and slamming doors near the ancestral temple directly shock Jia Zhen and the revelers without extensive prior inferential steps.",
+            "anchorIds": [
+              "p-549766"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single spooky incident occurring at mid-night in the ancestral temple garden.",
+            "anchorIds": [
+              "p-549766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "In p-550628, Grandmother Jia brings the family up to Tubi Villa, notices how few family members are present compared to former days, and initiates the drum-and-flower game to maintain high spirits.",
+            "anchorIds": [
+              "p-550628"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "Restricted to the collective gathering of the Jia family on the night of the Mid-Autumn festival.",
+            "anchorIds": [
+              "p-550628"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "In p-552316 and p-552586, Jia She uses the acupuncture joke to complain covertly about Grandmother Jia's favoritism, and subsequently rewards Jia Huan's unconventional poem as showing true aristocratic backbone over scholastic pedantry.",
+            "anchorIds": [
+              "p-552316",
+              "p-552586"
+            ],
+            "prerequisiteNodeIds": [
+              "n-75-6"
+            ]
+          },
+          "generality": {
+            "value": 3.1,
+            "rationale": "Expresses Jia She's perspective on ancestral inheritance, paternal partiality, and noble lineage versus bureaucratic examination paths.",
+            "anchorIds": [
+              "p-552316",
+              "p-552586"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "In p-553223 and p-554179, after Jia She and Jia Zheng depart, Grandmother Jia commands a lone flute player under the cassia trees; the sad melody brings her to tears in light of the dwindling gathering.",
+            "anchorIds": [
+              "p-553223",
+              "p-554179"
+            ],
+            "prerequisiteNodeIds": [
+              "n-75-6"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Focuses on Grandmother Jia's emotional reaction and the mood of the gathering during the late-night flute listening scene.",
+            "anchorIds": [
+              "p-553223",
+              "p-554179"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "In p-555663 and p-556551, Daiyu weeps over her orphaned state while listening to the banquet, and Xiangyun comforts her, prompting both to relocate to Aojing Pavilion and converse on the imperfection of worldly fortunes.",
+            "anchorIds": [
+              "p-555663",
+              "p-556551"
+            ],
+            "prerequisiteNodeIds": [
+              "n-76-1"
+            ]
+          },
+          "generality": {
+            "value": 4.6,
+            "rationale": "Touches on a general human maxim ('事若求全何所乐') concerning how even affluent families cannot have all wishes satisfied.",
+            "anchorIds": [
+              "p-555663",
+              "p-556551"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "In p-557120 and p-558357, Daiyu and Xiangyun count railing posts to determine rhyme, initiating an linked poetic sequence based on immediate visual and auditory impressions of the autumn night.",
+            "anchorIds": [
+              "p-557120",
+              "p-558357"
+            ],
+            "prerequisiteNodeIds": [
+              "n-76-2"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Specific to the poetic duel and verses composed between Daiyu and Xiangyun by the water.",
+            "anchorIds": [
+              "p-557120",
+              "p-558357"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "In p-558923, p-559105, and p-559214, the linked poem culminates when a crane startles the pond, generating Xiangyun's line '寒塘渡鹤影', which Daiyu caps with '冷月葬花魂', distilling their cumulative melancholy into poetic climaxes.",
+            "anchorIds": [
+              "p-558923",
+              "p-559105",
+              "p-559214"
+            ],
+            "prerequisiteNodeIds": [
+              "n-76-3"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Represents an aesthetic crystallization and portentous summation of both heroines' tragic destinies within the Grand View Garden.",
+            "anchorIds": [
+              "p-558923",
+              "p-559105",
+              "p-559214"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "In p-559214, p-559522, and p-560092, Miaoyu emerges to intervene, reasoning that the couplets are too dejected and portend misfortune, then composes a 13-couplet conclusion at her nunnery to redirect the verses back to tranquil elegance.",
+            "anchorIds": [
+              "p-559214",
+              "p-559522",
+              "p-560092"
+            ],
+            "prerequisiteNodeIds": [
+              "n-76-4"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "Articulates a poetic and spiritual principle regarding proper poetic closure and mood balance in boudoir verse.",
+            "anchorIds": [
+              "p-559214",
+              "p-559522",
+              "p-560092"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "In p-560408, returning late to the Bamboo Lodge, both Xiangyun and Daiyu suffer from insomnia (due to strange beds and chronic illness respectively), conversing quietly in bed.",
+            "anchorIds": [
+              "p-560408"
+            ],
+            "prerequisiteNodeIds": [
+              "n-76-5"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Restricted to the personal sleeping habits and physical frailties of Daiyu and Xiangyun.",
+            "anchorIds": [
+              "p-560408"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "In p-560755 and p-561289, Lady Wang searches for two ounces of ginseng to treat Xifeng but finds only decayed wood; Baochai deduces the adulterated nature of commercial ginseng and provides a practical solution via her family business.",
+            "anchorIds": [
+              "p-560755",
+              "p-561289"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "Addresses practical commercial knowledge regarding genuine versus counterfeit medicines and the symbolic depletion of medicinal reserves in noble estates.",
+            "anchorIds": [
+              "p-560755",
+              "p-561289"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "In p-561889, Zhou Rui's wife executes the expulsion of Siqi based on the evidence found during the search (n-74-5); Yingchun's passive character leads her to decline intervening despite Siqi's desperate pleas.",
+            "anchorIds": [
+              "p-561889"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-7",
+              "n-74-5"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Concerns the specific dismissal of Siqi and Yingchun's personal resignation to inevitable parting.",
+            "anchorIds": [
+              "p-561889"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "In p-563149, Lady Wang follows through on Wang Shanbao's wife's slurs and general gossip by personally raiding the Happy Red Court, summarily evicting the mortally sick Qingwen, Si'er, and the former actresses.",
+            "anchorIds": [
+              "p-563149"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-2"
+            ]
+          },
+          "generality": {
+            "value": 2.8,
+            "rationale": "Covers the systemic expulsion of all attractive or performative female attendants in Baoyu's household and the garden theater troupe.",
+            "anchorIds": [
+              "p-563149"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "D9ycaoDZDKKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 39794,
+    "candidatesTokenCount": 5411,
+    "totalTokenCount": 45205,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 39794
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5411
+      }
+    ]
+  },
+  "durationMs": 29347,
+  "requestHash": "3f16bd68e714adad58a4ab8405f35bc7b4342fe6e42f4ecbdd85df472b0cc876"
+}

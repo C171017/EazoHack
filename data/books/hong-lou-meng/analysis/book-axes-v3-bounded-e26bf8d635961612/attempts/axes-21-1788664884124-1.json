@@ -1,0 +1,561 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-77-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Directly recounts the immediate concrete interaction where Baoyu visits Qingwen in her sickness and they exchange nails and clothes upon her expulsion.",
+            "anchorIds": [
+              "p-567395"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Specific, bounded narrative interaction between Baoyu and Qingwen in the outlying cottage.",
+            "anchorIds": [
+              "p-567395"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Deng Guniang eavesdrops on Baoyu and Qingwen, concluding empirically that their interaction was chaste, leading to her general realization about wrongful gossip.",
+            "anchorIds": [
+              "p-568481"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on Deng Guniang's specific realization regarding Baoyu and Qingwen's individual situation, with only passing commentary on worldly slander.",
+            "anchorIds": [
+              "p-568481"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Baoyu has an ominous dream of Qingwen bidding farewell and immediately deduces upon waking that she must have passed away.",
+            "anchorIds": [
+              "p-569175"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single night scene of dream and emotional reaction in Baoyu's bedroom.",
+            "anchorIds": [
+              "p-569175"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "王夫人 weighs the refusal of Fangguan and others to marry against the nuns' pragmatic persuasion of Buddhist karma, yielding permission for tonsure.",
+            "anchorIds": [
+              "p-570324"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Pertains specifically to the small bounded group of the three expelled theatrical actresses (Fangguan, Ruiguan, Ouguan).",
+            "anchorIds": [
+              "p-570324"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-78-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Lady Wang explains the retrospective justification of dismissing Qingwen and rewarding Xiren with higher status/allowance to Grandmother Jia, who consents.",
+            "anchorIds": [
+              "p-571285"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Treats specifically the management, temperament, and status assignment of Qingwen and Xiren within Baoyu's quarters.",
+            "anchorIds": [
+              "p-571285"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-78-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "The maid improvises an explanation to comfort Baoyu based on his leading inquiry about flower spirits, which Baoyu rationalizes as true.",
+            "anchorIds": [
+              "p-574243"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single dialogue episode creating the specific myth of Qingwen becoming the hibiscus spirit.",
+            "anchorIds": [
+              "p-574243"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Daiyu and Baoyu debate poetic revisions on Qingwen's eulogy, moving from literary conventions to '茜纱窗下，我本无缘，黄土垄中，卿何薄命', which Daiyu interprets with shock as a tragic omen for herself.",
+            "anchorIds": [
+              "p-582062"
+            ],
+            "prerequisiteNodeIds": [
+              "n-78-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains to the individual fate and intimate poetic foreshadowing linking Baoyu, Qingwen, and Daiyu.",
+            "anchorIds": [
+              "p-582062"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Jia She decides to betroth Yingchun based on Sun Shaozu's wealth and military standing, overriding Jia Zheng's warnings and Jia Mu's reluctance.",
+            "anchorIds": [
+              "p-583145"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A specific arranged marriage contract concerning Yingchun and Sun Shaozu.",
+            "anchorIds": [
+              "p-583145"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Xiangling relays the news of Xue Pan's betrothal to Xia Jingui, taking its auspicious appearance at face value while Baoyu infers potential trouble.",
+            "anchorIds": [
+              "p-583765"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on Xue Pan's specific betrothal to Xia Jingui and Xiangling's individual expectations.",
+            "anchorIds": [
+              "p-583765"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Combines cumulative shocks from the garden searches, Siqi's expulsion, Yingchun's departure, and Qingwen's death into a physical breakdown requiring a hundred days of confinement.",
+            "anchorIds": [
+              "p-583765"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-2",
+              "n-77-4",
+              "n-79-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Describes the individual mental and physical illness of Baoyu and his subsequent isolation in Daguan Garden.",
+            "anchorIds": [
+              "p-583765"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Xiangling reflects on Baoyu's warning, distances herself from him, and deduces that a accomplished, wealthy mistress will shield her rather than harm her.",
+            "anchorIds": [
+              "p-585484"
+            ],
+            "prerequisiteNodeIds": [
+              "n-79-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Internal mindset and motivation specific to Xiangling regarding her domestic role.",
+            "anchorIds": [
+              "p-585484"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Analyzes Xia Jingui's psychological upbringing and deliberate domestic maneuvering to systematically break Xue Pan's authority and manipulate Aunt Xue.",
+            "anchorIds": [
+              "p-585697"
+            ],
+            "prerequisiteNodeIds": [
+              "n-79-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Describes the character traits and domestic power play centered on the individual Xia Jingui within the Xue household.",
+            "anchorIds": [
+              "p-585697"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-80-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Xia Jingui devises nominal pretexts regarding naming taboos and seasonal botany to compel Xiangling to be renamed Qiuling, signaling her subjugation.",
+            "anchorIds": [
+              "p-586826"
+            ],
+            "prerequisiteNodeIds": [
+              "n-79-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A specific domestic episode concerning the renaming of Xiangling.",
+            "anchorIds": [
+              "p-586826"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-80-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Xia Jingui calculates that offering Baochan to Xue Pan will alienate him from Xiangling, orchestrating an ambush where Xiangling interrupts them, provoking Xue Pan's rage.",
+            "anchorIds": [
+              "p-587473",
+              "p-587662"
+            ],
+            "prerequisiteNodeIds": [
+              "n-79-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A specific conspiratorial scheme executed against Xiangling inside the Xue courtyard.",
+            "anchorIds": [
+              "p-587473",
+              "p-587662"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-80-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Jingui fakes sorcery with a puppet to accuse Xiangling, pushing Xue Pan to beat her until Baochai intervenes to shelter Xiangling, whose severe anguish results in illness.",
+            "anchorIds": [
+              "p-588932",
+              "p-588623"
+            ],
+            "prerequisiteNodeIds": [
+              "n-80-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "An isolated domestic crisis culminating in Xiangling's relocation to Baochai's quarters.",
+            "anchorIds": [
+              "p-588932",
+              "p-588623"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-80-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Baoyu seeks an absurdity (a cure for female jealousy), prompting Wang Yitie's comedic deduction that jealousy cures only upon death via a hundred years of sweet soup.",
+            "anchorIds": [
+              "p-591382",
+              "p-591120"
+            ],
+            "prerequisiteNodeIds": [
+              "n-79-7"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "The exchange satirizes the universal incurable human trait of marital jealousy across domestic life.",
+            "anchorIds": [
+              "p-591382"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-81-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Baoyu proposes taking Yingchun back permanently, which Lady Wang refutes by citing orthodox principles of marriage and marital adaptation.",
+            "anchorIds": [
+              "p-593663"
+            ],
+            "prerequisiteNodeIds": [
+              "n-79-2"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Lady Wang invokes customary gender norms governing married daughters within patriarchal gentry society.",
+            "anchorIds": [
+              "p-593663"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-81-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Baoyu synthesizes Yingchun's suffering, Baochai's departure, and Xiangling's plight into a despondent lamentation on growing up and the inevitable dispersion of companions.",
+            "anchorIds": [
+              "p-594399"
+            ],
+            "prerequisiteNodeIds": [
+              "n-80-3",
+              "n-81-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Pertains to the shared condition and tragic transience of the youthful female company of the Grand View Garden.",
+            "anchorIds": [
+              "p-594399"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-81-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "An immediate scene where the cousins fish to divine their annual fortune, highlighting Baoyu's rash temperament when his rod snaps.",
+            "anchorIds": [
+              "p-595501"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single leisure scene of four maidens and Baoyu fishing at Liaoxu.",
+            "anchorIds": [
+              "p-595501"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-81-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "The revelation of Ma Daopo's arrest allows Grandmother Jia and Fengjie to infer that their past fatal afflictions were targeted sorcery instigated by Concubine Zhao.",
+            "anchorIds": [
+              "p-597123",
+              "p-596844"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Clarifies the specific historical crime and past illness of Baoyu and Wang Xifeng.",
+            "anchorIds": [
+              "p-597123",
+              "p-596844"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-81-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Jia Zheng reflects on Yingchun's misfortune and Baoyu's lingering puerility, deciding that private home schooling under strict clan authority is essential to salvage his future.",
+            "anchorIds": [
+              "p-598449"
+            ],
+            "prerequisiteNodeIds": [
+              "n-81-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Refers to the pedagogy and discipline suitable for the young boys of the Jia clan, specifically applied to Baoyu.",
+            "anchorIds": [
+              "p-598449"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-81-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Jia Zheng entrusts Baoyu to Dai Ru, establishing a structured regimen aimed at imperial civil examination skills, leaving Baoyu anxious.",
+            "anchorIds": [
+              "p-599754",
+              "p-600147"
+            ],
+            "prerequisiteNodeIds": [
+              "n-81-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Describes the specific re-enrollment and curriculum assignment of Baoyu at the Jia family school.",
+            "anchorIds": [
+              "p-599754",
+              "p-600147"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-82-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Baoyu denounces the eight-legged essay as deceitful fraud, but Daiyu counters with an argument that it possesses aesthetic, reasoned value and honorable worldly merit.",
+            "anchorIds": [
+              "p-600783"
+            ],
+            "prerequisiteNodeIds": [
+              "n-81-7"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "A normative evaluation of the entire genre and function of eight-legged examination essays in imperial scholar advancement.",
+            "anchorIds": [
+              "p-600783"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-82-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Jia Dairu interrogates Baoyu's exposition of the Analects chapters, correcting his superficial semantics and warning him against moral lapses.",
+            "anchorIds": [
+              "p-601700"
+            ],
+            "prerequisiteNodeIds": [
+              "n-81-7"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Exegesis of general Confucian principles regarding youthful discipline, moral integrity, and lust versus virtue.",
+            "anchorIds": [
+              "p-601700"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "INycatu1FaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 33365,
+    "candidatesTokenCount": 3599,
+    "totalTokenCount": 36964,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 33365
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3599
+      }
+    ]
+  },
+  "durationMs": 20147,
+  "requestHash": "7bcf7d87c19bdd248e673498dd9b3b2be64696fe49f982724e59150de9d8f877"
+}

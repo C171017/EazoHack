@@ -1,0 +1,41 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "nodeId": "n-83-5",
+        "reason": "The proposed prerequisite `n-80-3` is invalid. While Xia Jingui's temperament and household conflict have been depicted earlier, node `n-83-5` narrates a new domestic outburst initiated by Xia Jingui bullying Baochan and薛姨妈/Baochai intervening; this event does not depend inferentially on the specific prior outcome of `n-80-3` (the witchcraft framing of Xiangling and Xiangling moving to Baochai). The narrative progress in chapter 83 begins from薛蟠 leaving home, not through an explicit deductive derivation from `n-80-3`."
+      },
+      {
+        "nodeId": "n-84-3",
+        "reason": "The proposed prerequisite `n-83-5` confuses chronological and contextual backstory with a direct reasoning prerequisite. Jia Mu's praise of Baochai as gentle, peaceable, and suitable to be a daughter-in-law is prompted immediately by Xue Yima's conversation and complaints about Xia Jingui changing names in chapter 84 (p-620772), rather than depending structurally on the prior event node `n-83-5` as an inferential premise."
+      },
+      {
+        "nodeId": "n-85-5",
+        "reason": "The proposed prerequisite `n-85-4` is inappropriate. The assignment treats the mere setting/occasion (the banquet where the play is performed) as an inferential prerequisite for the symbolic claim/thematic omen embedded in the play《冥升》. Prerequisite assignments must represent inferential premises for the claim, not physical setting or event chronology."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "adycarm2GYKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 40493,
+    "candidatesTokenCount": 393,
+    "totalTokenCount": 40886,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 40493
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 393
+      }
+    ]
+  },
+  "durationMs": 5277,
+  "requestHash": "52bed2a037cfb551fa1df8cc508d8d707f022d236ae8ac4a35ea44c1ff001abb"
+}

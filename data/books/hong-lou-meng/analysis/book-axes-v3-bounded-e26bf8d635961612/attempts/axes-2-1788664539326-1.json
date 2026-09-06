@@ -1,0 +1,583 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-4-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative exposition introducing Li Wan's background, family lineage, widowhood, and daily role in the Jia household without preceding inferential argument.",
+            "anchorIds": [
+              "p-22716"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on the enduring personal character, lifestyle, and social condition of a single named individual (Li Wan).",
+            "anchorIds": [
+              "p-22716"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Draws an immediate practical inference from the political reality in Jinling to Jia Yucun's current legal case, showing the rhyming list of the four families ('Hu Guan Fu').",
+            "anchorIds": [
+              "p-23676",
+              "p-23998",
+              "p-24062"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Presents a formulaic rule governing a specific class (all local officials and the four monopolistic gentry families) within the province/officialdom setting.",
+            "anchorIds": [
+              "p-23676",
+              "p-24062"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Develops a local deductive chain from the necessity revealed by the 'Hu Guan Fu' and Yucun's indebtedness to the Jia/Wang families to orchestrating a fraudulent spirit-writing judgment.",
+            "anchorIds": [
+              "p-25726",
+              "p-26127",
+              "p-25300"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-1",
+              "n-4-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Concerns one concrete legal case—the settlement of Xue Pan's homicide of Feng Yuan and the banishment of the clerk.",
+            "anchorIds": [
+              "p-26127"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative introduction of Xue Pan's upbringing, character flaws, and the specific motivations for the Xue family journey to the capital.",
+            "anchorIds": [
+              "p-26338",
+              "p-27057"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Applies directly to Xue Pan's personal habits, background, and specific family reasons for relocation beyond a single instant.",
+            "anchorIds": [
+              "p-26338"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-4-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Infers the worsening of Xue Pan's behavior as a natural outcome of arriving at Rongguo mansion and associating with profligate clan members at Lixiang Courtyard.",
+            "anchorIds": [
+              "p-27735",
+              "p-27979",
+              "p-27557"
+            ],
+            "prerequisiteNodeIds": [
+              "n-4-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Details the specific residence arrangements and personal behavioral deterioration of Xue Pan and his household at Rongguo mansion.",
+            "anchorIds": [
+              "p-27735",
+              "p-27979"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative depiction of Baoyu feeling fatigued, rejecting the front room's moralistic couplets, and falling asleep in Qin Keqing's sensual bedroom.",
+            "anchorIds": [
+              "p-29312",
+              "p-29057",
+              "p-29643"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts one single particular afternoon event and scene in Qin Keqing's bedroom.",
+            "anchorIds": [
+              "p-29312",
+              "p-29643"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Shows Baoyu's immediate observation and questioning of the registers in the Land of Illusion, where the fairy explains their selection principle directly.",
+            "anchorIds": [
+              "p-31030",
+              "p-30354",
+              "p-32329"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-1"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Encompasses the bounded collection of Jinling's outstanding young women categorized across primary and secondary registers.",
+            "anchorIds": [
+              "p-31030"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Jinghuan directly relays the ancestors' diagnosis of the clan's inevitable doom and their request to warn Baoyu through illusions of desire.",
+            "anchorIds": [
+              "p-32607"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-2"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Assesses the destiny of the Jia lineage and specifically targets Baoyu's disposition and reform.",
+            "anchorIds": [
+              "p-32607"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Presents Baoyu directly hearing the performance of the Twelve Songs of the Dream of the Red Chamber without discerning their hidden prophetic meaning.",
+            "anchorIds": [
+              "p-33350",
+              "p-33824",
+              "p-34867"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-3"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "The songs outline the broad tragic patterns, fortunes, and ultimate vanity governing the entire aristocratic world of the drama.",
+            "anchorIds": [
+              "p-34867"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Develops a structured philosophical distinction between sensual lust and emotional empathy ('lust of the mind') connected to Baoyu's nature, echoing Yucun's dual-temperament theory.",
+            "anchorIds": [
+              "p-35278",
+              "p-34994"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-7",
+              "n-5-3"
+            ]
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "Articulates an overarching theoretical classification contrasting superficial physical lust with innate romantic passion across human temperaments.",
+            "anchorIds": [
+              "p-35278",
+              "p-34994"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-5-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Concludes the dream sequence where Baoyu falls into the Ford of Delusion and awakens crying out Keqing's name, startling Qin Keqing.",
+            "anchorIds": [
+              "p-35668",
+              "p-35992"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Captures a single concrete awakening scene and reaction at a specific moment.",
+            "anchorIds": [
+              "p-35668",
+              "p-35992"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Follows directly from Xiren discovering Baoyu's nocturnal emission and learning what Jinghuan taught him, leading directly to their private intimacy.",
+            "anchorIds": [
+              "p-36356",
+              "p-36141"
+            ],
+            "prerequisiteNodeIds": [
+              "n-5-5",
+              "n-5-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a singular specific episode of intimacy between Baoyu and Xiren.",
+            "anchorIds": [
+              "p-36356"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Granny Liu evaluates her family's poverty and formulates a plan based on the distant past clan connection with Lady Wang.",
+            "anchorIds": [
+              "p-37454",
+              "p-36592"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains to Granny Liu's own peasant family household and their strategy to seek aid from the Wang/Jia family.",
+            "anchorIds": [
+              "p-37454"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Step-by-step local progression where Granny Liu finds Zhou Rui's wife, who calculates past favors and personal prestige, agreeing to guide her to Wang Xifeng.",
+            "anchorIds": [
+              "p-38980",
+              "p-38729",
+              "p-39516"
+            ],
+            "prerequisiteNodeIds": [
+              "n-6-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Documents the specific course of events during Granny Liu's entrance through servant quarters into Rongguo mansion.",
+            "anchorIds": [
+              "p-38729",
+              "p-39516"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-6-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Wang Xifeng weighs the old clan connection against household appearances, delivers her speech on the mansion's hidden difficulties, and decides to grant twenty taels.",
+            "anchorIds": [
+              "p-42745",
+              "p-42986",
+              "p-42293"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-4",
+              "n-6-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Pertains to a specific transaction: Xifeng handing twenty taels of silver and carriage money to Granny Liu.",
+            "anchorIds": [
+              "p-42745",
+              "p-42986"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Baochai directly recounts the prescription, seasonal ingredients, and meticulous compounding method given by the Taoist/Buddhist monks for Cold Fragrance Pills.",
+            "anchorIds": [
+              "p-44172",
+              "p-44549"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Describes a specialized medical formula designed strictly for Baochai's specific condition ('fetal heat toxin') under exacting seasonal criteria.",
+            "anchorIds": [
+              "p-44172"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Immediate personal reaction and inference when Zhou Rui's wife sees Xiangling, remarking on her beauty resembling Qin Keqing and lamenting her forgotten origins.",
+            "anchorIds": [
+              "p-45091"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on Xiangling's individual physical appearance, forgotten background, and tragic status.",
+            "anchorIds": [
+              "p-45091"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative sequence showing Zhou Rui's wife distributing the palace flowers, culminating in Daiyu's immediate cynical deduction that she received what was left over.",
+            "anchorIds": [
+              "p-44749",
+              "p-46812",
+              "p-45351"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Describes a specific domestic episode of flower delivery and Daiyu's barbed reaction on that evening.",
+            "anchorIds": [
+              "p-46812"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Immediate psychological reflection of both Baoyu and Qin Zhong upon their first encounter, each feeling inferior to the other.",
+            "anchorIds": [
+              "p-48229",
+              "p-48521"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts one first meeting scene between Baoyu and Qin Zhong at the Ning mansion.",
+            "anchorIds": [
+              "p-48229",
+              "p-48521"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Baoyu reasons from Qin Zhong's lack of a tutor and his own family's clan school availability to negotiate an arrangement where they can study together.",
+            "anchorIds": [
+              "p-49000"
+            ],
+            "prerequisiteNodeIds": [
+              "n-7-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Applies to the specific schooling arrangement agreed between the two individuals (Baoyu and Qin Zhong).",
+            "anchorIds": [
+              "p-49000"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-7-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Drunken Jiao Da lashes out at the management and exposes the Ning mansion's illicit incestuous affairs in direct retaliation for being ordered to escort Qin Zhong.",
+            "anchorIds": [
+              "p-50029",
+              "p-49598",
+              "p-50515"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A critique centered on the specific masters and corrupt conduct inside the Ningguo mansion.",
+            "anchorIds": [
+              "p-50029",
+              "p-50515"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Narrates Baoyu's visit to Lixiang Courtyard to inquire after Baochai's health, bypassing his father's study and meeting household managers.",
+            "anchorIds": [
+              "p-51149",
+              "p-51737"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative scene depicting Baoyu's walk and arrival at Baochai's room.",
+            "anchorIds": [
+              "p-51149",
+              "p-51737"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Prompted by Ying'er's comment, Baoyu and Baochai compare the complementary inscriptions on the jade and the gold locket, discovering their paired omen.",
+            "anchorIds": [
+              "p-52669",
+              "p-51737",
+              "p-53008"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-2",
+              "n-8-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Concerns the specific auspicious pairing and inscribed tokens belonging to Baoyu and Baochai.",
+            "anchorIds": [
+              "p-52669",
+              "p-53008"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-8-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Daiyu arrives, senses the intimate atmosphere between Baoyu and Baochai, and devises witty innuendos using the hand-warmer brought by Xueyan.",
+            "anchorIds": [
+              "p-53280",
+              "p-54189"
+            ],
+            "prerequisiteNodeIds": [
+              "n-8-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a single dialogue scene filled with oblique verbal thrusts in Aunt Xue's room.",
+            "anchorIds": [
+              "p-53280",
+              "p-54189"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xNqcaq7RKoKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 27828,
+    "candidatesTokenCount": 4679,
+    "totalTokenCount": 32507,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 27828
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4679
+      }
+    ]
+  },
+  "durationMs": 24387,
+  "requestHash": "f682a4a79389db97d38449e1a9a5a500e3c6a31c492cbc106f756bb808cff5c1"
+}

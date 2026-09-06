@@ -1,0 +1,557 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-89-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "黛玉窃听侍书传闻后，推想前日梦谶并决意自戕绝粒。这是一个直接结合梦境记忆与听闻之谣言所作出的局部心理推论与决断，推论链条短而直接，处于第一级直接推断向两步本地推理过渡阶段。",
+            "anchorIds": [
+              "p-658199",
+              "p-658349"
+            ],
+            "prerequisiteNodeIds": [
+              "n-89-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指林黛玉一人在听闻宝玉订亲讹传后悲观绝粒的一连串具体心理与自绝行动，针对单一特定人物事件。",
+            "anchorIds": [
+              "p-658349"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "黛玉在病危中听见侍书转述‘亲上作亲、园中之人’，自行推理得出必是自己而非他人，从而解开误会心神转安。这依赖于对之前绝粒因由的消除，属于承接前因的本地推断。",
+            "anchorIds": [
+              "p-659242",
+              "p-660029",
+              "p-660780"
+            ],
+            "prerequisiteNodeIds": [
+              "n-89-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描述黛玉病危中误解冰释、转危为安的特定场景，属单个具体事件。",
+            "anchorIds": [
+              "p-660029"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "贾母依据宝黛长大避嫌、黛玉乖僻多病不寿的考量，做出宝玉配宝钗并瞒着黛玉的决定，结合了长期观察与家族婚姻常理的判断，是一套完整的内部家族决断推导。",
+            "anchorIds": [
+              "p-661167"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "属于贾母对宝玉与宝钗、黛玉婚姻大事作出的特定裁定与安排，牵涉贾府核心人物之婚姻走向。",
+            "anchorIds": [
+              "p-661167"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "凤姐巡园撞见婆子冲撞邢岫烟，根据主奴名分等级当场斥责惩处，属于规矩原则在现场事件上的直接反应应用。",
+            "anchorIds": [
+              "p-661167"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "发生在紫菱洲畔一次看守婆子与姑娘丫鬟纠纷的具体处置场景。",
+            "anchorIds": [
+              "p-661167"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "凤姐通过细察岫烟朴素安分、衣被单薄的现实境况，推断其为人难得而起敬佩体恤之心，随之赠送御寒衣物，属于由具体观察引发的行动与推论。",
+            "anchorIds": [
+              "p-662383",
+              "p-662733"
+            ],
+            "prerequisiteNodeIds": [
+              "n-90-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "凤姐体恤邢岫烟贫苦而送衣相助的具体生活细节。",
+            "anchorIds": [
+              "p-662383",
+              "p-662733"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "薛蝌由岫烟被下人欺负之事联想其寄人篱下与贫寒处境，对比夏金桂的泼辣富贵，感叹造化不均而作诗寄怀，是由事发感慨的小型推论情境。",
+            "anchorIds": [
+              "p-663333",
+              "p-663859",
+              "p-664026"
+            ],
+            "prerequisiteNodeIds": [
+              "n-90-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "薛蝌针对邢岫烟与夏金桂两人的命运反差生出的个体感慨与自作诗歌。",
+            "anchorIds": [
+              "p-663859",
+              "p-664026"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "薛蝌面对宝蟾夜送酒果及言行挑逗，综合分析金桂为人、叔嫂名分与潜在陷害阴谋，产生戒备与推敲，属于就事论事的局部心理揣摩。",
+            "anchorIds": [
+              "p-664061",
+              "p-664822"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记述薛府内室金桂命宝蟾送酒试探薛蝌的单一夜间事件。",
+            "anchorIds": [
+              "p-664061",
+              "p-664822"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "薛蝌面对宝蟾的夜探及清晨轻佻试探，识破其意图并决定以冷淡装睡和回避应对，是紧承前事的现场直接反应与简单应对推断。",
+            "anchorIds": [
+              "p-665153"
+            ],
+            "prerequisiteNodeIds": [
+              "n-90-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描写宝蟾夜间及清晨试探薛蝌、薛蝌持重拒之的具体情境。",
+            "anchorIds": [
+              "p-665153"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "宝蟾在试探未果后，为金桂出谋划策，综合叔嫂关系、薛蝌感恩心理以及威吓手段提出一套步步为营的算计策略，包含两三步假设与对策推演。",
+            "anchorIds": [
+              "p-665964"
+            ],
+            "prerequisiteNodeIds": [
+              "n-91-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "专门针对薛蝌一人所拟定的小范围诱惑与构陷计谋。",
+            "anchorIds": [
+              "p-665964"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.7,
+            "rationale": "叙述夏金桂将过继兄弟夏三引见给薛姨妈并托其买东西，为叙述层面直接发生的铺垫性事件，推论深度极浅。",
+            "anchorIds": [
+              "p-667372"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "夏三进薛家引见及托买物品的单一叙事细节。",
+            "anchorIds": [
+              "p-667372"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "道里驳回薛蟠案促使薛蝌连夜起程，宝钗操劳致病后服用冷香丸调治，各事件呈因果发生叙述，主要是情节发展的直接展示。",
+            "anchorIds": [
+              "p-668068",
+              "p-668222",
+              "p-668318"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "薛家官司波折及宝钗急病服药调理的特定事件片段。",
+            "anchorIds": [
+              "p-668068",
+              "p-668318"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "贾政基于薛家多事、临近年底、薛宝钗操劳以及贾母寿诞等多重实际时间节点推演，定下冬放定、春过礼、寿后完婚的婚期步骤，体现出有计划的务实安排推导。",
+            "anchorIds": [
+              "p-668637"
+            ],
+            "prerequisiteNodeIds": [
+              "n-90-2"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "贾政为宝玉与宝钗二人婚姻礼仪进程规划的具体时间表。",
+            "anchorIds": [
+              "p-668637"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "黛玉以六种好与不好的可能性设问试探，宝玉借弱水三千与沾泥柳絮等禅机作出针对性拆解并赌咒表明心迹，形成一轮多回合的精神试探与辩证推演。",
+            "anchorIds": [
+              "p-669352"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "宝黛二人专属的心意试探、禅语机锋及爱情盟约。",
+            "anchorIds": [
+              "p-669352"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-92-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "宝玉根据巧姐所读《列女传》，分类列举历代后妃才女、贤妻、苦孝守节诸人故事逐一解说，属于根据经史典籍作出的归纳与讲授。",
+            "anchorIds": [
+              "p-671518"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "虽发生于贾母房中叔侄谈话，但宝玉所论涉及中国历代各类不同品格女子的行为范式分类。",
+            "anchorIds": [
+              "p-671518"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-92-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "冯紫英拜访并向贾政詹光展示西洋母珠吸珠及鲛绡帐奇观，属于直接叙事与实物展示，推理成分极少。",
+            "anchorIds": [
+              "p-674969"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记录某次冯紫英携宝求售洋货的具体聚会场景。",
+            "anchorIds": [
+              "p-674969"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-92-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "凤姐驳回购珍宝进贡之议，从长远家族存亡推演，认为贵族巨室必须置办祭地义庄坟屋等不能没收倒闭之不动产业，以防日后子孙衰败一败涂地，属于完整的家族理财战略论证。",
+            "anchorIds": [
+              "p-675889"
+            ],
+            "prerequisiteNodeIds": [
+              "n-92-3"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "针对钟鸣鼎食之族如何通过置办不动产以求保全根基、防备败落的宗族生存保障主张，具有超越单人单事的家族策略普遍性。",
+            "anchorIds": [
+              "p-675889"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-92-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "贾政由贾雨村起复转升与同等世勋甄家抄家败落的对比，推导出仕途风波难测、自家子弟空享祖荫而无德行才情的危机，属于由同侪遭遇反观自身的忧患推理。",
+            "anchorIds": [
+              "p-676655"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "对豪门世族仕途荣枯无常、坐享祖荫者难当风浪的反思，涵盖当时同类贵胄世家的普遍命运感叹。",
+            "anchorIds": [
+              "p-676655"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "宝玉看蒋玉菡演《占花魁》，从其声腔演技联想到《乐记》声音之原、知音知乐与诗词传情入骨之理，是由艺术观摩引发的审美推论。",
+            "anchorIds": [
+              "p-678293",
+              "p-679016"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "宝玉在临安伯府看戏遇蒋玉菡的个人体验与心得。",
+            "anchorIds": [
+              "p-678293",
+              "p-679016"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "贾政阅读甄老爷来信后，感于旧谊不忍回绝，决定收留包勇，为叙事事件直接推动。",
+            "anchorIds": [
+              "p-679760",
+              "p-679941",
+              "p-680057"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "甄府仆人包勇投奔贾政并获收容的具体情节。",
+            "anchorIds": [
+              "p-679760",
+              "p-680057"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "包勇直接转述甄宝玉大病昏厥中见薄命司鬼怪册子后性情大变、专心读书理家的经历，属于由见闻经验引申的人格转变报告。",
+            "anchorIds": [
+              "p-680057"
+            ],
+            "prerequisiteNodeIds": [
+              "n-93-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "具体描述甄宝玉个人因梦魇重病改过自新的独立事例。",
+            "anchorIds": [
+              "p-680057"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "贾府门前出现揭发贾芹丑行的匿名揭帖，贾政见后震怒并命人彻查，属于突发事件直接陈述。",
+            "anchorIds": [
+              "p-680894",
+              "p-681185",
+              "p-681237"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "贾府门前发现匿名帖的单一突发事件。",
+            "anchorIds": [
+              "p-680894",
+              "p-681237"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.6,
+            "rationale": "赖大奉贾政命假借宫中传召为名突袭水月庵，当场查获贾芹与女尼聚饮，纯属行动与现场撞破的叙事展开。",
+            "anchorIds": [
+              "p-681297",
+              "p-681551"
+            ],
+            "prerequisiteNodeIds": [
+              "n-93-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "赖大查封水月庵现场抓获贾芹的具体经过。",
+            "anchorIds": [
+              "p-681551"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "贾琏基于贾政严厉性情、家丑外扬危害及长揭帖者志气的后患考量，与赖大串通出谋划策，让贾芹死不承认并变卖女尼灭口，是一个周密遮掩丑闻的应对方案推导。",
+            "anchorIds": [
+              "p-683136"
+            ],
+            "prerequisiteNodeIds": [
+              "n-93-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "针对贾芹水月庵丑行定制的特定庇护与串供行为。",
+            "anchorIds": [
+              "p-683136"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "王夫人兼顾慈悲佛心与宗族名誉，权衡强行还俗造孽与官媒拐卖害人的利弊，决议发还本家雇船遣散、严诫贾芹并销除粮档，形成完整而成熟的善后政策推演。",
+            "anchorIds": [
+              "p-684255",
+              "p-685090"
+            ],
+            "prerequisiteNodeIds": [
+              "n-93-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "贾府处理水月庵涉案小尼道遣散与贾芹惩戒的一套具体处置办法。",
+            "anchorIds": [
+              "p-684255",
+              "p-685090"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "VdycavboOr2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 28119,
+    "candidatesTokenCount": 5121,
+    "totalTokenCount": 33240,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 28119
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5121
+      }
+    ]
+  },
+  "durationMs": 29002,
+  "requestHash": "e8719b10c6368a86c77f43b93c9aced0f8fc8dc9b2281e59e9150601215088f3"
+}

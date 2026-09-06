@@ -1,0 +1,567 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-86-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "薛蝌在n-85-7提出要请刀笔先生翻供的基础上，具体通过行贿吴良并代递呈子将斗杀辩解为失手误伤，构成一个明确发展的本地谋划推论步骤。",
+            "anchorIds": [
+              "p-633386",
+              "p-633603",
+              "p-633844"
+            ],
+            "prerequisiteNodeIds": [
+              "n-85-7"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述薛蟠命案中薛蝌代递呈子翻供的具体策略与文书呈递事件，属于单一具体事件。",
+            "anchorIds": [
+              "p-633386",
+              "p-633603",
+              "p-633844"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-86-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "知县坐堂重审并在收受贾府与薛家重金后改供定案，是承接薛蝌行贿翻供方案（n-86-2）并付诸实施的一连串推论与操作结果。",
+            "anchorIds": [
+              "p-634054"
+            ],
+            "prerequisiteNodeIds": [
+              "n-86-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "针对薛蟠打死张三一案重审定为误伤的具体审断场景与过程，属于单一特定事件。",
+            "anchorIds": [
+              "p-634054"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-86-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "因外界周贵妃薨逝引发传言，宝钗直接回忆并转述过去术士对元妃八字的推算与吉凶推论，属于从传闻引发的直接推论与转述。",
+            "anchorIds": [
+              "p-635597"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "针对元春（元妃）个人八字命理与一生荣枯劫数的推断评说，跨越其个人一生。",
+            "anchorIds": [
+              "p-635597"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-86-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "宝玉见琴谱不识字而发问，黛玉直接解释古琴减字谱的基本构造规则（左手指法、右手指法与徽弦组合），属于直接知识介绍。",
+            "anchorIds": [
+              "p-637580"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "所阐述的是古琴减字谱与指法记谱体系的通用构造规则，适用于整个古琴乐谱领域。",
+            "anchorIds": [
+              "p-637580"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-86-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "黛玉由“琴者禁也”引出抚琴的环境要求、身心修养与天人合一之理，包含对传统琴学心法的一套递进式论证阐述。",
+            "anchorIds": [
+              "p-637580"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6,
+            "rationale": "论述的是弹琴修身、养性、与神合灵的普遍性古琴美学与修养法则，跨越琴乐领域的诸般情境。",
+            "anchorIds": [
+              "p-637580"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-86-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "因宝玉提及《猗兰操》及眼前双朵兰花，黛玉即景生情，直接引申反思自身病弱孤凄的身世命运。",
+            "anchorIds": [
+              "p-638799"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "黛玉对自身青春病弱与孤凄命运的哀叹反思，涵盖其个人跨越时段的人生处境。",
+            "anchorIds": [
+              "p-638799"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-87-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝钗由薛蟠命案与家中多事、金桂生事感触清秋凄凉，直接赋诗并寄与黛玉寻求知音，属于情境触发的情感抒发。",
+            "anchorIds": [
+              "p-639605",
+              "p-639554"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "描绘宝钗个人及其家庭近期多舛境遇的心情与寄托。",
+            "anchorIds": [
+              "p-639605",
+              "p-639554"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-87-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "黛玉读宝钗来诗（n-87-1），并见宝玉旧帕等物，感物伤怀，推演自身寄人篱下之悲，进而拟写四叠诗篇并翻入琴操抚弄。",
+            "anchorIds": [
+              "p-642210",
+              "p-641773",
+              "p-639937"
+            ],
+            "prerequisiteNodeIds": [
+              "n-87-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "黛玉针对个人孤单境遇与旧情的感慨、和诗及抚琴行为。",
+            "anchorIds": [
+              "p-642210",
+              "p-641773",
+              "p-639937"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-87-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "叙述宝玉至蓼风轩旁观妙玉与惜春对弈下棋，妙玉取胜及三人交谈问候的直接经过。",
+            "anchorIds": [
+              "p-643138",
+              "p-643635"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "大观园内一幕具体下棋与会面场景。",
+            "anchorIds": [
+              "p-643138",
+              "p-643635"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-87-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "妙玉在蓼风轩外听黛玉抚琴（承接n-87-2黛玉抚琴动作），依据琴音的律吕、变征之声及君弦突然崩断，推断弹琴人悲思过深、恐不能持久。",
+            "anchorIds": [
+              "p-644686",
+              "p-644566",
+              "p-644479"
+            ],
+            "prerequisiteNodeIds": [
+              "n-87-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "妙玉凭借乐律对黛玉个人寿数与福泽前景作出的警兆性断言。",
+            "anchorIds": [
+              "p-644686",
+              "p-644566",
+              "p-644479"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-87-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "妙玉因听琴及白日与宝玉交谈心动，夜坐屏息断念时压制不住杂念，导致神不守舍，引发走火入魔的幻象与病症。",
+            "anchorIds": [
+              "p-644686",
+              "p-645513"
+            ],
+            "prerequisiteNodeIds": [
+              "n-87-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记录妙玉庵中夜坐走火入魔病倒的特定事件。",
+            "anchorIds": [
+              "p-644686",
+              "p-645513"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-87-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "惜春闻彩屏述说妙玉走火入魔之事（n-87-5），推论妙玉尘缘未断，对比自身设想若出家当一念不生，进而口占佛偈印证心得。",
+            "anchorIds": [
+              "p-645797",
+              "p-646006",
+              "p-646033"
+            ],
+            "prerequisiteNodeIds": [
+              "n-87-5"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "惜春的偈语“大造本无方，云何是应住。既从空中来，应向空中去”涉及佛教空性与出世解脱的普遍义理原则。",
+            "anchorIds": [
+              "p-645797",
+              "p-646006",
+              "p-646033"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "直接叙述贾母为明年暗九祈寿，派鸳鸯分发素纸藏香让惜春等亲丁女眷写《心经》祈福。",
+            "anchorIds": [
+              "p-646193"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "贾府中具体的一次抄经祈寿差事安排与对话场景。",
+            "anchorIds": [
+              "p-646193"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝玉向贾母夸赞贾兰对对子得师父夸奖，贾母由此直接联想到早亡的贾珠及李纨母子辛苦，引出伤感落泪。",
+            "anchorIds": [
+              "p-646853",
+              "p-647830"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "围绕贾兰的才长进与贾母对贾珠母子命运的追怀与感慨。",
+            "anchorIds": [
+              "p-646853",
+              "p-647830"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "贾珍与贾琏针对鲍二、周瑞及何三斗殴聚众闹事的具体违纪行为直接实施家法鞭打驱逐。",
+            "anchorIds": [
+              "p-648118",
+              "p-648859"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "宁府门前庄头送果品引发的一场具体仆役争执与责罚。",
+            "anchorIds": [
+              "p-648118",
+              "p-648859"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "凤姐从贾琏口中得知下人打架（n-88-3），结合焦大醉骂与鲍二旧事，推论东府治家松弛之弊，主张奴仆乱纪之风不可长。",
+            "anchorIds": [
+              "p-649356"
+            ],
+            "prerequisiteNodeIds": [
+              "n-88-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "凤姐关于豪门家族主奴体统、整肃家风不可纵容奴仆违纪的治家经验总结。",
+            "anchorIds": [
+              "p-649356"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "面对贾芸求揽工部陵工差事，凤姐剖析衙门官吏体制、堂官书办权限及贾府内部人事纷争，推导出不可插手并回绝贾芸。",
+            "anchorIds": [
+              "p-650085"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "阐述官场衙门公事与家族私人求差之间的权限界限与利害规律。",
+            "anchorIds": [
+              "p-650085"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "叙述贾芸遭凤姐拒绝后，出门时私下将带来的两件绣货赠与小红并相约往来的叙事细节。",
+            "anchorIds": [
+              "p-651188",
+              "p-649732"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "贾芸与小红二人在二门口私相赠物交谈的单一事件。",
+            "anchorIds": [
+              "p-651188",
+              "p-649732"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "平儿转述水月庵凶险撞邪之事与小丫头空屋闻声，导致一向刚强的凤姐夜半惊悸发渗，次日逢官事来报。",
+            "anchorIds": [
+              "p-651658",
+              "p-652205"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记述凤姐房中听闻邪祟传言及夜间受惊恍惚的具体事件。",
+            "anchorIds": [
+              "p-651658",
+              "p-652205"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "工部报河南决口需修河工，贾政天天忙于衙门，宝玉借机学房工课渐松，属于外部背景引发的直接连锁情况。",
+            "anchorIds": [
+              "p-653063",
+              "p-652908"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "关于贾政一段时间内公差繁忙及宝玉学业日常松懈状态的描述。",
+            "anchorIds": [
+              "p-653063",
+              "p-652908"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "因天寒添衣，焙茗拿来晴雯生前抱病补过的雀金裘，宝玉睹物思人，触景伤情遂托病告假。",
+            "anchorIds": [
+              "p-653235",
+              "p-653761"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "宝玉在学房见雀金裘伤感并回园就寝的具体情节。",
+            "anchorIds": [
+              "p-653235",
+              "p-653761"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "承接见雀金裘伤怀（n-89-2），宝玉借静坐为名独入晴雯旧室，设供填词并焚化吊祭亡魂。",
+            "anchorIds": [
+              "p-655240",
+              "p-655326",
+              "p-655419"
+            ],
+            "prerequisiteNodeIds": [
+              "n-89-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "宝玉在晴雯旧居设果焚词悼亡的单一特定场景。",
+            "anchorIds": [
+              "p-655240",
+              "p-655326",
+              "p-655419"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝玉探访潇湘馆，两人谈论《斗寒图》与弹琴转调知音之事，因各自心事与顾忌，说话半吐半吞，形成亲极反疏的交流状态。",
+            "anchorIds": [
+              "p-655476",
+              "p-656182",
+              "p-656838"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描绘潇湘馆中宝黛二人一次特定的试探与言不由衷的会面交谈。",
+            "anchorIds": [
+              "p-655476",
+              "p-656182",
+              "p-656838"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "雪雁向紫鹃转述从侍书处听来的宝玉与知府家定亲传言，恰被黛玉在屋内听得大半，属于传言转述情节。",
+            "anchorIds": [
+              "p-656996"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "平台底下雪雁与紫鹃私下传话并被黛玉窃听的特定事件。",
+            "anchorIds": [
+              "p-656996"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ONycat2nHIKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 26843,
+    "candidatesTokenCount": 5116,
+    "totalTokenCount": 31959,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 26843
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5116
+      }
+    ]
+  },
+  "durationMs": 28363,
+  "requestHash": "a8174326ff9339c129717dde760499a313e485480cf965dc1a6ec29e82f0d568"
+}

@@ -1,0 +1,601 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-12-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "The Taoist directly introduces the mirror and explains its magical function and the explicit rule not to look at the front side, requiring minimal inference beyond the immediate context of Jia Rui's illness.",
+            "anchorIds": [
+              "p-77208"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-3"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "While presented as a specific remedy for Jia Rui, the mirror is described as having broader efficacy for 'talented youth and profligates' who suffer from lustful delusion, though tied specifically to this supernatural object.",
+            "anchorIds": [
+              "p-77208"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Follows the direct contravention of the Taoist's warning: looking into the front produces an illusion that exhausts Jia Rui's vitality, culminating in the moralized outcome of his death.",
+            "anchorIds": [
+              "p-77527",
+              "p-77829"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Narrates the singular episode of Jia Rui succumbing to lust inside the mirror, his demise, and the Taoist's retrieval of the mirror.",
+            "anchorIds": [
+              "p-77527",
+              "p-77829"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-12-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A straightforward sequential narrative recording Dai-ru wrapping up the funeral and Daiyu being escorted back to Yangzhou upon her father's illness.",
+            "anchorIds": [
+              "p-78043",
+              "p-78185"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Covers two specific narrative transitional events concerning particular characters (Jia Rui's funeral and Daiyu's departure).",
+            "anchorIds": [
+              "p-78043",
+              "p-78185"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Qin Keqing synthesizes cyclic rise-and-fall principles with practical structural solutions (securing clan estate and schooling against imperial confiscation) and foreshadows upcoming events.",
+            "anchorIds": [
+              "p-78564",
+              "p-78859",
+              "p-79253"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "Presents a strategic principle of perpetual estate hedging against dynastic confiscation and decline, applied to prominent aristocratic families.",
+            "anchorIds": [
+              "p-78564",
+              "p-78859",
+              "p-79253"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Direct narrative account of Qin Keqing's death and the immediate emotional reactions of Baoyu and Jia Zhen.",
+            "anchorIds": [
+              "p-79347",
+              "p-79435"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Focuses on the immediate bereavement of the Jia household upon one specific death.",
+            "anchorIds": [
+              "p-79347",
+              "p-79435"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Shows Jia Zhen putting into practice his vow to spend unreservedly, disregarding Jia Zheng's cautionary advice regarding the prince's coffin wood.",
+            "anchorIds": [
+              "p-80246",
+              "p-79435"
+            ],
+            "prerequisiteNodeIds": [
+              "n-13-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A specific sequence of decisions regarding the materials and ritual scale of Qin Keqing's funeral.",
+            "anchorIds": [
+              "p-80246",
+              "p-79435"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Motivated by Jia Zhen's concern over status during the funeral ceremonies, seizing the arrival of Dai Quan to purchase a military titular post.",
+            "anchorIds": [
+              "p-80741",
+              "p-81200",
+              "p-81537"
+            ],
+            "prerequisiteNodeIds": [
+              "n-13-3"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Depicts an instance of office purchase via palace eunuchs, but specifically confined to Jia Rong's five-rank credential.",
+            "anchorIds": [
+              "p-80741",
+              "p-81200",
+              "p-81537"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Jia Zhen reasons that only Wang Xifeng possesses the requisite decisiveness and stature to handle the chaotic domestic affairs during You Shi's illness, convincing Wang Furen.",
+            "anchorIds": [
+              "p-82066",
+              "p-82605",
+              "p-82944"
+            ],
+            "prerequisiteNodeIds": [
+              "n-13-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Concerns the specific inter-household delegation of household management authority for one month.",
+            "anchorIds": [
+              "p-82066",
+              "p-82605",
+              "p-82944"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-13-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Upon taking up duties, Xifeng analyzes and systematizes the institutional defects of the Ning mansion into five categorized structural problems.",
+            "anchorIds": [
+              "p-83332",
+              "p-83466"
+            ],
+            "prerequisiteNodeIds": [
+              "n-13-5"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "Formulates five general organizational pathologies typical of large aristocratic households and estates.",
+            "anchorIds": [
+              "p-83332",
+              "p-83466"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Direct operational response to the five institutional flaws identified in n-13-6, creating division of labor, timetables, and material accountability.",
+            "anchorIds": [
+              "p-84036",
+              "p-84577"
+            ],
+            "prerequisiteNodeIds": [
+              "n-13-6"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "A set of managerial policies tailored to administrative control over the Ning household staff during a prolonged event.",
+            "anchorIds": [
+              "p-84036",
+              "p-84577"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Implements the administrative rules by publicly punishing a tardy servant to enforce authority and prevent breakdown of compliance.",
+            "anchorIds": [
+              "p-85986",
+              "p-85385"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "An act of punitive discipline against a specific servant, consciously executed as an exemplary enforcement for the whole household staff.",
+            "anchorIds": [
+              "p-85986",
+              "p-85385"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "A narrative transmission of news reporting Lin Ruhai's death and subsequent logistical plans.",
+            "anchorIds": [
+              "p-86980",
+              "p-87219"
+            ],
+            "prerequisiteNodeIds": [
+              "n-12-6"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "A specific piece of family news delivered by an envoy regarding one event.",
+            "anchorIds": [
+              "p-86980",
+              "p-87219"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "Narrative detailing the funeral procession, reflecting the cumulative aristocratic alliances of the Eight Dukes.",
+            "anchorIds": [
+              "p-88218",
+              "p-88084"
+            ],
+            "prerequisiteNodeIds": [
+              "n-13-3",
+              "n-13-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Depicts one grand ceremonial funeral procession and its participants.",
+            "anchorIds": [
+              "p-88218",
+              "p-88084"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Explains Prince Beijing's motivation for setting up roadside rites based on ancestral ties, leading to his specific request to meet Baoyu.",
+            "anchorIds": [
+              "p-88541",
+              "p-88786",
+              "p-88961"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A concrete interaction between the Prince of Beijing and the Jia lineage at the roadside altar.",
+            "anchorIds": [
+              "p-88541",
+              "p-88786",
+              "p-88961"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Shui Rong examines Baoyu's demeanor and jade, draws an inductive assessment of his potential and risks of indulgence, offering gifts and mentorship.",
+            "anchorIds": [
+              "p-89188",
+              "p-89469",
+              "p-89726"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-5"
+            ]
+          },
+          "generality": {
+            "value": 1.7,
+            "rationale": "Delivers general pedagogical advice on educating privileged noble sons, applied directly to Baoyu.",
+            "anchorIds": [
+              "p-89188",
+              "p-89469",
+              "p-89726"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "Baoyu's direct encounters with farm implements trigger a basic connection to classical poetic reflections on peasant labor, followed by an infatuation with Er Yatou.",
+            "anchorIds": [
+              "p-90477",
+              "p-90887"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A discrete vignette of Baoyu and Qin Zhong pausing in a rural village during the procession.",
+            "anchorIds": [
+              "p-90477",
+              "p-90887"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Narrative setting the scene at Shuiyue Convent due to Xifeng's desire for comfort, noting pre-existing mutual attraction between Qin Zhong and Zhineng.",
+            "anchorIds": [
+              "p-91123"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Relates a specific accommodation choice and interpersonal playful flirtation.",
+            "anchorIds": [
+              "p-91123"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Xifeng is provoked by Jingxu's reverse psychology, explicitly invoking her disregard of supernatural retribution to justify using political connections for profit.",
+            "anchorIds": [
+              "p-92894",
+              "p-92317",
+              "p-92742"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-3"
+            ]
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "A personal ethos statement by Wang Xifeng on her lack of belief in karmic retribution coupled with an agreement to intervene in one lawsuit.",
+            "anchorIds": [
+              "p-92894",
+              "p-92317",
+              "p-92742"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Direct narrative account of Qin Zhong taking advantage of the dark to consummate intimacy with Zhineng, interrupted and teased by Baoyu.",
+            "anchorIds": [
+              "p-93253"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts one secretive sexual encounter and its comedic discovery.",
+            "anchorIds": [
+              "p-93253"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-15-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Xifeng deliberates extending the stay to balance multiple interests, then executes the plan by instructing Laiwang to draft an illicit letter in Jia Lian's name.",
+            "anchorIds": [
+              "p-93986",
+              "p-93744"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-4"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A specific corrupt administrative intervention orchestrated by Wang Xifeng through regional officials.",
+            "anchorIds": [
+              "p-93986",
+              "p-93744"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "The tragic outcome follows directly from Xifeng's intervention in n-15-6, leading to the lovers' suicides and bolstering Xifeng's appetite for illicit gain.",
+            "anchorIds": [
+              "p-94365"
+            ],
+            "prerequisiteNodeIds": [
+              "n-15-6"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "The narrative of a specific double tragedy resulting from arranged contract breach and Xifeng's ongoing behavioral change.",
+            "anchorIds": [
+              "p-94365"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "An unexpected imperial decree arrives during Jia Zheng's birthday, immediately transforming anxiety into celebration as Yuanchun's promotion is revealed.",
+            "anchorIds": [
+              "p-94567",
+              "p-94787"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "One specific historical turning point for the Jia family: the imperial promotion of Yuanchun.",
+            "anchorIds": [
+              "p-94567",
+              "p-94787"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Baoyu's gift of the prayer beads depends on receiving them in n-15-1; Daiyu's disdainful rejection illustrates her characteristic temperament and rejection of conventional courtly tokens.",
+            "anchorIds": [
+              "p-95544",
+              "p-95165"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-3",
+              "n-15-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A personal exchange between Baoyu and Daiyu concerning a specific gift.",
+            "anchorIds": [
+              "p-95544",
+              "p-95165"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Jia Lian outlines the political and moral reasoning behind the imperial decree allowing imperial consorts to visit their parental homes.",
+            "anchorIds": [
+              "p-97808"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Expounds an empire-wide imperial policy on filial piety and home visitations governing all consorts with suitable private estates.",
+            "anchorIds": [
+              "p-97808"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "8tqcapfeNYKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 21916,
+    "candidatesTokenCount": 4736,
+    "totalTokenCount": 26652,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 21916
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4736
+      }
+    ]
+  },
+  "durationMs": 23665,
+  "requestHash": "faeea07f1874ce47243d15c82db9c5f09d6c3b1dca2a10aa995cf0a056e512cd"
+}

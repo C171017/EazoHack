@@ -1,0 +1,594 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-20-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "凤姐巧解李嬷嬷之怒是在李嬷嬷大骂袭人（n-20-1）这一事态发生时的直接临场应对与推论化解，依赖于前述冲突事件，体现了一步直接因果推断。",
+            "anchorIds": [
+              "p-127783"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "该事件仅针对李嬷嬷因袭人躺卧而大吵大闹的特定单一场景及当场平息过程，属于具体的单一情节叙述。",
+            "anchorIds": [
+              "p-127783"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "叙述宝玉夜晚替麝月篦头被晴雯撞见并遭讥刺，属于小说中直接引入的情节描写，不依赖先验的复杂推理链。",
+            "anchorIds": [
+              "p-128703",
+              "p-129094",
+              "p-129353"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指怡红院内宝玉、麝月与晴雯三人在特定夜晚的一次篦头互动与言语交锋，限定于具体场景。",
+            "anchorIds": [
+              "p-128703",
+              "p-129094",
+              "p-129353"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "由贾环赶围棋输钱耍赖的事件引申至叙述者剖析宝玉内心根深蒂固的‘凡山川日月之精秀只钟于女儿，须眉男子不过是渣滓浊沫’的观念，包含对宝玉处世逻辑的展开阐述。",
+            "anchorIds": [
+              "p-129353"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.3,
+            "rationale": "文本在此处提出了宝玉审视一切‘世间男子与女儿’的总体价值信条（清浊之辨），跨越具体人物而上升为具有哲学/伦理色彩的贯穿性观念，但带有宝玉个人独特的认知界定。",
+            "anchorIds": [
+              "p-129353"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "承接贾环输钱耍赖后被赵姨娘啐骂的起因，王熙凤隔窗弹斥赵姨娘并训诫贾环，是一处基于家庭内庶出失态而作出的即时训导与处置。",
+            "anchorIds": [
+              "p-130624"
+            ],
+            "prerequisiteNodeIds": [
+              "n-20-4"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "涉及王熙凤对赵姨娘、贾环母子行为失体与尊卑分寸的特定处置，虽言及主庶与规矩，但主要针对贾环个人的训诫与管束。",
+            "anchorIds": [
+              "p-130624"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "宝玉为了宽解因宝钗而吃醋赌气的黛玉，给出了‘亲不间疏，先不僭后’及‘两心相印’的双重辩解推理，展开了局部的因果说服。",
+            "anchorIds": [
+              "p-131205",
+              "p-131461",
+              "p-131760"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "论述核心在于宝玉与黛玉、宝钗之间的亲疏次序界定以及宝黛二人独特的情感承诺，限定于宝黛二人长期关系格局。",
+            "anchorIds": [
+              "p-131205",
+              "p-131461",
+              "p-131760"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-20-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.4,
+            "rationale": "湘云来访、黛玉笑其咬舌、湘云反击祝黛玉得个咬舌林姐夫，主要是人物间机敏逗趣的对话，直接由情境生发，无前置推论积累。",
+            "anchorIds": [
+              "p-132221"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "仅为闺阁中湘云与黛玉、宝玉之间的一场特定玩笑打趣生活场景。",
+            "anchorIds": [
+              "p-132221"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "承接前文宝玉在黛玉处吃胭脂、厮闹无度等行为，袭人故意冷落并以柔情娇嗔作规劝，构成直接的因果反应。",
+            "anchorIds": [
+              "p-134026",
+              "p-133819"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "聚焦于袭人与宝玉之间特定的主仆/情伴互动方式及针对宝玉无节制行径的个别劝诫。",
+            "anchorIds": [
+              "p-134026",
+              "p-133819"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "宝玉由袭人冷落与众姊妹厮闹之累，受《南华经·胠箧》‘绝圣弃知’之启发，逻辑推演写出‘焚花散麝……灰黛玉之灵窍’以求断情绝念，包含文学与哲理的局部推理化用。",
+            "anchorIds": [
+              "p-135348",
+              "p-134983",
+              "p-135191"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-1"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "宝玉将其感悟拓展到对身边钗、黛、花、麝等闺阁女儿之于自身羁绊的整套解构设想，属于对身边特定群体的阶段性总括反思。",
+            "anchorIds": [
+              "p-135348",
+              "p-134983",
+              "p-135191"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "次日晨袭人继续赌气，宝玉急于化解僵局而折断玉簪立誓认错，是一步直接的情感冲突解决行动。",
+            "anchorIds": [
+              "p-135462"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指宝玉与袭人次日清晨在卧室内折簪发誓和好的一次特定具体事件。",
+            "anchorIds": [
+              "p-135462"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "黛玉看到宝玉所续《庄子》，直接看穿宝玉将自己的无见识推卸给他人，并题诗予以反驳批评，建立在宝玉续庄文本（n-21-2）的基础之上。",
+            "anchorIds": [
+              "p-136060",
+              "p-136131"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "黛玉题绝句专门针对宝玉续篇中‘作践南华’与怪罪他人的特定文本与言论。",
+            "anchorIds": [
+              "p-136060",
+              "p-136131"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "描写大姐儿出痘斋戒，贾琏搬至外书房，借机勾搭多姑娘，为小说情节线索直接开启的叙述。",
+            "anchorIds": [
+              "p-136428",
+              "p-136190"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "叙述贾琏与多姑娘在出痘斋戒期间偷情通款的具体个人风波。",
+            "anchorIds": [
+              "p-136428",
+              "p-136190"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-21-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "平儿在收拾铺盖时抖出头发，凭借机智既拿捏贾琏又在凤姐查问时谎称未有多余之物掩护过关，是基于私通事件（n-21-5）产生之遗留物的应对推理。",
+            "anchorIds": [
+              "p-137113",
+              "p-137337",
+              "p-137727"
+            ],
+            "prerequisiteNodeIds": [
+              "n-21-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "发生在凤姐、贾琏与平儿三者之间的特定危机应对事件。",
+            "anchorIds": [
+              "p-137113",
+              "p-137337",
+              "p-137727"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "叙述贾母喜宝钗稳重且逢将笄之年，自蠲银两命凤姐筹办生辰，为第二十二回新情节之开端叙述。",
+            "anchorIds": [
+              "p-139142",
+              "p-138644"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指宝钗十五岁生日这一次贾府家宴与排戏的具体安排。",
+            "anchorIds": [
+              "p-139142",
+              "p-138644"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "在贾母为宝钗做生日（n-22-1）的宴席戏台上，宝钗点戏并向宝玉阐释《寄生草》词藻音律之妙，由此直接引出禅机启蒙。",
+            "anchorIds": [
+              "p-139860",
+              "p-140313",
+              "p-140377"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "针对筵席间宝钗向宝玉推荐并讲解《鲁智深醉闹五台山》曲文的具体事件。",
+            "anchorIds": [
+              "p-139860",
+              "p-140313",
+              "p-140377"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "戏毕散场时众人见小旦，湘云戏言像黛玉，宝玉使眼色欲调和却两面不讨好，是看戏事件随之衍生的矛盾。",
+            "anchorIds": [
+              "p-140377",
+              "p-140660",
+              "p-141395"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "针对黛玉、湘云、宝玉三人在看戏后因相貌戏谑而发生的特定争端。",
+            "anchorIds": [
+              "p-140377",
+              "p-140660",
+              "p-141395"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "宝玉综合了湘黛两头受谤的挫折（n-22-3）、庄子泛若不系之舟之语以及宝钗所授《寄生草》（n-22-2）‘赤条条来去无牵挂’之旨，推导撰写出立足境偈语与词，构成一段跨事件的情感哲思升华。",
+            "anchorIds": [
+              "p-141813",
+              "p-141577",
+              "p-142109"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-2",
+              "n-22-3"
+            ]
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "宝玉借偈语表达一种企图摆脱情感挂碍、参透有无证悟的超越心态，触及佛教禅宗立足有无论的抽象思辨。",
+            "anchorIds": [
+              "p-141813",
+              "p-141577",
+              "p-142109"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "在宝玉作偈悟禅（n-22-4）之后，黛玉续以‘无立足境是方干净’，并以宝、玉机锋发问，宝钗更援引六祖慧能求法公案，二人从更高禅理层面推倒宝玉的自命顿悟，具有层层递进的思辨推演。",
+            "anchorIds": [
+              "p-142436"
+            ],
+            "prerequisiteNodeIds": [
+              "n-22-4"
+            ]
+          },
+          "generality": {
+            "value": 4.3,
+            "rationale": "涉及对六祖禅宗‘本来无一物’与‘无立足境’顿悟法门的辨析讨论，但终究落实在破除宝玉一时的狂痴念头上。",
+            "anchorIds": [
+              "p-142436"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "贾政观看元妃及家中姊妹（爆竹、算盘、风筝、海灯等）所制灯谜，从物象的‘一响而散’、‘飘飘浮荡’、‘清净孤独’等特征，逐一推论出家运衰败与红颜薄命的不祥谶语。",
+            "anchorIds": [
+              "p-144868",
+              "p-144617",
+              "p-145082"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.8,
+            "rationale": "虽然所感源于灯谜，但贾政的悲谶推断涵盖了贾家几位主要女性（元春、迎春、探春、惜春、宝钗）未来的整体命运走势，具有多个人物宿命的预示性。",
+            "anchorIds": [
+              "p-144868",
+              "p-144617",
+              "p-145082"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "元妃在归省省亲（n-18-5）后，虑及大观园若封锁则寥落且花柳无颜，又念及宝玉素在姊妹丛中长大，遂下谕让宝钗诸姊妹及宝玉入住，属于直接的行政决意与前因承接。",
+            "anchorIds": [
+              "p-146744",
+              "p-146962"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-5"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "专门针对贾府大观园在省亲之后诸公子小姐居住权限与安排的特定谕令。",
+            "anchorIds": [
+              "p-146744",
+              "p-146962"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "依据元春下达的谕旨（n-23-1），贾政择定二月二十二日并具体分配各人居住的轩馆楼斋，是谕令的直接落实。",
+            "anchorIds": [
+              "p-148346",
+              "p-147710"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-1"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "具体确立了潇湘馆、怡红院、蘅芜苑、秋爽斋等大观园各处馆舍的入住归属这一特定事实。",
+            "anchorIds": [
+              "p-148346",
+              "p-147710"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝玉入住大观园（n-23-2）后作即事诗、日子渐长忽生百无聊赖之闷，茗烟思量之下为他从书坊搜罗传奇野史小说，因果直接承接。",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记录宝玉进园初期的生活状态、即事诗的外传以及茗烟买杂书与他解闷的特定情境。",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "宝玉在桃花树下密看《会真记》（由n-23-3引出），黛玉葬花偶遇，二人共读并借西厢曲词戏谑调情，是小说情节的自然推进。",
+            "anchorIds": [
+              "p-149757",
+              "p-149552",
+              "p-149993"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "属于宝玉与黛玉在沁芳闸桥边桃花下共读西厢戏本的经典单一特写场景。",
+            "anchorIds": [
+              "p-149757",
+              "p-149552",
+              "p-149993"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "黛玉在共读西厢（n-23-4）后心潮未平，行至梨香院墙外听得《牡丹亭》曲文，将眼前唱词与方才《西厢记》警句及古人‘流水落花’诗词综合联想融通，引发内心深处的青春伤感与生命无常感。",
+            "anchorIds": [
+              "p-150523"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-4"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "黛玉将具体曲文上升为关于青春、韶华易逝与女性生命困境（如花美眷、似水流年）的广泛文学感悟，虽具普遍审美意义，但文本落脚于其个体神痴心痛。",
+            "anchorIds": [
+              "p-150523"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "承接黛玉听曲沉思（n-23-5）之际，香菱拍肩打断其幽思并拉回潇湘馆看茶下棋，为过渡性情节动作。",
+            "anchorIds": [
+              "p-151076"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指香菱打断黛玉神思、一同回潇湘馆品茶走棋的具体日常生活片断。",
+            "anchorIds": [
+              "p-151076"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "GducaoCQI6GLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 25258,
+    "candidatesTokenCount": 5795,
+    "totalTokenCount": 31053,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 25258
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5795
+      }
+    ]
+  },
+  "durationMs": 35321,
+  "requestHash": "10b73139fd4aa977250c6d77c8649e1157028d417a64e93876137b26292cbd1a"
+}

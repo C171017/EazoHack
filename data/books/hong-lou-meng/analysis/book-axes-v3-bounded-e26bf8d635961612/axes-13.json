@@ -1,0 +1,572 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-46-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Yuan-yang's public oath and severing of her hair directly follows and responds to the threats and inducements from Jia She relayed by her brother and sister-in-law (n-46-4, n-46-5), carrying out a deliberate counter-strategy in front of the matriarch.",
+            "anchorIds": [
+              "p-317773"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-4",
+              "n-46-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a singular dramatic confrontation and vow made by Yuan-yang at a specific assembly before Grandmother Jia.",
+            "anchorIds": [
+              "p-317773"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Tan-chun's defense of Lady Wang directly deduces from social propriety (an elder brother-in-law taking a concubine cannot involve the younger sister-in-law) to clear Lady Wang from Grandmother Jia's mistaken outburst provoked by Yuan-yang's confession (n-46-6).",
+            "anchorIds": [
+              "p-318398"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-6"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Tan-chun uses a general family propriety rule (brother-in-law and sister-in-law decorum), though applied directly to resolve Lady Wang's specific predicament.",
+            "anchorIds": [
+              "p-318398"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Grandmother Jia articulates her reasoning for refusing Jia She: Yuan-yang's unique competence, trust across the whole household, and essential daily caregiving render her indispensable, directly countering Lady Xing following n-46-6.",
+            "anchorIds": [
+              "p-319393"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-6"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Focuses on the specific status, duties, and irreplaceable value of Yuan-yang within Grandmother Jia's household.",
+            "anchorIds": [
+              "p-319393"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Feng-jie and Yuan-yang coordinate playful banter and intentional card-playing concessions to humor Grandmother Jia, an immediate practical scheme to ease family tension after the dispute with Lady Xing (n-47-1).",
+            "anchorIds": [
+              "p-320499"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Describes a specific card game gathering and the witty banter deployed during it.",
+            "anchorIds": [
+              "p-320499"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Grandmother Jia transfers her simmering anger at Jia She onto Jia Lian when he peeks into the room, bringing up the recent Er Bao affair as pretext; Ping'er and Jia Lian's prior dialogue explicitly anticipates this risk.",
+            "anchorIds": [
+              "p-321653",
+              "p-321352"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Describes a specific domestic scolding incident involving Jia Lian and Grandmother Jia.",
+            "anchorIds": [
+              "p-321653"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Narrative explanation of Xue Pan's mistaken deduction: because Liu Xianglian is handsome and guest-stars in romantic operatic roles, Xue Pan presumes he is a dissolute actor available for romantic pursuits.",
+            "anchorIds": [
+              "p-322476",
+              "p-322770"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A character assessment specific to Xue Pan's erroneous perception of Liu Xianglian at the banquet.",
+            "anchorIds": [
+              "p-322476"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Liu Xianglian sets a deliberate trap based on Xue Pan's persistent advances (n-47-4), luring him outside the city to the reeds to administer a severe beating and force him to swear off harassment.",
+            "anchorIds": [
+              "p-324705",
+              "p-323099"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A narrative sequence of a specific ambush, beating, and humiliation in the reed marsh.",
+            "anchorIds": [
+              "p-324705"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Bao-chai analyzes the situation with a multi-step argument: taking public action will reveal Xue Pan's unlawful habits, expose the family to accusations of bullying commoners with aristocratic connections, and prevent him from learning a salutary lesson; this successfully dissuades Aunt Xue.",
+            "anchorIds": [
+              "p-326027"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "Articulates a broader pragmatic stance on managing spoiled aristocratic scoundrels and family reputation when involved in disreputable scuffles.",
+            "anchorIds": [
+              "p-326027"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Building on Xue Pan's humiliation from the beating (n-47-5) and Bao-chai's rationale that worldly experience is necessary to cure his wildness (n-47-6), Bao-chai persuades Aunt Xue to finance and allow Xue Pan's commercial journey with Zhang Dehui.",
+            "anchorIds": [
+              "p-326567",
+              "p-327244"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-6"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Reflects an educational and disciplinary decision framed specifically for Xue Pan's character reformation.",
+            "anchorIds": [
+              "p-327244"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "A direct consequence of Xue Pan's departure (n-48-1); with the Xue household emptied of men, Bao-chai seizes the occasion to invite Xiang-ling to live with her in the Grand View Garden.",
+            "anchorIds": [
+              "p-327921",
+              "p-328271"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific domestic relocation and living arrangement of Xiang-ling moving into Hengwu Court.",
+            "anchorIds": [
+              "p-327921"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Ping'er relates the chain of events: Jia Yucheng framed Shi Daizi to confiscate antique fans for Jia She; Jia Lian's moral criticism of ruining a man's livelihood provoked Jia She into beating him.",
+            "anchorIds": [
+              "p-328814"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Relates a specific corruption case and the resulting domestic assault on Jia Lian.",
+            "anchorIds": [
+              "p-328814"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Dai-yu presents an articulated poetic theory: formal metrical rules (rhyme, tonal patterns, structure) are secondary technical matters; genuine intent and authentic feeling ('不以词害意') take priority, followed by a structured curriculum (Wang Wei, Du Fu, Li Bai).",
+            "anchorIds": [
+              "p-329641"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-2"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Asserts a broad aesthetic principle and poetic pedagogy governing Chinese classical poetry composition.",
+            "anchorIds": [
+              "p-329641"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Applying Dai-yu's poetic method (n-48-4), Xiang-ling deduces through close reading of Wang Wei's lines how seemingly paradoxical or plain words ('直', '圆', '白', '青', '上') capture authentic, ineffable sensory reality, earning praise for comprehending the core essence of poetry.",
+            "anchorIds": [
+              "p-330455",
+              "p-330948"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-4"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Explains a literary mechanism of poetic defamiliarization and sensory evocation through concrete poetic examples.",
+            "anchorIds": [
+              "p-330455"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Follows directly from Xiang-ling's instruction and assignment of the moon poem (n-48-4, n-48-5); depicts her iterative attempts, absorption of critiques from Bao-chai and Dai-yu, and utter mental obsession.",
+            "anchorIds": [
+              "p-331583",
+              "p-331905",
+              "p-332384"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-4",
+              "n-48-5"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Portrays Xiang-ling's intense psychological and behavioral absorption in the act of poetic creation.",
+            "anchorIds": [
+              "p-331905",
+              "p-332384"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Culmination of Xiang-ling's prolonged concentration ('精血诚聚') documented across n-48-6, leading to the breakthrough composition of an eight-line poem in a dream state.",
+            "anchorIds": [
+              "p-332797"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Depicts a singular psychological and creative breakthrough in a dream.",
+            "anchorIds": [
+              "p-332797"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Evaluates Xiang-ling's dream poem composed in n-48-7 against the criteria established in n-48-4; the poetry society members confirm its artistic novelty and depth, formally admitting her.",
+            "anchorIds": [
+              "p-333301",
+              "p-333156",
+              "p-333232"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-7"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "An evaluation of a specific poem and the acceptance of Xiang-ling into the poetry society.",
+            "anchorIds": [
+              "p-333301"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.6,
+            "rationale": "A narrative exposition reporting the coincidental simultaneous arrival of four groups of relatives in the capital and their welcome into the Jia household.",
+            "anchorIds": [
+              "p-333631",
+              "p-333384",
+              "p-334985"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Records a specific collective arrival of visiting relatives at the Jia mansion.",
+            "anchorIds": [
+              "p-333631"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "Baoyu's philosophical monologue directly reflects upon seeing the beauty and elegance of the newly arrived cousins (n-49-2), causing him to reflect on his former limited horizons.",
+            "anchorIds": [
+              "p-333977"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-2"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "Formulates Baoyu's worldview regarding cosmic creative energy ('天地精华灵秀') uniquely endowing young women with spiritual superiority.",
+            "anchorIds": [
+              "p-333977"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Dai-yu explains to Baoyu why she and Bao-chai reconciled, tracing it back to Bao-chai's discreet remonstrance over the drinking game and caring delivery of bird's nest, resolving prior mutual suspicion.",
+            "anchorIds": [
+              "p-336911"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Explains the psychological turning point and mutual bond specifically between Dai-yu and Bao-chai.",
+            "anchorIds": [
+              "p-336911"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Taking advantage of heavy snowfall and welcoming the newly arrived sisters (n-49-2), Li Wan proposes convening the poetry club around a stove at Luxue Pavilion and lays out practical logistics.",
+            "anchorIds": [
+              "p-337452",
+              "p-338684"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Details the organization and setting of an upcoming poetry gathering at Luxue Pavilion.",
+            "anchorIds": [
+              "p-337452"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Shi Xiangyun rebuts Dai-yu's teasing about eating venison coarsely by advancing a counter-argument: true literati distinction lies in genuine romantic spontaneity rather than artificial prudery ('是真名士自风流').",
+            "anchorIds": [
+              "p-339559"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-5"
+            ]
+          },
+          "generality": {
+            "value": 5.4,
+            "rationale": "Proclaims a famous cultural axiom regarding the authentic spirit of Chinese literati ('名士风流') vs superficial pretension.",
+            "anchorIds": [
+              "p-339559"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Follows the poetry gathering setup at Luxue Pavilion (n-49-5); Feng-jie contributes the opening line '一夜北风紧', which the poets praise for its rustic directness that lays open potential for subsequent verse.",
+            "anchorIds": [
+              "p-340463",
+              "p-340787",
+              "p-340802"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-5"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "The opening couplet and poetic kickoff of a specific linked-verse composition.",
+            "anchorIds": [
+              "p-340463"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Develops the Luxue Pavilion linked-verse competition started in n-50-1, as Xiangyun, Baoqin, and Dai-yu vigorously compete across the difficult rhyming sequence.",
+            "anchorIds": [
+              "p-341184",
+              "p-341831",
+              "p-342053"
+            ],
+            "prerequisiteNodeIds": [
+              "n-50-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Narrates the lively competitive climax of the linked-verse session in chapter 50.",
+            "anchorIds": [
+              "p-341831",
+              "p-342053"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Arising directly from Baoyu lagging behind in the linked-verse game (n-50-2), Li Wan penalizes him to fetch red plum blossom from Miaoyu, leading to a new poetic challenge assigned by Baochai and Xiangyun.",
+            "anchorIds": [
+              "p-342124",
+              "p-342778",
+              "p-343003"
+            ],
+            "prerequisiteNodeIds": [
+              "n-50-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A specific poetic penalty and individualized composition assignment among the club members.",
+            "anchorIds": [
+              "p-342124"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "jtucau-MD6GLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 28402,
+    "candidatesTokenCount": 4991,
+    "totalTokenCount": 33393,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 28402
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4991
+      }
+    ]
+  },
+  "durationMs": 28027,
+  "requestHash": "2149cb9c3fd6aa5084bf34a4bd54b5607a36f1920270abc421b26375dd27dea9"
+}

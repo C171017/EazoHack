@@ -184,3 +184,13 @@ test('a foreign or missing snapshot source becomes a private-safe 404', async t 
   assert.equal(body.error.message, 'Book not found.');
   assert.ok(!JSON.stringify(body).includes('private source-owner details'));
 });
+
+test('account page cookie renewal happens in the proxy before server rendering', async () => {
+  const [next,,,,,,,, proxy] = await runtime;
+  assert.ok(proxy.config.matcher.includes('/account'));
+  const request = new next.NextRequest('http://internal:3107/account', { headers: { host: 'eazo.example', cookie: 'eazo-access=expired;eazo-refresh=account-renewal' } });
+  const response = proxy.proxy(request);
+  assert.equal(response.status, 307);
+  assert.equal(response.headers.get('location'), '/auth/refresh?next=%2Faccount');
+  assert.equal(response.headers.get('cache-control'), 'private, no-store');
+});

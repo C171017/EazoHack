@@ -1,0 +1,564 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-113-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "宝玉从听闻妙玉被劫、结合黛玉之死以及大观园姐妹流散的过往事实出发，推导联想《庄子》所言人生虚无与风流云散，是一次建立在具体身世变迁上的局部哲学感发与推论。",
+            "anchorIds": [
+              "p-818135"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3"
+            ]
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "宝玉的感叹从具体姊妹的离散上升至对整个人生世事‘难免风流云散’的普遍性感慨，涵盖较宽的人生命运层面，但仍附属于其个人主观伤感与特定家族命运范畴。",
+            "anchorIds": [
+              "p-818135"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝玉因感到紫鹃态度冷淡而深夜前去解释剖白，情节主要记录具体对话沟通与未能申白的情感互动，推论链条极短且直接来自现场情境。",
+            "anchorIds": [
+              "p-819137",
+              "p-818805",
+              "p-819922"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记述的是宝玉在特定深夜到紫鹃窗前解释、被抢白与痛哭的具体单一情境事件。",
+            "anchorIds": [
+              "p-819137",
+              "p-819922"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "紫鹃根据宝玉哭诉剖白的柔情表现，反推宝玉并非负心，再进一步推论出世间缘分皆由前定、多情徒增苦恼不如草木石头的结论，是一个完整的局部两层推导。",
+            "anchorIds": [
+              "p-820455"
+            ],
+            "prerequisiteNodeIds": [
+              "n-113-5"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "紫鹃反思‘人生缘分都有一定’、有情者不过徒洒悲啼不如草木干净，涉及人生普遍情感命运的规律性概括，带有领域内的普遍哲理意涵。",
+            "anchorIds": [
+              "p-820455"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "凤姐临终胡言要回金陵归册子，经袭人提醒旧梦，宝玉由此推导人皆有定数、先知可免瞎操心的论断，属于直接依据梦境与临终异状所做的局部因果推论。",
+            "anchorIds": [
+              "p-820764"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "宝玉由凤姐一人之事推及‘人都有个定数’，命题具有较宽的涵盖面，但主要是对个体生死命运的宿命论感触。",
+            "anchorIds": [
+              "p-820764"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "宝钗以妙玉自身遭劫无法预知为例，驳斥扶乩求签能知未来的妄说，逻辑严密地反驳未卜先知，并解释薛家仓促办婚事及拟搬迁的现实缘由。",
+            "anchorIds": [
+              "p-821200"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3",
+              "n-114-1"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "前半部分驳斥迷信预知，属于认识论层面的评价；后半部分属于对薛家自身处境与亲戚相处原则（‘那里有个一辈子住在亲戚家的’）的说明。",
+            "anchorIds": [
+              "p-821200"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "叙述凤姐去世后王仁到场挑剔丧事简陋、逼迫巧姐交出财物，并由此产生舅甥互嫌，主要是直接的情节与矛盾展开。",
+            "anchorIds": [
+              "p-822040"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "描述王仁借吊丧逼索财物、巧姐平儿反感的特定事件及几名具体人物之间的关系恶化。",
+            "anchorIds": [
+              "p-822040"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "记录平儿拿出私存积蓄帮助贾琏办理丧事、秋桐心生妒忌出言讽刺遭到贾琏嫌斥的具体事态叙述，无深层理论推导。",
+            "anchorIds": [
+              "p-823097"
+            ],
+            "prerequisiteNodeIds": [
+              "n-114-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "涉及贾府内部办丧期间贾琏、平儿与秋桐三者间具体金钱与情感纠葛的特定事件。",
+            "anchorIds": [
+              "p-823097"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "程日兴根据贾府连年开销入不敷出、奴仆肥己中饱的现象，建言严查管事亏空，贾政则从仁厚祖训及自身居丧无力展开答辩，构成一轮完整的对策推理。",
+            "anchorIds": [
+              "p-823511"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "针对贾府这一类世家大族奴仆弊病及治家整饬方案提出的具体建议与讨论。",
+            "anchorIds": [
+              "p-823511"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "记述甄应嘉复职陛见后受命安抚海疆、贾政托其探看探春、甄托贾政照应后至家眷的叙事交代，推理链条极短。",
+            "anchorIds": [
+              "p-824261"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "记录贾甄两家在特定官职调动与家眷安置上的私相托付，属于特定家族人际往来。",
+            "anchorIds": [
+              "p-824261"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.9,
+            "rationale": "记录甄应嘉告辞时偶见贾宝玉并惊异其肖似其子甄宝玉，宝玉回房转述并遭宝钗规劝的单次具体事件。",
+            "anchorIds": [
+              "p-825098",
+              "p-825492"
+            ],
+            "prerequisiteNodeIds": [
+              "n-114-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "限于甄贾两宝玉形貌奇特巧合的描写与人物对话反应。",
+            "anchorIds": [
+              "p-825098",
+              "p-825492"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "惜春从尼僧关于妙玉遭劫、世俗妇人荣华难保与修行无险的议论中受到触动，结合自身寄人篱下的境遇，进一步坚定斩断红尘、不恋火坑的意志。",
+            "anchorIds": [
+              "p-826236",
+              "p-827309"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "涵盖了惜春个人出家的人生决意，附带关于后宅女子命运苦难的一般议论。",
+            "anchorIds": [
+              "p-826236"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾宝玉以原本对‘同名同心’知己的期盼与甄宝玉交谈，甄宝玉却以立身扬名、文章经济等仕途观念回应，贾宝玉由此断定其为禄蠹俗人，形成思想交锋推理。",
+            "anchorIds": [
+              "p-828053",
+              "p-827676"
+            ],
+            "prerequisiteNodeIds": [
+              "n-114-7"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "涉及世俗仕途经济与超脱出世两种人生价值观的正面交锋，但集中体现于二人具体会面。",
+            "anchorIds": [
+              "p-828053"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "贾宝玉将甄宝玉之俗诉诸宝钗，宝钗却称赞其为正理并反斥宝玉柔情私意，宝玉由失望愤懑引发旧疾发呆，为直接的情节因果引发。",
+            "anchorIds": [
+              "p-829824",
+              "p-830693"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-3"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "记述宝玉因知己落空引发心理危机及旧疾复发，属于个人心境与身体状态的叙事。",
+            "anchorIds": [
+              "p-829824"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "惜春以迎春嫁人横死为惨痛教训，推导出自己出嫁亦无好结果，从而以死相逼迫使尤氏与贾政妥协，达成留居栊翠庵带发修行的折中诉求。",
+            "anchorIds": [
+              "p-830294"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-1"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "以迎春等女子命运为鉴，针对惜春个人归宿达成的妥协安排方案。",
+            "anchorIds": [
+              "p-830294"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "和尚携通灵宝玉索银救命，宝玉得玉即刻还魂苏醒，情节推进直接，属于神秘仙道力量介入现实情节的叙述。",
+            "anchorIds": [
+              "p-831110",
+              "p-831588"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特定的通灵宝玉回归救助宝玉苏醒的神秘事件。",
+            "anchorIds": [
+              "p-831588"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝玉刚有好转，麝月因欢喜提及当初差点砸玉的旧事，刺激宝玉心病，导致其撂玉再度绝气倒下，是极其直接的情节触动。",
+            "anchorIds": [
+              "p-832301"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记录麝月一句话导致宝玉晕厥的瞬间具体场景。",
+            "anchorIds": [
+              "p-832301"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "宝玉魂魄出窍跟随僧人来到荒野‘真如福地’与‘引觉情痴’配殿，目睹尤三姐、鸳鸯虚影，属于幻境漫游的起始引入部分。",
+            "anchorIds": [
+              "p-832912",
+              "p-833308"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "宝玉个人魂魄游历特定虚幻空间的场景经历。",
+            "anchorIds": [
+              "p-832912",
+              "p-833308"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "宝玉重读金陵十二钗册子，对照已故与在世姐妹（黛玉、宝钗、元春、袭人）的判词与实际命运，前后对照验证了命运定数与‘机关不爽’，产生深刻痛苦与认识。",
+            "anchorIds": [
+              "p-833663"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-1"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "涵盖整部书中金陵十二钗正册及又副册群芳的命途判词，是对书中主要女性命运的系统性宿命总结。",
+            "anchorIds": [
+              "p-833663"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "宝玉在幻境中得见绛珠仙草并获知神瑛侍者灌溉前因，参谒潇湘妃子被逐、又见众女化为鬼怪追逐，直接以象征形式解构了其所沉溺的儿女私情。",
+            "anchorIds": [
+              "p-834368",
+              "p-835178"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-2"
+            ]
+          },
+          "generality": {
+            "value": 2.8,
+            "rationale": "揭示神瑛与绛珠的神话前因与情劫本质，涵盖宝玉与黛玉等主要情缘的终极象征。",
+            "anchorIds": [
+              "p-834368",
+              "p-835178"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.5,
+            "rationale": "和尚以宝玉偷看册子及历经险境为由，当头棒喝指出‘世上的情缘都是那些魔障’，宝玉受推跌还魂后细加参悟，整合了此前从册子到仙草的全部历程，完成了核心觉悟的推导。",
+            "anchorIds": [
+              "p-836560",
+              "p-836863"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-2",
+              "n-116-3"
+            ]
+          },
+          "generality": {
+            "value": 6.8,
+            "rationale": "‘世上的情缘都是那些魔障’是对世间一切情爱痴执的普遍性定性与解构，具有高度跨场景的哲学断言性质。",
+            "anchorIds": [
+              "p-836560"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "贾政借丁忧之机，根据贾母遗愿及贾赦未归的现实，与贾琏商议抵押房产筹资以扶贾母、黛玉灵柩归葬南下，是基于现实家计的决策推演。",
+            "anchorIds": [
+              "p-837956"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "涉及贾府内部安置灵柩、处理房产抵押借银的具体家庭事务。",
+            "anchorIds": [
+              "p-837956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.8,
+            "rationale": "宝玉在真如福地领悟‘情缘魔障’后，心智发生彻底转向，面对黛玉灵柩南归以及身边紫鹃、五儿等儿女情缘均付之冷漠，是幻境悟道推理在现实行为中的直接贯彻。",
+            "anchorIds": [
+              "p-838855",
+              "p-838640"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-4",
+              "n-116-5"
+            ]
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "体现为宝玉个人对儿女私情和功名仕进整体冷淡超然的根本态度变化。",
+            "anchorIds": [
+              "p-838855"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "和尚追问玉的来历，宝玉受此前幻境点化与当头棒喝，彻底看破红尘并意识到自身底里与尘缘缠缚，主动做出舍弃并奉还通灵宝玉的决断。",
+            "anchorIds": [
+              "p-839555"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-4",
+              "n-116-6"
+            ]
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "表达对自身生命宿命与尘缘纠葛的彻底割舍，集中于宝玉斩断尘世羁绊的决断。",
+            "anchorIds": [
+              "p-839555"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "众人见宝玉还玉而惊恐死命抱阻，宝玉从中反推出世人‘重玉不重人’的荒谬，宝钗则当机立断以折变首饰替代还玉，平息事端。",
+            "anchorIds": [
+              "p-840047"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-1"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "描摹特定冲突场面中各方对‘玉’与‘人’截然不同的价值执念与讽刺。",
+            "anchorIds": [
+              "p-840047"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "v9ycaojRLYKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 31116,
+    "candidatesTokenCount": 4461,
+    "totalTokenCount": 35577,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 31116
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4461
+      }
+    ]
+  },
+  "durationMs": 28073,
+  "requestHash": "6ba6a7654e2d0babf45ff1d3b9a324f20eafad65a057dc6e2676aa867b343b00"
+}

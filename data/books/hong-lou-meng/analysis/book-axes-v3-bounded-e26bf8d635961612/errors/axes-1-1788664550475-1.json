@@ -1,0 +1,3 @@
+{
+  "error": "[\n  {\n    \"origin\": \"array\",\n    \"code\": \"too_big\",\n    \"maximum\": 24,\n    \"inclusive\": true,\n    \"path\": [\n      \"assignments\"\n    ],\n    \"message\": \"Too big: expected array to have <=24 items\"\n  }\n]"
+}

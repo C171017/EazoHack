@@ -1,0 +1,586 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-1-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct opening declaration by the narrator/author presenting the original intent, genesis, and thematic purpose of the text without prior deductive steps.",
+            "anchorIds": [
+              "p-23"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "Asserts a broad authorial poetics and interpretive stance regarding how the entire work portrays women and sentiment as opposed to satirical/political literature.",
+            "anchorIds": [
+              "p-23"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Directly introduced mythological baseline establishing the unchosen stone, its spiritual awakening, and the monks transforming it.",
+            "anchorIds": [
+              "p-591",
+              "p-723"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Covers a single mythical origin episode involving one specific supernatural stone and two immortals at Green Mount.",
+            "anchorIds": [
+              "p-591",
+              "p-723"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Contains a developed local argument and dialogue where the stone justifies recording domestic and emotional reality instead of traditional historical conventions.",
+            "anchorIds": [
+              "p-1711",
+              "p-2464"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-2"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Formulates an aesthetic and literary principle critiquing stereotypical romance and dynastic historical fiction across the literary domain.",
+            "anchorIds": [
+              "p-1711",
+              "p-2464"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "A localized mythic exposition delivered via overhearing the two immortals explaining the debt of tears and introducing the overarching romance framework.",
+            "anchorIds": [
+              "p-2979"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains specifically to the mythic pre-existences and karmic debt between the Divine Luminary Attendant and the Crimson Pearl Flower.",
+            "anchorIds": [
+              "p-2979"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct observation in a dream followed immediately by an ominous encounter with the mad monks uttering a four-line prophecy.",
+            "anchorIds": [
+              "p-3747",
+              "p-4103",
+              "p-4401"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Focuses on a specific depicted event: Zhen Shiyin holding his daughter Yinglian and receiving a prophecy of their family disaster.",
+            "anchorIds": [
+              "p-3747",
+              "p-4103",
+              "p-4401"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Presents a direct local narrative sequence: Yucun's poetic ambition leads Shiyin to recognize his promise and gift him silver and winter clothes.",
+            "anchorIds": [
+              "p-5811",
+              "p-4929"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts one bounded historical meeting between two specific characters on Mid-Autumn night.",
+            "anchorIds": [
+              "p-5811",
+              "p-4929"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Builds upon the fulfillment of the monk's fire prophecy and successive familial disasters, culminating in Shiyin's sudden enlightenment upon hearing and annotating the Song of All Good Things.",
+            "anchorIds": [
+              "p-7225",
+              "p-6534",
+              "p-7404"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-5"
+            ]
+          },
+          "generality": {
+            "value": 7.8,
+            "rationale": "The commentary in the Song outlines a sweeping philosophical vision regarding the illusory nature of worldly wealth, rank, romance, and fame.",
+            "anchorIds": [
+              "p-7225",
+              "p-7404"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-1-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative progression directly linking Jia Yucun's arrival as the newly appointed prefect to his past encounter with Zhen's maid Jiaoxing.",
+            "anchorIds": [
+              "p-7793"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Relates a concrete scene outside Feng Su's gate involving Jiaoxing recognizing the new official.",
+            "anchorIds": [
+              "p-7793"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Straightforward chronological development recounting how Jiaoxing was taken as concubine, bore a son, and was elevated to principal wife.",
+            "anchorIds": [
+              "p-8555",
+              "p-8214",
+              "p-8659"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-8"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Applies strictly to the biographical trajectory and fortunate fate of the specific individual Jiaoxing.",
+            "anchorIds": [
+              "p-8555",
+              "p-8659"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Direct historical exposition charting Jia Yucun's dismissal due to avarice and his subsequently taking the tutoring post in Yangzhou.",
+            "anchorIds": [
+              "p-8673",
+              "p-8931",
+              "p-9268"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-8"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Deals with the specific biographical circumstances of Jia Yucun and Lin Daiyu's household in Weiyang.",
+            "anchorIds": [
+              "p-8673",
+              "p-8931",
+              "p-9268"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "An immediate inference drawn by Yucun upon reading the didactic temple couplet, followed by an encounter with the unresponsive aged monk.",
+            "anchorIds": [
+              "p-9531"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "The couplet conveys a general moral dictum regarding human greed and refusal to withdraw before ruin, situated in a local vignette.",
+            "anchorIds": [
+              "p-9531"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "A supported local argument where Leng Zixing contrasts the outer grandeur of the Jia household with their internal financial strain and declining generations.",
+            "anchorIds": [
+              "p-10069"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Diagnoses the structural decline of a specific aristocratic house, though phrased as a broader observation about dynastic elite decay.",
+            "anchorIds": [
+              "p-10069"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative and genealogical exposition reciting the branch lineages and titles of the Ning and Rong mansions.",
+            "anchorIds": [
+              "p-10733"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Covers the closed genealogical collection of the Ning and Rong aristocratic clans.",
+            "anchorIds": [
+              "p-10733"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Immediate inference drawn by Leng Zixing and Jia Zheng based on Baoyu's infant grasping behavior and unusual remarks about boys and girls.",
+            "anchorIds": [
+              "p-11305"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-5"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Focuses on Baoyu's unique personal psychology and his characterization of male versus female purity.",
+            "anchorIds": [
+              "p-11305"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "A sequence of theoretical deductions formulated by Jia Yucun contrasting pure benevolence and pure evil to deduce an intermediate hybrid spiritual typology.",
+            "anchorIds": [
+              "p-11636"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-6"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "A metaphysical cosmological typology explaining historical and literary figures across Chinese history endowed with dual cosmic humors.",
+            "anchorIds": [
+              "p-11636"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-2-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Provides empirical corroboration of the dual-humor theory by detailing the matching idiosyncrasies of Zhen Baoyu in Jinling.",
+            "anchorIds": [
+              "p-12484",
+              "p-12310"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Details the idiosyncratic behavior of a single named individual (Zhen Baoyu).",
+            "anchorIds": [
+              "p-12484",
+              "p-12310"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Shows Yucun utilizing Lin Ruhai's letter of recommendation to Jia Zheng, leading directly to his reappointment to the Jinling prefecture.",
+            "anchorIds": [
+              "p-14057",
+              "p-14235",
+              "p-14814"
+            ],
+            "prerequisiteNodeIds": [
+              "n-2-2"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Details a concrete transactional patron-client episode restoring Jia Yucun to officialdom.",
+            "anchorIds": [
+              "p-14057",
+              "p-14235",
+              "p-14814"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Daiyu's internalized behavioral caution inferred directly from her mother's past warnings and her observation of the mansion's intimidating splendor.",
+            "anchorIds": [
+              "p-14998",
+              "p-14656"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Describes the inner psychological disposition and entry of a single individual, Lin Daiyu.",
+            "anchorIds": [
+              "p-14998",
+              "p-14656"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative presentation of the emotional reunion between the Matriarch and Daiyu, and the initial introductions of the aunts and cousins.",
+            "anchorIds": [
+              "p-15600",
+              "p-15829",
+              "p-16106"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific private family scene inside the Rongguo mansion.",
+            "anchorIds": [
+              "p-15600",
+              "p-15829",
+              "p-16106"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct dramatic portrayal introducing Wang Xifeng's ostentatious dress, buoyant temperament, and familial authority.",
+            "anchorIds": [
+              "p-16388",
+              "p-17163"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on the personal characterization, demeanor, and administrative role of Wang Xifeng.",
+            "anchorIds": [
+              "p-16388",
+              "p-17163"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative sequence showing Daiyu paying respects to her maternal uncles and receiving Lady Wang's explicit warning against Baoyu.",
+            "anchorIds": [
+              "p-18609",
+              "p-17375",
+              "p-18960"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-3"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A specific domestic dialogue between Lady Wang and Lin Daiyu outlining family dynamics.",
+            "anchorIds": [
+              "p-18609",
+              "p-17375",
+              "p-18960"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Follows the first encounter where mutual intuitive familiarity leads to Baoyu querying Daiyu's jade, triggering his violent act of hurling the stone away.",
+            "anchorIds": [
+              "p-20634",
+              "p-19977"
+            ],
+            "prerequisiteNodeIds": [
+              "n-1-4",
+              "n-3-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "An individual scene of initial recognition and emotional upheaval between Baoyu and Daiyu.",
+            "anchorIds": [
+              "p-20634",
+              "p-19977"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Immediate reaction following the jade-hurling scene: Daiyu weeps out of guilt and Xiren consoles her while explaining Baoyu's background.",
+            "anchorIds": [
+              "p-22091",
+              "p-21533",
+              "p-21716"
+            ],
+            "prerequisiteNodeIds": [
+              "n-3-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a single nighttime chamber conversation between Daiyu and the maid Xiren.",
+            "anchorIds": [
+              "p-22091",
+              "p-21533",
+              "p-21716"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-3-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "Direct narrative presentation of incoming news regarding Xue Pan's homicide case in Jinling.",
+            "anchorIds": [
+              "p-22426"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Covers a single specific legal report concerning Xue Pan's crime reaching the capital.",
+            "anchorIds": [
+              "p-22426"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "59qcauj4GYuKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 26998,
+    "candidatesTokenCount": 4467,
+    "totalTokenCount": 31465,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 26998
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4467
+      }
+    ]
+  },
+  "durationMs": 23667,
+  "requestHash": "4a81586da6cedb3b7cf33a2357a7776dfdf18037fd102b8be2f74b7b9e9bf3db"
+}

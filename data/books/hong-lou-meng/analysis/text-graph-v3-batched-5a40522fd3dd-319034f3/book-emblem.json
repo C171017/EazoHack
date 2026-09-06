@@ -1,0 +1,36 @@
+{
+  "value": {
+    "label": "Jade Pendant and Plum Blossom",
+    "paths": [
+      "M 24 5 L 24 10",
+      "M 19 12 C 19 9.5 21.2 7.5 24 7.5 C 26.8 7.5 29 9.5 29 12 C 29 14.5 26.8 16.5 24 16.5 C 21.2 16.5 19 14.5 19 12 Z",
+      "M 24 16.5 L 24 20",
+      "M 24 20 C 13.5 20 8 28.5 8 35 C 8 40.5 14.5 43 24 43 C 33.5 43 40 40.5 40 35 C 40 28.5 34.5 20 24 20 Z",
+      "M 24 26 C 18 26 15 30.5 15 34.5 C 15 38 18.5 39.5 24 39.5 C 29.5 39.5 33 38 33 34.5 C 33 30.5 30 26 24 26 Z",
+      "M 24 28 C 22.5 30 22.5 33 24 34.5 C 25.5 33 25.5 30 24 28 Z"
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "v9qcate9KaKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 764,
+    "candidatesTokenCount": 439,
+    "totalTokenCount": 1203,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 764
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 439
+      }
+    ]
+  },
+  "durationMs": 3499,
+  "requestHash": "ae1aa375b001062d6d2bf2074411d41e70ec4e178aaaac75fb984d4515092b09"
+}

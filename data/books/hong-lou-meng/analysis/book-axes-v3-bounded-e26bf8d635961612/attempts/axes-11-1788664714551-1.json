@@ -1,0 +1,548 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-39-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "平儿向袭人直接披露凤姐挪用公款放利钱并说明其具体运作与收益，属于从管家经手经验中直接做出的事实透露与简单解释（anchor 1）。",
+            "anchorIds": [
+              "p-261240"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "该事实及评价特指王熙凤个人的私自放贷行为和贾府当月迟发月钱的具体情况（anchor 1）。",
+            "anchorIds": [
+              "p-261240"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "叙述刘姥姥进贾府送土特产野味并被贾母接见留宿的叙事起点与基本事实观察（anchor 0）。",
+            "anchorIds": [
+              "p-261742",
+              "p-263066"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述刘姥姥与贾母等人初次正式交谈留宿的具体生活场景事件（anchor 0）。",
+            "anchorIds": [
+              "p-261742",
+              "p-263066"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "刘姥姥察觉贾母与哥儿姐儿喜好后当场即兴编造故事以承色取悦，属于依据现场情境做出的即时应对推衍（anchor 1）。",
+            "anchorIds": [
+              "p-263969"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特指刘姥姥在贾母房中当晚编造抽柴女与神佛送孙两则故事的单次具体场景（anchor 0）。",
+            "anchorIds": [
+              "p-263969"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "宝玉信以为真，依据刘姥姥编造的抽柴女子故事展开推断（认为死者知书达礼成精是虽死不死），进而筹划修庙并追问方位；这是在一层虚构前提上展开的局部执念推论（anchor 2）。",
+            "anchorIds": [
+              "p-265154",
+              "p-264901"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "涉及宝玉个人的痴情秉性及对茗玉小姐虚构神祠的具体执念（anchor 1）。",
+            "anchorIds": [
+              "p-265154"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "茗烟根据宝玉从刘姥姥处套取的虚构线索实地勘察，寻获瘟神庙，宝玉在此反证面前仍坚持继续寻找；形成以刘姥姥谎言为起点、宝玉痴信为中介、实地查证落空构成的完整多步局部推演（anchor 3）。",
+            "anchorIds": [
+              "p-265720"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特指茗烟城外寻庙遇瘟神这一特定荒诞事件（anchor 0）。",
+            "anchorIds": [
+              "p-265720"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "描绘晨起开阁抬几、众人进园及凤姐给刘姥姥满头插菊的直接叙事观察，无前置推论（anchor 0）。",
+            "anchorIds": [
+              "p-266516"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特定清晨游园插花取乐的具体场景（anchor 0）。",
+            "anchorIds": [
+              "p-266516"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾母依据潇湘馆翠竹景致指出绿窗纱不配，进而辨析蝉翼纱与软烟罗的区别、色泽及功用，包含审美品评与质料辨识的完整局部论述（anchor 2）。",
+            "anchorIds": [
+              "p-268271"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "贾母阐释的软烟罗物性鉴赏原则针对特定名贵织物类别及园林室内糊窗配色规范（anchor 3）。",
+            "anchorIds": [
+              "p-268271"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "凤姐与鸳鸯见刘姥姥在场，借外头篾片相公之例推衍出拿刘姥姥作“女篾片”取乐的计划并设计重筷圈套，为直接推论策划（anchor 1）。",
+            "anchorIds": [
+              "p-269428"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特指晓翠堂开宴前两人密谋捉弄刘姥姥的具体情节（anchor 0）。",
+            "anchorIds": [
+              "p-269428"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "刘姥姥按鸳鸯预先串通的指令高呼“食量大似牛”，配以沉重象牙筷夹鸽子蛋引发满堂大笑，属于将上一幕设计的闹剧落实执行（anchor 2）。",
+            "anchorIds": [
+              "p-270242",
+              "p-271083"
+            ],
+            "prerequisiteNodeIds": [
+              "n-40-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描绘晓翠堂宴席上一场具体的滑稽戏谑场面（anchor 0）。",
+            "anchorIds": [
+              "p-270242"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾母目睹蘅芜苑如雪洞般素净，由此推论年轻姑娘居室过素不仅忌讳而且易招外人笑话，进而立足大家规矩指导如何陈设（anchor 2）。",
+            "anchorIds": [
+              "p-272867"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "贾母关于富贵世家年轻姑娘闺房陈设应素净而不失大方、合乎礼数忌讳的见解，属于特定阶层居室陈设规范（anchor 4）。",
+            "anchorIds": [
+              "p-272867"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "缀锦阁牙牌令由鸳鸯依据骨牌牌令规矩主令，众人依规则各自对韵句，属于规则下的即席应对推理（anchor 1）。",
+            "anchorIds": [
+              "p-274123"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "缀锦阁下一次特定的行牙牌令宴饮娱乐活动（anchor 0）。",
+            "anchorIds": [
+              "p-274123"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "刘姥姥由瓷杯易碎索求木杯，引发黄杨木套杯饮酒及凤姐讲解茄鲝繁复烹饪配料，属于即景问答说明（anchor 1）。",
+            "anchorIds": [
+              "p-275699"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特指宴席上刘姥姥品尝茄鲝与辨认木套杯的单一饮食场景（anchor 0）。",
+            "anchorIds": [
+              "p-275699"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "记录藕香榭水上奏乐、刘姥姥起舞及山前树石闲步、误认笼鸟的连续叙事经过（anchor 0）。",
+            "anchorIds": [
+              "p-277212",
+              "p-277674"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "大观园内藕香榭水榭听乐与漫步游园的具体事件（anchor 0）。",
+            "anchorIds": [
+              "p-277212",
+              "p-277674"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "叙述贾母携刘姥姥入栊翠庵饮茶、妙玉奉老君眉而刘姥姥嫌淡的客观叙事事实（anchor 0）。",
+            "anchorIds": [
+              "p-278492"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "栊翠庵进茶品茶的单个具体情节（anchor 0）。",
+            "anchorIds": [
+              "p-278492"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "妙玉在私室引宝黛品茶，由雪水烹茶辨水质进而系统阐发“一杯为品，二杯解渴，三杯饮牛饮骡”的品茶理论与器皿之辨（anchor 2）。",
+            "anchorIds": [
+              "p-278844"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "妙玉所论述的品茗器具、用水之选及饮茶杯数境界，是文人雅士茶道领域的专门准则（anchor 4）。",
+            "anchorIds": [
+              "p-278844"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "宝玉洞察妙玉因刘姥姥用过成窑杯而嫌脏欲弃的洁癖心理，顺势推理劝其变弃为赠施与贫妇，并主动承担挑水洗地以成全其癖好（anchor 2）。",
+            "anchorIds": [
+              "p-279738"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "特指宝玉处理妙玉弃杯与刘姥姥贫困生计之间的一桩具体行为处事（anchor 1）。",
+            "anchorIds": [
+              "p-279738"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "刘姥姥酒食过量导致腹泻、眼晕迷路，误触西洋穿衣镜机括闯入宝玉寝室并沉醉入眠，为饮食生理与迷途构成的直接因果链条（anchor 1）。",
+            "anchorIds": [
+              "p-280275",
+              "p-280602"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "刘姥姥误入怡红院醉卧宝玉卧榻的单一具体场景（anchor 0）。",
+            "anchorIds": [
+              "p-280602"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "袭人根据房内现场的酒气与鼾声推断事态严重性，迅速采取唤醒、焚香除味、串供山石打盹等一连串补救掩饰措施（anchor 2）。",
+            "anchorIds": [
+              "p-281515",
+              "p-281725"
+            ],
+            "prerequisiteNodeIds": [
+              "n-41-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特指怡红院内袭人掩盖刘姥姥丑态的单一事件应急处置（anchor 0）。",
+            "anchorIds": [
+              "p-281725"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "刘姥姥针对富贵子弟多娇嫩生病的原因进行阐释，并依据七月初七生日运用民间五行相克“以毒攻毒”之理为大姐儿命名巧哥儿，具备完整的民俗推理过程（anchor 2）。",
+            "anchorIds": [
+              "p-282842",
+              "p-282247"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "涉及民间以贫压富、贱名消灾及生日命理逢凶化吉的特定民俗育儿信仰类别（anchor 3）。",
+            "anchorIds": [
+              "p-282842"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "贾府众人因刘姥姥连日陪侍贾母取乐且念其家贫，纷纷馈赠银两什物，刘姥姥满载辞归，属于游园留宿的自然叙事结语（anchor 1）。",
+            "anchorIds": [
+              "p-283389",
+              "p-284909"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-3",
+              "n-41-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "刘姥姥辞别贾府及众人赠予物品的特定具体事件（anchor 0）。",
+            "anchorIds": [
+              "p-283389",
+              "p-284909"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "王太医进府为贾母和大姐儿切脉诊视，根据病症给出风凉轻症无需煎药、小儿清净饥饿两顿的医理判断（anchor 1）。",
+            "anchorIds": [
+              "p-284170",
+              "p-284565"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "王太医就世家贵人及小儿常见轻症调理的诊断医嘱（anchor 2）。",
+            "anchorIds": [
+              "p-284565"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "宝钗由前日黛玉酒令失言联系到闺阁女子读书修养，以自身少时看杂书的教训为据，层层推论女子认字应以正经书明理为本，防止杂书移性败德，使黛玉心悦诚服（anchor 3）。",
+            "anchorIds": [
+              "p-285574"
+            ],
+            "prerequisiteNodeIds": [
+              "n-40-6"
+            ]
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "宝钗阐述的是封建正统礼教下女子阅读目的、妇德修养与杂书危害的阶层性规范准则（anchor 5）。",
+            "anchorIds": [
+              "p-285574"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "黛玉敏锐抓住惜春奉命画大观园与前日刘姥姥吃宴游园的笑柄，借“春秋笔法”提炼出“母蝗虫”与《携蝗大嚼图》的雅谑戏拟（anchor 2）。",
+            "anchorIds": [
+              "p-286491"
+            ],
+            "prerequisiteNodeIds": [
+              "n-40-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "林黛玉针对刘姥姥作客形象与惜春画大观园特定事件的谑称品评（anchor 1）。",
+            "anchorIds": [
+              "p-286491"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "宝钗纠正惜春与宝玉对于画大观园的幼稚想法，系统推论工细楼台图的构图起稿、界尺比例、人物点缀及矾绢、配胶、用具开列，构成一套周密的绘画技法论述（anchor 3）。",
+            "anchorIds": [
+              "p-287697",
+              "p-288156"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "涵盖传统中国界画与通景建筑园林绘画领域在构图、工序与画具配备上的专门技术准则（anchor 4）。",
+            "anchorIds": [
+              "p-287697",
+              "p-288156"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "bNucaquZHIuKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 30211,
+    "candidatesTokenCount": 5180,
+    "totalTokenCount": 35391,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 30211
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5180
+      }
+    ]
+  },
+  "durationMs": 30377,
+  "requestHash": "7296833c25b2eda8672eecd951891e4c60f456820b3a613cf13ef139c7e48996"
+}

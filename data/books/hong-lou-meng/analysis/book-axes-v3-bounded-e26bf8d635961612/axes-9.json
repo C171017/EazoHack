@@ -1,0 +1,559 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-31-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝玉在晴雯跌扇口角后，直接引出器物‘原是借人所用’、任情撕扇听响亦是爱物的主张，属于从当下冲突场景生发的直观辩解与初级引申，并未依赖前文复杂的逻辑长链。",
+            "anchorIds": [
+              "p-208036"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "宝玉由扇子、杯盘引申出看待世间器物效用与性情关系的观点，触及一类对待造物与情感的通用态度，但在语境中仍主要局限于私人怡情与怡红院闺阁玩赏之物。",
+            "anchorIds": [
+              "p-208036"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "湘云向翠缕阐述阴阳顺逆之理，结合花草、日月、反正面等物象层层推进解释，属于局部完备的义理推导；随后翠缕拾金麒麟，两线在情节上交汇。",
+            "anchorIds": [
+              "p-210693"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 7,
+            "rationale": "湘云论述天地间万事万物皆赋阴阳二气所生、阳尽成阴、阴尽成阳，涉及自然界普遍成立的哲学宇宙观，属于广泛适用的理法解说。",
+            "anchorIds": [
+              "p-210693"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "黛玉在窗外听闻宝玉因仕途经济之论驳斥湘云并极口称扬自己，结合自身长久以来的观察判断，印证宝玉确为平生知己并由此推演出对二人命运之叹，具有明确的局部推论过程。",
+            "anchorIds": [
+              "p-213444"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "聚焦于黛玉对宝玉个体的知己认同及宝黛二人思想共鸣与命运前途，属于特定人物之间的精神契合。",
+            "anchorIds": [
+              "p-213444"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "承接前文宝黛二人长期心照不宣的情意与黛玉的多疑多虑，宝玉以‘你放心’三字为黛玉病因与二人隔阂作出断语，依赖二人过往多次试探与思想互通的积累。",
+            "anchorIds": [
+              "p-215197"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "针对宝黛二人的独特情感羁绊与黛玉的心病根源，为具体人物间的剖白。",
+            "anchorIds": [
+              "p-215197"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "宝玉因承接方才对黛玉倾诉肺腑的恍惚心境而误对袭人吐露心事，袭人由此推论二人私情必酿‘不才之事’与‘丑祸’，包含对未来危机的即刻推导。",
+            "anchorIds": [
+              "p-216001",
+              "p-216317"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-2"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "涉及袭人对宝黛特定私情风险的判断及个人忧虑，限于怡红院内部的特定人事隐患。",
+            "anchorIds": [
+              "p-216001",
+              "p-216317"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "宝钗根据史湘云的神情反应与外界流言，推导出湘云在史家寄人篱下的艰难处境与人情掣肘，并以此劝阻袭人找湘云做活，推理完整且立足确凿观察。",
+            "anchorIds": [
+              "p-216651"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "主要揭示史湘云这一名门孤女在封建家族中的实际生存境况与社交难处，略带公侯世家女性人情世故的普遍特征。",
+            "anchorIds": [
+              "p-216651"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-32-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "面对金钏投井事件，宝钗基于王夫人的自责心理，推测金钏或许失脚或属糊涂，进而提出多赐银两与赠衣妆裹的应对方案，是一套完整的权衡安抚说辞。",
+            "anchorIds": [
+              "p-217294",
+              "p-217539",
+              "p-218303"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "体现大家族处理家奴轻生自尽事件的宗法伦理应对规则（尽主仆之情、多赏银两），具体落实在开解王夫人这一孤立事件。",
+            "anchorIds": [
+              "p-217539"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "贾政直接撞见精神萎靡的宝玉，由宝玉接见贾雨村时的愁闷表现与恍惚情态直接激起怒气，属于即时触发的情节起因。",
+            "anchorIds": [
+              "p-218429",
+              "p-218838"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "针对贾政对宝玉谈吐神色不满这一具体父子碰面事件。",
+            "anchorIds": [
+              "p-218429"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "忠顺王府长史官以红汗巾子等实据登门，宝玉在证据确凿下被迫供出紫檀堡，贾政从长史官的话中确认宝玉结交王府伶人招致祸端，属于直接证据推动的事实呈现。",
+            "anchorIds": [
+              "p-218838",
+              "p-219355"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "忠顺王府因特定戏子琪官索人引发的单个府邸交涉事件。",
+            "anchorIds": [
+              "p-218838",
+              "p-219355"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "贾环察觉贾政盛怒的心理时机，乘机将金钏跳井虚构成强奸不遂并殴打，贾政当即由此得出宝玉‘淫辱母婢、败坏门风’的推断而暴怒。",
+            "anchorIds": [
+              "p-219875"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-5"
+            ]
+          },
+          "generality": {
+            "value": 0.6,
+            "rationale": "贾环在特定家庭权力关系中构陷宝玉的单一情节事件。",
+            "anchorIds": [
+              "p-219875"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "宝玉受制于贾政命令无法脱身，在厅上向聋婆求救，因耳聋产生戏剧性误听，属于直接叙事描写，无复杂推理。",
+            "anchorIds": [
+              "p-220617"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "一次偶发性的阴差阳错求救受阻的具体滑稽/惊险场景。",
+            "anchorIds": [
+              "p-220617"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "贾政痛打宝玉是前面见雨村萎靡、忠顺府索人、贾环谗构三重矛盾累积后的爆发，贾政由此推导出宝玉‘将来酿到弑君杀父’的绝望结论。",
+            "anchorIds": [
+              "p-220890"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-1",
+              "n-33-2",
+              "n-33-3"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "贾府父子间关于宗法继承与逆子惩治的极端戏剧冲突，集中于贾政对宝玉个人的家法惩处。",
+            "anchorIds": [
+              "p-220890"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "王夫人以贾珠早逝与母子性命相逼，贾母更以孝道大义和携眷回南京相压，贾政权衡宗法孝道不得不屈膝认罪，是长辈礼法压制父权的短链对抗。",
+            "anchorIds": [
+              "p-221129",
+              "p-222456"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-5"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "展现封建大家族中祖母与母亲利用孝道与宗法特权压制严父惩戒的典型家庭权力结构运作。",
+            "anchorIds": [
+              "p-221129"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "贾政亲眼目睹宝玉伤势与王夫人绝望痛哭，触景生情自悔下毒手，随后宝玉被移送回房，是对痛打风波的直接余波交代。",
+            "anchorIds": [
+              "p-222641",
+              "p-222456"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "叙述痛打平息后贾政退出的心理波动及宝玉转移房间的具体场景。",
+            "anchorIds": [
+              "p-222641"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-33-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "袭人向焙茗追问原委，焙茗结合外部传闻与贾环在场等线索进行归因推理（归咎于薛蟠吃醋与贾环告密），袭人据此信了八九分。",
+            "anchorIds": [
+              "p-222851"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-2",
+              "n-33-3"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "针对宝玉挨打这一单一事件的内部原委调查与推测。",
+            "anchorIds": [
+              "p-222851"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "宝钗送药时由宝玉的伤痛与细心生发感慨，暗想其应把心思用在仕途正道上，同时由焙茗之言推想其兄薛蟠无心之失，形成兼顾情义与劝戒的心理推演。",
+            "anchorIds": [
+              "p-223246"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-8"
+            ]
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "展现宝钗对待宝玉伤情的关切方式及其始终不忘仕途经济的主张，限于宝钗对宝玉个人的规劝态度。",
+            "anchorIds": [
+              "p-223246"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "黛玉独来探视并痛哭劝改，宝玉以‘便为这些人死了也是情愿的’回应，这一表态直接承接此前三十一、三十二回中宝玉对其性情本质与知己承诺的彻底坚持。",
+            "anchorIds": [
+              "p-224773"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1",
+              "n-32-2",
+              "n-33-5"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "宝黛二人对反叛世俗与坚守情志的核心心意印证，属于特定精神知己间的誓言。",
+            "anchorIds": [
+              "p-224773"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "袭人结合宝玉错诉肺腑的心事危局，借王夫人过问挨打之机，系统性陈述男女大防、瓜田李下与防患未然的道理，成功促使王夫人托付大任，推理完备缜密。",
+            "anchorIds": [
+              "p-226865",
+              "p-226293"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-3"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "袭人提出的‘防避不然’和防范男女大防、流言毁誉之理，涉及封建家族维护内外名声、防范私情丑闻的通用治家处世规范。",
+            "anchorIds": [
+              "p-226865"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "宝玉调开袭人，以‘半新不旧的两条手帕子’为寄托赠予黛玉，利用日常意象传递‘你放心’等不可名状的情愫，属于精心策划的含蓄传情行动。",
+            "anchorIds": [
+              "p-227994",
+              "p-228216"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-2"
+            ]
+          },
+          "generality": {
+            "value": 0.7,
+            "rationale": "宝玉向黛玉传递私人信物的具体独特举动。",
+            "anchorIds": [
+              "p-227994"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "黛玉在收到旧帕后细心搜求，顿悟宝玉体贴其眼泪与知己深意，结合二人身世与命运之忧，情思激荡下破除嫌疑题诗三首，是基于二人情感默契的深层领悟与发抒。",
+            "anchorIds": [
+              "p-228483",
+              "p-228682",
+              "p-228795"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-4"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "表现黛玉个体对爱情心领神会的极高心灵体验与悲剧感怀。",
+            "anchorIds": [
+              "p-228483",
+              "p-228682"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-34-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "薛蟠被薛姨妈与宝钗误以为是告发之人，辩白无门愤急之下，抓住薛母曾提过的‘金锁配通灵玉’之说来反击宝钗护短，逻辑直接由激愤反诘促成。",
+            "anchorIds": [
+              "p-228874",
+              "p-230277"
+            ],
+            "prerequisiteNodeIds": [
+              "n-33-8"
+            ]
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "触及薛家内部围绕‘金玉姻缘’的家庭隐私矛盾与兄妹间的激烈争执。",
+            "anchorIds": [
+              "p-228874"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "黛玉见贾母众人浩荡探望宝玉，由宝玉之得宠反衬自身孤苦，归馆见苍苔竹影而引西厢崔双文对比，推知自己连母弟俱无之更薄之命，具有完整的引经比附与心境推导。",
+            "anchorIds": [
+              "p-231003",
+              "p-230543"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "借‘佳人命薄’的传统命题抒发黛玉自身孤女寄居的悲剧命运感。",
+            "anchorIds": [
+              "p-231003"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "薛蟠酒醒后深悔失言，向母亲妹妹作揖发誓认错，甚至滚下至情之泪，直接化解前夜矛盾，是直观的家庭和解场景。",
+            "anchorIds": [
+              "p-231466"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-6"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "薛家母子兄妹在一次争执后的道歉与情感复归。",
+            "anchorIds": [
+              "p-231466"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-35-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "宝玉思吃莲叶羹，王熙凤迅速权衡贾母与长辈心理，借机提议多做十来碗以孝敬长辈并自愿承办，表现其玲珑机巧的处事手腕与即兴算计。",
+            "anchorIds": [
+              "p-232779",
+              "p-232367"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "王熙凤借长辈心疼宝玉之际讨好卖乖、操持饮食的具体生活手腕。",
+            "anchorIds": [
+              "p-232779"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "R9ucaseDOKKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 30179,
+    "candidatesTokenCount": 5763,
+    "totalTokenCount": 35942,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 30179
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5763
+      }
+    ]
+  },
+  "durationMs": 33717,
+  "requestHash": "33b38a342189a03cf3b5dfed517220830f1fa1c28918001bfcb39e4cb1176603"
+}

@@ -1,0 +1,588 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-54-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Wang Xifeng makes an immediate playful inference from Grandmother Jia's critical deconstruction of romance novels (n-54-3), dubbing it 'Baihuang Ji' and invoking the 24 Filial Exemplars to playfully justify her banter.",
+            "anchorIds": [
+              "p-374865"
+            ],
+            "prerequisiteNodeIds": [
+              "n-54-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Applies specifically to this singular banquet occasion and her personal banter with Grandmother Jia and relatives.",
+            "anchorIds": [
+              "p-374865"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "Grandmother Jia directly reorganizes the seating into the warm pavilion and selects unique musical arrangements for the gathering; it is directly introduced narrative observation and direction.",
+            "anchorIds": [
+              "p-375412",
+              "p-376031",
+              "p-376240"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Depicts a specific late-night festival banquet arrangement and musical selection within the Rongguo mansion.",
+            "anchorIds": [
+              "p-375412",
+              "p-376031",
+              "p-376240"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Direct narrative describing fireworks, late-night refreshments, and the subsequent days of visiting household managers for New Year wine.",
+            "anchorIds": [
+              "p-378870",
+              "p-379381"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Covers a discrete sequence of post-festival events and daily social rounds over a few days.",
+            "anchorIds": [
+              "p-378870",
+              "p-379381"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Direct narrative setup establishing Xifeng's miscarriage/illness and Lady Wang's explicit delegation of household management to Li Wan, Tanchun, and Baochai.",
+            "anchorIds": [
+              "p-379741",
+              "p-380096",
+              "p-380579"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Establishes a temporary administrative framework and operational routine governing the inner Rongguo mansion.",
+            "anchorIds": [
+              "p-379741",
+              "p-380096",
+              "p-380579"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Tanchun directly analyzes institutional precedence (differentiating internal vs. external concubine family funerals) to reject Li Wan's uninformed proposal and refute Wu Xindeng's wife's trap, grounding her decision in past accounts.",
+            "anchorIds": [
+              "p-380938",
+              "p-381617"
+            ],
+            "prerequisiteNodeIds": [
+              "n-55-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Governs the specific application of funeral condolence silver rules to the case of Zhao Guoji while establishing an administrative boundary for servants.",
+            "anchorIds": [
+              "p-380938",
+              "p-381617"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Following her ruling on Zhao Guoji (n-55-2), Tanchun defends her stance against Concubine Zhao by deducing the strict legal/clan distinctions between masters and concubine relatives from ancestral rules.",
+            "anchorIds": [
+              "p-381773"
+            ],
+            "prerequisiteNodeIds": [
+              "n-55-2"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Applies patriarchal clan law and status distinctions specifically between concubines, concubine-born daughters, and official kin within the household.",
+            "anchorIds": [
+              "p-381773"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Tanchun investigates the eight-tael schooling allowance, discovers it duplicates the boys' monthly room allowances, and logically eliminates the redundant expenditure.",
+            "anchorIds": [
+              "p-383644"
+            ],
+            "prerequisiteNodeIds": [
+              "n-55-1"
+            ]
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "Pertains to the specific reform of duplicate educational stipends for young masters in the clan school.",
+            "anchorIds": [
+              "p-383644"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Ping'er deduces from Tanchun's handling of the funeral and school fee disputes that the servants are testing the young mistress, and uses Tanchun's sharp character and status to deter them.",
+            "anchorIds": [
+              "p-384647",
+              "p-385243"
+            ],
+            "prerequisiteNodeIds": [
+              "n-55-2",
+              "n-55-3"
+            ]
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "Characterizes the dynamic between manipulative middle-level servants and young mistresses acting as temporary estate managers.",
+            "anchorIds": [
+              "p-384647",
+              "p-385243"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Xifeng synthesizes Ping'er's report of Tanchun's rulings with an in-depth financial overview of the family's structural deficit, marriage obligations, and her own managerial dilemma.",
+            "anchorIds": [
+              "p-386119",
+              "p-386554"
+            ],
+            "prerequisiteNodeIds": [
+              "n-55-4",
+              "n-55-5"
+            ]
+          },
+          "generality": {
+            "value": 4.3,
+            "rationale": "Formulates an analysis of the overall economic decline and internal power balance of the Rongguo ducal house.",
+            "anchorIds": [
+              "p-386119",
+              "p-386554"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Building on her elimination of redundant expenditures (n-55-4) and observations of the Lai family's garden, Tanchun infers that Grand View Garden can be contracted out to elderly maids to eliminate procurement waste and maintenance costs.",
+            "anchorIds": [
+              "p-387899",
+              "p-389197"
+            ],
+            "prerequisiteNodeIds": [
+              "n-55-4"
+            ]
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "Proposes a systematic structural management and outsourcing model specifically tailored for Grand View Garden.",
+            "anchorIds": [
+              "p-387899",
+              "p-389197"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Baochai connects Zhu Xi's philosophical text 'Bu Zi Qi Wen' directly to practical household economics, arguing that true scholarship elevates everyday estate management.",
+            "anchorIds": [
+              "p-388799"
+            ],
+            "prerequisiteNodeIds": [
+              "n-56-1"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Asserts a broad ethical and practical principle: everyday practical matters ('small things') achieve nobility and avoid vulgarity when elevated by classical scholarship.",
+            "anchorIds": [
+              "p-388799"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Baochai refines Tanchun's contracting plan (n-56-1) by deducing that turning profits over to the accounting office will create corruption and resentment; she calculates practical offsets and devises profit-sharing for excluded servants.",
+            "anchorIds": [
+              "p-391447",
+              "p-392492"
+            ],
+            "prerequisiteNodeIds": [
+              "n-56-1",
+              "n-56-2"
+            ]
+          },
+          "generality": {
+            "value": 4.6,
+            "rationale": "Offers an organizational reform principle for large patriarchal households balancing financial economization with social cohesion ('small favors preserving the whole structure').",
+            "anchorIds": [
+              "p-391447",
+              "p-392492"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Direct narrative event recounting the visit of Zhen household women, bringing gifts and noting the existence of Zhen Baoyu.",
+            "anchorIds": [
+              "p-393205",
+              "p-393485",
+              "p-394195"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Specific interaction between Grandmother Jia and visiting maids regarding two particular parallel young masters.",
+            "anchorIds": [
+              "p-393205",
+              "p-393485",
+              "p-394195"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Baoyu engages in a local dialectical debate with Xiangyun, countering her historical precedents (Lin Xiangru vs. Sima Xiangru, Confucius vs. Yang Hu) to argue that sharing both identical name and appearance is impossible.",
+            "anchorIds": [
+              "p-395015"
+            ],
+            "prerequisiteNodeIds": [
+              "n-56-4"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "A philosophical/empirical argument regarding personal identity, dual existence, and naming coincidences.",
+            "anchorIds": [
+              "p-395015"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Baoyu's intense waking contemplation of Zhen Baoyu (n-56-5) triggers a dream where he encounters Zhen Baoyu, which resolves upon waking into a reflection of his own mirror image.",
+            "anchorIds": [
+              "p-395385",
+              "p-395785",
+              "p-396213"
+            ],
+            "prerequisiteNodeIds": [
+              "n-56-5"
+            ]
+          },
+          "generality": {
+            "value": 0.6,
+            "rationale": "A specific psychological and allegorical dream sequence experienced by Jia Baoyu in his bedchamber.",
+            "anchorIds": [
+              "p-395385",
+              "p-395785",
+              "p-396213"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "Directly initiated interaction where Zijuan invents a falsehood about Daiyu returning to Suzhou to test Baoyu's emotional commitment.",
+            "anchorIds": [
+              "p-397824"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific interpersonal test between Zijuan and Baoyu at the Qinfang Pavilion.",
+            "anchorIds": [
+              "p-397824"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Baoyu's immediate psychosomatic collapse is directly caused by his belief in Zijuan's fabricated claim that Daiyu is leaving (n-57-1).",
+            "anchorIds": [
+              "p-398790",
+              "p-399619",
+              "p-399995"
+            ],
+            "prerequisiteNodeIds": [
+              "n-57-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Pertains to Baoyu's individual psychological and physical seizure and reaction to the word 'Lin'.",
+            "anchorIds": [
+              "p-398790",
+              "p-399619",
+              "p-399995"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Following the delirium (n-57-2), Baoyu vows to live or die together with Daiyu, while Zijuan deduces the precariousness of Daiyu's orphaned position and urges her to secure marriage while Grandmother Jia is alive.",
+            "anchorIds": [
+              "p-402241",
+              "p-401173"
+            ],
+            "prerequisiteNodeIds": [
+              "n-57-2"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Analyzes the precarious life prospects of an aristocratic orphan girl lacking parental backing within the Rongguo household.",
+            "anchorIds": [
+              "p-402241",
+              "p-401173"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.4,
+            "rationale": "Direct narrative event where Aunt Xue observes Xing Xiuyan's temperament and initiates a match with Xue Ke through Xifeng, Grandmother Jia, and Madam Xing.",
+            "anchorIds": [
+              "p-403040",
+              "p-403808"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A specific arranged marriage negotiation connecting Xue Ke and Xing Xiuyan.",
+            "anchorIds": [
+              "p-403040",
+              "p-403808"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Baochai inquires why Xiuyan wears spring clothes in cold weather, discovers the pawned winter coat and family squeeze, and offers practical moral counsel and financial aid.",
+            "anchorIds": [
+              "p-404144"
+            ],
+            "prerequisiteNodeIds": [
+              "n-57-4"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Advises on personal conduct, modesty, and frugality for an impoverished relative living within a lavish aristocratic household.",
+            "anchorIds": [
+              "p-404144"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "Triggered by discussions of Xiuyan's marriage (n-57-4) and mutual affection, Aunt Xue and Baochai comfort Daiyu and discuss proposing a formal match between Baoyu and Daiyu.",
+            "anchorIds": [
+              "p-405238"
+            ],
+            "prerequisiteNodeIds": [
+              "n-57-4"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Addresses the specific marital prospects and emotional bonding of Baoyu and Daiyu in Xiaoxiang Hall.",
+            "anchorIds": [
+              "p-405238"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Xiangyun's discovery of the pawn ticket leads Baochai to reveal Xiuyan's plight (n-57-5), prompting Daiyu's empathetic grief ('mourning for one's own kind') and Xiangyun's indignation.",
+            "anchorIds": [
+              "p-407363",
+              "p-406874"
+            ],
+            "prerequisiteNodeIds": [
+              "n-57-5"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Focuses on the reactions of Xiangyun and Daiyu toward Xiuyan's hidden poverty within Yingchun's compound.",
+            "anchorIds": [
+              "p-407363",
+              "p-406874"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "Direct narrative recording the royal consort's death, the departure of senior matriarchs for mourning rites, and the interim delegation of management to You Shi and Aunt Xue.",
+            "anchorIds": [
+              "p-407814",
+              "p-408386"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Specifies imperial mourning mandates and the structural reallocation of caretakers for the Rong and Ning mansions.",
+            "anchorIds": [
+              "p-407814",
+              "p-408386"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Following the imperial funeral decree and absence of theatrical entertainment (n-58-1), Lady Wang and You Shi reason through the ancestral precedent and personal welfare of the child actresses, disbanding the troupe and assigning them to inner rooms.",
+            "anchorIds": [
+              "p-408570",
+              "p-409468"
+            ],
+            "prerequisiteNodeIds": [
+              "n-58-1"
+            ]
+          },
+          "generality": {
+            "value": 1.6,
+            "rationale": "Governs the disbanding and reallocation of the twelve young actresses within Grand View Garden.",
+            "anchorIds": [
+              "p-408570",
+              "p-409468"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "rducareHGIKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 34138,
+    "candidatesTokenCount": 4993,
+    "totalTokenCount": 39131,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 34138
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4993
+      }
+    ]
+  },
+  "durationMs": 24207,
+  "requestHash": "5369be470e5e7f839e7ea8c29f84ff41d59bcead6d651018d6fa1023a23d60de"
+}

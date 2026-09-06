@@ -1,0 +1,583 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-58-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "宝玉从眼前大杏树'绿叶成荫子满枝'的自然物候，联想到邢岫烟订婚（n-57-4）以及韶华易逝的命运悲悯，是一个由物及人、情景交融的本地推感感叹，属于包含明确理据的局部推论。",
+            "anchorIds": [
+              "p-410038"
+            ],
+            "prerequisiteNodeIds": [
+              "n-57-4"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "论述对象虽然从邢岫烟一人延伸至对好女儿韶华易逝的一般感叹，但核心事件仍落在宝玉对岫烟出嫁与自身伤感的具体情境上。",
+            "anchorIds": [
+              "p-410038"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "藕官私烧纸钱被婆子抓到，宝玉当场编造梦见杏花神需要生人烧白纸钱的谎言解围，属于对突发情境的即时应变推导与陈述。",
+            "anchorIds": [
+              "p-410394",
+              "p-411319"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记录大观园山石后藕官烧纸与宝玉当场圆谎的一幕具体情节事件。",
+            "anchorIds": [
+              "p-410394"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "晴雯与麝月针对干娘用残水洗头并打骂芳官之事，依据大观园内帏主仆名分与各房管教规矩直接予以反驳和震慑。",
+            "anchorIds": [
+              "p-411649",
+              "p-413265"
+            ],
+            "prerequisiteNodeIds": [
+              "n-58-2"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "围绕芳官及其干娘的一场家庭内帏纠纷，同时援引了园内主仆名分与各房规矩这一特定范围的行事准则。",
+            "anchorIds": [
+              "p-411649"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "芳官解释藕官因戏中生情视死去的菂官为妻、补蕊官为续弦并提出'大道理'，宝玉听后得出'情痴之理'并深为叹服，属于成体系的局部情感推理与反思。",
+            "anchorIds": [
+              "p-413932"
+            ],
+            "prerequisiteNodeIds": [
+              "n-58-4"
+            ]
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "探讨的是超越世俗的情痴情理以及戏子间夫妻拟态生死相待的原则，属于情痴情理这一特定概念类型。",
+            "anchorIds": [
+              "p-413932"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "宝玉从藕官烧纸引发的危机出发，结合孔子遗训与儒家祭祀真意，提出一套否定异端纸钱、主张'心诚意洁则土石皆可通神'的完整论辩与祭祀原则。",
+            "anchorIds": [
+              "p-413932"
+            ],
+            "prerequisiteNodeIds": [
+              "n-58-4",
+              "n-58-6"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "宝玉提出的祭祀在于心诚意洁而非虚名等式的理论，属于涵盖死者、神佛乃至一切祭祀仪式的跨领域、具有广泛适用性的原理主张。",
+            "anchorIds": [
+              "p-413932"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "直接记述老太妃出殡后贾母等离府送灵，赖大与林之孝家的安排门禁、增派更夫以防疏虞的叙事事实。",
+            "anchorIds": [
+              "p-415024",
+              "p-415154"
+            ],
+            "prerequisiteNodeIds": [
+              "n-58-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "描述贾府与大观园在长辈送灵期间特定防务安排的一次具体事件。",
+            "anchorIds": [
+              "p-415024",
+              "p-415154"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "直接描写莺儿受命取蔷薇硝途中折柳编花篮并赠予黛玉的情景叙事，无复杂推论链条。",
+            "anchorIds": [
+              "p-415532",
+              "p-415340",
+              "p-415815"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描写莺儿编花篮赠黛玉的单一具体生活场景。",
+            "anchorIds": [
+              "p-415532",
+              "p-415815"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "春燕结合其母亲和姑妈贪得无厌的表现，引述并验证宝玉关于女子'出嫁变死珠、老了变鱼眼睛'的观点，并以大观园花木承包（n-56-3）为背景进行具体对照剖析。",
+            "anchorIds": [
+              "p-416272"
+            ],
+            "prerequisiteNodeIds": [
+              "n-56-3"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "春燕借助对亲母姑妈的观察，讨论了一类特定人群——在大观园环境由清纯少女变为贪婪老妇的退化法则。",
+            "anchorIds": [
+              "p-416272"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "管地婆子因花柳被采心疼起嗔借故打骂春燕，春燕之母亦赶来迁怒，由折花柳事件直接引发的现场冲突叙事。",
+            "anchorIds": [
+              "p-417352",
+              "p-417905"
+            ],
+            "prerequisiteNodeIds": [
+              "n-59-2",
+              "n-59-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记叙柳叶渚边管地婆子与春燕母打骂春燕并波及众人的单一冲突事件。",
+            "anchorIds": [
+              "p-417352",
+              "p-417905"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.4,
+            "rationale": "承接前文打骂，直接描写春燕逃回怡红院寻求庇护、其母追入与袭人产生争执的具体动作。",
+            "anchorIds": [
+              "p-418568",
+              "p-418367"
+            ],
+            "prerequisiteNodeIds": [
+              "n-59-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记叙春燕奔入怡红院及袭人出面干预的具体局部冲突。",
+            "anchorIds": [
+              "p-418568"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "麝月借二奶奶屋里平儿及林大娘的惩罚权威（打四十板子、撵逐出园）进行权术震慑，推论婆子惧怕失去安身立命之所而必然屈服求饶，成功降服悍婆。",
+            "anchorIds": [
+              "p-419195",
+              "p-418568"
+            ],
+            "prerequisiteNodeIds": [
+              "n-59-5"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "展现贾府中怡红院大丫鬟借上层管家权威压制下层粗使仆妇的典型管理场景与权术手段。",
+            "anchorIds": [
+              "p-419195",
+              "p-418568"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "平儿根据长辈外出数日间园中各处频发的八九件争端，归纳出'长辈不在、下人作反'的总体局面，属于基于多个事实样本的归纳与感慨。",
+            "anchorIds": [
+              "p-419591"
+            ],
+            "prerequisiteNodeIds": [
+              "n-59-1"
+            ]
+          },
+          "generality": {
+            "value": 3.1,
+            "rationale": "概括长辈出巡期间大观园内外各处下人失去管束、频生事端的特定管理状态。",
+            "anchorIds": [
+              "p-419591"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "芳官不愿将蕊官所赠之硝给贾环，依麝月之计以茉莉粉替代并轻慢掷与贾环，属于针对具体索要行为的敷衍应变。",
+            "anchorIds": [
+              "p-420863",
+              "p-420609"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记录芳官调换物品敷衍贾环的具体事件。",
+            "anchorIds": [
+              "p-420863"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "彩云识破茉莉粉激起赵姨娘怒火，赵姨娘又受夏婆子关于'乘机抖威风'的挑唆与合谋，推断出可以借题发挥并直奔怡红院大闹，具备较为清晰的因果动机链条。",
+            "anchorIds": [
+              "p-422325",
+              "p-421050",
+              "p-421840"
+            ],
+            "prerequisiteNodeIds": [
+              "n-60-1"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "记叙赵姨娘与众小戏子在怡红院撕打哭闹的具体场面。",
+            "anchorIds": [
+              "p-422325",
+              "p-421840"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "探春赶到喝止打斗后，从主子体统、尊卑身份、下人挑唆及借刀杀人之计等方面对赵姨娘展开层层批驳训诫，结构完整而论理透彻。",
+            "anchorIds": [
+              "p-423393",
+              "p-423214",
+              "p-423633"
+            ],
+            "prerequisiteNodeIds": [
+              "n-60-2"
+            ]
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "探春论述的是贵族大家中半主半奴的姨娘应如何自重自处以维护体统、避免被奴才作弄的特定宗法规矩与阶层处事之道。",
+            "anchorIds": [
+              "p-423393"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "柳家的见怡红院差轻人多且将来放丫鬟，推断出五儿若入怡红院既能保全身体又能得实惠，因而通过日常殷勤巴结芳官以谋求空缺，具备明确的功利考量链条。",
+            "anchorIds": [
+              "p-425041",
+              "p-424902",
+              "p-425839"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "记叙柳家母女为柳五儿谋求进入怡红院差事的谋划与活动。",
+            "anchorIds": [
+              "p-425041",
+              "p-425839"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "芳官索要玫瑰露转赠五儿，柳家的又将半分送给患热病的侄儿，直接展现物资流转与人情往来的情节发展。",
+            "anchorIds": [
+              "p-425414",
+              "p-425250",
+              "p-426212"
+            ],
+            "prerequisiteNodeIds": [
+              "n-60-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记录小半瓶玫瑰露在芳官、五儿及舅舅家流转的具体事件。",
+            "anchorIds": [
+              "p-425414",
+              "p-426212"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "柳氏因回避钱槐纠缠匆匆离去，得嫂子转赠门上分得的茯苓霜，带回角门时因路线可疑被守门小么儿盘诘起疑，为下文失窃案埋下因果铺垫。",
+            "anchorIds": [
+              "p-426790",
+              "p-427214",
+              "p-426534"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "记叙柳家的获得茯苓霜以及在角门被怀疑盘问的一连串具体经过。",
+            "anchorIds": [
+              "p-426790",
+              "p-427214"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-61-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "司棋因要炖鸡蛋遭柳家的推脱拒绝，推断柳家看人下菜碟，怒带丫头砸翻厨房菜蔬箱柜泄愤，属于因果明确的情绪爆发行动。",
+            "anchorIds": [
+              "p-429375",
+              "p-427973"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.6,
+            "rationale": "大观园迎春房大丫鬟司棋大闹内厨房的单一冲突事件。",
+            "anchorIds": [
+              "p-429375",
+              "p-427973"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-61-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "林之孝家的根据五儿夜行辞钝色虚，结合玉钏儿报失玫瑰露及司棋房小丫头莲花儿指认厨房露瓶，顺藤摸瓜搜出茯苓霜并拘押五儿顶缸，属于基于现场物证的指控推理过程。",
+            "anchorIds": [
+              "p-430079",
+              "p-430741",
+              "p-431165"
+            ],
+            "prerequisiteNodeIds": [
+              "n-60-5",
+              "n-60-6",
+              "n-61-1"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "记载柳五儿被林之孝家的搜查、人赃俱获扣押并被冤枉顶缸的具体案件。",
+            "anchorIds": [
+              "p-430079",
+              "p-430741"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-61-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "平儿悄悄查访袭人、芳官核实玫瑰露来历，并结合晴雯所说与玉钏儿的情状，查明王夫人房中失窃实系彩云偷给贾环的真相，属于层层排查证据的侦查推理过程。",
+            "anchorIds": [
+              "p-431341"
+            ],
+            "prerequisiteNodeIds": [
+              "n-61-2"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "平儿私下查办大观园内玫瑰露失窃案情原委的具体调查经过。",
+            "anchorIds": [
+              "p-431341"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-61-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "平儿综合考虑'投鼠忌器'、若深究必伤及探春体面这一权衡逻辑，宝玉同意主动担下盗窃之名；彩云感佩认罪后依计瞒下，形成一套保全体面的精密处事闭环。",
+            "anchorIds": [
+              "p-431341"
+            ],
+            "prerequisiteNodeIds": [
+              "n-60-3",
+              "n-61-3"
+            ]
+          },
+          "generality": {
+            "value": 3.4,
+            "rationale": "展现大家族内部通过'投鼠忌器'顾全主子体面而处理内部偷窃弊案的特定政治智慧与处理范例。",
+            "anchorIds": [
+              "p-431341"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-61-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "平儿面对凤姐严加拷打并革退柳家的决断，以'得放手时须放手'、免结小人仇怨以及保全凤姐病体等长远利益进行权衡劝谏，成功推翻凤姐的严酷初议。",
+            "anchorIds": [
+              "p-433541"
+            ],
+            "prerequisiteNodeIds": [
+              "n-61-4"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "平儿提出的'得放手时须放手'、不可结小人仇怨的权衡原则，超越了当下案件，成为管家与行权处世的宽仁指导方针。",
+            "anchorIds": [
+              "p-433541"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "平儿依据与凤姐商定的方案行权结案，恢复柳家母女差事并退回秦显家的，引出秦显家亏空及彩云遭贾环怀疑赌气弃物的连带因果反应。",
+            "anchorIds": [
+              "p-433958"
+            ],
+            "prerequisiteNodeIds": [
+              "n-61-4",
+              "n-61-5"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "记叙玫瑰露窃案正式平息后各方当事人（柳家、秦显家、彩云、贾环）的连锁结局。",
+            "anchorIds": [
+              "p-433958"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "v9ucasaRHL2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 28696,
+    "candidatesTokenCount": 5933,
+    "totalTokenCount": 34629,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 28696
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5933
+      }
+    ]
+  },
+  "durationMs": 34027,
+  "requestHash": "2e20c0f1a71fad3a45c6ce3d52d371dfbe89ffb9d341f5449427b3019d228d54"
+}

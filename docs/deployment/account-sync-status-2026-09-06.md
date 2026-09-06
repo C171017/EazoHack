@@ -1,3 +1,9 @@
+# Google login verified — 2026-09-06
+
+Google provider enabled after the user saved its credentials. Browser OAuth verification completed on the protected account-sync preview: Google account chooser, approved basic-profile consent, Supabase callback, then Eazo displayed the signed-in owner account and private empty library. The legacy Email provider was subsequently disabled; final provider settings were verified through the Auth settings endpoint. This supersedes the pending credential handoff notes below.
+
+The protected preview is validated. `read.vin` Production was not updated by this task, and Google's audience remains Testing with the approved test user. A public rollout still requires configuring the production origin/environment and Google audience for the intended users.
+
 # Live activation progress — 2026-09-06
 
 This section supersedes the earlier local-only implementation status below.

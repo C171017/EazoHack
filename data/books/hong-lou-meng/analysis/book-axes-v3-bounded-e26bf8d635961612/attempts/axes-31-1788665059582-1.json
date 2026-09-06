@@ -1,0 +1,554 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-117-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "宝玉在经历和尚点化索玉（n-117-1）后，进一步形成断绝尘缘、一子出家的明确决意并对家人表露疏离，属于承接此前点化事件的一步直接推论与心态确认。",
+            "anchorIds": [
+              "p-841253",
+              "p-843959"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "论断聚焦于贾宝玉个人的思想心态与脱尘决意，覆盖特定个体在特定阶段的心境与举动。",
+            "anchorIds": [
+              "p-841253",
+              "p-843959"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "文本直接叙述贾琏收到贾赦病重家信后托付家务并启程南下，基本为无前置推论的叙事事件，仅包含其临行安排的一点轻度判断。",
+            "anchorIds": [
+              "p-841253",
+              "p-843252"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记载贾琏南下一事中对荣国府内外的具体托付交代，属于单一叙事场景与具体人事安排。",
+            "anchorIds": [
+              "p-841253",
+              "p-843252"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾琏南下托付外事（n-117-4）后，恶子乘家中无管束在外书房设局聚赌滥饮，属于直接因果关系的自然展开。",
+            "anchorIds": [
+              "p-843484",
+              "p-844389"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-4"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "叙述贾芸、贾蔷、贾环等人聚党酗酒这一具体阶段内荣国府外书房的失序情形。",
+            "anchorIds": [
+              "p-843484",
+              "p-844389"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "酒席间由外人与小厮转述外藩选妃、贾雨村案与妙玉下落等外界传闻，属于直接叙述的对话信息呈现与王仁心动的直接反应。",
+            "anchorIds": [
+              "p-844389",
+              "p-845811"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "涉及数个具体人物（外藩、雨村、妙玉、巧姐）在该次聚饮中的几项具体谈资。",
+            "anchorIds": [
+              "p-844389",
+              "p-845811"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "惜春在听闻尼僧谈话坚立素志（n-115-1）并以死相逼（n-115-2）之后，最终付诸断然绞发的实质行动，是其出家意图的一步终极推进与落实。",
+            "anchorIds": [
+              "p-846771"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-1",
+              "n-115-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "描述惜春个人决意削发出家并在府中辟室修行的具体事件与结局。",
+            "anchorIds": [
+              "p-846771"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "承接惜春坚执削发（n-117-7），王夫人等顺应其意志正式安排静室，并由紫鹃主动请缨相随，形成一小段顺承推断与落实。",
+            "anchorIds": [
+              "p-847211",
+              "p-848312"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "涉及惜春与紫鹃两个命定人物终身归宿的具体确立。",
+            "anchorIds": [
+              "p-847211",
+              "p-848312"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "宝玉在目睹惜春削发出家（n-117-7、n-118-1）时，联系自身在太虚幻境重览判词（n-116-2）之记忆，当众诵出‘勘破三春’之诗，系将前次判词推论落实于眼前事实的推衍验证。",
+            "anchorIds": [
+              "p-848277",
+              "p-848312"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-2",
+              "n-118-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "虽然借用了判词诗句，但具体指向惜春个人的修行与宝玉自己对命运定数的觉悟表达。",
+            "anchorIds": [
+              "p-848277",
+              "p-848312"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "承接席间外藩选妃之言（n-117-6），贾环因嫉恨凤姐，与输钱的贾芸及贪财的王仁一拍即合定下谋卖巧姐之计，是一步完整的地方性因果谋划。",
+            "anchorIds": [
+              "p-849316",
+              "p-849788"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "描述贾环、贾芸、王仁密谋欺瞒邢夫人出卖巧姐的特定阴谋事件。",
+            "anchorIds": [
+              "p-849316",
+              "p-849788"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "平儿察觉外藩相看之异样，打听出贾环等人的阴谋（n-118-3）后转求王夫人，形成揭露奸谋与寻求对策的一步推衍。",
+            "anchorIds": [
+              "p-850106",
+              "p-850403",
+              "p-850613"
+            ],
+            "prerequisiteNodeIds": [
+              "n-118-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "集中于荣国府内部围绕巧姐婚事所产生的具体矛盾与应对波折。",
+            "anchorIds": [
+              "p-850106",
+              "p-850403",
+              "p-850613"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "宝钗见宝玉细玩庄子且具出世之心（n-117-3），以忠孝圣贤之赤子之心进行严密的义理辨难与劝谏，包含局部的伦理推理论证。",
+            "anchorIds": [
+              "p-851846"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "宝钗关于圣贤赤子之心、忠孝大义与出世避世之辨，涉及儒道两派立身行事的一般规范，但紧扣宝玉个人的功名与家庭责任。",
+            "anchorIds": [
+              "p-851846"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "面对宝钗苦谏（n-118-5）与贾政家信，宝玉顺水推舟，将‘从此而止’转化为‘借考场断尘缘’的隐秘策略，假装用功，是深沉意图下的局部行动演进。",
+            "anchorIds": [
+              "p-852817",
+              "p-853374",
+              "p-853676"
+            ],
+            "prerequisiteNodeIds": [
+              "n-118-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "专指宝玉在此特定时期内的表面应试转变与隐秘心态。",
+            "anchorIds": [
+              "p-852817",
+              "p-853374",
+              "p-853676"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "宝玉在完成备考假象（n-118-6）后临场辞别，借中举以酬报母恩并言及兰哥后运，将自己的绝尘计划推进到临界点，体现多步内心推演的决绝告别。",
+            "anchorIds": [
+              "p-855182"
+            ],
+            "prerequisiteNodeIds": [
+              "n-118-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "专指宝玉进场前向王夫人、李纨、宝钗等人辞别的一幕具体场景与谶语。",
+            "anchorIds": [
+              "p-855182"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "趁宝玉贾兰赴考、家中再无有力男性照应的时机，贾环等人加快落实卖巧姐的谋划（n-118-3），直接索取八字送往公馆立文书，属阴谋的进一步落地。",
+            "anchorIds": [
+              "p-856356"
+            ],
+            "prerequisiteNodeIds": [
+              "n-118-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "叙述贾环勾结邢夫人出卖巧姐作妾的具体行动。",
+            "anchorIds": [
+              "p-856356"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "面对贾环等人的急迫逼迫（n-119-2）和平儿的告急（n-118-4），刘姥姥巧施金蝉脱壳之计，王夫人、平儿密切配合实施转移，是一套完整的应变谋略与行动执行。",
+            "anchorIds": [
+              "p-857606"
+            ],
+            "prerequisiteNodeIds": [
+              "n-118-4",
+              "n-119-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "涉及巧姐遇险及被秘密转移出贾府的单一避祸事件。",
+            "anchorIds": [
+              "p-857606"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "外藩得知贾家为勋戚后深畏法禁，断然驱逐贾芸王仁，使贾环一伙的阴谋（n-119-2）因外部王府法度约束而彻底破产，逻辑推论直接完整。",
+            "anchorIds": [
+              "p-858839"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "叙述外藩王府拒婚逐客以避干例禁的特定事件始末。",
+            "anchorIds": [
+              "p-858839"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.5,
+            "rationale": "宝玉兑现赴考辞别时的预言（n-119-1），中第七名举人后在出场之际依僧人之约彻底遁走，完成了斩断红尘的实践飞跃，是长线预伏与内心动机的最终实现。",
+            "anchorIds": [
+              "p-859840",
+              "p-861022"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-1",
+              "n-119-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记录宝玉个人的高中与出走失踪，为核心人物一生运命的枢纽事件。",
+            "anchorIds": [
+              "p-859840",
+              "p-861022"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "因宝玉贾兰高中举人（n-119-5），皇帝览卷追念贾氏功勋，加之海疆平定，从而作出大赦、复职与赏还家产之决定，系由科举中榜与朝政演变顺推而出的政治转折。",
+            "anchorIds": [
+              "p-861816",
+              "p-862157"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "覆盖整个贾氏宗族（宁国、荣国两府）受皇恩开释、复爵赏产的家族命运变迁。",
+            "anchorIds": [
+              "p-861816",
+              "p-862157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "贾家逢赦复兴（n-119-6）促使贾琏还朝，刘姥姥与平儿见危机解除遂护送避祸的巧姐（n-119-3）荣归府中，此前避祸与家族复兴两条线索在此合流完结。",
+            "anchorIds": [
+              "p-862749",
+              "p-863605",
+              "p-863897"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-3",
+              "n-119-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "描述贾琏归家、巧姐归府、邢王二夫人前嫌暂释的一幕家庭团圆场景。",
+            "anchorIds": [
+              "p-862749",
+              "p-863605",
+              "p-863897"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-120-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "宝玉在考场失踪（n-119-5）后彻底随僧道脱离尘世，于毘陵驿向贾政下拜了却父子尘缘，是尘世孝道与出世归真冲突的最终了断与形象展现。",
+            "anchorIds": [
+              "p-865078",
+              "p-865486"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "具体描写宝玉雪夜向父亲贾政辞别、归彼大荒的个体超脱场景。",
+            "anchorIds": [
+              "p-865078",
+              "p-865486"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-120-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "袭人在宝玉出走后依王夫人之命出嫁蒋玉菡，凭借旧物汗巾方悟昔日判词（n-116-2）与宿缘前定，属于对书中早期汗巾互赠及判词预言的经验验证与顺从。",
+            "anchorIds": [
+              "p-869130",
+              "p-868325"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "阐明袭人个人与蒋玉菡结合的既定命运归宿及其‘无可奈何’的个体处境。",
+            "anchorIds": [
+              "p-869130",
+              "p-868325"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-120-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 8.5,
+            "rationale": "甄士隐全面串联通灵宝玉下凡、金陵群钗命运册籍、太虚幻境与真如福地之辨、以及贾府由盛而衰复因善恶而‘兰桂齐芳’的全书总因果，综合了整部作品的多条大脉络进行形而上总结阐释。",
+            "anchorIds": [
+              "p-869811"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-2",
+              "n-119-5",
+              "n-119-6",
+              "n-120-1"
+            ]
+          },
+          "generality": {
+            "value": 7.5,
+            "rationale": "不仅概括书中诸女子与贾府兴衰，更上升到‘凡古今女子情字不可沾染’及‘福善祸淫古今定理’的普遍道德与哲学法则。",
+            "anchorIds": [
+              "p-869811"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-120-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 9,
+            "rationale": "顽石随僧道历尽人间悲欢离合、完成度脱任务后复归女娲补天青埂峰下，是全书开篇‘大荒山无稽崖’神话设定的终极闭环，汇聚了全书尘缘与仙界的大综合。",
+            "anchorIds": [
+              "p-870949"
+            ],
+            "prerequisiteNodeIds": [
+              "n-120-1",
+              "n-120-4"
+            ]
+          },
+          "generality": {
+            "value": 8,
+            "rationale": "表达人生经历如梦幻泡影、真假相依、两番归一的超验存在规律，覆盖全书由仙入凡再复归大荒的终极哲理框架。",
+            "anchorIds": [
+              "p-870949"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xtycasulE4Kbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 25676,
+    "candidatesTokenCount": 5280,
+    "totalTokenCount": 30956,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 25676
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5280
+      }
+    ]
+  },
+  "durationMs": 29870,
+  "requestHash": "43ccc871925d9a31f5e2e4f8a1d5d6fee93dcfb3147447ff8a290351ed8ea4f3"
+}
