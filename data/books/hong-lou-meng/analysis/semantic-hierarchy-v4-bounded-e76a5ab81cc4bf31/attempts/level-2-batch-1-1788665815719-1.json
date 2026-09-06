@@ -1,0 +1,69 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-1-1",
+          "h-level-1-batch-1-2",
+          "h-level-1-batch-1-3"
+        ],
+        "label": "顽石入世与荣府幻缘初启",
+        "summary": "女娲剩石受僧道携入红尘，甄士隐与贾雨村历经资助与升沉；林黛玉初入荣国府拜谒长辈；贾宝玉则入太虚幻境并在梦醒后与袭人初试情爱。",
+        "rationale": "涵盖全书开卷神话入世、黛玉进府及宝玉太虚幻梦等开篇基础叙事线索。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-1-4",
+          "h-level-1-batch-1-5",
+          "h-level-1-batch-1-6"
+        ],
+        "label": "义学交争与内帏宁府见闻",
+        "summary": "宝玉探宝钗、会秦钟并在绛芸轩任性借茶发落；秦钟附学引致家塾顽童混战；宁国府则因秦氏抱病延医请脉并逢寿宴问疾。",
+        "rationale": "围绕秦钟入塾所起波澜以及宁荣二府内帏日常交游、义学争端与秦氏患病求医展转展开。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-1",
+          "h-level-1-batch-2-2",
+          "h-level-1-batch-2-3"
+        ],
+        "label": "郊宿吉凶与闺阁生辰戏谑",
+        "summary": "治丧郊宿与元春晋封喜讯相叠；府内日常中贾琏私通、下人妒怨交织，贾母为宝钗筹办及笄筵席；宝玉与黛玉等姊妹间亦多有言语谐谑及读曲风波。",
+        "rationale": "连接丧殡升迁等家族大典与大观园内外儿女闺阁言戏、仆从妒怨的生活琐事。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-2-4",
+          "h-level-1-batch-2-5",
+          "h-level-1-batch-2-6"
+        ],
+        "label": "贾芸谋事与宝玉受累遇祟",
+        "summary": "贾芸投靠宝玉并借得倪二银两谋取差事；小红越级侍茶后与贾芸私相牵念；宝玉则接连遭受贾环烫伤、马道婆施祟以及薛蟠设宴欺哄。",
+        "rationale": "集中展现贾芸小红在府门内外的钻营情缘，以及贾环妒忌、巫祟暗害与子弟浪荡给宝玉带来的波折。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "0d-cavPoPLicvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 4725,
+    "candidatesTokenCount": 747,
+    "totalTokenCount": 5472,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4725
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 747
+      }
+    ]
+  },
+  "durationMs": 6122,
+  "requestHash": "a6ddc9f47bd3f820d521d66f436884ac6347e4bdd268513d8989aa7ac1167b4a"
+}

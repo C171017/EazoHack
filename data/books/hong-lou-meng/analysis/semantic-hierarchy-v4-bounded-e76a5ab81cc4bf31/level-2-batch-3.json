@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-5-2",
+          "h-level-1-batch-5-3"
+        ],
+        "label": "端阳酬酢与宝玉致祸前衅",
+        "summary": "贾府进行端阳配药、打醮及结交赠物等内外世家往来，随后金钏遭逐，加之忠顺王府索人等端倪引发贾政雷霆之怒。",
+        "rationale": "二者按叙事时间前后紧密衔接（Z≈0.21–0.25），均围绕宝玉在内外酬酢与闺阁纠葛中步步引发祸衅展开。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-5-4",
+          "h-level-1-batch-5-5"
+        ],
+        "label": "大观结社与持螯赏桂之乐",
+        "summary": "众姊妹与宝玉在感悟情分后起意结社吟诗，随后贾母与众人于园中分席持螯赏桂，尽享闺阁与尊长间的嬉闹承欢之乐。",
+        "rationale": "两组事件在时序上连续（Z≈0.27–0.29），集中表现大观园内结社赋诗与设宴欢聚的清雅风趣。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-5-6",
+          "h-level-1-batch-5-7",
+          "h-level-1-batch-5-8",
+          "h-level-1-batch-6-1"
+        ],
+        "label": "刘姥姥再进贾府与游宴风波",
+        "summary": "刘姥姥入府叙话编造乡野故事博得贾母欢心，次日众人携其游园行令、插花劝酒肆意取笑，刘姥姥醉后更品茶栊翠庵并误宿怡红院。",
+        "rationale": "四组节点构成完整的“刘姥姥进大观园”连续叙事（Z≈0.30–0.32），完整涵盖来访、设宴戏谑、行令听乐到误宿掩饰的全过程。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-2",
+          "h-level-1-batch-6-3"
+        ],
+        "label": "凤姐庆寿生衅与子弟遭责",
+        "summary": "凤姐寿宴间撞破贾琏私情引发拔剑撕打，宝玉私祭金钏；薛蟠妄自窥情受挫，贾琏则因石呆子古扇之事顶撞贾赦而遭毒打。",
+        "rationale": "两节点紧随大宴之后（Z≈0.33–0.38），集中展现荣宁二府主子夫妻风波与贾琏、薛蟠等纨绔子弟的冲突与受责。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-6-4",
+          "h-level-1-batch-6-6",
+          "h-level-1-batch-6-7"
+        ],
+        "label": "亲眷入园雅集与深闺情理琐记",
+        "summary": "亲眷投奔聚首大观园引出雪日芦雪庵诗社与异国异闻，随后紫鹃试玉、邢薛议婚与藕官烧纸寄情连番上演，期间贾母送灵离府使大观园门禁与游息起居生出诸多琐细情事。",
+        "rationale": "三组节点均处于后半段园居叙事（Z≈0.38–0.48），聚焦亲友入园后的雅集诗社、儿女痴情寄托及长辈出巡时闺中琐事。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2t-cavaEL7aXvdAPmsqE2Aw",
+  "usage": {
+    "promptTokenCount": 5324,
+    "candidatesTokenCount": 960,
+    "totalTokenCount": 6284,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5324
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 960
+      }
+    ]
+  },
+  "durationMs": 7970,
+  "requestHash": "3936ea4091d6407c19aece7c8d1e701ec4c867dea88284217cdc4b1ceed8a336"
+}

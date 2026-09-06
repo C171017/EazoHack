@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 2,
+        "reason": "Grouping together n-99-1 with n-108-2 and n-108-3 is anachronistic and incoherent. n-99-1 describes Fengjie making jokes about Baoyu and Baochai's post-wedding awkwardness in chapter 99 to cheer up grieving elders, whereas n-108-2 and n-108-3 describe Xiangyun's visit, Baochai's birthday party, and the dice drinking game in chapter 108 after the family's decline."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "o9-catWNDricvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 31161,
+    "candidatesTokenCount": 146,
+    "totalTokenCount": 31307,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 31161
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 146
+      }
+    ]
+  },
+  "durationMs": 4686,
+  "requestHash": "0f9aa2b81655e2a539388a950f7f3057bddb419d454794b7ae2aa3e8a0ba319d"
+}

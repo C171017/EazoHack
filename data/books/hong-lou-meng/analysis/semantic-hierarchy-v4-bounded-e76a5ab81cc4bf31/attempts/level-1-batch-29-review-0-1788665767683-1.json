@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 6,
+        "reason": "The group links three disparate events without coherent shared context or substantive narrative overlap: Baoyu being sent to the clan school (n-81-7), Miaoyu and Baoyu hearing Daiyu play the zither where a string breaks (n-87-4), and Fengjie advising how to handle Baoyu's lost jade (n-94-7). The rationale creates an artificial, highly generalized umbrella topic ('external pressure, fate omen, and search strategy') that fails to represent a legitimate common event, thread, or cohesive narrative unit among the children."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "pd-caoWGAv-cvdAP1sC0gAg",
+  "usage": {
+    "promptTokenCount": 29101,
+    "candidatesTokenCount": 148,
+    "totalTokenCount": 29249,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 29101
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 148
+      }
+    ]
+  },
+  "durationMs": 3274,
+  "requestHash": "9477a11c3dfda9b5f560a784d490ab406cba245d762f138d770f10c24186dce3"
+}

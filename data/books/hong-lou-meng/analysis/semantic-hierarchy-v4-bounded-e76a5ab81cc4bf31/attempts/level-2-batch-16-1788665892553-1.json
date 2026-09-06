@@ -1,0 +1,70 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-32-1",
+          "h-level-1-batch-29-3",
+          "h-level-1-batch-31-1",
+          "h-level-1-batch-32-2"
+        ],
+        "label": "内闱倾轧与家治整饬",
+        "summary": "平儿息事化嫌以全大局，凤姐借秋桐折磨尤二姐引致托梦劝杀，而探春、王夫人等长辈管事针对违规嫌隙与抄检大观园展开严厉弹压整饬，显现内闱风波与骨肉婢仆离散之痛。",
+        "rationale": "围绕贾府内闱管治、妻妾嫉恨与抄检整饬等宗族内部权力运作与情感创伤展开聚合。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-32-3",
+          "h-level-1-batch-31-4",
+          "h-level-1-batch-31-3",
+          "h-level-1-batch-31-5"
+        ],
+        "label": "大观衰耗与仕途基业忧患",
+        "summary": "湘云黛玉联诗悲凉而妙玉续韵止悲，黛玉病势日重显露潇湘衰损，宝玉在父长督导下重入家塾勉应举业规训，同时薛贾二府亦在命案、抄没与败落警兆中苦思维系基业。",
+        "rationale": "反映全书中段大观园诗社雅趣背后的衰微阴影、科举规训压力与面对世途风波的家族自救忧思。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-32-4",
+          "h-level-1-batch-32-5"
+        ],
+        "label": "园林风波与家族抄赦兴衰",
+        "summary": "大观园妖言四起令贾府设醮作法弹压恐慌，随后贾政受参、贾府遭抄家陷入极度维艰，最终因宝玉贾兰登科迎来皇恩大赦、官产复还。",
+        "rationale": "集中展现后四十回中贾府自园林虚惊、抄家衰败至登科获赦的大起大落现实历程。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-31-6",
+          "h-level-1-batch-32-6",
+          "h-level-1-batch-32-7"
+        ],
+        "label": "情缘了悟与遁世归真",
+        "summary": "宝玉与众钗在离散变故中省悟宿命，宝玉更经历太虚省悟与僧人点化决意弃绝尘缘脱尘归玉，最终甄士隐解说情天孽海宿因，僧道携顽石归返大荒山青埂峰。",
+        "rationale": "汇聚全书后半段关于诸钗离散参悟、宝玉决绝出家及通灵顽石重归青埂峰的大结局宿命主题。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "HuCcapLxBMuUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 5915,
+    "candidatesTokenCount": 806,
+    "totalTokenCount": 6721,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5915
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 806
+      }
+    ]
+  },
+  "durationMs": 6804,
+  "requestHash": "2599655297a8a2971a1354e166bf84559b0f5cd8843b341984c22cc1e78d2f8a"
+}

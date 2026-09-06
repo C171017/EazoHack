@@ -1,0 +1,74 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-5-1",
+          "h-level-2-batch-7-1",
+          "h-level-2-batch-8-1"
+        ],
+        "label": "宿命前盟与贾府立意开基",
+        "summary": "从通灵寄托、仙凡前盟与正邪气数开宗明义，贯穿林黛玉与薛氏投靠、宁荣旧脉及大观园题额省亲等宏大开基事件，处处伏下群芳宿命与盛极必衰的隐谶。",
+        "rationale": "三者均集中于文本前段宏观层面的宿命框架、开篇哲学立意与贾府早期的家族根基建置。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-5-2",
+          "h-level-2-batch-6-5",
+          "h-level-2-batch-7-3",
+          "h-level-2-batch-7-4",
+          "h-level-2-batch-8-2"
+        ],
+        "label": "宗族家政威权与衰象治乱",
+        "summary": "涵盖年节宗祠大典、乌进孝收租与探春革新除弊等治家实践，并深度暴露凤姐弄权敛财、主仆矛盾、奴仆生衅及宁荣二府盛极而衰的家族治理危机。",
+        "rationale": "围绕贾府家族宗法制度、经济与家政管理运作，展现主仆权力周旋与盛世潜伏的衰败危机。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-3-5",
+          "h-level-2-batch-6-1",
+          "h-level-2-batch-7-2",
+          "h-level-2-batch-8-4"
+        ],
+        "label": "大观园闺阁诗社与起居雅集",
+        "summary": "以大观园众姊妹的海棠结社、芦雪广联诗与香菱苦志学诗等翰墨雅事为主线，交织了亲眷投奔聚首、赏雪烹腥与深闺人情规训等起居琐记。",
+        "rationale": "聚焦大观园内闺阁青年的结社赋咏、艺术审美生活及园中起居礼仪交往。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-4",
+          "h-level-2-batch-5-3",
+          "h-level-2-batch-6-2",
+          "h-level-2-batch-6-3",
+          "h-level-2-batch-8-3"
+        ],
+        "label": "内帏儿女情思与名分波澜",
+        "summary": "展现宝黛知己互诉、题帕摔玉及宝玉情痴参禅的心灵波澜，伴随宝钗黛玉释嫌金兰之契，以及袭人定分、平儿受屈与鸳鸯抗婚等内宅婢妾名分与地位维系。",
+        "rationale": "集中于内帏中核心男女主角的情愫纠葛、金兰和解，以及随之牵连的婢妾名分变动与处境波澜。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "KeCcauvUEouKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 7475,
+    "candidatesTokenCount": 829,
+    "totalTokenCount": 8304,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7475
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 829
+      }
+    ]
+  },
+  "durationMs": 8616,
+  "requestHash": "9bd813990c259d31f0fb622e19a7fe23423c5b9d110cba9a5d8dd0bc86e08b63"
+}

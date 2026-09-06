@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 3,
+        "reason": "The group combines passages from the end of Chapter 53 / Chapter 54 (除夕与家宴) with n-52-1 from Chapter 52, where 贾母赞凤姐与谈伶俐 takes place well before the seasonal祭祖 rites in a separate domestic context. The summary treats n-52-1 as occurring during the 除夕/合欢家宴 ('贾母亦在此间评议赞赏凤姐的伶俐与孝顺'), directly misattributing the occasion and setting of n-52-1."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Pd-capniKbaXvdAPmsqE2Aw",
+  "usage": {
+    "promptTokenCount": 26963,
+    "candidatesTokenCount": 150,
+    "totalTokenCount": 27113,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 26963
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 150
+      }
+    ]
+  },
+  "durationMs": 3687,
+  "requestHash": "86b5ae45c1ab05473116f9ee194d026d58810c0ce22757800cf3f05355adc81d"
+}

@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-7-4",
+          "h-level-1-batch-11-2",
+          "h-level-1-batch-12-7"
+        ],
+        "label": "大观园诗社结咏与翰墨风雅",
+        "summary": "记录大观园姊妹结社赋咏的系列雅事，包含起社咏白海棠与藕香榭菊花宴、黛玉戏题画卷及芦雪广联诗，以及香菱苦志学诗终得佳作入社。",
+        "rationale": "三者均聚焦于大观园结诗社、赋诗联句与文墨酬唱的风雅生活。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-7-3",
+          "h-level-1-batch-11-1",
+          "n-56-6",
+          "h-level-1-batch-12-8"
+        ],
+        "label": "宝玉痴情行止与幻梦感伤",
+        "summary": "贯穿宝玉的情痴言行与心灵世界，包括受笞养伤中对黛玉玉钏的体贴寄情、平日为人评议的呆性与痴态、入梦探访甄宝玉的真假对照，以及感念女儿韶华与身世多舛的悲悯感伤。",
+        "rationale": "围绕贾宝玉独特的性情举止、梦幻遇合以及对女儿命运的痴情同情展开。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-3",
+          "h-level-1-batch-12-5",
+          "h-level-1-batch-12-6"
+        ],
+        "label": "内宅婢妾名分与争端化解",
+        "summary": "涉及贾府丫鬟侍妾的地位变动与处境波澜，涵盖王夫人私自提携袭人提升待遇定分、平儿受屈得抚与协理大观园，以及鸳鸯抗拒贾赦逼娶并由贾母出面护庇。",
+        "rationale": "集中展现贾府内部大丫鬟在主子权力关系中的待遇提拔、受委曲调处与逼婚抗争。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-4"
+        ],
+        "label": "钗黛消除芥蒂结为金兰",
+        "summary": "黛玉在酒令及治病燕窝诸事中感念宝钗体贴，向其推心置腹倾诉身世孤苦与顾虑，二人尽释前嫌情同骨肉，并引得宝玉借戏词惊奇探问。",
+        "rationale": "钗黛二人的情感转折与金兰之契主题鲜明且独立，保留为单节点以精准呈现二人关系的化解。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-4",
+          "h-level-1-batch-6-5"
+        ],
+        "label": "贾府年节筵宴与宗族治纪",
+        "summary": "叙述贾府除夕至元宵期间的家族盛事与行事规矩，包含长辈发年物治家纪、元宵花厅及暖阁清唱夜宴、赏钱散席，以及节庆余波中的探视抚慰与年酒走动。",
+        "rationale": "两者均属于宁荣二府岁时节庆、筵宴行乐及家族尊卑秩序调理的统一时空脉络。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "59-caui2BLicvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 6657,
+    "candidatesTokenCount": 894,
+    "totalTokenCount": 7551,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6657
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 894
+      }
+    ]
+  },
+  "durationMs": 7839,
+  "requestHash": "59790670a53bf128aa5d02c2adf23b65a4ecc52854aeb93796c7ab63ac63ff8b"
+}

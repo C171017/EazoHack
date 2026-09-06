@@ -1,0 +1,81 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-4-5",
+          "h-level-2-batch-13-1",
+          "h-level-2-batch-15-1",
+          "h-level-2-batch-16-1"
+        ],
+        "label": "内闱权争与诸钗风波",
+        "summary": "贾府内闱在仆从冲突、管事弹压与窃案平息中维系秩序，同时展现尤氏姊妹在权谋与情变下的决绝悲剧，以及王熙凤弄权折磨尤二姐引发的内闱倾轧。",
+        "rationale": "聚焦中前期宁荣二府内闱的治乱是非、凤姐与二尤的纠葛以及大观园内外的管治摩擦。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-13-2",
+          "h-level-2-batch-15-2",
+          "h-level-2-batch-16-2"
+        ],
+        "label": "大观抄检与诸芳零落衰谶",
+        "summary": "抄检大观园导致晴雯抱屈被逐夭亡，香菱与司棋等相继受挫，伴随凹晶馆联诗的凄清与黛玉病笃琴断，大观园诸芳离散与家族衰耗之凶兆接踵显现。",
+        "rationale": "围绕抄检大观园及其前后诸芳受挫、晴雯夭亡、诗社凄清与衰亡预兆展开。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-13-3",
+          "h-level-2-batch-13-4",
+          "h-level-2-batch-15-3"
+        ],
+        "label": "调包奇策与黛殒钗嫁",
+        "summary": "薛案打点之际金玉婚议提上日程，面对宝玉失玉病笃，贾府高层密设调包之计；黛玉闻讯焚稿断魂绝命，宝玉在婚变惊厥与大梦中迎娶宝钗。",
+        "rationale": "完整涵盖金玉婚议的商定、掉包计的实施以及林黛玉泪尽夭亡、薛宝钗成婚的核心悲剧情节。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-14-1",
+          "h-level-2-batch-14-2",
+          "h-level-2-batch-15-4",
+          "h-level-2-batch-16-3"
+        ],
+        "label": "抄家败落与贾府劫后风云",
+        "summary": "探春远嫁后贾府接连遭锦衣府抄没问罪，长房发配、巨额亏空败露且贾母仙逝；在历经丧乱与大观园荒落之后，贾府借恩赦官产复还并勉力支撑基业。",
+        "rationale": "记录贾府由盛转衰的关键转折，包括抄家问罪、贾母去世、大观园荒废及后续的恩赦与复官。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-14-4",
+          "h-level-2-batch-15-5",
+          "h-level-2-batch-16-4"
+        ],
+        "label": "诸艳结局与太虚归真",
+        "summary": "巧姐在外遇险蒙刘姥姥搭救团圆，惜春执意出家，袭人另嫁；宝玉登科后决意弃绝尘缘雪夜别父，最终返归大荒青埂峰，了结情天宿缘。",
+        "rationale": "收束全书最终的人物归宿，包括巧姐脱困、惜春出家、宝玉遁世出家与顽石归真。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MuCcapAuoYvH2A-q6ZrZDA",
+  "usage": {
+    "promptTokenCount": 7129,
+    "candidatesTokenCount": 976,
+    "totalTokenCount": 8105,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7129
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 976
+      }
+    ]
+  },
+  "durationMs": 7467,
+  "requestHash": "98d796782e0f2f09a60192c712199727f3a82e0a3ccd80757c96b25d1284cd7d"
+}

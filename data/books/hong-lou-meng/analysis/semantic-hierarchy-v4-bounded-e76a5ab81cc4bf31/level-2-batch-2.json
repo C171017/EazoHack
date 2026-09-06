@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-9-5",
+          "h-level-1-batch-3-3",
+          "h-level-1-batch-4-2"
+        ],
+        "label": "门庭纠纷与权术惩戒",
+        "summary": "包括李贵压制顽童学堂械斗迫使金荣磕头，王熙凤设相思局诱贾瑞受冻遭辱，以及贾府内外走动接济、贾雨村徇私与凤姐弄权退婚等宗族门庭的权谋周旋。",
+        "rationale": "三者均聚焦于贾府内外子弟与亲戚间的冲突、处事手段及权势运作惩戒。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-4",
+          "h-level-1-batch-4-3"
+        ],
+        "label": "秦氏丧仪与出殡诸态",
+        "summary": "秦可卿大丧办得极尽奢华违制，起灵出殡时八公列侯勋贵齐集并蒙北静王设棚路奠，其间亦夹杂秦钟与智能儿私通被宝玉撞破等私情隐事。",
+        "rationale": "两组内容紧密相连，共同构成秦可卿病故操办、起灵出殡以及路祭等丧仪全貌。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-4-4",
+          "h-level-1-batch-4-5"
+        ],
+        "label": "大观园营建与元妃省亲",
+        "summary": "贾府为迎贵妃省亲大兴土木建大观园，采办女乐并由宝玉随贾政试才题额；元宵佳节元妃归省赐名观赏，命宝玉与姊妹题诗颁赏后垂泪起驾回銮。",
+        "rationale": "围绕元妃省亲这一主线事件，记录了大观园从营建题额到元宵盛典的完整过程。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-5",
+          "h-level-1-batch-3-6",
+          "h-level-1-batch-4-1"
+        ],
+        "label": "宝黛情愫与闺闱闲波",
+        "summary": "记述宝黛自幼以来的日常相处、误会口角与释嫌和好，兼及宝玉戏谑、西厢共读，以及李嬷嬷骂袭人后凤姐平怒、平儿回护贾琏等内帏波折。",
+        "rationale": "汇集了以宝玉与黛玉为核心的儿女情愫、口角言戏与闺阁仆从间的护短平纷。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-3-7",
+          "h-level-1-batch-3-8",
+          "n-25-7"
+        ],
+        "label": "暗通情款与魇魔解厄",
+        "summary": "贾芸投靠凤姐谋职并与红玉转帕传情；赵姨娘暗中扎草人行魇胜之法致宝玉与凤姐中邪发狂，最终由癞僧跛道登门摩弄通灵宝玉消灾解厄。",
+        "rationale": "汇聚第二十四至二十五回前后贾芸红玉传帕暗定心意与马道婆施魇、僧道除邪还魂的紧凑情节。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "0t-catnzNraXvdAPmsqE2Aw",
+  "usage": {
+    "promptTokenCount": 6961,
+    "candidatesTokenCount": 885,
+    "totalTokenCount": 7846,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6961
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 885
+      }
+    ]
+  },
+  "durationMs": 8017,
+  "requestHash": "7cac8dd2c28ec7c316251daadbb1856cfd381dff946cd053b08d0195bd74c2a1"
+}

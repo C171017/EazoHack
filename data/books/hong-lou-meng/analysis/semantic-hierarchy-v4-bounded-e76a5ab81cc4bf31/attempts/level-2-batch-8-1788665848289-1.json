@@ -1,0 +1,70 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-15-1",
+          "h-level-1-batch-15-3",
+          "h-level-1-batch-15-4"
+        ],
+        "label": "开篇立意与天理造化",
+        "summary": "作者借通灵记述闺阁与幻灭警悟，引入正邪两赋之说与太虚幻境对情痴情种的仙凡剖析；同时涉及对天地造化、脉理病机以及造园顺应天然之理的精微见识。",
+        "rationale": "三者均位于全书开端及前二十回范围，且均从哲学托旨、天理性情与自然医理造园等根柢层面阐释文本立意。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-15-2",
+          "h-level-1-batch-16-5",
+          "h-level-1-batch-24-5"
+        ],
+        "label": "贾府家政内患与治理危机",
+        "summary": "冷子兴与秦氏预言家族盛极必衰之隐患，乌进孝交租与探春、宝钗开源节流显现经济危局与调摄之策，而长辈外出后奴仆生衅、刁奴横行则暴露深层内闱治理困境。",
+        "rationale": "三者围绕贾府的家族兴衰、财务亏空、家法规管与奴仆生衅等治家与经济现实危机展开。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-13-3",
+          "h-level-1-batch-15-5",
+          "h-level-1-batch-16-1"
+        ],
+        "label": "宝黛情痴试探与任性悟禅",
+        "summary": "展现大观园宴饮中宝黛以假意试探引发的摔玉风波，青年男女由情缘纠葛延伸至对盛筵必散与生死无常的参禅体悟，以及贾宝玉打破世俗陈规、追求真诚与率性的自我剖白。",
+        "rationale": "三者紧扣宝黛间的情感试探、痴心纠葛，以及宝玉对生死聚散、礼法名分的独特悟道与任性主张。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-14-3",
+          "h-level-1-batch-16-2",
+          "h-level-1-batch-16-3",
+          "n-49-3"
+        ],
+        "label": "闺秀雅集诗辩与内闱规诫",
+        "summary": "大观园内众儿女品茶作诗、赏雪烹腥、辨物论艺，宝玉由香菱学诗及新客来临赞叹天地精华生人；与此同时，长幼尊卑间严守男女嫌疑、破除虚妄闺训与调伏奴仆的内外礼法贯穿其间。",
+        "rationale": "四者集中展现大观园中女儿们的诗社雅趣、名士风流及才情人品，并与大观园日常遵行的礼法规箴形成交织对照。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "8d-cavz-Fv-cvdAP1sC0gAg",
+  "usage": {
+    "promptTokenCount": 6894,
+    "candidatesTokenCount": 814,
+    "totalTokenCount": 7708,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6894
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 814
+      }
+    ]
+  },
+  "durationMs": 8213,
+  "requestHash": "a220b7b2370cd3419adbecebeb760d7f60a4c69dd1a1bb8987abfd2c2cd1e5ce"
+}

@@ -7,15 +7,14 @@ import { GraphSchema } from '@/shared/schemas';
 import { validateHierarchy } from '@/shared/zoom-hierarchy';
 import { validateGraphSource } from '../book-analysis/graph';
 import { createMapStore, mapBootstrap, loadMapStore, isSampleBookId } from '../book-map/store';
-async function object(bucket:string,path:string,token:string) {
+import { readObjectBody } from './object-body';
+async function object(bucket:string,path:string,token:string,maxBytes=50*1024*1024,oversizedMessage='Private object too large.') {
  const {url,key}=cloudConfig();
  const response=await fetch(`${url}/storage/v1/object/authenticated/${bucket}/${path.split('/').map(encodeURIComponent).join('/')}`,{headers:{apikey:key,Authorization:`Bearer ${token}`},cache:'no-store',signal:AbortSignal.timeout(30000)});
  if(!response.ok)throw new Error('Could not download private book data.');
- const reader=response.body!.getReader();let size=0;const chunks:Uint8Array[]=[];
- try{while(true){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>50*1024*1024){await reader.cancel();throw new Error('Private object too large.');}chunks.push(value);}}finally{reader.releaseLock();}
- return Buffer.concat(chunks);
+ return readObjectBody(response,maxBytes,oversizedMessage);
 }
-export const downloadSource=(path:string,token:string)=>object('eazo-sources',path,token);
+export const downloadSource=(path:string,token:string,limit?:{maxBytes:number;message:string})=>object('eazo-sources',path,token,limit?.maxBytes,limit?.message);
 const hash=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
 export async function selectedCloudBook({refresh=true}:{refresh?:boolean}={}) {
  if(!process.env.SUPABASE_URL)return null;

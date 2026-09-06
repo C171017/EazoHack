@@ -1,0 +1,70 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-18-3",
+          "h-level-1-batch-18-4",
+          "h-level-1-batch-18-5"
+        ],
+        "label": "修持惊疑与宝黛情波",
+        "summary": "后宅诸人借抄经修持祈福，妙玉则因心魔走火；贾府整肃家规严惩悍仆，伴随夜半邪祟惊疑；同时定亲讹传引发宝黛猜忌试探与绝粒求死之波澜。",
+        "rationale": "三组内容均处Z轴0.74–0.75区间，集中反映贾府中后期的后宅伦理秩序、佛道修持及宝黛之间的情感风波与猜忌误解。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-19-1",
+          "h-level-1-batch-20-1"
+        ],
+        "label": "薛府内乱与薛蝌自持",
+        "summary": "薛蟠涉命案羁押引致薛府内乱，夏金桂挑逗诱引薛蝌并迫害香菱直至服毒自毙；薛蝌面对金桂与宝蟾百般设局诱引始终端正自持，邢岫烟亦得凤姐赠衣体恤。",
+        "rationale": "两组均集中于薛家后宅及薛蟠命案牵连出的家庭内乱，核心人物涉及薛蝌、夏金桂及受照料的邢岫烟。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-19-2",
+          "h-level-1-batch-19-3",
+          "h-level-1-batch-19-4",
+          "h-level-1-batch-19-5"
+        ],
+        "label": "外患频仍与抄没败象",
+        "summary": "贾府门前揭帖揭发水月庵丑事，贾政在外任亦深惧外官文书牵连；怡红院反季海棠与宝玉失玉预兆不祥，紧接元妃薨逝；锦衣军查抄宁府与贾雨村严惩倪二，使贾府内外危机交织、显露倾颓溃败之相。",
+        "rationale": "涵盖Z轴0.77–0.87区间贾府内外交困、凶兆叠现与宁府被抄的重要转折，记录了家族政治地位动摇与官府抄家惩处的败落过程。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-20-5",
+          "h-level-1-batch-27-3",
+          "h-level-1-batch-19-6",
+          "h-level-1-batch-20-6"
+        ],
+        "label": "贾母大丧与衰世离析",
+        "summary": "贾母病笃逝世与鸳鸯殉主使荣府丧礼陷入银两困顿与下人推诿，凤姐心力交瘁吐血倒地；随后赵姨娘辞灵发狂自供旧罪，贾府盗窃、典当挪借与各奔前程的离析乱象频生。",
+        "rationale": "集中在Z轴0.90–0.96末尾，均围绕贾母逝世及丧葬期间引发的诸房算计、女眷陨落、旧罪暴露与家族彻底离析败散。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "A-CcasPoAbicvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 5456,
+    "candidatesTokenCount": 871,
+    "totalTokenCount": 6327,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5456
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 871
+      }
+    ]
+  },
+  "durationMs": 7170,
+  "requestHash": "580c253c71b0329f350206a299ba99923d91ff94d1b10b72ead7564a0ea5ebdd"
+}

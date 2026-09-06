@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-5-1",
+          "h-level-1-batch-7-1",
+          "h-level-1-batch-7-2"
+        ],
+        "label": "大观园儿女情愫与主仆周旋",
+        "summary": "宝黛钗因金玉之说与言语机锋频起嫌隙又温存和解；宝玉痴看画蔷并引致怡红院晴雯跌扇争端；红玉则在私情被窥后机敏周旋并获凤姐赏识。",
+        "rationale": "三组内容均发生在大观园前中期，集中呈现宝玉、黛玉、宝钗之间的情愫纠葛以及怡红院与周遭侍女（晴雯、红玉等）的口角、周旋与人事遇合。"
+      },
+      {
+        "childIds": [
+          "n-39-6",
+          "h-level-1-batch-8-1",
+          "h-level-1-batch-8-2"
+        ],
+        "label": "田庄村谈余波与风雨馈赠",
+        "summary": "宝玉痴信刘姥姥故事遣茗烟踏勘荒庙仅见瘟神泥胎；贾府众人赠物打发刘姥姥并平息凤姐泼醋风波；秋夜风雨中黛玉抱病作诗，宝玉披蓑探望且宝钗馈赠燕窝关切。",
+        "rationale": "这一组围绕刘姥姥进贾府引发的余波（痴寻庙神、馈赠送别）与贾府日常深情互赠（平儿赠衣、宝黛钗风雨夜互赠与探视）展开，情节时间与情感脉络高度相连。"
+      },
+      {
+        "childIds": [
+          "n-47-5",
+          "h-level-1-batch-8-3"
+        ],
+        "label": "薛蟠遭痛打与鸳鸯拒逼婚",
+        "summary": "柳湘莲不堪调戏诱薛蟠至荒僻苇塘痛打受戒；鸳鸯誓死不从贾赦逼娶，在贾母面前决绝断发，引得贾母震怒与堂前余波震荡。",
+        "rationale": "两段情节均展现了面对贾府与薛家纨绔势力的逼迫或调戏时，当事人（柳湘莲、鸳鸯）采取极端刚烈的手段进行反击与抗拒。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-5",
+          "h-level-1-batch-8-6"
+        ],
+        "label": "大观园诗兴结社与灯谜雅聚",
+        "summary": "香菱入大观园后苦志研读并精通诗律终得佳句；雪天大观园众人在芦雪广争相联句、乞红梅并至暖香坞催画制谜猜度。",
+        "rationale": "两组内容皆体现大观园青年女子及宝玉在大观园内的诗社雅兴、文学切磋与冬日联句猜谜等文艺生活。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-8-7",
+          "n-54-4",
+          "h-level-1-batch-8-10"
+        ],
+        "label": "堂前承欢与内外仆从风波",
+        "summary": "晴雯病重咬牙通宵补缀俄罗斯雀金裘；元宵夜宴上王熙凤口齿伶俐借掰谎戏彩承欢贾母；大观园管地婆子因折枝殴打春燕，引发怡红院护燕与规矩平息。",
+        "rationale": "三项情节涵盖五十三至五十九回前后贾府内部的生活起居、夜宴承欢以及主仆、仆妇之间的责任履行与矛盾冲突。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3N-caoOiBcuUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 8404,
+    "candidatesTokenCount": 961,
+    "totalTokenCount": 9365,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8404
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 961
+      }
+    ]
+  },
+  "durationMs": 8253,
+  "requestHash": "b3564a7d1c7c88c51fa09236637311f6d8f8f90a45f26012509bfe7b905570a6"
+}

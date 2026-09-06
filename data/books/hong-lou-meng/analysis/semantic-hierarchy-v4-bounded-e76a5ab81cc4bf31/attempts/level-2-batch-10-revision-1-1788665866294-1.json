@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-25-1",
+          "h-level-1-batch-21-1",
+          "h-level-1-batch-23-1"
+        ],
+        "label": "大观园琐细纷扰与下层事端",
+        "summary": "记录大观园日常中的情思往还与下层仆妇矛盾，涉及柳家谋求差事与茯苓霜风波、赵姨娘司棋大闹厨房、失窃案查究以及妙玉寿帖与黛湘夜话等琐屑事件。",
+        "rationale": "三者皆聚焦于大观园内部的日常生活往还、下层奴仆矛盾与小产风波，空间与内容紧密相联。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-21-2",
+          "h-level-1-batch-23-2"
+        ],
+        "label": "尤氏姐妹纠葛与三姐烈节",
+        "summary": "记述尤二姐与尤三姐面对贾府子弟调戏与婚嫁纠葛的经过，重点展现尤三姐立誓择婿柳湘莲，后因湘莲悔婚疑忌而拔剑自刎的刚烈结局。",
+        "rationale": "两组内容均出自同一叙事单元，完整展现了尤三姐择婿、抗争至拔剑殉情的连续情节。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-21-5",
+          "h-level-1-batch-24-6",
+          "h-level-1-batch-31-2"
+        ],
+        "label": "内帏失序与荣宁家运日蹙",
+        "summary": "展现贾府管治失序、赌博风波及凤姐等人的沉疴隐疾，并深入揭示中秋前后府中入不敷出、底蕴匮乏、骨肉嫌隙与盛极而衰的颓势。",
+        "rationale": "三组记录了贾府内部管理失序、经济日益拮据及家族衰亡之象，反映了荣宁二府日蹙的运势。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-21-6",
+          "h-level-1-batch-24-3",
+          "h-level-1-batch-24-2"
+        ],
+        "label": "儿女婚嫁波折与身世之悲",
+        "summary": "涵盖迎春遇人不淑许嫁孙家遭虐受屈、宝玉试图疗愁与遭王夫人训诫，以及贾母为宝玉提议择配、盛赞宝钗与黛玉身世之悲等情事。",
+        "rationale": "围绕青年男女的姻缘抉择、受屈命运及对未来归宿的忧思与长辈品评展开。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-21-7",
+          "h-level-1-batch-23-4"
+        ],
+        "label": "省宫探疾与薛门纷扰横逆",
+        "summary": "记录贾母与王夫人奉旨入宫探问患病元妃，以及夏金桂嫁入薛门后借酒撒泼、欺凌香菱并辱骂宝钗母女，伴随薛蟠定罪与当铺亏空等内外交困的败落景象。",
+        "rationale": "两组事件并置了贾府奉旨省宫探疾与夏金桂引发薛门内闱争吵、薛家衰颓等后半部宅门与亲眷内耗。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BeCcar_qKbicvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 6433,
+    "candidatesTokenCount": 805,
+    "totalTokenCount": 7238,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6433
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 805
+      }
+    ]
+  },
+  "durationMs": 5177,
+  "requestHash": "112cadf7a1a7fcdcc43b1c11e7e75d4465a1aadd66d9ee44f8d61cbff671fa78"
+}

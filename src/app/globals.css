@@ -1,7 +1,9 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
 @import "../ui/tokens/theme.css";
 @import "../features/reader/reading-fonts.css";
 @import "../ui/styles/graph.css";
+/* Analysis passage IDs resemble utilities; only UI source defines classes. */
+@source "../";
 
 .scrollbar-hidden {
   scrollbar-width: none;

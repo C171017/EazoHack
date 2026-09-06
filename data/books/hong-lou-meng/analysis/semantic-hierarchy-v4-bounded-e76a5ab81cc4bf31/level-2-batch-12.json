@@ -1,0 +1,70 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-20-2",
+          "h-level-1-batch-20-3",
+          "h-level-1-batch-26-4",
+          "h-level-1-batch-23-5"
+        ],
+        "label": "通灵宝玉失复与人事牵动",
+        "summary": "围绕贾宝玉失落通灵宝玉展开全府搜检、测字扶乩、重金悬赏以及冒领波折，并直至莽和尚送玉复苏；同时叙述失玉引致宝玉痴呆及其与水月庵丑事发落、黛玉琴诗心绪及紫鹃姻缘忧思的交织。",
+        "rationale": "这一组均围绕通灵宝玉失落与复得这一核心线索展开，涵盖了水月庵庵堂牵扯、寻玉诈伪与宝黛深情波澜。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-20-4",
+          "h-level-1-batch-24-1",
+          "h-level-1-batch-24-4"
+        ],
+        "label": "艺文寄托、姻缘占卜与宿命悟道",
+        "summary": "涉及黛玉抚琴论道、宝钗题诗与群芳签谶等艺文才志寄托；探春远嫁定约、散花寺抽签与甄士隐点化出世征兆；以及二宝玉思想分歧、妙玉遭劫后惜春参禅与宝玉体悟众人定数。",
+        "rationale": "各子项聚焦于诗琴艺文才性、姻亲占卜预言以及对红尘宿命与出世修真之省悟，精神内涵与玄机谶示紧密呼应。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-22-2",
+          "h-level-1-batch-22-4",
+          "h-level-1-batch-24-7"
+        ],
+        "label": "宗族公私弊端与查抄法纪",
+        "summary": "包含薛蟠在外致死人命及夏家索命纷扰；贾政外任遭李十儿利诱营私、家仆贪墨与家法失序；以及贾府终遭锦衣军查抄获罪、宁荣二府首脑被参劾与贾雨村背恩得势等败亡事态。",
+        "rationale": "这一组集中展现四大家族面临的外界刑名命案、官司查抄、官私舞弊及家政溃败之严酷现实。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-22-5",
+          "h-level-1-batch-22-3",
+          "h-level-1-batch-23-3"
+        ],
+        "label": "大观园离散与衰竭破落",
+        "summary": "展现迎春遭虐辞行、凤姐病危托孤乃至亡后巧姐遭算计、贾母病故等内外骨肉凋零之痛；同时记述甄家抄没、赵姨娘暴亡、子弟聚赌酗酒及长辈离散无依的宗族全面崩解态势。",
+        "rationale": "共同刻画贾府晚期亲族凋零、内部算计丛生、长辈衰亡以及大观园彻底离散沉沦的家族悲剧。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "C-Ccas6OL8uUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 5855,
+    "candidatesTokenCount": 866,
+    "totalTokenCount": 6721,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5855
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 866
+      }
+    ]
+  },
+  "durationMs": 7066,
+  "requestHash": "f3a5ce4cc254d7987827860f58763cc072b86866207c96748ec6b2f9a214104d"
+}

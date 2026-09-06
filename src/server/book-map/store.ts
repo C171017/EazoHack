@@ -25,8 +25,8 @@ export function createMapStore(graph:Graph,hierarchy:Hierarchy):MapStore {
 export async function loadMapStore(bookId: SampleBookId = 'plato-republic'):Promise<MapStore> {
   if (!isSampleBookId(bookId)) throw new Error('Unknown sample book');
   const root=path.join(process.cwd(),'data/books',bookId,'analysis');
-  let cache=caches.get(bookId);
   const pointer=path.join(root,'current-map.json'),stamp=(await stat(pointer)).mtimeMs;
+  let cache=caches.get(bookId);
   if(!cache||cache.stamp!==stamp){
     const promise=(async()=>{
       const {version}=JSON.parse(await readFile(pointer,'utf8')) as {version:string};

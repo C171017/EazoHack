@@ -1,0 +1,70 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-99-1",
+          "h-level-1-batch-27-1",
+          "h-level-1-batch-28-2"
+        ],
+        "label": "婚嫁家变与两府风波",
+        "summary": "凤姐描摹宝玉宝钗闺房趣事为贾母解悲；随后探春远嫁启程、大观园渐趋荒落，夏金桂暴亡的砒霜案情水落石出；同时贾赦驱妖、贾政降级奉旨还京，薛家官司得以了结。",
+        "rationale": "涵盖后四十回早期宝玉成婚后至抄家前的家族内闱变故，包括金玉成婚后的琐事、探春出嫁远行以及薛夏命案的波折与结案。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-28-3",
+          "h-level-1-batch-27-2",
+          "h-level-1-batch-28-4",
+          "h-level-1-batch-28-5"
+        ],
+        "label": "抄家问罪与劫后凄清",
+        "summary": "贾府忽遭查抄抄没，贾赦贾珍获罪发配，朝廷宽免荣府并命贾政袭爵；劫后荣府惨淡为宝钗勉强庆生行令，宝玉则借酒夜入荒凉大观园痛哭悼念黛玉并痴忆旧人。",
+        "rationale": "集中反映贾府面临朝廷抄没、爵位重组的政治重创，以及灾后家道破败、勉强聚席宴饮与宝玉重游荒园哭悼旧日情缘的凄凉心境。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-27-4",
+          "h-level-1-batch-27-5",
+          "h-level-1-batch-27-6",
+          "h-level-1-batch-27-7"
+        ],
+        "label": "盗乱劫难与魂魄离散",
+        "summary": "贼盗夜劫荣国府并掳走栊翠庵妙玉，惜春因看破世事执意落发出家；病危见祟的凤姐郑重托孤于刘姥姥，宝玉则因失言病危绝气，魂游真如福地与情痴配殿。",
+        "rationale": "描摹贾府丧事期间外贼侵入、家园彻底崩溃的惨剧，连接了妙玉被劫、惜春剃度、凤姐见祟托孤与宝玉魂魄出窍的生死离散主题。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-27-8",
+          "h-level-1-batch-28-7"
+        ],
+        "label": "巧姐遇险脱困与阖府聚散",
+        "summary": "王仁与贾环贾芸勾结邢夫人欲将巧姐卖与外藩作妾，平儿与刘姥姥巧妙定计送其往乡下避难；待贾家遇赦复官、贾琏归府后，巧姐平安返归团圆。",
+        "rationale": "聚焦于凤姐死后其女巧姐所遭逢的奸舅拐卖危机，以及刘姥姥仗义相助、巧姐化险为夷重返贾府的完整叙事弧线。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FOCcaurANP-cvdAP1sC0gAg",
+  "usage": {
+    "promptTokenCount": 6279,
+    "candidatesTokenCount": 864,
+    "totalTokenCount": 7143,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6279
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 864
+      }
+    ]
+  },
+  "durationMs": 7673,
+  "requestHash": "5c6b48aaf4450318f2013f8ac29a6d45b89d0586b8930e8e8ec0fe68623ec522"
+}

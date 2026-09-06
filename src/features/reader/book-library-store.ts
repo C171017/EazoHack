@@ -43,7 +43,7 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
         const request = catalogue.getAll() as IDBRequest<LibraryEntry[]>;
         request.onsuccess = () => {
           const entries = placeLegacyEntries(request.result);
-          for (const entry of entries) catalogue.put(entry);
+          putChangedEntries(catalogue, request.result, entries, id);
           const previous = entries.find(entry => entry.id === id);
           // Conversion and duplicate uploads retain their original place and emblem.
           const shelf = previous?.shelf ?? nextShelfPosition(id, new Set([...SAMPLE_BOOKS.map(book => book.slot), ...entries.map(entry => entry.shelf!.slot)]), requestedSlot);
@@ -56,12 +56,18 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
       });
     },
     async list(): Promise<LibraryEntry[]> {
-      const entries = await transaction<LibraryEntry[]>('readwrite', tx => {
-        const catalogue = tx.objectStore('catalogue');
-        const request = catalogue.getAll() as IDBRequest<LibraryEntry[]>;
-        request.onsuccess = () => { for (const entry of placeLegacyEntries(request.result)) catalogue.put(entry); };
-        return request;
-      });
+      let entries = await transaction<LibraryEntry[]>('readonly', tx => tx.objectStore('catalogue').getAll());
+      const original = new Set(entries);
+      if (placeLegacyEntries(entries).some(entry => !original.has(entry))) {
+        // Re-read inside the write transaction: another tab may have moved a
+        // book since the read. Only legacy/colliding positions need repair.
+        entries = await transaction<LibraryEntry[]>('readwrite', tx => {
+          const catalogue = tx.objectStore('catalogue');
+          const request = catalogue.getAll() as IDBRequest<LibraryEntry[]>;
+          request.onsuccess = () => putChangedEntries(catalogue, request.result, placeLegacyEntries(request.result));
+          return request;
+        });
+      }
       return placeLegacyEntries(entries).sort((a, b) => a.shelf!.slot - b.shelf!.slot);
     },
     async setEmblem(id: string, value: BookEmblem) {
@@ -83,9 +89,10 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
           const moving = entries.find(entry => entry.id === id);
           if (!moving) return;
           const displaced = entries.find(entry => entry.shelf.slot === slot);
-          for (const entry of entries) catalogue.put(entry.id === id
+          const moved = entries.map(entry => entry.id === id && entry.shelf.slot !== slot
             ? { ...entry, shelf: { ...entry.shelf, slot } }
-            : entry.id === displaced?.id ? { ...entry, shelf: { ...entry.shelf, slot: moving.shelf.slot } } : entry);
+            : entry.id === displaced?.id && entry.id !== id ? { ...entry, shelf: { ...entry.shelf, slot: moving.shelf.slot } } : entry);
+          putChangedEntries(catalogue, request.result, moved);
         };
         return request;
       });
@@ -110,7 +117,12 @@ function placeLegacyEntries(entries: LibraryEntry[]) {
   return [...entries].sort((a, b) => Number(!a.shelf || a.shelf.slot < SAMPLE_SHELF_SIZE) - Number(!b.shelf || b.shelf.slot < SAMPLE_SHELF_SIZE) || a.addedAt.localeCompare(b.addedAt) || a.id.localeCompare(b.id)).map(entry => {
     const shelf = entry.shelf && !occupied.has(entry.shelf.slot) ? entry.shelf : nextShelfPosition(entry.id, occupied);
     occupied.add(shelf.slot);
-    return { ...entry, shelf };
+    return shelf === entry.shelf ? entry : { ...entry, shelf };
   });
+}
+
+function putChangedEntries(store: IDBObjectStore, before: LibraryEntry[], after: LibraryEntry[], skipId?: string) {
+  const originals = new Map(before.map(entry => [entry.id, entry]));
+  for (const entry of after) if (entry.id !== skipId && entry !== originals.get(entry.id)) store.put(entry);
 }
 export const bookLibrary = createBookLibrary();

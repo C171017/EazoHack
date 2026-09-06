@@ -1,0 +1,62 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "n-1-5",
+          "h-level-1-batch-9-1",
+          "h-level-1-batch-9-2",
+          "h-level-1-batch-9-3"
+        ],
+        "label": "前盟宿命与贾府初聚",
+        "summary": "甄士隐与神瑛绛珠的梦幻前盟为全书定下谶纬宿命，贾雨村起复得官勾连南北脉络；林黛玉、薛氏一族及刘姥姥等先后入府投靠，展开贾府庞大的亲贵与社会关系格局。",
+        "rationale": "涵盖作品开端至各路亲眷入府的起首历程，集中展现神话宿命设定与贾府人际架构的建立。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-9-4",
+          "h-level-1-batch-10-1",
+          "h-level-1-batch-10-2",
+          "h-level-1-batch-10-3"
+        ],
+        "label": "宁荣衰象与熙凤弄权",
+        "summary": "从家塾学童利益纷争、焦大醉骂与秦氏姐弟病殁倾颓，到贾瑞染病受镜与凤姐治丧弄权、索贿干预婚姻，集中暴露出宁荣二府内帏的腐败、残酷与衰朽端倪。",
+        "rationale": "围绕秦可卿之疾与丧事、家塾风波及王熙凤的弄权立威展开，聚焦两府矛盾与阶层倾轧。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-10-5",
+          "h-level-1-batch-9-5",
+          "h-level-1-batch-10-6",
+          "h-level-1-batch-12-1"
+        ],
+        "label": "大观园聚居与宝黛情愫",
+        "summary": "元春赐居后众姊妹移驻大观园，在内帏交往中渐生情思与嫌隙；宝玉与黛玉因知己心意渐深互诉衷肠，更在宝玉受笞家难后以题帕寄情深化了彼此的眷恋。",
+        "rationale": "记录入园后宝玉与众姊妹及黛玉的情感发展、内帏冲突以及宝玉受笞等核心成长事件。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5t-cavCIDfmcvdAPz_aKkAg",
+  "usage": {
+    "promptTokenCount": 5791,
+    "candidatesTokenCount": 622,
+    "totalTokenCount": 6413,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5791
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 622
+      }
+    ]
+  },
+  "durationMs": 7290,
+  "requestHash": "18ecb84329183eca48021e22560d2704138275ca5266d9d687f866b05e2aa1a7"
+}

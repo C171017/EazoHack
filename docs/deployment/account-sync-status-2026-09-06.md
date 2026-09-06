@@ -1,3 +1,23 @@
+# Public read.vin release verified — 2026-09-06
+
+This section supersedes the earlier Preview-only and pending-login notes below.
+
+- User explicitly authorized making the account system public on `read.vin`.
+- Google OAuth audience is **In production**. App homepage `https://read.vin`, privacy policy `https://read.vin/privacy`, and authorized domain `read.vin` are configured. Basic identity/email/profile only; no test-user restriction for this public configuration.
+- Supabase Site URL is `https://read.vin`; exact production callback `/auth/callback` is allowed. Google provider enabled; Email provider disabled.
+- Production runtime configuration is installed in Vercel's encrypted Production records, including actual Supabase credentials, the canonical origin, and existing Inco/fal provider credentials. An initial copy used redacted placeholders; live verification caught it, the three Supabase values were corrected from a validated private runtime source, and the same release was redeployed successfully. No credentials are stored here.
+- Verified corrected READY Production deployment: `dpl_BbyK4KBm6tTKpGkfTcKc4PMZMsSx`, source main `4c060b1`. Main includes the agreed account features and latest reader UI. Signed-out cloud-icon Google entry and removed legacy login page are preserved; `/account` is available only after sign-in.
+- Live browser Google login completed on `read.vin` using the approved owner account. `/account` displayed that identity, private-library controls, export, and deletion. No Preview protection bypass was used for this public flow.
+- All 11 public HTTP smoke checks passed. Real hosted A/B tests passed directly against `https://read.vin`: source upload, revision/idempotency/conflict preservation, source validation, app/RPC/RLS/Storage isolation, paginated export, real refresh rotation, secure cookies, expired-session cleanup, foreign-origin denial, and removed password endpoint. `/account` SSR checks passed for both owners with no cross-account or token leakage. No paid model calls or account deletion occurred in this production pass.
+- Local frozen release passed 267 tests, typecheck, lint and the Vercel build. The earlier isolated account-deletion lifecycle test also passed against the same hosted database/service contract.
+- Concurrent later main commit `df86fca` updates unrelated reader/map flow and includes the smoke-script version fix. Auth/account files were unchanged; Git integration may advance the public deployment normally. This task did not force-push or cancel independent builds.
+
+## Remaining separate production AI permission
+
+`EAZO_ENABLE_ANALYSIS=0` remains deliberate. Automatic approval review rejected granting Production's Google Cloud Workload Identity User access because the public-release request did not specifically authorize service-account impersonation. No IAM changes were applied. A user approval question naming the two existing service accounts and exact Production principal is pending. Public login, private libraries, and reading synchronization work independently. See `production-wif-2026-09-06.md` before attempting those access changes; do not bypass the rejection.
+
+Private A/B evidence: `/private/tmp/eazo-private-config/qa-run-742952f7-a876-4798-9ed4-d1513fc859d5/report.json`. Release evidence: `/private/tmp/eazo-production-release-sm84wn63/.release-validation/RELEASE.md`. These are temporary artifacts; never print credential files from their neighboring private directories.
+
 # Google login verified — 2026-09-06
 
 Google provider enabled after the user saved its credentials. Browser OAuth verification completed on the protected account-sync preview: Google account chooser, approved basic-profile consent, Supabase callback, then Eazo displayed the signed-in owner account and private empty library. The legacy Email provider was subsequently disabled; final provider settings were verified through the Auth settings endpoint. This supersedes the pending credential handoff notes below.

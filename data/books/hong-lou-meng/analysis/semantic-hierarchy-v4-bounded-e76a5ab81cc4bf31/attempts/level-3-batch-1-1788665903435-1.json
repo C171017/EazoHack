@@ -1,0 +1,88 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-1-1",
+          "h-level-2-batch-1-2",
+          "h-level-2-batch-2-1"
+        ],
+        "label": "入世初见与家塾门庭纠葛",
+        "summary": "女娲石入世引出贾府初貌与宝玉太虚幻境之游；宝玉探钗会秦并由义学顽童混战牵动门庭矛盾，王熙凤弄权设局更现家族权术周旋。",
+        "rationale": "围绕前十余回开篇、太虚幻境、义学风波及家族初期的门庭权术纠葛进行整合。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-2",
+          "h-level-2-batch-2-3",
+          "h-level-2-batch-1-3"
+        ],
+        "label": "秦氏巨丧与省亲盛典",
+        "summary": "宁府极尽奢华办理秦可卿丧仪，贵戚云集；随后贾府为元妃省亲起造大观园迎銮题额，并穿插郊宿、晋封喜讯与闺阁生辰闲事。",
+        "rationale": "记述书中前期宁荣二府最为重大且相继发生的红白盛典（可卿出殡与元妃省亲及元春晋封），坐标与源起序列紧密邻近。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-2-4",
+          "h-level-2-batch-1-4",
+          "h-level-2-batch-2-5"
+        ],
+        "label": "闺闱私通与魇胜遇祟",
+        "summary": "宝黛日常相处共读西厢，贾芸谋职并与红玉暗通款曲；赵姨娘暗施魇胜致宝玉、凤姐中邪发狂，终由僧道摩玉解厄。",
+        "rationale": "涵盖二十多回中宝黛心迹、贾芸红玉私情以及马道婆赵姨娘施祟行魇等闺帏与中邪解厄事件。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-3-1",
+          "h-level-2-batch-4-1",
+          "h-level-2-batch-3-2"
+        ],
+        "label": "端阳风波与园中儿女结社",
+        "summary": "端阳酬酢与金钏遭逐诱发宝玉致祸危机；园中宝黛钗机锋渐起、晴雯跌扇，随后众儿女感悟情分起意结社持螯赏桂。",
+        "rationale": "涵盖三十回至三十八回，从端阳金钏之祸、园中儿女情愫交织到海棠诗社初结的完整发展线。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-3-3",
+          "h-level-2-batch-4-2",
+          "h-level-2-batch-3-4"
+        ],
+        "label": "姥姥游园与内帏争衅",
+        "summary": "刘姥姥二进贾府游宴闹园、醉宿怡红院并引出荒庙踏勘；凤姐生日撞破贾琏私情大闹，薛蟠受挫且贾琏遭贾赦责打。",
+        "rationale": "涵盖刘姥姥游园系列闹剧及其余波，以及紧随其后的凤姐生辰闹剧与贾琏等子弟受责诸事。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-4-3",
+          "h-level-2-batch-4-4"
+        ],
+        "label": "刚烈拒祸与冬雪雅聚",
+        "summary": "柳湘莲痛打薛蟠，鸳鸯断发誓死抗拒贾赦逼婚；香菱苦心学诗终成，众人在芦雪广联句乞梅、暖香坞制谜雅聚。",
+        "rationale": "整合第四十七至五十回，一边是薛蟠遭打、鸳鸯抗婚的烈性风波，一边是香菱学诗与大观园雪景诗社的极盛雅聚。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "J-CcaqezHvmcvdAPz_aKkAg",
+  "usage": {
+    "promptTokenCount": 6870,
+    "candidatesTokenCount": 1074,
+    "totalTokenCount": 7944,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6870
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1074
+      }
+    ]
+  },
+  "durationMs": 8617,
+  "requestHash": "7bb8040701733ed0d8def4efa737c1c5fe320fe6d33c295bb4665785d88e1121"
+}

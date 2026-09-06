@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 4,
+        "reason": "The group summary and rationale omit cluster h-level-1-batch-21-7's substantial content regarding the imperial palace visit (贾母携王夫人等奉旨入宫探问患病元妃), focusing exclusively on Xia Jingui and Xue family affairs."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "AuCcap--NP-cvdAP1sC0gAg",
+  "usage": {
+    "promptTokenCount": 6015,
+    "candidatesTokenCount": 89,
+    "totalTokenCount": 6104,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6015
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 89
+      }
+    ]
+  },
+  "durationMs": 2600,
+  "requestHash": "bbddb145b6d1358bd3f583b330567d276a2aaa1baec461f310575a729c7936d3"
+}

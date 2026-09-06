@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 0,
+        "reason": "The group summary omits the occurrence n-73-1 entirely (小鹊报信与宝玉夜读, which deals with Zhao Yiniang stirring trouble leading to Baoyu cramming his studies overnight), while framing the group around an overly narrow list of selected elements that fails to account for this child."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Wt-cauq2AraXvdAPmsqE2Aw",
+  "usage": {
+    "promptTokenCount": 30580,
+    "candidatesTokenCount": 97,
+    "totalTokenCount": 30677,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 30580
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 97
+      }
+    ]
+  },
+  "durationMs": 3259,
+  "requestHash": "b57bd384f73422aa59ea6b40f1a820d3235de1fc29e1353deec0255cad3f5178"
+}

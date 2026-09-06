@@ -1,0 +1,81 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-2-batch-9-1",
+          "h-level-2-batch-10-1",
+          "h-level-2-batch-10-2"
+        ],
+        "label": "大观园日常游艺与闺阁波澜",
+        "summary": "包含大观园内诗社填词、寿宴射覆与群芳游艺，下层仆妇矛盾、风波窃案等内宅琐细，以及尤二姐、尤三姐卷入贾府纠葛并以三姐殉节告终的情事。",
+        "rationale": "三者皆处于中前期大观园与宁荣内宅生活序列（Z约0.49–0.58），聚焦大观园日常雅事、琐细纷扰及内闱儿女情感恩怨。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-9-2",
+          "h-level-2-batch-9-3",
+          "h-level-2-batch-10-3",
+          "h-level-2-batch-10-4"
+        ],
+        "label": "盛极转衰与内帏风波",
+        "summary": "展现宁荣丧寿盛典下的管治失序、典当亏空与主仆嫌隙，伴随中秋悲音、黛玉咯血惊悸与儿女婚嫁波折；虽有贾政升迁之喜，但底蕴匮乏与盛极而衰之势已渐显露。",
+        "rationale": "集中在贾敬丧仪至中秋夜宴前后（Z约0.60–0.72），表现贾府虽见虚饰繁华但治家失序、经济亏空及儿女婚事受挫的转折之期。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-10-5",
+          "h-level-2-batch-11-1",
+          "h-level-2-batch-11-2"
+        ],
+        "label": "薛府内讧与后宅惊疑",
+        "summary": "涵盖元妃患病、夏金桂嫁入薛门后借酒作乱并迫害香菱，薛蝌端正自持抵拒诱惑；同时记述贾府抄经修持、夜半邪祟惊疑，以及定亲讹传引发的宝黛猜忌试探。",
+        "rationale": "时间与情境承接（Z约0.67–0.77），聚焦薛府夏金桂引发的内乱与贾府后宅抄经、邪祟及宝黛情感嫌隙等多重内讧波折。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-11-3",
+          "h-level-2-batch-12-1",
+          "h-level-2-batch-12-2",
+          "h-level-2-batch-12-3"
+        ],
+        "label": "失玉查抄与宿命休咎",
+        "summary": "涉及通灵宝玉失落、寻玉扶乩至和尚送玉，黛玉抚琴、探春远嫁与众钗谶语宿命悟道；同时贯穿贾府门前揭帖、贾政外任贪墨、锦衣军抄没宁府与贾雨村背恩得势等法纪倾颓败象。",
+        "rationale": "围绕后四十回前半部（Z约0.77–0.88），将通灵失复之玄虚、谶语悟道之宿命，与外部锦衣军抄没、宗族法纪溃败的内外劫数紧密整合。"
+      },
+      {
+        "childIds": [
+          "h-level-2-batch-11-4",
+          "h-level-2-batch-12-4",
+          "h-level-2-batch-14-3"
+        ],
+        "label": "大丧盗劫与宗族离析",
+        "summary": "展现贾母病故大丧与鸳鸯殉主引起的经济窘迫与下人推诿，伴随大观园骨肉凋零、贼盗夜劫荣府掳走妙玉、惜春出家、凤姐托孤病危，以及宝玉绝气魂游等宗族败亡终局。",
+        "rationale": "对应贾府大局崩溃的尾声（Z约0.89–0.97），汇聚贾母大丧、盗贼洗劫、群芳离散出家与凤姐宝玉病危之最终崩解态势。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MeCcavHZObicvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 7420,
+    "candidatesTokenCount": 1122,
+    "totalTokenCount": 8542,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7420
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1122
+      }
+    ]
+  },
+  "durationMs": 8545,
+  "requestHash": "8b4f0d37799b0a2e34b190747268177be0f1efb58bf1945e3888e34bd0e34330"
+}

@@ -110,7 +110,7 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    if(process.env.EAZO_ENABLE_ANALYSIS!=='1')throw new RequestBodyError('Hosted analysis is not enabled yet.',503);
    const {source:id,key}=z.object({source:uuid,key:uuid}).parse(body);
    const [source]=await backend<Source[]>(`/rest/v1/book_sources?id=eq.${id}`,user.token);if(!source)throw new RequestBodyError('Book not found.',404);
-   const {downloadSource}=await import('@/server/cloud/map');const bytes=await downloadSource(source.source_object,user.token);
+   const {downloadSource}=await import('@/server/cloud/map');const bytes=await downloadSource(source.source_object,user.token,{maxBytes:1024*1024,message:'Invalid or oversized analysis source (maximum 1 MiB).'});
    if(bytes.length>1024*1024||createHash('sha256').update(bytes).digest('hex')!==source.manifest.sourceSha256)throw new RequestBodyError('Invalid or oversized analysis source (maximum 1 MiB).',400);
    const pipeline=process.env.EAZO_PIPELINE_VERSION;if(!pipeline)throw new RequestBodyError('Worker is not configured.',503);
    const jobId=await backend<string>('/rest/v1/rpc/eazo_submit_job',serviceKey(),{method:'POST',body:JSON.stringify({p_owner:user.id,p_source:id,p_key:key,p_model:process.env.GEMINI_MODEL??'gemini-3.8-flash',p_pipeline:pipeline})});

@@ -1,0 +1,70 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-10-4",
+          "h-level-1-batch-13-1",
+          "h-level-1-batch-13-2"
+        ],
+        "label": "大观营建谶兆与闺阁才情",
+        "summary": "涵盖贾府早期的家族根基建构、太虚幻境与群芳宿命隐谶，以及元妃省亲与元宵灯谜中的盛极反衰之兆。同时展现了贾政携宝玉游大观园试才题额，以及袭人、黛玉在情思与规训中的感发。",
+        "rationale": "三者均位于全书前半段（Z: 0.01–0.17），聚焦贾府家族盛典、大观园的营建题额、人物命运谶语及早期的才情思虑。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-12-2",
+          "h-level-1-batch-13-4",
+          "h-level-1-batch-13-5"
+        ],
+        "label": "受笞风波、薛家波折与结社",
+        "summary": "记录金钏投井与宝玉受笞引发的合府波澜及宝钗送药规劝，伴随薛蟠负屈争吵与自省出游等内帏人情摩擦。此外在大观园结海棠诗社、刘姥姥进府等琐事中，交织展现了儿女聚散与人情照料。",
+        "rationale": "三者同处全书前中段相近篇幅（Z: 0.24–0.37），以宝玉受笞、薛蟠波折等中层冲突为核心，贯穿内帏诗社与亲族往还。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-3",
+          "h-level-1-batch-14-1",
+          "h-level-1-batch-14-2"
+        ],
+        "label": "凤姐当家立事与主仆人情",
+        "summary": "展现王熙凤借机弄权、周旋讨好贾母与巧言避嫌等管家机变，并提议添设小厨房照拂姑娘。同时呈现贾府上下凑份祝寿、尤氏退银、鸳鸯以死拒纳妾等主仆间在威势与人情下的权衡周旋。",
+        "rationale": "三者集中于凤姐管家当权时期的处事手腕与荣府上下人情纠葛，Z轴集中在0.33–0.41。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-11-5",
+          "h-level-1-batch-14-4",
+          "h-level-1-batch-14-5",
+          "h-level-1-batch-14-6"
+        ],
+        "label": "岁朝大典与园中理家除弊",
+        "summary": "展现除夕宗祠祭奠与家宴中贾府严整的昭穆礼法，对比大观园内探春理家除弊、分派承包以及平儿从中帮衬的革新尝试。同时囊括国丧期间戏班遣散引致的仆妇纷争，以及晴雯、麝月等房中立威惩仆之举。",
+        "rationale": "四者同属后半段贾府体制运作与治理危机（Z: 0.41–0.48），从宗祠大典的礼制威仪过渡至大观园内部的理家整肃与仆妇争利。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "79-catXkLricvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 6079,
+    "candidatesTokenCount": 917,
+    "totalTokenCount": 6996,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6079
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 917
+      }
+    ]
+  },
+  "durationMs": 8252,
+  "requestHash": "1e22412fe0b57a9567ffca4d243a5e214d72f9b5d994edf75b163fb097c7e14a"
+}

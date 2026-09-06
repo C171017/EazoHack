@@ -1,0 +1,69 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-25-2",
+          "h-level-1-batch-25-3",
+          "h-level-1-batch-25-4"
+        ],
+        "label": "二尤悲剧与凤姐弄权",
+        "summary": "贾琏偷娶尤二姐并引发尤三姐自刎，凤姐得知后定计大闹宁府并赚二姐入园折磨，最终尤二姐吞金殒命安葬。",
+        "rationale": "连贯记录了贾琏私娶二姐、凤姐设计迫害及二姐最终吞金自尽的完整悲剧过程。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-25-5",
+          "n-76-3",
+          "h-level-1-batch-25-7"
+        ],
+        "label": "大观园抄检联诗与晴雯夭亡",
+        "summary": "大观园经历抄检风波与丫鬟查处，黛玉湘云在凹晶馆联诗品凄清，随后病笃的晴雯抱屈夭折，宝玉悲痛祭诔。",
+        "rationale": "涵盖大观园中后期的动荡与清冷，包括抄检事件、中秋冷夜联诗及晴雯抱屈早逝的连贯叙事。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-26-2",
+          "h-level-1-batch-26-3"
+        ],
+        "label": "薛案钻营与金玉婚议",
+        "summary": "贾薛两家重金行贿知县为薛蟠翻供定为误伤，贾政夫妇暗议宝玉与宝钗婚期，而宝玉则向黛玉剖白坚贞心迹。",
+        "rationale": "反映薛家命案私了的家族运作与长辈私定金玉良缘时宝黛心迹交织的叙事阶段。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-26-5",
+          "h-level-1-batch-26-6",
+          "h-level-1-batch-26-7",
+          "h-level-1-batch-26-8"
+        ],
+        "label": "调包奇计与黛玉夭逝始末",
+        "summary": "冲喜之议走漏致黛玉迷性呕血，贾府设调包计促成宝玉娶宝钗；黛玉焚稿含恨归天，宝玉洞房见真相惊厥沉疴并在病愈后祭灵，贾薛随后商定圆房。",
+        "rationale": "集中展现高潮阶段的调包计、黛玉焚稿泪尽夭亡及宝玉婚后哭灵圆房的全套核心悲剧进程。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "DOCcapuvGcuUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 5124,
+    "candidatesTokenCount": 719,
+    "totalTokenCount": 5843,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5124
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 719
+      }
+    ]
+  },
+  "durationMs": 6290,
+  "requestHash": "a47d1a855581b935fdd48874eb084df8d74f9e598d637641ee39ecba30041211"
+}

@@ -1,0 +1,62 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-17-1",
+          "h-level-1-batch-17-2",
+          "h-level-1-batch-17-4",
+          "h-level-1-batch-17-5",
+          "h-level-1-batch-21-3"
+        ],
+        "label": "大观园诗宴游艺与闺阁酬对",
+        "summary": "大观园内呈现寿宴射覆、群芳占花名、重起桃花社填词放鸢等风雅游嬉，其间亦伴随芳官馈送引致的丫鬟波澜、江南土仪分送往还，以及黛玉对景感怀与宝玉临帖赶补课业诸般闺阁常态。",
+        "rationale": "围绕大观园儿女日常风雅聚会、诗社游艺、仆从私馈及闺中人情往还，体现中盛期园内明丽却暗藏细碎波澜的闺阁生活。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-17-3",
+          "h-level-1-batch-17-6",
+          "h-level-1-batch-18-1",
+          "h-level-1-batch-21-4"
+        ],
+        "label": "宁荣丧寿盛宴与内闱私弊衰兆",
+        "summary": "宁府贾敬开丧期间引发贾琏私娶尤二姐诸般纠葛，贾母八旬盛宴期间既有南安太妃相女，亦暗伏查夜生隙、长幼反目、私通失囊等主仆嫌隙与内监索诈典当亏空之弊，凸碧堂笛音凄清更显盛极转衰之象。",
+        "rationale": "集中展现宁荣二府在丧祭、寿辰等重大盛典及日常管家过程中暴露的宗法纷争、内闱风纪败坏、财政亏空及盛极而衰的预兆。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-18-2",
+          "h-level-1-batch-22-1",
+          "h-level-1-batch-26-1"
+        ],
+        "label": "后宅嫌隙转危与外事升赏",
+        "summary": "中秋夜宴悲音与贾环打翻药铫引发后宅嫌隙，黛玉因噩梦惊悸与疑心恶语致使病势咯血转危，而贾政喜获升迁庆贺、携宝玉王府拜寿听戏则为贾府交织出明暗各异的吉凶运势。",
+        "rationale": "涵盖后宅嫌隙深化、黛玉病笃惊悸与外部家族仕途升迁庆贺，构成家族外在声势与内里衰微病患交织的篇章进展。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "-t-catbcGPmcvdAPz_aKkAg",
+  "usage": {
+    "promptTokenCount": 5087,
+    "candidatesTokenCount": 729,
+    "totalTokenCount": 5816,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5087
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 729
+      }
+    ]
+  },
+  "durationMs": 6182,
+  "requestHash": "c3df41c195ed64f6629f840ce650940ce728b565df321bfee0cbd50f1131279b"
+}

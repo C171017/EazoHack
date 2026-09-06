@@ -1,0 +1,77 @@
+{
+  "value": {
+    "groups": [
+      {
+        "childIds": [
+          "h-level-1-batch-29-1",
+          "h-level-1-batch-29-2"
+        ],
+        "label": "园内是非防患与尤柳余波",
+        "summary": "平儿与宝钗在园内窃案中息事宁人、防范生事；薛家与柳湘莲则在尤三姐自刎后直面出家变故与世情善后。",
+        "rationale": "二者均处小说中段过渡期（Z约0.49–0.55），展现管家防患与外围姻亲情仇破灭后的应对。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-29-4",
+          "h-level-1-batch-29-5",
+          "h-level-1-batch-29-6",
+          "h-level-1-batch-29-7"
+        ],
+        "label": "大观园诸芳受挫与衰谶显现",
+        "summary": "迎春避事任由司棋被逐，晴雯遭谗撵逐夭亡并应诔谶；夏金桂折磨构陷香菱致病，宝玉入塾重压与黛玉琴弦崩断更频现不寿凶兆。",
+        "rationale": "集中反映抄园前后至八十回首尾处（Z约0.64–0.74），大观园侍妾丫鬟遭受折磨驱逐以及凶吉变兆频生的悲剧转折。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-29-8",
+          "h-level-1-batch-30-1",
+          "h-level-1-batch-30-2"
+        ],
+        "label": "掉包金玉姻缘与黛死钗嫁",
+        "summary": "宝玉失玉病笃后贾府高层定下瞒黛掉包之奇策，黛玉闻讯焚稿断魂绝命，宝玉历经阴司大梦完婚；探春远嫁等离散凶兆亦接踵而至。",
+        "rationale": "围绕后四十回核心冲突金玉良缘掉包计、林黛玉含恨夭亡及探春远嫁等群芳流散的悲剧高潮（Z约0.80–0.85）。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-30-3",
+          "h-level-1-batch-30-4"
+        ],
+        "label": "贾府抄家败落与丧乱交迫",
+        "summary": "锦衣府抄检贾赦揭开巨额亏空与宿弊，凤姐自伤病危且贾母祷天；贾母谢世后仆从通盗、家道零落，引贾政李纨等深叹家运彻底败亡。",
+        "rationale": "聚焦贾府遭遇查抄、财政彻底崩溃及贾母丧事后诸事皆非的家族倾覆惨境（Z约0.88–0.93）。"
+      },
+      {
+        "childIds": [
+          "h-level-1-batch-28-6",
+          "h-level-1-batch-30-5"
+        ],
+        "label": "惜春出家与宝玉雪夜遁世",
+        "summary": "惜春勘破三春以死明志出家栊翠庵，袭人遵前定嫁蒋玉菡；宝玉赴考中举后拜别亲人，终归彼大荒绝尘而去。",
+        "rationale": "结集全书终局（Z约0.96–0.99），宝玉与惜春勘破红尘、遁入空门，完成了宿命判词与尘缘彻底断绝。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FeCcasHIEP-cvdAP1sC0gAg",
+  "usage": {
+    "promptTokenCount": 5739,
+    "candidatesTokenCount": 948,
+    "totalTokenCount": 6687,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5739
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 948
+      }
+    ]
+  },
+  "durationMs": 10136,
+  "requestHash": "a1e0e2ea88ce1027d6c1e3cd1382f9890c387b8cb36a9c7d3350c608825c3592"
+}
