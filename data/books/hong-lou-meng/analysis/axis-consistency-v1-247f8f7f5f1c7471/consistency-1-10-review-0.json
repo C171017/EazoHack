@@ -1,0 +1,28 @@
+{
+  "value": {
+    "rejected": []
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "pt2casmEA8uUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 58850,
+    "candidatesTokenCount": 9,
+    "totalTokenCount": 58859,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 58850
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9
+      }
+    ]
+  },
+  "durationMs": 3646,
+  "requestHash": "c0d8d1f07244ce42cddca43df0963f19f7aa74220971ad1ff3819fa175e0f90f"
+}

@@ -1,5 +1,983 @@
 {
-  "status": "running",
+  "status": "complete",
   "version": "axis-consistency-v1-247f8f7f5f1c7471",
-  "sourceGraphVersion": "book-axes-v3-bounded-e26bf8d635961612"
+  "sourceGraphVersion": "book-axes-v3-bounded-e26bf8d635961612",
+  "validatedCalls": [
+    {
+      "key": "consistency-1-1",
+      "usage": {
+        "promptTokenCount": 54862,
+        "candidatesTokenCount": 4852,
+        "totalTokenCount": 59714,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 54862
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4852
+          }
+        ]
+      },
+      "durationMs": 22863
+    },
+    {
+      "key": "consistency-1-1-review-0",
+      "usage": {
+        "promptTokenCount": 58447,
+        "candidatesTokenCount": 933,
+        "totalTokenCount": 59380,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 58447
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 933
+          }
+        ]
+      },
+      "durationMs": 8199
+    },
+    {
+      "key": "consistency-1-2",
+      "usage": {
+        "promptTokenCount": 65352,
+        "candidatesTokenCount": 6017,
+        "totalTokenCount": 71369,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 65352
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6017
+          }
+        ]
+      },
+      "durationMs": 32436
+    },
+    {
+      "key": "consistency-1-2-review-0",
+      "usage": {
+        "promptTokenCount": 69870,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 69879,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 69870
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 2710
+    },
+    {
+      "key": "consistency-1-1-revision-1",
+      "usage": {
+        "promptTokenCount": 59106,
+        "candidatesTokenCount": 4733,
+        "totalTokenCount": 63839,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 59106
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4733
+          }
+        ]
+      },
+      "durationMs": 22127
+    },
+    {
+      "key": "consistency-1-1-review-1",
+      "usage": {
+        "promptTokenCount": 57465,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 57474,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 57465
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4102
+    },
+    {
+      "key": "consistency-1-4",
+      "usage": {
+        "promptTokenCount": 47513,
+        "candidatesTokenCount": 5840,
+        "totalTokenCount": 53353,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 47513
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5840
+          }
+        ]
+      },
+      "durationMs": 30771
+    },
+    {
+      "key": "consistency-1-3",
+      "usage": {
+        "promptTokenCount": 61587,
+        "candidatesTokenCount": 6128,
+        "totalTokenCount": 67715,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 61587
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6128
+          }
+        ]
+      },
+      "durationMs": 30831
+    },
+    {
+      "key": "consistency-1-4-review-0",
+      "usage": {
+        "promptTokenCount": 52326,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 52335,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 52326
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 2944
+    },
+    {
+      "key": "consistency-1-3-review-0",
+      "usage": {
+        "promptTokenCount": 66695,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 66704,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 66695
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 2997
+    },
+    {
+      "key": "consistency-1-6",
+      "usage": {
+        "promptTokenCount": 69099,
+        "candidatesTokenCount": 5073,
+        "totalTokenCount": 74172,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 69099
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5073
+          }
+        ]
+      },
+      "durationMs": 24151
+    },
+    {
+      "key": "consistency-1-5",
+      "usage": {
+        "promptTokenCount": 73601,
+        "candidatesTokenCount": 5534,
+        "totalTokenCount": 79135,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 73601
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5534
+          }
+        ]
+      },
+      "durationMs": 25347
+    },
+    {
+      "key": "consistency-1-6-review-0",
+      "usage": {
+        "promptTokenCount": 72593,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 72602,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 72593
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3627
+    },
+    {
+      "key": "consistency-1-5-review-0",
+      "usage": {
+        "promptTokenCount": 77900,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 77909,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 77900
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3035
+    },
+    {
+      "key": "consistency-1-8",
+      "usage": {
+        "promptTokenCount": 70248,
+        "candidatesTokenCount": 5756,
+        "totalTokenCount": 76004,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 70248
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5756
+          }
+        ]
+      },
+      "durationMs": 30131
+    },
+    {
+      "key": "consistency-1-8-review-0",
+      "usage": {
+        "promptTokenCount": 74490,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 74499,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 74490
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4447
+    },
+    {
+      "key": "consistency-1-7",
+      "usage": {
+        "promptTokenCount": 66019,
+        "candidatesTokenCount": 6307,
+        "totalTokenCount": 72326,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 66019
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6307
+          }
+        ]
+      },
+      "durationMs": 34685
+    },
+    {
+      "key": "consistency-1-7-review-0",
+      "usage": {
+        "promptTokenCount": 67084,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 67093,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 67084
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 2876
+    },
+    {
+      "key": "consistency-1-9",
+      "usage": {
+        "promptTokenCount": 74898,
+        "candidatesTokenCount": 5752,
+        "totalTokenCount": 80650,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 74898
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5752
+          }
+        ]
+      },
+      "durationMs": 30940
+    },
+    {
+      "key": "consistency-1-10",
+      "usage": {
+        "promptTokenCount": 54562,
+        "candidatesTokenCount": 5538,
+        "totalTokenCount": 60100,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 54562
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5538
+          }
+        ]
+      },
+      "durationMs": 33466
+    },
+    {
+      "key": "consistency-1-9-review-0",
+      "usage": {
+        "promptTokenCount": 79975,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 79984,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 79975
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4012
+    },
+    {
+      "key": "consistency-1-10-review-0",
+      "usage": {
+        "promptTokenCount": 58850,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 58859,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 58850
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3646
+    },
+    {
+      "key": "consistency-1-11",
+      "usage": {
+        "promptTokenCount": 45281,
+        "candidatesTokenCount": 5001,
+        "totalTokenCount": 50282,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 45281
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5001
+          }
+        ]
+      },
+      "durationMs": 23824
+    },
+    {
+      "key": "consistency-1-11-review-0",
+      "usage": {
+        "promptTokenCount": 48737,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 48746,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 48737
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3144
+    },
+    {
+      "key": "consistency-1-12",
+      "usage": {
+        "promptTokenCount": 69554,
+        "candidatesTokenCount": 5983,
+        "totalTokenCount": 75537,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 69554
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5983
+          }
+        ]
+      },
+      "durationMs": 30567
+    },
+    {
+      "key": "consistency-1-12-review-0",
+      "usage": {
+        "promptTokenCount": 74415,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 74424,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 74415
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4692
+    },
+    {
+      "key": "consistency-1-14",
+      "usage": {
+        "promptTokenCount": 47199,
+        "candidatesTokenCount": 4108,
+        "totalTokenCount": 51307,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 47199
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 4108
+          }
+        ]
+      },
+      "durationMs": 23922
+    },
+    {
+      "key": "consistency-1-13",
+      "usage": {
+        "promptTokenCount": 55297,
+        "candidatesTokenCount": 5434,
+        "totalTokenCount": 60731,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 55297
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5434
+          }
+        ]
+      },
+      "durationMs": 25821
+    },
+    {
+      "key": "consistency-1-14-review-0",
+      "usage": {
+        "promptTokenCount": 50388,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 50397,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 50388
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3255
+    },
+    {
+      "key": "consistency-1-13-review-0",
+      "usage": {
+        "promptTokenCount": 59612,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 59621,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 59612
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 2594
+    },
+    {
+      "key": "consistency-2-1",
+      "usage": {
+        "promptTokenCount": 135153,
+        "candidatesTokenCount": 6065,
+        "totalTokenCount": 141218,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 135153
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6065
+          }
+        ]
+      },
+      "durationMs": 32049
+    },
+    {
+      "key": "consistency-2-1-review-0",
+      "usage": {
+        "promptTokenCount": 140250,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 140259,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 140250
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4351
+    },
+    {
+      "key": "consistency-2-2",
+      "usage": {
+        "promptTokenCount": 136486,
+        "candidatesTokenCount": 6908,
+        "totalTokenCount": 143394,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 136486
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6908
+          }
+        ]
+      },
+      "durationMs": 40291
+    },
+    {
+      "key": "consistency-2-2-review-0",
+      "usage": {
+        "promptTokenCount": 143614,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 143623,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 143614
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 5062
+    },
+    {
+      "key": "consistency-3-2",
+      "usage": {
+        "promptTokenCount": 66297,
+        "candidatesTokenCount": 3097,
+        "totalTokenCount": 69394,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 66297
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 3097
+          }
+        ]
+      },
+      "durationMs": 18697
+    },
+    {
+      "key": "consistency-3-2-review-0",
+      "usage": {
+        "promptTokenCount": 69281,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 69290,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 69281
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 4308
+    },
+    {
+      "key": "consistency-3-1",
+      "usage": {
+        "promptTokenCount": 95931,
+        "candidatesTokenCount": 6450,
+        "totalTokenCount": 102381,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 95931
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 6450
+          }
+        ]
+      },
+      "durationMs": 32227
+    },
+    {
+      "key": "consistency-3-1-review-0",
+      "usage": {
+        "promptTokenCount": 101756,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 101765,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 101756
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3870
+    },
+    {
+      "key": "consistency-4-1",
+      "usage": {
+        "promptTokenCount": 115817,
+        "candidatesTokenCount": 5869,
+        "totalTokenCount": 121686,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 115817
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5869
+          }
+        ]
+      },
+      "durationMs": 29488
+    },
+    {
+      "key": "consistency-4-1-review-0",
+      "usage": {
+        "promptTokenCount": 121117,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 121126,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 121117
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 5904
+    },
+    {
+      "key": "chain-rationales-1",
+      "usage": {
+        "promptTokenCount": 71035,
+        "candidatesTokenCount": 5557,
+        "totalTokenCount": 76592,
+        "cachedContentTokenCount": 65404,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 71035
+          }
+        ],
+        "cacheTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 65404
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 5557
+          }
+        ]
+      },
+      "durationMs": 27725
+    },
+    {
+      "key": "chain-closure-1",
+      "usage": {
+        "promptTokenCount": 75638,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 75647,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 75638
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3902
+    },
+    {
+      "key": "chain-rationales-2",
+      "usage": {
+        "promptTokenCount": 45101,
+        "candidatesTokenCount": 2654,
+        "totalTokenCount": 47755,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 45101
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 2654
+          }
+        ]
+      },
+      "durationMs": 14413
+    },
+    {
+      "key": "chain-closure-2",
+      "usage": {
+        "promptTokenCount": 46507,
+        "candidatesTokenCount": 9,
+        "totalTokenCount": 46516,
+        "trafficType": "ON_DEMAND",
+        "promptTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 46507
+          }
+        ],
+        "candidatesTokensDetails": [
+          {
+            "modality": "TEXT",
+            "tokenCount": 9
+          }
+        ]
+      },
+      "durationMs": 3621
+    }
+  ],
+  "remainingDepthConflicts": 0
 }

@@ -1,0 +1,553 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-60-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "芳官不愿将蕊官所赠蔷薇硝与贾环，采纳麝月'不管拿些什么给他们，他们哪里看得出来'的敷衍建言，以茉莉粉替代并掷出，属于对眼前索要行为的短程机巧应对，推理深度为1.1。",
+            "anchorIds": [
+              "p-420863",
+              "p-420609"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记录芳官调换物品敷衍贾环的具体事件。",
+            "anchorIds": [
+              "p-420863"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "柳家的见怡红院差轻人多且将来放丫鬟，推断出五儿若入怡红院既能保全身体又能得实惠，因而通过日常殷勤巴结芳官以谋求空缺，具备明确的功利考量链条，推理深度为2.1。",
+            "anchorIds": [
+              "p-425041",
+              "p-424902",
+              "p-425839"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "记叙柳家母女为柳五儿谋求进入怡红院差事的谋划与活动。",
+            "anchorIds": [
+              "p-425041",
+              "p-425839"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "直接依赖n-60-4（柳家的结交芳官谋差事），芳官依约为五儿向宝玉讨得玫瑰露，柳家的转赠患热病侄儿，属于在既定人情关系基础上的物资流动与互动。作为n-60-4的后继，其推理深度标定为2.2。",
+            "anchorIds": [
+              "p-425414",
+              "p-425250",
+              "p-426212"
+            ],
+            "prerequisiteNodeIds": [
+              "n-60-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记录小半瓶玫瑰露在芳官、五儿及舅舅家流转的具体事件。",
+            "anchorIds": [
+              "p-425414",
+              "p-426212"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-60-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "柳氏因回避钱槐纠缠匆匆离去，得嫂子转赠门上分得的粤东官员所送茯苓霜，带回角门时因路线可疑被守门小么儿盘诘起疑，为下文失窃案埋下因果铺垫。",
+            "anchorIds": [
+              "p-426790",
+              "p-427214",
+              "p-426534"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "记叙柳家的获得茯苓霜以及在角门被怀疑盘问的一连串具体经过。",
+            "anchorIds": [
+              "p-426790",
+              "p-427214"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-61-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "司棋因要炖鸡蛋遭柳家的推脱拒绝，结合莲花儿添油加醋的汇报，推断柳家看人下菜碟，怒带小丫头砸翻厨房菜蔬箱柜泄愤，属于因果明确的情绪爆发行动。",
+            "anchorIds": [
+              "p-429375",
+              "p-427973"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.6,
+            "rationale": "大观园迎春房大丫鬟司棋大闹内厨房的单一冲突事件。",
+            "anchorIds": [
+              "p-429375",
+              "p-427973"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-61-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "平儿面对凤姐严加拷打并革退柳家的决断，必须依托已在n-61-4中完成的'投鼠忌器'、宝玉顶赃及保全探春体面的完整方案，进一步以'得放手时须放手'、免结小人仇怨及保全凤姐病体等长远利益进行权衡劝谏，成功推翻凤姐的严酷初议。其依赖链在n-61-4（3.7）之上，评为3.8。",
+            "anchorIds": [
+              "p-433541"
+            ],
+            "prerequisiteNodeIds": [
+              "n-61-4"
+            ]
+          },
+          "generality": {
+            "value": 5.2,
+            "rationale": "平儿提出的'得放手时须放手'、不可结小人仇怨的权衡原则，超越了当下案件，成为管家与行权处世的宽仁指导方针。",
+            "anchorIds": [
+              "p-433541"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "平儿落实行权，执行n-61-4与n-61-5商定的宽免方案，恢复柳家差事并退回秦显家的，进而引发秦显家倒赔亏空及彩云遭贾环疑心赌气掷物入河等后继连锁反应。依赖n-61-4与n-61-5，总深度校准为3.9。",
+            "anchorIds": [
+              "p-433958"
+            ],
+            "prerequisiteNodeIds": [
+              "n-61-4",
+              "n-61-5"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "记叙玫瑰露窃案正式平息后各方当事人（柳家、秦显家、彩云、贾环）的连锁结局。",
+            "anchorIds": [
+              "p-433958"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "宝钗锁角门防闲杂人抄近路并提醒宝玉，直接涉及玫瑰露等失窃及平儿知晓内情等事，其推导直接建立在已查明失窃案情的n-61-3之上。由于所依赖的n-61-3深度为2.6，此处校准为其延伸推论2.7。",
+            "anchorIds": [
+              "p-437031"
+            ],
+            "prerequisiteNodeIds": [
+              "n-61-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "States an advisory principle of household caution applied specifically to locking the garden gate and dealing with theft investigations.",
+            "anchorIds": [
+              "p-437031"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Daiyu observes Tanchun's handling of affairs and performs a reasoned evaluation inferring that the Jia family's expenditures exceed its income.",
+            "anchorIds": [
+              "p-441326"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "Applies a financial assessment to the entire Jia household estate rather than a single isolated moment.",
+            "anchorIds": [
+              "p-441326"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-62-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Baoyu devises a simple practical solution to replace Xiangling's soiled pomegranate skirt using an identical spare from Xiren.",
+            "anchorIds": [
+              "p-443754"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "Focuses strictly on an individual incident involving Xiangling's stained skirt in the garden.",
+            "anchorIds": [
+              "p-443754"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Xiuyan explains the philosophical and literary origin of Miaoyu's self-appellation 'person outside the threshold', guiding Baoyu to infer the fitting reply.",
+            "anchorIds": [
+              "p-452050"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Concerns Miaoyu's eccentric personal stance and Baoyu's specific social response.",
+            "anchorIds": [
+              "p-452050"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-63-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "Presents the playful cross-dressing of Fangguan and other actresses, along with Baoyu's lighthearted rationale for their foreign and male aliases.",
+            "anchorIds": [
+              "p-452969"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Covers a playful game of naming and dressing within the inner garden circle.",
+            "anchorIds": [
+              "p-452969"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "Baoyu notices the sacrificial offerings and tear stains, deducing Daiyu's hidden sorrow and seeking to comfort her without causing irritation.",
+            "anchorIds": [
+              "p-458445",
+              "p-459508"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A private encounter between Baoyu and Daiyu in the Xiaoxiang Pavilion.",
+            "anchorIds": [
+              "p-459508"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Jia Rong analyzes Jia Lian's infatuation, the obstacles posed by Wang Xifeng, and devises an elaborate scheme to secretly establish a second household.",
+            "anchorIds": [
+              "p-462904",
+              "p-463351"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "A scheme targeted at a specific illicit marriage arrangement for Jia Lian and Second Sister You.",
+            "anchorIds": [
+              "p-463351"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-64-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Jia Lian pursues Second Sister You and uses the betel nut exchange to signal affection by passing his nine-dragon jade pendant.",
+            "anchorIds": [
+              "p-463992",
+              "p-464392"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "A specific flirtatious interaction between Jia Lian and Second Sister You in the Ning mansion.",
+            "anchorIds": [
+              "p-463992"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "承接贾琏偷娶尤二姐于新房（n-65-1），贾琏正式奉二姐为奶奶，将私房梯己全盘托付，并推导谋划凤姐死后迎娶入府的大计。直接建立在n-65-1（2.5）基础之上，深度标定为2.6。",
+            "anchorIds": [
+              "p-466798"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Pertains to domestic arrangements and financial provisions inside Jia Lian's secret household.",
+            "anchorIds": [
+              "p-466798"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-65-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Xing'er provides an analytical exposition of Rongguo mansion's social power structure, contrasting Xifeng's cruelty, Ping'er's balance, and the personalities of the young ladies.",
+            "anchorIds": [
+              "p-471220"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "Synthesizes character traits and internal domestic politics across major figures in the Rongguo house from a servant's perspective.",
+            "anchorIds": [
+              "p-471220"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "尤三姐直接针对兴儿在n-65-6中对宝玉'外清内浊、糊涂'的议论进行反驳，结合守孝期间和尚绕棺挡人与换茶两桩具体生活实例展开论证，说明其体贴性情。推理直接依赖兴儿的品评n-65-6（2.0），校准为2.1。",
+            "anchorIds": [
+              "p-473423"
+            ],
+            "prerequisiteNodeIds": [
+              "n-65-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "该评价严格限定于贾宝玉个人的行事作风与待人情性，属于针对具体命名个体的定性判断。",
+            "anchorIds": [
+              "p-473423"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "贾琏在平安州道中偶遇薛蟠与柳湘莲，因得悉柳湘莲欲寻好亲事，依尤三姐非柳不嫁之盟誓（n-66-2，1.5）当场说合提亲，并索取家传鸳鸯剑作为信物。依赖n-66-2，总深度校准为1.6。",
+            "anchorIds": [
+              "p-475269"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-2"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "属于一次具体的偶遇、议亲与交割定礼鸳鸯剑的历史情节场景。",
+            "anchorIds": [
+              "p-475269"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "薛家议论尤三姐自刎（n-66-6）与柳湘莲出家（n-66-7），薛蟠寻人不获，宝钗从既成事实出发推论多悲无益，劝母宽心并提醒尽快酬谢同行伙计。其必须以三姐自刎与湘莲出家为前提，深度依n-66-7（3.0）校准为3.1。",
+            "anchorIds": [
+              "p-478627",
+              "p-479025"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-6",
+              "n-66-7"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "针对薛蟠商队归来后的具体人事变故应对与伙计酬谢安排，包含人情世故的规劝。",
+            "anchorIds": [
+              "p-478627",
+              "p-479025"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "宝钗清点薛蟠运回的土物箱笼，依亲疏礼数一一打点分送，属于按常理施行的处事行为，推理深度极浅。",
+            "anchorIds": [
+              "p-479623",
+              "p-480263"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "描摹薛宝钗在潇湘馆及贾府各房分送土特产的具体日常举动。",
+            "anchorIds": [
+              "p-479623",
+              "p-480263"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "袭人路遇老祝妈点明不可私尝未供鲜果之族规，去凤姐院落察觉氛围异样，均为直接的视听观察与当面应对。",
+            "anchorIds": [
+              "p-483714",
+              "p-484280"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "记录袭人园中走动规劝老妪、探视凤姐病情的具体片断，略涉贾府内规。",
+            "anchorIds": [
+              "p-483714",
+              "p-484280"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-67-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "王熙凤因下人闲话察觉端倪，通过严厉威逼旺儿与兴儿，层层盘问顺藤摸瓜查出贾琏偷娶尤二姐、退张华婚约等隐情，属于直接的信息审讯推导。",
+            "anchorIds": [
+              "p-484820",
+              "p-485485"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "涉及王熙凤审问兴儿、旺儿查实外室一事的具体叙事过程。",
+            "anchorIds": [
+              "p-484820",
+              "p-485485"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.9,
+            "rationale": "尤二姐在凤姐借秋桐之手百般折磨虐待（n-69-2）而病重之际，梦见自刎而亡的尤三姐（n-66-6）持剑相劝斩杀妒妇；二姐从生前失德推导出受此苦报为天道应然，决意不造杀业。其必须承接三姐已死（n-66-6，2.5）与凤姐借剑杀人（n-69-2，4.8）的双重脉络，深度校准为4.9。",
+            "anchorIds": [
+              "p-498739"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-6",
+              "n-69-2"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "反映尤二姐梦境体验及其个人对命运与罪孽因果的自我归结。",
+            "anchorIds": [
+              "p-498739"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "X92caurUCcuUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 70248,
+    "candidatesTokenCount": 5756,
+    "totalTokenCount": 76004,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 70248
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5756
+      }
+    ]
+  },
+  "durationMs": 30131,
+  "requestHash": "05b9c88dd16367a7069b2f84567081fad0c918f018f35573d9b102ce25dcad7e"
+}

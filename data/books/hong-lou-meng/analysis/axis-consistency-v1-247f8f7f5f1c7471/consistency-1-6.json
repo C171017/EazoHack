@@ -1,0 +1,587 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-44-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Fengjie notices the servant girl running away, immediately infers foul play, interrogates her with threats, and eavesdrops to confirm Jia Lian's betrayal with Bao Er's wife.",
+            "anchorIds": [
+              "p-297407",
+              "p-298270"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "Describes a single specific incident of discovery in Jia Lian's courtyard.",
+            "anchorIds": [
+              "p-297407",
+              "p-298270"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Li Wan and the sisters ask Fengjie to sponsor the poetry club; Fengjie directly infers their financial motive ('进钱铜商') and computes Li Wan's personal income before agreeing.",
+            "anchorIds": [
+              "p-303228",
+              "p-303963",
+              "p-304417"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Details the specific financial arrangement and dynamic between Wang Xifeng and the poetry club members.",
+            "anchorIds": [
+              "p-303228",
+              "p-303963",
+              "p-304417"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Lai Momo recounts her grandson's appointment, using family history and the Jia family's tradition of strict upbringing to argue that unearned arrogance leads to ruin, intervening for Zhou Rui's son.",
+            "anchorIds": [
+              "p-305180",
+              "p-305892",
+              "p-306930"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Articulates general principles about slave-descended officials, servant hierarchy, and household governance across the Jia estate.",
+            "anchorIds": [
+              "p-305180",
+              "p-305892",
+              "p-306930"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Daiyu builds directly upon Baochai's earlier advice (n-42-4) and their established reconciliation (n-42-7), deducing from her precarious status that Baochai's counsel was genuine and heartfelt, thereby opening her heart completely.",
+            "anchorIds": [
+              "p-307708",
+              "p-308073"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-4",
+              "n-42-7"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Describes the deep mutual understanding and life situation of Daiyu in relation to Baochai.",
+            "anchorIds": [
+              "p-307708",
+              "p-308073"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Following her deep emotional conversation with Baochai (n-45-3), Daiyu's autumn melancholy and illness trigger the composition of the reflective poem 'Qiu Chuang Feng Yu Xi'.",
+            "anchorIds": [
+              "p-309013",
+              "p-309186"
+            ],
+            "prerequisiteNodeIds": [
+              "n-45-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Captures Daiyu's subjective mood and poetry during a specific stormy evening.",
+            "anchorIds": [
+              "p-309013",
+              "p-309186"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "Baoyu visits Daiyu during the rainy night while she is writing and burning the poem (n-45-4); they converse over the weather, health, and parting with the glass lantern.",
+            "anchorIds": [
+              "p-309357",
+              "p-309512",
+              "p-309891"
+            ],
+            "prerequisiteNodeIds": [
+              "n-45-4"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "A single intimate interaction between Baoyu and Daiyu in the bamboo lodge.",
+            "anchorIds": [
+              "p-309357",
+              "p-309512",
+              "p-309891"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Baochai delivers on the promise made in n-45-3 by sending bird's nest; Daiyu reflects on Baochai's sisterly kindness versus her own orphan loneliness, deepening the emotional transformation.",
+            "anchorIds": [
+              "p-310492",
+              "p-310806"
+            ],
+            "prerequisiteNodeIds": [
+              "n-45-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single nighttime scene depicting the delivery of bird's nest and Daiyu's resulting thoughts.",
+            "anchorIds": [
+              "p-310492",
+              "p-310806"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Xing Furen presents Jia She's demand; Fengjie analyzes Jia Mu's dependence on Yuanyang and Jia She's inappropriate conduct, then tactically shifts to avoid taking the blame.",
+            "anchorIds": [
+              "p-310952",
+              "p-311525",
+              "p-312171"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Concerns the specific political maneuver between Xing Furen and Fengjie regarding Yuanyang's concubinage.",
+            "anchorIds": [
+              "p-310952",
+              "p-311525",
+              "p-312171"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Direct execution of Xing Furen's plan formulated in n-46-1; she tempts Yuanyang with status, wealth, and co-mistress authority, met with firm, silent refusal.",
+            "anchorIds": [
+              "p-312503"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a private encounter between Xing Furen and Yuanyang in her bedroom.",
+            "anchorIds": [
+              "p-312503"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Directly triggered by Jin Wenxiang's wife arriving to propose the match right after Yuanyang's confession to Ping'er and Xiren (n-46-3); Yuanyang immediately deduces and rebukes her sister-in-law's opportunistic greed.",
+            "anchorIds": [
+              "p-315039",
+              "p-316433"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-3"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "A confrontation specifically addressing her brother's household and their sycophancy toward the masters.",
+            "anchorIds": [
+              "p-315039",
+              "p-316433"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Fengjie and Yuanyang purposely cooperate at the card table to flatter and amuse Grandmother Jia, executing an immediate practical social strategy to relieve the tension left after Grandmother Jia scolded Xing Furen (n-47-1).",
+            "anchorIds": [
+              "p-320499",
+              "p-320031"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Describes a specific card game gathering and the witty banter deployed during it.",
+            "anchorIds": [
+              "p-320499"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Jia Lian comes to fetch Xing Furen after Grandmother Jia's castigation (n-47-1); Grandmother Jia deliberately redirects her unspent fury over Jia She onto Jia Lian, mocking him with the Bao Er affair.",
+            "anchorIds": [
+              "p-321653",
+              "p-321352",
+              "p-322159"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Describes a specific domestic scolding incident involving Jia Lian and Grandmother Jia.",
+            "anchorIds": [
+              "p-321653"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "Narrative explanation of Xue Pan's erroneous deduction: observing Liu Xianglian's handsome looks and female/male theatrical roles, he mistakes him for an available dissolute actor.",
+            "anchorIds": [
+              "p-322476",
+              "p-322770"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "A character assessment specific to Xue Pan's erroneous perception of Liu Xianglian at the banquet.",
+            "anchorIds": [
+              "p-322476"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Direct consequence of Xue Pan's departure on his commercial journey (n-48-1); Baochai infers that Xiangling is lonely and eager to enter the garden, arranging her move into Hengwu Court.",
+            "anchorIds": [
+              "p-327921",
+              "p-328271"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific domestic relocation and living arrangement of Xiang-ling moving into Hengwu Court.",
+            "anchorIds": [
+              "p-327921"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Ping'er recounts the chain of events: Jia Yucun framed Shi Daizi to confiscate antique fans; Jia Lian protested that ruining a family for curios was shameful, for which Jia She beat him severely.",
+            "anchorIds": [
+              "p-328814"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Relates a specific corruption case and the resulting domestic assault on Jia Lian.",
+            "anchorIds": [
+              "p-328814"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "Xiangling builds on Daiyu's instruction (n-48-4) and her grasp of poetic essence (n-48-5), obsessively drafting two verses, receiving critique, and persisting into total absorption ('诗魔').",
+            "anchorIds": [
+              "p-331583",
+              "p-331905",
+              "p-332384"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-4",
+              "n-48-5"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Portrays Xiang-ling's intense psychological and behavioral absorption in the act of poetic creation.",
+            "anchorIds": [
+              "p-331905",
+              "p-332384"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "An external narrative introduction and direct factual report of four families of relatives coincidentally arriving together in the capital with no internal inferential derivation.",
+            "anchorIds": [
+              "p-333631",
+              "p-333384",
+              "p-334985"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Records a specific collective arrival of visiting relatives at the Jia mansion.",
+            "anchorIds": [
+              "p-333631"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Daiyu explains to Baoyu why she and Baochai became like sisters, explicitly summarizing the sequence from n-42-4 (admonition over the drinking game) and n-45-3 (intimate bedside conversation and bird's nest delivery).",
+            "anchorIds": [
+              "p-336911"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-4",
+              "n-45-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Explains the psychological turning point and mutual bond specifically between Daiyu and Bao-chai.",
+            "anchorIds": [
+              "p-336911"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Grandmother Jia arrives at Luxue Pavilion during the poetic gathering and plum-admiration (n-50-3), initiates lantern riddles, and proceeds to Nuanxiang Wu to inspect Xichun's painting progress.",
+            "anchorIds": [
+              "p-343800",
+              "p-344447"
+            ],
+            "prerequisiteNodeIds": [
+              "n-50-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "叙述贾母雪天至芦雪广看梅作谜并赴暖香坞催惜春作画这一单一具体事件情境。",
+            "anchorIds": [
+              "p-343800",
+              "p-344447"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "Fengjie deduces that how Xiren dresses when visiting home directly impacts the Jia family's managerial reputation, leading her to provide high-grade fur coats and matching wrappers.",
+            "anchorIds": [
+              "p-348801",
+              "p-348596",
+              "p-348471"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "阐述贾府掌家体统与奴仆外出装裹的具体行为准则，结合了凤姐特定的管家手段。",
+            "anchorIds": [
+              "p-348801",
+              "p-348596"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Building on the arrival of impoverished Xing Xiuyan (n-49-2) and Fengjie's clothing distribution for Xiren (n-51-2), Ping'er notices Xiuyan's shabby cloak in the snow and secures Fengjie's permission to give her a cloak.",
+            "anchorIds": [
+              "p-349373"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-2",
+              "n-51-2"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "限于平儿对邢岫烟冬衣窘况的具体体恤与赠衣事件。",
+            "anchorIds": [
+              "p-349373"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-51-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "An immediate causal occurrence: Qingwen sneaks outside in thin clothes to startle Sheyue, catches cold, and exhibits fever and cough the next morning.",
+            "anchorIds": [
+              "p-350942",
+              "p-351675"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记录晴雯一人在特定冬夜受凉致病的具体起因和经过。",
+            "anchorIds": [
+              "p-350942",
+              "p-351675"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Baoqin recounts an exotic childhood memory of meeting a Zhenzhen Country maiden at the western coast and recites her five-character Chinese poem.",
+            "anchorIds": [
+              "p-357286",
+              "p-358213",
+              "p-358266"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描述西洋特定女子的一段异域见闻及其所作的一首五言律诗。",
+            "anchorIds": [
+              "p-357286",
+              "p-358213"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Grandmother Jia bestows the Russian peacock feather coat upon Baoyu; Yuanyang fetches it while pointedly avoiding and spurning Baoyu, an attitude directly stemming from her public oath in n-46-6.",
+            "anchorIds": [
+              "p-359148"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-6"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "涉及贾母赐宝玉孔雀呢氅衣出行拜寿的具体家常事件。",
+            "anchorIds": [
+              "p-359148"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Qt2catWtBsuUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 69099,
+    "candidatesTokenCount": 5073,
+    "totalTokenCount": 74172,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 69099
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5073
+      }
+    ]
+  },
+  "durationMs": 24151,
+  "requestHash": "c0cc4e67646bcd55759ffc7fb6b9ed3627a03a0b29d0c32ae6fda6f278e33167"
+}

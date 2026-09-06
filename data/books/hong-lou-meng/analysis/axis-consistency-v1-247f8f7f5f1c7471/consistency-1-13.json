@@ -1,0 +1,568 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-107-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "Wang Xifeng is near death and terrified of blame after the raid; Grandmother Jia's decision to visit and comfort her directly executes the distribution plan formulated in n-107-3 (distributing 3,000 taels specifically to Fengjie, independent of Jia Lian), resolving Fengjie's shame and guilt (n-106-3). Because it directly applies and builds upon Grandmother Jia's retrenchment distribution (n-107-3, depth 3.3), its total reasoning depth incorporates that established prior chain.",
+            "anchorIds": [
+              "p-774197",
+              "p-773872"
+            ],
+            "prerequisiteNodeIds": [
+              "n-106-3",
+              "n-107-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the interpersonal reconciliation and emotional restoration of Wang Xifeng.",
+            "anchorIds": [
+              "p-774197",
+              "p-773872"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "Bao Yong overhears citizens discuss Jia Yucun's betrayal, infers Yucun is an ungrateful villain, berates him publicly, and is consequently reassigned by Jia Zheng to prevent unrest, requiring a clear sequence of internal inferences from overheard street talk to his punishment.",
+            "anchorIds": [
+              "p-775569"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A specific episode detailing Bao Yong's loyal outburst against Jia Yucun and his subsequent punishment.",
+            "anchorIds": [
+              "p-775569"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "In response to the pervasive post-raid domestic gloom and austerity established in n-108-1 (depth 3.5), Grandmother Jia reflects on Xiangyun's marriage and the scattered misfortunes of related families, inferring that hosting a cheerful birthday celebration for Baochai is necessary to break the family's depressive atmosphere. Dependent on n-108-1, it carries forward this prior chain.",
+            "anchorIds": [
+              "p-776871"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-1"
+            ]
+          },
+          "generality": {
+            "value": 0.7,
+            "rationale": "Concerns Grandmother Jia's emotional reaction and specific domestic initiative to organize Baochai's celebration.",
+            "anchorIds": [
+              "p-776871"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "Carries out the banquet conceived in n-108-2 (depth 3.6), presenting the direct narrative execution where the gathered women drink and play dice drinking games under a palpable aura of forced merriment and underlying melancholy.",
+            "anchorIds": [
+              "p-779071",
+              "p-779841"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Covers a single domestic banquet scene among the remaining female family members.",
+            "anchorIds": [
+              "p-779071",
+              "p-779841"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Leaving the banquet in grief (n-108-4, depth 2.7), Baoyu wanders into the desolate garden, links the neglect of Xiaoxiang Lodge with servants' ghost rumors, infers his personal culpability in Daiyu's death, and weeps openly. It directly depends on his departure from the banquet in n-108-4.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nocturnal scene of Baoyu visiting Daiyu's former residence in Daguanyuan.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "Following Baoyu's retrieval from Xiaoxiang Lodge (n-108-5, depth 2.8), Grandmother Jia deduces the danger of a psychological relapse and reprimands Xiren, which in turn leads Baochai to interrogate Xiren about Baoyu's true state of mind.",
+            "anchorIds": [
+              "p-783110"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the immediate aftermath of Baoyu's garden excursion within Grandmother Jia's and Baochai's quarters.",
+            "anchorIds": [
+              "p-783110"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "Yingchun's tearful departure directly displays Sun Shaozu's ongoing abuse, leading her to foresee that she may never return to the Jia household alive, supported by internal inferences in the passage with no prior target prerequisite.",
+            "anchorIds": [
+              "p-784672"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Depicts Yingchun's personal farewell and her tragic foreboding regarding her marriage.",
+            "anchorIds": [
+              "p-784672"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Sleeping in the outer room as arranged in n-109-1 (depth 2.4), Baoyu observes Wu'er's appearance, links her resemblance to Qingwen's tragic death and unfulfilled affection, and impulsively projects his longing for Qingwen onto Wu'er.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nighttime interaction between Baoyu and Wu'er in the outer room.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Grandmother Jia recalls her ancestral Han jade ring and deliberates that because Baoyu has lost his jade and has been dutifully filial, it should be passed down to him, forming a local inference with its internal justification.",
+            "anchorIds": [
+              "p-789148"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "An event concerning a specific ancestral heirloom given by Grandmother Jia to Baoyu.",
+            "anchorIds": [
+              "p-789148"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Fulfills the tragic foreboding of Yingchun's farewell in n-109-2 (depth 1.6); reports Yingchun's death under Sun Shaozu's brutal mistreatment and the family's inability to intervene due to Grandmother Jia's critical illness.",
+            "anchorIds": [
+              "p-790949"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative episode concerning Yingchun's death and her mistreatment in the Sun household.",
+            "anchorIds": [
+              "p-790949"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "Direct observation and narrative reporting of Grandmother Jia's critical decline and the initial preparatory funeral arrangements made by Jia Zheng and Jia Lian, without complex prior inference.",
+            "anchorIds": [
+              "p-791660",
+              "p-792408"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single specific event regarding Grandmother Jia's worsening condition and the initial preparations.",
+            "anchorIds": [
+              "p-791660",
+              "p-792408"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-110-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Directly develops the managerial impasse from n-110-3 and the reprimands from Lady Xing and Lady Wang in n-110-4 (depth 2.3); servants exploit the divided authority and lack of money to resist orders, forcing Fengjie to plead with them humbly.",
+            "anchorIds": [
+              "p-796369"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-3",
+              "n-110-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific scene between Wang Xifeng and the female servants during Grandmother Jia's funeral.",
+            "anchorIds": [
+              "p-796369"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Reacts directly to Yuanyang's suicide in n-111-1 (depth 2.3); Jia Zheng, Baoyu, and Baochai praise her loyalty, order her encoffined alongside Grandmother Jia, and proceed with the cortege to Tiekan Temple.",
+            "anchorIds": [
+              "p-801441",
+              "p-801958"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative scene recounting the reaction to Yuanyang's suicide, her encoffinment, and the departure of the funeral procession.",
+            "anchorIds": [
+              "p-801441",
+              "p-801958"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "He San learns that the mansion is emptied out due to the family departing for Tiekan Temple (n-111-2, depth 2.4) and that Grandmother Jia's valuables remain stored in her room; he reasons with fellow gamblers to exploit this vulnerability and mount a break-in.",
+            "anchorIds": [
+              "p-802630"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative interaction where He San plots with outlaws in a gambling den.",
+            "anchorIds": [
+              "p-802630"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "A direct scene of Miaoyu visiting Xichun to keep her company while guarding the empty house, drinking tea, and playing chess late into the night, introducing the narrative premise without prior inferential dependencies.",
+            "anchorIds": [
+              "p-804348",
+              "p-803701"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific scene depicting Miaoyu and Xichun talking and playing chess at night.",
+            "anchorIds": [
+              "p-804348",
+              "p-803701"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "In the immediate aftermath of the burglary repelled by Bao Yong in n-111-5 (depth 2.3),营官 come to survey the crime scene and Fengjie inspects Grandmother Jia's ransacked rooms, deducing internal complicity upon discovering He San's identity and arresting the night-watch women.",
+            "anchorIds": [
+              "p-806262",
+              "p-806486"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific investigation and enforcement scene at Rongguo Mansion the morning after the burglary.",
+            "anchorIds": [
+              "p-806262",
+              "p-806486"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Following the failed robbery in n-111-5 (depth 2.3) where He San was killed, the outlaws deduce they must flee to pirate bands before warrants are issued, but resolve first to kidnap Miaoyu whom they spotted during the break-in.",
+            "anchorIds": [
+              "p-807810",
+              "p-808011"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific meeting of the criminal gang plotting to abduct Miaoyu before fleeing.",
+            "anchorIds": [
+              "p-807810",
+              "p-808011"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Concubine Zhao's sudden affliction, demonic delirium, and dramatic self-confession of the past sorcery plot with Ma Daopo at Tiekan Temple; involves internal narrative dramatic revelation rather than an extended inferential chain.",
+            "anchorIds": [
+              "p-812302",
+              "p-812713"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative scene of Aunt Zhao's sudden affliction, demonic possession, and confession at Tiekan Temple.",
+            "anchorIds": [
+              "p-812302",
+              "p-812713"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Wang Xifeng is already bedridden and spitting blood (n-110-7, depth 2.5); upon hearing the rumor of Concubine Zhao's retributive death in n-113-1 (depth 2.1), her psychological guilt manifests in hallucinations of You Erjie demanding her life, leading her to admit her past narrowness and ruthlessness.",
+            "anchorIds": [
+              "p-814263",
+              "p-814942"
+            ],
+            "prerequisiteNodeIds": [
+              "n-110-7",
+              "n-113-1"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific scene of Wang Xifeng suffering remorse and hallucinations of You Erjie.",
+            "anchorIds": [
+              "p-814263",
+              "p-814942"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Building on the news of Miaoyu's abduction in n-112-3 (depth 2.5), Baoyu synthesizes Daiyu's death, the sisters' dispersion, and Zhuangzi's philosophy, drawing a localized philosophical inference that all earthly bonds inevitably scatter.",
+            "anchorIds": [
+              "p-818135"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3"
+            ]
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "宝玉的感叹从具体姊妹的离散上升至对整个人生世事‘难免风流云散’的普遍性感慨，涵盖较宽的人生命运层面，但仍附属于其个人主观伤感与特定家族命运范畴。",
+            "anchorIds": [
+              "p-818135"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "Baoyu infers that Zijuan's coldness stems from his marriage and Daiyu's death, prompting him to visit her window at night to plead his case, where he meets cold rebuffs and weeps; the reasoning is internal and local to this scene.",
+            "anchorIds": [
+              "p-819137",
+              "p-818805",
+              "p-819922"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记述的是宝玉在特定深夜到紫鹃窗前解释、被抢白与痛哭的具体单一情境事件。",
+            "anchorIds": [
+              "p-819137",
+              "p-819922"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "Hearing Fengjie's dying delirium about returning to Jinling to be entered in the register, and reminded by Xiren of his past dream of registers, Baoyu deduces that human destiny is strictly predetermined, and that foreknowledge could prevent futile sorrow.",
+            "anchorIds": [
+              "p-820764"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "宝玉由凤姐一人之事推及‘人都有个定数’，命题具有较宽的涵盖面，但主要是对个体生死命运的宿命论感触。",
+            "anchorIds": [
+              "p-820764"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Baochai directly rebuts Baoyu's musings on foreknowledge from n-114-1 (depth 2.0) and uses Miaoyu's abduction in n-112-3 (depth 2.5) as an empirical counterexample to demonstrate that divination and foreknowledge are absurd fantasies, while explaining the Xue family's pending departure.",
+            "anchorIds": [
+              "p-821200"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3",
+              "n-114-1"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "前半部分驳斥迷信预知，属于认识论层面的评价；后半部分属于对薛家自身处境与亲戚相处原则（‘那里有个一辈子住在亲戚家的’）的说明。",
+            "anchorIds": [
+              "p-821200"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "Narrative depiction of the immediate domestic conflict following Wang Xifeng's demise: Wang Ren arrives, criticizes the modest funeral, and pressures Qiaojie to hand over her mother's private funds, igniting mutual resentment.",
+            "anchorIds": [
+              "p-822040"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "描述王仁借吊丧逼索财物、巧姐平儿反感的特定事件及几名具体人物之间的关系恶化。",
+            "anchorIds": [
+              "p-822040"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "zN2caoXYHPmcvdAPz_aKkAg",
+  "usage": {
+    "promptTokenCount": 55297,
+    "candidatesTokenCount": 5434,
+    "totalTokenCount": 60731,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 55297
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5434
+      }
+    ]
+  },
+  "durationMs": 25821,
+  "requestHash": "6d7780e94732293f72905e7e1ac15cff69b15a0b8f0330a39c873274e3f54643"
+}

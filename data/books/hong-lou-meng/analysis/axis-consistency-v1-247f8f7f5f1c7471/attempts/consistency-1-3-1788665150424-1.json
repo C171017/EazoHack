@@ -1,0 +1,566 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-21-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "叙述凤姐之女出痘斋戒，贾琏搬至外书房居住耐不住寂寞而与多姑娘暗通私款，为叙事文本中直接交代开展的独立具体情节线索，无前置推演步骤，定为Anchor 0。",
+            "anchorIds": [
+              "p-136428",
+              "p-136190"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "叙述贾琏与多姑娘在出痘斋戒期间偷情通款的具体个人风波。",
+            "anchorIds": [
+              "p-136428",
+              "p-136190"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾母喜宝钗稳重且正逢十五岁笄年，自蠲银两命凤姐筹备生辰置酒唱戏，为本回直接发起的背景情节事件，无依赖书内先前推理的中间链条，定为Anchor 0。",
+            "anchorIds": [
+              "p-139142",
+              "p-138644"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指宝钗十五岁生日这一次贾府家宴与排戏的具体安排。",
+            "anchorIds": [
+              "p-139142",
+              "p-138644"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-22-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "贾政观看元妃及家中姊妹（爆竹、算盘、风筝、海灯等）所制灯谜，从物象的‘一响而散’、‘飘飘浮荡’、‘清净孤独’等特征，逐一推论出家运衰败与红颜薄命的不祥谶语，具备完整的局部象征推演，定为Anchor 2稍上（2.2）。",
+            "anchorIds": [
+              "p-144868",
+              "p-144617",
+              "p-145082"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.8,
+            "rationale": "虽然所感源于灯谜，但贾政的悲谶推断涵盖了贾家几位主要女性（元春、迎春、探春、惜春、宝钗）未来的整体命运走势，具有多个人物宿命的预示性。",
+            "anchorIds": [
+              "p-144868",
+              "p-144617",
+              "p-145082"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "直接依承元春下达入住大观园的谕令（n-23-1），贾政择定二月二十二日并具体落实各房小姐及宝玉的具体居所，属于直接执行元春指令的直接后承推演（Anchor 1微上，1.4）。",
+            "anchorIds": [
+              "p-148346",
+              "p-147710"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-1"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "具体确立了潇湘馆、怡红院、蘅芜苑、秋爽斋等大观园各处馆舍的入住归属这一特定事实。",
+            "anchorIds": [
+              "p-148346",
+              "p-147710"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "香菱拍肩唤醒黛玉幽思并携其回潇湘馆品茶下棋，纯粹为情节转场动作，并非基于前序黛玉听曲沉思（n-23-5）做出的因果推导，两节点之间无逻辑依赖，移除该前置依赖并将深度标定为叙述起点Anchor 0。",
+            "anchorIds": [
+              "p-151076"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "特指香菱打断黛玉神思、一同回潇湘馆品茶走棋的具体日常生活片断。",
+            "anchorIds": [
+              "p-151076"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-24-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾芸在绮霰斋外书房候宝玉，小红路过与其偶遇对视并萌生爱慕情愫，此乃人物初见的单一生发事件，不依赖任何先前推理推论，定为Anchor 0。",
+            "anchorIds": [
+              "p-156548",
+              "p-156758",
+              "p-158823"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描写小红与贾芸在绮霰斋门前的初遇及小红当晚的心动入梦。",
+            "anchorIds": [
+              "p-156548",
+              "p-156758",
+              "p-158823"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-25-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "赵姨娘因长期嫉恨宝玉凤姐得势侵权，借马道婆进府机缘，因势利导进行利益许诺与谋划，达成五百两欠契并授受纸鬼施魇，具有切实的利害动机与策略交涉推论，定为Anchor 1至Anchor 2之间（1.2）。",
+            "anchorIds": [
+              "p-163201",
+              "p-162851"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "具体记叙赵姨娘与马道婆在房中密谋、写欠契并交付纸鬼纸人的事件。",
+            "anchorIds": [
+              "p-163201",
+              "p-162851"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-26-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "小红针对佳蕙就园中赏赐不公的抱怨，立足于怡红院人事攀附与浮沉的现实，归纳提出‘千里搭长棚，没有个不散的筵席’的人生判断，为单一步骤引申出的现实感悟，定为Anchor 1至Anchor 2之间（1.5）。",
+            "anchorIds": [
+              "p-168396",
+              "p-168184"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5,
+            "rationale": "提出“千里搭长棚，没有个不散的筵席，各人干各人的去了”，概括了大家族人际关系与聚散无常的广泛规律。",
+            "anchorIds": [
+              "p-168396"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝钗见宝玉先入潇湘馆，根据宝黛二人自幼无嫌隙且黛玉素好多心的固有性格，推论出自己跟进必招嫌疑而决定止步返回，属于明确的即时心理逻辑推论，定为Anchor 1微上（1.2）。",
+            "anchorIds": [
+              "p-175578"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "关于宝钗针对宝黛二人相处性格特征做出的具体避嫌行为考量。",
+            "anchorIds": [
+              "p-175578"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "凤姐听红玉回转银两与带信之事，从其口齿利落、逻辑分明的表现，推断出此丫鬟精明能干，当即决定欲认作干女儿调至身边，属于从直观言行作出的直接评价推断，定为Anchor 1微上（1.2）。",
+            "anchorIds": [
+              "p-177112",
+              "p-177972",
+              "p-178309"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记录红玉在李纨房中给凤姐回话并获得赏识提拔意向的具体经过。",
+            "anchorIds": [
+              "p-177112",
+              "p-177972",
+              "p-178309"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.6,
+            "rationale": "探春借作鞋及买民间小玩意之事，痛斥生母赵姨娘见识阴微狭隘，并基于宗法名分理路推断出自己只认老爷太太、不认偏庶的嫡庶原则，构成内涵清晰的辩白说理，定为1.6。",
+            "anchorIds": [
+              "p-179528",
+              "p-180047"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "涉及探春个人对自身嫡庶身份定位及贾府内生母与子女伦理关系的原则阐述。",
+            "anchorIds": [
+              "p-179528",
+              "p-180047"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-27-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "承接前夜遭拒怡红院门外所生身世凄凉之悲（n-26-6，深度2.0），黛玉在芒种饯花之日见落花满地，将自身无依无靠寄人篱下的命运寄托于落花，借诗咏志吟成《葬花吟》，属于在前序悲情上的递进抒发与艺术升华，深度不得低于前置节点，定为Anchor 2微上（2.2）。",
+            "anchorIds": [
+              "p-180703",
+              "p-180977",
+              "p-181417"
+            ],
+            "prerequisiteNodeIds": [
+              "n-26-6"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "该诗以黛玉个人的寄人篱下、红颜飘零为主体投射，虽带有落花易谢的闺秀普遍命运色彩，但核心仍紧扣林黛玉自身的身世感怀与志向，介于特定人物（Anchor 1）与闺中女性小范围共性之间。",
+            "anchorIds": [
+              "p-180977"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "宝玉向王夫人夸陈古怪丸药秘方，宝钗否认，王熙凤出面以薛蟠求借真珠、折花配药的亲历见闻予以核实佐证，形成一层直接辩难与事实印证，定为1.8。",
+            "anchorIds": [
+              "p-183409",
+              "p-183804"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "涉及王夫人、宝玉、黛玉、宝钗和凤姐关于给黛玉配特定药丸这一具体谈话事件（Anchor 0）。",
+            "anchorIds": [
+              "p-183409",
+              "p-183804"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "宝玉在冯紫英席上立定‘女儿悲愁喜乐’酒令规矩，众人根据令格与席间物象行令赋曲，属于限定规则下的局部文学推展与即兴联想，定为Anchor 1至Anchor 2之间（1.5）。",
+            "anchorIds": [
+              "p-186401",
+              "p-188149"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.6,
+            "rationale": "酒令形式概括了女儿悲、愁、喜、乐的四种人生情境，但主要用于席间特定几位宾客的娱乐赋诗，属于小范围有限案例的分类归纳（Anchor 1至Anchor 2）。",
+            "anchorIds": [
+              "p-186401"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "紧承酒席行令交好（n-28-4，深度1.5），宝玉与蒋玉菡在廊檐下私相倾慕，互赠玉玦与茜香罗汗巾，回府后转系袭人腰间，属于由前序交往直接引申出的人际赠答与情感移转，定为1.8。",
+            "anchorIds": [
+              "p-188460",
+              "p-188987"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "叙述宝玉、蒋玉菡与袭人三人之间具体的器物互赠与情感流转情节（Anchor 0）。",
+            "anchorIds": [
+              "p-188460",
+              "p-188987"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "黛玉因元妃端午赐礼宝玉宝钗独独相同，由物及人借‘金玉’旧说试探讽刺；宝玉体察其意，以排位起誓赌咒剖白心迹，为典型的针对新情境发动的双向情感辩驳推断，定为Anchor 2微上（2.2）。",
+            "anchorIds": [
+              "p-189380",
+              "p-189944"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "聚焦于宝玉与黛玉就元春端午节礼引发的心思猜忌与赌咒对话（Anchor 0）。",
+            "anchorIds": [
+              "p-189380",
+              "p-189944"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-28-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "紧承宝黛因节礼与金玉之说引发的嫌隙（n-28-6，深度2.2），宝玉在贾母处见宝钗褪串露出酥臂，再次触动‘金玉’杂念而发呆失态，黛玉倚门目睹当场以‘呆雁’掷帕讽之，两阶段心理动态紧密相扣，深度不得低于前置节点，定为2.3。",
+            "anchorIds": [
+              "p-189944"
+            ],
+            "prerequisiteNodeIds": [
+              "n-28-6"
+            ]
+          },
+          "generality": {
+            "value": 0.1,
+            "rationale": "描绘贾母处宝钗褪红麝串、宝玉发呆、黛玉掷帕相讥的单一生动场景（Anchor 0）。",
+            "anchorIds": [
+              "p-189944"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾府女眷浩荡前往清虚观打醮看戏，进观时小道士撞进凤姐怀中遭掌掴，贾母慈心抚慰赏钱，为场面与突发事件的直陈实录，无先决论证链条，定为Anchor 0。",
+            "anchorIds": [
+              "p-191434",
+              "p-192483"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "单一出游与突发小冲突的具体事件描写（Anchor 0）。",
+            "anchorIds": [
+              "p-191434",
+              "p-192483"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾母借和尚批命不宜早娶之辞婉拒张道士为宝玉提亲，并借此明确提出贾府择配以模样性格为首要、不拘门第贫富的标准，包含针对性的策略论据与原则性立论，定为Anchor 2（2.0）。",
+            "anchorIds": [
+              "p-194152"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "贾母提出的'不管他根基富贵，只要模样配得上、性格好'，阐明了贾府核心掌权者在宝玉及子孙择偶上的标准与原则，覆盖这一类婚配决策（Anchor 3向Anchor 4过渡）。",
+            "anchorIds": [
+              "p-194152"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝玉于清虚观法器盘中见金麒麟，因忆及史湘云亦有而私自揣起，并引来黛玉冷眼讽刺，为现场单次举动及随之引发的即时心理试探，定为Anchor 1微上（1.2）。",
+            "anchorIds": [
+              "p-195035",
+              "p-195705"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "楼上盘中选物及众人言语微澜的单个具体场景（Anchor 0）。",
+            "anchorIds": [
+              "p-195035",
+              "p-195705"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "承接前序两假相逢及摔玉爆发的完整心理纠葛（n-29-4，深度3.8），袭人劝解宝玉念及玉上黛玉所穿丝穗，反引黛玉夺剪断穗，使四人各自陷入深层委屈与换位体贴，导致‘无言对泣’，为摔玉风波的进一步高潮推进，深度承接并微高于前置节点，定为Anchor 4临近（3.9）。",
+            "anchorIds": [
+              "p-198462",
+              "p-197949"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "宝黛袭紫四人在潇湘馆房中剪穗与相顾对泣的具体场面（Anchor 0）。",
+            "anchorIds": [
+              "p-198462",
+              "p-197949"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-29-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "承接两假相逢与摔玉闹剧（n-29-4，深度3.8），贾母发出‘不是冤家不聚头’之叹，宝黛虽分居两地，各自如参禅般细细研读咀嚼此语，将其深化为二人求近反疏、生死羁绊的哲学宿命反思，达到完整局部论证与共鸣的高阶闭环，定为Anchor 4微上（4.1）。",
+            "anchorIds": [
+              "p-199117",
+              "p-198914"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-4"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "'不是冤家不聚头'在此被提炼为对深情男女之间爱怨交织、命中注定羁绊的普遍情感规律的阐释（接近Anchor 5）。",
+            "anchorIds": [
+              "p-199117"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "宝黛和好依赖于前序二人闻‘不是冤家不聚头’后的各自参省与深沉悔意（n-29-6，深度4.1）。宝玉主动上门温存赔礼，以‘你死了我做和尚’表明无他心迹，凤姐适时穿插拉二人至贾母处说合，完成了从僵持对抗到和解的完整推理与心理动作链，定为4.2。",
+            "anchorIds": [
+              "p-200065",
+              "p-200902"
+            ],
+            "prerequisiteNodeIds": [
+              "n-29-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "宝黛二人闹翻后和好并去贾母处的一段具体经过（Anchor 0）。",
+            "anchorIds": [
+              "p-200065",
+              "p-200902"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "宝玉趁王夫人午睡与金钏耳鬓厮磨并调笑，王夫人醒来基于礼法与内帏规矩直接掌掴并坚决将金钏驱逐出府，由现场违规情境直接推导出严厉惩戒，定为Anchor 1微上（1.1）。",
+            "anchorIds": [
+              "p-202524",
+              "p-202893"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "王夫人正室房中突发冲突并驱逐金钏的单一场景（Anchor 0）。",
+            "anchorIds": [
+              "p-202524",
+              "p-202893"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IN2casOiAaKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 61587,
+    "candidatesTokenCount": 6128,
+    "totalTokenCount": 67715,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 61587
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6128
+      }
+    ]
+  },
+  "durationMs": 30831,
+  "requestHash": "3021255d656a26aabba21dae20173a17ebaa57126e47ffda17eb221a224f76ba"
+}

@@ -1,0 +1,607 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-12-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "Directly implements the trap formulated by Xifeng and Ping'er (n-11-5, depth 1.7). Xifeng uses Jia Rui's lustful obsession to deceive him into waiting in the unheated passageway overnight. Because it concretely executes the strategy designed in n-11-5, its total depth incorporates that prior plan and is calibrated to 1.8 (just above n-11-5).",
+            "anchorIds": [
+              "p-74591",
+              "p-74188",
+              "p-74870"
+            ],
+            "prerequisiteNodeIds": [
+              "n-11-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A concrete nocturnal prank and physical ordeal inflicted on Jia Rui.",
+            "anchorIds": [
+              "p-74591",
+              "p-74188",
+              "p-74870"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-14-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "Builds on the funeral procession and the grand public assembly of nobility (n-14-4, depth 2.2). Prince Beijing sets up the roadside altar based on ancestral family ties, and upon hearing of the jade Baoyu was born with, specifically requests an audience. Incorporating the funeral context, depth is calibrated to 2.3.",
+            "anchorIds": [
+              "p-88541",
+              "p-88786",
+              "p-88961"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A concrete interaction between the Prince of Beijing and the Jia lineage at the roadside altar.",
+            "anchorIds": [
+              "p-88541",
+              "p-88786",
+              "p-88961"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-16-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "Directly depends on the decision and administrative execution of building the imperial villa (n-16-5, depth 2.8). Jia Qiang's assignment to Suzhou for procurement and Fengjie's maneuver to insert Zhao Mama's sons into the commission follow immediately from the villa construction project, so depth cannot fall below n-16-5 and is calibrated to 2.9.",
+            "anchorIds": [
+              "p-99492",
+              "p-99347",
+              "p-99770"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Describes a specific domestic procurement trip to Suzhou and a local administrative arrangement within the Jia household.",
+            "anchorIds": [
+              "p-99492",
+              "p-99347",
+              "p-99770"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-17-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "The inspection and provisional inscription testing arise directly from the completion of the Grand View Garden villa construction (n-16-5, depth 2.8). Jia Zheng and the retainers reason that before the imperial concubine's visitation, the grounds must have appropriate lantern couplets and plaques, leading directly to testing Baoyu upon encountering him. Total depth is calibrated to 2.9, incorporating n-16-5.",
+            "anchorIds": [
+              "p-101825",
+              "p-102432"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Focuses on the specific occasion of inspecting Grand View Garden upon its architectural completion.",
+            "anchorIds": [
+              "p-101825",
+              "p-102432"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "The Lantern Festival visitation ceremony directly materializes the grand construction of the separate villa grounds (n-16-5, depth 2.8). Yuanchun's arrival, ceremonial processions, and private sigh over excessive extravagance directly consummate the architectural preparation, so its depth cannot be below n-16-5 and is calibrated to 2.9.",
+            "anchorIds": [
+              "p-111983",
+              "p-112619",
+              "p-111555"
+            ],
+            "prerequisiteNodeIds": [
+              "n-16-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Describes the specific ceremonial spectacle, decor, and private lamentation of luxury during Yuanchun's visitation night.",
+            "anchorIds": [
+              "p-111983",
+              "p-112619",
+              "p-111555"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Follows Yuanchun's command to compose five-character regulated verses on the four major locations (n-18-5, depth 2.4). Baochai reasons that Baoyu should replace 'lv yu' with 'lv la' to avoid contesting Yuanchun's revised name, and Daiyu secretly drafts 'Xing Lian Zai Wang' to spare him distress. Incorporating n-18-5, total depth is calibrated to 2.5.",
+            "anchorIds": [
+              "p-115971",
+              "p-116422",
+              "p-116877"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Refers to a specific collaborative incident during the imperial poetry examination.",
+            "anchorIds": [
+              "p-115971",
+              "p-116422",
+              "p-116877"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Yuanchun's decree is a direct inferential consequence of the royal visitation (n-18-5, depth 2.4): reasoning that locking the garden would make it desolate and that the talented sisters and Baoyu ought to inhabit it. Depth cannot be lower than prerequisite n-18-5 and is calibrated to 2.5.",
+            "anchorIds": [
+              "p-146744",
+              "p-146962"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-5"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "专门针对贾府大观园在省亲之后诸公子小姐居住权限与安排的特定谕令。",
+            "anchorIds": [
+              "p-146744",
+              "p-146962"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "Direct consequence of Baoyu taking up residence in Grand View Garden (n-23-2, depth 1.4). After composing the four seasonal poems, Baoyu grows bored, prompting Mingyan to infer his state and procure romance fiction and plays from the bookshops. Calibrated to 1.5.",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记录宝玉进园初期的生活状态、即事诗的外传以及茗烟买杂书与他解闷的特定情境。",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "Baochai's retaliation with 'Fu Jing Qing Zui' and the Yang Guifei comparison builds directly upon Baoyu and Daiyu's reconciliation (n-30-1, depth 4.2). Seeing Daiyu's gloating expression, Baochai deliberately uses the theatrical title of making amends to mock their ongoing quarrel and make-up cycle. Calibrated to 4.3.",
+            "anchorIds": [
+              "p-201288",
+              "p-201783"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "贾母房中宝钗、宝玉、黛玉、凤姐之间的机锋相对的特定对话场面（Anchor 0）。",
+            "anchorIds": [
+              "p-201288",
+              "p-201783"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-30-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Direct narrative and physical continuation of Baoyu rushing back from the sudden rain at the rose trellis (n-30-5, depth 2.5). In his frantic, drenched state, Baoyu angrily kicks the gate and accidentally strikes Xiren in the ribs, leading to her spitting blood that night. Depth cannot be lower than n-30-5 and is calibrated to 2.6.",
+            "anchorIds": [
+              "p-204603",
+              "p-205059"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "怡红院门前误踢及夜间察看吐血的单一事件（Anchor 0）。",
+            "anchorIds": [
+              "p-204603",
+              "p-205059"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-31-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "Daiyu's teasing intervenes in the domestic squabble between Baoyu and Qingwen/Xiren (n-31-3, depth 2.2) and explicitly quotes and tallies Baoyu's pledge from Chapter 30 to become a monk ('作了两个和尚了', n-30-1, depth 4.2). Because it requires the reasoning and dialogue from n-30-1, depth is calibrated to 4.3.",
+            "anchorIds": [
+              "p-207635"
+            ],
+            "prerequisiteNodeIds": [
+              "n-30-1",
+              "n-31-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "黛玉进入怡红院与宝玉、袭人戏谑调解的特定对话场面（Anchor 0）。",
+            "anchorIds": [
+              "p-207635"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Baoyu's withdrawal from social duties and his exclusive respect for Daiyu builds upon the mutual recognition of each other as true soulmates who never urge careerism (n-32-1, depth 2.5). Incorporating that prior understanding, depth is calibrated to 2.6.",
+            "anchorIds": [
+              "p-238491"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "阐述贾宝玉个人对读书出仕的根本反叛态度及对林黛玉的深沉敬爱定位。",
+            "anchorIds": [
+              "p-238491"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Directly adjudicates the twelve chrysanthemum poems composed according to the prescribed rules in n-38-4 (depth 2.9). Li Wan applies aesthetic standards of novelty, natural elegance, and lack of strained diction, placing Daiyu's three poems at the head. Calibrated to 3.0.",
+            "anchorIds": [
+              "p-258789"
+            ],
+            "prerequisiteNodeIds": [
+              "n-38-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "评定本场大观园十二首菊花诗作的高下名次及名句警句赏析。",
+            "anchorIds": [
+              "p-258789"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-45-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Builds upon Baochai's moral advice regarding reading (n-42-4, depth 3.0) and their reconciliation (n-42-7, depth 3.1). Daiyu reflects on her precarious orphan status and genuinely confesses her past misjudgments, while Baochai offers sympathy and promises to provide bird's nest daily. Calibrated to 3.2.",
+            "anchorIds": [
+              "p-307708",
+              "p-308073"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-4",
+              "n-42-7"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Describes the deep mutual understanding and life situation of Daiyu in relation to Baochai.",
+            "anchorIds": [
+              "p-307708",
+              "p-308073"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Directly triggered by Jin Wenxiang's wife reporting Yuanyang's harsh refusal (n-46-4, depth 2.4). Jia She furiously deduces that Yuanyang must be aiming for younger masters like Baoyu or Jia Lian, and formulates coercive threats that she will never escape his power. Calibrated to 2.5.",
+            "anchorIds": [
+              "p-316977",
+              "p-317271"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on Jia She's coercive assertion of ownership over Yuanyang as a household slave.",
+            "anchorIds": [
+              "p-316977",
+              "p-317271"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-46-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Yuanyang's dramatic public oath before Grandmother Jia directly responds to the relayed threats from Jia She (n-46-5, depth 2.5) and the harassment from her sister-in-law (n-46-4, depth 2.4). She deliberately feigns consent to gain an audience with the Dowager, then cuts her hair and vows never to marry. Calibrated to 2.6.",
+            "anchorIds": [
+              "p-317773"
+            ],
+            "prerequisiteNodeIds": [
+              "n-46-4",
+              "n-46-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a singular dramatic confrontation and vow made by Yuan-yang at a specific assembly before Grandmother Jia.",
+            "anchorIds": [
+              "p-317773"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "Daiyu's poetry teaching is made possible by Xiangling moving into Hengwu Court (n-48-2, depth 3.4). In response to Xiangling's request, Daiyu articulates an internal theory of poetic composition: formal rules are secondary to authentic conception and genuine sentiment ('不以词害意'), laying out an ordered curriculum. Calibrated to 3.5.",
+            "anchorIds": [
+              "p-329641"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-2"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Asserts a broad aesthetic principle and poetic pedagogy governing Chinese classical poetry composition.",
+            "anchorIds": [
+              "p-329641"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Culmination of Xiangling's obsessive drafting and continuous immersion ('诗魔', n-48-6, depth 3.5). After drafting two imperfect poems and brooding day and night, her intense concentration produces the eight-line poem in a dream. Depth cannot be lower than n-48-6 and is calibrated to 3.6.",
+            "anchorIds": [
+              "p-332797"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Depicts a singular psychological and creative breakthrough in a dream.",
+            "anchorIds": [
+              "p-332797"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Occurs when Grandmother Jia visits Nuanxiang Wu (n-50-4, depth 2.5) and observes Baoqin standing in the snow against red plums. Based on Grandmother Jia's detailed inquiries into Baoqin's birth data and family, Aunt Xue deduces an intention to propose a match with Baoyu and explains the existing engagement to the Mei family. Calibrated to 2.6.",
+            "anchorIds": [
+              "p-345008",
+              "p-346027"
+            ],
+            "prerequisiteNodeIds": [
+              "n-49-2",
+              "n-50-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "具体涉及贾母、薛姨妈、宝琴及宝玉之间的议婚意向与梅家婚约这一具体事件与个别人物。",
+            "anchorIds": [
+              "p-345008",
+              "p-346027"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-50-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Directly implements Grandmother Jia's proposal made during her visit to Luxue Pavilion and Nuanxiang Wu (n-50-4, depth 2.5). The following day, the members assemble in Nuanxiang Wu to compose and solve spring lantern riddles. Depth cannot be lower than n-50-4 and is calibrated to 2.6.",
+            "anchorIds": [
+              "p-346399",
+              "p-347404"
+            ],
+            "prerequisiteNodeIds": [
+              "n-50-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描绘暖香坞中众人各自出谜、猜谜的具体聚会活动情景。",
+            "anchorIds": [
+              "p-346399",
+              "p-347404"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Depends directly on Baoyu being gifted the unique Russian peacock fur coat (n-52-4, depth 2.3) and Qingwen's ongoing illness (n-51-4, depth 1.0). When outside artisans refuse the damaged coat, Qingwen deduces the peacock feather weaving technique and forces herself to mend it through the night. Calibrated to 2.4.",
+            "anchorIds": [
+              "p-361674"
+            ],
+            "prerequisiteNodeIds": [
+              "n-51-4",
+              "n-52-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记叙重病高烧的晴雯通宵为宝玉缝补雀金呢烧痕这一独一无二的具体事件。",
+            "anchorIds": [
+              "p-361674"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Directly resolves the escalating confrontation in Yihong Court where Chunyan sought protection from her mother (n-59-5, depth 3.9). Sheyue invokes Ping'er and Lin Danian's disciplinary authority, intimidating the aggressive maid into complete submission. Calibrated to 4.0.",
+            "anchorIds": [
+              "p-419195",
+              "p-418568"
+            ],
+            "prerequisiteNodeIds": [
+              "n-59-5"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "展现贾府中怡红院大丫鬟借上层管家权威压制下层粗使仆妇的典型管理场景与权术手段。",
+            "anchorIds": [
+              "p-419195",
+              "p-418568"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-66-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "Follows Jia Lian successfully proposing to Liu Xianglian and securing the ancestral Mandarin Duck swords as a pledge (n-66-3, depth 1.6). Upon receiving the sword, Sanjie infers that her future is secure and hangs the sword over her bed. Incorporating n-66-3, depth is calibrated to 1.7.",
+            "anchorIds": [
+              "p-476246"
+            ],
+            "prerequisiteNodeIds": [
+              "n-66-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描绘尤三姐收剑喜悦与挂剑绣房的具体心理与生活场景。",
+            "anchorIds": [
+              "p-476246"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.3,
+            "rationale": "Culmination of You Erjie's persecution via Fengjie's schemes, Sanjie's dream warning (n-69-3, depth 4.9), and the induced abortion of her male child by Hu Junrong (n-69-4, depth 5.2). Realizing her hopeless situation, she decides to swallow raw gold. Depth incorporates n-69-4 and is calibrated to 5.3.",
+            "anchorIds": [
+              "p-500740",
+              "p-500460"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-3",
+              "n-69-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "尤二姐吞金自绝于绣房炕上的单一惨烈死亡事件。",
+            "anchorIds": [
+              "p-500740",
+              "p-500460"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "6d2cauONI_-cvdAP1sC0gAg",
+  "usage": {
+    "promptTokenCount": 135153,
+    "candidatesTokenCount": 6065,
+    "totalTokenCount": 141218,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 135153
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6065
+      }
+    ]
+  },
+  "durationMs": 32049,
+  "requestHash": "e479f8089ee624c944e93cf5f1671c8774c5ff34c2e0eb0d7c51f8d81857ee7a"
+}

@@ -1,0 +1,465 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-16-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Directly depends on n-15-1 (depth 2.4, where Prince Beijing bestows the imperial rosary upon Baoyu) and n-14-3 (depth 1.0, Daiyu's journey back to the capital). In Chapter 16, Daiyu returns, and Baoyu brings out the rosary as a special gift; Daiyu spurns and rejects it as 'something handled by a foul man'. Because it directly requires Baoyu having received the beads from the Prince in n-15-1, its reasoning depth cannot fall below 2.4, calibrating to 2.5.",
+            "anchorIds": [
+              "p-95544",
+              "p-95165"
+            ],
+            "prerequisiteNodeIds": [
+              "n-14-3",
+              "n-15-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A personal exchange between Baoyu and Daiyu concerning a specific gift.",
+            "anchorIds": [
+              "p-95544",
+              "p-95165"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Directly triggered by the conclusion of the garden inspection in n-17-7 (depth 3.0), where the page boys boldly strip all of Baoyu's accessories upon leaving the garden. In Chapter 18, Daiyu notices that her handcrafted sachet is missing, deduces that Baoyu casually gave it away to the attendants, and furiously shears an unfinished perfume pouch in retaliation before they reconcile upon seeing he kept it inside his shirt. Because it directly continues from n-17-7, its cumulative reasoning depth cannot be below 3.0, placing it at 3.1.",
+            "anchorIds": [
+              "p-109839",
+              "p-109576",
+              "p-110345"
+            ],
+            "prerequisiteNodeIds": [
+              "n-17-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a singular emotional spat and reconciliation between Baoyu and Daiyu over a handcrafted sachet.",
+            "anchorIds": [
+              "p-109839",
+              "p-109576",
+              "p-110345"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-18-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Directly follows Yuanchun's imperial command in n-18-5 (depth 3.1) ordering the siblings and Baoyu to compose regulated verses for the four main pavilions. In Chapter 18, Baoyu struggles with the composition for Yihong Court; Baochai detects 'lv yu', cautions him that Yuanchun specifically altered the name to avoid it, and supplies the classical allusion 'lv la', while Daiyu secretly composes 'Xing Lian Zai Wang' to rescue him. Because it directly executes the test commanded in n-18-5, its depth cannot fall below 3.1, calibrating to 3.2.",
+            "anchorIds": [
+              "p-115971",
+              "p-116422",
+              "p-116877"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Refers to a specific collaborative incident during the imperial poetry examination.",
+            "anchorIds": [
+              "p-115971",
+              "p-116422",
+              "p-116877"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Directly depends on n-18-5 (depth 3.1, where Yuanchun officially names Grand View Garden and institutes the poetic test during her visit). In Chapter 23, Yuanchun, reflecting on the garden standing empty after her visit, deduces that locking it up would make it desolate, and issues an imperial decree permitting the talented sisters and Baoyu to dwell and study within. Because it directly reasons from the completion and naming of the garden in n-18-5, its depth cannot be lower than 3.1 and is calibrated to 3.2.",
+            "anchorIds": [
+              "p-146744",
+              "p-146962"
+            ],
+            "prerequisiteNodeIds": [
+              "n-18-5"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "专门针对贾府大观园在省亲之后诸公子小姐居住权限与安排的特定谕令。",
+            "anchorIds": [
+              "p-146744",
+              "p-146962"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "Directly depends on n-23-2 (depth 2.6), where Baoyu and the sisters move into Grand View Garden. After moving into Yihong Court, Baoyu passes the seasons composing poems on his domestic life, which gain outside acclaim; however, prolonged quietude breeds deep restlessness, prompting Mingyan to infer his master's psychological state and smuggle in romantic playbooks and novels from town. Because this directly inherits and builds upon the garden residence established in n-23-2, its reasoning depth cannot fall below 2.6 and is calibrated to 2.7.",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记录宝玉进园初期的生活状态、即事诗的外传以及茗烟买杂书与他解闷的特定情境。",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly continues the domestic crisis following Grandmother Jia's severe castigation of Lady Xing over the Yuanyang dispute in n-47-1 (depth 2.7). To dissipate the remaining tension and sooth Grandmother Jia's anger, Wang Xifeng deliberately coordinates with Yuanyang during a card game, feeding winning tiles and joking about losing silver to the Dowager's money-box. Because this directly executes a strategic social resolution to n-47-1, its depth cannot fall below 2.7, calibrating to 2.8.",
+            "anchorIds": [
+              "p-320499",
+              "p-320031"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-1"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Describes a specific card game gathering and the witty banter deployed during it.",
+            "anchorIds": [
+              "p-320499"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-47-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-47-1 (depth 2.7), where Grandmother Jia angrily scolds Lady Xing for enabling Jia She's pursuit of Yuanyang. Jia Lian arrives on behalf of Jia She to summon Lady Xing; while peeking outside the doorway, he is spotted by Grandmother Jia, who transfers her lingering fury toward Jia She onto Jia Lian, publicly deriding him with the recent Bao Er's wife scandal. Since it directly inherits the unspent anger and confrontation from n-47-1, its depth must be at least 2.7, calibrated to 2.8.",
+            "anchorIds": [
+              "p-321653",
+              "p-321352",
+              "p-322159"
+            ],
+            "prerequisiteNodeIds": [
+              "n-47-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Describes a specific domestic scolding incident involving Jia Lian and Grandmother Jia.",
+            "anchorIds": [
+              "p-321653"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "Directly depends on n-48-5 (depth 3.6), where Xiangling mastered the poetic spirit ('三昧') through analyzing Wang Wei and receiving instruction from Daiyu (n-48-4, depth 3.5). In n-48-6, Daiyu assigns Xiangling to compose a poem on the moon under the rhyme 'fourteen han'. Xiangling composes two successive attempts, receives critical evaluation, and becomes completely possessed by poetic contemplation ('诗魔'). Because this directly executes the poetic practice stemming from n-48-5, its depth must exceed 3.6, calibrated to 3.7.",
+            "anchorIds": [
+              "p-331583",
+              "p-331905",
+              "p-332384"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-4",
+              "n-48-5"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Portrays Xiang-ling's intense psychological and behavioral absorption in the act of poetic creation.",
+            "anchorIds": [
+              "p-331905",
+              "p-332384"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-52-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-52-4 (depth 2.7, where Grandmother Jia bestows the Russian peacock fur cloak) and n-51-4 (depth 1.0, Qingwen catching cold). When Baoyu scorches the irreplaceable cloak and city craftsmen refuse to undertake the repair, Qingwen deduces how to utilize peacock feathers and boundary-line stitching, staying up all night despite high fever to invisibly mend it. Because it directly requires the cloak gifted in n-52-4, its reasoning depth cannot fall below 2.7, calibrating to 2.8.",
+            "anchorIds": [
+              "p-361674"
+            ],
+            "prerequisiteNodeIds": [
+              "n-51-4",
+              "n-52-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记叙重病高烧的晴雯通宵为宝玉缝补雀金呢烧痕这一独一无二的具体事件。",
+            "anchorIds": [
+              "p-361674"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-70-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.5,
+            "rationale": "Directly depends on n-69-6 (depth 5.4), where Jia Lian organized You Erjie's wake at Lixiangyuan and purchased the coffin with Ping'er's help. In Chapter 70, following the 7-day wake, Jia Mother forbids burial in the ancestral temple, so Jia Lian buries You Erjie next to You Sanjie; meanwhile, Lin Zhixiao submits the servant marriage roster and Fengjie screens out maidservants due to individual complications. Inheriting the direct aftermath of n-69-6, its cumulative reasoning depth cannot fall below 5.4, placing it at 5.5.",
+            "anchorIds": [
+              "p-502324"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Involves specific historical burial arrangements for You Erjie and screening of specific maidservants across the mansion.",
+            "anchorIds": [
+              "p-502324"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "Directly depends on n-96-6 (depth 4.0), where Daiyu collapses and vomits blood at the gate of Xiaoxiang Pavilion after her disoriented encounter with Baoyu. Awakening from unconsciousness, Daiyu recalls Sha Dajie's words about Baoyu marrying Baochai, recognizes that her years of emotional attachment are ended, and actively welcomes death ('反不伤心，惟求速死以完此债'). Because this state of fatalistic despair is the direct inferential and psychological culmination of n-96-6, its depth must exceed 4.0, rating at 4.1.",
+            "anchorIds": [
+              "p-705684",
+              "p-706016"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "林黛玉面临情断生死时的个体心理决绝状态。",
+            "anchorIds": [
+              "p-705684",
+              "p-706016"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "Directly depends on n-98-1 (depth 4.1), where Baoyu slightly revives after Bi Zhi'an's medicine and, finding himself alone with Xiren, begs to be housed with the dying Daiyu. Baochai overhears this, deduces that keeping Baoyu in the dark about Daiyu's condition will perpetuate his delirium, and deliberately makes a blunt, calculated revelation that Daiyu died two days ago to force an emotional severance and resolve his obsession. Because it directly continues from n-98-1, its cumulative depth cannot fall below 4.1, calibrating to 4.2.",
+            "anchorIds": [
+              "p-716119"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A dialogue interaction and interpersonal intervention specifically directed from Baochai to Baoyu.",
+            "anchorIds": [
+              "p-716119"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly depends on n-107-2 (depth 4.9), where Jia Zheng details to Grandmother Jia that the family vaults are exhausted, debts mounting, rents depleted, and outside credit cut off following the forfeiture of both hereditary stipends. In response to Jia Zheng's financial audit, Grandmother Jia unlocks her private coffers, allocates specific sums for living expenses to each branch, downsized domestic staff, and establishes an emergency budget. Because it directly resolves the financial insolvency exposed in n-107-2, its reasoning depth must exceed 4.9, calibrating to 5.0.",
+            "anchorIds": [
+              "p-772577",
+              "p-772279"
+            ],
+            "prerequisiteNodeIds": [
+              "n-107-2"
+            ]
+          },
+          "generality": {
+            "value": 2.1,
+            "rationale": "A broad family policy dictating economic management, property division, and staff reorganization across all branches of the Rong and Ning estates.",
+            "anchorIds": [
+              "p-772577",
+              "p-772279"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Directly depends on n-108-5 (depth 3.9), where Baoyu weeps uncontrollably outside Xiaoxiang Lodge after hearing phantom weeping. Autumn Wave and others drag Baoyu back to Grandmother Jia, who severely reprimands Xiren for leading him into the garden and risking another collapse. Baochai notices Baoyu's sighs and subsequently interrogates Xiren to ascertain what transpired. Because it directly follows Baoyu's retrieval from n-108-5, its cumulative reasoning depth cannot fall below 3.9, calibrated to 4.0.",
+            "anchorIds": [
+              "p-783110"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the immediate aftermath of Baoyu's garden excursion within Grandmother Jia's and Baochai's quarters.",
+            "anchorIds": [
+              "p-783110"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Directly depends on n-109-3 (depth 3.1), where Baoyu, sleeping in the outer room, transfers his longing for Qingwen onto Wu'er and creates an awkward nighttime scene interrupted by Baochai's cough. The next morning and evening, Baochai analyzes Baoyu's persistent obsession and formulates a strategy to 'cure passion with passion' ('以痴情治之'), smoothly inducing Baoyu to move back into the inner chamber where they achieve harmonious marital intimacy. Because it directly resolves Baoyu's lingering delusion from n-109-3, its reasoning depth must exceed 3.1, calibrating to 3.2.",
+            "anchorIds": [
+              "p-788708",
+              "p-787996"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Characterizes the psychological turning point and subsequent harmonious state of Baoyu and Baochai's marriage.",
+            "anchorIds": [
+              "p-788708",
+              "p-787996"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-111-6 (depth 2.7), where Fengjie inspects the burglary of Grandmother Jia's rooms and orders the night-watch women arrested. In Chapter 112, official investigators examine the compound, Jia Lian returns to confirm the loss inventory, and Bao Yong loudly castigates nuns and matchmakers in the courtyard for bringing thieves, terrifying Xichun. As the direct continuation of the morning investigation from n-111-6, its reasoning depth cannot fall below 2.7, calibrating to 2.8.",
+            "anchorIds": [
+              "p-807175",
+              "p-806738",
+              "p-809102"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A particular episode where Jia Lian investigates the burglary, checks the inventory, and Bao Yong curses nuns in the courtyard.",
+            "anchorIds": [
+              "p-807175",
+              "p-806738",
+              "p-809102"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-112-2 (depth 2.7), where the robber gang plots to abduct Miaoyu from Cuilong Hermitage before fleeing to the sea. The thieves execute the scheme at the fifth watch by burning stupefying incense into the hermitage to incapacitate Miaoyu and her attendants, carrying her over the rear garden wall and spiriting her away in a cart toward the coast. Because it directly carries out the plot devised in n-112-2, its reasoning depth cannot be below 2.7, calibrating to 2.8.",
+            "anchorIds": [
+              "p-810111",
+              "p-810479"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific narrative scene depicting Miaoyu's abduction by bandits.",
+            "anchorIds": [
+              "p-810111",
+              "p-810479"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.7,
+            "rationale": "Directly depends on n-119-1 (depth 5.6, where Baoyu makes his prophetic farewell to Lady Wang and Baochai before entering the examination hall) and n-117-1 (depth 5.2, where Baoyu resolved to cut earthly ties upon the monk's awakening). At the provincial exams, Baoyu finishes his examination successfully, but upon turning in his paper at the Dragon Gate, he vanishes into thin air with the monk and Daoist, leaving the family in shock. Because it directly realizes the departure planned in n-119-1, its cumulative depth must exceed 5.6, rating at 5.7.",
+            "anchorIds": [
+              "p-859840",
+              "p-861022"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-1",
+              "n-119-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记述贾宝玉乡试中举后在龙门口走失出尘的个体人生转折事件。",
+            "anchorIds": [
+              "p-859840",
+              "p-861022"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Ot6caqTIGLaXvdAPmsqE2Aw",
+  "usage": {
+    "promptTokenCount": 115817,
+    "candidatesTokenCount": 5869,
+    "totalTokenCount": 121686,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 115817
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5869
+      }
+    ]
+  },
+  "durationMs": 29488,
+  "requestHash": "9a4cc6b80a479957024c6f5dd0492d6fcf35f784249aa7c84d9832e532c72b20"
+}

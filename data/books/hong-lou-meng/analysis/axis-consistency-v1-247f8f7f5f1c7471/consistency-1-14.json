@@ -1,0 +1,367 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-114-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "程日兴观察到贾府奴仆中饱私囊、连年亏空的局面，据此提出严查管事、清查产业与追索亏空的治理对策；贾政则根据祖父仁厚家训及自身服丧力不从心的处境展开辨难，构成一次完整的本地推论与因果分析。",
+            "anchorIds": [
+              "p-823511"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.5,
+            "rationale": "讨论针对贾府这一类豪门世家在败落期面对奴仆侵蚀亏空所适用的整饬与管理原则，属于特定社会阶层与家政管理条件下的策略主张。",
+            "anchorIds": [
+              "p-823511"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "甄应嘉复职陛见奉旨赴海疆安抚，在行前向贾政辞别，贾政托其探看远嫁的探春，甄氏亦托付进京家眷并为甄宝玉求婚，属于叙事性事实与双方事务性交代，仅包含最浅的即时考量。",
+            "anchorIds": [
+              "p-824261"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "局限于甄应嘉与贾政之间在具体官场调动和亲属安置上的单一事件与私人托付。",
+            "anchorIds": [
+              "p-824261"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "惜春早有出世之念，因栊翠庵妙玉遭劫（n-112-3，深度2.5）以及尼僧关于贵妇荣华无常、唯修真方能避苦厄的劝说，进一步验证了红尘凶险，坚定斩断红尘、不恋火坑的意志，推论依赖妙玉遇劫这一关键前提。",
+            "anchorIds": [
+              "p-826236",
+              "p-827309"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "聚焦于惜春个人的出家决意，同时涉及后宅女性命运无常及修行解脱的局部一般性议论。",
+            "anchorIds": [
+              "p-826236"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "承接贾宝玉与甄宝玉初次相见交谈的龃龉（n-115-3，深度2.0），宝玉向宝钗抱怨甄宝玉徒具奇貌却为满口仕途经济的‘禄蠹’，反遭宝钗正言抢白驳斥，宝玉悒郁之下旧疾复发，是该冲突的直接推展。",
+            "anchorIds": [
+              "p-829824",
+              "p-830693"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-3"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "涉及贾宝玉个人精神期待落空引发的心理挫折与生理病症复发，属于特定人物心境与身体状态叙事。",
+            "anchorIds": [
+              "p-829824"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "在宝玉旧疾复发危殆之际（n-115-4，深度2.2），癞头和尚携通灵宝玉登门索银，借通灵宝玉贴耳呼唤唤醒宝玉，宝玉见玉即时苏醒，是仙道力量介入解决其病危危机的直接因果环节。",
+            "anchorIds": [
+              "p-831110",
+              "p-831588"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描述通灵宝玉送归使宝玉还魂苏醒这一具体的超自然叙事事件。",
+            "anchorIds": [
+              "p-831588"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "宝玉在真如福地配殿重览金陵十二钗正副册（n-116-2，深度3.1）后，进一步被引至仙境目睹绛珠仙草，获知神瑛侍者灌溉前因，并参谒黛玉形貌的潇湘妃子被逐、群女化为鬼怪追扑，由宿命判词深化为对前世仙缘与情欲虚妄的形象解构。",
+            "anchorIds": [
+              "p-834368",
+              "p-835178"
+            ],
+            "prerequisiteNodeIds": [
+              "n-116-2"
+            ]
+          },
+          "generality": {
+            "value": 2.8,
+            "rationale": "揭示绛珠草与神瑛侍者的还泪前因，界定宝玉与黛玉等大观园主要儿女私情的仙界源流与本质幻象。",
+            "anchorIds": [
+              "p-834368",
+              "p-835178"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "贾政见宝玉病愈，借丁忧之期与贾琏商议挪借抵押房地银两，筹划带贾蓉扶贾母、黛玉、秦氏灵柩归南安葬，属于基于现实家计与孝道礼法的决策推演，无深层思想依赖。",
+            "anchorIds": [
+              "p-837956"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记录贾府在丁忧期间扶柩归南安葬及筹集差旅费用的具体家政事务。",
+            "anchorIds": [
+              "p-837956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "宝玉受和尚当头棒喝决意还玉（n-117-1，深度5.2），袭人紫鹃拼死阻拦抱住，宝钗明决收存，宝玉由众人誓死护玉的极端反应中，反推出世人‘重玉不重人’的虚妄与荒谬，形成对尘俗执念的冷峻讽喻。",
+            "anchorIds": [
+              "p-840047"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-1"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "针对护玉与还玉的戏剧性冲突，揭示执迷于宝物名分与看破肉身性命之间的反差讽刺。",
+            "anchorIds": [
+              "p-840047"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.3,
+            "rationale": "宝玉在和尚点化索玉（n-117-1，深度5.2）之后，彻底明确了出世意图，不仅宣称‘一子出家，七祖升天’，对家中人伦情感产生根本疏离，是对还玉悟道事件的心态推进与明确表达。",
+            "anchorIds": [
+              "p-841253",
+              "p-843959"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "聚焦于贾宝玉个人决意斩断尘缘、立志出家的心境态度。",
+            "anchorIds": [
+              "p-841253",
+              "p-843959"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "贾琏接贾赦病重家信急于探视，临行前将巧姐托付王夫人平儿、外事托付贾芸贾蔷，为直接的情节事件与临行嘱托，无复杂推理前提。",
+            "anchorIds": [
+              "p-841253",
+              "p-843252"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "贾琏因父病告急南下这一具体事件中的家庭管务交割托付。",
+            "anchorIds": [
+              "p-841253",
+              "p-843252"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "在贾芸贾蔷聚赌滥饮的酒席上（n-117-5，深度1.2），陪酒人提及外藩王爷选妃引得王仁心动，赖家子弟又带来贾雨村被锁拿及妙玉遇害等官非传闻，属于席间谈资信息的引入与人物即时意图萌生。",
+            "anchorIds": [
+              "p-844389",
+              "p-845811"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-5"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "描述一次聚饮中关于外藩选妃、贾雨村案与妙玉下落的特定市井官场传闻。",
+            "anchorIds": [
+              "p-844389",
+              "p-845811"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "宝钗见宝玉深研《庄子》且断绝尘缘之志已露（n-117-3，深度5.3），便以儒家‘不失其赤子之心’本为忠孝济民之大义，对宝玉以巢许夷齐自况的出世思想进行系统辩驳，完成一段完整的儒道伦理交锋推理。",
+            "anchorIds": [
+              "p-851846"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-3"
+            ]
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "探讨儒家忠孝入世与道家遁世离群在‘赤子之心’与人品根柢上的义理分歧，具有涵盖两家人生哲学范畴的讨论广度。",
+            "anchorIds": [
+              "p-851846"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "外藩王府得知贾家乃世代勋戚后，深恐违犯朝廷禁令获罪，断然斥逐送年庚立文书的贾芸与王仁，使得贾环等人卖巧姐的阴谋（n-119-2，深度2.8）由于外部体制法度的刚性约束而破产，因果链条完整清晰。",
+            "anchorIds": [
+              "p-858839"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "记录外藩王府畏罪逐走贾芸王仁、退婚拒纳巧姐的单一事件始末。",
+            "anchorIds": [
+              "p-858839"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.3,
+            "rationale": "宝玉进场前向王夫人辞别时预言必中举人以完结今生差使（n-119-1，深度3.5），并早在得玉被点化时便立下舍身出世之愿（n-117-1，深度5.2）；交卷出场在龙门口随僧道突然走失，系将其长线悟道与绝尘辞世计划付诸终极实现。",
+            "anchorIds": [
+              "p-859840",
+              "p-861022"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-1",
+              "n-119-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记述贾宝玉乡试中举后在龙门口走失出尘的个体人生转折事件。",
+            "anchorIds": [
+              "p-859840",
+              "p-861022"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "皇帝阅卷嘉许宝玉贾兰并召见（n-119-5，深度5.3），大臣奏明宝玉出场迷失与贾氏三代功勋，皇上念旧恩、悯其罪，加之海疆靖寇奏捷，降旨大赦天下、开复贾赦贾珍世职并全行赏还被抄家产，是科举登榜与政治恩典结合的直接政治决断与推演结果。",
+            "anchorIds": [
+              "p-861816",
+              "p-862157"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "涵盖贾氏宁荣二府世职恢复、产业发还与全族赦免的整体家族政治运势。",
+            "anchorIds": [
+              "p-861816",
+              "p-862157"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "zN2carGkM7icvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 47199,
+    "candidatesTokenCount": 4108,
+    "totalTokenCount": 51307,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 47199
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 4108
+      }
+    ]
+  },
+  "durationMs": 23922,
+  "requestHash": "cb331cf0418287a31956bba5c5dc78ac68755041a8f3de4c3aaddfd617c383f1"
+}

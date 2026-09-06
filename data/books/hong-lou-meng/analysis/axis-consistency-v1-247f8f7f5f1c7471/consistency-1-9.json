@@ -1,0 +1,552 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-69-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.2,
+            "rationale": "胡君荣误诊下药致尤二姐堕胎之后，凤姐趁势借打卦算命把冲犯之由推给属兔的秋桐。该推论直接承接并利用了n-69-2（凤姐借剑杀人之计，depth 4.8），必须整合其既有的策略推演链条，并在其上推进一重算计与挑拨，故评分定为5.2。",
+            "anchorIds": [
+              "p-499258"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "特指胡君荣误诊打胎及凤姐借卦加深秋桐二姐矛盾的具体事件。",
+            "anchorIds": [
+              "p-499258"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-69-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "尤二姐吞金身亡（n-69-5，depth 3.2）后，贾琏悲恸欲绝、誓言复仇并筹办丧礼，凤姐装病克扣、贾母主张薄葬，平儿暗中偷赠碎银助贾琏赊办楠木棺椁。此节点直接建立在尤二姐自尽之结果上并展开治丧博弈，深度不能低于前置节点n-69-5，故评定为3.5。",
+            "anchorIds": [
+              "p-501123",
+              "p-502065"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Depicts a specific sequence of domestic events regarding You Erjie's burial and financial disputes within the Jia household.",
+            "anchorIds": [
+              "p-501123",
+              "p-502065"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "平儿向鸳鸯透露凤姐经期经月不绝、已成血山崩重症，分析凤姐好强忌医且察三访四的心态与病理根由。该对话发生在鸳鸯探望司棋之后顺路看视凤姐之时（n-72-1，depth 1.5），顺承该情节走访场景并开展局部推论，深度评定为1.8。",
+            "anchorIds": [
+              "p-517838"
+            ],
+            "prerequisiteNodeIds": [
+              "n-72-1"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Characterizes Fengjie's medical condition, psychological stubbornness, and behavioral tendencies over several months.",
+            "anchorIds": [
+              "p-517838"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "林之孝向贾琏汇报贾雨村降官传闻，并结合府内人口膨胀、嚼谷浩繁的现状，从经济角度提出打发出力老家人、裁减内外丫鬟配人的系统性对策，属于有完整理据的局部治理推论。",
+            "anchorIds": [
+              "p-523625"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Proposes a systematic household-wide policy for reducing domestic retainers, maids, and food allowances across all branches.",
+            "anchorIds": [
+              "p-523625"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-72-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "来旺妇倚仗凤姐威势强逼彩霞许配其不肖之子，彩霞父母畏惧凤姐权势只得应允，彩霞心知旺儿之子不肖而托妹求告赵姨娘。文本展现的是一个因势生谋、依附权力的直接行动与应对，包含单步因果逻辑。",
+            "anchorIds": [
+              "p-524781",
+              "p-521535",
+              "p-524515"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Describes a specific coerced matrimonial proposal involving Cai Xia, Wang'er's son, and Lady Wang's concubine Zhao.",
+            "anchorIds": [
+              "p-524781",
+              "p-521535",
+              "p-524515"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-73-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "面对王住儿媳妇的赖债反噬与探春、平儿的联手惩治（n-73-6，depth 2.2），迎春以《太上感应篇》为由，申述其“不讨情、不苛责、宁无金凤也不多事”的消极避世哲学。该推论直接承接n-73-6并形成对其处置方式的消极应对，深度评定为2.5。",
+            "anchorIds": [
+              "p-531679"
+            ],
+            "prerequisiteNodeIds": [
+              "n-73-6"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "It reflects Yingchun's individual philosophical defense and character-specific disposition toward interpersonal conflict across moments, situated between a single scene and a personal constant.",
+            "anchorIds": [
+              "p-531679"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "王夫人因绣春囊严质凤姐后（n-74-1，depth 3.2），王善保家的借机进谗构陷晴雯掐尖要强，王夫人据此对照先前所见印证其猜疑，严词训斥晴雯并动念撵逐。该环节直接依赖王夫人对绣春囊事件追查的主线决断，深度评定为3.4。",
+            "anchorIds": [
+              "p-536073",
+              "p-536949"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-1"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "The accusation and scolding focus squarely on Qingwen as a named individual, though reflecting general suspicion towards alluring maids.",
+            "anchorIds": [
+              "p-536073",
+              "p-536949"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "王夫人受王善保家的挑唆决定夜查大观园并严防晴雯（n-74-2，depth 3.4），夜检队伍直扑怡红院。晴雯面对搜检愤而将箱子倒地以证清白，直接由n-74-2中的嫌隙与指控触发，为其直接抗争，深度评定为3.6。",
+            "anchorIds": [
+              "p-537732"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "This captures a single dramatic event and confrontation during the nighttime search in Baoyu's quarters.",
+            "anchorIds": [
+              "p-537732"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-74-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "抄检大观园导致入画私藏之物暴露，惜春在得知宁国府各种不堪风评并目睹探春痛斥抄家（n-74-4，depth 4.1）之背景下，推出“不作狠心人难得自了汉”，决意绝恕入画并杜绝宁国府。深度必须整合前序家族瓦解之认知，评定为4.3。",
+            "anchorIds": [
+              "p-540590",
+              "p-542397"
+            ],
+            "prerequisiteNodeIds": [
+              "n-74-4"
+            ]
+          },
+          "generality": {
+            "value": 4.8,
+            "rationale": "Xichun asserts a general moral strategy of absolute non-involvement and severing ties to avoid pollution across family branches.",
+            "anchorIds": [
+              "p-540590",
+              "p-542397"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "尤氏闻知邸报载江南甄家抄没家私，又见甄家女眷惊慌送物至荣国府，嬷嬷劝其避嫌，尤氏据此推知必有隐秘从而回避王夫人上房。这是基于现场情报的直接推导。",
+            "anchorIds": [
+              "p-543663"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Applies to the specific unfolding crisis of the Zhen household and its immediate reverberation upon the Rongguo mansion's inner circle.",
+            "anchorIds": [
+              "p-543663"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.3,
+            "rationale": "贾母用饭时发现添菜及下人米饭，王夫人与鸳鸯解释为连年旱涝田租不齐、各房缩减度日及“可著头做帽子”，包含从日常生活细节推知府第财务亏空的内部分析与论证。",
+            "anchorIds": [
+              "p-544956"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Pertains to the domestic economic constraints and provisioning system for the entirety of the Rongguo mansion.",
+            "anchorIds": [
+              "p-544956"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.4,
+            "rationale": "贾珍借习射设赌聚众饮博，邢德全酒后因输钱受冷落而向贾珍大发牢骚，痛诉邢夫人克扣家产，属于聚赌现场由酒醉引发的即景宣泄与直接叙述。",
+            "anchorIds": [
+              "p-547300",
+              "p-548971"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.1,
+            "rationale": "Pertains to the circle of young gentlemen and relatives gathered at the Ningguo estate and Xing Dequan's private grievance against his sister.",
+            "anchorIds": [
+              "p-547300",
+              "p-548971"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "贾珍十四夜在丛绿堂私宴赏月，忽闻祠堂墙下长叹之声与槅扇自开自阖之异象，众人惊悚疑惧。属于直接描写的超自然异象见闻，推论步骤极浅。",
+            "anchorIds": [
+              "p-549766"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single spooky incident occurring at mid-night in the ancestral temple garden.",
+            "anchorIds": [
+              "p-549766"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-75-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "中秋贾母率众登凸碧山庄赏月，触目人丁稀落不及往年，因而命击鼓传花行令以强作欢颜。包含贾母对家族今昔聚散人数对比的直接感触与应对推想。",
+            "anchorIds": [
+              "p-550628"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "Restricted to the collective gathering of the Jia family on the night of the Mid-Autumn festival.",
+            "anchorIds": [
+              "p-550628"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "黛玉湘云在凹晶馆近水赏月并展开人生缺憾的谈论（n-76-2，depth 2.5），随后数栏杆定韵，即景起社联吟五言排律。联诗对句直接顺承n-76-2的境况与心绪，深度评定为2.7。",
+            "anchorIds": [
+              "p-557120",
+              "p-558357"
+            ],
+            "prerequisiteNodeIds": [
+              "n-76-2"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Specific to the poetic duel and verses composed between Daiyu and Xiangyun by the water.",
+            "anchorIds": [
+              "p-557120",
+              "p-558357"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-76-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "联诗散后湘云同宿潇湘馆，因湘云择席、黛玉多病失眠，二人在被中辗转低语。此节点仅为联诗之后就寝的生活情节交待，与妙玉续诗（n-76-5）并无推论依存关系，移除n-76-5后作为即景生活观察，深度评定为1.2。",
+            "anchorIds": [
+              "p-560408"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Restricted to the personal sleeping habits and physical frailties of Daiyu and Xiangyun.",
+            "anchorIds": [
+              "p-560408"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "王夫人为凤姐配药遍寻好参不得，贾母存参亦成朽木；宝钗洞悉市肆参药多伪劣、掺杂作假的行径，提出托薛家参行伙计采买原枝好参。具有对商业内情的充分推论与应对。",
+            "anchorIds": [
+              "p-560755",
+              "p-561289"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "Addresses practical commercial knowledge regarding genuine versus counterfeit medicines and the symbolic depletion of medicinal reserves in noble estates.",
+            "anchorIds": [
+              "p-560755",
+              "p-561289"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "王夫人雷厉风行查抄怡红院并逐出晴雯（n-77-3，depth 3.7）后，宝玉偷偷探视病危晴雯，晴雯抱屈剖白、铰指甲换贴身内袄。该行为直接发生在驱逐的即时创痛之上，深度必须统摄n-77-3的事件链，评定为3.9。",
+            "anchorIds": [
+              "p-567395",
+              "p-567093"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-3"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "Specific, bounded narrative interaction between Baoyu and Qingwen in the outlying cottage.",
+            "anchorIds": [
+              "p-567395"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "芳官等戏班女孩子被王夫人逐出（n-77-3，depth 3.7），干娘欲逼其出嫁，三人寻死觅活执意出家；水月庵姑子顺水推舟劝服王夫人允准。事件承接n-77-3的驱逐处置，深度评定为3.9。",
+            "anchorIds": [
+              "p-570324"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-3"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "Pertains specifically to the small bounded group of the three expelled theatrical actresses (Fangguan, Ruiguan, Ouguan).",
+            "anchorIds": [
+              "p-570324"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-78-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "王夫人向贾母回明撵逐晴雯及戏子丫头（n-77-3，depth 3.7）的缘由，并解释暗提袭人月钱的盘算，贾母认可其做法。该汇报是对n-77-3行动的正当化总结与向最高长辈的事后陈情，深度评定为3.9。",
+            "anchorIds": [
+              "p-571285"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-3"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Treats specifically the management, temperament, and status assignment of Qingwen and Xiren within Baoyu's quarters.",
+            "anchorIds": [
+              "p-571285"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾赦因看重孙绍祖家资与权变将其许配迎春，贾政据其非诗礼族裔力劝无效，贾母听任天意，迎春仓促出嫁并迁出大观园。包含各方在联姻决策中的利害权衡与推论。",
+            "anchorIds": [
+              "p-583145"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A specific arranged marriage contract concerning Yingchun and Sun Shaozu.",
+            "anchorIds": [
+              "p-583145"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "香菱向宝玉通报薛蟠与桂花夏家定亲喜讯，赞赏夏家姑娘才貌并满心期待作诗伙伴；宝玉则由世事直觉隐生担忧，引发香菱羞恼。属于单步信息传递与直接态度对立。",
+            "anchorIds": [
+              "p-583765"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on Xue Pan's specific betrothal to Xia Jingui and Xiangling's individual expectations.",
+            "anchorIds": [
+              "p-583765"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-79-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "宝玉因抄检大观园、逐司棋（n-77-2，depth 3.1）、别迎春（n-79-2，depth 2.0）、悲晴雯（n-77-4，depth 3.9）等重重变故交集，兼染外感卧病百日。该病倒属于对近期园中诸美散落与毁灭的综合精神崩溃，深度必须高于所依赖的前置支链最高值（n-77-4之3.9），评定为4.1。",
+            "anchorIds": [
+              "p-583765"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-2",
+              "n-77-4",
+              "n-79-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Describes the individual mental and physical illness of Baoyu and his subsequent isolation in Daguan Garden.",
+            "anchorIds": [
+              "p-583765"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-81-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "探春、李纹、李绮、邢岫烟在蓼溆钓鱼占年内运气，宝玉急躁断竿断线引发众人大笑。该场景为直接描写的池畔游钓嬉戏，无任何推论或前序论证依赖，深度评定为0.0。",
+            "anchorIds": [
+              "p-595501"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single leisure scene of four maidens and Baoyu fishing at Liaoxu.",
+            "anchorIds": [
+              "p-595501"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "g92capydMqGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 74898,
+    "candidatesTokenCount": 5752,
+    "totalTokenCount": 80650,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 74898
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5752
+      }
+    ]
+  },
+  "durationMs": 30940,
+  "requestHash": "725e45569c7930e3f22a7e5c71aeca8802f3bc4d230ccb61ef1338dfd37a14df"
+}

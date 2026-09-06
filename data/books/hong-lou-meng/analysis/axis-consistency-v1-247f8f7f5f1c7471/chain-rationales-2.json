@@ -1,0 +1,242 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-109-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly depends on n-108-6, where Baoyu is retrieved from Xiaoxiang Guan and Baochai interrogates Xiren to prevent a relapse. In chapter 109, Baochai uses conversation with Xiren to subtly dissuade Baoyu from believing in spirits. Baoyu deduces that Daiyu may look down upon mortals or that he might meet her in dreams by sleeping apart in the outer room, continuing the psychological sequence from n-108-6 to a depth of 5.0.",
+            "anchorIds": [
+              "p-783629"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nighttime vigil by Baoyu in his outer bedroom.",
+            "anchorIds": [
+              "p-783629"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly depends on n-109-1, where Baoyu chooses to sleep alone in the outer room in the hope of meeting Daiyu's soul in a dream. While lying awake in the outer room, Baoyu notices Wu'er's appearance and attire, infers a strong resemblance to Qingwen, remembers Qingwen's untimely death and parting lament, and impulsively transfers his longing for Qingwen onto Wu'er, carrying forward the prior psychological sequence at depth 5.0.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nighttime interaction between Baoyu and Wu'er in the outer room.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly depends on n-109-3, where Baoyu, sleeping in the outer room, transfers his longing for Qingwen onto Wu'er and creates an awkward nighttime scene interrupted by Baochai's cough. The next morning and evening, Baochai analyzes Baoyu's persistent obsession and formulates a strategy to 'cure passion with passion' ('以痴情治之'), smoothly inducing Baoyu to move back into the inner chamber where they achieve harmonious marital intimacy, resolving the prior delusion at depth 5.0.",
+            "anchorIds": [
+              "p-788708",
+              "p-787996"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Characterizes the psychological turning point and subsequent harmonious state of Baoyu and Baochai's marriage.",
+            "anchorIds": [
+              "p-788708",
+              "p-787996"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-112-3, where Miaoyu is abducted by bandits. Baoyu synthesizes the news of her kidnapping with Daiyu's death and the earlier dispersal of his sisters, drawing on Zhuangzi's philosophy to infer locally that all earthly attachments inevitably scatter like wind and clouds, placing this conclusion between local sequence and argument at 2.8.",
+            "anchorIds": [
+              "p-818135"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3"
+            ]
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "宝玉的感叹从具体姊妹的离散上升至对整个人生世事‘难免风流云散’的普遍性感慨，涵盖较宽的人生命运层面，但仍附属于其个人主观伤感与特定家族命运范畴。",
+            "anchorIds": [
+              "p-818135"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-114-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-114-1, where Baoyu considers predetermination and the possibility of foreknowledge, and n-112-3, reporting Miaoyu's abduction. Baochai uses Miaoyu's failure to foresee her own disaster as an empirical counterexample to demonstrate the absurdity of divination and foreknowledge, alongside explaining the Xue family's pending move, locating the combined argument at 2.8.",
+            "anchorIds": [
+              "p-821200"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3",
+              "n-114-1"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "前半部分驳斥迷信预知，属于认识论层面的评价；后半部分属于对薛家自身处境与亲戚相处原则（‘那里有个一辈子住在亲戚家的’）的说明。",
+            "anchorIds": [
+              "p-821200"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-112-3, in which Miaoyu is abducted from Cuilong Hermitage. When the visiting nun discusses Miaoyu's fate and the fragility of worldly status, Xichun uses Miaoyu's disaster to confirm that earthly life is a perilous snare and reaffirms her resolution to abandon secular existence, placing this developed inferential step at 2.8.",
+            "anchorIds": [
+              "p-826236",
+              "p-827309"
+            ],
+            "prerequisiteNodeIds": [
+              "n-112-3"
+            ]
+          },
+          "generality": {
+            "value": 2.2,
+            "rationale": "聚焦于惜春个人的出家决意，同时涉及后宅女性命运无常及修行解脱的局部一般性议论。",
+            "anchorIds": [
+              "p-826236"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.7,
+            "rationale": "Directly depends on n-119-5, where Baoyu and Jia Lan sit the provincial examination and Baoyu vanishes upon turning in his paper. When the emperor inspects the passing examination essays, recalls the Jia ancestors' merit, and hears the report of Baoyu's disappearance alongside victory on the sea borders, he issues an imperial pardon and fully restores their ranks and confiscated estates, forming a multi-step political consequence evaluated at 5.7.",
+            "anchorIds": [
+              "p-861816",
+              "p-862157"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-5"
+            ]
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "涵盖贾氏宁荣二府世职恢复、产业发还与全族赦免的整体家族政治运势。",
+            "anchorIds": [
+              "p-861816",
+              "p-862157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.7,
+            "rationale": "Directly depends on n-119-3, where Granny Liu secretly spirits Qiaojie into hiding in the countryside, and n-119-6, where the imperial court restores the Jia family's titles and estates. Upon learning of the family's exoneration and Jia Lian's return home, Granny Liu and Ping'er safely escort Qiaojie back to the Rongguo mansion, combining the domestic rescue and imperial restoration sequences at 5.7.",
+            "anchorIds": [
+              "p-862749",
+              "p-863605",
+              "p-863897"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-3",
+              "n-119-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Describes Jia Lian's return, Qiaojie's safe homecoming, and the reconciliation between Lady Xing and Lady Wang.",
+            "anchorIds": [
+              "p-862749",
+              "p-863605",
+              "p-863897"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-120-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.7,
+            "rationale": "Directly depends on n-119-5, where Baoyu walks out of the examination hall and vanishes from the mortal world. Anchored at Piling Station, Jia Zheng witnesses Baoyu in a crimson cloak offering his final four bows in the snow before ascending with the Buddhist monk and Daoist priest, providing the narrative and metaphysical closure to Baoyu's departure at depth 5.7.",
+            "anchorIds": [
+              "p-865078",
+              "p-865486"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Describes the specific, solemn scene of Baoyu bowing to his father in the snow before disappearing into the transcendence of the Great Void.",
+            "anchorIds": [
+              "p-865078",
+              "p-865486"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "wd6casayMricvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 45101,
+    "candidatesTokenCount": 2654,
+    "totalTokenCount": 47755,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 45101
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2654
+      }
+    ]
+  },
+  "durationMs": 14413,
+  "requestHash": "7ee9d505212c5deeedc51e4bb9553422126d60688f84af30e759d2a57c857b4d"
+}

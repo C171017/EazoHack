@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 1,
+        "reason": "组内包含节点 n-9-5（学堂李贵弹压并逼金荣磕头），与后续贾瑞调戏凤姐及凤姐设相思局惩戒贾瑞（n-11-3、n-11-5、n-12-1、n-12-2）并无因果或惩戒关系，标签“贾瑞妄动与相思局伏诛”未能合理涵盖该节点的主题（学童打闹与学堂秩序），强行并入使范围不协调。"
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9N6cao2IIfmcvdAPz_aKkAg",
+  "usage": {
+    "promptTokenCount": 26714,
+    "candidatesTokenCount": 151,
+    "totalTokenCount": 26865,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 26714
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 151
+      }
+    ]
+  },
+  "durationMs": 2950,
+  "requestHash": "974aa503555dda1e17ebd516ae5561de408c4365a8b6fb4a63fd1fef644a1691"
+}

@@ -6,6 +6,7 @@ assert(['http:', 'https:'].includes(base.protocol));
 assert(!base.username && !base.password, 'Do not put credentials in the URL');
 const pointer = JSON.parse(await readFile('data/books/plato-republic/analysis/current-map.json', 'utf8'));
 const hierarchy = JSON.parse(await readFile(`data/books/plato-republic/analysis/${pointer.version}/hierarchy.json`, 'utf8'));
+const mapVersion = `sample:plato-republic:${hierarchy.version}`;
 // Optional deployment-protection bypass value is read from the process, never printed.
 const headers = process.env.VERCEL_AUTOMATION_BYPASS_SECRET
   ? { 'x-vercel-protection-bypass': process.env.VERCEL_AUTOMATION_BYPASS_SECRET } : {};
@@ -18,9 +19,9 @@ async function check(route, expected, options = {}, validate) {
   console.log(`PASS ${route}: ${expected}, ${Math.round(performance.now() - started)} ms`);
 }
 await check('/', 200, {}, async response => assert((await response.text()).includes('Eazo')));
-await check(`/api/book-map?kind=heat-index&version=${encodeURIComponent(hierarchy.version)}`, 200, {}, async response => {
+await check(`/api/book-map?kind=heat-index&version=${encodeURIComponent(mapVersion)}`, 200, {}, async response => {
   const body = await response.json();
-  assert.equal(body.version, hierarchy.version);
+  assert.equal(body.version, mapVersion);
   assert(body.total > 0 && body.leaves.length > 0);
 });
 await check('/api/book-map?kind=heat-index&version=stale', 409);

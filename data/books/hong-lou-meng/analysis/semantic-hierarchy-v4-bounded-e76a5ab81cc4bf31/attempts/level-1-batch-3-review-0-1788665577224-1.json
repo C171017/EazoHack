@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 1,
+        "reason": "Summary states that '凤姐与其密谋定计' (Fengjie conspired with Jia Rui), which directly contradicts the source passages where Fengjie set a trap against Jia Rui, and instead conspired with Ping'er ('凤姐与平儿密谋')."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5t6capGZM8uUvdAPjtXo4Qk",
+  "usage": {
+    "promptTokenCount": 26713,
+    "candidatesTokenCount": 85,
+    "totalTokenCount": 26798,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 26713
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 85
+      }
+    ]
+  },
+  "durationMs": 2958,
+  "requestHash": "feebb82d5e6f2c5eb73cb58a2679600ec372a0dc8ab128fc08463e8e3840ebdb"
+}

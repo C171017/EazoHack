@@ -1,0 +1,560 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-95-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "元妃因痰疾突然暴崩属于纯粹直接引入的历史叙事事件，并无前置推导或论证链条，属于明确的起始事件点。",
+            "anchorIds": [
+              "p-693907",
+              "p-694480"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "元春病逝这一贾府历史转折的关键具体事件。",
+            "anchorIds": [
+              "p-693907",
+              "p-694480"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "承接凤姐设计的掉包计（n-96-3，深度3.7），傻大姐无意中听到上头商议娶宝姑娘冲喜且隐瞒林姑娘的秘密并在受责打后向黛玉全盘泄露。作为掉包计在执行前期发生的机关泄露，其事件理解必须建立在先前掉包计策已设立的基础上，属于前述计策链条上的直接后果与下移一环。",
+            "anchorIds": [
+              "p-703452"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "傻大姐失言泄密与黛玉偶然听闻的单个具体场景。",
+            "anchorIds": [
+              "p-703452"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "借调雪雁作障眼法是王熙凤实施掉包奇谋（n-96-3，深度3.7）的具体操作步骤。为防宝玉生疑，特借黛玉贴身丫鬟搀扶新娘，完全依附于并执行了掉包计的设定，因而其累计深度不能低于前置计策n-96-3。",
+            "anchorIds": [
+              "p-711784",
+              "p-713321",
+              "p-713832"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Specifies a single concrete operational stratagem/event involving borrowing Xueyan to attend the wedding ceremony.",
+            "anchorIds": [
+              "p-711784",
+              "p-713832"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "紧承宝玉洞房揭盖头发现换成了宝钗而引发急怒旧病陡发（n-97-7，深度2.1），回房后神志昏沉、汤水不进，城外穷医毕知庵诊其为‘内伤外感’并处方调治。这是病势恶化后的直接诊治发展。",
+            "anchorIds": [
+              "p-715589",
+              "p-715943"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Refers to a specific medical episode and diagnosis of Baoyu's acute illness.",
+            "anchorIds": [
+              "p-715943"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "文本回叙大娶当夜潇湘馆凄凉垂危、李纨平儿前去照料（n-97-5，深度3.6）的后续发展：黛玉自知不中用，向紫鹃托孤还乡，临终直呼‘宝玉，你好……’而溘然长逝。这是黛玉病危垂绝生命走向终结的必然落幕环节，累积了前面焚稿绝望与病势濒危的整条因果链。",
+            "anchorIds": [
+              "p-718274",
+              "p-718509",
+              "p-718735"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts the single specific scene of Daiyu's death and her last words.",
+            "anchorIds": [
+              "p-718509"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "宝玉在阴司梦醒神安（n-98-3，深度2.3）后执意至潇湘馆黛玉灵前痛哭，紫鹃向其陈告此前黛玉焚稿断痴情（n-97-4，深度3.2）及复病始末。此节点综合了两条线索（宝玉知死后祭灵与紫鹃道出焚稿真情），因此深度相应整合并超过n-97-4。",
+            "anchorIds": [
+              "p-719835",
+              "p-720350",
+              "p-720642"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-4",
+              "n-98-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A concrete mourning scene at Xiaoxiang Guan involving Baoyu, Zijuan, and the surrounding family members.",
+            "anchorIds": [
+              "p-720350"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.4,
+            "rationale": "宝玉在潇湘馆大恸祭灵后饮泣收心调养，百日体健且黛玉功服期满（n-98-6，深度3.3），贾母与薛姨妈商定另择吉日为宝钗与宝玉圆房，属于承接祭灵收心调养康复后的家庭决策，必须承接前文n-98-6的链条。",
+            "anchorIds": [
+              "p-720893"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "An agreement between two matrons on scheduling a wedding consummation for a specific couple.",
+            "anchorIds": [
+              "p-720893"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "管门李十儿在贾政外任粮道窘迫时，利用地方官场潜规则、上下掣肘与名利安危进行一轮深入的局部游说推理，使贾政从坚持清名转向默许舞弊放手不问。",
+            "anchorIds": [
+              "p-724569"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "Analyzes systemic bureaucratic survival and corruption codes within local administration, applied directly to Jia Zheng's official post.",
+            "anchorIds": [
+              "p-724569"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "总制周琼来信提出求亲，贾政根据门第、相貌及同乡旧好进行简单权衡并产生拟允倾向，为局部初级考量，无复杂前提推理。",
+            "anchorIds": [
+              "p-725941",
+              "p-726013",
+              "p-726218"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific marriage proposal letter and Jia Zheng's initial private deliberation on it.",
+            "anchorIds": [
+              "p-726013",
+              "p-726218"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "贾政在公馆读邸报得知薛蟠人命案被驳回拟抵绞监候，联想到自己曾代薛家向知县托情，从而推导出可能引火烧身的恐慌，为两步直接逻辑推想。",
+            "anchorIds": [
+              "p-726403",
+              "p-726525",
+              "p-727003"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Relates to Jia Zheng's personal discovery of legal developments in Xue Pan's specific manslaughter trial.",
+            "anchorIds": [
+              "p-726403",
+              "p-727003"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "夏金桂假醉诱薛蝌，宝蟾示警香菱走来打断其好事，金桂恼羞成怒转而恨透香菱，为小说中自足发展的具体冲突情节，无独立前置推理节点依赖。",
+            "anchorIds": [
+              "p-730152",
+              "p-729662"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts a specific interpersonal dispute and attempted seduction in the Xue household courtyard.",
+            "anchorIds": [
+              "p-730152"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "赵姨娘闻知贾母与王夫人定议探春远嫁（n-100-4，深度2.4），从自身刻薄偏狭心态推论探春在家瞧不起自己、阻碍贾环出路，特意前去冷嘲热讽，直接由探春议婚议定引发。",
+            "anchorIds": [
+              "p-731509"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A single domestic confrontation between Zhao Yiniang and Tanchun.",
+            "anchorIds": [
+              "p-731509"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "凤姐夜走大观园遇恶犬、阴风并恍惚见秦氏幽魂，为叙事中直接展现的灵异惊骇事件，秦氏提及当年之托是引述旧事而非复杂推导推理。",
+            "anchorIds": [
+              "p-733554",
+              "p-733106"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single ghostly encounter experienced by Wang Xifeng in the nighttime garden.",
+            "anchorIds": [
+              "p-733554"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾琏为王仁打点亏空未果摔碗发难，揭发王仁借办生日敛财等劣迹，引发夫妻口角与平儿劝争，为单次家庭内部利益与情感冲突。",
+            "anchorIds": [
+              "p-735449",
+              "p-736791"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A private argument between Jia Lian, Wang Xifeng, and Ping'er over Wang Ren's character and debts.",
+            "anchorIds": [
+              "p-735449",
+              "p-736791"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-101-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "凤姐见宝玉夫妇恩爱，因雀金呢勾起晴雯旧忆，顺势推想出将面貌相似的柳五儿调入以慰宝玉心意并补偿旧隙的算计与提议。",
+            "anchorIds": [
+              "p-737724"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A specific domestic staffing decision proposed by Fengjie for Baoyu's courtyard.",
+            "anchorIds": [
+              "p-737724"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "承接前文定议探春远嫁（n-100-4，深度2.4），王夫人向宝钗交代探春出嫁在即，托付家事，探春以纲常大体劝慰宝玉后正式启程登舟远嫁，是该婚事议定后的落实履约行动。",
+            "anchorIds": [
+              "p-741051",
+              "p-741499"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "记述探春辞别远嫁及王夫人与宝钗托付家务的具体家庭场面。",
+            "anchorIds": [
+              "p-741051",
+              "p-741499"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "薛家婆子慌张至贾府王夫人处报丧夏金桂暴毙，为情节直接带入的突发新闻，无前置推论展开。",
+            "anchorIds": [
+              "p-746378"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "关于薛家婆子报信夏金桂身亡的单个场景。",
+            "anchorIds": [
+              "p-746378"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-103-8",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾雨村因公停轿于急流津荒庙，遇打坐的甄士隐，士隐以‘葫芦’‘玉钗’等机锋点化，雨村辨出恩公并产生疑悟，为机缘巧合的情节会面。",
+            "anchorIds": [
+              "p-751935",
+              "p-752361"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "雨村与士隐二人在渡口荒庙相遇对话的单一离奇事件。",
+            "anchorIds": [
+              "p-751935",
+              "p-752361"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-104-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "倪二醉酒躺街冲撞雨村仪仗，自恃放诞被雨村杖责并收押，为独立发生的突发市井冲突事件。",
+            "anchorIds": [
+              "p-753186"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "倪二醉酒冲撞贾雨村仪仗受罚的单一街头事件。",
+            "anchorIds": [
+              "p-753186"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-105-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "焦大被押解至贾政处号天蹈地哭诉宁府珍大爷、蓉哥儿被抓，女眷被关，家产砸烂抄尽，为焦大亲历目睹的第一手现场控诉汇报。",
+            "anchorIds": [
+              "p-763405"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Describes the specific catastrophe and immediate scene of devastation at the Ning mansion.",
+            "anchorIds": [
+              "p-763405"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-105-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "薛蝌在各衙门奔走探听得御史参劾贾珍引诱赌博、逼死人命及李御史参奏贾赦包揽词讼、结交外官的准确案由，并向贾政传达汇报，属于外部一手情报的收集整理。",
+            "anchorIds": [
+              "p-764192",
+              "p-763405"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the specific impeachment charges levied against Jia She and Jia Zhen by censors.",
+            "anchorIds": [
+              "p-764192",
+              "p-763405"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.6,
+            "rationale": "北静王府长史传旨宽免荣府，是北静王与西平王奉旨介入查抄、限制查抄范围（n-105-2，深度4.3）并在清点贾琏重利借券（n-105-4，深度4.5）后回朝复奏的结果。朝廷念及贾政惧罪及元妃溘逝，最终定夺赦产入官而荣府馀产给还、贾琏免罪释放。必须承接此前两王查办与定责的推论链条，其深度不能低于n-105-4。",
+            "anchorIds": [
+              "p-764822"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-2",
+              "n-105-4"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Pertains to a specific imperial legal verdict and disposition concerning Rongguo Mansion and Jia Lian.",
+            "anchorIds": [
+              "p-764822"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.7,
+            "rationale": "在贾琏承当借券（n-105-4，深度4.5）并在圣旨宽免释放后（n-106-1，深度4.6），贾政责问重利盘剥败坏家声，贾琏在先前顶罪的压力下改口推诿，辩称亏空已久、账由管家登记，放账银两自己不知，推向周瑞旺儿及内房。这是重利案后续责任分拆的局部抗辩，必须承接n-106-1。",
+            "anchorIds": [
+              "p-765164"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-4",
+              "n-106-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Applies strictly to Jia Lian's personal defense regarding the confiscated loan tickets within Rongguo Mansion.",
+            "anchorIds": [
+              "p-765164"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.3,
+            "rationale": "贾母因抄家骤至、内宅震恐病倒（n-105-3，深度4.2），面对子孙入狱质审与家族败落大祸，在院内设坛祷天，推想家族大难乃因儿孙骄奢作孽，愿以自己一人性命代承儿孙之罪，是贾母对抄家大祸从因果宿命角度做出的精神代罪反思，必须承接n-105-3。",
+            "anchorIds": [
+              "p-767749"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-3"
+            ]
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Addresses the overarching fate and moral guilt of the Jia household clan across multiple generations.",
+            "anchorIds": [
+              "p-767749"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "qd2cauCCDfmcvdAPz_aKkAg",
+  "usage": {
+    "promptTokenCount": 69554,
+    "candidatesTokenCount": 5983,
+    "totalTokenCount": 75537,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 69554
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5983
+      }
+    ]
+  },
+  "durationMs": 30567,
+  "requestHash": "c89fe0be27c0119c2545fd10bf3d98ef2063e396df25dcbf2763fa8808dd43f6"
+}

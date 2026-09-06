@@ -1,0 +1,266 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-98-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "Directly continues the critical health collapse in n-97-7 (depth 4.0), where Baoyu discovers Baochai under the bridal veil and falls into shock and delirium. In n-98-1, his delirium worsens until he cannot take broth or water, and the destitute physician Bi Zhi'an correctly diagnoses the root affliction as internal emotional injury compounded by external cold ('内伤外感') and prescribes medicine that revives him slightly. Because this directly inherits and builds upon the crisis precipitated in n-97-7, its total cumulative reasoning depth cannot fall below 4.0, calibrating to 4.1.",
+            "anchorIds": [
+              "p-715589",
+              "p-715943"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Refers to a specific medical episode and diagnosis of Baoyu's acute illness.",
+            "anchorIds": [
+              "p-715943"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.9,
+            "rationale": "Directly depends on n-106-5 (depth 4.8) and n-107-1 (depth 2.5). Having verified the severe internal deficits, unpaid advances, and rent collapse in n-106-5, and now faced with the loss of hereditary stipends for both Ning and Rong branches following the imperial verdict in n-107-1, Jia Zheng reveals to Grandmother Jia the bleak truth that the household has exhausted both internal reserves and external credit. Since it synthesizes the audit findings from n-106-5 with the sentencing in n-107-1, its cumulative depth must exceed 4.8, placing it at 4.9.",
+            "anchorIds": [
+              "p-771109"
+            ],
+            "prerequisiteNodeIds": [
+              "n-106-5",
+              "n-107-1"
+            ]
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "Assesses the overall insolvency and impending collapse of the entire Jia clan's finances.",
+            "anchorIds": [
+              "p-771109"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-107-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.1,
+            "rationale": "Directly depends on n-106-3 (depth 4.8), where Fengjie falls near death wracked with shame, and n-107-3 (which directly synthesizes Jia Zheng's financial report n-107-2 at depth 4.9, yielding a depth of at least 5.0). In n-107-4, Grandmother Jia personally visits the bedridden Fengjie to comfort her, declaring that the troubles originated outside rather than from her, and bestows funds upon her to absolve her guilt. Because this directly executes the personal dispensation decided during the asset division in n-107-3 and resolves Fengjie's guilt from n-106-3, its cumulative depth cannot fall below 5.0, rating at 5.1.",
+            "anchorIds": [
+              "p-774197",
+              "p-773872"
+            ],
+            "prerequisiteNodeIds": [
+              "n-106-3",
+              "n-107-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the interpersonal reconciliation and emotional restoration of Wang Xifeng.",
+            "anchorIds": [
+              "p-774197",
+              "p-773872"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "Directly depends on n-108-4 (depth 3.8), where Baoyu leaves the birthday drinking banquet after Li Wan rolls 'Twelve Beauties' and he grieves over the dispersion of the sisters and Daiyu's absence. Entering the desolate garden, he approaches Xiaoxiang Lodge, hears weeping sounds, connects them with servants' rumors of Daiyu crying after death, and breaks down in remorseful tears over his involuntary betrayal. Because this is the direct unbroken narrative sequence continuing n-108-4, its reasoning depth must exceed 3.8, placing it at 3.9.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nocturnal scene of Baoyu visiting Daiyu's former residence in Daguanyuan.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "Directly depends on n-109-1 (depth 3.0), where Baoyu chooses to sleep alone in the outer room in the hope of meeting Daiyu's soul in a dream. While lying awake in the outer room, Baoyu notices Wu'er's appearance and attire, infers a strong resemblance to Qingwen, remembers Qingwen's untimely death and parting lament, and impulsively transfers his longing for Qingwen onto Wu'er. Continuing this nighttime psychological sequence directly from n-109-1, its reasoning depth must exceed 3.0, calibrated to 3.1.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ],
+            "prerequisiteNodeIds": [
+              "n-109-1"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nighttime interaction between Baoyu and Wu'er in the outer room.",
+            "anchorIds": [
+              "p-786320",
+              "p-786673"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "Directly depends on n-111-5 (depth 2.6), where Bao Yong repels the burglars and kills one of the thieves. At dawn, officials inspect the scene, while Fengjie inspects Grandmother Jia's ransacked chambers and discovers the dead burglar is Zhou Rui's godson He San. Fengjie and the stewards infer internal collusion, leading her in fury to order all night-watch women bound and sent to the constabulary. Because it builds directly on the aftermath and findings of n-111-5, its depth must exceed 2.6, rating at 2.7.",
+            "anchorIds": [
+              "p-806262",
+              "p-806486"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific investigation and enforcement scene at Rongguo Mansion the morning after the burglary.",
+            "anchorIds": [
+              "p-806262",
+              "p-806486"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "Directly depends on n-111-5 (depth 2.6), where the gang's burglary attempt was repelled by Bao Yong and He San was killed. Gathering at their hideout, the thieves learn that He San is dead and the crime reported, deducing that they must flee to pirate bands; however, motivated by their sighting of Miaoyu's beauty during the night break-in at Xichun's quarters, they devise an immediate scheme to abduct her from Cuilong Hermitage before escaping beyond the border pass. Inheriting the consequences of n-111-5, its reasoning depth must exceed 2.6, reaching 2.7.",
+            "anchorIds": [
+              "p-807810",
+              "p-808011"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific meeting of the criminal gang plotting to abduct Miaoyu before fleeing.",
+            "anchorIds": [
+              "p-807810",
+              "p-808011"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-116-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "Directly depends on n-115-6 (depth 2.4), where Sheyue's careless mention of Baoyu nearly smashing the jade causes Baoyu to cast the jade aside and fall back unconscious. In n-116-1, Baoyu's soul leaves his body and follows the Buddhist monk who delivered the jade into the wilderness of 'Zhenru Fudi' (Land of True Suchness) and the side halls, encountering apparitions of You Sanjie and Yuanyang. Because this visionary journey is the direct psychic aftermath of his collapse in n-115-6, its depth must exceed 2.4, rating at 2.5.",
+            "anchorIds": [
+              "p-832912",
+              "p-833308"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Baoyu's personal visionary experience traversing a specific supernatural realm.",
+            "anchorIds": [
+              "p-832912",
+              "p-833308"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Directly depends on n-117-7 (depth 2.9), where Xichun decisively shears off her hair and forces Lady Xing, Lady Wang, and Madam You to yield to her monastic wish. In n-118-1, the family officially implements the compromise by designating her living quarters as a quiet chamber for secular Buddhist practice, and Zijuan steps forward to pledge lifelong service to Xichun in memory of Daiyu. Building directly on the resolution of n-117-7, its depth must exceed 2.9, placing it at 3.0.",
+            "anchorIds": [
+              "p-847211",
+              "p-848312"
+            ],
+            "prerequisiteNodeIds": [
+              "n-117-7"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Pertains to the life paths and settled status of Xichun and Zijuan beyond a single moment.",
+            "anchorIds": [
+              "p-847211",
+              "p-848312"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.6,
+            "rationale": "Directly depends on n-118-6 (depth 5.5), where Baoyu feigned academic reform, packed away Daoist texts, and studied in seclusion while harboring an underlying plan to achieve exam success as the final closure to his worldly obligations ('从此而止'). In n-119-1, departing for the examination hall, Baoyu kneels before Lady Wang, predicting that he will pass the exam to complete his earthly duty and expiate his past faults, while speaking cryptically in a manner signaling final separation to Lady Wang, Li Wan, and Baochai. As the direct enactment and departure point of the plan prepared in n-118-6, its depth must exceed 5.5, rating at 5.6.",
+            "anchorIds": [
+              "p-855182"
+            ],
+            "prerequisiteNodeIds": [
+              "n-118-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "A specific farewell scene where Baoyu makes prophetic statements concerning his life mission to his mother and wives.",
+            "anchorIds": [
+              "p-855182"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Ft6cap_NNbicvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 66297,
+    "candidatesTokenCount": 3097,
+    "totalTokenCount": 69394,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 66297
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3097
+      }
+    ]
+  },
+  "durationMs": 18697,
+  "requestHash": "48e819ce2b87ba75021bade3901cb9dcb54e8208f2434b34cfd0cf1283cf3c43"
+}

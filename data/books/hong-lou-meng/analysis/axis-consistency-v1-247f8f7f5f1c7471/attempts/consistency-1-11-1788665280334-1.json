@@ -1,0 +1,542 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-88-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝玉向贾母夸赞贾兰对对子得师父夸奖，贾母由此直接联想到早亡的贾珠及李纨母子辛苦，引出伤感落泪，属于一步直接触发的情感与因果推想。",
+            "anchorIds": [
+              "p-646853",
+              "p-647830"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "围绕贾兰的才长进与贾母对贾珠母子命运的追怀与感慨。",
+            "anchorIds": [
+              "p-646853",
+              "p-647830"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾珍与贾琏针对鲍二、周瑞及何三斗殴聚众闹事的具体违纪行为直接实施家法鞭打驱逐，属于直接呈现的行动事件，无内部推理依赖。",
+            "anchorIds": [
+              "p-648118",
+              "p-648859"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "宁府门前庄头送果品引发的一场具体仆役争执与责罚。",
+            "anchorIds": [
+              "p-648118",
+              "p-648859"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "面对贾芸求揽工部陵工差事，凤姐剖析衙门官吏体制、堂官书办权限及贾府内部人事纷争，推导出不可插手并回绝贾芸，展现内部局部推演。",
+            "anchorIds": [
+              "p-650085"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "阐述官场衙门公事与家族私人求差之间的权限界限与利害规律。",
+            "anchorIds": [
+              "p-650085"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-88-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "平儿转述水月庵凶险撞邪之事与小丫头空屋闻声，导致凤姐夜半惊悸发渗，属于纯粹事件描摹与直接情绪反应，无推理论证过程。",
+            "anchorIds": [
+              "p-651658",
+              "p-652205"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "记述凤姐房中听闻邪祟传言及夜间受惊恍惚的具体事件。",
+            "anchorIds": [
+              "p-651658",
+              "p-652205"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "工部报河南决口需修河工，贾政天天忙于衙门，属于客观叙事背景的直接交代，缺乏推理步骤。",
+            "anchorIds": [
+              "p-653063",
+              "p-652908"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "关于贾政一段时间内公差繁忙及宝玉学业日常松懈状态的描述。",
+            "anchorIds": [
+              "p-653063",
+              "p-652908"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "因天寒添衣，焙茗拿来晴雯生前抱病补过的雀金裘，宝玉睹物思人，触景伤情遂托病告假，为单一联想与感触行动。",
+            "anchorIds": [
+              "p-653235",
+              "p-653761"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "宝玉在学房见雀金裘伤感并回园就寝的具体情节。",
+            "anchorIds": [
+              "p-653235",
+              "p-653761"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "宝玉探访潇湘馆，两人谈论《斗寒图》与琴理知音，因彼此顾虑产生言不由衷、亲极反疏的心理试探，属一步局部的试探与心意揣摩。",
+            "anchorIds": [
+              "p-655476",
+              "p-656182",
+              "p-656838"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "描绘潇湘馆中宝黛二人一次特定的试探与言不由衷的会面交谈。",
+            "anchorIds": [
+              "p-655476",
+              "p-656182",
+              "p-656838"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-89-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "雪雁向紫鹃转述从侍书处听来的宝玉与知府家定亲传言，黛玉在屋内听得大半，纯系情节转述与偷听事件，无逻辑推导。",
+            "anchorIds": [
+              "p-656996"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "平台底下雪雁与紫鹃私下传话并被黛玉窃听的特定事件。",
+            "anchorIds": [
+              "p-656996"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "贾母依据宝黛长大避嫌、黛玉乖僻多病不寿的考量，做出宝玉配宝钗并瞒着黛玉的决定，结合了长期观察与家族婚姻常理的判断，是一套完整的内部家族决断推导。",
+            "anchorIds": [
+              "p-661167"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "属于贾母对宝玉与宝钗、黛玉婚姻大事作出的特定裁定与安排，牵涉贾府核心人物之婚姻走向。",
+            "anchorIds": [
+              "p-661167"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "凤姐巡园撞见婆子冲撞邢岫烟，根据主奴名分等级当场斥责惩处，属于规矩原则在现场事件上的直接反应应用。",
+            "anchorIds": [
+              "p-661167"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "发生在紫菱洲畔一次看守婆子与姑娘丫鬟纠纷的具体处置场景。",
+            "anchorIds": [
+              "p-661167"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-90-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.7,
+            "rationale": "薛蝌面对宝蟾夜送酒果及言行挑逗，综合分析金桂为人、叔嫂名分与潜在陷害阴谋，产生戒备与推敲，属于就事论事的局部心理揣摩。",
+            "anchorIds": [
+              "p-664061",
+              "p-664822"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记述薛府内室金桂命宝蟾送酒试探薛蝌的单一夜间事件。",
+            "anchorIds": [
+              "p-664061",
+              "p-664822"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "薛蝌承接前夜对宝蟾与金桂阴谋的警惕（n-90-6），在面对宝蟾清晨轻佻试探时，进一步确认其意图，决定以冷淡装睡和回避应对，推理深度继承并稍深于前项。",
+            "anchorIds": [
+              "p-665153"
+            ],
+            "prerequisiteNodeIds": [
+              "n-90-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描写宝蟾夜间及清晨试探薛蝌、薛蝌持重拒之的具体情境。",
+            "anchorIds": [
+              "p-665153"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "叙述夏金桂将过继兄弟夏三引见给薛姨妈并私下托其买东西，属于小说情节的情形交待与事实引入，无推理链条。",
+            "anchorIds": [
+              "p-667372"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "夏三进薛家引见及托买物品的单一叙事细节。",
+            "anchorIds": [
+              "p-667372"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "道里驳回薛蟠案促使薛蝌连夜起程，宝钗操劳致病后服用冷香丸调治，各事件呈直接叙述展开，推理成分仅为最基础的因果交待。",
+            "anchorIds": [
+              "p-668068",
+              "p-668222",
+              "p-668318"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "薛家官司波折及宝钗急病服药调理的特定事件片段。",
+            "anchorIds": [
+              "p-668068",
+              "p-668318"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "贾政基于贾母早先密定娶宝钗的既定决策（n-90-2），进一步推演薛家涉讼多事、年底事忙及贾母寿诞等具体时间节点，制定冬放定、春过礼、寿后完娶的完整规划，因必须依赖n-90-2的决定，深度评为2.7。",
+            "anchorIds": [
+              "p-668637"
+            ],
+            "prerequisiteNodeIds": [
+              "n-90-2"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "贾政为宝玉与宝钗二人婚姻礼仪进程规划的具体时间表。",
+            "anchorIds": [
+              "p-668637"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-91-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "黛玉以六种好与不好的可能性设问试探，宝玉借弱水三千与沾泥柳絮等禅机作出针对性拆解并赌咒表明心迹，形成一轮多回合的精神试探与辩证推演。",
+            "anchorIds": [
+              "p-669352"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "宝黛二人专属的心意试探、禅语机锋及爱情盟约。",
+            "anchorIds": [
+              "p-669352"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-92-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.8,
+            "rationale": "宝玉根据巧姐所读《列女传》，分类列举历代后妃才女、贤妻、苦孝守节诸人故事逐一解说，属于根据经史典籍作出的归纳与讲授。",
+            "anchorIds": [
+              "p-671518"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3.2,
+            "rationale": "虽发生于贾母房中叔侄谈话，但宝玉所论涉及中国历代各类不同品格女子的行为范式分类。",
+            "anchorIds": [
+              "p-671518"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-92-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "冯紫英拜访贾政展示母珠吸珠及鲛绡帐奇珍，纯系具体叙事展示与器具观摩，无内部逻辑推理。",
+            "anchorIds": [
+              "p-674969"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记录某次冯紫英携宝求售洋货的具体聚会场景。",
+            "anchorIds": [
+              "p-674969"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-92-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "贾政由贾雨村起复转升与同等世勋甄家抄家败落的对比，推导出仕途风波难测、自家子弟空享祖荫而无德行才情的危机，属于由同侪遭遇反观自身的忧患推理。",
+            "anchorIds": [
+              "p-676655"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "对豪门世族仕途荣枯无常、坐享祖荫者难当风浪的反思，涵盖当时同类贵胄世家的普遍命运感叹。",
+            "anchorIds": [
+              "p-676655"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.5,
+            "rationale": "宝玉看蒋玉菡演《占花魁》，从其声腔演技联想到《乐记》声音之原、知音知乐与诗词传情入骨之理，是由艺术观摩引发的审美推论。",
+            "anchorIds": [
+              "p-678293",
+              "p-679016"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "宝玉在临安伯府看戏遇蒋玉菡的个人体验与心得。",
+            "anchorIds": [
+              "p-678293",
+              "p-679016"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "贾政拆阅甄老爷来信，见其言辞恳切，不忍回绝而收留包勇，包含简单的因情收留推论，推论链极短。",
+            "anchorIds": [
+              "p-679760",
+              "p-679941",
+              "p-680057"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "甄府仆人包勇投奔贾政并获收容的具体情节。",
+            "anchorIds": [
+              "p-679760",
+              "p-680057"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-93-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "贾府门前及夹道墙上贴出针对贾芹的匿名揭帖，贾政见后震怒，纯属突发情节的客观展开，无推理环节。",
+            "anchorIds": [
+              "p-680894",
+              "p-681185",
+              "p-681237"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "贾府门前发现匿名帖的单一突发事件。",
+            "anchorIds": [
+              "p-680894",
+              "p-681237"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "紫鹃向鸳鸯探听傅家亲事后产生直接省思，判定天下图宝玉而黛玉痴心，从而推导出专心侍奉黛玉的个案决策。",
+            "anchorIds": [
+              "p-685374",
+              "p-685869"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "论断聚焦于紫鹃个人的心理认知与针对林黛玉侍奉的态度决定。",
+            "anchorIds": [
+              "p-685374",
+              "p-685869"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-94-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.8,
+            "rationale": "主要呈现初冬海棠反常绽放的客观事实，辅以贾府各人基于常识或预兆的即时揣测与判断。",
+            "anchorIds": [
+              "p-686375"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "指怡红院海棠花反季盛开这一具体奇异事件及众人现场反应。",
+            "anchorIds": [
+              "p-686375"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "qd2cavWdCL2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 45281,
+    "candidatesTokenCount": 5001,
+    "totalTokenCount": 50282,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 45281
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5001
+      }
+    ]
+  },
+  "durationMs": 23824,
+  "requestHash": "980a7c527d2cb7386bfa5920d8e8091954f7392ec3b78101d266923a2d468793"
+}

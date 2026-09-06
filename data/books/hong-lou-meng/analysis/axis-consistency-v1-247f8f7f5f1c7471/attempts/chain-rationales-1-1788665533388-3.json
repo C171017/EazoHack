@@ -1,0 +1,600 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-23-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Directly implements Yuanchun's imperial decree ordering the talented sisters and Baoyu to take up residence and study in Grand View Garden (n-23-1). Jia Zheng fixes the auspicious date of February 22 and formally assigns the specific residences (Xiaoxiang Pavilion for Daiyu, Yihong Court for Baoyu, Hengwu Court for Baochai, etc.). Incorporating the reasoning chain from prerequisite n-23-1, the depth is rated at 3.2.",
+            "anchorIds": [
+              "p-148346",
+              "p-147710"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-1"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "具体确立了潇湘馆、怡红院、蘅芜苑、秋爽斋等大观园各处馆舍的入住归属这一特定事实。",
+            "anchorIds": [
+              "p-148346",
+              "p-147710"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Builds upon the move into Grand View Garden established in n-23-2. After settling into Yihong Court, Baoyu spends his days composing seasonal poems with the sisters and maids, which gain outside acclaim; prolonged quietude, however, breeds deep restlessness, prompting Mingyan to infer his psychological need for diversion and smuggle romantic playbooks and novels into the garden. Continuing directly from n-23-2, the cumulative reasoning depth is assessed at 3.2.",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "记录宝玉进园初期的生活状态、即事诗的外传以及茗烟买杂书与他解闷的特定情境。",
+            "anchorIds": [
+              "p-149069",
+              "p-148533",
+              "p-148960"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Directly depends on Baoyu having the smuggled romantic plays and novels brought by Mingyan in n-23-3. Baoyu takes the Xixiangji out to read by the peach tree near Qinfang sluice, where Daiyu joins him with flower burial tools, reads the play together with him, and exchanges teasing lines from the drama. As this scene directly requires the texts introduced in n-23-3, its reasoning depth is evaluated at 3.2.",
+            "anchorIds": [
+              "p-149757",
+              "p-149552",
+              "p-149993"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-3"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "属于宝玉与黛玉在沁芳闸桥边桃花下共读西厢戏本的经典单一特写场景。",
+            "anchorIds": [
+              "p-149757",
+              "p-149552",
+              "p-149993"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-23-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "黛玉在与宝玉共读西厢并戏语调笑（n-23-4）后心潮未平，行经梨香院墙外听得《牡丹亭》曲文，将眼前唱词与方才《西厢记》警句及古人诗词综合联想融通，引发对韶华流逝与生命无常的深层感悟。承接n-23-4的认知刺激与情思积累，其推论深度评定为3.2。",
+            "anchorIds": [
+              "p-150523"
+            ],
+            "prerequisiteNodeIds": [
+              "n-23-4"
+            ]
+          },
+          "generality": {
+            "value": 2.5,
+            "rationale": "黛玉将具体曲文上升为关于青春、韶华易逝与女性生命困境（如花美眷、似水流年）的广泛文学感悟，虽具普遍审美意义，但文本落脚于其个体神痴心痛。",
+            "anchorIds": [
+              "p-150523"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-48-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "Represents the culmination of Xiangling's obsessive drafting and continuous immersion ('诗魔') detailed in n-48-6. After composing two flawed attempts and brooding day and night without rest, her intense spiritual and mental concentration produces the eight-line moon poem in a dream, which she records upon waking. Inheriting the entire practice and feedback sequence of n-48-6, the reasoning depth is rated at 3.7.",
+            "anchorIds": [
+              "p-332797"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Depicts a singular psychological and creative breakthrough in a dream.",
+            "anchorIds": [
+              "p-332797"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-49-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "Directly evaluates Xiangling's dream-composed poem from n-48-7 against poetic criteria. Daiyu and the members of the poetry society examine the verses, praise their novelty and artistic conception, and formally admit her as a member. Carrying forward the chain of Xiangling's poetic learning through n-48-7, the reasoning depth is maintained at 3.7.",
+            "anchorIds": [
+              "p-333301",
+              "p-333156",
+              "p-333232"
+            ],
+            "prerequisiteNodeIds": [
+              "n-48-7"
+            ]
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "An evaluation of a specific poem and the acceptance of Xiang-ling into the poetry society.",
+            "anchorIds": [
+              "p-333301"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly follows Qingwen exhausting herself through the night to mend the burnt peacock cloak in n-52-6. Wang Taiyi revises her prescription to restorative and blood-nourishing agents, and the narrative explains the Jia household's established therapeutic principle of managing common colds and coughs through fasting followed by mild medicine. Incorporating the medical crisis resulting from n-52-6, the total reasoning depth is calibrated to 2.8.",
+            "anchorIds": [
+              "p-362756"
+            ],
+            "prerequisiteNodeIds": [
+              "n-52-6"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "概括贾宅全府上下普遍适用的伤风咳嗽调理准则（“净饿为主，次则服药调养”）。",
+            "anchorIds": [
+              "p-362756"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "贾母探视吐血求死的黛玉（n-97-1）后，认定其心病难愈且对男女私情生嫌弃之意，转而决意保全宝玉，遂与王夫人、凤姐及薛姨妈加速定案迎娶宝钗冲喜并严密封锁消息。该决策直接以黛玉病笃求死为转折前提，其推断深度评定为4.1。",
+            "anchorIds": [
+              "p-706423",
+              "p-707627"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "贾府决策层决定放弃黛玉、从速完结宝钗婚事的合议策略。",
+            "anchorIds": [
+              "p-706423",
+              "p-707627"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "凤姐依据掉包计策（n-96-3）以及贾母与长辈密议定案的婚期安排（n-97-2），以‘娶林妹妹’试探诱哄宝玉，见其转悲为喜，遂责成上下人等严密维持假局以行过礼成亲。该步骤是掉包计与成亲密议的具体实施，累计推理深度评定为4.1。",
+            "anchorIds": [
+              "p-706986",
+              "p-708743"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-3",
+              "n-97-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "凤姐试探哄骗宝玉及准备过礼礼仪的诈术实施场景。",
+            "anchorIds": [
+              "p-706986",
+              "p-708743"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "黛玉在吐血求死（n-97-1）之后病势愈重，面对贾府上下忙乱却冷落潇湘馆的凄凉现实，彻底断绝往日情分，挣扎着命雪雁笼火，决然焚毁定情旧帕与一生诗稿。这一心理与行为是承接n-97-1绝望求死意志的发展，其推理深度为4.1。",
+            "anchorIds": [
+              "p-709714",
+              "p-710125"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "黛玉焚毁旧帕和诗稿这一极具仪式感的决绝绝情行为。",
+            "anchorIds": [
+              "p-709714",
+              "p-710125"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "紫鹃目睹黛玉焚稿绝情（n-97-4），出外探视发现贾母房与怡红院空寂无人，得知长辈密议当夜成婚实情（n-97-2），悲愤中返回潇湘馆见黛玉垂危，紧急托请孀居避嫌的李纨及平儿前来料理后事。该节点综合了长辈婚事密谋与黛玉濒危两条线索，深度综合评定为4.1。",
+            "anchorIds": [
+              "p-710125",
+              "p-711517",
+              "p-711784"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-4",
+              "n-97-2"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "潇湘馆冷落凄凉与李纨、平儿奔赴料理黛玉后事的悲剧现场。",
+            "anchorIds": [
+              "p-710125",
+              "p-711517",
+              "p-711784"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "Directly triggered by Baochai's blunt disclosure of Daiyu's demise in n-98-2. In his grief-stricken trance, Baoyu wanders into the underworld seeking Daiyu, where a guardian admonishes him that Daiyu has returned to the Land of Illusion and that mortal self-destruction incurs damnation, striking him with a stone to shock his spirit back to consciousness. Carrying forward the revelation in n-98-2, the cumulative reasoning depth is calibrated to 4.2.",
+            "anchorIds": [
+              "p-716863"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-2"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Relates to Baoyu's specific dream-state encounter, though it involves mythological assertions about the fate of souls.",
+            "anchorIds": [
+              "p-716863"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "回叙承接大娶当夜潇湘馆凄凉垂危、李纨与平儿前去守视照料的处境（n-97-5）。黛玉在回光返照中深知大限已至，向紫鹃托付将遗体送回南边，临终直呼‘宝玉，你好……’而溘然长逝。该节点作为黛玉整条悲剧下行线的最终结局，累计深度评定为4.1。",
+            "anchorIds": [
+              "p-718274",
+              "p-718509",
+              "p-718735"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Depicts the single specific scene of Daiyu's death and her last words.",
+            "anchorIds": [
+              "p-718509"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "Directly depends on Daiyu's death at Xiaoxiang Lodge in n-98-4. Fengjie secretly conveys the news to Grandmother Jia and Lady Wang; Grandmother Jia weeps bitterly and reproaches herself, but deliberately chooses not to visit the coffin, explicitly weighing kinship obligations ('亲疏') and prioritizing Baoyu's fragile survival. Grounded in Daiyu's demise from n-98-4, this decision carries forward the chain to a depth of 4.1.",
+            "anchorIds": [
+              "p-718910",
+              "p-719157",
+              "p-719630"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-4"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Details Grandmother Jia's attitude and decision regarding kinship priorities in the handling of Daiyu's funeral.",
+            "anchorIds": [
+              "p-719157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "宝玉在阴司梦醒神安（n-98-3）后执意至潇湘馆黛玉灵前痛哭，紫鹃见其情真，如实告知黛玉临死前焚稿断痴情（n-97-4）及复病始末。此节点整合了宝玉梦醒祭灵与紫鹃还原焚稿真相两条前置情节链，推理深度评定为4.2。",
+            "anchorIds": [
+              "p-719835",
+              "p-720350",
+              "p-720642"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-4",
+              "n-98-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A concrete mourning scene at Xiaoxiang Guan involving Baoyu, Zijuan, and the surrounding family members.",
+            "anchorIds": [
+              "p-720350"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "承接宝玉在潇湘馆大恸祭灵后饮泣收心调养、百日体健且黛玉功服期满（n-98-6）。贾母鉴于宝玉病情平复，与薛姨妈商定另择吉日为宝玉与宝钗圆房并广宴亲友以偿心愿。作为祭灵收心调养康复后的家庭决策，其推理深度评为4.2。",
+            "anchorIds": [
+              "p-720893"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "An agreement between two matrons on scheduling a wedding consummation for a specific couple.",
+            "anchorIds": [
+              "p-720893"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.2,
+            "rationale": "Directly depends on Grandmother Jia and Aunt Xue agreeing to schedule the wedding consummation following Baoyu's convalescence (n-98-7). When Fengjie finds Grandmother Jia and Aunt Xue lamenting Daiyu, she uses lively physical comedy and bedroom banter about Baoyu and Baochai to dispel their grief, prompting Grandmother Jia to finalize the consummation arrangements. Building on the marital plan in n-98-7, the reasoning depth is evaluated at 4.2.",
+            "anchorIds": [
+              "p-721507"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single domestic conversation and comedic anecdote within Grandmother Jia's room.",
+            "anchorIds": [
+              "p-721507"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "Directly integrates Daiyu's death (n-98-4) with Grandmother Jia and Lady Wang's decision to marry off Tanchun to a distant outpost (n-100-4). Hearing the news, Baoyu collapses into grief, synthesizing Daiyu's passing, Yingchun's abuse, and Tanchun's departure as evidence of the tragic scattering of the sisters, while Baochai checks his grief with rational ethical duties. Synthesizing these major threads, the depth is rated at 4.1.",
+            "anchorIds": [
+              "p-731779"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-4",
+              "n-98-4"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Reflects Baoyu's general sentiment regarding the tragic inevitable dispersal of the sisters of the Rongguo mansion.",
+            "anchorIds": [
+              "p-731779"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Traces the practical consequences of Grandmother Jia's asset distribution and retrenchment policy (n-107-3). Jia Zheng enforces strict austerity and reduces domestic staff, while Fengjie struggles to manage household expenses amidst severe post-raid shortages, sparking widespread complaints among servants and dependents. Grounded in the financial restructuring of n-107-3, the cumulative depth is rated at 5.0.",
+            "anchorIds": [
+              "p-776588"
+            ],
+            "prerequisiteNodeIds": [
+              "n-107-3"
+            ]
+          },
+          "generality": {
+            "value": 1.6,
+            "rationale": "Describes the persistent living conditions and pervasive dissatisfaction across all domestic quarters of Rongguo Mansion post-raid.",
+            "anchorIds": [
+              "p-776588"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Builds directly on the pervasive domestic austerity, gloom, and servant complaints established in n-108-1. In conversation with Xiangyun, Grandmother Jia laments the decline of their kin and decides to fund a lively birthday gathering for Baochai out of her own pocket to counteract the household's depression. Directly stemming from the post-raid conditions in n-108-1, its cumulative reasoning depth is calibrated to 5.0.",
+            "anchorIds": [
+              "p-776871"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-1"
+            ]
+          },
+          "generality": {
+            "value": 0.7,
+            "rationale": "Concerns Grandmother Jia's emotional reaction and specific domestic initiative to organize Baochai's celebration.",
+            "anchorIds": [
+              "p-776871"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly executes the birthday gathering decided by Grandmother Jia in n-108-2. The remaining female family members assemble at Baochai's banquet, attempting to maintain forced merriment through Yuanyang's dice drinking game, where verses and song titles reflect the underlying melancholy of the divided clan. Continuing directly from n-108-2, the cumulative reasoning depth is assessed at 5.0.",
+            "anchorIds": [
+              "p-779071",
+              "p-779841"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-2"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Covers a single domestic banquet scene among the remaining female family members.",
+            "anchorIds": [
+              "p-779071",
+              "p-779841"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly occurs during the dice drinking game at Baochai's birthday gathering in n-108-3. When Li Wan rolls 'Twelve Beauties', Baoyu is triggered to recall his prophetic dream in the Land of Illusion, looks around at the depleted family circle, keenly feels Daiyu's absence, and departs from the banquet in tears. Embedded in the banquet context of n-108-3, its reasoning depth is rated at 5.0.",
+            "anchorIds": [
+              "p-779841"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Expresses Baoyu's psychological contemplation of the tragic dispersion of the 'Twelve Beauties of Jinling'.",
+            "anchorIds": [
+              "p-779841"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly follows Baoyu leaving the birthday banquet in grief in n-108-4. Walking into the dilapidated Grand View Garden, he makes his way toward Xiaoxiang Lodge, hears phantom weeping, connects it with servants' talk of Daiyu crying after death, and breaks down in guilt-ridden lamentations over his involuntary betrayal. Inheriting the emotional crisis of n-108-4, the cumulative reasoning depth is calibrated to 5.0.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nocturnal scene of Baoyu visiting Daiyu's former residence in Daguanyuan.",
+            "anchorIds": [
+              "p-782555",
+              "p-782319"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5,
+            "rationale": "Directly continues from Baoyu weeping uncontrollably at Xiaoxiang Lodge in n-108-5. Servants lead Baoyu back to Grandmother Jia, who severely reprimands Xiren for allowing him into the garden and risking another breakdown, while Baochai observes his sighs and privately interrogates Xiren to prevent a relapse. Concluding this unbroken sequence from n-108-5, its cumulative depth is evaluated at 5.0.",
+            "anchorIds": [
+              "p-783110"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-5"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Focuses on the immediate aftermath of Baoyu's garden excursion within Grandmother Jia's and Baochai's quarters.",
+            "anchorIds": [
+              "p-783110"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "o96caoyWGfmcvdAPz_aKkAg",
+  "usage": {
+    "promptTokenCount": 71035,
+    "candidatesTokenCount": 5557,
+    "totalTokenCount": 76592,
+    "cachedContentTokenCount": 65404,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 71035
+      }
+    ],
+    "cacheTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 65404
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5557
+      }
+    ]
+  },
+  "durationMs": 27725,
+  "requestHash": "44d20b73e151c8ad49826ce4398a0426467d20e189e687e39ea370d40b6531e2"
+}

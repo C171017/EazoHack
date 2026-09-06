@@ -1,0 +1,33 @@
+{
+  "value": {
+    "rejected": [
+      {
+        "index": 0,
+        "reason": "The group's summary asserts that '宝玉偶遇农庄村女与秦钟萌生情愫' (Baoyu met a village girl and developed feelings with Qin Zhong / Baoyu and Qin Zhong developed feelings with the village girl), which distorts the source occurrences n-15-2 and n-15-3 where Baoyu encountered Er Yatou at the village while Qin Zhong's mutual attraction was with the novice nun Zhineng'er at Shuiyue (Mantou) Nunnery, not with the farm girl."
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "3d6casesJricvdAPu8-EuAY",
+  "usage": {
+    "promptTokenCount": 25986,
+    "candidatesTokenCount": 144,
+    "totalTokenCount": 26130,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 25986
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 144
+      }
+    ]
+  },
+  "durationMs": 2893,
+  "requestHash": "6da60da02ce68f464e7ff9d9f9ec403ef870426b3431316d6ce2fc5292e0b8d7"
+}

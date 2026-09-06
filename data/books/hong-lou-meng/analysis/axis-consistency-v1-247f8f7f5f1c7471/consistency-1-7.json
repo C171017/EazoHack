@@ -1,0 +1,564 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-52-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "晴雯与麝月在怡红院就坠儿盗窃并惩戒驱逐一事，依据既有的规矩管教（老太太吩咐直呼小名与主仆内房体制）对坠儿之母的挑衅予以直接反驳。该处没有前置论断节点支撑，系文本内部生发的直接管教推论，深度校准至1.2。",
+            "anchorIds": [
+              "p-360206",
+              "p-360849"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.4,
+            "rationale": "怡红院房中处置丫鬟盗窃与弹压三门外下人媳妇的内房家规适用。",
+            "anchorIds": [
+              "p-360206",
+              "p-360849"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "晴雯抱病补裘力尽神危后（n-52-6，深度2.1），王太医改方益神养血，叙事提炼并总结出贾府世传以'净饿为主、服药调养'医治风寒咳嗽的通则秘法。前置节点n-51-6（园中小厨）系生活背景而非直接推论前提，予以移除；保留n-52-6作为直接推论依赖，总深度校准为2.2。",
+            "anchorIds": [
+              "p-362756"
+            ],
+            "prerequisiteNodeIds": [
+              "n-52-6"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "概括贾宅全府上下普遍适用的伤风咳嗽调理准则（“净饿为主，次则服药调养”）。",
+            "anchorIds": [
+              "p-362756"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.3,
+            "rationale": "贾珍向尤氏阐述朝廷春祭恩赏之意，从体面天恩推导出领赏重在礼制恩泽而非单纯银钱之数，并据此安排回禀祖母及焚化布袋，为局部即席阐述与礼仪推论，无前置依赖。",
+            "anchorIds": [
+              "p-363643",
+              "p-363855",
+              "p-364136"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "阐述世袭贵族家庭对待皇家春祭恩赐的礼法意义与对待天恩的家族观念。",
+            "anchorIds": [
+              "p-363643"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "贾珍与贾蓉由庄头乌进孝呈报的年成灾情与收租账目出发，逐层推算两府尤其是荣国府因省亲起造园宇、年例人情冗杂导致的亏空与外强中干现状，属较为完备的局部推论分析，无前置依赖。",
+            "anchorIds": [
+              "p-364410",
+              "p-364891"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.1,
+            "rationale": "揭示荣宁两府乃至同类世家大族在繁华表象下经济收支失衡、外强中干的整体经济生存危机。",
+            "anchorIds": [
+              "p-364891"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "贾珍依据向族中无进益子侄分发年物的规矩，当面斥责兼管家庙有进益且胡作非为的贾芹前来冒领。贾珍与贾蓉论亏空（n-53-3）并非贾珍斥责贾芹资格的必要推论前提，仅为同回叙事先后，故移除n-53-3；贾珍基于既定规矩直接定性贾芹之过，校准至1.2。",
+            "anchorIds": [
+              "p-366014"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "宗族族长对族中领物规则的执行及对个别荒唐子弟的管理处置。",
+            "anchorIds": [
+              "p-366014"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "直接叙述贾氏宗祠除夕祭祖的大典仪轨、昭穆排班、传供献爵等礼制仪式，宝琴留神打量御笔匾额等物，属直接展开的客观场面记述与规制展现，无推论依赖。",
+            "anchorIds": [
+              "p-366648",
+              "p-366952",
+              "p-367112"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "展现贾府除夕祭祖宗祠礼制全貌，体现明清世家大族宗族祭祀的典范仪轨。",
+            "anchorIds": [
+              "p-366648",
+              "p-367112"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "记叙宗祠祭祖完毕后，众人移至荣国府向贾母行礼、散押岁钱、合欢设宴等节日仪式。虽然时序上紧接n-53-5，但属于年节礼仪流程的顺次叙述，并非由宗祠祭祖推导出的论断，移除n-53-5，定为起始叙事观察0.3。",
+            "anchorIds": [
+              "p-368168"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "贾府除夕到正月初一合家受礼、行礼、合欢家宴的岁时年节生活规程。",
+            "anchorIds": [
+              "p-368168"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-53-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.5,
+            "rationale": "直接记叙元宵之夜花厅家宴的奇巧陈设（慧纹等）及文豹机趣讨喜、贾母掷钱赏戏的欢闹场面，并直接解释了部分族众因贫富妒忌而不来的心理原因，属于低阶的叙述交代，深度定为0.5。",
+            "anchorIds": [
+              "p-369064",
+              "p-369697",
+              "p-370233"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "涉及贾母元宵夜宴的具体场景陈设、宗族亲疏心理及撒钱赏戏的节庆活动。",
+            "anchorIds": [
+              "p-369697",
+              "p-370233"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "王夫人以热孝解释袭人未到，凤姐以看屋防险、散归齐备、全其礼数三处益处向贾母直接论证留袭人之合理，宝玉见鸳鸯叙旧亦主动回避。鸳鸯誓绝绝婚（n-46-6）仅为鸳鸯与宝玉生分的背景，不是此处凤姐论证留袭人看屋的推论前提，故移除n-46-6；此为凤姐的就地三条理由说服推论，深度为1.2。",
+            "anchorIds": [
+              "p-371286",
+              "p-372097"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "涉及袭人母丧守孝礼俗及凤姐在大节庆中对奴仆看管院落的周全安排。",
+            "anchorIds": [
+              "p-371286"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "王熙凤借贾母对才子佳人书的驳斥（n-54-3，深度3.8），顺势推演戏称其为《掰谎记》，并引老莱子彩衣戏彩之典故完成祝酒承欢与戏谑辩白，直接依赖n-54-3的推论结论，校准深度为3.9。",
+            "anchorIds": [
+              "p-374865"
+            ],
+            "prerequisiteNodeIds": [
+              "n-54-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Applies specifically to this singular banquet occasion and her personal banter with Grandmother Jia and relatives.",
+            "anchorIds": [
+              "p-374865"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "贾母因三更天寒，直接吩咐众人挪进暖阁挤坐并桌，并点派芳官、葵官清唱《寻梦》《下书》，是贾母的直接生活安排与审美指令，属于起始性观察叙事，无推论依赖。",
+            "anchorIds": [
+              "p-375412",
+              "p-376031",
+              "p-376240"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Depicts a specific late-night festival banquet arrangement and musical selection within the Rongguo mansion.",
+            "anchorIds": [
+              "p-375412",
+              "p-376031",
+              "p-376240"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-54-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "直接描写进贡烟火的施放、清淡杏仁茶的宵夜，以及元宵后数日宁府封祠、贾母赴各管事家吃年酒的纪事过程，无推理推论过程。",
+            "anchorIds": [
+              "p-378870",
+              "p-379381"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Covers a discrete sequence of post-festival events and daily social rounds over a few days.",
+            "anchorIds": [
+              "p-378870",
+              "p-379381"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "王熙凤因小产添病休养，王夫人委派李纨、探春协理，并托薛宝钗在园中巡察监视，属于交代管家权力交接背景的起始叙事与情境铺陈。",
+            "anchorIds": [
+              "p-379741",
+              "p-380096",
+              "p-380579"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.3,
+            "rationale": "Establishes a temporary administrative framework and operational routine governing the inner Rongguo mansion.",
+            "anchorIds": [
+              "p-379741",
+              "p-380096",
+              "p-380579"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-55-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "平儿观察到议事厅外下人刁难探春，结合赵国基抚恤银之事（n-55-2，深度2.2）以及赵姨娘大闹被斥（n-55-3，深度2.4），在厅外据理训诫警告众仆妇，推断出探春才干刚毅且有长辈支持、刁奴若敢轻慢必碰钉子吃亏。深度整合吸收前置推论，校准至2.5。",
+            "anchorIds": [
+              "p-384647",
+              "p-385243"
+            ],
+            "prerequisiteNodeIds": [
+              "n-55-2",
+              "n-55-3"
+            ]
+          },
+          "generality": {
+            "value": 1.8,
+            "rationale": "Characterizes the dynamic between manipulative middle-level servants and young mistresses acting as temporary estate managers.",
+            "anchorIds": [
+              "p-384647",
+              "p-385243"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "薛宝钗在探春提出大观园承包兴利方案（n-56-1，深度3.4）的基础上，进一步引申朱熹《不自弃文》义理，推导出天下无不可用之物、用物之道与正事学问相贯通的哲学理据，将探春的改革推向理论高度，校准深度为3.5。",
+            "anchorIds": [
+              "p-388799"
+            ],
+            "prerequisiteNodeIds": [
+              "n-56-1"
+            ]
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "Asserts a broad ethical and practical principle: everyday practical matters ('small things') achieve nobility and avoid vulgarity when elevated by classical scholarship.",
+            "anchorIds": [
+              "p-388799"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-56-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "直接描写江南甄府女人们进府请安送礼，在与贾母言谈中提及甄宝玉，并引出贾母传宝玉相见比对相貌，属于直接事实叙事与新人物信息的引入。",
+            "anchorIds": [
+              "p-393205",
+              "p-393485",
+              "p-394195"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.8,
+            "rationale": "Specific interaction between Grandmother Jia and visiting maids regarding two particular parallel young masters.",
+            "anchorIds": [
+              "p-393205",
+              "p-393485",
+              "p-394195"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.3,
+            "rationale": "紫鹃在沁芳亭畔主动设局，向宝玉虚构林家将接黛玉回苏州的谎话以试探其心意，属于情节发起点的直接观察与交谈，无前置推论依赖。",
+            "anchorIds": [
+              "p-397824"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific interpersonal test between Zijuan and Baoyu at the Qinfang Pavilion.",
+            "anchorIds": [
+              "p-397824"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-57-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.4,
+            "rationale": "薛姨妈见邢岫烟端雅知礼而薛蟠行止浮奢，动念为薛蝌求娶，商之凤姐并请贾母出面做保山，邢夫人等应允定亲，为一次具体婚姻交涉与斡旋过程的直接展开。",
+            "anchorIds": [
+              "p-403040",
+              "p-403808"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "A specific arranged marriage negotiation connecting Xue Ke and Xing Xiuyan.",
+            "anchorIds": [
+              "p-403040",
+              "p-403808"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "直接交代老太妃薨逝的国家大典背景，以及两府女眷入朝守制、家中留尤氏协理、薛姨妈入园照看黛玉等内务临时调整，属于背景性叙事设定。",
+            "anchorIds": [
+              "p-407814",
+              "p-408386"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Specifies imperial mourning mandates and the structural reallocation of caretakers for the Rong and Ning mansions.",
+            "anchorIds": [
+              "p-407814",
+              "p-408386"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-58-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "宝玉见藕官在山石后私烧纸钱被婆子撞破拿问，当机立断编造杏花神托梦需要生人烧白钱的谎言反制婆子，为其现场即时应变的因果辩驳，无前置依赖。",
+            "anchorIds": [
+              "p-410394",
+              "p-411319"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记录大观园山石后藕官烧纸与宝玉当场圆谎的一幕具体情节事件。",
+            "anchorIds": [
+              "p-410394"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0.2,
+            "rationale": "直接描写莺儿受命取蔷薇硝途中在柳叶渚折柳采花编成花篮赠予黛玉，属于起始性情景事件叙写，无推论链条。",
+            "anchorIds": [
+              "p-415532",
+              "p-415340",
+              "p-415815"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "描写莺儿编花篮赠黛玉的单一具体生活场景。",
+            "anchorIds": [
+              "p-415532",
+              "p-415815"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.7,
+            "rationale": "春燕向藕官、莺儿谈及母亲与姨妈贪鄙，引述宝玉关于女孩出嫁变死珠、老了变鱼眼睛的通则，并紧密结合大观园花木承包方案落实后（n-56-3，深度3.6）老婆子们把地段当基业寸步不让的现实行为进行验证推论，依赖n-56-3的承包格局，校准深度为3.7。",
+            "anchorIds": [
+              "p-416272"
+            ],
+            "prerequisiteNodeIds": [
+              "n-56-3"
+            ]
+          },
+          "generality": {
+            "value": 3.8,
+            "rationale": "春燕借助对亲母姑妈的观察，讨论了一类特定人群——在大观园环境由清纯少女变为贪婪老妇的退化法则。",
+            "anchorIds": [
+              "p-416272"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "管地婆子因见莺儿折柳采花心疼起嗔打骂春燕，春燕之母亦赶来借芳官之事迁怒殴打辱骂。此处冲突直接由春燕引出承包争执（n-59-3，深度3.7）及莺儿折柳（n-59-2，深度0.2）交织引爆，作为依赖n-59-3的事态升级，校准深度为3.8。",
+            "anchorIds": [
+              "p-417352",
+              "p-417905"
+            ],
+            "prerequisiteNodeIds": [
+              "n-59-2",
+              "n-59-3"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "记叙柳叶渚边管地婆子与春燕母打骂春燕并波及众人的单一冲突事件。",
+            "anchorIds": [
+              "p-417352",
+              "p-417905"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-59-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "春燕因遭受姑母及母亲殴打追赶，逃入怡红院向袭人求护，其母追入并与袭人发生激烈口角。该事件直接承续并取决于柳叶渚婆子打骂冲突（n-59-4，深度3.8）的推进行动，校准深度为3.9。",
+            "anchorIds": [
+              "p-418568",
+              "p-418367"
+            ],
+            "prerequisiteNodeIds": [
+              "n-59-4"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "记叙春燕奔入怡红院及袭人出面干预的具体局部冲突。",
+            "anchorIds": [
+              "p-418568"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Xt2caveBDIKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 66019,
+    "candidatesTokenCount": 6307,
+    "totalTokenCount": 72326,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 66019
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6307
+      }
+    ]
+  },
+  "durationMs": 34685,
+  "requestHash": "7e5bf257d60257dccaf11c85c27376a994e8f2086ecfebd6e9f04cb7c13ccd6b"
+}

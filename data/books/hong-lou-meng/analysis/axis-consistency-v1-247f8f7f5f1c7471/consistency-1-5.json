@@ -1,0 +1,551 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-36-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "宝玉由贾母免其见客的庇护令出发，结合平素对功名禄鬼的厌恶，反推并确立唯林黛玉自幼不劝他仕途经济，因而视黛玉为真知己，承接n-32-1中宝玉斥仕途经济与黛玉知己之感。",
+            "anchorIds": [
+              "p-238491"
+            ],
+            "prerequisiteNodeIds": [
+              "n-32-1"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "阐述贾宝玉个人对读书出仕的根本反叛态度及对林黛玉的深沉敬爱定位。",
+            "anchorIds": [
+              "p-238491"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "王夫人承袭了袭人先前防嫌建言（n-34-3，depth 3.8）的信赖，并在金钏死后丫鬟补缺与发放月钱之际，经由向凤姐盘查定例并综合权衡，决定自掏月银定下袭人的准姨娘待遇，进一步推进了前置因果链条，评分校准至4.0（anchor 4）。",
+            "anchorIds": [
+              "p-239339",
+              "p-238979"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-3",
+              "n-35-8"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "针对袭人个人的地位提拔、月例配额与未来姨娘名分的安排。",
+            "anchorIds": [
+              "p-239339"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "宝钗在怡红院代刺兜肚闻宝玉梦中痛骂和尚道士、偏说木石姻缘而怔住，该情境直接依托于n-34-6中薛蟠负屈揭破金玉良缘之说所带来的心理芥蒂与阴影，依从前置节点深度并展现戏剧性心理冲击（anchor 2-3之间，2.6）。",
+            "anchorIds": [
+              "p-241056",
+              "p-242052",
+              "p-241775"
+            ],
+            "prerequisiteNodeIds": [
+              "n-34-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "记录宝玉梦呓与宝钗在怡红院床前代绣鸳鸯兜肚的具体戏剧性场景。",
+            "anchorIds": [
+              "p-241056",
+              "p-242052"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.3,
+            "rationale": "宝玉从对世俗忠烈价值的驳斥展开论述，层层推论出文官死谏武官死战实为'邀名弃君/国'之虚伪，进而提出自己以死于众女清泪为正死的人生假想，具备短序列的逻辑演绎（anchor 3）。",
+            "anchorIds": [
+              "p-242267"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 6.2,
+            "rationale": "否定封建伦理中'文死谏、武死战'作为普遍大义的道德范式，提出了颠覆性的生死价值论。",
+            "anchorIds": [
+              "p-242267"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-36-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "宝玉在梨香院央曲遭拒，目睹龄官因身世感怀对贾蔷雀儿发怒、贾蔷甘心顺从放雀，直接观察到两人之间独一无二的情感维系并领悟划蔷深意，属于局部直接感悟（anchor 1）。",
+            "anchorIds": [
+              "p-243247",
+              "p-243671"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "发生在梨香院中龄官、贾蔷与贾宝玉三者之间的一段具体纠葛。",
+            "anchorIds": [
+              "p-243247",
+              "p-243671"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.2,
+            "rationale": "探春借大观园闲适时节与旧日古人结社风雅之典，发出倡导诗社的花笺，属于由古推今的直接倡议推论（anchor 1）。",
+            "anchorIds": [
+              "p-245452",
+              "p-245296"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "探春写给宝玉并号召大观园诸姊妹结成诗社的一封具体花笺倡议。",
+            "anchorIds": [
+              "p-245452"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-37-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.2,
+            "rationale": "史湘云次日抵园，承接海棠社既定的限韵规则与首咏赛诗活动（n-37-3，depth 2.1），依韵即席和就二首，众人评赏后准其入社，推理深度校准并紧接前置节点为2.2（anchor 2）。",
+            "anchorIds": [
+              "p-251923",
+              "p-252412"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-3"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "湘云补作海棠诗并入社的特定事件。",
+            "anchorIds": [
+              "p-251923"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "藕香榭设宴赏桂完全是按照宝钗此前为湘云筹划的螃蟹宴设东案（n-37-5，depth 2.6）落实执行的宴席，贾母等应邀入席并赞宝钗妥当，推理深度紧随前置筹划校准至2.7。",
+            "anchorIds": [
+              "p-254365",
+              "p-254657"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "贾母携众人进大观园藕香榭赏桂花吃茶酒的具体集会过程。",
+            "anchorIds": [
+              "p-254365",
+              "p-254657"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1.1,
+            "rationale": "贾母由藕香榭匾联触发对枕霞阁儿时落水破额的回忆，凤姐由此借寿星头上窝儿即景奉承取笑，属单步顺接发挥（anchor 1）。",
+            "anchorIds": [
+              "p-254851"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "宴席上贾母回忆旧事与王熙凤承欢取笑的单一言语场景。",
+            "anchorIds": [
+              "p-254851"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "文本直接铺叙宴席分席吃蟹、湘云体恤下人、凤姐张罗并与平儿、鸳鸯抹蟹黄嬉闹，为纯写实场景描摹，无推论依赖（anchor 0）。",
+            "anchorIds": [
+              "p-255338"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "藕香榭走廊与宴席各处吃蟹嬉闹的具体场景互动。",
+            "anchorIds": [
+              "p-255338"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "诗社开社作菊花诗，直接严格遵循宝钗与湘云前夜所拟定的十二题目、以人为主以菊为宾及不拘韵规则（n-37-6，depth 2.8），众人领题誊作，深度顺接校准至2.9。",
+            "anchorIds": [
+              "p-256530",
+              "p-256928"
+            ],
+            "prerequisiteNodeIds": [
+              "n-37-6"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "海棠社众人挑选并誊录十二首菊花诗的比赛现场。",
+            "anchorIds": [
+              "p-256928"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-38-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.5,
+            "rationale": "众人在食蟹余兴中以小题大做之寄托标准评阅宝钗《螃蟹咏》，推论其'眼前道路无经纬，皮里春秋空黑黄'为食蟹绝唱且极具世道讽刺力，属于完备的局部鉴赏推论（anchor 2-3之间）。",
+            "anchorIds": [
+              "p-259406",
+              "p-259816",
+              "p-259925"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 5.1,
+            "rationale": "螃蟹诗借物讽世，其涵盖与讽喻的对象为一切横行无道、居心险恶的世路小人。",
+            "anchorIds": [
+              "p-259816",
+              "p-259925"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "李纨因平儿钥匙起意，与宝钗、探春等并列评析平儿、鸳鸯、彩霞、袭人等行事，归纳推断出主子得势全赖得力丫鬟为膀臂的天理，具有充分的局部论证展开（anchor 2-3之间）。",
+            "anchorIds": [
+              "p-260438",
+              "p-260020"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4.5,
+            "rationale": "针对贾府豪门贵族内部高层主子与核心大丫鬟（平儿、鸳鸯、袭人、彩霞）之间的共生职能机制与相处之道提出归纳概括。",
+            "anchorIds": [
+              "p-260438"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-39-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "平儿向袭人私下透露凤姐迟发月钱是因支银放贷吃利，属于内部当事人基于事实的直接透露与说明解释（anchor 1）。",
+            "anchorIds": [
+              "p-261240"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "该事实及评价特指王熙凤个人的私自放贷行为和贾府当月迟发月钱的具体情况（anchor 1）。",
+            "anchorIds": [
+              "p-261240"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾母依据潇湘馆翠竹景致指出绿窗纱不配，进而辨析蝉翼纱与软烟罗的区别、色泽及功用，批评凤姐见识，包含完整的局部审美品评与质料辨识论述（anchor 2）。",
+            "anchorIds": [
+              "p-268271"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "贾母阐释的软烟罗物性鉴赏原则针对特定名贵织物类别及园林室内糊窗配色规范（anchor 3）。",
+            "anchorIds": [
+              "p-268271"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "贾母目睹蘅芜苑如雪洞般素净，由此推论年轻姑娘居室过素不仅忌讳而且易招外人笑话，进而立足大家规矩指导如何陈设（anchor 2）。",
+            "anchorIds": [
+              "p-272867"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "贾母关于富贵世家年轻姑娘闺房陈设应素净而不失大方、合乎礼数忌讳的见解，属于特定阶层居室陈设规范（anchor 4）。",
+            "anchorIds": [
+              "p-272867"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-40-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "缀锦阁牙牌令由鸳鸯依据骨牌牌令规矩主令，众人依规则各自对韵句，属于规则下的即席应对推理（anchor 1）。",
+            "anchorIds": [
+              "p-274123"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "缀锦阁下一次特定的行牙牌令宴饮娱乐活动（anchor 0）。",
+            "anchorIds": [
+              "p-274123"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-41-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "刘姥姥由瓷杯易碎索求木杯，引发黄杨木套杯饮酒及凤姐讲解茄鲝繁复烹饪配料，属于现场问答与说明性叙述（anchor 1）。",
+            "anchorIds": [
+              "p-275699"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特指宴席上刘姥姥品尝茄鲝与辨认木套杯的单一饮食场景（anchor 0）。",
+            "anchorIds": [
+              "p-275699"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2,
+            "rationale": "刘姥姥针对富贵子弟多娇嫩生病的原因进行阐释，并依据七月初七生日运用民间五行相克“以毒攻毒”之理为大姐儿命名巧哥儿，具备完整的民俗推理过程（anchor 2）。",
+            "anchorIds": [
+              "p-282842",
+              "p-282247"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 3,
+            "rationale": "涉及民间以贫压富、贱名消灾及生日命理逢凶化吉的特定民俗育儿信仰类别（anchor 3）。",
+            "anchorIds": [
+              "p-282842"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.1,
+            "rationale": "刘姥姥满载辞归，收纳了来自贾母、王夫人、凤姐、平儿的馈赠，并特别由小丫头送来宝玉转赠的成窑杯（n-41-5，depth 2.0），构成刘姥姥贾府之行的完整收尾，深度紧接前置节点校准至2.1。",
+            "anchorIds": [
+              "p-283389",
+              "p-284909"
+            ],
+            "prerequisiteNodeIds": [
+              "n-39-3",
+              "n-41-5"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "刘姥姥辞别贾府及众人赠予物品的特定具体事件（anchor 0）。",
+            "anchorIds": [
+              "p-283389",
+              "p-284909"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 1,
+            "rationale": "王太医进府为贾母和大姐儿切脉诊视，根据病症给出风凉轻症无需煎药、小儿清净饥饿两顿的医理判断（anchor 1）。",
+            "anchorIds": [
+              "p-284170",
+              "p-284565"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 2,
+            "rationale": "王太医就世家贵人及小儿常见轻症调理的诊断医嘱（anchor 2）。",
+            "anchorIds": [
+              "p-284565"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "宝钗纠正惜春与宝玉对于画大观园的幼稚想法，系统推论工细楼台图的构图起稿、界尺比例、人物点缀及矾绢、配胶、用具开列，构成一套周密的绘画技法论述（anchor 3）。",
+            "anchorIds": [
+              "p-287697",
+              "p-288156"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "涵盖传统中国界画与通景建筑园林绘画领域在构图、工序与画具配备上的专门技术准则（anchor 4）。",
+            "anchorIds": [
+              "p-287697",
+              "p-288156"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-42-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.1,
+            "rationale": "黛玉打趣单子像嫁妆，宝钗要拧其脸，黛玉央告求饶提及前番教导胡看杂书之事（n-42-4，depth 3.0），宝钗怜爱替黛玉拢发，二人至此彻底解除前嫌。紧密依赖n-42-4的劝诫与n-42-6开单现场，推论深度校准至3.1。",
+            "anchorIds": [
+              "p-289212"
+            ],
+            "prerequisiteNodeIds": [
+              "n-42-4",
+              "n-42-6"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "特定于薛宝钗与林黛玉二人之间由隔阂转为亲密和解的人际关系转变（anchor 1）。",
+            "anchorIds": [
+              "p-289212"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-43-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 0,
+            "rationale": "叙述凤姐生日正日清晨宝玉着素服骑马私自出北门往荒郊疾驰的剧情直接发生，属于无前置论证的叙事开端事件（anchor 0）。",
+            "anchorIds": [
+              "p-293341",
+              "p-293876"
+            ],
+            "prerequisiteNodeIds": []
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "特指九月初二清晨宝玉携茗烟出北门的单一具体事件（anchor 0）。",
+            "anchorIds": [
+              "p-293341",
+              "p-293876"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Qd2capjJL6KMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 73601,
+    "candidatesTokenCount": 5534,
+    "totalTokenCount": 79135,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 73601
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 5534
+      }
+    ]
+  },
+  "durationMs": 25347,
+  "requestHash": "aae17e3b4733da90ab33c086b6289f2735ced8e85589fa3057a60ec4d3d0b219"
+}

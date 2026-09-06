@@ -1,0 +1,588 @@
+{
+  "value": {
+    "assignments": [
+      {
+        "nodeId": "n-70-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.6,
+            "rationale": "Directly depends on n-69-6 (depth 3.5), where Jia Lian organized You Erjie's burial following her death. In chapter 70, following the completion of the 7-day wake at Lixiangyuan, Jia Lian buries her next to You Sanjie, and subsequently Lin Zhixiao presents the marriage roster for bachelor servants, which Fengjie and Lady Wang deliberate over. As a direct sequential resolution of You Erjie's funeral arrangements incorporating n-69-6, its depth cannot fall below 3.5, placing it at 3.6 between anchor 3 and 4.",
+            "anchorIds": [
+              "p-502324"
+            ],
+            "prerequisiteNodeIds": [
+              "n-69-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Involves specific historical burial arrangements for You Erjie and screening of specific maidservants across the mansion.",
+            "anchorIds": [
+              "p-502324"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "Directly depends on n-77-4 (depth 3.9), where Baoyu slips into Deng Guniang's house to visit the dying Qingwen and exchange garments and nails. Deng Guniang overhears their entire intimate dialogue from outside the window, deduces empirically from their pure speech that they had no secret physical liaison, and reflects on worldly injustices. Because this inference logically and temporally relies on the occurrence of the secret meeting in n-77-4, its cumulative reasoning depth must be at least 4.0, evaluated here at 4.1, marking a complete local inference following the prior sequence.",
+            "anchorIds": [
+              "p-568481"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-4"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Focuses on Deng Guniang's specific realization regarding Baoyu and Qingwen's individual situation, with only passing commentary on worldly slander.",
+            "anchorIds": [
+              "p-568481"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-77-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Directly relies on n-77-4 (depth 3.9), where Baoyu meets Qingwen for the last time. Returning home that night, Baoyu is haunted by the visit, sleeps restlessly, and dreams of Qingwen bidding him farewell, upon which he wakes up weeping and infers that she has died. The emotional and narrative chain incorporates the visit to Qingwen; thus its depth must inherit and slightly advance n-77-4's depth to 4.0.",
+            "anchorIds": [
+              "p-569175"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single night scene of dream and emotional reaction in Baoyu's bedroom.",
+            "anchorIds": [
+              "p-569175"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-78-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.1,
+            "rationale": "Directly depends on n-77-4 (depth 3.9), Qingwen's ejection and impending death. When Baoyu questions the young maid about Qingwen's last hours and desperately seeks affirmation of her transcendent status, the maid invents on the spot the myth of Qingwen becoming the Hibiscus spirit, which Baoyu rationalizes as true. As this myth-making directly resolves Baoyu's grief over Qingwen's tragic end from n-77-4, its depth must reflect the cumulative chain and reach 4.1.",
+            "anchorIds": [
+              "p-574243"
+            ],
+            "prerequisiteNodeIds": [
+              "n-77-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A single dialogue episode creating the specific myth of Qingwen becoming the hibiscus spirit.",
+            "anchorIds": [
+              "p-574243"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-82-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.2,
+            "rationale": "Directly depends on n-81-7 (depth 3.0), where Jia Zheng places Baoyu under Dairu's instruction and Dairu establishes an academic schedule and prepares to test Baoyu on book exposition. In chapter 82, Dairu carries out this examination by testing Baoyu on the Analects chapters ('hou sheng ke wei' and 'hao de ru hao se'), correcting Baoyu's immature readings and reprimanding him. Building upon the instructional baseline in n-81-7, its depth is calibrated to 3.2.",
+            "anchorIds": [
+              "p-601700"
+            ],
+            "prerequisiteNodeIds": [
+              "n-81-7"
+            ]
+          },
+          "generality": {
+            "value": 4,
+            "rationale": "Exegesis of general Confucian principles regarding youthful discipline, moral integrity, and lust versus virtue.",
+            "anchorIds": [
+              "p-601700"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-96-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.9,
+            "rationale": "Directly depends on n-96-4 (depth 3.8), where Sha Dajie reveals the secret plan of Baoyu marrying Baochai to Daiyu. Overwhelmed by this news, Daiyu enters a state of shock and wanders to the Happy Red Court to see Baoyu, resulting in their eerie exchange where Baoyu says 'I am sick for Miss Lin'. Because Daiyu's psychological dissociation directly derives from Sha Dajie's revelation, its cumulative depth must exceed n-96-4, standing at 3.9.",
+            "anchorIds": [
+              "p-704354",
+              "p-704730"
+            ],
+            "prerequisiteNodeIds": [
+              "n-96-4"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "Baoyu and Daiyu's delirious encounter, staring and giggling at each other under severe psychological disorientation.",
+            "anchorIds": [
+              "p-704354",
+              "p-704730"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-97-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4,
+            "rationale": "Directly depends on n-97-6 (depth 3.8), where Xueyan is borrowed as a blind to escort the bride into the bridal chamber so Baoyu believes he is marrying Daiyu. Upon unveiling the bride, Baoyu discovers Baochai, is shocked, and immediately falls into delirium. Because this scene is the immediate narrative and logical denouement of the trick prepared in n-97-6, its reasoning depth must incorporate that prior chain and cannot be lower than 3.8, placing it at 4.0.",
+            "anchorIds": [
+              "p-714130",
+              "p-715020"
+            ],
+            "prerequisiteNodeIds": [
+              "n-97-6"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Pertains specifically to the event of Baoyu uncovering the veil in the bridal chamber and falling into delirium.",
+            "anchorIds": [
+              "p-714130"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-98-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Directly depends on n-98-4 (depth 3.7), where Daiyu dies at Xiaoxiang Guan. In n-98-5, Fengjie secretly reports Daiyu's demise to Grandmother Jia and Lady Wang. Grandmother Jia grieves deeply but explicitly prioritizes Baoyu's delicate condition over visiting Daiyu's coffin, rationalizing the emotional calculus between grandson and maternal granddaughter ('亲疏'). Grounded in Daiyu's death from n-98-4, this decision's reasoning depth must be at least 3.8.",
+            "anchorIds": [
+              "p-718910",
+              "p-719157",
+              "p-719630"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-4"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Details Grandmother Jia's attitude and decision regarding kinship priorities in the handling of Daiyu's funeral.",
+            "anchorIds": [
+              "p-719157"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-99-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.5,
+            "rationale": "Directly depends on n-98-7 (depth 3.4), where Grandmother Jia and Aunt Xue arrange the consummation date following Baoyu's recovery. In Chapter 99, Fengjie observes Grandmother Jia and Aunt Xue weeping over Daiyu and employs comedic mimicry of Baoyu and Baochai's awkward conjugal dynamics to cheer them up, prompting Grandmother Jia to set the wedding consummation date. Rooted in n-98-7's marital arrangement, its depth incorporates the preceding chain to reach 3.5.",
+            "anchorIds": [
+              "p-721507"
+            ],
+            "prerequisiteNodeIds": [
+              "n-98-7"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "A single domestic conversation and comedic anecdote within Grandmother Jia's room.",
+            "anchorIds": [
+              "p-721507"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-100-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Directly depends on n-98-4 (depth 3.7, Daiyu's death) and n-100-4 (depth 2.4, Tanchun's marriage agreement). Hearing of Tanchun's impending departure, Baoyu links Daiyu's death, Yingchun's suffering, and Tanchun's exile to lament the tragic dispersion of the sisters, which Baochai counters with rational Confucian ethics. Because Daiyu's death is a necessary premise in this cumulative grief, the depth cannot be lower than n-98-4 (3.7), putting it at 3.8.",
+            "anchorIds": [
+              "p-731779"
+            ],
+            "prerequisiteNodeIds": [
+              "n-100-4",
+              "n-98-4"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Reflects Baoyu's general sentiment regarding the tragic inevitable dispersal of the sisters of the Rongguo mansion.",
+            "anchorIds": [
+              "p-731779"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-102-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Directly depends on n-102-1 (depth 2.5), where Tanchun departs for her distant marriage. Madam You walks home through the deserted Daguanyuan after seeing Tanchun off, becomes melancholic at the desolate sights, and immediately falls sick with fever and delirium. As her sickness is directly tied to the journey through the garden following Tanchun's departure, its depth inherits n-102-1 and stands at 2.6.",
+            "anchorIds": [
+              "p-741589"
+            ],
+            "prerequisiteNodeIds": [
+              "n-102-1"
+            ]
+          },
+          "generality": {
+            "value": 0.4,
+            "rationale": "Involves Madam You falling ill after walking through Daguanyuan and the depiction of the garden's desolation.",
+            "anchorIds": [
+              "p-741589"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.8,
+            "rationale": "Directly depends on n-106-2 (depth 4.7) and n-105-6 (depth 1.5). Following Jia Lian's confrontation with Jia Zheng over the usurious loans and his cold detachment toward her, the critically ill Fengjie confesses to Ping'er that her schemes and greed brought about her ruin, and fears that Zhang Hua's lawsuit regarding You Erjie's death will implicate Jia Lian. Since this reflection builds on the direct aftermath of Jia Lian's interrogation in n-106-2, its depth cannot fall below 4.7, rating at 4.8.",
+            "anchorIds": [
+              "p-766824"
+            ],
+            "prerequisiteNodeIds": [
+              "n-105-6",
+              "n-106-2"
+            ]
+          },
+          "generality": {
+            "value": 1.1,
+            "rationale": "Covers Fengjie's personal life choices, guilt, and marital vulnerability beyond a single scene.",
+            "anchorIds": [
+              "p-766824"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-106-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 4.8,
+            "rationale": "Directly depends on n-106-2 (depth 4.7), where Jia Lian claimed that the mansion had suffered severe deficits for years and shifted responsibility onto the stewards. Prompted by Jia Lian's statements, Jia Zheng summons the stewards and audits the expenditure ledgers and rosters, uncovering that expenses outstripped income ten-to-one and that rents had plummeted. As an immediate systematic investigation following n-106-2, its depth must exceed n-106-2, placing it at 4.8.",
+            "anchorIds": [
+              "p-769430"
+            ],
+            "prerequisiteNodeIds": [
+              "n-106-2"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Characterizes the structural economic crisis of the entire Rongguo household economy.",
+            "anchorIds": [
+              "p-769430"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-108-4",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3.8,
+            "rationale": "Directly depends on n-108-3 (depth 3.7), the birthday banquet for Baochai where the ladies roll dice in a drinking game. When Li Wan rolls 'Twelve Beauties', Baoyu is reminded of his prophetic dream of the registers in the Land of Illusion, looks around at the missing sisters—especially Daiyu—and exits the banquet in sorrow. As this psychological reaction is embedded in the dice game of n-108-3, its depth cannot be lower than 3.7, calibrating to 3.8.",
+            "anchorIds": [
+              "p-779841"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-3"
+            ]
+          },
+          "generality": {
+            "value": 1.2,
+            "rationale": "Expresses Baoyu's psychological contemplation of the tragic dispersion of the 'Twelve Beauties of Jinling'.",
+            "anchorIds": [
+              "p-779841"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-109-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 3,
+            "rationale": "Directly depends on n-108-6 (depth 2.9), where Baoyu is retrieved from Xiaoxiang Guan and Baochai interrogates Xiren to prevent a relapse. In chapter 109, Baochai uses conversation with Xiren to subtly dissuade Baoyu from believing in spirits. Baoyu deduces that Daiyu may look down upon mortals or that he might meet her in dreams by sleeping apart in the outer room. Continuing the psychological sequence from n-108-6, its depth must be at least 3.0.",
+            "anchorIds": [
+              "p-783629"
+            ],
+            "prerequisiteNodeIds": [
+              "n-108-6"
+            ]
+          },
+          "generality": {
+            "value": 0.3,
+            "rationale": "A specific nighttime vigil by Baoyu in his outer bedroom.",
+            "anchorIds": [
+              "p-783629"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-111-5",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Directly depends on n-111-3 (depth 2.5, where He San and the thieves plot the robbery) and n-111-4 (depth 0.3). The thieves execute the burglary on Grandmother Jia's courtyard while Miaoyu and Xichun are keeping vigil. Bao Yong hears the commotion, climbs the roof, attacks the bandits with a wooden staff, and strikes He San dead. Building directly on the robbery plot from n-111-3, its depth must exceed 2.5, rating at 2.6.",
+            "anchorIds": [
+              "p-804348",
+              "p-805742"
+            ],
+            "prerequisiteNodeIds": [
+              "n-107-6",
+              "n-111-3",
+              "n-111-4"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A concrete action scene where Bao Yong single-handedly repels the band of thieves.",
+            "anchorIds": [
+              "p-804348",
+              "p-805742"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-112-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.6,
+            "rationale": "Directly depends on n-111-6 (depth 2.5), the initial morning investigation of the burglary and the arrest of the night-watch women. In Chapter 112, Jia Lian returns to verify the inventory list and submit it to the authorities, while Bao Yong loudly denounces Buddhist nuns for bringing bad luck, causing Xichun intense shame. As the direct continuation of n-111-6's investigation, its depth is 2.6.",
+            "anchorIds": [
+              "p-807175",
+              "p-806738",
+              "p-809102"
+            ],
+            "prerequisiteNodeIds": [
+              "n-111-6"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A particular episode where Jia Lian investigates the burglary, checks the inventory, and Bao Yong curses nuns in the courtyard.",
+            "anchorIds": [
+              "p-807175",
+              "p-806738",
+              "p-809102"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-113-3",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.7,
+            "rationale": "Directly depends on n-113-2 (depth 2.6), where Fengjie suffers terrifying hallucinations of You Erjie and fears retribution. When Granny Liu arrives with Qing'er, Fengjie, haunted by her guilt and spectral visions, believes Granny Liu's rustic prayers can placate spirits and solemnly entrusts Qiaojie's fate and her own life to her. Because this entrustment is the direct emotional and practical consequence of her spectral fear in n-113-2, its depth cannot be lower than 2.6, rating at 2.7.",
+            "anchorIds": [
+              "p-817400",
+              "p-815101",
+              "p-815577"
+            ],
+            "prerequisiteNodeIds": [
+              "n-113-2"
+            ]
+          },
+          "generality": {
+            "value": 0,
+            "rationale": "A specific domestic dialogue where Fengjie entrusts her daughter Qiaojie to Granny Liu.",
+            "anchorIds": [
+              "p-817400",
+              "p-815101",
+              "p-815577"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-2",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.8,
+            "rationale": "Directly depends on n-115-1 (depth 2.7), where Xichun resolves to cut worldly ties after conversing with the nun about Miaoyu's abduction. In n-115-2, when Madam You attempts to persuade her out of it, Xichun uses Yingchun's cruel death as justification, threatening suicide unless allowed to remain at Cuilong Hermitage within the mansion grounds to practice Buddhism. As an escalating tactical argument based on her resolution in n-115-1, its depth must exceed 2.7, reaching 2.8.",
+            "anchorIds": [
+              "p-830294"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-1"
+            ]
+          },
+          "generality": {
+            "value": 1.5,
+            "rationale": "Using the fates of Yingchun and others as negative examples, Xichun negotiates a personal compromise for remaining cloistered in the garden.",
+            "anchorIds": [
+              "p-830294"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-115-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.4,
+            "rationale": "Directly depends on n-115-5 (depth 2.3), where the Buddhist monk delivers the lost Jade and revives the dying Baoyu. As Baoyu recovers and eats, Sheyue makes a tactless remark rejoicing that the jade was never smashed in past fits, which triggers Baoyu's profound psychological shock; he casts the jade aside and falls unconscious again. Because this relapse is the immediate narrative reaction to the recovery in n-115-5, its depth must exceed 2.3, standing at 2.4.",
+            "anchorIds": [
+              "p-832301"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-5"
+            ]
+          },
+          "generality": {
+            "value": 0.2,
+            "rationale": "Records a specific moment where Sheyue's remark causes Baoyu to collapse into unconsciousness again.",
+            "anchorIds": [
+              "p-832301"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-117-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 2.9,
+            "rationale": "Directly depends on n-115-1 (depth 2.7) and n-115-2 (depth 2.8), where Xichun established her monastic resolve and threatened suicide. In chapter 117, Xichun actually cuts off her hair, presenting a fait accompli to Lady Xing and Lady Wang, forcing Madam You to take responsibility and permit her to stay in a cloistered room. As the final enactment of the resolution developed in n-115-1 and n-115-2, its reasoning depth must exceed 2.8, calibrated to 2.9.",
+            "anchorIds": [
+              "p-846771"
+            ],
+            "prerequisiteNodeIds": [
+              "n-115-1",
+              "n-115-2"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Depicts Xichun's individual action of shearing her hair and the family's formal concession to let her practice in seclusion.",
+            "anchorIds": [
+              "p-846771"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-118-6",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.5,
+            "rationale": "Directly depends on n-118-5 (depth 5.4), where Baochai and Xiren sternly admonish Baoyu using Confucian orthodoxy to pursue scholarly honors and abandon his hermit delusions. Baoyu seizes upon Baochai's phrase 'conclude from here' ('从此而止') to feign complete reform: he packs away Daoist/Buddhist books, discusses essays with Jia Lan, and studies diligently in seclusion—all while secretly planning his ultimate departure through the examination hall. Because this feigned conversion directly executes his counter-strategy to Baochai's sermon in n-118-5, its depth must exceed 5.4, reaching 5.5.",
+            "anchorIds": [
+              "p-852817",
+              "p-853374",
+              "p-853676"
+            ],
+            "prerequisiteNodeIds": [
+              "n-118-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Refers specifically to Baoyu's feigned academic reform and hidden intent during this preparatory period.",
+            "anchorIds": [
+              "p-852817",
+              "p-853374",
+              "p-853676"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-119-7",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.5,
+            "rationale": "Directly depends on n-119-3 (depth 3.3, where Granny Liu secretly spirits Qiaojie away) and n-119-6 (depth 5.4, where the imperial court grants a general amnesty and restores Jia family titles and property). Ban'er hears of the family's restoration and Jia Lian's return; Granny Liu and Ping'er bring Qiaojie back to Rongguo Mansion, reuniting the family and resolving the crisis. Because it synthesizes the rescue chain with the imperial restoration chain from n-119-6, its depth cannot be lower than 5.4, placing it at 5.5.",
+            "anchorIds": [
+              "p-862749",
+              "p-863605",
+              "p-863897"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-3",
+              "n-119-6"
+            ]
+          },
+          "generality": {
+            "value": 0.5,
+            "rationale": "Describes Jia Lian's return, Qiaojie's safe homecoming, and the reconciliation between Lady Xing and Lady Wang.",
+            "anchorIds": [
+              "p-862749",
+              "p-863605",
+              "p-863897"
+            ]
+          }
+        }
+      },
+      {
+        "nodeId": "n-120-1",
+        "assessment": {
+          "reasoningDepth": {
+            "value": 5.4,
+            "rationale": "Directly depends on n-119-5 (depth 5.3), where Baoyu vanishes from the examination grounds to cut worldly ties. At Piling Station, Jia Zheng spots Baoyu in the snow, wearing a crimson cape, who bows four times before departing with the Buddhist monk and Daoist priest back to the Great Void. As the final visual and existential parting completing Baoyu's departure from n-119-5, its depth must inherit and advance the chain to 5.4.",
+            "anchorIds": [
+              "p-865078",
+              "p-865486"
+            ],
+            "prerequisiteNodeIds": [
+              "n-119-5"
+            ]
+          },
+          "generality": {
+            "value": 1,
+            "rationale": "Describes the specific, solemn scene of Baoyu bowing to his father in the snow before disappearing into the transcendence of the Great Void.",
+            "anchorIds": [
+              "p-865078",
+              "p-865486"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "6t2carzfBP-cvdAP1sC0gAg",
+  "usage": {
+    "promptTokenCount": 136486,
+    "candidatesTokenCount": 6908,
+    "totalTokenCount": 143394,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 136486
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 6908
+      }
+    ]
+  },
+  "durationMs": 40291,
+  "requestHash": "36a2edb1df29c7d6ae77aab72df45501d189c1bb657364c5d89623f960e2ac51"
+}
