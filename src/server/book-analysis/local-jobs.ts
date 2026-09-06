@@ -39,7 +39,11 @@ export async function startLocalJob(source: LocalSource) {
     const previous = await localJobStatus(key);
     if (previous.status === 'running' || previous.status === 'ready') return { key, ...previous };
     await writeJson(path.join(root, 'source.json'), source);
-    const child = spawn(process.execPath, ['--import', 'tsx', path.join(process.cwd(), 'scripts/analyze-upload.ts'), key], { cwd: process.cwd(), env: process.env, detached: true, stdio: 'ignore' });
+    const child = spawn(process.execPath, ['--import', 'tsx', path.join(process.cwd(), 'scripts/analyze-upload.ts'), key], {
+      cwd: process.cwd(), env: process.env, detached: true,
+      // Opted-in structured metrics reach the dev server log; ordinary jobs stay quiet.
+      stdio: ['ignore', process.env.EAZO_PERFORMANCE_LOG === '1' ? 'inherit' : 'ignore', 'ignore'],
+    });
     await new Promise<void>((resolve, reject) => { child.once('spawn', resolve); child.once('error', reject); });
     const status: LocalJob = { status: 'running', stage: 'Starting book analysis', updatedAt: Date.now(), pid: child.pid };
     // Worker waits for this initial status before reporting progress.

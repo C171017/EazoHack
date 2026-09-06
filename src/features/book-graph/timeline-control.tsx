@@ -2,6 +2,7 @@
 import {useEffect,useLayoutEffect,useRef} from 'react';
 import {InputFrame} from './input-frame';
 import {TimelineDragInput} from './map-input';
+import {canHandleMapKey} from './keyboard-input';
 import {TimelineScroll,timelineWheelDelta} from './timeline-scroll';
 
 export function TimelineControl({x,y,progress,height,onScroll,visible}:{x:number;y:number;visible:boolean;progress:number;height:number;onScroll:(delta:number)=>void}) {
@@ -57,6 +58,7 @@ export function TimelineControl({x,y,progress,height,onScroll,visible}:{x:number
       if(frame===null){lastFrame=performance.now();frame=requestAnimationFrame(animate);}
     };
     const key=(event:KeyboardEvent)=>{
+      if(!canHandleMapKey(event))return;
       const delta=({ArrowDown:height*2,ArrowUp:-height*2,PageDown:height*8,PageUp:-height*8} as Record<string,number>)[event.key];
       if(delta===undefined)return;
       event.preventDefault();event.stopPropagation();interrupt();advance(delta);

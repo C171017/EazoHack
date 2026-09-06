@@ -18,7 +18,8 @@ import { HeatInspector, type ReadingHeatData } from './reading-heat-view';
 import { heatCount } from './reading-heat';
 import { ReadingReplay } from './reading-replay-view';
 import { InputFrame } from './input-frame';
-import { MapPointerInput, SafariGestureInput, mapWheelMovement, type InputPoint } from './map-input';
+import { MapPointerInput, SafariGestureInput, mapWheelMovement, pinchView, type InputPoint } from './map-input';
+import { canHandleMapKey } from './keyboard-input';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
 export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgress,onScrollSource,heat}:{
   graph:MapBootstrap;view:MapView|null;readingProgress:number;onScrollSource:(delta:number)=>void;
@@ -77,11 +78,16 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const pointers=useRef(new MapPointerInput()),safari=useRef(new SafariGestureInput()),stageTouches=useRef(new Set<number>());
   const drag=useRef<{view:MapView;latest:MapView;motion:OrbitMotion}|null>(null);
   const publishInput=useRef(onViewChange);
-  const updates=useMemo(()=>new InputFrame<MapView>(next=>publishInput.current(next),callback=>requestAnimationFrame(callback),id=>cancelAnimationFrame(id)),[]);
+  const updates=useRef<InputFrame<MapView>|null>(null);
+  useLayoutEffect(()=>{
+    const queue=new InputFrame<MapView>(next=>publishInput.current(next),callback=>requestAnimationFrame(callback),id=>cancelAnimationFrame(id));
+    updates.current=queue;
+    return()=>{queue.dispose();updates.current=null;};
+  },[]);
   const keyboardOrbit=useRef<MapView|null>(null);
   // A passive effect can run after the next native wheel event and replace its
   // newer camera with the previous frame. Synchronize before events/paint.
-  useLayoutEffect(()=>{publishInput.current=onViewChange;latest.current={current:updates.pending?latest.current.current:current,size};},[current,size,onViewChange,updates]);
+  useLayoutEffect(()=>{publishInput.current=onViewChange;latest.current={current:updates.current?.pending?latest.current.current:current,size};},[current,size,onViewChange,updates]);
   useEffect(()=>{const f=requestAnimationFrame(()=>setPreviousLevel(level));return()=>cancelAnimationFrame(f);},[level]);
   useEffect(()=>{
     const element=stage.current;if(!element)return;
@@ -91,19 +97,20 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   useEffect(()=>{
     const element=svg.current,input=pointers.current,gesture=safari.current;
     const touches=stageTouches.current;
-    const cancel=()=>{const ids=input.ids;input.cancel();touches.clear();gesture.end();drag.current=null;updates.flush();for(const id of ids)if(element?.hasPointerCapture(id))element.releasePointerCapture(id);};
+    const cancel=()=>{const ids=input.ids;input.cancel();touches.clear();gesture.end();drag.current=null;updates.current?.flush();for(const id of ids)if(element?.hasPointerCapture(id))element.releasePointerCapture(id);};
     window.addEventListener('blur',cancel);
-    return()=>{window.removeEventListener('blur',cancel);input.cancel();touches.clear();gesture.end();drag.current=null;updates.dispose();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();};
+    return()=>{window.removeEventListener('blur',cancel);input.cancel();touches.clear();gesture.end();drag.current=null;updates.current?.dispose();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();};
   },[updates]);
   // Native non-passive listener is required for trackpad pinch (ctrl+wheel).
   useEffect(()=>{
     const element=stage.current;if(!element)return;
+    const gestureInput=safari.current;
     let gesture:{view:MapView;size:typeof size}|null=null;
-    const publish=(next:MapView)=>{const bounded=confinePan(next,latest.current.size);latest.current={...latest.current,current:bounded};updates.push(bounded);};
+    const publish=(next:MapView)=>{const bounded=confinePan(next,latest.current.size);latest.current={...latest.current,current:bounded};updates.current?.push(bounded);};
     const interrupt=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;navigation.current?.abort();setNavigating(false);};
     const wheel=(event:WheelEvent)=>{
       if(!(event.target instanceof Element)||!event.target.closest('svg,.map-timeline-control'))return;
-      event.preventDefault();if(safari.current.ownsWheel||pointers.current.active||stageTouches.current.size)return;
+      event.preventDefault();if(gestureInput.ownsWheel||pointers.current.active||stageTouches.current.size)return;
       const movement=mapWheelMovement(event,latest.current.size.height);if(!movement)return;
       if(movement.kind==='pan'&&event.target.closest('.map-timeline-control'))return;
       interrupt();
@@ -114,21 +121,21 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     };
     const gestureStart=(event:Event)=>{
       event.preventDefault();
-      if(!safari.current.start(stageTouches.current.size>0)){gesture=null;return;}
-      interrupt();updates.flush();
+      if(!gestureInput.start(stageTouches.current.size>0)){gesture=null;return;}
+      interrupt();updates.current?.flush();
       const {current:view,size}=latest.current;gesture={view,size};
     };
     const gestureChange=(event:Event)=>{
-      event.preventDefault();if(!safari.current.change(stageTouches.current.size>0)||!gesture)return;
+      event.preventDefault();if(!gestureInput.change(stageTouches.current.size>0)||!gesture)return;
       const scale=(event as Event&{scale:number}).scale;if(!Number.isFinite(scale)||scale<=0)return;
       publish(zoomCentered(gesture.view,gesture.view.zoom*scale,gesture.size,graph.roots,readingProgress));
     };
-    const gestureEnd=(event:Event)=>{gestureChange(event);event.preventDefault();gesture=null;safari.current.end();updates.flush();};
+    const gestureEnd=(event:Event)=>{gestureChange(event);event.preventDefault();gesture=null;gestureInput.end();updates.current?.flush();};
     element.addEventListener('wheel',wheel,{passive:false});
     element.addEventListener('gesturestart',gestureStart,{passive:false});element.addEventListener('gesturechange',gestureChange,{passive:false});element.addEventListener('gestureend',gestureEnd,{passive:false});
-    return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);safari.current.end();};
+    return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);gestureInput.end();};
   },[graph.roots,readingProgress,updates]);
-  const cancelMotion=()=>{updates.flush();if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
+  const cancelMotion=()=>{updates.current?.flush();if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
   const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch){setSourceActivation(null);if(patch.selectedNodeId)setHeatSelection(null);}cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:confinePan(next,latest.current.size)};onViewChange(next);};
   function activateLeaf(id:string) {
     change({selectedNodeId:id});
@@ -151,21 +158,20 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     const {current:view,size}=latest.current;let next:MapView;
     if(movement.kind==='pinch'){
       const base=drag.current?.view??view;
-      const zoomed=movement.scale===1?base:zoomCentered(base,base.zoom*movement.scale,size,graph.roots,readingProgress);
-      next={...zoomed,x:zoomed.x+movement.dx,y:zoomed.y+movement.dy};
+      next=pinchView(base,movement,size,graph.roots,readingProgress);
     }else if(movement.kind==='pan')next={...view,x:view.x+movement.dx,y:view.y+movement.dy};
     else {
       const d=drag.current??{view,latest:view,motion:beginOrbit(view)};
-      d.motion=advanceOrbit(d.motion,movement.dx,movement.dy);
-      next={...view,projection:'3d',...d.motion.display};drag.current=d;
+      const motion=advanceOrbit(d.motion,movement.dx,movement.dy);
+      next={...view,projection:'3d',...motion.display};drag.current={...d,motion};
     }
-    const bounded=confinePan(next,size);if(drag.current)drag.current.latest=bounded;
-    latest.current={current:bounded,size};updates.push(bounded);return true;
+    const bounded=confinePan(next,size);if(drag.current)drag.current={...drag.current,latest:bounded};
+    latest.current={current:bounded,size};updates.current?.push(bounded);return true;
   }
   function finishPointer(id:number,cancelled=false){
     const input=pointers.current;if(!input.has(id))return;
     const d=drag.current,shouldSettle=!cancelled&&input.canSettle;
-    input.end(id,cancelled);updates.flush();
+    input.end(id,cancelled);updates.current?.flush();
     const view=latest.current.current;
     drag.current=input.active?{view,latest:view,motion:beginOrbit(view)}:null;
     if(!d||!shouldSettle)return;
@@ -229,20 +235,21 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const {points,labels}=useMapLayout(projectedPoints,size.width,size.height,obstacles,labelCap,current.selectedNodeId,graph.version);
   const source=(anchor:SourceAnchor)=>{change({readerAnchorId:anchor.id});onSource(anchor);};
   return <div className="book-map" onKeyDown={e=>{
-    if((e.target as HTMLElement).closest('input,select,textarea'))return;
+    if(!canHandleMapKey(e))return;
     const i=['1','2','3','4'].indexOf(e.key);if(i>=0){e.preventDefault();const projection=PROJECTIONS[i].id;settle(current,{projection,...orientation(projection)});}
     if(e.key==='+'||e.key==='='){e.preventDefault();zoom(1.35);}if(e.key==='-'){e.preventDefault();zoom(1/1.35);}
   }}>
     <div ref={stage} className="map-stage"
       onPointerDownCapture={e=>{if(e.pointerType==='touch'){stageTouches.current.add(e.pointerId);safari.current.touch();}}}
       onPointerUpCapture={e=>stageTouches.current.delete(e.pointerId)}
-      onPointerCancelCapture={e=>stageTouches.current.delete(e.pointerId)}>
+      onPointerCancelCapture={e=>stageTouches.current.delete(e.pointerId)}
+      onLostPointerCaptureCapture={e=>{if(!svg.current?.hasPointerCapture(e.pointerId))stageTouches.current.delete(e.pointerId);}}>
       {graph.unplaced>0&&<UnplacedNotes version={graph.version} count={graph.unplaced} onLocate={id=>void locate(id)}/>}
       {heat&&<ReadingReplay key={graph.version} points={heat.points} loading={heat.loading} error={heat.error} view={current} size={size}
         readingProgress={readingProgress}/>}
       <svg style={{position:'relative',touchAction:'none'}} data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-x={current.x} data-camera-y={current.y} data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-fit-scale={current.framing?.scale??1} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
-        onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;if(view.projection!=='3d'&&!e.altKey){change({x:view.x+(e.key==='ArrowRight'?-40:e.key==='ArrowLeft'?40:0),y:view.y+(e.key==='ArrowDown'?-40:e.key==='ArrowUp'?40:0)});return;}keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
-        onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
+        onKeyDown={e=>{if(!canHandleMapKey(e)){keyboardOrbit.current=null;return;}if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;if(view.projection!=='3d'&&!e.altKey){change({x:view.x+(e.key==='ArrowRight'?-40:e.key==='ArrowLeft'?40:0),y:view.y+(e.key==='ArrowDown'?-40:e.key==='ArrowUp'?40:0)});return;}keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
+        onKeyUp={e=>{if(!canHandleMapKey(e)){keyboardOrbit.current=null;return;}if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
         onBlur={()=>{keyboardOrbit.current=null;}}
         onClickCapture={e=>{if(pointers.current.suppressClick(e.nativeEvent)){e.preventDefault();e.stopPropagation();}}}
         onPointerDownCapture={e=>{
@@ -272,7 +279,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
           const open=()=>{change({selectedNodeId:null});setHeatSelection(point.leaf.id);};
           return <circle key={point.leaf.id} data-heat-leaf={point.leaf.id} cx={p.x} cy={p.y} r="16" fill="transparent" role="button" tabIndex={0}
             aria-label={`${point.leaf.label}: ${heatCount(point,'all')} reading footprints`} style={{cursor:'pointer'}}
-            onPointerDown={e=>e.stopPropagation()} onClick={open} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();open();}}}>
+            onPointerDown={e=>e.stopPropagation()} onClick={open} onKeyDown={e=>{if(!canHandleMapKey(e))return;if(e.key==='Enter'||e.key===' '){e.preventDefault();e.stopPropagation();open();}}}>
             <title>{point.leaf.label} · {heatCount(point,'all')} generations</title>
           </circle>;
         })}</g>}
@@ -280,7 +287,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
         {points.map(p=>{const color=COLORS[Math.max(0,graph.territories.findIndex(t=>t.id===p.node.themeIds[0]))%COLORS.length],label=labels.get(p.id),cluster=p.node.kind==='cluster';let depth=0,parent=p.node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}const radius=p.radius*Math.max(.75,Math.min(1.1,Math.sqrt(current.zoom/ZOOM_POLICY.step**depth)));return <g key={p.id} opacity={p.opacity} pointerEvents={p.exiting?'none':undefined} aria-hidden={p.exiting||undefined}>
           {Math.hypot(p.x-p.anchorX,p.y-p.anchorY)>1&&<g data-semantic-anchor={p.id} aria-hidden="true" pointerEvents="none"><circle cx={p.anchorX} cy={p.anchorY} r="2.5" fill={color}/><line x1={p.anchorX} y1={p.anchorY} x2={p.x} y2={p.y} stroke={color} opacity=".5"/></g>}
           {label&&<line x1={p.x} y1={p.y} x2={Math.max(label.labelX,Math.min(label.labelX+label.width,p.x))} y2={Math.max(label.labelY,Math.min(label.labelY+26,p.y))} stroke={color} opacity=".25"/>}
-          <g data-node-id={p.id} data-node-kind={p.node.kind} className={`map-node${current.selectedNodeId===p.id||selectedAncestors.has(p.id)?' is-selected':''}`} role="button" tabIndex={p.exiting?-1:0} aria-label={`${p.label}${cluster?`, group of ${p.node.leafCount} notes. Activate to zoom in`:`, ${p.node.sourceLabel}`}`} aria-pressed={current.selectedNodeId===p.id||selectedAncestors.has(p.id)} onClick={()=>cluster?openCluster(p.node):activateLeaf(p.id)} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();if(cluster)void openCluster(p.node);else activateLeaf(p.id);}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();e.stopPropagation();const direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const target=windowed.nodes[(windowed.nodes.findIndex(n=>n.id===p.id)+direction+windowed.nodes.length)%windowed.nodes.length];if(target)svg.current?.querySelector<SVGGElement>(`[data-node-id="${target.id}"]`)?.focus();}}}>
+          <g data-node-id={p.id} data-node-kind={p.node.kind} className={`map-node${current.selectedNodeId===p.id||selectedAncestors.has(p.id)?' is-selected':''}`} role="button" tabIndex={p.exiting?-1:0} aria-label={`${p.label}${cluster?`, group of ${p.node.leafCount} notes. Activate to zoom in`:`, ${p.node.sourceLabel}`}`} aria-pressed={current.selectedNodeId===p.id||selectedAncestors.has(p.id)} onClick={()=>cluster?openCluster(p.node):activateLeaf(p.id)} onKeyDown={e=>{if(!canHandleMapKey(e))return;if(e.key==='Enter'||e.key===' '){e.preventDefault();if(cluster)void openCluster(p.node);else activateLeaf(p.id);}if(['ArrowLeft','ArrowUp','ArrowRight','ArrowDown'].includes(e.key)){e.preventDefault();e.stopPropagation();const direction=['ArrowLeft','ArrowUp'].includes(e.key)?-1:1;const target=windowed.nodes[(windowed.nodes.findIndex(n=>n.id===p.id)+direction+windowed.nodes.length)%windowed.nodes.length];if(target)svg.current?.querySelector<SVGGElement>(`[data-node-id="${target.id}"]`)?.focus();}}}>
             <title>{p.label} · {cluster?`${p.node.leafCount} notes · ${p.node.summary}`:p.node.sourceLabel}</title>
             <circle cx={p.x} cy={p.y} r={radius+9} fill={color} opacity=".08"/>
             <circle cx={p.x} cy={p.y} r={radius} fill={cluster?'#252C35':color} stroke={color} strokeWidth="1.2"/>

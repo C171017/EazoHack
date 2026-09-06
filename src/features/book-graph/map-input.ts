@@ -1,3 +1,8 @@
+import type {MapView} from '../../shared/schemas';
+import type {MapEntry} from '../../shared/zoom-hierarchy';
+import {zoomCentered} from './semantic-window';
+import type {Size} from './map-framing';
+
 export type InputPoint = {pointerId:number;pointerType:string;button:number;clientX:number;clientY:number};
 type Point = {x:number;y:number};
 export type PointerMovement = {kind:'orbit'|'pan';dx:number;dy:number} | {kind:'pinch';dx:number;dy:number;scale:number};
@@ -8,8 +13,13 @@ export function pinchMovement(before:readonly [Point,Point],after:readonly [Poin
   const span=distance(...before),nextSpan=distance(...after);
   return {kind:'pinch',dx:(after[0].x+after[1].x-before[0].x-before[1].x)/2,
     dy:(after[0].y+after[1].y-before[0].y-before[1].y)/2,
-    // Coincident contacts have no meaningful scale. Rebase until separated.
+    // Coincident contact baselines have no meaningful scale; allow pan only.
     scale:span>=1&&nextSpan>=1?nextSpan/span:1};
+}
+
+export function pinchView(base:MapView,movement:Extract<PointerMovement,{kind:'pinch'}>,size:Size,roots:MapEntry[],readingProgress:number):MapView {
+  const zoomed=movement.scale===1?base:zoomCentered(base,base.zoom*movement.scale,size,roots,readingProgress);
+  return {...zoomed,x:zoomed.x+movement.dx,y:zoomed.y+movement.dy};
 }
 
 // Own the whole contact session, including spare fingers and 2 -> 1 handoff.
@@ -26,9 +36,11 @@ export class MapPointerInput {
   has(id:number){return this.points.has(id);}
   down(event:InputPoint,onNode=false){
     if(this.has(event.pointerId)||![0,1,2].includes(event.button))return false;
+    // A new idle press ends the prior click-suppression window even when a
+    // desktop node owns the press instead of starting a map drag.
+    if(!this.active){this.moved=false;this.multiple=false;this.blockedClick=false;}
     if(event.pointerType!=='touch'&&(this.active||onNode))return false;
     if(event.pointerType==='touch'&&this.active&&!this.touching)return false;
-    if(!this.active){this.moved=false;this.multiple=false;this.blockedClick=false;}
     const position=point(event);
     this.points.set(event.pointerId,{position,origin:position,type:event.pointerType,mode:event.button===1||event.button===2?'pan':'orbit'});
     for(const p of this.points.values())p.origin=p.position;
