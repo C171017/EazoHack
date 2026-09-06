@@ -93,6 +93,11 @@ export function Workspace({preview,graph,initialTitle,cloudSourceId}:{preview:Bo
   }
   async function selectBook(book: UploadedBook | null) {
     if (importing.current) return;
+    if (!book && cloudSourceId) {
+      await cloudRequest('open', {source: null});
+      window.location.assign('/');
+      return;
+    }
     if (book?.kind === 'pdf' || (book?.originalPdf && book.originalPdf.manifest.version !== PDF_IMPORT_VERSION)) { await processBook(book); return; }
     setUploaded(book); setLibraryOpen(false); setImportState(null);
   }

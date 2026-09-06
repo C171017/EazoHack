@@ -190,7 +190,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     if(p.x< -240||p.y< -240||p.x>size.width+240||p.y>size.height+240)return [];
     return [{...item,id:item.node.id,label:item.node.label,x:p.x,y:p.y,cluster:item.node.kind==='cluster'}];
   });
-  const labelCap=Math.max(1,Math.min(ZOOM_POLICY.labels,Math.floor((size.width-16)/218)*Math.floor((size.height-80)/34)));
+  const labelCap=Math.max(1,Math.min(ZOOM_POLICY.labels,Math.floor((size.width-16)/250)*Math.floor((size.height-80)/34)));
   const {points,labels}=useMapLayout(projectedPoints,size.width,size.height,obstacles,labelCap,current.selectedNodeId,graph.version);
   const source=(anchor:SourceAnchor)=>{change({readerAnchorId:anchor.id});onSource(anchor);};
   return <div className="book-map" onKeyDown={e=>{

@@ -64,7 +64,8 @@ export function placeLabels<T extends {id:string;x:number;y:number;label:string;
   const boxes:LabelObstacle[]=[...obstacles,...markers.map(p=>({x:p.x-(p.radius??18)-5,y:p.y-(p.radius??18)-5,width:((p.radius??18)+5)*2,height:((p.radius??18)+5)*2}))];
   const placed=new Map<string,T&{labelX:number;labelY:number;width:number}>();
   const pending:T[]=[];
-  const labelWidth=(p:T)=>Math.min(Math.max(40,width-16),210,Math.max(100,Math.min(p.label.length,31)*6.1+18));
+  // Reserve room for the 13px map labels, their halo, and horizontal padding.
+  const labelWidth=(p:T)=>Math.min(Math.max(40,width-16),242,Math.max(100,Math.min(p.label.length,31)*7.2+18));
   const free=(x:number,y:number,w:number,gap:number)=>x>=8&&y>=12&&x+w<=width-8&&y+26<=height-4
     &&!boxes.some(b=>x<b.x+b.width+gap&&x+w+gap>b.x&&y<b.y+b.height+gap&&y+26+gap>b.y);
   const reserve=(p:T,x:number,y:number,w:number)=>{

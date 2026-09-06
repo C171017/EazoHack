@@ -1,3 +1,6 @@
+-- OBSOLETE REFERENCE ONLY — DO NOT APPLY.
+-- Canonical deployed schema: supabase/migrations/202609060001 through 202609060005.
+-- The worker now uses those tables and buckets via eazo_worker.
 -- REVIEW ONLY: Supabase task must integrate this contract before remote application.
 -- No client writes. The authenticated web backend inserts owner-checked requests.
 create table public.eazo_analysis_jobs (

@@ -23,7 +23,7 @@
 .map-node{cursor:pointer}
 .map-node .map-label-hit{fill:transparent;stroke:none}
 .map-node text{font:11px Arial,sans-serif;fill:#E0E3E7;pointer-events:none}
-.map-node .map-label-text{paint-order:stroke;stroke:#121519;stroke-width:3px;stroke-linejoin:round}
+.map-node .map-label-text{font-size:13px;fill:#F6F7F9;paint-order:stroke;stroke:#121519;stroke-width:1.6px;stroke-linejoin:round;filter:drop-shadow(0 1px 2px #0009)}
 .map-node:hover .map-label-text,.map-node:focus .map-label-text,.map-node.is-selected .map-label-text{fill:#fff}
 .map-node:hover circle,.map-node:focus circle,.map-node.is-selected circle{stroke:#E5E8EE;stroke-width:1.5}
 .map-detail{margin:0 30px;border:1px solid #424955;border-radius:10px;background:#191D23;max-height:230px;overflow:auto;padding:14px 16px;flex-shrink:0}
@@ -61,4 +61,3 @@
 
 /* Fade before the Z axis collapses in the top-down projection. */
 .map-timeline-control[data-hidden='true']{opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,-50%) scale(.9);transition:opacity .2s ease,transform .2s ease,visibility 0s .2s}
-
