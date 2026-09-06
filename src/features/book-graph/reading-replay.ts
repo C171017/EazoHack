@@ -1,9 +1,5 @@
-import type { MapView } from '../../shared/schemas';
 import type { HeatPoint } from './heat-placement';
 import type { ReadingFootprint } from './reading-heat';
-import { baseScale, type Size } from './map-framing';
-import { DEFAULT_CAMERA, project, sourceWorld } from './projection';
-import { HEAT_RADIUS } from './heat-field';
 
 export type ReplayVisit = { event: ReadingFootprint; point: HeatPoint };
 
@@ -46,24 +42,4 @@ export function replayFrame(count: number, elapsed: number, reducedMotion = fals
     opacity: reducedMotion ? 1 : Math.max(0, Math.min(1, (timing.total - elapsed) / timing.fade)),
     done: elapsed >= timing.total,
   };
-}
-
-/** Temporary camera fits every visited leaf and its halo without saving a view. */
-export function replayView(points: HeatPoint[], base: MapView, size: Size, progress: number): MapView {
-  const pose = { ...base, ...DEFAULT_CAMERA, projection: '3d' as const, zoom: 1, x: 0, y: 0, selectedNodeId: null };
-  const positions = points.map(point => sourceWorld(point.leaf.position, [0, 1], progress));
-  if (!positions.length) return pose;
-  const min = { x: Infinity, y: Infinity }, max = { x: -Infinity, y: -Infinity };
-  for (const p of positions) {
-    const q = project(p, pose);
-    min.x = Math.min(min.x, q.x - HEAT_RADIUS); max.x = Math.max(max.x, q.x + HEAT_RADIUS);
-    min.y = Math.min(min.y, q.y - HEAT_RADIUS); max.y = Math.max(max.y, q.y + HEAT_RADIUS);
-  }
-  const cx = (min.x + max.x) / 2, cy = (min.y + max.y) / 2;
-  const { yaw, pitch } = pose;
-  const center = { x: cx * Math.cos(yaw) - cy * Math.sin(yaw) * Math.sin(pitch),
-    y: cx * Math.sin(yaw) + cy * Math.cos(yaw) * Math.sin(pitch), z: -cy * Math.cos(pitch) };
-  const pixels = Math.min(Math.max(40, size.width - 100) / Math.max(220, max.x - min.x),
-    Math.max(40, size.height - 160) / Math.max(300, max.y - min.y));
-  return { ...pose, framing: { center, scale: pixels / baseScale(size) } };
 }

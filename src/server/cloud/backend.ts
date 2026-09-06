@@ -25,6 +25,7 @@ export async function backend<T = unknown>(path: string, token: string, init: Re
     if (path.startsWith('/rest/v1/')) {
       const failure = await response.json().catch(() => null) as {message?: string} | null;
       const controlled: Record<string, [string, number]> = {
+        source_not_found: ['Book not found.', 404],
         book_limit: ['Your account has reached its book limit.', 429],
         source_version_limit: ['This book has reached its saved version limit.', 429],
         source_size_required: ['The source file size is required. Please retry importing the book.', 400],

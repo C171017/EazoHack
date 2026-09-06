@@ -37,3 +37,9 @@ Signed uploads and trusted worker writes invoke the Storage database guard when 
 Supabase documents [managed service ownership](https://supabase.com/docs/guides/platform/permissions), recommends avoiding [managed Storage schema alterations](https://supabase.com/docs/guides/storage/schema/design), and requires [object deletion through the Storage API](https://supabase.com/docs/guides/storage/management/delete-objects). The [official Storage client](https://github.com/supabase/storage-js/blob/main/src/packages/StorageFileApi.ts) confirms the list/remove endpoint bodies used here.
 
 Validation after the readiness corrections: `scripts/test-account-db.sh` passed access controls, worker integration, account sync, and simultaneous conflicting saves against a fresh disposable PostgreSQL cluster.
+
+## Authorized application result
+
+On 2026-09-06, before 02:59:43 UTC, migration 007 was applied to `gzmomicvppjckgzbbimm` through the authorized SQL Editor as one transaction. The staged text matched the reviewed file SHA-256 `b040759e18b16c6cce58df17b3b7872e3cc93e1a4a205a6568a8e29c7abc5695`. The editor returned `Success. No rows returned`.
+
+Read-only postflight passed every permission and feature check. Books remained 1, sources 1, snapshots 0, heads 0, and analysis jobs 1. The original source now reserves 1,316 bytes. Both new tables have RLS; anonymous head reads/save execution, direct client snapshot inserts, and client account-deletion RPC execution are denied. The Storage guard is enabled and `storage.objects` is still owned by `supabase_storage_admin`. PostgREST independently exposed both sync RPCs and the three new snapshot columns. No accounts, files, or existing records were deleted during this migration.

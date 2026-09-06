@@ -11,7 +11,12 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ b
   const { book } = await searchParams;
   if (book === 'hong-lou-meng') {
     const preview = await getChineseBookPreview();
-    const graph: MapBootstrap = {bookId: 'hong-lou-meng', graphVersion: 'sample-pending', version: 'sample-pending', roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true};
+    let graph: MapBootstrap;
+    try { graph = mapBootstrap(await loadMapStore('hong-lou-meng')); }
+    catch (error) {
+      console.error('Hong Lou Meng map unavailable:', error instanceof Error ? error.message : 'Unknown map error');
+      graph = {bookId: 'hong-lou-meng', graphVersion: 'map-unavailable', version: 'map-unavailable', roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true};
+    }
     return <Workspace key="hong-lou-meng" preview={preview} graph={graph} initialTitle="红楼梦"/>;
   }
   let cloud;try {cloud=book === 'plato-republic' ? null : await selectedCloudBook({refresh:false});} catch {redirect('/cloud');}

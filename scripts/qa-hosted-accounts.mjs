@@ -7,6 +7,7 @@ import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 import path from 'node:path';
 
+class QAFailure extends Error {}
 const args = new Map(process.argv.slice(2).map(value => { const index = value.indexOf('='); return index < 0 ? [value, true] : [value.slice(0, index), value.slice(index + 1)]; }));
 const privateDir = String(args.get('--private-dir') ?? '/private/tmp/eazo-private-config');
 const envFile = String(args.get('--env-file') ?? path.join(privateDir, 'preview.env'));
@@ -14,7 +15,7 @@ const sessionFile = path.join(privateDir, 'qa-account-sessions.json');
 const userFile = path.join(privateDir, 'smoke-users.json');
 let label = 'configuration';
 const pass = message => console.log(`PASS ${message}`);
-const check = (condition, message) => { if (!condition) throw new Error(message); };
+const check = (condition, message) => { if (!condition) throw new QAFailure(message); };
 async function privateRead(file) {
   const info = await stat(file);
   check((info.mode & 0o077) === 0, 'A credentials file must have permissions 0600.');
@@ -40,7 +41,7 @@ function absorbCookies(cookies, lines) {
   }
 }
 function equal(actual, expected, message) {
-  try { assert.deepEqual(actual, expected); } catch { throw new Error(message); }
+  try { assert.deepEqual(actual, expected); } catch { throw new QAFailure(message); }
 }
 
 try {
@@ -98,7 +99,7 @@ try {
       const cli = String(args.get('--vercel-cli') ?? '/private/tmp/eazo-npm-cache/_npx/69f9afb961c37556/node_modules/vercel/dist/vc.js');
       const configDir = String(args.get('--vercel-config') ?? '/private/tmp/eazo-vercel-config');
       try { await promisify(execFile)(process.execPath, [cli, '--global-config', configDir, 'curl', route, '--deployment', base.origin, '--', '--config', configFile], { env: { ...process.env, VERCEL_TELEMETRY_DISABLED: '1' }, timeout: 90_000, maxBuffer: 1024 * 1024 }); }
-      catch { throw new Error('Vercel request failed; private request files retained for local inspection.'); }
+      catch { throw new QAFailure('Vercel request failed; private request files retained for local inspection.'); }
       const headerText = await readFile(headersFile, 'utf8');
       const statuses = [...headerText.matchAll(/^HTTP\/[^ ]+ (\d+)/gm)];
       const bytes = new Uint8Array(await readFile(bodyFile));
@@ -174,6 +175,10 @@ try {
     const id = table === 'books' ? source.book_id : source.id;
     const hidden = await query(b, table, `${column}=eq.${id}&select=*`); check(hidden.length === 0, 'B can read A database rows.');
   }
+  const rpcDenied = await supabase('/rest/v1/rpc/eazo_save_snapshot', b.cookies['eazo-access'], { method: 'POST', body: JSON.stringify({ p_source: source.id, p_device: randomUUID(), p_mutation: randomUUID(), p_base_revision: 1, p_payload: snapshot(256) }) });
+  check(rpcDenied.status >= 400 && rpcDenied.status < 500, 'B can write A through direct snapshot RPC.');
+  const patchDenied = await supabase(`/rest/v1/books?id=eq.${source.book_id}`, b.cookies['eazo-access'], { method: 'PATCH', headers: { Prefer: 'return=representation' }, body: JSON.stringify({ title: 'unauthorized QA rename' }) });
+  check(patchDenied.status >= 400 || (patchDenied.status === 200 && Array.isArray(patchDenied.body) && patchDenied.body.length === 0), 'B can edit A book through direct table access.');
   const readDenied = await supabase(`/storage/v1/object/authenticated/eazo-sources/${source.source_object}`, b.cookies['eazo-access']);
   check(readDenied.status >= 400 && readDenied.status < 500, 'B can read A storage object.');
   const overwriteDenied = await supabase(`/storage/v1/object/eazo-sources/${source.source_object}`, b.cookies['eazo-access'], { method: 'PUT', headers: { 'Content-Type': 'text/plain' }, body: Buffer.from('unauthorized test write') });
@@ -225,7 +230,7 @@ try {
   console.log('Synthetic accounts and the 1 KiB fixture are retained. No models were called and no accounts were deleted.');
 } catch (error) {
   // Never print arbitrary response objects, fetch URLs, CLI errors, or assertions containing tokens.
-  const allowed = error instanceof Error ? error.message : 'Unknown failure';
+  const allowed = error instanceof QAFailure ? error.message : 'Operation failed; private credentials and response details were not printed.';
   console.error(`FAIL ${label}: ${allowed.replace(/https?:\/\/[^\s]+/g, '[URL omitted]').slice(0, 300)}`);
   process.exitCode = 1;
 }

@@ -123,7 +123,7 @@ export const GraphSchema = z.object({
     axisAssessment: StoredAxisAssessmentSchema.optional(),
     position: z.object({ x: Unit.nullable(), y: z.number().finite().min(0).max(4).nullable(), z: Unit.nullable() }).strict(),
     evidence: Evidence, sourceLabel: ShortText,
-    sourceRole: z.enum(['dialogue', 'commentary', 'paratext']).optional(),
+    sourceRole: z.enum(['dialogue', 'narrative', 'commentary', 'paratext']).optional(),
     speaker: ShortText.nullable().optional(),
   }).strict()),
   edges: z.array(z.object({ id: Id, source: Id, target: Id, type: ShortText, evidenceAnchorIds: GraphIds.refine(ids => ids.length > 0), rationale: Text, provenance: z.enum(['book_supported', 'model_inferred', 'editorial', 'mock']) }).strict()),
@@ -196,7 +196,7 @@ export const MapViewSchema = z.object({
   yaw: z.number().finite(), pitch: z.number().finite().min(-Math.PI/2).max(Math.PI/2),
   x: z.number().finite(), y: z.number().finite(), zoom: z.number().min(0.5).max(48),
   selectedNodeId: Id.nullable(), readerAnchorId: Id.nullable().default(null), sourceScope: z.enum(['excerpt','book']),
-  themeFilter: Id.nullable().optional(), roleFilter: z.enum(['dialogue','commentary','paratext']).nullable().optional(),
+  themeFilter: Id.nullable().optional(), roleFilter: z.enum(['dialogue','narrative','commentary','paratext']).nullable().optional(),
   nodePage: z.number().int().nonnegative().optional(),
 }).strict();
 export type MapView = z.infer<typeof MapViewSchema>;

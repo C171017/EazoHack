@@ -11,13 +11,29 @@ test('all projections stop at the fade margin at different zooms and viewport si
     const corners=[min.x,max.x].flatMap(x=>[min.y,max.y].flatMap(y=>[min.z,max.z].map(z=>screenWorld({x,y,z},bounded,size))));
     for(const [axis,length] of [['x',size.width],['y',size.height]] as const) {
       const start=Math.min(...corners.map(p=>p[axis])),end=Math.max(...corners.map(p=>p[axis])),margin=Math.min(48,length*.08);
-      if(end-start>=length-2*margin){assert.ok(start<=margin+1e-7);assert.ok(end>=length-margin-1e-7);}
+      if(end-start>=length){assert.ok(start<=margin+1e-7);assert.ok(end>=length-margin-1e-7);}
       else assert.ok(Math.abs((start+end)/2-length/2)<=margin+1e-7);
     }
     assert.equal(bounded.zoom,zoom);assert.equal(bounded.yaw,view.yaw);assert.equal(bounded.pitch,view.pitch);
     assert.deepEqual(confinePan(bounded,size),bounded);
     const reversed=confinePan({...bounded,x:bounded.x-sign,y:bounded.y-sign},size);
     assert.equal(reversed.x,bounded.x-sign);assert.equal(reversed.y,bounded.y-sign);
+  }
+});
+
+test('pan limits do not jump as zoom crosses the viewport-fit threshold',()=>{
+  const size={width:704,height:720};
+  for(const projection of ['3d','xy','xz','yz'] as const) {
+    const view={...initialView('test'),projection,...orientation(projection),x:0,y:0};
+    const {min,max}=GRID_PAN_BOUNDS;
+    const corners=[min.x,max.x].flatMap(x=>[min.y,max.y].flatMap(y=>[min.z,max.z].map(z=>screenWorld({x,y,z},view,size))));
+    const span=Math.max(...corners.map(p=>p.x))-Math.min(...corners.map(p=>p.x));
+    for(const width of [size.width-96,size.width]) {
+      const zoom=view.zoom*width/span;
+      const before=confinePan({...view,zoom:zoom-1e-7,x:1e6},size);
+      const after=confinePan({...view,zoom:zoom+1e-7,x:1e6},size);
+      assert.ok(Math.abs(after.x-before.x)<.001,`${projection}: ${before.x} → ${after.x}`);
+    }
   }
 });
 

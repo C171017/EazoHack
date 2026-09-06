@@ -1,7 +1,7 @@
 import { loadLocalMap } from '@/server/book-analysis/local-jobs';
 import { requireLocalAnalysis } from '@/server/book-analysis/local-access';
 import { selectedCloudBook } from '@/server/cloud/map';
-import { loadMapStore, nodeDetail, visibleLinks, unplacedNotes, heatIndexPage } from '@/server/book-map/store';
+import { loadMapStore, isSampleBookId, nodeDetail, visibleLinks, unplacedNotes, heatIndexPage } from '@/server/book-map/store';
 import { ZOOM_POLICY } from '@/shared/zoom-hierarchy';
 export const runtime='nodejs';
 export async function GET(request:Request) {
@@ -9,7 +9,9 @@ export async function GET(request:Request) {
     const url=new URL(request.url),q=url.searchParams;
     const localKey=q.get('version')?.match(/^local:([a-f0-9]{64}):/)?.[1];
     if(localKey)requireLocalAnalysis(request);
-    const cloud=localKey?null:await selectedCloudBook(),store=localKey?await loadLocalMap(localKey):cloud?(cloud.store??(()=>{throw new Error('Map pending');})()):await loadMapStore();
+    const sampleId=q.get('version')?.match(/^sample:([^:]+):/)?.[1];
+    if(sampleId && !isSampleBookId(sampleId))return Response.json({error:'Unknown sample book'},{status:400});
+    const cloud=localKey||sampleId?null:await selectedCloudBook(),store=localKey?await loadLocalMap(localKey):sampleId&&isSampleBookId(sampleId)?await loadMapStore(sampleId):cloud?(cloud.store??(()=>{throw new Error('Map pending');})()):await loadMapStore();
     const {graph,hierarchy,entries}=store;
     if(q.get('version')!==hierarchy.version)return Response.json({error:'Map version changed. Reload to open the new version.'},{status:409});
     const json=(body:object)=>Response.json({version:hierarchy.version,...body},{headers:{'Cache-Control':'private, no-store'}});

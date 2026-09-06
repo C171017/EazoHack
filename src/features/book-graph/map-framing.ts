@@ -48,10 +48,12 @@ export function confinePan(view:MapView,size:Size):MapView {
   const limit=(offset:number,values:number[],length:number)=>{
     const start=Math.min(...values),end=Math.max(...values);
     const margin=Math.min(48,length*.08);
-    const lower=length-margin-end,upper=margin-start;
-    // When the whole grid is smaller than the viewport, keep it near centre.
+    // Preserve a small centred travel range while the grid fits onscreen, then
+    // expand it continuously. Switching clamp formulas at length - 2*margin
+    // abruptly collapsed that range and made a tiny zoom jump by 48 pixels.
     const center=(length-start-end)/2;
-    return lower>upper?Math.max(center-margin,Math.min(center+margin,offset)):Math.max(lower,Math.min(upper,offset));
+    const travel=margin+Math.max(0,(end-start-length)/2);
+    return Math.max(center-travel,Math.min(center+travel,offset));
   };
   const x=limit(view.x,corners.map(p=>p.x),size.width),y=limit(view.y,corners.map(p=>p.y),size.height);
   return x===view.x&&y===view.y?view:{...view,x,y};

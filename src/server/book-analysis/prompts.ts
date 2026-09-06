@@ -8,6 +8,7 @@ Nodes are meaningful reading units: examples, claims, reusable concepts, argumen
 ${AXIS_RUBRIC}
 During extraction, write reasoningHint and generalityHint as qualitative source-grounded assessments, noting uncertainty and possible dependencies. A separate whole-book axis stage will assign numeric coordinates and review them. Never invent coordinates, offsets, page numbers, quotations, or passage IDs.
 Directed relations: A defines B = A supplies B's definition; A supports B = A provides grounds for B; A challenges B = A objects to B; A exemplifies B = A is a concrete instance of B; A develops B = A extends or refines B. Co-occurrence alone warrants no edge. Leave unsupported links absent.
+Use the source language for labels, summaries, and explanations. For fiction, narrative covers narrated events and framing; dialogue covers attributed speech. Do not present fictional events as historical facts.
 Book dialogue is not automatically the author's endorsed view. Name a speaker only when the text supports attribution. Sidenotes and footnotes in the dialogue can still be editorial commentary.
 Return only JSON conforming to the supplied schema. Be concise and preserve uncertainty.`;
 

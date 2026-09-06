@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
 import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, PROJECTIONS, type Point3 } from './projection';
@@ -16,8 +16,6 @@ import { useNodeTransition } from './node-transition';
 import { edgeVisibility, useEdgeTransition } from './edge-transition';
 import { HeatInspector, type ReadingHeatData } from './reading-heat-view';
 import { heatCount } from './reading-heat';
-import { buildHeatVolume } from './heat-field';
-import { SpatialHeat } from './spatial-heat';
 import { ReadingReplay } from './reading-replay-view';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
 export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgress,onScrollSource,heat}:{
@@ -29,7 +27,6 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const onViewChange=useCallback((next:MapView)=>saveView(confinePan(next,size)),[saveView,size]);
   const [heatSelection,setHeatSelection]=useState<string|null>(null);
   const heatPoints=heat?.points;
-  const heatField=useMemo(()=>heatPoints?buildHeatVolume(heatPoints,'all'):null,[heatPoints]);
   const heatTargets=useMemo(()=>[...(heatPoints??[])].filter(point=>heatCount(point,'all')>0).sort((a,b)=>heatCount(b,'all')-heatCount(a,'all')).slice(0,128),[heatPoints]);
   const selectedHeat=heat?.points.find(point=>point.leaf.id===heatSelection);
   // Old checkpoints may contain filters whose controls have been removed.
@@ -77,7 +74,9 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
   const drag=useRef<{id:number;mode:'pan'|'orbit';x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;moved:boolean}|null>(null);
   const keyboardOrbit=useRef<MapView|null>(null);
-  useEffect(()=>{latest.current={current,size};},[current,size]);
+  // A passive effect can run after the next native wheel event and replace its
+  // newer camera with the previous frame. Synchronize before events/paint.
+  useLayoutEffect(()=>{latest.current={current,size};},[current,size]);
   useEffect(()=>{const f=requestAnimationFrame(()=>setPreviousLevel(level));return()=>cancelAnimationFrame(f);},[level]);
   useEffect(()=>{
     const element=stage.current;if(!element)return;
@@ -90,7 +89,6 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     const element=stage.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
     const wheel=(event:WheelEvent)=>{
-      if(element.querySelector('[data-reading-replay]'))return;
       if(!(event.target instanceof Element)||!event.target.closest('svg,.map-timeline-control'))return;
       event.preventDefault();if(gesture)return;
       const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
@@ -105,7 +103,6 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       latest.current={current:confinePan(next,latest.current.size),size};onViewChange(next);
     };
     const gestureStart=(event:Event)=>{
-      if(element.querySelector('[data-reading-replay]')){event.preventDefault();gesture=null;return;}
       event.preventDefault();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
       gesture={view,size};
@@ -126,7 +123,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     cancelMotion();navigation.current?.abort();setNavigating(false);
     // Rotation must not turn a local subtree fit into the new zoom-out limit.
     const finish={...from,...target,...confineCamera(target)};
-    const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
+    const publish=(view:MapView)=>{const bounded=confinePan(view,latest.current.size);latest.current={...latest.current,current:bounded};onViewChange(bounded);};
     if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(finish);return;}
     let start:number|undefined;const animate=(now:number)=>{
       start??=now;const elapsed=now-start,ease=springProgress(elapsed);
@@ -154,7 +151,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       const {current:from,size:viewport}=latest.current;
       const next=zoomIntoGroup(node,from,viewport,depth,readingProgress,graph.depth);
       setSourceActivation(null);setHeatSelection(null);
-      const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
+      const publish=(view:MapView)=>{const bounded=confinePan(view,latest.current.size);latest.current={...latest.current,current:bounded};onViewChange(bounded);};
       if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(next);return;}
       let start:number|undefined;
       const animate=(now:number)=>{
@@ -196,16 +193,15 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const labelCap=Math.max(1,Math.min(ZOOM_POLICY.labels,Math.floor((size.width-16)/250)*Math.floor((size.height-80)/34)));
   const {points,labels}=useMapLayout(projectedPoints,size.width,size.height,obstacles,labelCap,current.selectedNodeId,graph.version);
   const source=(anchor:SourceAnchor)=>{change({readerAnchorId:anchor.id});onSource(anchor);};
-  return <div className="book-map" onKeyDownCapture={e=>{
-    if(stage.current?.querySelector('[data-reading-replay]')){e.stopPropagation();if(e.key!=='Tab')e.preventDefault();}
-  }} onKeyDown={e=>{
+  return <div className="book-map" onKeyDown={e=>{
     if((e.target as HTMLElement).closest('input,select,textarea'))return;
     const i=['1','2','3','4'].indexOf(e.key);if(i>=0){e.preventDefault();const projection=PROJECTIONS[i].id;settle(current,{projection,...orientation(projection)});}
     if(e.key==='+'||e.key==='='){e.preventDefault();zoom(1.35);}if(e.key==='-'){e.preventDefault();zoom(1/1.35);}
   }}>
     <div ref={stage} className="map-stage">
       {graph.unplaced>0&&<UnplacedNotes version={graph.version} count={graph.unplaced} onLocate={id=>void locate(id)}/>}
-      {heatField&&<SpatialHeat field={heatField} view={current} size={size} readingProgress={readingProgress}/>}
+      {heat&&<ReadingReplay key={graph.version} points={heat.points} loading={heat.loading} error={heat.error} view={current} size={size}
+        readingProgress={readingProgress}/>}
       <svg style={{position:'relative'}} data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-x={current.x} data-camera-y={current.y} data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-fit-scale={current.framing?.scale??1} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
         onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;if(view.projection!=='3d'&&!e.altKey){change({x:view.x+(e.key==='ArrowRight'?-40:e.key==='ArrowLeft'?40:0),y:view.y+(e.key==='ArrowDown'?-40:e.key==='ArrowUp'?40:0)});return;}keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
         onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
@@ -230,6 +226,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
             d.latest={...d.view,projection:'3d',...d.motion.display};
           }
           d.lastX=e.clientX;d.lastY=e.clientY;
+          d.latest=confinePan(d.latest,latest.current.size);
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
         onContextMenu={e=>e.preventDefault()}
@@ -261,8 +258,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
         </g>;})}
       </svg>
       <TimelineControl {...screen(ORIGIN)} visible={current.pitch < Math.PI / 2 - .12} progress={readingProgress} height={size.height} onScroll={onScrollSource}/>
-      {heat&&<ReadingReplay key={graph.version} points={heat.points} loading={heat.loading} error={heat.error} view={current} size={size}
-        readingProgress={readingProgress} axisVersion={graph.axisVersion} onStart={()=>{cancelMotion();navigation.current?.abort();setNavigating(false);}}/>}
+
       {(data.error||windowed.wanted.length>0)&&<div className="map-layer-status" aria-live="polite">{data.error?<><span>{data.error}</span> <button onClick={data.retry}>Retry loading</button></>:windowed.wanted.length?'Opening this part of the book…':null}</div>}
     </div>
     {restoredPath.error&&<p role="alert">{restoredPath.error} <button onClick={restoredPath.retry}>Retry</button></p>}{navigationError&&<p role="alert">{navigationError}</p>}{navigating&&<p role="status">Finding this note…</p>}

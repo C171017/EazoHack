@@ -3,11 +3,13 @@ import path from 'node:path';
 import { GraphSchema, type Graph } from '../../shared/schemas';
 import { validateHierarchy, type Hierarchy, type MapBootstrap, type NodeDetail, type MapLink } from '../../shared/zoom-hierarchy';
 import { validateGraphSource } from '../book-analysis/graph';
-import { getBookPreview } from '../../features/reader/book-preview';
+import { getBookPreview, getChineseBookPreview } from '../../features/reader/book-preview';
 import { heatSourceIndex, type HeatIndex } from '../../features/book-graph/heat-placement';
-const root=path.join(process.cwd(),'data/books/plato-republic/analysis');
+export const SAMPLE_BOOK_IDS = ['plato-republic', 'hong-lou-meng'] as const;
+export type SampleBookId = typeof SAMPLE_BOOK_IDS[number];
+export function isSampleBookId(id: string): id is SampleBookId { return SAMPLE_BOOK_IDS.some(book => book === id); }
 export type MapStore={graph:Graph;hierarchy:Hierarchy;entries:Map<string,Hierarchy['entries'][number]>;descendants:Map<string,Set<string>>};
-let cache:{stamp:number;promise:Promise<MapStore>}|undefined;
+const caches = new Map<SampleBookId, {stamp:number;promise:Promise<MapStore>}>();
 const heatIndexes = new WeakMap<MapStore, HeatIndex>();
 export function heatIndexPage(store: MapStore, offset = 0) {
   let index = heatIndexes.get(store);
@@ -20,21 +22,26 @@ export function createMapStore(graph:Graph,hierarchy:Hierarchy):MapStore {
   hierarchy.roots.forEach(leaves);
   return {graph,hierarchy,entries,descendants};
 }
-export async function loadMapStore():Promise<MapStore> {
+export async function loadMapStore(bookId: SampleBookId = 'plato-republic'):Promise<MapStore> {
+  if (!isSampleBookId(bookId)) throw new Error('Unknown sample book');
+  const root=path.join(process.cwd(),'data/books',bookId,'analysis');
+  let cache=caches.get(bookId);
   const pointer=path.join(root,'current-map.json'),stamp=(await stat(pointer)).mtimeMs;
   if(!cache||cache.stamp!==stamp){
     const promise=(async()=>{
       const {version}=JSON.parse(await readFile(pointer,'utf8')) as {version:string};
       if(!/^[a-z0-9-]+$/.test(version))throw new Error('Invalid map version');
       const dir=path.join(root,version);
-      const [g,h,preview]=await Promise.all([readFile(path.join(dir,'graph.json'),'utf8'),readFile(path.join(dir,'hierarchy.json'),'utf8'),getBookPreview()]);
+      const [g,h,preview]=await Promise.all([readFile(path.join(dir,'graph.json'),'utf8'),readFile(path.join(dir,'hierarchy.json'),'utf8'),bookId === 'hong-lou-meng' ? getChineseBookPreview() : getBookPreview()]);
       const graph=validateGraphSource(GraphSchema.parse(JSON.parse(g)),preview.sourceText,preview.fileHash);
       if(graph.axisVersion&&!graph.axisAnalysis?.consistencyVersion)throw new Error('Map axes have not passed whole-book consistency review');
+      if(graph.bookId!==bookId)throw new Error('Map book mismatch');
       const hierarchy=validateHierarchy(JSON.parse(h),graph);
-      return createMapStore(graph,hierarchy);
+      return createMapStore(graph,{...hierarchy,version:`sample:${bookId}:${hierarchy.version}`});
     })();
     cache={stamp,promise};
-    promise.catch(()=>{if(cache?.promise===promise)cache=undefined;});
+    caches.set(bookId,cache);
+    promise.catch(()=>{if(caches.get(bookId)?.promise===promise)caches.delete(bookId);});
   }
   return cache.promise;
 }

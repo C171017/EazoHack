@@ -1,5 +1,5 @@
 import { AXIS_LABELS, LEGACY_AXIS_LABELS, type BookAxisVersion } from '../../shared/book-axes';
-import { useId } from 'react';
+import { memo, useId } from 'react';
 import { sourceHeight, type Point3 } from './projection';
 
 import { ORIGIN, GRID_EXTENT, GRID_BACK_EXTENT } from './grid-bounds';
@@ -23,32 +23,45 @@ function point(axis:keyof Point3,distance:number,other?:keyof Point3,offset=0):P
   return {...ORIGIN,[axis]:ORIGIN[axis]+distance,...(other?{[other]:ORIGIN[other]+offset}:{})};
 }
 
-export function MapGrid({screen,axisVersion,readingProgress=.5}:{size?:{width:number;height:number};projection?:string;axisVersion?:BookAxisVersion;readingProgress?:number;screen:(point:Point3)=>{x:number;y:number}}) {
-  const id=useId();
+type Point2={x:number;y:number};
+// Each grid plane is an affine projection of immutable world geometry. Pan and
+// zoom update these matrices, not thousands of gradient stops and endpoints.
+export function gridPlaneTransform(origin:Point2,u:Point2,v:Point2) {
+  return `matrix(${u.x} ${u.y} ${v.x} ${v.y} ${origin.x} ${origin.y})`;
+}
+function GridLine({name,x1,y1,x2,y2,vertical,color,opacity=1}:{name:string;x1:number;y1:number;x2:number;y2:number;vertical:boolean;color:string;opacity?:number}) {
+  const id=useId(),gradient=`${id}-${name}`;
+  return <g><defs><linearGradient id={gradient} gradientUnits="userSpaceOnUse" x1={x1} y1={y1} x2={x2} y2={y2}>
+    {Array.from({length:21},(_,i)=><stop key={i} offset={`${i*5}%`} stopColor={color} stopOpacity={fade(vertical?Math.abs(-EXTENT+i*EXTENT/10):-BACK_EXTENT+i*(EXTENT+BACK_EXTENT)/20)}/>)}
+  </linearGradient></defs><line x1={x1} y1={y1} x2={x2} y2={y2} stroke={`url(#${gradient})`} opacity={opacity}/></g>;
+}
+const PlaneLines=memo(function PlaneLines({u,v}:{u:keyof Point3;v:keyof Point3}) {
+  return <>
+    {(v==='z'?VERTICAL_OFFSETS:OFFSETS).map(offset=><GridLine key={`u-${offset}`} name={`u-${offset}`} x1={u==='z'?-EXTENT:-BACK_EXTENT} y1={offset} x2={EXTENT} y2={offset} vertical={u==='z'} color="#9299A3" opacity={.24*fade(v==='z'?Math.abs(offset):offset)}/>)}
+    {(u==='z'?VERTICAL_OFFSETS:OFFSETS).map(offset=><GridLine key={`v-${offset}`} name={`v-${offset}`} x1={offset} y1={v==='z'?-EXTENT:-BACK_EXTENT} x2={offset} y2={EXTENT} vertical={v==='z'} color="#9299A3" opacity={.24*fade(u==='z'?Math.abs(offset):offset)}/>)}
+  </>;
+});
+const AxisLine=memo(function AxisLine({axis,color}:{axis:keyof Point3;color:string}) {
+  return <GridLine name={axis} x1={axis==='z'?-EXTENT:-BACK_EXTENT} y1={0} x2={EXTENT} y2={0} vertical={axis==='z'} color={color} opacity={.66}/>;
+});
+
+export function MapGrid({screen,axisVersion,readingProgress=.5}:{size?:{width:number;height:number};projection?:string;axisVersion?:BookAxisVersion;readingProgress?:number;screen:(point:Point3)=>Point2}) {
   const modern=!!axisVersion;
   const origin=screen(ORIGIN);
   const directions=AXES.map(axis=>{const p=screen(point(axis,1));return {x:p.x-origin.x,y:p.y-origin.y};});
   const scaleSquared=directions.reduce((sum,d)=>sum+d.x*d.x+d.y*d.y,0)/2;
-  const lines: {key:string;a:Point3;b:Point3;color:string;opacity:number;vertical?:boolean}[]=[];
-  for(const [u,v] of PLANES) {
-    const a=directions[AXES.indexOf(u)],b=directions[AXES.indexOf(v)];
-    // Fade edge-on planes to avoid stacks of coincident lines in flat views.
-    const facing=Math.min(1,Math.abs(a.x*b.y-a.y*b.x)/scaleSquared*4);
-    if(facing<.001)continue;
-    for(const [axis,other] of [[u,v],[v,u]] as const)for(const offset of other==='z'?VERTICAL_OFFSETS:OFFSETS) {
-      lines.push({key:`${u}${v}-${axis}-${offset}`,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT,other,offset),b:point(axis,EXTENT,other,offset),color:'#9299A3',opacity:.24*fade(other==='z'?Math.abs(offset):offset)*facing,vertical:axis==='z'});
-    }
-  }
-  AXES.forEach((axis,i)=>lines.push({key:axis,a:point(axis,axis==='z'?-EXTENT:-BACK_EXTENT),b:point(axis,EXTENT),color:COLORS[i],opacity:.66,vertical:axis==='z'}));
   return <g className="map-grid" aria-hidden="true" pointerEvents="none">
-    {lines.map(line=>{
-      const a=screen(line.a),b=screen(line.b),gradient=`${id}-${line.key}`;
-      if(Math.hypot(a.x-b.x,a.y-b.y)<.01)return null;
-      return <g key={line.key}>
-        <defs><linearGradient id={gradient} gradientUnits="userSpaceOnUse" x1={a.x} y1={a.y} x2={b.x} y2={b.y}>
-          {Array.from({length:21},(_,i)=><stop key={i} offset={`${i*5}%`} stopColor={line.color} stopOpacity={fade(line.vertical?Math.abs(-EXTENT+i*EXTENT/10):-BACK_EXTENT+i*(EXTENT+BACK_EXTENT)/20)}/>) }
-        </linearGradient></defs>
-        <line x1={a.x} y1={a.y} x2={b.x} y2={b.y} stroke={`url(#${gradient})`} opacity={line.opacity}/>
+    {PLANES.map(([u,v])=>{
+      const a=directions[AXES.indexOf(u)],b=directions[AXES.indexOf(v)];
+      const facing=Math.min(1,Math.abs(a.x*b.y-a.y*b.x)/scaleSquared*4);
+      return <g key={`${u}${v}`} transform={gridPlaneTransform(origin,a,b)} opacity={facing} visibility={facing<.001?'hidden':undefined}>
+        <PlaneLines u={u} v={v}/>
+      </g>;
+    })}
+    {AXES.map((axis,i)=>{
+      const d=directions[i];
+      return <g key={axis} transform={gridPlaneTransform(origin,d,{x:-d.y,y:d.x})} visibility={Math.hypot(d.x,d.y)<.00001?'hidden':undefined}>
+        <AxisLine axis={axis} color={COLORS[i]}/>
       </g>;
     })}
     {AXES.map((axis,i)=>{

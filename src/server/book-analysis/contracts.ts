@@ -5,7 +5,7 @@ export const RELATIONS = ['defines', 'supports', 'challenges', 'exemplifies', 'd
 const Label = z.string().min(1).max(180);
 const Note = z.string().min(1).max(1500);
 const Ids = z.array(z.string().min(1).max(160));
-export const Role = z.enum(['dialogue', 'commentary', 'paratext']);
+export const Role = z.enum(['dialogue', 'narrative', 'commentary', 'paratext']);
 export const ExtractSchema = z.object({
   summary: Note,
   nodes: z.array(z.object({

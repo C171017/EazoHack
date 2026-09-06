@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { replayCurve, replayProgress } from '../src/features/book-graph/replay-curve';
+import { projectReplayCurve, replayCurve, replayProgress } from '../src/features/book-graph/replay-curve';
 
 test('curves remain continuous through corners, reversals and repeated visits', () => {
   for (const points of [
@@ -40,4 +40,17 @@ test('distance playback has gentle endpoints and constant cruising speed', () =>
   assert.ok(speed(0) < .00001 && speed(1) < .00001);
   assert.ok(Math.abs(speed(.25) - speed(.75)) < 1e-8);
   for (const t of [.12, .88]) assert.ok(Math.abs(speed(t - .0001) - speed(t + .0001)) < .00001);
+});
+
+test('3D replay geometry and arrival distances stay fixed while the camera moves', () => {
+  const curve = replayCurve([{x:0,y:0,z:0}, {x:0,y:0,z:500}, {x:250,y:100,z:300}]);
+  const before = structuredClone(curve), distance = curve.length * .6;
+  const front = projectReplayCurve(curve, distance, p => ({x:p.x,y:p.z}));
+  const rotated = projectReplayCurve(curve, distance, p => ({x:p.y * 2 + 80,y:p.z * 2 - 40}));
+  assert.notEqual(front, rotated);
+  assert.ok(!front.includes('NaN') && !rotated.includes('NaN'));
+  assert.deepEqual(curve, before);
+  assert.ok(curve.stops[1] > 0 && curve.stops[1] < curve.length);
+  assert.equal(projectReplayCurve(curve, 0, p => p), '');
+  assert.ok(projectReplayCurve(curve, curve.length, p => p).endsWith('250 100'));
 });

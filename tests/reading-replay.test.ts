@@ -2,10 +2,9 @@ import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import type { HeatPoint } from '../src/features/book-graph/heat-placement';
 import type { ReadingFootprint } from '../src/features/book-graph/reading-heat';
-import { readingTrajectory, replayFrame, replayHeat, replayTiming, replayView } from '../src/features/book-graph/reading-replay';
-import { buildHeatVolume, fieldDensity, HEAT_RADIUS } from '../src/features/book-graph/heat-field';
-import { initialView, sourceWorld } from '../src/features/book-graph/projection';
-import { baseScale, screenWorld } from '../src/features/book-graph/map-framing';
+import { readingTrajectory, replayFrame, replayHeat, replayTiming } from '../src/features/book-graph/reading-replay';
+import { buildHeatVolume, fieldDensity } from '../src/features/book-graph/heat-field';
+import { sourceWorld } from '../src/features/book-graph/projection';
 
 function event(id: string, createdAt: string, kind: ReadingFootprint['kind'] = 'explanation'): ReadingFootprint {
   return { id, createdAt, kind, bookId: 'test', anchors: [], artifacts: [] };
@@ -61,22 +60,4 @@ test('one-shot playback holds the final state, finishes, and never wraps to the 
   assert.equal(replayFrame(3, 1000).count, 1);
   assert.equal(replayFrame(3, 1000).cursor, .5);
   assert.equal(replayFrame(3, 1000, true).cursor, 0);
-});
-
-test('temporary overview fits every visit and halo, independent of saved zoom and reader position', () => {
-  const base = { ...initialView('test'), x: 500, y: -200, zoom: 8, selectedNodeId: 'chosen' };
-  const before = structuredClone(base);
-  for (const size of [{ width: 700, height: 720 }, { width: 320, height: 600 }]) {
-    for (const progress of [0, .5, 1]) {
-      const view = replayView(points, base, size, progress);
-      const radius = HEAT_RADIUS * baseScale(size) * view.framing!.scale;
-      for (const p of points) {
-        const screen = screenWorld(sourceWorld(p.leaf.position, [0, 1], progress), view, size);
-        assert.ok(screen.x - radius >= 49 && screen.x + radius <= size.width - 49);
-        assert.ok(screen.y - radius >= 79 && screen.y + radius <= size.height - 79);
-      }
-      assert.equal(view.projection, '3d'); assert.equal(view.selectedNodeId, null);
-    }
-  }
-  assert.deepEqual(base, before);
 });

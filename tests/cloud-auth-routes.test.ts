@@ -169,3 +169,18 @@ test('a stale account tab cannot sign out the newly active account', async t => 
   assert.equal(result.response.status,403);assert.equal(calls,1);
   assert.equal(result.cookies.get('eazo-refresh')?.value,'account-b-refresh');
 });
+
+test('a foreign or missing snapshot source becomes a private-safe 404', async t => {
+  configure(t, async input => {
+    const url = String(input);
+    if (url.endsWith('/auth/v1/user')) return Response.json({ id: 'account-b' });
+    if (url.includes('/rest/v1/account_state?')) return Response.json([]);
+    assert.equal(url, 'https://auth-test.supabase.co/rest/v1/rpc/eazo_snapshot_head');
+    return Response.json({ code: '42501', message: 'source_not_found', details: 'private source-owner details' }, { status: 403 });
+  });
+  const result = await invoke('cloud', 'https://eazo.example/api/cloud/snapshot?source=bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb', { 'eazo-access': access(), 'eazo-account': 'account-b' }, 'snapshot');
+  assert.equal(result.response.status, 404);
+  const body = await result.response.json();
+  assert.equal(body.error.message, 'Book not found.');
+  assert.ok(!JSON.stringify(body).includes('private source-owner details'));
+});

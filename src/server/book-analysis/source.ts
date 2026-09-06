@@ -11,6 +11,7 @@ export function prepareText(text: string, maxChunkCharacters = 36_000): TextChun
     if (/^INTRODUCTION AND ANALYSIS\.\s*$/.test(block)) { section = 'Introduction and analysis'; role = 'commentary'; }
     else if (/^PREFACE\.\s*$/.test(block)) { section = 'Preface'; role = 'commentary'; }
     else if (/^BOOK [IVX]+\.?\s*$/.test(block)) { section = block.trim().replace(/\.$/, ''); role = 'dialogue'; }
+    else if (/^第[一二三四五六七八九十百零〇两0-9]+回(?:[\s　]|$)/.test(block) && !block.includes('\n')) { section = block.trim(); role = 'narrative'; }
     else if (/^INDEX\.\s*$/.test(block)) { section = 'Index and editorial apparatus'; role = 'paratext'; }
     // Keep every substantive character, including unusually long paragraphs.
     for (let offset = 0; offset < block.length;) {
