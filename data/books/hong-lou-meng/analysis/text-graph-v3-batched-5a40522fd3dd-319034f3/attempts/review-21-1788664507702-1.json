@@ -1,0 +1,48 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-103-3",
+        "reason": "sourceRole标注为dialogue，但引文及节点内容涵盖宝钗与贾琏商讨、薛姨妈陈述、派人捆绑宝蟾等完整叙事过程，并非单一人物的发言，应归为narrative或不应强行归属speaker为薛宝钗。"
+      },
+      {
+        "id": "n-104-2",
+        "reason": "primaryTheme被错误归类为“神话宿命、玄理悟道与全书归结”，该情节实为贾芸敷衍倪二家属、倪二酒后怀恨扬言告发贾府仗势欺人，属于世家败落与社会矛盾恶化，与神话玄理毫无关联。"
+      },
+      {
+        "id": "n-104-5",
+        "reason": "primaryTheme被归类为“神话宿命、玄理悟道与全书归结”，且sourceRole定为贾宝玉的dialogue；该节点核心是宝玉对黛玉之死的哀恸自责与未能祭奠的怨悔，属于“儿女痴情、性灵知己与婚变离散”，主题归类偏差。"
+      }
+    ],
+    "rejectedEdges": [
+      {
+        "id": "e-104-2",
+        "reason": "两节点间因果承接断裂。n-104-4记录贾政内廷谢罪及归家告诫贾珍贾琏谨慎；引文中真正触发宝玉哀伤的起因是贾政偶向王夫人问起黛玉，但该情节发生在私室且与贾政内廷谢罪、戒饬子侄并无直接推导关系，不能构成develops。"
+      }
+    ],
+    "notes": "部分节点在主题分类（如贾芸结怨倪二、宝玉痴怀黛玉）与形式属性（叙事对话混淆为单一言者）上存在明显失准，已予剔除；其余情节梳理与边依赖关系基本忠实于引文原貌。"
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "tdqcapqsFYKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 71526,
+    "candidatesTokenCount": 500,
+    "totalTokenCount": 72026,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 71526
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 500
+      }
+    ]
+  },
+  "durationMs": 6792,
+  "requestHash": "188c73503d9b0ee10e84c62e5c28418924dba85ce3eca3fc35d9b2707e5a03b4"
+}

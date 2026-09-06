@@ -1,0 +1,179 @@
+{
+  "value": {
+    "summary": "第五十九回叙贾府长辈送灵出外，大观园防范严密。宝钗命莺儿往潇湘馆取蔷薇硝，莺儿沿途折柳编篮送与黛玉。归途莺儿与蕊官、藕官、春燕在柳叶渚编柳，引出春燕对老妇贪利与宝玉“宝珠变鱼眼睛”之论。随后管地婆子因护花柳责打春燕，春燕之母亦赶来迁怒痛打，春燕奔逃至怡红院。宝玉、麝月出面护庇，麝月虚张声势传平儿与林大娘处置，终使悍婆屈服求饶。",
+    "nodes": [
+      {
+        "label": "送灵离府与园中防备",
+        "identityLabel": "送灵离府防备",
+        "summary": "贾母与王夫人等启程送灵，荣国府与大观园各处关锁门禁、增派更夫以防疏虞。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府长辈出外办事的大背景以及园内留守秩序的更替。",
+        "generalityHint": "涉及荣国府与大观园多处门户管理与守夜人员安排的具体事件。",
+        "rationale": "基于第59回开篇关于贾母王夫人送灵及赖大、林之孝家严查门户的记叙。",
+        "passageIds": [
+          "p-415024",
+          "p-415154"
+        ]
+      },
+      {
+        "label": "莺儿折柳编花篮",
+        "identityLabel": "莺儿折柳编篮",
+        "summary": "宝钗遣莺儿往潇湘馆取蔷薇硝，莺儿路过柳叶渚采摘柳条编织花篮赠予黛玉，黛玉甚喜并相约同往蘅芜苑聚会。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "以晨起索硝为引子，描写莺儿的心灵手巧与大观园闲适日常。",
+        "generalityHint": "单一具体生活情境，涉及莺儿、黛玉、蕊官等人。",
+        "rationale": "由p-415340、p-415532与p-415815中莺儿受命取硝、编篮相赠黛玉的情节直接得出。",
+        "passageIds": [
+          "p-415532",
+          "p-415340",
+          "p-415815"
+        ]
+      },
+      {
+        "label": "春燕评婆子贪婪与宝珠论",
+        "identityLabel": "春燕转述宝珠鱼眼论",
+        "summary": "春燕向藕官、莺儿谈及母亲与姨妈贪得无厌，引述宝玉关于女子出嫁变死珠、老了变鱼眼睛的言论，并提醒园中花木已包保给姑妈管辖。",
+        "sourceRole": "dialogue",
+        "speaker": "春燕",
+        "reasoningHint": "借春燕之口转述宝玉的著名观点，并揭露婆子们因争夺利益而引发的家庭与人际矛盾。",
+        "generalityHint": "由特定家务琐事升华至对女子受世俗名利熏染而变质的概括性议论。",
+        "rationale": "出处见p-416272中春燕长段对母亲、姨妈争利行为的剖析与对宝玉言论的引用。",
+        "passageIds": [
+          "p-416272"
+        ]
+      },
+      {
+        "label": "柳叶渚姑嫂婆子打骂春燕",
+        "identityLabel": "柳叶渚争端",
+        "summary": "管地婆子见折花柳而心疼起嗔，以管教为由拄杖打春燕；春燕之母闻讯赶来亦借题发作，迁怒打骂并辱及众人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因包揽花木责任与私怨触发婆子对春燕的严苛责打，集中展现底层婆子的愚顽与戾气。",
+        "generalityHint": "一场发生在柳叶渚的具体肢体与言辞冲突事件。",
+        "rationale": "见p-417352与p-417905，婆子姑嫂相继责打春燕并与莺儿冲突。",
+        "passageIds": [
+          "p-417352",
+          "p-417905"
+        ]
+      },
+      {
+        "label": "春燕奔怡红院求护",
+        "identityLabel": "春燕奔怡红院",
+        "summary": "春燕哭逃至怡红院寻求庇护，其母追入并与袭人发生口角争执。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "冲突由大观园公共区域延烧至怡红院内部。",
+        "generalityHint": "单个逃避追打并引发大丫鬟介入的经过。",
+        "rationale": "p-418367与p-418568叙述春燕飞跑入院求救、其母尾随撒泼的情节。",
+        "passageIds": [
+          "p-418568",
+          "p-418367"
+        ]
+      },
+      {
+        "label": "绛芸轩借威降服悍婆",
+        "identityLabel": "麝月借威制婆",
+        "summary": "宝玉出言护春燕，麝月借平儿和林大娘之权威震慑婆子，婆子闻四十板子与撵逐之罚后伏地求饶，袭人与宝玉终予宽宥。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "大丫鬟借上层管事威权压制破坏规矩的婆子，展现大观园内部的权力运作与秩序维护。",
+        "generalityHint": "怡红院处理婆子越轨的具体事件，具有代表管事规则施行的局部效应。",
+        "rationale": "见p-418568与p-419195中麝月传人、平儿发话、婆子求告谢过的全过程。",
+        "passageIds": [
+          "p-419195",
+          "p-418568"
+        ]
+      },
+      {
+        "label": "平儿论园中多事",
+        "identityLabel": "平儿叹各处作反",
+        "summary": "平儿至怡红院询问事由，感叹长辈外出数日间园中各处事端频发，已积压大小八九件争端。",
+        "sourceRole": "dialogue",
+        "speaker": "平儿",
+        "reasoningHint": "平儿对长辈离府后大观园混乱情势的总体概述，伏下文更多矛盾。",
+        "generalityHint": "跨越全园多处院落矛盾的宏观观察。",
+        "rationale": "出处见p-419591平儿与袭人关于近日事端频起的谈话。",
+        "passageIds": [
+          "p-419591"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "莺儿在柳叶渚折柳编篮与春燕等人相聚，直接引发春燕提及地基包揽及婆子贪利的对话。",
+        "passageIds": [
+          "p-416152",
+          "p-416272"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "春燕刚提醒地基管辖一事，其姑妈便赶至，因见采折花柳而发难打骂春燕。",
+        "passageIds": [
+          "p-416272",
+          "p-417352"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "婆子姑嫂在柳叶渚的打骂迫使春燕逃往怡红院寻求庇护。",
+        "passageIds": [
+          "p-418367",
+          "p-418568"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "婆子追赶春燕进入怡红院撒泼，引发麝月、平儿介入并最终制服婆子。",
+        "passageIds": [
+          "p-418568",
+          "p-419195"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "exemplifies",
+        "rationale": "怡红院打骂争端正是平儿口中长辈不在时“各处大小人儿都作起反来”的八九件纷争之一。",
+        "passageIds": [
+          "p-419195",
+          "p-419591"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "cdicaoroHNCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 8228,
+    "candidatesTokenCount": 2272,
+    "totalTokenCount": 10500,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8228
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2272
+      }
+    ]
+  },
+  "durationMs": 15908,
+  "requestHash": "8b94bcd1c4fc61a48e20563f7da2d42fa17bdcc6ec2e34bab32ba88cfb841697"
+}

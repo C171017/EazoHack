@@ -1,0 +1,157 @@
+{
+  "value": {
+    "summary": "第八十七回通过薛宝钗来书寄诗、林黛玉抚琴和作，以及妙玉听琴走火入魔、贾惜春参禅作偈，展现了大观园人物在深秋时节各自的伤感、心境波动与命运隐喻。",
+    "nodes": [
+      {
+        "label": "宝钗来书赋诗寄感",
+        "identityLabel": "薛宝钗清秋寄诗",
+        "summary": "薛宝钗因家中多舛、兄长生事与人情烦难，于清秋深感孤凄，赋诗四章并寄与林黛玉以求知音。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于薛家遭难与自身处境的直接感伤表达，无多层推演。",
+        "generalityHint": "涉及薛宝钗个人及薛家家庭境况的特定抒怀。",
+        "rationale": "文本直接引述宝钗寄给黛玉的书信与四章感怀诗，陈述其家运多艰及寄予同心知音之意。",
+        "passageIds": [
+          "p-639605",
+          "p-639554"
+        ]
+      },
+      {
+        "label": "黛玉触物感旧拟和诗操琴",
+        "identityLabel": "林黛玉伤春悲秋与理琴",
+        "summary": "林黛玉见宝钗诗启并偶见宝玉旧帕旧物，触物伤情，悲叹身世孤凄，遂赋诗四叠并翻入琴谱抚琴。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从见物（手帕、宝钗书）到感念身世，进而引出翻谱操琴的心理与行动推演。",
+        "generalityHint": "林黛玉个人的身世感叹与艺境表达。",
+        "rationale": "文中叙述黛玉见宝玉旧题帕与宝钗诗后，痛感‘境遇不同，伤心则一’，借《猗兰》《思贤》之操写成和作并调弦抚弄。",
+        "passageIds": [
+          "p-642210",
+          "p-641773",
+          "p-639937"
+        ]
+      },
+      {
+        "label": "妙玉惜春弈棋与宝玉造访",
+        "identityLabel": "蓼风轩下棋与禅客造访",
+        "summary": "宝玉至蓼风轩见妙玉与惜春对弈，妙玉以‘倒脱靴势’胜棋；宝玉言语问候引得妙玉动容心热。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "描述一幕具体的园中对弈日常及宝玉突访引发的心绪互动，属直接叙事记述。",
+        "generalityHint": "单一具体场景中的弈棋与人物对话交接。",
+        "rationale": "描写宝玉观棋、妙玉使出‘倒脱靴势’，以及因宝玉‘下凡一走’、‘从来处来’之语使妙玉起心动念脸红的情节。",
+        "passageIds": [
+          "p-643138",
+          "p-643635"
+        ]
+      },
+      {
+        "label": "妙玉听琴论音与弦断警兆",
+        "identityLabel": "妙玉知音听琴与谶兆",
+        "summary": "妙玉与宝玉在潇湘馆外听黛玉抚琴，妙玉辨析其音律变征、太过悲戚，君弦忽断，妙玉预言‘恐不能持久’并匆忙离去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "妙玉由音律韵调（律吕、宫商、变征）推断弹琴者心境与命运寿算，具有局部解签推导性质。",
+        "generalityHint": "由特定琴声推测弹奏者林黛玉之命途，同时蕴含琴理原则。",
+        "rationale": "妙玉细听黛玉四叠琴声，点评其音韵可裂金石但太过，直至君弦崩断，留下‘恐不能持久’的警语。",
+        "passageIds": [
+          "p-644686",
+          "p-644566",
+          "p-644479"
+        ]
+      },
+      {
+        "label": "妙玉打坐邪魔走火",
+        "identityLabel": "妙玉禅寂走火入魔",
+        "summary": "妙玉回庵夜坐试图屏息断除妄想，反因杂念心神不守，陷入王孙提亲与盗贼逼勒之幻象，走火入魔受病。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由白天受宝玉言语触动及夜听猫叫等外缘，因戒除不力引致心魔爆发的因果演进。",
+        "generalityHint": "妙玉个体的修行破绽与心理梦魇事件。",
+        "rationale": "文本详细叙述妙玉三更坐禅却神不守舍，产生被强人抢逼的狂乱幻相，大夫诊为‘走魔入火’。",
+        "passageIds": [
+          "p-644686",
+          "p-645513"
+        ]
+      },
+      {
+        "label": "惜春闻事悟道作偈",
+        "identityLabel": "贾惜春参悟出尘之思",
+        "summary": "贾惜春闻听妙玉走火入魔之事，深感妙玉尘缘未断，自谓若出家必一念不生，因有心得而口占一偈。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过妙玉遭遇作为反思参照，推及自身清净修行的志向与空性认知，提炼出偈语。",
+        "generalityHint": "以妙玉与自身为案例，上升到‘大造无方、空中来去’的一般佛理哲学主张。",
+        "rationale": "惜春听彩屏转述后沉思‘妙玉虽然洁净，毕竟尘缘未断’，悟出出家静寂之念，并作偈‘大造本无方……应向空中去’。",
+        "passageIds": [
+          "p-645797",
+          "p-646006",
+          "p-646033"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "宝钗寄来的诗启直接促使林黛玉感怀旧事，并决定写诗翻入琴谱作和答。",
+        "passageIds": [
+          "p-642210"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "黛玉在潇湘馆内抚琴歌诗，构成了妙玉与宝玉在馆外听琴、辨律与惊疑断弦的直接承接事件。",
+        "passageIds": [
+          "p-643635",
+          "p-644686"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "妙玉在蓼风轩与宝玉相见交谈引发的面热心动，是其夜间打坐难以收慑心神、最终走火入魔的重要心因诱因之一。",
+        "passageIds": [
+          "p-643635",
+          "p-644686"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "彩屏向惜春通报妙玉中邪走魔的原委，直接引发了惜春对妙玉未断尘缘的评判及作偈悟道。",
+        "passageIds": [
+          "p-645797"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "EtmcauG_B-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10886,
+    "candidatesTokenCount": 1978,
+    "totalTokenCount": 12864,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10886
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1978
+      }
+    ]
+  },
+  "durationMs": 15172,
+  "requestHash": "104e1007ec2dc3ae42547786c4be3af2419c4a6480e0fd88ed19b073b990c1e6"
+}

@@ -1,0 +1,149 @@
+{
+  "value": {
+    "summary": "第四十九回叙写香菱苦志学诗终获众人赞许，随后邢岫烟、李纹、李绮、薛宝琴、薛蝌等亲眷齐至贾府入园居住，群芳荟萃；宝玉得见钗黛融洽冰释前嫌；入冬雪降，李纨召集群芳于芦雪庵商议作诗，湘云、宝玉等冒雪烧烤鹿肉，极尽名士风流，为大观园芦雪庵联句拉开序幕。",
+    "nodes": [
+      {
+        "label": "香菱梦中得诗获赞入社",
+        "identityLabel": "香菱学诗成篇",
+        "summary": "香菱将苦心所得的第三首咏月诗送呈黛玉及众人评阅，诗作获众人称赞新巧有意趣，并被正式接纳加入诗社。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于香菱此前苦志学诗与梦中偶得的经历，由众人当场评诗得出其诗艺精进的结论。",
+        "generalityHint": "单一具体事件，评述香菱所作之特定诗篇及其入社资格。",
+        "rationale": "承接前文香菱苦吟，众人对‘一片砧敲千里白’等句给予高度肯定并允其入社，印证‘天下无难事只怕有心人’。",
+        "passageIds": [
+          "p-333301",
+          "p-333156",
+          "p-333232"
+        ]
+      },
+      {
+        "label": "四亲眷同日齐至大观园",
+        "identityLabel": "众亲眷进京会聚",
+        "summary": "邢岫烟、李纹、李绮、薛宝琴与薛蝌等诸家亲戚巧合途遇并同日抵京，贾母等人欢喜留客，诸少女纷纷受邀入住大观园。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接交代多路亲戚因缘际会同途进京的历史背景及贾府挽留安插的安排。",
+        "generalityHint": "涉及多组特定人物的特定聚合事件。",
+        "rationale": "文本详细叙述邢、王、李、薛各家姻亲途遇同行的缘由，以及贾母命宝琴留在身边、岫烟交凤姐安插等具体过程。",
+        "passageIds": [
+          "p-333631",
+          "p-333384",
+          "p-334985"
+        ]
+      },
+      {
+        "label": "宝玉赞叹天地精华生人",
+        "identityLabel": "宝玉观新人感叹",
+        "summary": "宝玉见薛蝌、宝琴及李氏姊妹等人品貌出众，深感此前如同井底之蛙，赞叹天地精华灵秀孕育新人，又添眼界学问。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉由眼前薛宝琴、李纹李绮等新客的出众相貌，直接推演出自己以往自囿一隅的局限。",
+        "generalityHint": "宝玉基于个人见闻对造化与人物灵秀生发的感悟。",
+        "rationale": "宝玉回怡红院后向袭人、晴雯等表达惊叹，不仅赞赏薛蝌宝琴，更由此反思自身偏狭，自嘲为‘井底之蛙’。",
+        "passageIds": [
+          "p-333977",
+          "p-334303"
+        ]
+      },
+      {
+        "label": "钗黛释嫌与金兰相亲",
+        "identityLabel": "钗黛和解真相",
+        "summary": "宝玉借《西厢记》典故探询黛玉何以与宝钗及宝琴亲厚如姊妹，黛玉道出此前行酒令获宝钗指点及送燕窝开导的往事，冰释前嫌。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "宝玉从黛玉对待宝钗姊妹的态度转变发现端倪，黛玉回忆先前经过给出原因解释。",
+        "generalityHint": "关于黛玉与宝钗、宝琴三人关系转变的具体事实阐述。",
+        "rationale": "宝玉不解‘孟光接梁鸿案’之由，黛玉坦承宝钗‘真是个好人’，将二人由猜忌转为金兰之契的原委完整剖白。",
+        "passageIds": [
+          "p-336911",
+          "p-335960"
+        ]
+      },
+      {
+        "label": "李纨芦雪庵拥炉起社",
+        "identityLabel": "芦雪庵起社倡议",
+        "summary": "适逢冬日大雪，李纨提议在傍山临水的芦雪庵设地炕、拥炉作诗，并为新到的姊妹们接风凑社。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因雪天景致与诸姊妹新聚，顺理成章提出借景结社的活动倡议。",
+        "generalityHint": "一次特定诗社活动的组织动员与地点筹备。",
+        "rationale": "李纨在稻香村向宝钗、黛玉、湘云等提出移师芦雪庵拢地炕作诗，并定规凑份子与免份子之人。",
+        "passageIds": [
+          "p-337452",
+          "p-338684"
+        ]
+      },
+      {
+        "label": "湘云宝玉割腥啖膻论名士",
+        "identityLabel": "芦雪庵烤鹿肉与名士论",
+        "summary": "史湘云与宝玉向凤姐讨要新鲜鹿肉，拉平儿等人在芦雪庵火炉前烧烤大嚼；面对黛玉打趣，湘云驳以‘是真名士自风流’。",
+        "sourceRole": "dialogue",
+        "speaker": "史湘云",
+        "reasoningHint": "湘云以名士食肉饮酒方有诗才的逻辑，反驳黛玉对‘腥膻’‘花子’的戏谑。",
+        "generalityHint": "借具体烧烤鹿肉的行为上升为关于‘真名士’与‘假清高’的风雅态度评判。",
+        "rationale": "写出了回目中‘脂粉香娃割腥啖膻’的主题，湘云豪迈吃肉并高谈‘腥膻大吃大嚼，回来却是锦心绣口’，展现其独特心性。",
+        "passageIds": [
+          "p-339559",
+          "p-338938",
+          "p-339197"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "四家亲眷的到来与相貌人品，直接构成了宝玉自叹‘井底之蛙’并赞叹造化精华的依据。",
+        "passageIds": [
+          "p-333631",
+          "p-333977"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "新来亲眷加入大观园，使李纨决意借降雪之机起社，既是作诗亦为新人接风。",
+        "passageIds": [
+          "p-335497",
+          "p-337452"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "芦雪庵起社的地点与拥炉设置，为湘云与宝玉就地取火炉烧烤鹿肉提供了现实场景与情节延伸。",
+        "passageIds": [
+          "p-337452",
+          "p-339559"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MNicao6pJdCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 9880,
+    "candidatesTokenCount": 1954,
+    "totalTokenCount": 11834,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9880
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1954
+      }
+    ]
+  },
+  "durationMs": 13479,
+  "requestHash": "13081f3a1edcd9a2ccfbd4d9d76381d6b2020c35f7df5583ab24ddb83b3646c9"
+}

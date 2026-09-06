@@ -1,0 +1,162 @@
+{
+  "value": {
+    "summary": "贾府抄家后度日艰难，贾母趁湘云回门提议为薛宝钗操办生日以强作欢笑。席间行令掷骰，宝玉由“十二金钗”引发感伤而退席离席，信步误入荒废的大观园，在潇湘馆外闻哭声痛哭黛玉，最终被众人找回。",
+    "nodes": [
+      {
+        "label": "抄家后贾府度日拮据",
+        "identityLabel": "贾府抄家后家境维艰",
+        "summary": "贾政理家裁减人口、崇尚省俭，凤姐扶病打理内事却每形拮据，上下人等怨言不绝。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府自被抄后各项事务无法周转、收支匮乏的困境。",
+        "generalityHint": "涵盖贾府被抄后的整体处境与治家现状。",
+        "rationale": "基于p-776588明确记述抄家后贾政裁减人口、凤姐理事拮据、上下人等怨言不绝的情形。",
+        "passageIds": [
+          "p-776588"
+        ]
+      },
+      {
+        "label": "贾母提议为宝钗庆生",
+        "identityLabel": "贾母筹办宝钗生辰",
+        "summary": "史湘云回门谈及各家零落，贾母感慨凄凉，因湘云提醒宝钗生日将至，贾母决定出资设宴热闹一天以解愁闷。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从湘云贾母对话引出筹办生日的动机：为冲淡连番变故带来的抑郁。",
+        "generalityHint": "记录贾母为宝钗做生日这一具体事件的起因与决策。",
+        "rationale": "基于p-776871中湘云提及各人际遇及宝钗生日，贾母命鸳鸯出资百两置办酒饭的记述。",
+        "passageIds": [
+          "p-776871"
+        ]
+      },
+      {
+        "label": "强欢笑聚席行令",
+        "identityLabel": "荣府寿宴掷骰行令",
+        "summary": "宝钗生日宴上众人心境各异、勉强凑聚，鸳鸯主持掷骰行令，由薛姨妈、贾母、李氏姐妹等人依次对句。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "席间气氛沉闷，宝玉贾母提议行令解闷，展开具体行令情节。",
+        "generalityHint": "涵盖该场寿宴行令的具体场景。",
+        "rationale": "基于p-779071和p-779841，描摹席间众人各怀心思、鸳鸯设骰盆行令的经过。",
+        "passageIds": [
+          "p-779071",
+          "p-779841"
+        ]
+      },
+      {
+        "label": "宝玉闻十二金钗感伤退席",
+        "identityLabel": "宝玉因十二钗伤感离席",
+        "summary": "李纨掷得“十二金钗”，宝玉回想太虚幻境旧梦，见眼前骨肉零落、黛玉不在，悲从中来，托词离席避人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "行令点名“十二金钗”直接触发宝玉对家亡人散与黛玉离世的心灵创痛。",
+        "generalityHint": "描写宝玉个人的心理转折与行动触发点。",
+        "rationale": "基于p-779841中李纨掷出十二金钗后宝玉回思梦境、不见黛玉遂落泪退席的细节。",
+        "passageIds": [
+          "p-779841"
+        ]
+      },
+      {
+        "label": "宝玉夜入荒园哭潇湘",
+        "identityLabel": "潇湘馆外宝玉闻啼痛哭",
+        "summary": "宝玉借酒兴步入荒凉萧条的大观园，来到潇湘馆前恍闻啼哭声，兼听婆子言及林姑娘死后哭声传闻，忍不住放声痛哭告白。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉退席后游荡大观园，在潇湘馆荒景与鬼哭传闻刺激下情绪爆发。",
+        "generalityHint": "聚焦宝玉在潇湘馆悼念黛玉的具体冲突与情感释放。",
+        "rationale": "基于p-782319和p-782555，记载宝玉见修竹寻馆、疑闻哭声并痛哭自责的场面。",
+        "passageIds": [
+          "p-782555",
+          "p-782319"
+        ]
+      },
+      {
+        "label": "众人寻回宝玉贾母诘责",
+        "identityLabel": "宝玉回房与宝钗生疑",
+        "summary": "秋纹等人将痛哭的宝玉拉回贾母处，贾母责怪袭人擅自引宝玉入园，散席后宝玉回房叹气，宝钗察觉异样暗中追问袭人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "荒园哭悼被仆从撞破后引发贾母的责难与宝钗的暗中警觉。",
+        "generalityHint": "涵盖庆生事件收尾及夫妻二人间隐秘张力。",
+        "rationale": "基于p-783110，写宝玉被带回见贾母、众人各自归寝，宝钗叫袭人细问园中情形。",
+        "passageIds": [
+          "p-783110"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "抄家后的萧索与诸人际遇惨淡，促使贾母与湘云商议办生日以图片刻欢笑。",
+        "passageIds": [
+          "p-776588",
+          "p-776871"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾母决定筹办生日直接促成了次日众人聚饮与掷骰行令的场面。",
+        "passageIds": [
+          "p-776871",
+          "p-779841"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "席间李纨掷出“十二金钗”，成为宝玉联想幻梦、感伤离席的直接诱因。",
+        "passageIds": [
+          "p-779841"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉因伤感离开酒席步入荒园，从而来到潇湘馆前痛哭黛玉。",
+        "passageIds": [
+          "p-779841",
+          "p-782319",
+          "p-782555"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉在潇湘馆大哭惊动荣府，秋纹等将其拉回贾母处，引起贾母责怪与宝钗盘查。",
+        "passageIds": [
+          "p-782555",
+          "p-783110"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "h9mcarzRHPGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10430,
+    "candidatesTokenCount": 1926,
+    "totalTokenCount": 12356,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10430
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1926
+      }
+    ]
+  },
+  "durationMs": 15176,
+  "requestHash": "93111edef65210db6218103defc915955e2124a50f41793910245f2b36965d57"
+}

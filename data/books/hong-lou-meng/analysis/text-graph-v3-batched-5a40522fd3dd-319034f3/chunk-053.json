@@ -1,0 +1,181 @@
+{
+  "value": {
+    "summary": "第五十三回叙写晴雯补裘后调养渐愈，贾府筹备年事。宁荣二府按例领皇恩春祭赏银；黑山村庄头乌进孝进贡年物，贾珍核账并与贾蓉叹荣府入不敷出与外强中干。除夕之日两府隆重祭祖，随后荣府举行除夕与元宵夜宴，赏灯看戏、散钱掷赏，铺陈出钟鸣鼎食之家的礼制盛况与深层隐忧。",
+    "nodes": [
+      {
+        "label": "晴雯病后调治与贾宅秘法",
+        "identityLabel": "晴雯病势与贾府调养习俗",
+        "summary": "晴雯拼力补完孔雀裘后力尽神危，王太医改开益神养血之剂；贾府中不论上下，凡伤风咳嗽皆以净饿与服药调理为主，晴雯经调养日渐平复。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文补裘情节，顺叙诊脉调方与贾府家传祛病习惯。",
+        "generalityHint": "贾府门第内部通行的调养风俗与晴雯个例相结合。",
+        "rationale": "王太医诊脉确诊为劳神伤体，叙述贾府‘净饿为主’的治病秘法与晴雯调养见效的过程。",
+        "passageIds": [
+          "p-362756"
+        ]
+      },
+      {
+        "label": "宁府筹岁与领春祭恩赏",
+        "identityLabel": "贾府领受皇恩春祭银",
+        "summary": "贾蓉从光禄寺领回加盖印记的皇恩春祭赏银，贾珍向尤氏道明领恩赏重在体面与沐浴天恩，并非单纯图银钱，并命回明贾母等长辈后将黄布口袋入炉焚化。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从打点押岁锞子引出领岁赏的对话与祭祀筹备礼规。",
+        "generalityHint": "涉及贵族世家领受皇恩礼制的体面与象征意义。",
+        "rationale": "贾珍阐述虽不缺银子但不可不领皇恩，黄布口袋与题字彰显世职皇宠。",
+        "passageIds": [
+          "p-363643",
+          "p-363855",
+          "p-364136"
+        ]
+      },
+      {
+        "label": "乌进孝交租与贾珍叹亏空",
+        "identityLabel": "乌进孝进贡与贾府财政虚耗",
+        "summary": "黑山村庄头乌进孝送来年租账目与贡物，贾珍嫌所纳银物过少；乌进孝诉说灾情，贾珍与贾蓉据此论及荣国府因省亲盖园及年例繁冗导致的严重亏空与外强中干局面。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过呈报账单与现场对话，推演两府入不敷出的经济危机。",
+        "generalityHint": "揭示贾府乃至同类世家由盛转衰的经济命脉与财政危机。",
+        "rationale": "乌进孝的进贡单与贾珍贾蓉关于省亲巨耗、外强中干的论述揭开了贾府潜伏的经济隐患。",
+        "passageIds": [
+          "p-364410",
+          "p-364891"
+        ]
+      },
+      {
+        "label": "贾珍分发年物与斥责贾芹",
+        "identityLabel": "宁府分派年物与整顿族众",
+        "summary": "贾珍将进贡之物留足祭祖与自用后，分发给族中无进益的子侄；见管铁槛寺和尚道士并过手银钱的贾芹亦来冒领，当场严加斥责并揭发其胡作非为。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由清点年物自然过渡到宗族内部的资源分发与宗长对子侄的训诫。",
+        "generalityHint": "展现贾府宗族救济规矩及族中子弟良莠不齐的现实。",
+        "rationale": "贾珍分派等例显现族长之权，训斥贾芹贪图分例和聚赌非为体现其门风松弛。",
+        "passageIds": [
+          "p-366014"
+        ]
+      },
+      {
+        "label": "贾氏除夕宗祠祭祖大典",
+        "identityLabel": "贾氏宗祠除夕大祭",
+        "summary": "除夕之日贾母率众入朝贺宴后齐聚宁府宗祠，宝琴留神打谅御笔匾额与联语；贾府子孙按长幼昭穆、男东女西依次传供献爵行礼，极尽庄严肃穆。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "全景式详尽铺陈宗祠建筑、御赐匾额与繁复严格的祭祖礼仪程序。",
+        "generalityHint": "封建顶级世家宗族祭礼规制与伦理秩序的典型展现。",
+        "rationale": "通过宝琴视角与全景叙事，细致记录宗祠陈设、主陪祭次序及传菜行礼的全套仪轨。",
+        "passageIds": [
+          "p-366648",
+          "p-366952",
+          "p-367112"
+        ]
+      },
+      {
+        "label": "荣府受礼与除夕合欢家宴",
+        "identityLabel": "除夕荣府行礼与合欢宴",
+        "summary": "祭祖礼毕后众人转至荣国府贾母处，诸子弟及家人仆婢按长幼名分行礼受礼、散押岁钱锞，摆设合欢宴，通宵香供爆竹，次日五鼓复进宫朝贺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "顺接宗祠祭祖后的归房行礼及除夕家宴欢庆场景。",
+        "generalityHint": "描写贾府岁时节令家庭内部行礼与宴饮规制。",
+        "rationale": "描写除夕夜荣府受礼、赐锞、合欢宴以及大年初一宫中朝贺等连续节令仪轨。",
+        "passageIds": [
+          "p-368168"
+        ]
+      },
+      {
+        "label": "元宵开夜宴与撒钱赏戏",
+        "identityLabel": "贾母元宵夜宴与盛席陈设",
+        "summary": "元宵之夕贾母在花厅设家宴，陈设珍罕慧纹璎珞与各色奇灯；席间幼童文豹插科打诨讨果子吃，贾母欢喜下令赏钱，众媳妇小厮登台撒钱，金玉满台。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从慧纹背景与华丽陈设，引向看戏、行赏的喜庆高潮，与前文经济隐忧形成对照。",
+        "generalityHint": "豪门夜宴奢华富丽之景与极尽耳目之娱的享乐模式。",
+        "rationale": "详叙花厅慧纹璎珞来源、席次排布，以及戏台上撒钱打赏的元宵热闹场面。",
+        "passageIds": [
+          "p-369064",
+          "p-369697",
+          "p-370233"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾珍在领受恩赏时自矜豪富，但在接见乌进孝核查贡租时，直接暴露了庄田歉收与荣府入不敷出的深层危机。",
+        "passageIds": [
+          "p-363643",
+          "p-364891"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾珍因乌进孝交租银物缩水而感慨开销吃紧，随即在分派贡物时借此严惩冒领的贾芹。",
+        "passageIds": [
+          "p-364891",
+          "p-366014"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "贾珍吩咐领回春祭恩赏置办祖供并焚化封套，是除夕宗祠祭祖大典的前奏与礼制准备。",
+        "passageIds": [
+          "p-363643",
+          "p-364136",
+          "p-367112"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宁府宗祠祭祖礼毕后，众人依礼转至荣国府向贾母行礼并开合欢宴，构成除夕大礼的连续环节。",
+        "passageIds": [
+          "p-367112",
+          "p-368168"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "除夕行礼宴饮延续至正月各日请吃年酒，并最终在正月十五贾母大花厅元宵夜宴达到节庆高潮。",
+        "passageIds": [
+          "p-368168",
+          "p-370233"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "S9icapGLFfGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 11966,
+    "candidatesTokenCount": 2447,
+    "totalTokenCount": 14413,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11966
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2447
+      }
+    ]
+  },
+  "durationMs": 19730,
+  "requestHash": "6ed40dcc316f33d26737ad988414cdbba53c673ec559e70d46f12a27557af503"
+}

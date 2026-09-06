@@ -1,0 +1,157 @@
+{
+  "value": {
+    "summary": "第八十二回围绕贾宝玉在家塾与代儒讲论经义、贾府内部人事暗流，以及林黛玉惊恶梦后咯血病剧的情节展开。宝玉受代儒训诫攻读八股，黛玉与宝玉、袭人谈及仕途及妾室处境；薛家送荔枝婆子的闲话引动黛玉愁思，黛玉夜梦贾雨村作媒、贾母冷遇及宝玉剖心惨景，醒后惊悸吐血，引得姊妹探视。",
+    "nodes": [
+      {
+        "label": "宝玉黛玉论八股功名",
+        "identityLabel": "八股与功名之争",
+        "summary": "宝玉从学房归来抱怨八股文章虚妄诓名，黛玉则以为八股不可一概抹倒，功名亦属清贵，令宝玉深感不合意。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "基于两人以往不喜仕途经济的默契，黛玉的劝言打破宝玉预期，宝玉暗觉其势欲熏心。",
+        "generalityHint": "展现二人对世俗举业与科举文章态度的微妙分歧与各自立足点。",
+        "rationale": "宝玉斥八股为牛鬼蛇神，黛玉基于现实提点不可一概抹倒，体现宝玉叛逆性格与黛玉现实考量之碰撞。",
+        "passageIds": [
+          "p-600783"
+        ]
+      },
+      {
+        "label": "代儒讲义警顽心",
+        "identityLabel": "代儒家塾课徒",
+        "summary": "贾代儒命宝玉讲解《论语》“后生可畏”与“好德如好色”二章，批驳其字句中的孩子气与避忌，规训其改除弊病、用功成人。",
+        "sourceRole": "dialogue",
+        "speaker": "贾代儒",
+        "reasoningHint": "代儒借经文训示‘闻’为明理见道而非单指做官，借题敲打宝玉好色懈怠之病。",
+        "generalityHint": "儒家正统学究对纨绔子弟立身举业的训诫规训。",
+        "rationale": "代儒依章句指点宝玉，并限期命其理清旧书作文章，切中回目“老学究讲义警顽心”。",
+        "passageIds": [
+          "p-601700"
+        ]
+      },
+      {
+        "label": "黛玉袭人论偏房处境",
+        "identityLabel": "东风压倒西风之叹",
+        "summary": "袭人因忧心前途来试探黛玉，谈及香菱与尤二姐之苦，黛玉感叹家庭之事不是东风压了西风就是西风压了东风。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "由香菱遭遇夏金桂折磨推演出嫡庶争衡与家族内斗的必然规律。",
+        "generalityHint": "对贾府及传统大家族妻妾嫡庶权力关系的精辟概括。",
+        "rationale": "袭人兔死狐悲借香菱探口风，黛玉一语道破大家庭妻妾妻偏争斗的严酷现实。",
+        "passageIds": [
+          "p-603803",
+          "p-603568"
+        ]
+      },
+      {
+        "label": "送荔枝婆子造次戏言",
+        "identityLabel": "婆子传言引愁思",
+        "summary": "薛姨妈处婆子来送蜜饯荔枝，盛赞黛玉与宝玉是一对天仙，无意之语反刺痛黛玉心事，引发其终身无托之悲。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "婆子无心奉承与贾母王夫人不提婚事的冷峻现实形成落差，触动黛玉自怜身世与无父母庇护的隐忧。",
+        "generalityHint": "仆妇闲话成为牵动主角心理危机的关键导火索。",
+        "rationale": "送荔枝事件是引发黛玉黄昏落泪、辗转生愁并最终入恶梦的直接现实起因。",
+        "passageIds": [
+          "p-604230",
+          "p-604875"
+        ]
+      },
+      {
+        "label": "病潇湘痴魂惊恶梦",
+        "identityLabel": "黛玉恶梦",
+        "summary": "黛玉梦见父亲续弦并由贾雨村主媒将其聘出，求贾母遭冷拒，寻宝玉又见其持刀剖心鲜血淋漓，惊骇恸哭而醒。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "将黛玉潜意识中对失怙、被迫远嫁、荣府亲情虚伪及宝玉深情的疑虑与恐惧推演至极度变形的梦境幻象。",
+        "generalityHint": "高度内化的个人潜意识梦境，集中折射出黛玉对身世与爱情归宿的绝望危机。",
+        "rationale": "恶梦是回目核心情节，通过冷血的贾母与剖心的宝玉具象化黛玉心底最深层的恐惧。",
+        "passageIds": [
+          "p-605088",
+          "p-606529"
+        ]
+      },
+      {
+        "label": "黛玉梦醒咯血病剧",
+        "identityLabel": "潇湘咯血",
+        "summary": "黛玉恶梦后受风夜嗽，紫鹃劝慰时重提长辈疼爱反勾起梦境，致黛玉心头大撞、痰中咯出紫血，病势转危。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "心理惊悸与肉体宿疾恶性循环，紫鹃本意宽慰之语恰与梦中绝境呼应，直接激化咯血。",
+        "generalityHint": "具象描摹黛玉病势不可逆转的生理转折点。",
+        "rationale": "梦境带来的精神创伤直接转变为肉体咯血病剧，奠定了黛玉后半部悲剧的基调。",
+        "passageIds": [
+          "p-606842"
+        ]
+      },
+      {
+        "label": "探春湘云潇湘探病",
+        "identityLabel": "姊妹探病与掩饰",
+        "summary": "探春与湘云闻讯赶来潇湘馆探病，湘云见痰血失声惊疑，探春忙以肺火上炎掩饰解说，黛玉精神短少自伤无靠。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "湘云的直率失言与探春的机敏遮掩形成对比，黛玉由梦中冷遇联想眼前姊妹情意亦不免凄清疑虑。",
+        "generalityHint": "大观园姊妹在疾病重症面前的人情应对与心理隔阂。",
+        "rationale": "姊妹探病承接咯血事件，既见湘云探春性格差异，亦展现黛玉经恶梦后对人情关系的疏离与绝望心理。",
+        "passageIds": [
+          "p-608149",
+          "p-607672"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "薛家婆子关于宝黛姻缘的混话刺激黛玉黄昏辗转反侧，直接诱发了随后的恶梦。",
+        "passageIds": [
+          "p-604875",
+          "p-605088"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "黛玉恶梦惊醒后心神俱伤，紫鹃劝慰之语重触梦境痛处，促使其痰中咯血。",
+        "passageIds": [
+          "p-606529",
+          "p-606842"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "黛玉咯血惊恐后，雪雁翠缕报信引发探春湘云前来潇湘馆探视病况。",
+        "passageIds": [
+          "p-606842",
+          "p-608149"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "89icauiyGfGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10503,
+    "candidatesTokenCount": 2110,
+    "totalTokenCount": 12613,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10503
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2110
+      }
+    ]
+  },
+  "durationMs": 16133,
+  "requestHash": "a34465d17bab0e94a4588584979a742de65b61edfa79f9ae6e0482cede6958b2"
+}

@@ -1,0 +1,164 @@
+{
+  "value": {
+    "summary": "第五十四回叙荣国府元宵家宴。贾珍、贾琏等率子弟向贾母及诸位夫人捧酒敬贺，席间宝玉暂离回房探视，恰遇袭人与鸳鸯私语，旋即回席奉酒。元宵演戏之际，贾母听闻女先儿欲讲《凤求鸾》，遂借此批驳才子佳人书之陈腐虚妄与闺阁失真，王熙凤则戏引《掰谎记》与斑衣戏彩之典承接其说。夜深后众人挪进暖阁并桌取暖，命小戏子清唱两出，又击鼓传梅行令，贾母与王熙凤各说笑话引欢谐谑，最后放精致烟火、食清淡茶点而散，记述了贾府元宵夜宴的节庆规矩、戏谑欢洽及后续各家请酒。",
+    "nodes": [
+      {
+        "label": "子弟按序捧酒家宴",
+        "identityLabel": "元宵家宴奉酒礼节",
+        "summary": "贾珍、贾琏率贾环、宝玉等子弟在贾母榻前屈膝跪献暖酒，并依次向李婶、薛姨妈及邢王二位夫人斟酒行礼，体现严格长幼尊卑规矩。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府子弟元宵筵席奉酒仪节，属直陈礼仪场面与人物举止。",
+        "generalityHint": "涉及贾府家族子弟特定的奉酒礼仪场景。",
+        "rationale": "基于p-370945中贾珍贾琏捧酒及贾环宝玉排班跪斟的叙述，展示家宴中具体的奉觞仪节。",
+        "passageIds": [
+          "p-370945"
+        ]
+      },
+      {
+        "label": "宝玉探视与袭人居丧",
+        "identityLabel": "袭人母丧与主仆体恤",
+        "summary": "宝玉下席回园，贾母问起袭人，王夫人回以袭人母丧有热孝，凤姐陈明留其看屋有三处益处，宝玉见鸳鸯与袭人叙旧安慰遂悄然回避。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾母查问袭人，经王夫人与凤姐辩白周全，至宝玉私下探看，展示主仆照应与丧仪规矩。",
+        "generalityHint": "限定于袭人母丧缺席夜宴及鸳鸯伴慰的特定家事事件。",
+        "rationale": "综合p-371286与p-372097中贾母对袭人母丧的垂询、凤姐的周全解释及宝玉体贴悄退的情节。",
+        "passageIds": [
+          "p-371286",
+          "p-372097"
+        ]
+      },
+      {
+        "label": "史太君批才子佳人陈套",
+        "identityLabel": "贾母掰谎才子佳人套路",
+        "summary": "贾母听女先儿讲《凤求鸾》开头，立批才子佳人书千篇一律，指出其违背世宦门第规矩与人情事理，多系编书者妒忌富贵或自淫取乐之杜撰虚妄。",
+        "sourceRole": "dialogue",
+        "speaker": "贾母",
+        "reasoningHint": "贾母从大家族闺训、侍婢管束及人伦常理等多重依据推演，论证流行戏小说编撰之失实荒诞。",
+        "generalityHint": "针对整个才子佳人世情小说门类的通病提出批判原则。",
+        "rationale": "见p-373596，贾母听《凤求鸾》书名与梗概后，展开长篇独到剖析与批驳。",
+        "passageIds": [
+          "p-373596"
+        ]
+      },
+      {
+        "label": "凤姐巧承掰谎效戏彩",
+        "identityLabel": "王熙凤借掰谎戏彩承奉",
+        "summary": "凤姐借贾母批书即席称其为《掰谎记》，并引《二十四孝》老莱子彩衣戏彩之意为己辩白，既奉酒承欢，又活跃满堂笑乐气氛。",
+        "sourceRole": "dialogue",
+        "speaker": "王熙凤",
+        "reasoningHint": "顺应贾母长篇驳斥，通过拟书名和借斑衣戏彩典故顺水推舟化解冷场并讨好长辈。",
+        "generalityHint": "王熙凤在当场宴席上的应变言语。",
+        "rationale": "见p-374865中凤姐斟酒打趣老祖宗《掰谎记》并自道‘斑衣戏彩’讨寿的情节。",
+        "passageIds": [
+          "p-374865"
+        ]
+      },
+      {
+        "label": "暖阁并桌与听曲新样",
+        "identityLabel": "暖阁并坐与雅致戏曲",
+        "summary": "夜深寒起，贾母命众人挪入暖阁并桌挤坐，遣去诸位成年男丁，独留贾蓉，并命家中小戏子芳官、葵官清唱《寻梦》《下书》，彰显雅致别致的赏乐家风。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由夜深天寒引出合桌并坐及改听淡雅管箫之举，体现贾母对宴聚氛围与戏曲雅趣之讲究。",
+        "generalityHint": "荣府家宴转入深宵暖阁的具体坐次编排与听戏风格要求。",
+        "rationale": "见p-375412、p-376031与p-376240中关于撤席并大桌、男女回避及吩咐不用笙笛清唱的详述。",
+        "passageIds": [
+          "p-375412",
+          "p-376031",
+          "p-376240"
+        ]
+      },
+      {
+        "label": "击鼓传梅与笑话解颐",
+        "identityLabel": "春喜上眉梢行令笑话",
+        "summary": "席间行‘春喜上眉梢’击鼓传梅令，贾母作‘吃猴儿尿’巧嘴笑话戏谑凤姐，凤姐则说‘聋子放炮仗’笑话暗示席散，众人欢谑前仰后合。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "通过行令罚说笑话，长幼妇孺间层层逗趣、谐谑机锋连贯推进。",
+        "generalityHint": "限次元宵宴席击鼓传花行令说笑话的互动过程。",
+        "rationale": "见p-376961中行令传梅、贾母说猴尿巧嘴故事及凤姐两度说炮仗笑话打趣催散的全过程。",
+        "passageIds": [
+          "p-376961"
+        ]
+      },
+      {
+        "label": "放花炮消夜与年节余波",
+        "identityLabel": "元宵散席与各家年酒",
+        "summary": "贾母命放精巧进贡烟火，众人各抱儿孙取暖，饮清淡杏仁茶后散席；其后数日宁府封祠，贾母视兴致轮流赴各管事家年酒宴席。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "夜宴以放烟火、进清淡夜点作结，后续自然过渡至年节收尾及下人请客的例行酬酢。",
+        "generalityHint": "记录元宵残席收整与此后数日贾府上下年节交游的总体安排。",
+        "rationale": "见p-378870中放烟火、进杏仁茶散席及p-379381关于十七日至二十二日各家请年酒的概述。",
+        "passageIds": [
+          "p-378870",
+          "p-379381"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾母长篇剖析才子佳人谎谬后，凤姐紧接着戏封其为《掰谎记》，借题发挥戏彩承欢。",
+        "passageIds": [
+          "p-374865"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "凤姐效戏彩斑衣取悦贾母之后，席间行令传梅，贾母与凤姐各自说笑话互相打趣，承续了其插科打诨的欢畅氛围。",
+        "passageIds": [
+          "p-376961"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "暖阁并桌坐定后听戏毕，凤姐见贾母高兴遂提议行击鼓传梅令，直接促成了后面的说笑话娱乐。",
+        "passageIds": [
+          "p-376961"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "凤姐在笑话中借‘聋子放炮仗’提议散席，贾母顺势命人抱烟火来放以解酒，随后散席并转入节后日常。",
+        "passageIds": [
+          "p-376961",
+          "p-378870"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "TdicaufFOfGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 11288,
+    "candidatesTokenCount": 2439,
+    "totalTokenCount": 13727,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11288
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2439
+      }
+    ]
+  },
+  "durationMs": 18001,
+  "requestHash": "6c55f4cf87d9a08fa303d67f5c25080d99756b3a800e23f3adccadc67f8fc2e9"
+}

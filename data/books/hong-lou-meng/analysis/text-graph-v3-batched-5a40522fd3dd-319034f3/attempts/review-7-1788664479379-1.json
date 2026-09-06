@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges are verified and supported by cited evidence passages. Summaries accurately reflect the narrative actions and dialogues (e.g.晴雯跌扇、宝黛诉肺腑、大承笞挞、宝钗赠药、袭人进言防嫌、黛玉题帕、宝玉烫手等), primary themes are appropriately matched, and causal/developmental edges precisely capture sequential narrative and thematic trajectories without reversed directions or unsupported claims."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "m9qcatXWM4uKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 83708,
+    "candidatesTokenCount": 116,
+    "totalTokenCount": 83824,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 83708
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 116
+      }
+    ]
+  },
+  "durationMs": 3868,
+  "requestHash": "fa723f385c85faaf012834751078fe4aa4a49fd999fde7fd0df944ce3005b9d8"
+}

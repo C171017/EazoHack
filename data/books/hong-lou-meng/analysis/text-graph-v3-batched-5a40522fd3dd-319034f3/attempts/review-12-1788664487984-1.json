@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges are well-grounded in the provided evidence. Themes, summaries, relations, and rationale correctly reflect the source text from Chapters 56 through 61."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "pNqcatyvKqKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 87331,
+    "candidatesTokenCount": 61,
+    "totalTokenCount": 87392,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 87331
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 61
+      }
+    ]
+  },
+  "durationMs": 4029,
+  "requestHash": "827dc733fa02b2dbcf91f9dab042c7f4315a45078dab9efc9d11f06ad6ba9ff7"
+}

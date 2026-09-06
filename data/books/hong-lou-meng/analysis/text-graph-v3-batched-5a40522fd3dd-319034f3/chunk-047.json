@@ -1,0 +1,159 @@
+{
+  "value": {
+    "summary": "第四十七回中，贾母当面严词训斥邢夫人纵容贾赦强纳鸳鸯，并说明鸳鸯在贾府料理家务不可或缺的作用；随后王熙凤借斗牌凑趣化解沉闷气氛。数日后，众人前往赖大家花园赴宴，薛蟠误将柳湘莲认作优伶风月之辈并加以纠缠，柳湘莲定计将其诱至城外苇塘痛打受辱。事后薛姨妈欲报复，薛宝钗明辨利害劝阻息事。",
+    "nodes": [
+      {
+        "label": "贾母斥责邢夫人并重申鸳鸯之任",
+        "identityLabel": "贾母斥责邢夫人",
+        "summary": "贾母直斥邢夫人一味顺从贾赦胡闹，表明鸳鸯处事周全妥帖、合家信服，侍奉自己不可或缺，绝不容贾赦强索，命邢夫人转告贾赦自去出银买人。",
+        "sourceRole": "dialogue",
+        "speaker": "贾母",
+        "reasoningHint": "基于贾赦索纳鸳鸯引发的家庭矛盾，贾母陈述了鸳鸯在上下周旋、照管日常中的核心价值，由此推导出绝不放人的决定。",
+        "generalityHint": "涉及贾母房中仆从管理与荣国府内部人情运作的原则，属于贾府治家内院规矩的具体裁决。",
+        "rationale": "出处见p-319393，贾母对邢夫人细数鸳鸯办事周密、不可替代的缘由，并拒绝了贾赦的要求。",
+        "passageIds": [
+          "p-319393",
+          "p-319217"
+        ]
+      },
+      {
+        "label": "凤姐斗牌凑趣解颐",
+        "identityLabel": "凤姐牌桌调笑",
+        "summary": "贾母命众人斗牌，王熙凤在牌桌上与鸳鸯配合，故意放牌给贾母并拿输钱、匣子等打趣，成功引得众人欢笑，平息了此前的紧张气氛。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐深知贾母因鸳鸯之事动怒，通过自嘲小器与故意输钱的插科打诨转移焦点，达到承欢化怨的效果。",
+        "generalityHint": "描写特定场合下王熙凤承欢贾母、调和宗族长辈情绪的处世机变。",
+        "rationale": "出处见p-320031及p-320499，凤姐利用牌局说笑逗趣，使贾母怒气消解、合席大笑。",
+        "passageIds": [
+          "p-320499",
+          "p-320031"
+        ]
+      },
+      {
+        "label": "贾琏探视遭贾母迁怒奚落",
+        "identityLabel": "贾琏遭贾母斥骂",
+        "summary": "贾琏奉贾赦之命前来请邢夫人并探问出门事宜，在门外窥探时被贾母察觉，贾母正恼贾赦，遂借鲍二家之事将贾琏当众痛加奚落。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾琏自以为借公事能巧妙请回邢夫人，但贾母余怒未消，借其行迹鬼祟与前番私通旧怨发起申斥。",
+        "generalityHint": "荣国府长房父子与贾母之间的紧张关系在突发冲突中的具体爆发。",
+        "rationale": "出处见p-321653与p-321352，贾琏不听平儿劝告入内打探，反遭贾母旧事重提痛骂。",
+        "passageIds": [
+          "p-321653",
+          "p-321352",
+          "p-322159"
+        ]
+      },
+      {
+        "label": "薛蟠误认柳湘莲为风月子弟",
+        "identityLabel": "薛蟠纠缠柳湘莲",
+        "summary": "在赖大家花园宴席上，薛蟠因见柳湘莲容貌俊美且好客串生旦风月戏文，误认其为优伶下流之辈，屡屡借酒意加以缠磨攀谈。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "薛蟠根据柳湘莲客串风月戏文与外貌的表象，轻率推断其为人品性，犯下好色滥交的旧疾。",
+        "generalityHint": "描写薛蟠骄纵呆霸、只看皮相不论品性的惯常行径。",
+        "rationale": "出处见p-322476与p-322770，交代了柳湘莲世家子弟与豪侠素性，以及薛蟠对他的误解与纠缠。",
+        "passageIds": [
+          "p-322476",
+          "p-322770"
+        ]
+      },
+      {
+        "label": "柳湘莲诱薛蟠至苇塘痛打",
+        "identityLabel": "苇塘惩治薛蟠",
+        "summary": "柳湘莲不堪薛蟠调戏，心生一计假意应允，将其诱出北门至荒僻苇塘，迫其立誓后施以重拳马鞭痛打，逼其喝脏水告饶方才离去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "柳湘莲顾及赖家脸面不便当场动手，因而设计诱骗薛蟠至荒郊苇塘，施加体罚以惩戒其无礼冒犯。",
+        "generalityHint": "豪侠人物快意恩仇、教训登徒子的具体冲突事件。",
+        "rationale": "出处见p-323099、p-324448及p-324705，详细叙述了柳湘莲定计、引薛蟠出城、并在苇塘狠狠惩治其全过程。",
+        "passageIds": [
+          "p-324705",
+          "p-323099",
+          "p-324448"
+        ]
+      },
+      {
+        "label": "薛宝钗权衡利害劝阻兴师问罪",
+        "identityLabel": "宝钗劝阻薛姨妈",
+        "summary": "薛蟠被打归家后，薛姨妈意欲告知王夫人并派人拿问柳湘莲，薛宝钗透彻分析薛蟠平日无法无天吃亏常情及倚势欺人之嫌，劝阻了家族兴师动众。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗由薛蟠平日品行被公知、酒后斗殴常态及倚仗亲戚势力的名声风险进行权衡，推论出息事宁人、让薛蟠受教方为上策。",
+        "generalityHint": "体现薛宝钗洞明世故、顾全家族声名与人情体统的处事原则。",
+        "rationale": "出处见p-326027，薛宝钗向薛姨妈剖析利害，成功制止了事态扩大。",
+        "passageIds": [
+          "p-326027"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾母因鸳鸯之事训斥邢夫人后情绪不快，凤姐随即设法斗牌凑趣，承接并化解了贾母的盛怒。",
+        "passageIds": [
+          "p-319393",
+          "p-320031"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾赦因贾母驳斥求纳鸳鸯之事而心怀怨怼，遣贾琏来请邢夫人，贾琏因而撞在贾母气头上遭痛斥。",
+        "passageIds": [
+          "p-319393",
+          "p-321352",
+          "p-321653"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "薛蟠在宴席上对柳湘莲的纠缠调戏，直接构成了柳湘莲定计并诱打薛蟠的动机与前提。",
+        "passageIds": [
+          "p-322476",
+          "p-323099",
+          "p-324705"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "薛蟠遭柳湘莲暴打受伤归家，直接引出薛姨妈的发恨欲报复以及薛宝钗的明理规劝。",
+        "passageIds": [
+          "p-324705",
+          "p-326027"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Idicap-uBvGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10248,
+    "candidatesTokenCount": 2313,
+    "totalTokenCount": 12561,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10248
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2313
+      }
+    ]
+  },
+  "durationMs": 15549,
+  "requestHash": "025e2420da7b8f1ba8c6cf845c77f7ddc6eec134d9242bb8b2510574c41efe9e"
+}

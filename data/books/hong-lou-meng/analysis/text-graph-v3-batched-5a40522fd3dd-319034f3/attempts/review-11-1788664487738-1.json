@@ -1,0 +1,44 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-52-2",
+        "reason": "节点角色标注为dialogue并指定speaker为'平儿'，但该节点陈述的是'平儿情掩虾须镯'这一完整叙事事件（含平儿查明、定计、谎报二奶奶以及私嘱麝月等全过程），正文主体由对话与叙述结合构成，定为纯dialogue且归于平儿单人发言不妥，应为叙事事件（narrative）。"
+      },
+      {
+        "id": "n-54-6",
+        "reason": "节点被标记为dialogue且speaker为null，但其内容概括了整场'击鼓传梅'行令过程、女先生击鼓、贾母说笑话、凤姐两度说笑话及众人反应，属于典型的叙事场景与事件序列（narrative），而非单一说话者的发言。"
+      }
+    ],
+    "rejectedEdges": [
+      {
+        "id": "e-51-3",
+        "reason": "e-51-3将n-51-5（宝玉辨药斥退庸医）与n-51-6（凤姐提议大观园设小厨）建立'supports'关系，理由牵强。大观园设小厨房系凤姐见天寒路远、姑娘们空心走动受风而提议，并非由宝玉辨识药方一事推导或直接支持，两事并无直接论证支撑或推理因果关系。"
+      }
+    ],
+    "notes": "其余节点的文本考据、事实引述及关系逻辑均准确吻合第51回至第56回的原文叙事与对话脉络。"
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "otqcapLuGqGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 79279,
+    "candidatesTokenCount": 411,
+    "totalTokenCount": 79690,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 79279
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 411
+      }
+    ]
+  },
+  "durationMs": 5807,
+  "requestHash": "e891a5d1c25b22de9252b541174151a6bc15662aeb49cbf8c971c92e720fbacb"
+}

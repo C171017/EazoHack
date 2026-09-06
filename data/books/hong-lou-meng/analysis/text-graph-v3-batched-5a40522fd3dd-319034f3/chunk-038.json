@@ -1,0 +1,163 @@
+{
+  "value": {
+    "summary": "第三十八回叙述史湘云做东、薛宝钗周密筹划，在大观园藕香榭举行赏桂吃蟹之会。贾母携众女眷同乐，凤姐与平儿、鸳鸯等笑闹尽欢。长辈散席后，诗社众人作菊花诗十二首，李纨公评黛玉之作为冠。随后众人又作螃蟹咏，宝钗以深刻寓意之作讽世，众人叹为绝唱。",
+    "nodes": [
+      {
+        "label": "藕香榭设席赏桂",
+        "identityLabel": "藕香榭之宴",
+        "summary": "贾母携王夫人、薛姨妈及众姊妹进园，在藕香榭依水赏桂花、备茶烫酒，贾母称赞宝钗细致妥当。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述大观园中赏桂宴饮的具体开端，由凤姐引路并交代场地陈设与贾母称赞。",
+        "generalityHint": "单一特定场景与事件。",
+        "rationale": "叙述众人进藕香榭就座及宝钗预备周至的事实。",
+        "passageIds": [
+          "p-254365",
+          "p-254657"
+        ]
+      },
+      {
+        "label": "贾母忆枕霞阁与凤姐承欢",
+        "identityLabel": "枕霞阁旧事与笑谑",
+        "summary": "贾母见匾联回忆儿时落水伤额之往事，王熙凤借寿星巧语奉承，引得众人欢笑欢宴。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "贾母追述幼年，凤姐因势利导以口齿承欢解颐，王夫人与贾母对话印证家庭风趣。",
+        "generalityHint": "涉及贾母个人往事与家族特定伦常互动模式。",
+        "rationale": "展现贾母早年生活片断及贾府日常中凤姐擅于迎合长辈的言行表现。",
+        "passageIds": [
+          "p-254851"
+        ]
+      },
+      {
+        "label": "食蟹嬉闹与体恤下人",
+        "identityLabel": "食蟹宴的阶层与谐谑",
+        "summary": "众人分席吃蟹，湘云兼顾下人，凤姐张罗并与鸳鸯、平儿互相调笑嬉闹，平儿抹了凤姐一脸蟹黄。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从主子宴饮拓展到丫鬟仆妇的分食及主仆间的无拘戏谑。",
+        "generalityHint": "展现贾府主仆互动与阶层日常宴饮氛围。",
+        "rationale": "刻画大观园中上下同乐的生动情态，也表现了湘云的周全与凤姐平儿等人的亲昵无间。",
+        "passageIds": [
+          "p-255338"
+        ]
+      },
+      {
+        "label": "诗社分题誊作菊花诗",
+        "identityLabel": "海棠诗社拟咏菊花",
+        "summary": "长辈散席后诗社起社，众人依题分领，湘云以枕霞旧友为号，各自写定并誊录十二首七言律诗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由宴饮转入诗社活动，依照拟好的十二题各抒性灵。",
+        "generalityHint": "特定文墨结社活动的组织与开展。",
+        "rationale": "承接前文题序，展现诗社成员自选题目、定号誊抄的创作流程。",
+        "passageIds": [
+          "p-256530",
+          "p-256928"
+        ]
+      },
+      {
+        "label": "李纨评诗推黛玉为魁",
+        "identityLabel": "菊花诗公评与互赏",
+        "summary": "李纨公评菊花诗，定黛玉《咏菊》《问菊》《菊梦》包揽前三名，众人互相评析各人警句，黛玉夺魁。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "基于十二首诗的立意、词句与风神，李纨做出综合评定，众人展开细致讲评。",
+        "generalityHint": "针对具体诗作的审美评判，体现当时闺阁诗社的评赏准则。",
+        "rationale": "标志着本回核心诗会高潮，体现黛玉才情与众人各自的艺术风格。",
+        "passageIds": [
+          "p-258789"
+        ]
+      },
+      {
+        "label": "宝钗螃蟹咏讽世居冠",
+        "identityLabel": "螃蟹咏与寄寓讽刺",
+        "summary": "食蟹余兴中宝玉、黛玉各作螃蟹诗，宝钗所作螃蟹咏寓意深刻、皮里阳秋，众人赞为食蟹绝唱、小题大做之讽世佳作。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从单纯咏物抒怀深化到借物讽世，由宝玉起头、黛玉即兴，最终推向宝钗之作的讽世意蕴。",
+        "generalityHint": "由特定题咏提升到对世态人情的普遍讽喻。",
+        "rationale": "螃蟹诗将秋宴引向社会与世情的讽喻，是全回文思的高潮与收束。",
+        "passageIds": [
+          "p-259406",
+          "p-259816",
+          "p-259925"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "进入藕香榭赏桂设席后，见水亭陈设引发贾母对枕霞阁的追忆。",
+        "passageIds": [
+          "p-254657",
+          "p-254851"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "入席后正式开宴分桌吃螃蟹，展开了主仆嬉闹与上下同饮的场面。",
+        "passageIds": [
+          "p-254657",
+          "p-255338"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾母等长辈吃完散去后，残席另收，诗社成员方开始着手作菊花诗。",
+        "passageIds": [
+          "p-256530"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "十二题菊花诗各自作毕誊抄后，交由李纨进行公评并定出甲乙名次。",
+        "passageIds": [
+          "p-256928",
+          "p-258789"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "菊花诗评完后大家意犹未尽，再命热蟹，由此引发宝玉、黛玉、宝钗相继吟作螃蟹诗。",
+        "passageIds": [
+          "p-258789",
+          "p-259406"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "A9icauXALPGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 11492,
+    "candidatesTokenCount": 1873,
+    "totalTokenCount": 13365,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11492
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1873
+      }
+    ]
+  },
+  "durationMs": 13802,
+  "requestHash": "022d2666264f15bdf346d42573a1830ff2cf9e488f1d863f619ff5e4a6ac9e39"
+}

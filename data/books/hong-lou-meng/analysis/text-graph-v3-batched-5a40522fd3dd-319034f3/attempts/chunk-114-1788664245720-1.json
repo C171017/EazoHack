@@ -1,0 +1,169 @@
+{
+  "value": {
+    "summary": "红楼梦第一百十四回叙述王熙凤临终胡言归入金陵册子后气绝，宝玉袭人议论宿命前知，宝钗劝解；贾家操办凤姐丧事窘迫，王仁登门挑剔争执，平儿解囊相助贾琏；程日兴劝贾政整顿家务严查亏空；江南甄应嘉蒙恩起复陛见后拜访贾政，托付家眷并惊见宝玉酷肖其子甄宝玉。",
+    "nodes": [
+      {
+        "label": "凤姐临终胡言与定数之叹",
+        "identityLabel": "凤姐归册与宿命讨论",
+        "summary": "凤姐垂危时口称要船要轿回金陵归册子，袭人提醒宝玉当年太虚幻境册子之梦，宝玉感叹人皆有定数，若能先知便不为众人生死瞎操心。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从凤姐临终胡话联想到当年幻境册子，进而推演出人生皆有前定与先知的感慨。",
+        "generalityHint": "涉及特定人物的死亡梦境，延伸到对人生命运定数的看法。",
+        "rationale": "出处见p-820764。凤姐临终索要船轿回金陵入册，袭人与宝玉由梦境忆起册子，引出宝玉对前知与宿命的对话。",
+        "passageIds": [
+          "p-820764"
+        ]
+      },
+      {
+        "label": "宝钗论先知虚诞与薛家近况",
+        "identityLabel": "宝钗驳先知与述家变",
+        "summary": "宝钗驳斥所谓求签扶乩能预卜前知的说法，指出妙玉遭难自己都不能预知，证明下落虚诞不可信；随后向宝玉解释薛家草草迎娶邢岫烟及打算搬移的缘由。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "以妙玉遭难自身不知的事实反驳扶乩先知之说，并由亲戚相处常理推导出自立门户的必要性。",
+        "generalityHint": "讨论预知命运的不可靠性，以及薛家与贾家的寄居分界。",
+        "rationale": "出处见p-821200。宝钗反驳宝玉由签诗推求命运的认真态度，举妙玉为例论证先知之虚，同时叙述薛蝌岫烟成婚与搬家考量。",
+        "passageIds": [
+          "p-821200"
+        ]
+      },
+      {
+        "label": "凤姐身故与王仁巧姐交恶",
+        "identityLabel": "凤姐丧事与王仁嫌隙",
+        "summary": "凤姐断气停床，贾琏借贷窘迫；舅兄王仁前来吊唁，因丧事从简便冷言责备贾家，逼巧姐交出财物妆奁，致使舅甥彼此生厌，平儿出言阻拦。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "王仁由主观认定贾家凤姐必有积蓄，推论巧姐与贾琏装穷藏私，引发冲突。",
+        "generalityHint": "具体事件：王仁借吊丧发难与巧姐看清母舅为人。",
+        "rationale": "出处见p-822040。王仁借口丧事办得寒酸，向巧姐索要资财无果，从而产生嫌隙。",
+        "passageIds": [
+          "p-822040"
+        ]
+      },
+      {
+        "label": "平儿典当助丧与秋桐嫉妒",
+        "identityLabel": "平儿纾困与姬妾嫌隙",
+        "summary": "贾琏因丧事开销支绌手足无措，平儿主动拿出未被抄没的私存细软典当相助；贾琏感念平儿，秋桐心生不平冷嘲热讽，反遭贾琏厌恶斥责。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "平儿感恩图报主动纾困，贾琏敬重平儿而疏远秋桐，秋桐嫉恨却引火烧身。",
+        "generalityHint": "具体事件：贾琏院内妻妾侍妾在丧乱之际的品行与冲突。",
+        "rationale": "出处见p-823097。平儿解囊帮贾琏应付办丧花销，秋桐由此生妒，展现贾琏内房人事变化。",
+        "passageIds": [
+          "p-823097"
+        ]
+      },
+      {
+        "label": "程日兴劝贾政清查家仆亏空",
+        "identityLabel": "程日兴整顿家计之策",
+        "summary": "清客程日兴向服丧的贾政建言，指出贾府日渐困顿皆因奴仆中饱私囊，力主派心腹严查管事、清查产业与追索亏空；贾政自认仁厚不能苛待且力有不逮。",
+        "sourceRole": "dialogue",
+        "speaker": "程日兴",
+        "reasoningHint": "根据家人豪富而府邸日亏的现象，提出清理经手、追赔亏空的救弊方案。",
+        "generalityHint": "贾府家道衰败的症结分析与管理策略建议。",
+        "rationale": "出处见p-823511。程日兴针对贾府入不敷出的根源，向贾政条陈清查下人之计，贾政以家风仁厚推托。",
+        "passageIds": [
+          "p-823511"
+        ]
+      },
+      {
+        "label": "甄应嘉起复奉旨与两家托付",
+        "identityLabel": "甄应嘉起复与贾政托孤女",
+        "summary": "甄应嘉蒙恩复职回京陛见，奉旨赴海疆安抚，行前拜望贾政；贾政托其探视远嫁海疆的女儿探春，甄应嘉则托贾政照应后至的家眷并物色宝玉婚事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由皇恩起复与海疆军务的背景，衍生出贾政甄应嘉互托骨肉照应的世交因缘。",
+        "generalityHint": "两大家族在经历抄没变故后政局变化及私人情谊的相互托付。",
+        "rationale": "出处见p-824261。叙述甄应嘉得旨安抚海疆，与贾政会面并互托儿女之事。",
+        "passageIds": [
+          "p-824261"
+        ]
+      },
+      {
+        "label": "甄应嘉惊见宝玉肖似其子",
+        "identityLabel": "甄应嘉叹双宝玉酷肖",
+        "summary": "甄应嘉告辞时见贾宝玉，惊异其容貌举止与自幼同名的儿子甄宝玉一模一样，拉手赞叹不已；事后宝玉回房告知宝钗，戏言让众人瞧看，遭宝钗斥为失言。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从亲眼所见的相貌举止，印证并惊叹贾甄两宝玉同名同貌的巧合，宝钗则依据内外男女礼教纠正宝玉失言。",
+        "generalityHint": "具体人物会面及关于真假宝玉同构的叙事对照。",
+        "rationale": "出处见p-825098与p-825492。甄应嘉见贾宝玉而惊奇其相貌，引出宝玉对宝钗讲述及宝钗规劝失言的互动。",
+        "passageIds": [
+          "p-825098",
+          "p-825492"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "challenges",
+        "rationale": "宝玉从凤姐梦归册子产生宿命先知之想，宝钗以妙玉等人之事驳斥先知虚诞不可信。",
+        "passageIds": [
+          "p-821200"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "凤姐气绝咽气使宝玉袭人议论转入治丧实务，直接引出贾琏办丧拮据与王仁登门诘问。",
+        "passageIds": [
+          "p-822040"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "凤姐丧事窘迫且受王仁责难，贾琏手足无措，平儿遂主动拿出私房积蓄当钱解围。",
+        "passageIds": [
+          "p-823097"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "凤姐丧事办理过程中展现的亏空借贷，推进到程日兴向贾政分析家计艰难、下人肥己的深层弊端。",
+        "passageIds": [
+          "p-823511"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "甄应嘉与贾政论及家眷与小儿甄宝玉后，出外书房登车时亲眼见到贾宝玉，因二人酷肖而极度称奇。",
+        "passageIds": [
+          "p-825098"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "o9mcat_5Numj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 7516,
+    "candidatesTokenCount": 2449,
+    "totalTokenCount": 9965,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7516
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2449
+      }
+    ]
+  },
+  "durationMs": 18357,
+  "requestHash": "bd3283c2bce0153a0a52f979ff3d0ae0beda1b7492fb58c5271d3e762351f2cb"
+}

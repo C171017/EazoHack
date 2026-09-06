@@ -158,6 +158,10 @@ try {
   check(lateSigned.status >= 400 && lateSigned.status < 500, `Deleted-account signed upload was not fenced: HTTP ${lateSigned.status}.`);
   const fence = await service(`/rest/v1/account_state?owner_id=eq.${state.id}&select=owner_id`);
   check(fence.status === 200 && fence.body?.length === 1 && fence.body[0].owner_id === state.id, 'Durable deletion tombstone missing.');
+  for (const bucket of ['eazo-sources', 'eazo-analysis']) {
+    const listed = await service(`/storage/v1/object/list/${bucket}`, { method: 'POST', body: JSON.stringify({ prefix: state.id, limit: 100, offset: 0 }) });
+    check(listed.status === 200 && listed.body?.length === 0, `Late writes left residual metadata in ${bucket}.`);
+  }
   await checkpoint('durable tombstone rejects both late service-worker and previously signed source uploads');
   report.finishedAt = new Date().toISOString(); report.status = 'passed';
   await privateWrite(reportFile, JSON.stringify(report, null, 2));

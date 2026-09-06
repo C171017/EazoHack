@@ -1,0 +1,98 @@
+{
+  "value": {
+    "groups": [
+      {
+        "label": "神话宿命、玄理悟道与全书归结",
+        "rationale": "归并探讨超现实神话、前定宿命、禅道参悟、魂魄幽冥、宝玉出尘看破与全书终局等形而上哲思与宿命归宿的主题。",
+        "members": [
+          0,
+          20,
+          23,
+          26
+        ]
+      },
+      {
+        "label": "世家荣枯、宗族盛衰与抄家败亡",
+        "rationale": "归纳从贾府官场全盛、宗族祭奠丧殡、家道转衰到抄家重创、宗族解体的政治家族荣枯主线及外部仕途沉浮。",
+        "members": [
+          1,
+          2,
+          18,
+          19
+        ]
+      },
+      {
+        "label": "大观园风雅、结社唱和与清雅日常",
+        "rationale": "汇集大观园前中期的文学雅集、诗社唱和、日常结交与青年男女的风雅审美生活。",
+        "members": [
+          3,
+          7
+        ]
+      },
+      {
+        "label": "儿女痴情、性灵知己与婚变离散",
+        "rationale": "聚焦木石前盟、闺秀深情、宝黛知己之叹，以及随后的婚变死别、红颜零落与情孽应验。",
+        "members": [
+          4,
+          8,
+          15,
+          16,
+          25
+        ]
+      },
+      {
+        "label": "内宅权衡、妻妾纠葛与家庭风波",
+        "rationale": "整合深宅内院管治裁处、妻妾纷争、伦理冲突，以及薛府、二尤等具体房闱婚姻悲剧与内斗纠葛。",
+        "members": [
+          5,
+          9,
+          11,
+          17
+        ]
+      },
+      {
+        "label": "尊卑主奴、阶层碰撞与微末江湖",
+        "rationale": "涵盖大观园与贾府内外的下人奔走、主奴心机、仆婢反抗强权以及任侠市井之间的处事波折。",
+        "members": [
+          6,
+          10,
+          12
+        ]
+      },
+      {
+        "label": "末世动荡、秩序崩溃与群小败德",
+        "rationale": "围绕盛极而衰的家族裂痕、抄检整肃异兆、内奸外盗、冤报相缠、群小败德及凤姐谢幕等秩序解体过程。",
+        "members": [
+          13,
+          14,
+          21,
+          22,
+          24
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "jtqcaoz9NKGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 3179,
+    "candidatesTokenCount": 650,
+    "totalTokenCount": 3829,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3179
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 650
+      }
+    ]
+  },
+  "durationMs": 7004,
+  "requestHash": "3aa4bd3c2170ee00bd767133e47ed156cadf095d2e54acc745c8c1ddbc389b4f"
+}

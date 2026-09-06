@@ -1,0 +1,156 @@
+{
+  "value": {
+    "summary": "第四十一回中，贾母宴饮，众人取笑刘姥姥并尝茄鲝；随后同往栊翠庵品茶，妙玉待客清雅高洁且别出私藏奇珍，宝玉为刘姥姥讨得成窑杯；众人游散时，刘姥姥酒醉腹泻，误入怡红院深处卧倒沉睡，后得袭人掩饰周全。",
+    "nodes": [
+      {
+        "label": "大套杯饮酒与品尝茄鲝",
+        "identityLabel": "刘姥姥品茄鲝",
+        "summary": "刘姥姥嫌瓷杯易碎索要木杯，凤姐与鸳鸯取黄杨根大套杯劝酒，贾母又命凤姐以精工煨制的茄鲝喂食，刘姥姥惊叹于其配料豪奢及杯器奇巧。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于宴席上的戏谑互动，通过木杯取乐引出贾府饮食器皿制作之奢靡繁复。",
+        "generalityHint": "单一具体宴饮场景，反映出贾府生活细节与庄稼人认知的鲜明对比。",
+        "rationale": "刘姥姥饮酒尝菜是本回开端的主要情节，表现出贾府与乡野市井生活习惯的巨大落差。",
+        "passageIds": [
+          "p-275699"
+        ]
+      },
+      {
+        "label": "藕香榭听乐与游园闲话",
+        "identityLabel": "游园听乐",
+        "summary": "贾母命藕香榭女乐奏乐，众人饮酒，刘姥姥闻乐起舞引黛玉取笑，随后贾母携刘姥姥散步游看树石花鸟，刘姥姥错认笼中雀鸟引众人欢笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从席间转移至园中游赏，叙述贾母以乐舞和景物给刘姥姥解闷的过程。",
+        "generalityHint": "特定游园事件中的人物言行。",
+        "rationale": "承接宴饮之后的游玩流程，黛玉以‘百兽率舞’讽喻刘姥姥，展现园中宴乐生态。",
+        "passageIds": [
+          "p-277212",
+          "p-277674"
+        ]
+      },
+      {
+        "label": "栊翠庵贾母品老君眉",
+        "identityLabel": "栊翠庵品茶",
+        "summary": "贾母带刘姥姥至栊翠庵，妙玉用成窑五彩小盖钟盛旧年雨水烹泡的老君眉进献贾母，贾母转予刘姥姥饮用，刘姥姥嫌茶味清淡。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由进庵品茶引出妙玉奉茶的品级水准与刘姥姥粗放解渴观念的冲撞。",
+        "generalityHint": "栊翠庵一次具体奉茶细节。",
+        "rationale": "此为栊翠庵品茶的上半段，展现妙玉待客的高雅与世俗品味的对照。",
+        "passageIds": [
+          "p-278492"
+        ]
+      },
+      {
+        "label": "妙玉私室烹雪品茶论器",
+        "identityLabel": "妙玉品茶辨水",
+        "summary": "妙玉私引宝钗、黛玉及宝玉在耳房品茶，拿出𤫫瓟斝、点犀䀉等古玩奇珍，并用梅花雪水烹茶，指责黛玉尝不出水质，又阐发品茶杯数之辨。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "妙玉通过茶具、雪水与饮茶之法的辨析，展开其孤高怪僻的心性与严苛的美学标准。",
+        "generalityHint": "妙玉关于饮茶之道与雅俗之别的个人主张与具体实践。",
+        "rationale": "展现妙玉孤高超逸性格的核心段落，也是红楼梦论茶文化的经典场面。",
+        "passageIds": [
+          "p-278844"
+        ]
+      },
+      {
+        "label": "宝玉乞成窑杯转赠贫妇",
+        "identityLabel": "宝玉讨成窑杯",
+        "summary": "妙玉因刘姥姥用过成窑杯嫌脏欲弃，宝玉婉言劝其赠与刘姥姥变卖度日，并主动应承打水洗地以顺应妙玉洁癖。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉洞察妙玉好洁天性及刘姥姥贫困处境，做出两全妥协。",
+        "generalityHint": "一个关乎个别茶杯处理的对话情节，体现宝玉体贴入微的处事态度。",
+        "rationale": "该节承接妙玉弃杯情节，生动刻画宝玉对妙玉性情与贫苦姥姥的双重体恤。",
+        "passageIds": [
+          "p-279738"
+        ]
+      },
+      {
+        "label": "刘姥姥酒醉误入怡红院",
+        "identityLabel": "刘姥姥醉卧怡红院",
+        "summary": "刘姥姥因酒食茶水腹泻，如厕后眩晕迷路，误入贾宝玉住所怡红院，错认壁画与大镜西洋机括，最终困倦醉卧在宝玉精致的卧榻上。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由生理不适与醉意导致迷路，凭借刘姥姥的朴拙视角逐层揭开怡红院内部奇巧机关与陈设。",
+        "generalityHint": "刘姥姥在大观园内部特定空间的一次迷走与误入事件。",
+        "rationale": "回目所标关键情节，以荒诞滑稽的碰撞呈现荣国府公子私密空间与乡野老妇的戏剧性接触。",
+        "passageIds": [
+          "p-280275",
+          "p-280602"
+        ]
+      },
+      {
+        "label": "袭人巧掩刘姥姥醉卧丑态",
+        "identityLabel": "袭人掩饰醉卧",
+        "summary": "袭人寻至怡红院发现刘姥姥鼾睡于宝玉榻上，忙将之唤醒并燃百合香驱散酒气秽物，嘱咐刘姥姥谎称在山石上打盹，巧妙掩护瞒过众人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "袭人出于对宝玉房中秩序与声誉的维护，敏捷收拾残局并安排合理解释。",
+        "generalityHint": "袭人应对突发尴尬事件的个案处置。",
+        "rationale": "化解刘姥姥醉卧怡红院危机的收束段落，展现袭人心思缜密周全的性格特质。",
+        "passageIds": [
+          "p-281515",
+          "p-281725"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "公室奉茶贾母之后，妙玉进一步私邀宝钗、黛玉及宝玉，展现更私密高深的茶道器具与雪水烹茶。",
+        "passageIds": [
+          "p-278492",
+          "p-278844"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "贾母将成窑盖钟递与刘姥姥饮用，直接导致妙玉嫌脏欲弃此杯，从而引发宝玉讨杯转赠的请求。",
+        "passageIds": [
+          "p-278492",
+          "p-279738"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "刘姥姥醉后误入怡红院卧床熟睡，引来袭人寻人发觉并迅速隐匿香气、打掩护平息事端。",
+        "passageIds": [
+          "p-280602",
+          "p-281725"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "A9icar7QNOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 9723,
+    "candidatesTokenCount": 2146,
+    "totalTokenCount": 11869,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9723
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2146
+      }
+    ]
+  },
+  "durationMs": 16083,
+  "requestHash": "03c521879216afd8718d54b36059f5272bc7bba61b4862630d1cbbd5a614bb18"
+}

@@ -1,0 +1,148 @@
+{
+  "value": {
+    "summary": "第七十回中，尤二姐后事粗了，贾府又理家奴婚配。初春之际，众姐妹因黛玉所作《桃花行》商议重建诗社，改海棠社为桃花社；后闻贾政将归，宝玉临帖应付，待闻贾政查赈延期方歇。暮春时节湘云偶作小令，众人遂于潇湘馆拈调填柳絮词，宝钗以《临江仙》夺魁。随后众人拾风筝放晦气，引出各色风筝齐飞绞断之景。",
+    "nodes": [
+      {
+        "label": "葬尤二姐与甄别指配丫头",
+        "identityLabel": "尤二姐后事与放配丫头",
+        "summary": "贾母不许尤二姐入家庙，贾琏于尤三姐墓侧将其掩埋；林之孝呈上单身小厮配娶名册，凤姐商议下因丫头们各有变故仅放出粗使丫鬟。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述回目开端两项家务处置，承接前文尤二姐之死与下人指配。",
+        "generalityHint": "涉及贾府内部尤二姐安葬及特定小厮丫鬟婚姻的单一事件。",
+        "rationale": "基于p-502324，贾琏遵贾母命将尤二姐葬于尤三姐墓旁，同时林之孝呈报小厮配婚，凤姐诸人因鸳鸯守誓、琥珀患病、彩云分崩等由只放出粗使丫头。",
+        "passageIds": [
+          "p-502324"
+        ]
+      },
+      {
+        "label": "黛玉作桃花行与重建诗社",
+        "identityLabel": "重建桃花社",
+        "summary": "初春时节，黛玉写下哀感缠绵的《桃花行》，众姐妹商议将海棠社改立为桃花社，推黛玉为社主。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从诗作引发改立诗社的集体议定，体现园中姐妹文会与黛玉心境。",
+        "generalityHint": "大观园内部诗社组织的一度重建活动。",
+        "rationale": "基于p-503334、p-503651及p-504203，宝玉在沁芳亭见众人观黛玉《桃花行》，湘云提议趁春生盛改海棠社为桃花社，至稻香村李纨处定议黛玉为主。",
+        "passageIds": [
+          "p-503334",
+          "p-503651",
+          "p-504203"
+        ]
+      },
+      {
+        "label": "贾政拟归宝玉临帖赶功课",
+        "identityLabel": "宝玉临帖补课",
+        "summary": "贾政来信六月回京，袭人催促宝玉备课写字，众姐妹代为临帖凑数，后因贾政奉旨赈灾延期，宝玉复弃功课照旧游荡。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因家信引发的功课危机与姐妹代笔应付，随后因海啸外务而化解。",
+        "generalityHint": "贾府家庭教育与宝玉个人行止的典型应付事件。",
+        "rationale": "基于p-504555及p-505352，贾政将归信至，袭人清点字帖不足，贾母王夫人与众姐妹设法相助临帖；至闻贾政顺路查赈延至冬底，宝玉立将诗书搁置。",
+        "passageIds": [
+          "p-504555",
+          "p-505352"
+        ]
+      },
+      {
+        "label": "湘云偶题如梦令发端填词",
+        "identityLabel": "湘云咏絮起词社",
+        "summary": "暮春时节湘云见柳花飘舞作《如梦令》，黛玉赞赏后提议起社填词，二人遂拟柳絮之题并限调。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由湘云个人作词直接触发了姐妹间以柳絮为题的新一轮填词结社。",
+        "generalityHint": "一次特定的诗社填词活动的缘起。",
+        "rationale": "基于p-505692、p-505733与p-505775，湘云因柳絮偶成《如梦令》，黛玉观后依其提议发帖邀人，立柳絮题限调起社。",
+        "passageIds": [
+          "p-505692",
+          "p-505733",
+          "p-505775"
+        ]
+      },
+      {
+        "label": "诸人柳絮词宝钗临江仙夺魁",
+        "identityLabel": "潇湘馆填柳絮词",
+        "summary": "众人在潇湘馆依阄各填柳絮词，黛玉作《唐多令》缠绵凄戚，宝钗作《临江仙》翻出青云之志，众人一致推宝钗为冠。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对比诸人词作立意，众人评判各家格调并决出高下。",
+        "generalityHint": "大观园群钗文学才情与性情志向的一次集中对照呈现。",
+        "rationale": "基于p-505959、p-506465、p-506839与p-506897，众人各赋新调，黛玉叹身世漂泊作悲音，宝钗意在不随芳尘借力上青云，众人拍案评定为首。",
+        "passageIds": [
+          "p-505959",
+          "p-506839",
+          "p-506897"
+        ]
+      },
+      {
+        "label": "拾断鸢大观园放风筝驱晦气",
+        "identityLabel": "放晦气与风筝绞断",
+        "summary": "外来蝴蝶风筝落竹梢引动众人兴致，黛玉、宝玉、探春等相继放出各自风筝并剪断线以放晦气，空中多鸢相绞俱断飘去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从忌讳拾弃外鸢转为放自家风筝散晦气，展示众人物件与命运暗示。",
+        "generalityHint": "展现大观园群体民俗游戏与寓意场景的叙事段落。",
+        "rationale": "基于p-507013、p-507320及p-507927，大蝴蝶风筝引出放晦气之举，黛玉铰断风筝寓意带走病根，探春凤凰风筝与他家凤凰、喜字风筝空中绞断飘散。",
+        "passageIds": [
+          "p-507013",
+          "p-507320",
+          "p-507927"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "桃花社刚商定，即因贾政来信及催逼功课而搁置不起，构成了诗社停顿的直接叙事承接。",
+        "passageIds": [
+          "p-504555",
+          "p-505352"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "湘云作《如梦令》并与黛玉拟题，直接促成了随后众人拈调各填柳絮词并由宝钗夺魁的雅集。",
+        "passageIds": [
+          "p-505775",
+          "p-505959"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "柳絮词评毕未久，窗外风筝落地打破评诗氛围，众人由此由室内评词转向院外放风筝驱晦气。",
+        "passageIds": [
+          "p-507013"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "sdicavboFOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10868,
+    "candidatesTokenCount": 2171,
+    "totalTokenCount": 13039,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10868
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2171
+      }
+    ]
+  },
+  "durationMs": 15739,
+  "requestHash": "39cf3e84a46a5c95bc5934fe35b2a1901080b95b80b7c7ca3b19a661f1ccea87"
+}

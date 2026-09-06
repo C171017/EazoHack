@@ -1,0 +1,137 @@
+{
+  "value": {
+    "summary": "第一零六回叙贾府查抄后情势：北静王传旨贾赦产入官而荣府馀产给还、贾琏获释；贾政追查放债，贾琏推托，凤姐病危知祸深重、羞愧悔恨；贾母焚香祷天愿以己身代子孙承罪；贾政查核家账见亏空日甚、奴仆欺蒙，府内陷入内外交困之局。",
+    "nodes": [
+      {
+        "label": "北静王传旨宽免荣府",
+        "identityLabel": "查抄降旨宽宥荣府",
+        "summary": "北静王长史传旨：念及贾政惧罪及元妃溘逝，赦产入官而荣府馀产给还，贾政留工部行走，贾琏革职免罪释放，违禁重利照例入官。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于朝廷复奏旨意与长史转述的情节推进，展现贾府获部分宽免之转机。",
+        "generalityHint": "单一特定政治与司法裁决事件。",
+        "rationale": "文本直接叙述长史传旨贾政的内容，交代对荣府与贾琏的处理结果。",
+        "passageIds": [
+          "p-764822"
+        ]
+      },
+      {
+        "label": "贾琏推诿重利之责",
+        "identityLabel": "贾琏应对贾政责难",
+        "summary": "贾政责问重利盘剥败坏家声，贾琏跪称账目有管家登记且府中亏空已久，放账之事自己不知，推向周瑞、旺儿及王夫人房中。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从抄检出违禁借券引发贾政追责，贾琏作出的自辩与推卸。",
+        "generalityHint": "贾琏个人在特定受审问情境下的推托言辞。",
+        "rationale": "出自主管家务的贾琏在贾政质问下的对答，揭露府中库虚及管家经手内情。",
+        "passageIds": [
+          "p-765164"
+        ]
+      },
+      {
+        "label": "凤姐病危羞愧悔恨",
+        "identityLabel": "王熙凤致祸抱愧",
+        "summary": "贾琏冷语相对后，病危的凤姐向平儿悲叹自己贪财枉费心计、用人不当，更恐东府逼死良民案牵涉贾琏而败露，求速死以自解。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对应回目‘王熙凤致祸抱羞惭’，由家产尽失与劣迹败露引发的心灵崩溃与临终绝望。",
+        "generalityHint": "王熙凤个人在家族败落与自身罪行曝光时的悔罪心境。",
+        "rationale": "凤姐对平儿的一番哭诉，直接体现其致祸后的羞惭与绝望自责。",
+        "passageIds": [
+          "p-766824"
+        ]
+      },
+      {
+        "label": "贾母设坛祷天代罪",
+        "identityLabel": "贾太君祷天消祸",
+        "summary": "面对子孙入狱、儿媳啼哭及抄家大祸，贾母院内设斗香跪求天地菩萨，愿以自己一人之命与罪孽代承儿孙之过，求天宽免。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对应回目‘贾太君祷天消祸患’，作为家族最高尊长在绝境下的宗教与伦理祈禳行为。",
+        "generalityHint": "贾母在特定家族危局中的祷告仪式与誓愿。",
+        "rationale": "贾母跪祷天地、自认不教之罪并情愿一人承当，是本回核心事件之一。",
+        "passageIds": [
+          "p-767749"
+        ]
+      },
+      {
+        "label": "贾政清点家簿见亏空",
+        "identityLabel": "贾政查账知府库虚耗",
+        "summary": "贾政查点仆从花名册并调看支用簿，发现入不敷出、预支寅卯、地租锐减十倍，奴仆更以‘家家如此’敷衍，令贾政愤慨无奈。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文贾琏关于亏空的招认，贾政亲查账册证实习以为常的虚耗与奴仆欺瞒。",
+        "generalityHint": "关于荣国府经济崩溃现状与豪门通病的观察和揭示。",
+        "rationale": "贾政查账与斥责奴仆展现了贾府不可逆转的财政虚竭与内部管理溃烂。",
+        "passageIds": [
+          "p-769430"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "朝廷查抄出借券并令王府查核违禁重利，直接引出贾政就放债之事向贾琏追责盘问。",
+        "passageIds": [
+          "p-764822",
+          "p-765164"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾琏遭贾政责难且家私尽失后回家怨怼凤姐，促使病榻上的凤姐向平儿深痛自悔其贪财致祸。",
+        "passageIds": [
+          "p-765164",
+          "p-766824"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾琏提及库中银两早经亏空透支，促使贾政进一步传集管事家人翻查历年支用簿册核实虚空。",
+        "passageIds": [
+          "p-765164",
+          "p-769430"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "大房宁府虽遭严办而荣府得脱，但子孙仍被囚质审，贾母在此惨局下遂行焚香祷天代罪之举。",
+        "passageIds": [
+          "p-764822",
+          "p-767749"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "d9mcaoxR0JfRyQ-A8JbBDw",
+  "usage": {
+    "promptTokenCount": 9057,
+    "candidatesTokenCount": 1715,
+    "totalTokenCount": 10772,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9057
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1715
+      }
+    ]
+  },
+  "durationMs": 13992,
+  "requestHash": "e33cdedd68451801d3e50b8ac914741132661648edb1d3c95e4f332eac7b380b"
+}

@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges have been systematically verified against the cited passages and endpoint node contexts. Labels, summaries, attributions, thematic alignments, reasoning dependencies, and evidence quotations are faithful to the source text without overstatements."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "qNqcaq79GoKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 85173,
+    "candidatesTokenCount": 67,
+    "totalTokenCount": 85240,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 85173
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 67
+      }
+    ]
+  },
+  "durationMs": 4243,
+  "requestHash": "92c92d66ae4a80cbb89ac8d96126e95f1d3306ff4ad27e499e8dfcf61640996b"
+}

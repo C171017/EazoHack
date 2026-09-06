@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "第八十九回叙贾政因河务繁忙疏于管束宝玉；宝玉因寒添衣忽见晴雯生前所补雀金裘，伤感万分，遂托病独居晴雯旧室设供填词以悼之。随后宝玉访潇湘馆，与黛玉论琴谈诗，二人亲极反疏，相对言不由衷。黛玉偶闻雪雁与紫鹃私语宝玉定亲之虚传，疑心大起，应前日梦谶，遂绝望生念，有意糟踏身子乃至绝粒病危。",
+    "nodes": [
+      {
+        "label": "贾政河工公务繁杂",
+        "identityLabel": "贾政公事繁忙",
+        "summary": "工部来报河南决口需修河工，贾政天天忙于衙门，宝玉工课遂渐松懈。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府外任官职事态发展，交代后文宝玉得以请假独处的大背景。",
+        "generalityHint": "单一家庭及家族官事背景交代。",
+        "rationale": "出工部奏报决口事，引出贾政无暇顾及宝玉学业的生活转折。",
+        "passageIds": [
+          "p-653063",
+          "p-652908"
+        ]
+      },
+      {
+        "label": "宝玉见雀金裘伤怀",
+        "identityLabel": "雀金裘睹物思人",
+        "summary": "天气骤寒，焙茗误携晴雯所补雀金裘送至学房，宝玉睹物伤感，遂托病向代儒告假还园。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从见衣服生出睹物思人之情，引发后续告假之举。",
+        "generalityHint": "特定具体情节场景与宝玉个人心理活动。",
+        "rationale": "见旧物触动对晴雯之忆，是本回公子填词的直接诱因。",
+        "passageIds": [
+          "p-653235",
+          "p-653761"
+        ]
+      },
+      {
+        "label": "晴雯旧居设供填词",
+        "identityLabel": "宝玉悼念晴雯",
+        "summary": "宝玉借静坐为由独入晴雯旧居，点香设果，作词焚化以吊晴雯亡魂。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由雀金裘之触动直接推演为焚词祭奠行动。",
+        "generalityHint": "特定私密悼念行为。",
+        "rationale": "回目‘人亡物在公子填词’所指之核心事件。",
+        "passageIds": [
+          "p-655240",
+          "p-655326",
+          "p-655419"
+        ]
+      },
+      {
+        "label": "潇湘馆宝黛言不由衷",
+        "identityLabel": "宝黛疏离隔阂",
+        "summary": "宝玉造访潇湘馆，观《斗寒图》并与黛玉谈论琴理知音，二人虽满腹心事却均言不由衷，亲极反疏。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "两人的言语交锋与心理试探反映出年纪渐长后的情感戒备与沟通困境。",
+        "generalityHint": "宝黛关系在后期阶段的具体相处模式。",
+        "rationale": "描写二人因年长与礼法规矩，情感表达陷入隔阂与冷淡。",
+        "passageIds": [
+          "p-655476",
+          "p-656182",
+          "p-656838"
+        ]
+      },
+      {
+        "label": "雪雁传定亲之讹",
+        "identityLabel": "定亲传言",
+        "summary": "雪雁向紫鹃转述侍书处听来的宝玉定亲传闻，二人密谈被黛玉窃听七八分。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "丫鬟私下传话成为引发黛玉悲剧情绪崩溃的致命误会。",
+        "generalityHint": "特定误会谣言传播事件。",
+        "rationale": "回目‘蛇影杯弓’之源头，直接促成黛玉悲绝。",
+        "passageIds": [
+          "p-656996"
+        ]
+      },
+      {
+        "label": "颦卿绝粒自戕速死",
+        "identityLabel": "黛玉绝粒求死",
+        "summary": "黛玉误信定亲传言，深觉应了梦谶，决意自戕糟踏身子，拒药绝粒，病势垂危。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉听闻谣言后，结合身世飘零及梦谶，推导出唯死可得解脱的绝望决意。",
+        "generalityHint": "黛玉个体生命走向终局的关键心理与行动转折。",
+        "rationale": "本回终段核心高潮，紧扣‘蛇影杯弓颦卿绝粒’。",
+        "passageIds": [
+          "p-658349",
+          "p-658199"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "贾政忙于公务疏于管束，宝玉方得以托病告假滞留园中。",
+        "passageIds": [
+          "p-653063",
+          "p-653235"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "见雀金裘引发对晴雯之悲怀，进而产生到旧屋设供焚词之举。",
+        "passageIds": [
+          "p-653235",
+          "p-655240",
+          "p-655326"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "焚词后宝玉心境仍未平复，遂往潇湘馆寻黛玉交谈。",
+        "passageIds": [
+          "p-655476"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "二人谈话隔阂与宝玉语焉不详的举止，加深了黛玉的猜疑与忧惧。",
+        "passageIds": [
+          "p-656838",
+          "p-658349"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "误听定亲之讹直接印证了黛玉心中隐忧与梦谶，使她立意绝粒速死。",
+        "passageIds": [
+          "p-656996",
+          "p-658349"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "FNmcasaXHOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 9158,
+    "candidatesTokenCount": 1782,
+    "totalTokenCount": 10940,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9158
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1782
+      }
+    ]
+  },
+  "durationMs": 12598,
+  "requestHash": "4f29604370d9b4e1b2d05b66992605b21237227a132d9d7f80c2bfb24676a9e2"
+}

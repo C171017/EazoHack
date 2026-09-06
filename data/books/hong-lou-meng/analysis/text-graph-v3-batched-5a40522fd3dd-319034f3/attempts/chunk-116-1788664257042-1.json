@@ -1,0 +1,164 @@
+{
+  "value": {
+    "summary": "贾宝玉魂魄出窍随僧人重游幻境（真如福地），阅览金陵十二钗正副册并见绛珠草与潇湘妃子等幻象，由和尚救醒后参透前因，心性大变厌弃世情；贾政则商定借丁忧扶贾母、黛玉等灵柩回南安葬，并严命宝玉赶考赎罪。",
+    "nodes": [
+      {
+        "label": "宝玉魂随僧人至真如福地",
+        "identityLabel": "宝玉游真如福地",
+        "summary": "贾宝玉身往后仰气绝出窍，魂魄随送玉僧人行至荒野‘真如福地’与‘引觉情痴’配殿，遇尤三姐、鸳鸯等虚影。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因麝月失言病绝后魂魄被僧人接引至荒野福地的经过，是进入幻境的开端。",
+        "generalityHint": "属于宝玉单次魂魄离体的具体奇幻叙事事件。",
+        "rationale": "基于宝玉失言倒地、魂出窍随僧拉走至牌楼'真如福地'及配殿的直接叙事，见p-832912及p-833308。",
+        "passageIds": [
+          "p-832912",
+          "p-833308"
+        ]
+      },
+      {
+        "label": "宝玉重览正副册判词",
+        "identityLabel": "宝玉阅册识机",
+        "summary": "宝玉推门进入配殿开橱翻看《金陵十二钗正册》及《又副册》，认出黛玉、宝钗、元春与花袭人等判词图画，痛哭并牢记于心。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉根据幼时梦境回忆推测册子与梦兆关联，逐步辨析图文对应之人物命运。",
+        "generalityHint": "记录宝玉个人的梦境印证与阅读经历，涉及诸姊妹命运判词。",
+        "rationale": "出处为p-833663中宝玉开橱看正册及又副册，见'相逢大梦归'及'花席'等图文细节。",
+        "passageIds": [
+          "p-833663"
+        ]
+      },
+      {
+        "label": "误认绛珠草与参谒潇湘妃子",
+        "identityLabel": "绛珠草与潇湘妃子会遇",
+        "summary": "宝玉见白石花阑围护之绛珠草，从仙女口中得知神瑛侍者灌溉前因，后被晴雯引见潇湘妃子（黛玉貌），遭斥无礼驱逐并遇诸鬼怪追扑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉以人间认知揣摩仙草与神妃，经侍女呵斥与追逐，经历幻境阻绝。",
+        "generalityHint": "描摹太虚幻境神瑛侍者与绛珠仙子神话前盟之特定会见场景。",
+        "rationale": "依据p-834368与p-835178，仙女解说灵河岸绛珠草因缘，宝玉见潇湘妃子后被逐逢鬼怪。",
+        "passageIds": [
+          "p-834368",
+          "p-835178"
+        ]
+      },
+      {
+        "label": "宝僧点化苏醒悟情缘魔障",
+        "identityLabel": "和尚照镜点化与宝玉苏醒",
+        "summary": "和尚持镜照散鬼怪，点化宝玉‘世上的情缘都是那些魔障’，将其推跌还魂苏醒，宝玉默记所历诸事、参悟前因。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "僧人以宝玉偷看册子为凭，直接点破红尘情缘实为魔障之理，促成其还魂与心性转变。",
+        "generalityHint": "包含僧人对‘世上情缘皆魔障’之义理概括及宝玉还魂的具体情节。",
+        "rationale": "出处见p-836560与p-836863，和尚镜照推宝玉苏醒，宝玉暗记册中诗句心怀成见。",
+        "passageIds": [
+          "p-836560",
+          "p-836863"
+        ]
+      },
+      {
+        "label": "贾政筹谋扶柩回南尽孝",
+        "identityLabel": "贾政定计扶柩归葬",
+        "summary": "贾政见宝玉病愈，借丁忧之期与贾琏商议挪借抵押房地银两，决定带贾蓉及贾母、黛玉、秦氏等灵柩回南安葬。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾政因丁忧免职且恐日后起服无暇，推导出此时必须借款扶柩归葬的决断。",
+        "generalityHint": "贾府特定家族治丧与资金筹措的具体事务筹划。",
+        "rationale": "见p-837956，贾政与贾琏商议扶贾母、黛玉棺木回南安葬并押房契筹银。",
+        "passageIds": [
+          "p-837956"
+        ]
+      },
+      {
+        "label": "宝玉看淡情缘冷待人事",
+        "identityLabel": "宝玉情移世淡",
+        "summary": "贾政严命宝玉赴考后发引南下；宝玉病后念头奇僻，不仅厌弃功名仕进，连黛玉灵柩归去及紫鹃、五儿等儿女情缘亦皆冷淡视之。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉在经历幻境洗礼后，从以往多情体贴转变为对功名与诸女情缘皆冷漠淡然。",
+        "generalityHint": "针对宝玉个人病后思想性格与处世态度的阶段性变化叙述。",
+        "rationale": "详见p-838640与p-838855中贾政命其应考、紫鹃与五儿感叹宝玉冷淡无情等情节。",
+        "passageIds": [
+          "p-838855",
+          "p-838640"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉随僧至真如福地配殿后，因见橱门半掩而开橱取阅正副册判词。",
+        "passageIds": [
+          "p-833308",
+          "p-833663"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝玉看完册子惊痛之时，闻鸳鸯呼唤而赶往另一洞天，从而瞻睹仙草并谒见潇湘妃子。",
+        "passageIds": [
+          "p-833663",
+          "p-834368"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "宝玉被仙界驱逐、遭恶鬼追赶之际，送玉僧持镜救助并质问其偷看册子一事，将其推回凡尘苏醒。",
+        "passageIds": [
+          "p-835178",
+          "p-836560"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝玉因在幻境深知宿命因果并得和尚点化魔障，醒后心生定见，从而对黛玉灵柩与身边女儿彻底冷淡情缘。",
+        "passageIds": [
+          "p-836863",
+          "p-838855"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾政因见宝玉还魂复原无碍，方能放心于丁忧期筹划扶老太太及黛玉等灵柩回南。",
+        "passageIds": [
+          "p-836863",
+          "p-837956"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "sdmcapLBIOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 9472,
+    "candidatesTokenCount": 2162,
+    "totalTokenCount": 11634,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9472
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2162
+      }
+    ]
+  },
+  "durationMs": 16072,
+  "requestHash": "f7e814472821dbeb8fc9965c523106d69f156c603d856061fd2cb6d77d593b00"
+}

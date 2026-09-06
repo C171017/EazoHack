@@ -1,0 +1,193 @@
+{
+  "value": {
+    "summary": "第九十八回记叙贾宝玉成婚后旧病复发、昏愦日甚，薛宝钗道破林黛玉已死之实，宝玉梦入阴司醒后郁散脉平；补叙宝玉成婚当夜黛玉含恨夭逝、灵柩停放潇湘馆；随后宝玉往潇湘馆痛哭祭奠，紫鹃备述黛玉死前情状，贾母最终议定宝玉与宝钗圆房吉期。",
+    "nodes": [
+      {
+        "label": "宝玉病笃与毕知庵诊治",
+        "identityLabel": "宝玉病笃与毕知庵诊治",
+        "summary": "宝玉回房后神志昏沉且渐至汤水不进，城外穷医毕知庵诊其为内伤外感并处方调治，服后神志稍醒能饮水。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因娶亲真相受刺激导致病势加剧，并由游医确诊病因从而建立起生理与心理病情的转机基础。",
+        "generalityHint": "涉及宝玉个人的特定病症与诊脉事件。",
+        "rationale": "文本直接叙述贾宝玉见贾政后病情沉重、人事不知，毕大夫度量用药使其暂缓。",
+        "passageIds": [
+          "p-715589",
+          "p-715943"
+        ]
+      },
+      {
+        "label": "宝钗明告黛玉死讯",
+        "identityLabel": "宝钗明告黛玉死讯",
+        "summary": "宝玉清醒片刻向袭人探询黛玉并萌求死之念，宝钗直言告知黛玉已于两日前病亡，意图促其痛决除根。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗推翻贾母等人的瞒骗策略，基于宝玉病因全系黛玉的判断，以断念逼促宝玉回魂。",
+        "generalityHint": "宝钗对宝玉病源处理的特殊断制与对话。",
+        "rationale": "宝钗听到宝玉要同黛玉同抬一处求死，毅然打破禁忌告诉他黛玉亡故之实，引得宝玉大恸昏厥。",
+        "passageIds": [
+          "p-716119"
+        ]
+      },
+      {
+        "label": "阴司警示与宝玉梦醒",
+        "identityLabel": "阴司警示与宝玉梦醒",
+        "summary": "宝玉恍惚中至阴司寻访黛玉，守路者训诫其黛玉已归太虚幻境、凡人自陨当堕地狱，击石惊醒宝玉使其神安郁散。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过幻境判官之言结合生死情理，打破宝玉轻生妄念，使宝钗‘一痛决绝’之策得以在生理上奏效。",
+        "generalityHint": "神话宿命与生死因果的叙事设定，具体应用于宝玉的心理转折。",
+        "rationale": "宝玉梦游泉路得异人点化不可自行夭折，被石子击中后冷汗大汗而醒，毕大夫诊其脉气沉静、郁滞已散。",
+        "passageIds": [
+          "p-716863"
+        ]
+      },
+      {
+        "label": "黛玉含恨归天",
+        "identityLabel": "黛玉含恨归天",
+        "summary": "回叙宝玉成婚当夜，黛玉于潇湘馆回光返照，向紫鹃托付还乡，临终直呼‘宝玉，你好……’而溘然长逝。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "补述主线事件时间交叠处的惨剧，形成红白对照的悲剧内核。",
+        "generalityHint": "黛玉一生的宿命终局与特定死亡场景。",
+        "rationale": "文本详细叙述李纨、紫鹃、探春在旁照料，黛玉在娶亲吉时气绝身亡的情景。",
+        "passageIds": [
+          "p-718274",
+          "p-718509",
+          "p-718735"
+        ]
+      },
+      {
+        "label": "凤姐报丧与贾母分亲疏",
+        "identityLabel": "凤姐报丧与贾母分亲疏",
+        "summary": "凤姐向贾母与王夫人密报黛玉凶讯，贾母虽痛哭自责，但因顾念宝玉更为紧要而未亲自往送。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在家族礼法与亲疏权衡下，贾母作出以嫡孙为重、抚慰外孙女阴灵的现实决断。",
+        "generalityHint": "贾府家族伦理次序与决策的具体体现。",
+        "rationale": "贾母闻讯涕泣，明言‘宝玉比你更亲些’，命王夫人代往厚办丧仪，随后被凤姐哄回看视宝玉。",
+        "passageIds": [
+          "p-718910",
+          "p-719157",
+          "p-719630"
+        ]
+      },
+      {
+        "label": "宝玉潇湘馆祭灵与闻诀别",
+        "identityLabel": "宝玉潇湘馆祭灵与闻诀别",
+        "summary": "宝玉神情稍安后执意至潇湘馆黛玉灵前痛哭，紫鹃如实陈告焚稿复病始末，宝玉悲恸欲绝后渐收心调养。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "完成情感仪式上的哀悼宣泄，印证前文焚稿断痴情的情节，终使宝玉痴心转为认命妥协。",
+        "generalityHint": "特定场景的宣泄与情节闭环。",
+        "rationale": "宝玉在黛玉灵前嚎啕大哭，紫鹃备述焚稿临死情状，探春转述回南嘱托，宝玉大恸后受宝钗督勉收心归寝。",
+        "passageIds": [
+          "p-719835",
+          "p-720350",
+          "p-720642"
+        ]
+      },
+      {
+        "label": "贾母薛姨妈商定圆房",
+        "identityLabel": "贾母薛姨妈商定圆房",
+        "summary": "宝玉百日体健、功服期满后，贾母与薛姨妈商定择上好吉日为宝钗与宝玉圆房并大宴亲友。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉丧事余波已平，家族联姻进入最终确立实质夫妻关系的阶段。",
+        "generalityHint": "涉及贾薛两大家族婚姻秩序完成的家庭礼仪安排。",
+        "rationale": "贾母主动提出圆房事宜，薛姨妈应允，双方议定待百日功服满后宴请亲友成礼。",
+        "passageIds": [
+          "p-720893"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "毕知庵治使宝玉微醒，宝玉清醒后即向袭人追问黛玉并言欲同死，诱发宝钗直陈死讯。",
+        "passageIds": [
+          "p-715943",
+          "p-716119"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "宝钗明言黛玉已死引起宝玉绝望大哭昏死，直接导致其魂入幽冥寻访黛玉并接受神灵棒喝。",
+        "passageIds": [
+          "p-716119",
+          "p-716863"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "黛玉在潇湘馆咽气停灵后，李纨探春安排妥当，凤姐才得以前往宝玉处向贾母回禀凶信。",
+        "passageIds": [
+          "p-718735",
+          "p-718910",
+          "p-719157"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "黛玉临死前后焚帕撕稿、嘱托回南等行径，构成了紫鹃在潇湘馆向宝玉据实转述的具体内容。",
+        "passageIds": [
+          "p-718274",
+          "p-718509",
+          "p-720350"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉梦醒后得知大局无可挽回，大夫建议由他发散心病，贾母等方允其前往潇湘馆灵前痛哭除根。",
+        "passageIds": [
+          "p-716863",
+          "p-719835",
+          "p-720350"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "宝玉前往灵前宣泄断念、受宝钗开导后渐次心定病愈，待百日功服除后贾母方能正式商议圆房吉期。",
+        "passageIds": [
+          "p-720642",
+          "p-720893"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "T9mcauGdGfGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 9941,
+    "candidatesTokenCount": 2454,
+    "totalTokenCount": 12395,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9941
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2454
+      }
+    ]
+  },
+  "durationMs": 17233,
+  "requestHash": "6113c889d2bca613870e2b2a7bb4cc9a73e6f5fcc30ea9f1fe878edbdd0feac5"
+}

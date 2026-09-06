@@ -1,0 +1,185 @@
+{
+  "value": {
+    "summary": "第七十三回中，小鹊报信使宝玉漏夜抱佛脚补书，怡红院生计借跳墙闹剧装病脱身。贾母借此彻查大观园夜赌，严惩首恶包括迎春乳母。随后傻大姐在山石后误拾绣春囊交与邢夫人，邢夫人借机责备迎春懦弱无能。迎春乳母被惩后，其儿媳王住儿家的不仅借金凤抵押赖账，更反噬主子，幸得探春与平儿出面严词整饬，而迎春则抱持《太上感应篇》清静避事、不问累金凤。",
+    "nodes": [
+      {
+        "label": "小鹊报信与宝玉夜读",
+        "identityLabel": "宝玉夜读避考",
+        "summary": "小鹊夜至怡红院报信称赵姨娘在贾政前挑拨，宝玉恐次日盘考，漏夜临阵温书且焦躁不安，累及众丫鬟侍疾。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因赵姨娘进言而生恐被查，细致罗列其所读各书生熟底细，属于直接情节展开与心理描写。",
+        "generalityHint": "单一具体生活事件，仅涉及怡红院内部当晚的情境。",
+        "rationale": "出处见 p-525304 及 p-525505。情节起点为小鹊报信，随后叙述宝玉对四书五经八股文熟疏程度的盘算与夜读波澜。",
+        "passageIds": [
+          "p-525304",
+          "p-525505"
+        ]
+      },
+      {
+        "label": "晴雯设谋装病与彻查夜赌",
+        "identityLabel": "查赌与贾母治家",
+        "summary": "晴雯借后房跳墙风波定计让宝玉装病，惊动全园搜查，贾母得知后痛陈夜饮聚赌藏奸之患，严惩迎春乳母等大头家。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从晴雯借机脱难的机变，推衍至贾母推论聚赌连带夜饮、引奸引盗之危害，体现大家族治家严刑立威的逻辑。",
+        "generalityHint": "包含贾母针对贾府大观园聚赌与夜禁的治家规矩与整饬原则，跨越全园防务秩序。",
+        "rationale": "出处见 p-526489。宝玉得以脱身读书之厄，但由此引发全园查赌，迎春乳母作为三大头家之一被黜。",
+        "passageIds": [
+          "p-526489"
+        ]
+      },
+      {
+        "label": "傻大姐误拾绣春囊",
+        "identityLabel": "误拾绣春囊",
+        "summary": "傻大姐在园内山石后捡得绣春囊，不知其为春意，邢夫人撞见后大骇收缴并严令其封口。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接叙述傻大姐天真愚顽撞见邢夫人并交出违禁之物，构成后文抄检大观园的关键导火索。",
+        "generalityHint": "特定场景的具象偶然偶发事件。",
+        "rationale": "出处见 p-528006。傻大姐无知视春意为“妖精打架”，邢夫人接后深知干系重大，暗自藏匿。",
+        "passageIds": [
+          "p-528006"
+        ]
+      },
+      {
+        "label": "邢夫人训斥迎春懦弱",
+        "identityLabel": "邢夫人责迎春",
+        "summary": "邢夫人借乳母获罪训斥迎春心活面软、毫无小姐管束体统，并与探春作比埋怨其不争气与哥嫂冷淡。",
+        "sourceRole": "dialogue",
+        "speaker": "邢夫人",
+        "reasoningHint": "邢夫人以嫡母身份推论迎春不立威的后果（受欺瞒、失簪环），并借出身相同对比探春与迎春之优劣。",
+        "generalityHint": "针对迎春个人的处世性格与嫡庶、母女、姑嫂关系的家庭评议。",
+        "rationale": "出处见 p-528006。邢夫人因乳母犯赌而觉丢脸，对迎春连番讥刺数落，展现迎春面对逼责唯有低头弄带的退缩情态。",
+        "passageIds": [
+          "p-528006"
+        ]
+      },
+      {
+        "label": "王住儿媳妇赖债反噬",
+        "identityLabel": "累金凤风波",
+        "summary": "迎春乳母儿媳王住儿家的不仅借金凤典当赌博迟迟不赎，反以此要挟迎春向贾母讨情，并捏造假账反赖主子克扣。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "乳母家属欺迎春软弱，将“救人”与“还金凤”绑架混为一谈，甚至反咬日常使费，推理出奴欺主的恶劣行径。",
+        "generalityHint": "迎春房中主仆倒错、下人倚老恃功的典型冲突个案。",
+        "rationale": "出处见 p-529943。绣桔与王住儿家的激烈交锋，迎春不问不究欲息事宁人自看《感应篇》。",
+        "passageIds": [
+          "p-529943"
+        ]
+      },
+      {
+        "label": "探春平儿联手惩治刁奴",
+        "identityLabel": "探春平儿护序",
+        "summary": "探春借物伤其类之理挺身介入，密唤平儿前来，二人严正申饬刁奴、明析尊卑体统与八面处治之道。",
+        "sourceRole": "dialogue",
+        "speaker": "探春",
+        "reasoningHint": "探春由迎春受欺推导出“唇亡齿寒”及主奴纲纪的大端，借助凤姐权柄（平儿）实施雷霆弹压。",
+        "generalityHint": "适用于荣国府各房姑娘与奴仆从属关系的普遍治家原则与尊卑界限。",
+        "rationale": "出处见 p-530875 及 p-531679。探春与平儿合力压制王住儿家的气焰，黛玉评其“守如处女，脱如狡兔”。",
+        "passageIds": [
+          "p-530875",
+          "p-531679"
+        ]
+      },
+      {
+        "label": "迎春读感应篇超然避事",
+        "identityLabel": "迎春懦弱哲学",
+        "summary": "面对金凤争端与众人裁处，迎春自执《太上感应篇》，坚执“不讨情、不苛责、宁无金凤也不多事”的消极退让哲学。",
+        "sourceRole": "dialogue",
+        "speaker": "迎春",
+        "reasoningHint": "迎春基于“自作自受、少生是非”之道德因果与自保心态，推导出一套彻底放弃抗争的避世哲学。",
+        "generalityHint": "迎春贯穿全书的核心性格与处世行为原则。",
+        "rationale": "出处见 p-531679。面对平儿和姊妹的撑腰，迎春仍旧淡漠超然，黛玉讥其为“虎狼屯于阶陛尚谈因果”。",
+        "passageIds": [
+          "p-531679"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉漏夜读书苦恼，促使晴雯利用墙头跳人惊扰事件生计装病，由此直接引出贾母夜查赌博。",
+        "passageIds": [
+          "p-525505",
+          "p-526489"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "贾母查赌重惩迎春乳母，导致邢夫人觉得脸上无光，进而迁怒并前往迎春室中予以斥责。",
+        "passageIds": [
+          "p-526489",
+          "p-528006"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "因乳母被拿问罪，王住儿媳妇才急于来求迎春讨情，从而激化了私当累丝金凤与赖账克扣的矛盾。",
+        "passageIds": [
+          "p-526489",
+          "p-529943"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "邢夫人当面点明迎春“心活面软，未必不周接他簪环作本钱”，随即便在绣桔与王住儿家的争执中被完全印证。",
+        "passageIds": [
+          "p-528006",
+          "p-529943"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "challenges",
+        "rationale": "王住儿家的在姑娘房中大嚷欺主，破坏了主奴体统，引发探春看不过眼并唤平儿前来整治反击。",
+        "passageIds": [
+          "p-529943",
+          "p-530875",
+          "p-531679"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "探春与平儿虽为其撑腰讨回公道，迎春却置若罔闻自读《感应篇》，明确回绝主动问罪，体现二者行事态度的鲜明对照。",
+        "passageIds": [
+          "p-531679"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "wdicaqOXIPGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10057,
+    "candidatesTokenCount": 2572,
+    "totalTokenCount": 12629,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10057
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2572
+      }
+    ]
+  },
+  "durationMs": 18091,
+  "requestHash": "f6817d8b9219767b03eb188ff2b7936d3d46710b368af9b194d80235be541c5b"
+}

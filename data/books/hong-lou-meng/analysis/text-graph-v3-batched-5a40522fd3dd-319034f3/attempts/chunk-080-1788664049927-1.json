@@ -1,0 +1,130 @@
+{
+  "value": {
+    "summary": "第八十回主要叙述夏金桂借故改香菱之名为秋菱，并巧借宝蟾设计陷害香菱，施以魇魔法迫使薛蟠暴打并逼走香菱至宝钗处，使香菱内外受创病入膏肓；贾宝玉在天齐庙向王一贴戏问疗妒汤；以及贾迎春回大观园向王夫人等痛诉孙绍祖暴虐不仁之苦。",
+    "nodes": [
+      {
+        "label": "金桂改香菱名为秋菱",
+        "identityLabel": "香菱改名",
+        "summary": "夏金桂挑剔香菱名字不通，借口菱花盛于秋且自己名字犯忌讳，执意将香菱改名为秋菱，香菱顺从，宝钗亦不计较。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于金桂立威排挤爱妾的直接挑衅，香菱百般退让顺从而成。",
+        "generalityHint": "单一具体家庭纠纷与改名事件。",
+        "rationale": "改名是金桂正式向香菱发难、立威并消除其原主印记的起步行动。",
+        "passageIds": [
+          "p-586826"
+        ]
+      },
+      {
+        "label": "金桂借宝蟾设局陷害香菱",
+        "identityLabel": "借宝蟾离间香菱",
+        "summary": "金桂察觉薛蟠贪图宝蟾姿色，遂主动舍出宝蟾以疏远香菱，更故意差小舍儿哄香菱撞破薛蟠与宝蟾好事，引薛蟠对香菱拳脚相加。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从利用薛蟠好色弱点，到设计安排撞破，层层递进的权谋算计。",
+        "generalityHint": "一连串具体的姬妾宅斗机谋手段。",
+        "rationale": "金桂以此计成功离间薛蟠与香菱，并借薛蟠之手施加肉体与言语羞辱。",
+        "passageIds": [
+          "p-587473",
+          "p-587662"
+        ]
+      },
+      {
+        "label": "魇魔诬陷与香菱投归宝钗",
+        "identityLabel": "魇魔法逼走香菱",
+        "summary": "金桂暗藏扎针纸人自导魇魔案，哭闹挟制薛蟠痛打香菱并逼薛姨妈卖人；最终宝钗出面收留香菱，但香菱身心受重创致干血之症。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由栽赃伪证激化家庭矛盾，迫使薛家母女退让，导致香菱彻底被逐并致重疾。",
+        "generalityHint": "薛府内帏冲突的高潮事件及其产生的悲剧后果。",
+        "rationale": "香菱由此完全脱离薛蟠内室，转归宝钗，也奠定了其病入膏肓的定局。",
+        "passageIds": [
+          "p-588932",
+          "p-588623"
+        ]
+      },
+      {
+        "label": "宝玉天齐庙问疗妒汤",
+        "identityLabel": "王一贴疗妒汤",
+        "summary": "宝玉在天齐庙散心，向江湖医道王一贴问求治疗妇人妒忌的方药；王一贴笑称秋梨冰糖陈皮熬汤吃上一百岁人死则见效，自承膏药皆戏谈。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉见金桂性气而生怪念，王一贴以滑稽江湖辞令应答，点破人情与荒诞。",
+        "generalityHint": "特定市井庙宇戏谑谈笑，暗喻人性顽疾无药可医。",
+        "rationale": "借王一贴的滑稽对谈，讽刺妒妇之毒及世情荒诞，呼应金桂之妒与薛家困局。",
+        "passageIds": [
+          "p-591382",
+          "p-591120"
+        ]
+      },
+      {
+        "label": "迎春归宁向王夫人哭诉",
+        "identityLabel": "迎春痛诉孙绍祖",
+        "summary": "贾迎春归家省视，向王夫人及众姐妹痛哭倾诉孙绍祖好色、酗酒、暴戾及借索银为名肆意折磨羞辱，王夫人只能以命运之说好言相劝。",
+        "sourceRole": "dialogue",
+        "speaker": "迎春",
+        "reasoningHint": "迎春亲述婚后苦楚与受辱细节，王夫人以无可奈何的宿命论回应安慰。",
+        "generalityHint": "涉及迎春与孙绍祖婚姻悲剧的直接证词与个案控诉。",
+        "rationale": "正面展现迎春在孙家的悲惨遭遇，印证‘中山狼’判词，为迎春命运的重要转折。",
+        "passageIds": [
+          "p-592822"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "金桂改香菱之名以贬抑其身份后，进一步设圈套引薛蟠疏远并惩治香菱。",
+        "passageIds": [
+          "p-586826",
+          "p-587473"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "借宝蟾撞破好事挑起薛蟠怒火后，金桂旋即装病施以纸人魇魔计，将逼害香菱推向顶峰。",
+        "passageIds": [
+          "p-587662",
+          "p-588932"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "金桂在薛家的奇恶妒悍传入宝玉耳中，促发宝玉在天齐庙向王一贴询问贴女人妒病的方子。",
+        "passageIds": [
+          "p-591120",
+          "p-591382"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5Nicat2BLvGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10118,
+    "candidatesTokenCount": 1428,
+    "totalTokenCount": 11546,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10118
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1428
+      }
+    ]
+  },
+  "durationMs": 13518,
+  "requestHash": "17bde44b628972edf9176c8f2625bb96e91ad5f3a294c01432a090a6818afc2e"
+}

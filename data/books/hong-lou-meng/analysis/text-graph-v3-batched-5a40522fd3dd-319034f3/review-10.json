@@ -1,0 +1,39 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "cross-105",
+        "reason": "Relation type 'exemplifies' is invalid between '贾琏因石呆子扇遭笞打' and '乌进孝交租与贾珍叹亏空'. 石呆子古扇案揭露的是权势掠夺物产与父子矛盾，并非贾府田庄交租与经济亏空/省亲亏空的具体实例或概念例证，属于牵强附会。"
+      },
+      {
+        "id": "cross-106",
+        "reason": "Relation type 'supports' is invalid between '凤姐周全袭人省家体统' and '平儿情掩虾须镯'. 凤姐查验袭人归家装束以全贾府对外体统，与平儿在内宅私下掩盖坠儿偷金镯、维护怡红院内部脸面，属于并列的性格与情境展现，不存在直接因果、逻辑支撑或论据依赖关系。"
+      }
+    ],
+    "notes": "Target nodes correctly reflect their source passages with accurate summaries and evidence grounding. The rejected cross-chunk edges mischaracterized thematic thematic parallels as strict 'exemplifies' or 'supports' logical dependencies."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "n9qcar2EM72dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 84180,
+    "candidatesTokenCount": 292,
+    "totalTokenCount": 84472,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 84180
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 292
+      }
+    ]
+  },
+  "durationMs": 5371,
+  "requestHash": "410e91489c083f5e42e8dd836376823a7cb64bc41da9bd4100caf7ea15714b7b"
+}

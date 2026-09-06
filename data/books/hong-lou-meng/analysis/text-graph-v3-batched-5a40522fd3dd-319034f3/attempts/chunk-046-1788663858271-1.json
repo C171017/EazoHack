@@ -1,0 +1,193 @@
+{
+  "value": {
+    "summary": "第四十六回中，贾赦欲纳鸳鸯为妾，邢夫人与王熙凤商议后亲自游说鸳鸯遭拒；鸳鸯在园中向平儿、袭人倾诉并痛骂逢迎劝说的嫂子；贾赦闻讯迁怒贾琏并以恶言威吓金家；最终鸳鸯当众向贾母哭诉并绞发盟誓拒嫁，贾母盛怒责怪王夫人，探春解围，凤姐凑趣化解尴尬。",
+    "nodes": [
+      {
+        "label": "邢夫人谋纳鸳鸯与凤姐推托",
+        "identityLabel": "邢夫人谋纳鸳鸯",
+        "summary": "邢夫人奉贾赦之命欲讨贾母房中的鸳鸯做妾，先找王熙凤商议；凤姐指出贾母离不开鸳鸯且贾赦行事不妥，见邢夫人执拗后遂见风使舵、表面附和并设法避嫌。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述邢夫人因贾赦之托与凤姐谋划，以及凤姐洞悉邢夫人性格后的机变应对。",
+        "generalityHint": "涉及贾赦、邢夫人、凤姐针对纳鸳鸯一事的具体私下筹划与算计。",
+        "rationale": "基于p-310952、p-311525、p-312171，记叙邢夫人找凤姐商量谋娶鸳鸯，凤姐先劝阻后顺承抽身的全过程。",
+        "passageIds": [
+          "p-310952",
+          "p-311525",
+          "p-312171"
+        ]
+      },
+      {
+        "label": "邢夫人利诱鸳鸯遭沉默回绝",
+        "identityLabel": "邢夫人利诱鸳鸯",
+        "summary": "邢夫人到鸳鸯房中盛赞其人品，以抬为姨娘、当半个主子等利禄诱惑鸳鸯入房，鸳鸯低头红脸、夺手不从、始终不发一言。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述邢夫人以利益地位游说鸳鸯的言行与鸳鸯决然无声的抗拒反应。",
+        "generalityHint": "记录邢夫人直接游说鸳鸯这一具体交锋事件。",
+        "rationale": "基于p-312503，邢夫人向鸳鸯许诺姨娘尊荣并催促其答应，鸳鸯自始至终低头不语表示反对。",
+        "passageIds": [
+          "p-312503"
+        ]
+      },
+      {
+        "label": "鸳鸯枫树下向平袭明志",
+        "identityLabel": "鸳鸯私下明志",
+        "summary": "鸳鸯入园避人，偶遇平儿与袭人，道出宁死或出家也决不做贾赦妾室的决心，并反驳平儿、袭人善意的取笑与推脱之策。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "鸳鸯向姐妹吐露心迹，推演了即使贾母去世守孝三年后，自己宁可当姑子或一死也不就范的设想。",
+        "generalityHint": "集中于鸳鸯在私密环境对贴心丫鬟群体的立场剖白。",
+        "rationale": "基于p-313701与p-314120，鸳鸯向平儿、袭人详述心意，断然拒绝做妾，誓言乐得干净。",
+        "passageIds": [
+          "p-313701",
+          "p-314120"
+        ]
+      },
+      {
+        "label": "鸳鸯痛骂贪利逢迎的嫂子",
+        "identityLabel": "鸳鸯斥嫂",
+        "summary": "金文翔媳妇受邢夫人差遣赶来向鸳鸯报“喜信”，鸳鸯当众唾骂其贪图富贵、逢迎主子将自己往火坑里送，嫂子受挫怀恨而回。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "鸳鸯怒斥家人依仗女儿做妾谋求横行霸道的不齿行径，看透自身被当作家族攀附工具的险境。",
+        "generalityHint": "鸳鸯与同为奴仆且企图谋利的至亲嫂子之间的尖锐冲突。",
+        "rationale": "基于p-315039与p-316433，鸳鸯啐骂嫂子并戳穿其虚伪算计，随后嫂子向邢夫人告状。",
+        "passageIds": [
+          "p-315039",
+          "p-316433"
+        ]
+      },
+      {
+        "label": "贾赦碰壁迁怒贾琏并恶言威逼",
+        "identityLabel": "贾赦威逼鸳鸯",
+        "summary": "贾赦因娶鸳鸯受挫，迁怒贾琏，又传金文翔严厉恐吓，声称鸳鸯若不从，凭嫁到谁家也逃不出其手心，除非出家或死才肯罢休。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾赦以家主强权发出专制威胁，断言鸳鸯别有私情并以生死前途相逼。",
+        "generalityHint": "记录贾赦利用主奴强权向金家及鸳鸯施加的极端威吓。",
+        "rationale": "基于p-316977与p-317271，贾赦斥骂贾琏后重压金文翔，并放出狠话威逼鸳鸯回头。",
+        "passageIds": [
+          "p-316977",
+          "p-317271"
+        ]
+      },
+      {
+        "label": "鸳鸯贾母前断发盟誓绝婚",
+        "identityLabel": "鸳鸯誓绝鸳鸯偶",
+        "summary": "金文翔传话后，鸳鸯假意应允，趁众人都在贾母处时当众跪诉原委，拔剪铰发盟誓终身不嫁、死不从命，震动全场。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "鸳鸯利用贾母与家族女眷齐聚的场合公开断绝退路，以死和断发打破贾赦的强权逼迫。",
+        "generalityHint": "全回的高潮事件，展示家生奴婢对强权逼婚的公开决绝反抗。",
+        "rationale": "基于p-317658与p-317773，鸳鸯当着众人跪诉贾赦逼迫与威吓之词，并袖中拔剪铰发发重誓。",
+        "passageIds": [
+          "p-317773",
+          "p-317658"
+        ]
+      },
+      {
+        "label": "贾母震怒误斥王夫人与探春解围",
+        "identityLabel": "贾母动怒与探春凤姐解围",
+        "summary": "贾母闻讯大怒，误斥王夫人暗中算计自己身边人；探春挺身以叔嫂避嫌之理从旁点醒贾母，凤姐亦插科打诨化解尴尬气氛。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾母迁怒到探春以宗法礼法之理点醒、凤姐以诙谐言语调和的互动过程。",
+        "generalityHint": "展现贾府内部长幼、叔嫂、嫡庶间在应对突发危机时的权衡与言语智慧。",
+        "rationale": "基于p-317773与p-318398，贾母迁怒王夫人，探春入室理性剖析洗刷委屈，凤姐说笑转怒为喜。",
+        "passageIds": [
+          "p-318398",
+          "p-317773"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "邢夫人与凤姐商议定计后，亲自前往鸳鸯房中进行利诱游说。",
+        "passageIds": [
+          "p-311525",
+          "p-312503"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "鸳鸯在房中面对邢夫人只得沉默，随后避至园中才向平儿与袭人坦吐宁死不从的心迹。",
+        "passageIds": [
+          "p-312503",
+          "p-313701",
+          "p-314120"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "鸳鸯正与平儿、袭人明志，恰逢嫂子受命赶来报喜劝说，引来鸳鸯的一通痛骂。",
+        "passageIds": [
+          "p-314120",
+          "p-315039"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "金文翔媳妇被骂回禀邢夫人，贾赦得知鸳鸯抗拒后大怒，进而传讯贾琏与金文翔施以严词威逼。",
+        "passageIds": [
+          "p-316433",
+          "p-316977",
+          "p-317271"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "金文翔将贾赦誓不罢休的狠话转告鸳鸯，直接激使鸳鸯定下到贾母跟前拼死反抗并铰发的决断。",
+        "passageIds": [
+          "p-317271",
+          "p-317658",
+          "p-317773"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "鸳鸯当众哭诉断发引发贾母雷霆震怒并误责王夫人，随后探春与凤姐相继出面解围调解。",
+        "passageIds": [
+          "p-317773",
+          "p-318398"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "INicapjID9CX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 10153,
+    "candidatesTokenCount": 2599,
+    "totalTokenCount": 12752,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10153
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2599
+      }
+    ]
+  },
+  "durationMs": 18635,
+  "requestHash": "307fa6d5aa433091d44ce0350fb12fe6a0a4a75cf41b363f0605c82323832487"
+}

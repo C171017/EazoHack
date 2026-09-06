@@ -1,0 +1,157 @@
+{
+  "value": {
+    "summary": "红楼梦第六十四回主要叙述贾敬丧仪停灵之后，贾宝玉回园探视，在潇湘馆得见林黛玉所题《五美吟》，薛宝钗评其善翻古意、别开生面；另一方面，贾琏垂涎尤二姐，贾蓉为己私利极力撮合，贾琏趁机以九龙珮定情并借银垫付丧费，最终在贾珍主持下买房置妾、逼退张华婚约，备办偷娶。",
+    "nodes": [
+      {
+        "label": "宝玉探黛玉并见其感旧",
+        "identityLabel": "宝玉探黛玉",
+        "summary": "贾宝玉因宁府灵旁假寐空暇回园，路过沁芳桥见雪雁备瓜果私奠，后入潇湘馆见黛玉面带泪痕、病体恹恹，二人相对伤感。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉根据雪雁传瓜果设炉之举推测黛玉行祭，并见其伤感而引发对泣。",
+        "generalityHint": "涉及宝玉与黛玉在大观园内的具体相见与心理推测。",
+        "rationale": "基于宝玉回怡红院后往潇湘馆，见残烟奠醴与黛玉泪痕，两人心有所感的情节。",
+        "passageIds": [
+          "p-459508",
+          "p-458445"
+        ]
+      },
+      {
+        "label": "黛玉题作《五美吟》",
+        "identityLabel": "五美吟创作",
+        "summary": "林黛玉因感怀古史中有才色女子的遭际，饭后题诗五首，分别咏西施、虞姬、明妃、绿珠与红拂。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉自述挑选古史才色女子以寄个人感慨，借五首绝句抒发兴亡与命运之思。",
+        "generalityHint": "具体的文学创作文本及其对应的前代历史女性群像。",
+        "rationale": "黛玉向宝钗说明作诗原委，并列出西施、虞姬、明妃、绿珠、红拂五首诗作。",
+        "passageIds": [
+          "p-459929",
+          "p-460641",
+          "p-460719"
+        ]
+      },
+      {
+        "label": "宝钗评五美吟善翻古意",
+        "identityLabel": "宝钗诗评",
+        "summary": "宝钗指出做诗贵在善翻古人之意，举王安石与欧阳修咏昭君诗为例，赞赏黛玉此五首诗命意新奇、别开生面。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗从前人咏昭君的不同立意推导出好诗须各出己见，进而评价黛玉之作命意新奇。",
+        "generalityHint": "涉及做诗立意的诗学理论原则与对特定诗作的评判。",
+        "rationale": "宝钗针对宝玉命题《五美吟》后，发表对黛玉诗作翻古人意与别开生面的评论。",
+        "passageIds": [
+          "p-460832"
+        ]
+      },
+      {
+        "label": "贾琏垂涎二姐并情遗九龙珮",
+        "identityLabel": "九龙珮定情",
+        "summary": "贾琏在宁府与尤二姐相见，借要槟榔荷包之机撩拨，趁丫鬟不备将汉玉九龙珮拴于手绢掷与尤二姐，二姐含笑默收。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾琏趁贾珍守灵在外、借办家务回府相会二姐，并以物寄情的心理与动作。",
+        "generalityHint": "单一特定场景下的男女私相授受与情感试探。",
+        "rationale": "详细描写贾琏进入宁府上房与尤二姐互递荷包、系九龙珮的互动情节。",
+        "passageIds": [
+          "p-463992",
+          "p-464392",
+          "p-461822"
+        ]
+      },
+      {
+        "label": "贾蓉献策偷娶尤二姐",
+        "identityLabel": "贾蓉劝娶之策",
+        "summary": "贾蓉窥知贾琏之意，因私心欲趁机鬼混，遂献策让贾琏在府外置房偷娶尤二姐为二房，并称事发后可以求子嗣为由应对家规。",
+        "sourceRole": "dialogue",
+        "speaker": "贾蓉",
+        "reasoningHint": "贾蓉分析尤二姐身世、张家婚约之易解，以及瞒过凤姐置房偷娶的可行性以劝动贾琏。",
+        "generalityHint": "针对贾琏娶妾所拟定的一套具体欺瞒步骤与策略。",
+        "rationale": "进城路上叔侄对话，贾蓉劝贾琏买房私娶，贾琏欲令智昏尽数依允。",
+        "passageIds": [
+          "p-462904",
+          "p-463351",
+          "p-463661"
+        ]
+      },
+      {
+        "label": "逼退张华婚约置房备娶",
+        "identityLabel": "退亲置房备娶",
+        "summary": "贾珍、尤老娘及二姐商定应允后，贾琏于小花枝巷购置房屋与使唤人口，贾府逼勒张华父子写下退婚文约，定日迎娶二姐。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由贾珍说服尤老娘、贾琏出资办房，再借势焰迫张家退亲，促成婚事落地。",
+        "generalityHint": "一连串具体的家族欺瞒、权势退婚与迎娶筹备行动。",
+        "rationale": "记载贾蓉回禀贾珍、尤氏劝止无果、小花枝巷置房、鲍二夫妇伏侍及逼张华退婚的全过程。",
+        "passageIds": [
+          "p-465376",
+          "p-466023"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉探黛玉并见其案上纸角，引出黛玉所作《五美吟》诗稿。",
+        "passageIds": [
+          "p-459929"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "黛玉所作的五首诗文成为宝钗点评其善翻古意、别开生面的文本依据。",
+        "passageIds": [
+          "p-460832"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾琏对尤二姐的垂涎与试探，促成贾蓉在路上揣知其意并献计外馆偷娶。",
+        "passageIds": [
+          "p-461822",
+          "p-462904"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "贾蓉的瞒凤姐置房、逼退张家婚约之计，直接指导了随后置办小花枝巷房产与勒退婚书的实施。",
+        "passageIds": [
+          "p-463351",
+          "p-465376",
+          "p-466023"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "j9icasfyOumj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 12751,
+    "candidatesTokenCount": 1956,
+    "totalTokenCount": 14707,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12751
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1956
+      }
+    ]
+  },
+  "durationMs": 14993,
+  "requestHash": "9666f0a8b81b23660f388c8aaf4a2d0da7c714b0cd0530a68dd360d72fc5b0fe"
+}

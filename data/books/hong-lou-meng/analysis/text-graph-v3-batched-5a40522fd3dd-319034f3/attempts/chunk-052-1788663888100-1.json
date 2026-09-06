@@ -1,0 +1,144 @@
+{
+  "value": {
+    "summary": "第五十二回叙述贾母称许凤姐细心体贴，平儿私下掩饰坠儿偷窃虾须镯之事实以顾全宝玉与怡红院颜面。宝玉将原委告知晴雯，晴雯盛怒下严惩并撵走坠儿，麝月据理斥退其母。贾母赐宝玉珍贵雀金呢氅衣，不慎被火星烧损且外间工匠无能修补，重病中的晴雯通宵咬牙补好雀金裘。",
+    "nodes": [
+      {
+        "label": "贾母赞凤姐与谈伶俐",
+        "identityLabel": "凤姐体贴与过甚之辩",
+        "summary": "贾母在众人面前称赞王熙凤疼爱小叔子姑子，但也叹其太伶俐恐非好事；凤姐则以贾母聪明福寿双全为由机智对答。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于前文议定园中另设小厨房等事，贾母趁众人齐集时对凤姐行事作出的总体评价与讨论。",
+        "generalityHint": "涉及贾母对凤姐为人处事及'伶俐'之命运的一般观念与具体辩驳。",
+        "rationale": "出处见贾母向王夫人、薛姨妈等人称赞凤姐体贴，并与凤姐讨论太伶俐究竟是福是祸。",
+        "passageIds": [
+          "p-354461"
+        ]
+      },
+      {
+        "label": "平儿情掩虾须镯",
+        "identityLabel": "平儿掩饰坠儿窃镯",
+        "summary": "平儿查出宋妈所交之虾须镯系坠儿所偷，为体谅宝玉争胜要强及袭人脸面，谎称自己草根下拾得，并嘱麝月悄悄防范与伺机打发。",
+        "sourceRole": "dialogue",
+        "speaker": "平儿",
+        "reasoningHint": "平儿权衡利害后定下的周全之计，避免事情张扬造成贾府上下不睦及宝玉房中难堪。",
+        "generalityHint": "平儿针对坠儿偷盗这一特殊事件的处理方式，展现其息事宁人与体恤人的处世原则。",
+        "rationale": "平儿私下向麝月详细说明掩盖镯子失窃真相的始末与顾忌，体现其为人处世之'俏'与'仁'。",
+        "passageIds": [
+          "p-355253"
+        ]
+      },
+      {
+        "label": "宝琴叙外国美人作诗",
+        "identityLabel": "真真国女子五言律诗",
+        "summary": "宝琴向宝玉、黛玉、宝钗等人讲述八岁时在西海沿子所见真真国女子及其所作五言律诗，众人叹服。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由起诗社限韵之议自然引出宝琴幼年见闻及域外奇女子的诗作分享。",
+        "generalityHint": "一首外国少女创作的汉文五律诗歌及其奇特容貌经历，拓展了大观园诗会的视野。",
+        "rationale": "文本详细记述了宝琴转述真真国女子的衣饰、诗作与大观园众人的赞叹反应。",
+        "passageIds": [
+          "p-357286",
+          "p-358213",
+          "p-358266"
+        ]
+      },
+      {
+        "label": "贾母赐俄罗斯雀金呢",
+        "identityLabel": "贾母赐宝玉雀金呢",
+        "summary": "宝玉出门赴舅老爷寿辰前，贾母特命鸳鸯取出一件俄罗斯国以孔雀毛线织就的珍稀乌云豹雀金呢氅衣赐予宝玉穿戴。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母因天气阴冷且逢宝玉出门祝寿，直接给予这一极其珍贵的冬衣赏赐。",
+        "generalityHint": "描写特定稀世衣物'雀金呢'的来历、质地及其在贾府的唯一性。",
+        "rationale": "此节点为后续烧坏衣物与晴雯抱病织补的关键起因与物事铺垫。",
+        "passageIds": [
+          "p-359148"
+        ]
+      },
+      {
+        "label": "晴雯簪戳坠儿逐出怡红院",
+        "identityLabel": "晴雯惩治并撵走坠儿",
+        "summary": "晴雯得知坠儿偷镯后大怒，拿一丈青乱戳其手，并命宋妈立即唤其母领走；麝月以贾母规矩严词斥退坠儿之母。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "晴雯秉性急躁嫉恶如仇，得知平儿所言真相后无法隐忍，即刻发作惩罚家贼。",
+        "generalityHint": "涉及怡红院内部管教、仆妇尊卑口角以及内房规矩的一场激烈冲突。",
+        "rationale": "详细描写了晴雯用一丈青扎坠儿手及麝月搬出贾府与房内规矩驳倒坠儿母亲的情形。",
+        "passageIds": [
+          "p-360206",
+          "p-360849"
+        ]
+      },
+      {
+        "label": "勇晴雯抱病补雀金裘",
+        "identityLabel": "晴雯夜补雀金裘",
+        "summary": "雀金呢后襟被火星烧破，外间匠人皆不敢揽；重病高烧的晴雯不顾力竭，通宵咬牙运用界线织法将其天衣无缝地补好。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因无外间匠人识得修补手法而次日宝玉又必得穿戴，晴雯在急难关头挺身救急。",
+        "generalityHint": "展现晴雯卓越的织补女红技艺及对宝玉甘愿'挣命'的烈性与深情。",
+        "rationale": "文本详细描写了晴雯界线分经纬、拆里子织补直至力尽晕倒的整个过程，为回目核心情节。",
+        "passageIds": [
+          "p-361674"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "平儿掩盖偷镯本意是不欲惊动晴雯，但宝玉告知晴雯后，直接激起晴雯重罚并逐出坠儿。",
+        "passageIds": [
+          "p-355253",
+          "p-355847",
+          "p-360206"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "贾母所赐雀金裘不仅名贵且天下罕有，其后襟被烧是晴雯抱病拼命补裘的根本前提。",
+        "passageIds": [
+          "p-359148",
+          "p-361674"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "晴雯发作并撵走坠儿时动怒受风，导致病情加重，使随后通宵补裘的举动更显艰危与'勇烈'。",
+        "passageIds": [
+          "p-360849",
+          "p-361674"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "QdicasjtM_GY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10762,
+    "candidatesTokenCount": 1899,
+    "totalTokenCount": 12661,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10762
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1899
+      }
+    ]
+  },
+  "durationMs": 14509,
+  "requestHash": "212066ad5eda3ba4463af363d4757c96f87d4120c14c1957a3de08fdd5624cc9"
+}

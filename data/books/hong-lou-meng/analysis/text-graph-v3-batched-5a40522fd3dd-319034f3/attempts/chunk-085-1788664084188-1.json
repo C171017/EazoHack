@@ -1,0 +1,180 @@
+{
+  "value": {
+    "summary": "第八十五回叙述贾府与薛家之祸福转换：贾府随同北静王祝寿，传出贾政获吴巡抚保举拟升工部郎中的喜信；贾府大办庆贺之宴，并凑合黛玉生日共同热闹。席间演戏暗示命运，旋即薛家传来薛蟠在外打死人被捕的惊天巨变，薛姨妈慌乱无措，宝钗沉着区处，薛蝌急寄信谋求翻供减罪。",
+    "nodes": [
+      {
+        "label": "北静王府祝寿与玉佩之赠",
+        "identityLabel": "北静王府祝寿",
+        "summary": "贾赦贾政率珍、琏、宝玉至北静王府拜寿，水溶单留宝玉叙谈，透露吴巡抚陛见时保举贾政之喜讯，并赠仿宝玉之通灵宝玉所仿造的一块玉佩。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从祝寿礼仪与私室留饭叙话中，直接引出贾政官运喜讯及王爷对宝玉的特殊器重。",
+        "generalityHint": "具体事件：贾府要员至北静王府祝寿交际的一幕场景。",
+        "rationale": "通过北静王府的款待与交谈，为贾政升职埋下伏笔，并带出北静王仿制宝玉之玉的细节。",
+        "passageIds": [
+          "p-625059",
+          "p-625628"
+        ]
+      },
+      {
+        "label": "贾政报升工部郎中",
+        "identityLabel": "贾政升官",
+        "summary": "林之孝及贾芸等相继回禀外头动静，证实工部郎中缺拟由贾政出任，贾政谢恩拜客，贾府上下欢腾庆贺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由吴巡抚拜访、部中吵嚷拟正，到报喜之人涌至府门，完成了贾政升迁的叙述线索。",
+        "generalityHint": "贾府政治与门庭层面的一次重大升迁事件。",
+        "rationale": "贾政升郎中是贾府后半段中少有的吉事，也是全回贾府大排筵席的直接起因。",
+        "passageIds": [
+          "p-626108",
+          "p-628841",
+          "p-630260"
+        ]
+      },
+      {
+        "label": "宝玉探看黛玉与戏谑误会",
+        "identityLabel": "宝黛会面与亲事浮想",
+        "summary": "宝玉向贾母、姐妹道喜，与黛玉相见互问起居，凤姐戏言“相敬如宾”令黛玉飞红了脸，宝玉又误将贾芸之躁进脱口引出，引发满堂说笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文袭人探潇湘馆未果与贾芸递帖提亲的暗线，在贾母房中引发了众人心知肚明的打趣与试探。",
+        "generalityHint": "涉及宝黛二人感情及贾府高层对宝黛婚事态度的具体场面。",
+        "rationale": "反映黛玉对二人关系的敏感及众人对提亲事宜的戏谑试探，为后文悲剧氛围形成反差。",
+        "passageIds": [
+          "p-629671",
+          "p-627171"
+        ]
+      },
+      {
+        "label": "贾府盛宴与双喜同庆",
+        "identityLabel": "贾府升迁及黛玉生日宴",
+        "summary": "贾母将王子腾送来的贺戏定在黛玉生日同庆，贾府盛排筵席，黛玉盛装出席入座，呈现热闹鼎盛之象。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母将升迁之喜与黛玉生日合办，象征贾府表面运势与荣华达到一个小高潮。",
+        "generalityHint": "贾府家族集聚与宴饮庆贺的特定场景。",
+        "rationale": "展示“花到正开蜂蝶闹，月逢十足海天宽”的繁华极点，随即引出断崖式的薛家变故。",
+        "passageIds": [
+          "p-630260",
+          "p-630649"
+        ]
+      },
+      {
+        "label": "宴席演戏之谶",
+        "identityLabel": "冥升戏文隐喻",
+        "summary": "席间演新戏《蕊珠记》之《冥升》，小旦扮嫦娥未嫁而逝升引月宫，曲词唱道“人间只道风情好，那知道秋月春花容易抛”，寓意深长。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "以戏曲曲目及戏词对在场众人的命运（尤其是未嫁之黛玉）提供象征性预示。",
+        "generalityHint": "文本中经典的戏文寓意节点，关涉全书人物命运象征。",
+        "rationale": "作者借吉庆宴席上的戏文点出“秋月春花容易抛”，暗示眼前繁华与良辰转瞬即空。",
+        "passageIds": [
+          "p-631138"
+        ]
+      },
+      {
+        "label": "薛蟠杀人案发与薛家惊乱",
+        "identityLabel": "薛蟠命案爆发",
+        "summary": "薛家人急报薛蟠在外打死人被捕，薛姨妈与宝琴惊惶离席返家，金桂借机吵闹啼哭，薛姨妈六神无主。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宴会正欢时突遭薛家飞来横祸，家庭内部矛盾（金桂对香菱）随即乘乱激化爆发。",
+        "generalityHint": "薛家命运的转折性大案，波及贾府与薛家联姻关系。",
+        "rationale": "薛蟠旧恶再发，打破了贾府升迁庆宴的祥和气氛，是薛家彻底陷入困境的开端。",
+        "passageIds": [
+          "p-631373",
+          "p-631677"
+        ]
+      },
+      {
+        "label": "宝钗沉着处变与薛蝌谋划翻供",
+        "identityLabel": "薛家营救薛蟠",
+        "summary": "面对命案危局，宝钗力主不可盲目送银，并安排薛蝌赶赴现场聘请刀笔先生；薛蝌随后寄信告知谋求将“故杀”翻为“误伤”求生，催要五百两银子使用。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝钗的清醒处置与薛蝌信件中的诉讼策略，构成了薛家对人命危机的司法营救链条。",
+        "generalityHint": "薛家核心成员面对重大刑事案件与敲诈危机时的应对策略。",
+        "rationale": "展现宝钗在家庭危机中的理智主事才能，并引出晚清小说中常见的衙门翻供情节。",
+        "passageIds": [
+          "p-631677",
+          "p-632570",
+          "p-632673"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "北静王在王府透露巡抚吴大人陛见保举贾政，为随后的升官喜信提供了先兆依据。",
+        "passageIds": [
+          "p-625628",
+          "p-626108"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾政报升郎中促成了贾母决定搭台演戏、大开筵宴庆贺。",
+        "passageIds": [
+          "p-630260",
+          "p-630649"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宴席庆贺活动中具体上演了《冥升》等戏出，引出戏文意象。",
+        "passageIds": [
+          "p-630649",
+          "p-631138"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "薛家命案消息正是在众人看戏庆贺的高潮时刻突然传到，打断了筵席并形成极强反差。",
+        "passageIds": [
+          "p-631373"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "薛蟠命案爆发后，宝钗与薛蝌随即展开具体的商议、奔走与打点翻供策略。",
+        "passageIds": [
+          "p-631677",
+          "p-632570"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "A9mcasDDI-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10790,
+    "candidatesTokenCount": 2302,
+    "totalTokenCount": 13092,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10790
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2302
+      }
+    ]
+  },
+  "durationMs": 16898,
+  "requestHash": "89b9745fab9939ed08744b6fea4cf7eff18c318b72c78d54ec1242f27b5a18ce"
+}

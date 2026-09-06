@@ -1,0 +1,175 @@
+{
+  "value": {
+    "summary": "第七十七回叙述贾府找寻人参配药引出大家族外强中干之象；随后王夫人果断驱逐司棋，并雷厉风行查抄怡红院，撵走晴雯、四儿及众伶官；宝玉夜访重病的晴雯，二人互诉委屈并交换信物，灯姑娘暗中听闻方知二人清白；次日芳官、藕官、蕊官执意出家为尼。",
+    "nodes": [
+      {
+        "label": "贾府寻参配药与宝钗托买",
+        "identityLabel": "贾府人参之匮与宝钗托买",
+        "summary": "凤姐病后配药需二两上等人参，王夫人遍寻各处无着，贾母所存老参已成朽木；宝钗指出市参多伪劣，遂托自家参行伙计采买未作原枝好参。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从凤姐用药需参起笔，经过各房无存、贾母旧参朽坏的层层搜寻，引出宝钗相助之法，展现贾府外强中干之实态。",
+        "generalityHint": "涉及贾府内部多位主子及中药调配的一组具体事件，反映出贾府物资匮乏的现实及宝钗的周全。",
+        "rationale": "基于王夫人找参不获、贾母存参朽败及宝钗出面托买的整套叙事。",
+        "passageIds": [
+          "p-560755",
+          "p-561289"
+        ]
+      },
+      {
+        "label": "司棋被逐与迎春无奈分别",
+        "identityLabel": "司棋被逐大观园",
+        "summary": "周瑞家的奉命将搜检获罪的司棋驱逐出园，迎春性格懦弱无法保全，司棋哭别迎春并含恨离去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前番搜检大观园的结果，王夫人决意快刀斩乱麻，周瑞家的雷厉风行办理，迎春自知事关风化无可奈何。",
+        "generalityHint": "特指司棋被逐及迎春房中主仆分离的个别事件。",
+        "rationale": "叙述周瑞家的带人到迎春房中打发司棋出园，迎春含泪别过，司棋哀告无果的过程。",
+        "passageIds": [
+          "p-561889"
+        ]
+      },
+      {
+        "label": "王夫人抄检怡红院逐晴雯芳官",
+        "identityLabel": "怡红院整肃与晴雯等被逐",
+        "summary": "王夫人因谗言亲临怡红院阅人，将病重的晴雯从炕上架出撵走，并逐出四儿及芳官等唱戏的女孩子，严词警告袭人麝月等人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "王夫人积怨与听信谗言后集中爆发，将晴雯、四儿、芳官等视为教坏宝玉的祸根，逐一清算处置。",
+        "generalityHint": "针对怡红院所有丫鬟与下人的一场全面整肃与人事驱逐行动。",
+        "rationale": "王夫人亲临怡红院查阅众人，重斥晴雯、四儿及芳官并命其家人领出的具体记载。",
+        "passageIds": [
+          "p-563149"
+        ]
+      },
+      {
+        "label": "宝玉探望晴雯与互换旧衣指甲",
+        "identityLabel": "宝玉私探病榻晴雯",
+        "summary": "宝玉瞒人私出后角门探视病危的晴雯，晴雯抱屈诉冤，铰下二寸长指甲并脱下旧红绫袄赠予宝玉，宝玉亦换内袄相赠。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "晴雯深感枉担虚名、死不甘心，故在临终诀别之际突破礼数，互换贴身衣物及指甲作为死生见证。",
+        "generalityHint": "宝玉与晴雯在哥嫂陋室里的个别诀别场景。",
+        "rationale": "详尽描写晴雯卧病芦席土炕、为宝玉倒茶、剪指甲换袄及痛诉冤屈的对话与举动。",
+        "passageIds": [
+          "p-567395",
+          "p-567093"
+        ]
+      },
+      {
+        "label": "灯姑娘窥听证实宝晴清白",
+        "identityLabel": "灯姑娘听壁辨白",
+        "summary": "灯姑娘潜听宝玉与晴雯对话，确认二人素日各不相扰、未有私情，戏谑宝玉胆小之余感叹世间冤屈甚多，应承代为照看晴雯。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "灯姑娘本持风月成见暗中探听，却从二人真实的诀别中反推出清白事实，从旁观者角度颠覆了园内对晴雯的构陷诽谤。",
+        "generalityHint": "灯姑娘对宝玉与晴雯关系的个别断案，并推及‘天下委屈事也不少’的感慨。",
+        "rationale": "记录灯姑娘掀帘调笑、逼视宝玉，并道出自己窗下偷听证实二人清白的完整始末。",
+        "passageIds": [
+          "p-568481"
+        ]
+      },
+      {
+        "label": "宝玉宿夜惊梦与晴雯诀别",
+        "identityLabel": "宝玉夜惊疑晴雯亡故",
+        "summary": "宝玉回园后由袭人移铺外床照料，夜间因习惯呼唤晴雯，五更时分梦见晴雯前来辞别，惊醒痛哭断定晴雯已死。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从日常起居中晴雯不可替代的职守，到五更梦魂相别的潜意识感应，直接表达宝玉对晴雯夭亡的悲痛与直觉。",
+        "generalityHint": "特指怡红院当夜宝玉与袭人的对话及宝玉梦中感应的具体经历。",
+        "rationale": "记载夜间袭人重新值夜、宝玉误唤晴雯以及五更梦见晴雯含笑辞别痛哭惊醒的情节。",
+        "passageIds": [
+          "p-569175"
+        ]
+      },
+      {
+        "label": "芳官等三人斩情入庵出家",
+        "identityLabel": "芳官等三优伶入庵",
+        "summary": "芳官、蕊官、藕官被逐后坚决不从聘嫁，执意寻死剪发；水月庵智通与地藏庵圆心巧言劝说王夫人，王夫人遂允准三人出家为尼。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "三伶人看透优伶与奴仆命运的凄凉，以死相抗；两个尼姑图谋使唤帮手以佛法大义进言，促成王夫人放行。",
+        "generalityHint": "涉及芳官、蕊官、藕官三个具体优伶的人生归宿转变。",
+        "rationale": "记载干娘回话、尼姑劝诱王夫人、王夫人当面核实后应允三人落发出家的始末。",
+        "passageIds": [
+          "p-570324"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "周瑞家的奉命带走司棋后，王夫人立即展开对怡红院等处丫鬟的全面整肃。",
+        "passageIds": [
+          "p-561889",
+          "p-563149"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "晴雯被王夫人强行逐出怡红院，直接导致宝玉夜间私行前往哥嫂家探望病危的晴雯。",
+        "passageIds": [
+          "p-563149",
+          "p-567395"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉与晴雯在病榻前互诉衷肠、互换信物的情景，被窗外的灯姑娘完全听见，引发其后的当面挑明与证实。",
+        "passageIds": [
+          "p-567395",
+          "p-568481"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉探望晴雯辞别归园后，心神不定，夜不能寐，进而引发五更梦见晴雯辞别的悲痛体验。",
+        "passageIds": [
+          "p-568481",
+          "p-569175"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "王夫人将芳官等唱戏女孩子一并清算逐出交由干娘聘嫁，直接激起她们闹着落发出家的后续结局。",
+        "passageIds": [
+          "p-563149",
+          "p-570324"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "1NicatzhHdCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 12544,
+    "candidatesTokenCount": 2392,
+    "totalTokenCount": 14936,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12544
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2392
+      }
+    ]
+  },
+  "durationMs": 16524,
+  "requestHash": "7bfa8cb82c448b0947857548c45d68ee5245628715cef3392a08182633a695db"
+}

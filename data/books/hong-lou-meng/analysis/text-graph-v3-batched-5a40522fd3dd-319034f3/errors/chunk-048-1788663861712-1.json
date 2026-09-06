@@ -1,0 +1,4 @@
+{
+  "attempt": 1,
+  "error": "[\n  {\n    \"origin\": \"array\",\n    \"code\": \"too_big\",\n    \"maximum\": 3,\n    \"inclusive\": true,\n    \"path\": [\n      \"nodes\",\n      6,\n      \"passageIds\"\n    ],\n    \"message\": \"Too big: expected array to have <=3 items\"\n  }\n]"
+}

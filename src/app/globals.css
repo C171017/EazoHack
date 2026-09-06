@@ -68,6 +68,7 @@
   border: 0;
   border-radius: 0;
   overscroll-behavior: contain;
+  overflow-x: hidden;
   scrollbar-gutter: stable;
   scrollbar-width: thin;
   scrollbar-color: #b9ab90 transparent;
@@ -80,7 +81,7 @@
   display: flex;
   justify-content: flex-end;
   height: 0;
-  padding-inline: clamp(1.5rem, 3.5vw, 3.5rem);
+  padding-inline: max(1rem, 7%);
   pointer-events: none;
 }
 
@@ -92,9 +93,10 @@
 .txt-reader-scroll[data-english-font='allura'] .txt-reader-body { font-size: 1.65rem; line-height: 1.65; }
 
 .txt-reader-page {
-  max-width: 44rem;
-  margin-inline: auto;
-  padding: 1.8rem clamp(1.5rem, 3.5vw, 3.5rem) 3rem;
+  /* Follow the reader pane, including split-view and window resizing. */
+  width: 100%;
+  min-width: 0;
+  padding: 1.8rem max(1rem, 7%) 3rem;
 }
 
 .txt-reader-heading {
@@ -306,6 +308,80 @@
 
 .txt-source-block-continuation {
   margin-top: -1.5rem;
+}
+
+.mobile-map-controls {
+  display: none;
+}
+
+@media (width < 64rem) {
+  .reading-workspace {
+    height: 100dvh;
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .reading-workspace-panes {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 0fr);
+    transition: grid-template-rows 280ms ease;
+  }
+
+  .reading-workspace[data-mobile-map-open='true'] .reading-workspace-panes {
+    grid-template-rows: minmax(0, 1fr) minmax(0, 2fr);
+  }
+
+  .reading-workspace .txt-reader-pane {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+
+  .reading-workspace .exploration-space {
+    min-height: 0;
+    visibility: hidden;
+  }
+
+  .reading-workspace .book-map,
+  .reading-workspace .map-stage {
+    min-height: 0;
+  }
+
+  .reading-workspace[data-mobile-map-open='true'] .exploration-space {
+    visibility: visible;
+  }
+
+  .mobile-map-controls {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: 4px 1rem calc(4px + env(safe-area-inset-bottom, 0px));
+    border-top: 1px solid #ded6c6;
+    background: #f6f2e6;
+    color: #302a23;
+  }
+
+  .mobile-map-controls button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 44px;
+    width: 100%;
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+
+  .mobile-map-controls button:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -2px;
+    border-radius: 6px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reading-workspace-panes { transition: none; }
 }
 
 @media (min-width: 64rem) {

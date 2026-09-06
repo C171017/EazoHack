@@ -1,0 +1,165 @@
+{
+  "value": {
+    "summary": "第五十五回叙述凤姐小产调养，王夫人托李纨、探春理事，宝钗协同照管。贾府刁奴欺探春年幼企图蒙混，赵国基丧葬银一事探春恪守旧规核帐发银二十两，并驳回赵姨娘的哭闹争闲气；随后探春蠲免学中重复津贴，立威治弊。平儿从中周旋抚慰，凤姐闻讯深许探春才干并谋划借势自保与协同理家。",
+    "nodes": [
+      {
+        "label": "凤姐抱病李纨探春宝钗分理家务",
+        "identityLabel": "李探宝三人分理家务",
+        "summary": "王熙凤因小产添病休养，王夫人命李纨与探春暂行裁处荣府家事，又特托薛宝钗在园中巡察监视，三人各司其职立于议事厅办事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述凤姐病休引发管理真空，王夫人考量李纨厚道易被欺瞒而命探春、宝钗共同参与治理的直接因由。",
+        "generalityHint": "记录贾府管家权责特定转移事件与临时办事机制。",
+        "rationale": "基于p-379741与p-380096，凤姐小产下红，王夫人因家事繁多，命李纨、探春裁处琐事并请宝钗协同监察，构成本回理家背景。",
+        "passageIds": [
+          "p-379741",
+          "p-380096",
+          "p-380579"
+        ]
+      },
+      {
+        "label": "吴新登家的试探探春被查帐驳回",
+        "identityLabel": "探春按例查核赵国基丧银",
+        "summary": "吴新登媳妇轻视李纨探春，汇报赵国基死讯不提旧例以观虚实；探春驳回李纨随口所提四十两，责令查清家里与外头旧例底帐后，依规裁定赏银二十两。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从管家媳妇存心欺瞒试探的行为，推演出探春洞悉弊病并以制度旧帐相折服的过程。",
+        "generalityHint": "针对具体办事中管事奴才试探主子威权与按例核算之特例。",
+        "rationale": "基于p-380938与p-381617，吴新登家的故意不报旧规，探春严厉盘问并调阅帐目，查明家里奴仆旧例为二十两后据实发放，震慑众人。",
+        "passageIds": [
+          "p-380938",
+          "p-381617"
+        ]
+      },
+      {
+        "label": "赵姨娘争体面遭探春引理痛斥",
+        "identityLabel": "探春驳斥赵姨娘私情要求",
+        "summary": "赵姨娘因兄弟丧仪赏银不及袭人母亲而大闹议事厅，要探春拉扯娘家；探春严守主奴之分与宗法旧规，痛陈自身处境并严词拒绝私恩馈赠。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从主奴旧例、嫡庶界限及治家名分出发，探春推导出不可为生母徇私的严密说理与情绪爆发。",
+        "generalityHint": "涉及豪门家族庶出女子与生母家族的伦理名分及家法权力冲突。",
+        "rationale": "基于p-381773，赵姨娘以生母身份逼迫探春多给丧银，探春坚守太太奴才之分与祖宗家规，驳斥其无理取闹。",
+        "passageIds": [
+          "p-381773"
+        ]
+      },
+      {
+        "label": "探春蠲免学中重复公费立威除弊",
+        "identityLabel": "探春蠲免家学重项公费",
+        "summary": "家学媳妇请领贾环与贾兰八两银子公费，探春查明各房月钱已有津贴后，当机立断将学中该项开支革除，平儿从旁附和支持。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由各房早已支领月钱的事实推导出家学银两属于重复冗支，从而做出革除宿弊的改革决断。",
+        "generalityHint": "针对荣国府子弟家学开支特定制度的蠲免改革。",
+        "rationale": "基于p-383644，探春查出学中点心纸笔公费与月钱重叠，斥其借上学冒领，当即令平儿回报凤姐予以蠲除。",
+        "passageIds": [
+          "p-383644"
+        ]
+      },
+      {
+        "label": "平儿震慑刁奴并告诫众人莫欺幼主",
+        "identityLabel": "平儿护持探春弹压仆妇",
+        "summary": "平儿在议事厅外指责众媳妇欺凌探春年轻、借赵姨娘生事，警告探春才干刚毅且受长辈看重，众人若敢触犯必吃大亏。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "平儿根据凤姐与探春的性格脾气及府中尊卑权力格局，向刁奴进行利害分析与严正警告。",
+        "generalityHint": "大管家重仆对下层管事媳妇的威慑训诫与规则敲打。",
+        "rationale": "基于p-384647与p-385243，平儿在厅外直接揭露众人欺软怕硬的心术，劝诫秋纹等避开锋芒，替探春树立威信。",
+        "passageIds": [
+          "p-384647",
+          "p-385243"
+        ]
+      },
+      {
+        "label": "凤姐剖析探春才能与家族经济困局",
+        "identityLabel": "凤姐评探春与贾府经济账",
+        "summary": "凤姐闻报平儿转述后，盛赞探春精明知书，同时叹惜其庶出身份；进而向平儿剖析荣府入不敷出的财务危局与儿女婚嫁开支预算，决定借探春理家之势推行紧缩并消解宿怨。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐结合全家收支实况、未来诸事开销及奴仆怨气，推导出支持探春革弊、趁势退步自保的理家策略。",
+        "generalityHint": "荣国府整体经济走势、奴仆心理与权力制衡的全局分析。",
+        "rationale": "基于p-386119与p-386554，凤姐分析探春品格才干，算清未来各项开支必亏之局，定下协同探春、不与其争锋的战略。",
+        "passageIds": [
+          "p-386119",
+          "p-386554"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "探春接管荣府琐碎家事，为吴新登家的前来回事试探提供了职权场景与触发契机。",
+        "passageIds": [
+          "p-380579",
+          "p-380938"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "探春按例只发赵国基二十两丧银，直接导致赵姨娘赶来议事厅大闹争闲气。",
+        "passageIds": [
+          "p-381617",
+          "p-381773"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "探春在吴新登家的与赵姨娘之事后威势渐立，进而主动清查学房支出，蠲免重复公费。",
+        "passageIds": [
+          "p-383644"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "吴新登家的托懒试探探春失败，成为平儿在厅外训斥震慑众媳妇不可小看探春的直接由头。",
+        "passageIds": [
+          "p-383644",
+          "p-384647"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "探春革除学中八两银子并驳回凤姐送人情之举，平儿回报后促使凤姐赞许探春并制定全力配合探春革除宿弊的策略。",
+        "passageIds": [
+          "p-383644",
+          "p-386119",
+          "p-386554"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "UNicarbgI-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10741,
+    "candidatesTokenCount": 2337,
+    "totalTokenCount": 13078,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10741
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2337
+      }
+    ]
+  },
+  "durationMs": 18644,
+  "requestHash": "8ec8dea130c65a65bb96c479c3b38666922785c1753238d2378b1672a74b8bc8"
+}

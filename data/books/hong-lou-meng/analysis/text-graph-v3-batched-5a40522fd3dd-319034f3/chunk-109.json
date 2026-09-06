@@ -1,0 +1,165 @@
+{
+  "value": {
+    "summary": "第一零九回围绕宝玉在外间独宿以期与黛玉神交、误认五儿为晴雯、宝钗以痴情治痴情促成圆房，以及贾母病重、迎春受孙绍祖虐待致死等情节展开。",
+    "nodes": [
+      {
+        "label": "宝玉外间独卧候芳魂",
+        "identityLabel": "宝玉候芳魂",
+        "summary": "宝玉听宝钗之言后，疑黛玉仙去不愿理浊物，特意在外间安歇，暗自祷祝，期盼梦中与黛玉相见，却终无所梦。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于宝玉对黛玉未曾入梦的困惑与执念展开行动。",
+        "generalityHint": "描写贾宝玉个人面对黛玉离世的特定执念与场景。",
+        "rationale": "p-783629中详细记录宝玉在外间铺设被褥，意欲通过神交候黛玉入梦，体现其痴情未断。",
+        "passageIds": [
+          "p-783629"
+        ]
+      },
+      {
+        "label": "迎春悲辞归孙家",
+        "identityLabel": "迎春辞众受难",
+        "summary": "迎春因孙家来人催逼，在大太太处哭过后到贾母处含悲告辞，悲叹自己命苦且恐无再来之期，贾母与众人亦为之伤感。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "迎春受夫家折磨，回门辞别预示着悲剧命运的逼近。",
+        "generalityHint": "记录迎春个人的婚姻惨状及贾府众人的无力感。",
+        "rationale": "p-784672描绘迎春辞别贾母的悲切情景，为后文迎春之死埋下伏笔。",
+        "passageIds": [
+          "p-784672"
+        ]
+      },
+      {
+        "label": "宝玉睹五儿忆晴雯",
+        "identityLabel": "五儿承错爱",
+        "summary": "宝玉在外间睡不着，见五儿装束容貌神似晴雯，痴性复发拉其叙话，五儿惊恐推拒，后因院中声响与宝钗咳嗽而作罢。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从怀念晴雯之病逝联想到容貌相似的五儿，进而借五儿寄托痴情。",
+        "generalityHint": "宝玉与丫鬟五儿之间的特定深夜互动。",
+        "rationale": "p-786320与p-786673记述宝玉借晴雯之影拉扯五儿并提及‘遇仙’，五儿惶恐推拒。",
+        "passageIds": [
+          "p-786320",
+          "p-786673"
+        ]
+      },
+      {
+        "label": "宝钗以情治情促圆房",
+        "identityLabel": "宝玉宝钗琴瑟和好",
+        "summary": "宝钗洞察宝玉心魔，决定以痴情治痴情，顺水推舟劝宝玉搬回里间；宝玉心怀愧悔，两人自此如鱼得水、恩爱缠绵。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝钗鉴于宝玉思郁成疾，制定‘移花接木’的应对之策并付诸实行。",
+        "generalityHint": "宝玉与宝钗夫妻关系的实质转折。",
+        "rationale": "p-788708描述宝钗欲笼络宝玉之心，宝玉因愧悔顺从，二人终于合和。",
+        "passageIds": [
+          "p-788708",
+          "p-787996"
+        ]
+      },
+      {
+        "label": "贾母赠宝玉汉玉玦",
+        "identityLabel": "贾母传汉玉玦",
+        "summary": "贾母因见宝玉失玉且孝顺，将祖传珍藏六十余年的汉玉玦赠与宝玉，随后贾母饮食不进、病情渐重。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母感念祖先遗泽与孙儿孝心而传赠宝物，紧接着引发病情加剧。",
+        "generalityHint": "贾府家族传承的单次具体事件及贾母病情的发端。",
+        "rationale": "p-789148详细记述祖遗汉玉玦的来历与转赠过程，并叙及贾母开始胸闷不进饮食。",
+        "passageIds": [
+          "p-789148"
+        ]
+      },
+      {
+        "label": "迎春受虐身亡",
+        "identityLabel": "迎春孽债归天",
+        "summary": "迎春在孙家遭受孙绍祖折磨，哭后痰堵却未得医治而亡，因贾母病笃，众人不敢相告，孙家草草完结其丧事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文受虐背景，交代恶姻缘最终导致迎春年轻夭亡的因果结局。",
+        "generalityHint": "贾府三春之一贾迎春的具体人生终局。",
+        "rationale": "p-790949叙述孙家婆子报信及外头传进二姑奶奶死讯，印证迎春‘还孽债’的宿命。",
+        "passageIds": [
+          "p-790949"
+        ]
+      },
+      {
+        "label": "贾母病笃备后事",
+        "identityLabel": "贾母病危预备丧事",
+        "summary": "贾母病势日甚、脉气欠佳，贾政命贾琏预先分派家人准备寿材、孝衣与执事，贾母饮茶后挣扎坐起与众人说话。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "太医诊断脉气不好，贾政与贾琏据此启动大丧预备程序。",
+        "generalityHint": "贾母临终前的病危场景与贾府操办丧仪的预备。",
+        "rationale": "p-791660与p-792408描述贾政令贾琏着手准备棺板寿衣，贾母回光返照般坐起说话。",
+        "passageIds": [
+          "p-791660",
+          "p-792408"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝玉为了等候黛玉入梦而在外间安歇，因辗转难眠而睹五儿忆起晴雯，导致了对五儿的痴缠。",
+        "passageIds": [
+          "p-786320"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "五儿被纠缠及宝玉在外间的胡思乱想，促使宝钗下定决心将其挪回里间，以痴情治痴情。",
+        "passageIds": [
+          "p-787996",
+          "p-788708"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "迎春辞贾母时自知命不长久，回到孙家后果遭折磨暴病身亡，形成了直接的前后因果联系。",
+        "passageIds": [
+          "p-784672",
+          "p-790949"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "贾母传玉之时便有胸闷不受用之兆，随后病情日重一日，最终走向病笃预备后事。",
+        "passageIds": [
+          "p-789148",
+          "p-791660"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "htmcasqHK9CX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 12137,
+    "candidatesTokenCount": 2044,
+    "totalTokenCount": 14181,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12137
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2044
+      }
+    ]
+  },
+  "durationMs": 15272,
+  "requestHash": "c08f900e51d73835a89d05603937d221013057a239d3fab0943a7fbc19e8d293"
+}

@@ -1,0 +1,135 @@
+{
+  "value": {
+    "summary": "第一百一十三回叙述赵姨娘暴病惨死及周姨娘之感伤；王熙凤病入膏肓且被尤二姐等冤魂缠绕，见刘姥姥后心生信托，嘱托后事与巧姐；宝玉闻妙玉被劫而悲叹，深夜探访紫鹃试图剖白心迹，紫鹃释然悲感人生缘分皆有定数。",
+    "nodes": [
+      {
+        "label": "赵姨娘暴亡与周姨娘感伤",
+        "identityLabel": "赵姨娘暴亡与偏房之悲",
+        "summary": "赵姨娘在寺中狂乱呼号、七窍流血暴亡，周姨娘目睹后感伤身为偏房妾室下场凄凉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述赵姨娘病死惨象及众人、贾政的反应，并由此引发周姨娘对同为侧室命运的推想。",
+        "generalityHint": "具体事件（赵姨娘死）及其引发的一类身份（贾府偏房侧室）的境遇感慨。",
+        "rationale": "基于p-813792中赵姨娘狂叫求饶、无脉而亡的过程，以及周姨娘触景伤情想到自己将来死状的内心活动。",
+        "passageIds": [
+          "p-813792"
+        ]
+      },
+      {
+        "label": "凤姐病危见尤二姐冤魂",
+        "identityLabel": "凤姐冤魂索命与悔心",
+        "summary": "传言赵姨娘被阴司拷打致死，凤姐病重且感贾琏冷淡，恍惚中见尤二姐索命并自认当年心窄后悔。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从外界流言引入凤姐孤立无援的绝境，再到心魔邪魔致使幻见尤二姐，直接表现心理崩溃。",
+        "generalityHint": "针对凤姐个人的具体病况与心境幻觉描写。",
+        "rationale": "结合p-814263与p-814942中众人的传言、贾琏与二夫人的冷落，以及凤姐神魂不定幻见尤二姐及男女冤魂的情节。",
+        "passageIds": [
+          "p-814263",
+          "p-814942"
+        ]
+      },
+      {
+        "label": "凤姐向刘姥姥托付巧姐",
+        "identityLabel": "凤姐托村妪",
+        "summary": "刘姥姥带青儿探视，凤姐深信刘姥姥能求神禳解，并将巧姐与自身性命郑重托付于她。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "刘姥姥提及乡间求神吃药之说正合凤姐心意，随后引出两人对巧姐婚事、留宿的商议及凤姐赠金托付。",
+        "generalityHint": "围绕凤姐临终前对刘姥姥托女的单一核心事件。",
+        "rationale": "基于p-815101、p-815577与p-817400中刘姥姥进府叙旧、谈及乡间神灵灵验，凤姐摘镯许愿并直言“我的巧姐儿也交给你了”。",
+        "passageIds": [
+          "p-817400",
+          "p-815101",
+          "p-815577"
+        ]
+      },
+      {
+        "label": "宝玉闻妙玉遭劫悲叹人世风散",
+        "identityLabel": "宝玉感妙玉遭劫",
+        "summary": "宝玉闻知妙玉被强徒劫去，悲叹大观园红颜流散比黛玉死得更奇，联想《庄子》而大痛，宝钗规劝无果。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由妙玉下落不明这一事件，触发宝玉对园中诸人死的死嫁的嫁的全面追思与虚无之感。",
+        "generalityHint": "从妙玉个案推及大观园群芳命运与人世悲凉，具有较高感慨广度。",
+        "rationale": "出处p-818135，宝玉闻妙玉遭劫后感慨“槛外人”结局，联想到庄子虚无缥缈，并遭宝钗以世俗前程规劝。",
+        "passageIds": [
+          "p-818135"
+        ]
+      },
+      {
+        "label": "宝玉深夜向紫鹃剖白心迹",
+        "identityLabel": "宝玉夜访紫鹃诉情",
+        "summary": "宝玉因见紫鹃素日冷淡，深夜至厢房窗外赔罪剖白心事，反遭紫鹃冷言抢白及麝月打岔，难申衷曲而痛哭。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉自觉问心有愧、欲解开林黛玉亡故后与紫鹃之间的芥蒂，遂夜访询问却被误会阻隔。",
+        "generalityHint": "具体事件：宝玉与紫鹃在窗前窗下的言语冲突与情感交流。",
+        "rationale": "出自p-818805、p-819137及p-819922，详细记叙了宝玉在窗外叫门、紫鹃冷语相对直至麝月前来的始末。",
+        "passageIds": [
+          "p-819137",
+          "p-818805",
+          "p-819922"
+        ]
+      },
+      {
+        "label": "紫鹃释怀并悟人生缘分有定",
+        "identityLabel": "紫鹃情婢悟道",
+        "summary": "紫鹃见宝玉柔情深厚并非负心人，痛哭之余悟得人生缘分前定，执迷不过徒增苦恼，反不如草木石头心中干净。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "紫鹃经夜谈后重新审视宝玉当年的失常与今日的痴情，由此推演出对生死情缘的省悟与心灰意冷。",
+        "generalityHint": "从黛玉、宝玉与自身的情感纠葛上升到普遍的人生缘分定数与看破情执的哲思。",
+        "rationale": "出自p-820455，紫鹃听闻宝玉肺腑之言后整夜反思，认识到宝玉深情与黛玉薄福，得出“人生缘分都有一定”、“不如草木石头”的彻悟。",
+        "passageIds": [
+          "p-820455"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "凤姐因身心受冤魂折磨求死不得，才在见到刘姥姥并听信其言后，将自己与女儿巧姐全权托付。",
+        "passageIds": [
+          "p-814263",
+          "p-817400"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝玉深夜窗外的伤心剖白与跺脚呜咽直接触动了紫鹃，促成紫鹃对宝玉心意的理解与随后的彻夜感悟。",
+        "passageIds": [
+          "p-819137",
+          "p-820455"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "o9mcaoX5JfGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 9148,
+    "candidatesTokenCount": 1889,
+    "totalTokenCount": 11037,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9148
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1889
+      }
+    ]
+  },
+  "durationMs": 13800,
+  "requestHash": "eb774ae9ba1494c1f00af89bd219c6d9ce3bebba6b0758d6073003740544d135"
+}

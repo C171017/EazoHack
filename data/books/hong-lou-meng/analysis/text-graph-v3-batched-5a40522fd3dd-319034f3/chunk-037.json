@@ -1,0 +1,162 @@
+{
+  "value": {
+    "summary": "第三十七回叙述贾政离京后，贾探春修书倡议在大观园结诗社，贾芸恰送来两盆白海棠，众姊妹遂以白海棠为题结成“海棠社”并各取雅号；次日史湘云赶来和诗补入诗社，并与薛宝钗在蘅芜苑商议设东、以螃蟹宴为托、拟定十二首菊花诗题与不拘韵的赛诗规矩。",
+    "nodes": [
+      {
+        "label": "探春花笺倡结诗社",
+        "identityLabel": "海棠社之倡议",
+        "summary": "贾探春致书贾宝玉，提议效法古人风雅，召集大观园众姊妹开社吟诗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于贾政出门后园中闲暇，探春主动修笺提议起诗社。",
+        "generalityHint": "涉及园中姊妹诗社倡议的单次具体事件。",
+        "rationale": "文本直接叙述翠墨递笺，探春信中详陈结社缘起与风雅之意。",
+        "passageIds": [
+          "p-245452",
+          "p-245296"
+        ]
+      },
+      {
+        "label": "起别号与分定社规",
+        "identityLabel": "大观园起号定规",
+        "summary": "众人在秋爽斋集会，黛玉提议互称别号，众人各定雅号，并推李纨为掌坛社长，迎春惜春任副社长分司限韵监场。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从倡议结社顺理成章推进到定雅号、分职任与议定开社日期。",
+        "generalityHint": "诗社内部建立的角色分工与活动规约。",
+        "rationale": "见众人互起别号（如蕉下客、潇湘妃子、蘅芜君、稻香老农）并分派社长、副社长职事。",
+        "passageIds": [
+          "p-246409",
+          "p-247197"
+        ]
+      },
+      {
+        "label": "秋爽斋首咏白海棠",
+        "identityLabel": "首届海棠诗会评卷",
+        "summary": "众人以贾芸所送白海棠为题，限门盆魂痕昏五字韵，李纨评探春、宝钗、宝玉及黛玉之作，断以宝钗含蓄浑厚居首、黛玉风流别致次之。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "以即景所得白海棠与燃香限韵为规，当场赋诗评阅优劣。",
+        "generalityHint": "一次特定的诗赛创作与李纨的诗评标准。",
+        "rationale": "详载各人咏白海棠诗作及李纨评定“含蓄浑厚”与“风流别致”之差异。",
+        "passageIds": [
+          "p-247791",
+          "p-248237",
+          "p-249091"
+        ]
+      },
+      {
+        "label": "湘云和诗补入海棠社",
+        "identityLabel": "湘云补赋海棠诗",
+        "summary": "史湘云次日抵园，依限韵顷刻间和成二首白海棠诗，众人叹服，准其入社并许其设东邀社。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因湘云昨日未及参与，依社规补诗罚和方得入社。",
+        "generalityHint": "特定人物入社的才情展示与情节推进。",
+        "rationale": "文本叙述湘云依韵顷刻疾书二首，才思敏捷，众人称妙。",
+        "passageIds": [
+          "p-251923",
+          "p-252412"
+        ]
+      },
+      {
+        "label": "宝钗筹划螃蟹宴设东",
+        "identityLabel": "宝钗体恤湘云筹东",
+        "summary": "宝钗考虑到湘云家境困窘且不能作主，主动提议由薛家出螃蟹与好酒备席，以赏桂吃蟹为名邀集长辈，兼全诗社之东。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "由湘云经济受限的实际处境推导出借薛家资力周全人情之策。",
+        "generalityHint": "人情世故与处事周全的待人原则。",
+        "rationale": "宝钗私下开导湘云，点明其家境难处并替其筹备螃蟹与果酒。",
+        "passageIds": [
+          "p-252412"
+        ]
+      },
+      {
+        "label": "蘅芜苑夜拟菊花题",
+        "identityLabel": "宝钗湘云拟定菊花题规",
+        "summary": "宝钗与湘云探讨作诗不可落套、韵不可过险，二人拟定以人为主、以菊为宾的十二个菊花诗题，并定下七律不拘韵、自选题目的新规矩。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "针对前人咏菊易落俗套的弊端，提炼出虚实相配、依序编次题目的创作构思。",
+        "generalityHint": "关于诗病、题目构思与诗赛组织的诗学主张与规则设计。",
+        "rationale": "宝钗与湘云在灯下逐一拟定自《忆菊》至《残菊》十二题，并废限韵之弊。",
+        "passageIds": [
+          "p-253149"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "探春发帖倡议后，众人齐聚秋爽斋进一步落实雅号与社规。",
+        "passageIds": [
+          "p-246119",
+          "p-246409"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "社长与执事分定后，借白海棠即刻开坛限韵比赛并评定座次。",
+        "passageIds": [
+          "p-247791",
+          "p-248237"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "首社白海棠评毕后，次日湘云补和同韵之作以入社。",
+        "passageIds": [
+          "p-251923"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "湘云揽下罚作东道之约，引出宝钗为其分析难处并出资相助。",
+        "passageIds": [
+          "p-252412"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "设东与宴席筹备妥当后，宝钗与湘云进一步拟定次日诗社的题目与竞作规矩。",
+        "passageIds": [
+          "p-253149"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5tecatSNLfGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 12214,
+    "candidatesTokenCount": 1895,
+    "totalTokenCount": 14109,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12214
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1895
+      }
+    ]
+  },
+  "durationMs": 13816,
+  "requestHash": "2722084e3fa7f91320b8745da8d78c4574119a08849da7eeabdebdb1a5e9fbc4"
+}

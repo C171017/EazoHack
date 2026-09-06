@@ -1,0 +1,146 @@
+{
+  "value": {
+    "summary": "第八十八回叙述鸳鸯替贾母分派写《心经》功德之事；宝玉进蝈蝈儿并称赞贾兰对对子有出息，引起贾母对贾珠的感伤与李纨落泪；贾珍料理庄头送果帐目时，鲍二与周瑞及其义子何三争吵大闹，贾珍贾琏严惩鞭笞家仆；贾芸企图通过凤姐谋揽陵工工程遭拒，转而向小红暗通款曲；水月庵道婆报凶信及凤姐房中闹鬼，凤姐夜惊恍惚，次日忽闻官事来报。",
+    "nodes": [
+      {
+        "label": "分派写经祈福",
+        "identityLabel": "贾母寿诞写经祈福",
+        "summary": "鸳鸯奉贾母之命分送素纸与藏香，请惜春等亲丁女眷抄写三百六十五部《心经》以附《金刚经》祈寿做功德。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾母寿诞与佛道功德信仰的习俗直接叙述事件缘起与分工，为起始交代。",
+        "generalityHint": "涉及贾府内部眷属为贾母祈寿的具体功德安排。",
+        "rationale": "出处为p-646193，鸳鸯向惜春说明老太太做九昼夜功德及女眷写《心经》缘由，惜春欣然接受并谈及念米佛。",
+        "passageIds": [
+          "p-646193"
+        ]
+      },
+      {
+        "label": "宝玉赞兰贾母思珠",
+        "identityLabel": "宝玉博庭欢与思念贾珠",
+        "summary": "宝玉拿蝈蝈儿孝敬贾母，并赞贾兰能独立对对子，贾母欣喜之余感念早逝的贾珠与守寡的李纨，引起李纨落泪。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉以学房趣事引出贾兰的才长，直接触发贾母对贾珠早夭与顶门壮户的追怀。",
+        "generalityHint": "关于荣府二房内部子嗣教育及对长房孤儿寡母处境的情感互动。",
+        "rationale": "出处为p-646853与p-647830，宝玉讲述塾中情状，贾母赞赏贾兰并念及贾珠而流泪，李纨忍泪劝慰。",
+        "passageIds": [
+          "p-646853",
+          "p-647830"
+        ]
+      },
+      {
+        "label": "贾珍整肃家法鞭悍仆",
+        "identityLabel": "贾珍整肃家规鞭仆",
+        "summary": "鲍二与周瑞因庄头果品账目起争端，何三介入斗殴，贾珍与贾琏以家法严惩，命各打鲍二、何三五十鞭并撵出。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因庄头交接小事引出奴仆争权争脸，贾珍贾琏据此行使主子权威以正家法，但引发下人私下议论。",
+        "generalityHint": "体现宁荣两府治家管仆的权力运作与奴仆矛盾。",
+        "rationale": "出处为p-648118与p-648859，贾珍查对果子单子引发鲍二不服周瑞，随后何三与鲍二打架，珍琏命严加捆打惩办。",
+        "passageIds": [
+          "p-648118",
+          "p-648859"
+        ]
+      },
+      {
+        "label": "凤姐借事警戒规矩",
+        "identityLabel": "王熙凤警家奴风俗论",
+        "summary": "凤姐听闻打架一事，向贾琏指出奴仆乱纪之风断不可长，并提及焦大醉骂与鲍二旧事，批评东府放任娇纵。",
+        "sourceRole": "dialogue",
+        "speaker": "王熙凤",
+        "reasoningHint": "凤姐根据当前家仆打架现象，推论出若不及早管束日后小辈将更难弹压的治家之患。",
+        "generalityHint": "就大家族主奴体统与管治风俗提出的警示性治家见解。",
+        "rationale": "出处为p-649356，贾琏告知打人之事后，凤姐严词论断‘这风俗儿断不可长’并借旧事警诫贾琏。",
+        "passageIds": [
+          "p-649356"
+        ]
+      },
+      {
+        "label": "贾芸求揽陵工遭拒",
+        "identityLabel": "贾芸求差遭凤姐回绝",
+        "summary": "贾芸备礼拜访凤姐试图插手贾政所掌工部的陵工差事，凤姐透彻剖析衙门官私利害与家事纷争，断然予以回绝。",
+        "sourceRole": "dialogue",
+        "speaker": "王熙凤",
+        "reasoningHint": "凤姐基于衙门官制规则（堂官、书办等经管）及贾府内部管事派系纷杂的实际情况，严密论证贾芸不可插手。",
+        "generalityHint": "涉及贾府宗族子弟谋求公门工差的行径及其制度限制。",
+        "rationale": "出处为p-650085，贾芸送礼并言及陵工工程，凤姐分析内外关节并拒绝收礼，叫其把东西退回。",
+        "passageIds": [
+          "p-650085"
+        ]
+      },
+      {
+        "label": "芸红私赠信物",
+        "identityLabel": "贾芸与小红私情往来",
+        "summary": "贾芸在凤姐处碰壁后，出门时将所带礼品挑选两件赠与小红，小红含羞收下并相约日后照应传信。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "衔接贾芸此前在门外与小红提及旧年帕子之旧谊，在遭拒失意中推进二人私下情愫。",
+        "generalityHint": "贾府旁支子弟与内院丫鬟间的私人情感互动。",
+        "rationale": "出处为p-649732与p-651188，贾芸与小红在凤姐门外私语互递心意，贾芸出房后赠物订约。",
+        "passageIds": [
+          "p-651188",
+          "p-649732"
+        ]
+      },
+      {
+        "label": "凤姐夜受惊疑",
+        "identityLabel": "凤姐闻异惊惧",
+        "summary": "平儿转述水月庵师父夜遇恶祟吊索之事，加之空屋响动鬼话，致使强梁的凤姐夜半惊悸发渗，次日突闻外头有要紧官事报来。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "多处惊悚传闻叠加，打破了凤姐平日不信神鬼的逞强心理，造成身心恍惚与危机预兆。",
+        "generalityHint": "刻画王熙凤个人的心理转变与贾府渐趋衰败恍惚的阴暗氛围。",
+        "rationale": "出处为p-651658与p-652205，水月庵遇祟之事与空房怪响令凤姐半夜惊醒发渗，随后清早骤闻官事来找贾琏。",
+        "passageIds": [
+          "p-651658",
+          "p-652205"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "贾珍贾琏在外头捆打鲍二何三的骚动，成为凤姐向贾琏阐发主奴体统与整顿治家风俗议论的直接事由。",
+        "passageIds": [
+          "p-649356"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾芸求凤姐谋揽差事遭拒后，顺势在离开时把所余礼物转赠负责引见的小红，使两人的私情往来得以展开。",
+        "passageIds": [
+          "p-650085",
+          "p-651188"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "EtmcapmGJ_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 8486,
+    "candidatesTokenCount": 2158,
+    "totalTokenCount": 10644,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8486
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2158
+      }
+    ]
+  },
+  "durationMs": 16619,
+  "requestHash": "9e544dba95e83f1cb95285134fa2803551035295067ca3756bbf26a9e94ad0b2"
+}

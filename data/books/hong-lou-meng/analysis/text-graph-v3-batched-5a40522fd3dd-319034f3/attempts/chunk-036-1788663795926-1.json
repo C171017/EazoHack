@@ -1,0 +1,154 @@
+{
+  "value": {
+    "summary": "第三十六回中，贾母护持宝玉免其应酬，宝玉益发厌弃仕途经世之说；王夫人裁定袭人按姨娘例给月钱银米；宝钗午间在绛芸轩替袭人刺绣兜肚，忽闻宝玉梦中痛骂金玉姻缘而赞木石之盟；夜间宝玉与袭人畅论生死与文死谏武死战之虚名；次日宝玉往梨香院央龄官唱曲遭拒，目睹龄官与贾蔷情深痴态，幡然彻悟人生情缘各有分定。",
+    "nodes": [
+      {
+        "label": "宝玉杜绝应酬深敬黛玉",
+        "identityLabel": "宝玉厌弃仕进礼法",
+        "summary": "贾母吩咐免除宝玉会客待客，宝玉越发杜绝交往并焚毁四书以外之书，唯深敬自幼不劝其立身扬名的林黛玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾母借伤势为宝玉开脱后，直接展现宝玉叛逆礼教与仕途经济的心态发展。",
+        "generalityHint": "涉及宝玉个人的处世信条及其与宝钗、黛玉等人的根本价值分歧。",
+        "rationale": "通过叙述宝玉因贾母庇护而断绝外务，批判劝导立名之人，凸显其独重黛玉的内心根据。",
+        "passageIds": [
+          "p-238491"
+        ]
+      },
+      {
+        "label": "王夫人定袭人准姨娘待遇",
+        "identityLabel": "袭人升定准妾月例",
+        "summary": "王夫人向凤姐查问定例，决定自掏月银二两一吊补袭人分例，等同赵、周二姨娘待遇，并明言日后作为宝玉妾室之意。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从下人争揽差使与凤姐核实各房月例展开，王夫人基于袭人为人忠慎作出内部提拔决策。",
+        "generalityHint": "贾府内帏针对大丫鬟提拔为妾室的制度安排与私下规制。",
+        "rationale": "王夫人听取凤姐回话后拍板，将袭人待遇由老太太名下转归自己房中匀出并比照姨娘，为袭人确立地位。",
+        "passageIds": [
+          "p-239339",
+          "p-238979"
+        ]
+      },
+      {
+        "label": "宝钗绣鸳鸯与宝玉梦呓",
+        "identityLabel": "绛芸轩梦兆木石姻缘",
+        "summary": "薛宝钗在怡红院替袭人刺绣鸳鸯戏莲兜肚，忽闻睡梦中的贾宝玉痛骂和尚道士所言，高喊偏说是木石姻缘，宝钗闻之怔住。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "描摹宝钗午倦进房替刺针线的细腻场景，突转至宝玉潜意识中对金玉良缘的排斥。",
+        "generalityHint": "集中于宝玉、宝钗与黛玉之间象征性情缘纠葛的特定戏剧性时刻。",
+        "rationale": "宝钗代刺兜肚为黛玉湘云所见，宝玉梦中呓语直接否定金玉良缘，具强烈戏剧对比与伏笔意味。",
+        "passageIds": [
+          "p-241056",
+          "p-242052",
+          "p-241775"
+        ]
+      },
+      {
+        "label": "宝玉议文死谏武死战非正死",
+        "identityLabel": "宝玉论生死与大义",
+        "summary": "宝玉获悉袭人提拔后与其夜谈，驳斥世人所谓文官死谏、武官死战为邀名钓誉之非正死，自陈宁愿死于众女子之清泪。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "承接袭人关于忠臣良将出于不得已之辩驳，层层推论士大夫死节实为弃君弃国之虚名。",
+        "generalityHint": "对传统儒家忠孝大节与名教生死观的全面颠覆与重新评价。",
+        "rationale": "宝玉借与袭人论死，系统表达其反对士大夫名教之累、企求至情至性的生命归宿观。",
+        "passageIds": [
+          "p-242267"
+        ]
+      },
+      {
+        "label": "龄官抗拒宝玉独钟贾蔷",
+        "identityLabel": "梨香院龄官痴情贾蔷",
+        "summary": "宝玉往梨香院央龄官唱曲遭其冷落避拒，随后贾蔷买雀戏耍龄官，龄官怨其戏弄羁绊之身，贾蔷慌忙放雀拆笼、百般体贴。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过宝玉亲历被龄官拒绝及在旁默察贾蔷龄官二人之悲喜互动获得直接经验。",
+        "generalityHint": "呈现一对特定青年男女之间排他且平等的专一情感形态。",
+        "rationale": "龄官拒绝宝玉并独独为贾蔷喜怒啼哭，直接动摇了宝玉以为天下女儿皆可亲善包容的固有认知。",
+        "passageIds": [
+          "p-243247",
+          "p-243671"
+        ]
+      },
+      {
+        "label": "宝玉深悟情缘各有分定",
+        "identityLabel": "宝玉情悟各有分定",
+        "summary": "宝玉回至怡红院向黛玉、袭人长叹，承认自身管窥蠡测，深悟人生情缘各有分定，各人只能得属于自己的眼泪，不能全得。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "将夜间‘眼泪漂尸’的泛爱幻象与梨香院所见的个体专情经验对比，推导得出分定之理。",
+        "generalityHint": "关于人间情感分际与个人情缘局限性的根本生命哲理领悟。",
+        "rationale": "宝玉根据梨香院目睹贾蔷龄官之事，修正了前夜狂想，标志其情感认知从泛爱走向‘情悟分定’。",
+        "passageIds": [
+          "p-244424"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "宝玉厌弃仕进、深敬黛玉的心志，为其在梦中激烈排斥金玉姻缘、执著于木石前盟提供了心理基础。",
+        "passageIds": [
+          "p-238491",
+          "p-242052"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "王夫人暗中定下袭人名分后，凤姐传唤并准其月例，引发袭人回房后与宝玉探讨去留与生死的夜话。",
+        "passageIds": [
+          "p-239339",
+          "p-242267"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "challenges",
+        "rationale": "宝玉夜间声称要全得众女儿眼泪漂尸，被次日梨香院所悟‘各人各得眼泪、不能全得’的结论所彻底否定与修正。",
+        "passageIds": [
+          "p-242267",
+          "p-244424"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "龄官冷拒宝玉而一心系于贾蔷的排他深情，直接促成了宝玉对‘人生情缘各有分定’的领悟。",
+        "passageIds": [
+          "p-243671",
+          "p-244424"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5NecaozoL_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 8872,
+    "candidatesTokenCount": 2056,
+    "totalTokenCount": 10928,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8872
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2056
+      }
+    ]
+  },
+  "durationMs": 15763,
+  "requestHash": "eeb6c33cbb9b2b2c5ff0cda455c246cc690531e99dac0547fead312b27f1688e"
+}

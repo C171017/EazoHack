@@ -1,0 +1,35 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "cross-175",
+        "reason": "Relation 'exemplifies' is incorrect; n-88-1 (分派写经祈福) is the collective assignment/distribution of経文, whereas n-89-4 includes Daiyu actually copying the Sutra in her room, which is a narrative follow-up/continuation (develops/supports) rather than an exemplification relation between theoretical claim/class and instance."
+      }
+    ],
+    "notes": "Target nodes and majority of edges accurately ground in the provided passages of Chapters 86–91. Edge cross-175 inappropriately categorized the temporal execution/continuation of an assigned task as an 'exemplifies' relationship."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "r9qcasuIMouKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 62815,
+    "candidatesTokenCount": 178,
+    "totalTokenCount": 62993,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 62815
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 178
+      }
+    ]
+  },
+  "durationMs": 5627,
+  "requestHash": "b20ba36c9d06ee7dcd84cd578fcc4dce9112ddb619d3025a548d77a4968dc03f"
+}

@@ -1,0 +1,154 @@
+{
+  "value": {
+    "summary": "第六十九回叙述王熙凤引尤二姐引见贾母，暗中调唆张华告状借官断赶人不成，又遣人图谋杀张华灭口未果；贾琏归家纳贾赦所赐秋桐，凤姐遂施“借剑杀人”之计挑唆秋桐百般践踏二姐；尤二姐得病，复遭庸医胡君荣下虎狼之药堕胎致病危，梦妹劝杀妒妇不受，遂吞生金自尽；贾琏悲恸为二姐治丧，凤姐推病克扣丧银，平儿暗中襄助。",
+    "nodes": [
+      {
+        "label": "凤姐引二姐见贾母并弄权逐客",
+        "identityLabel": "引见二姐与暗唆张华",
+        "summary": "王熙凤带尤二姐引见贾母并获准暂住厢房一年后再圆房，暗中却挑唆张华告状欲退亲领人；后见官断难成且恐张华翻案，又命旺儿密谋将张华治死以剪草除根。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述凤姐表面贤良领二姐进府，背地里借官司赶人及企图除掉张华的连续心计。",
+        "generalityHint": "单一连续事件中的权谋手段与情节转折。",
+        "rationale": "基于文本中凤姐领尤二姐见贾母、使人调唆张华告状以及张华去后命旺儿谋害张华灭口的具体记叙。",
+        "passageIds": [
+          "p-495229"
+        ]
+      },
+      {
+        "label": "贾赦赐秋桐与凤姐借剑杀人",
+        "identityLabel": "借剑杀人之计",
+        "summary": "贾琏办事回京获贾赦赏赐秋桐为妾，凤姐吞声掩饰，趁秋桐得宠骄狂之际，表面装软弱劝解，暗施“借剑杀人”之法挑动秋桐折磨、辱骂尤二姐，并致贾母对二姐生厌。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从秋桐进门到凤姐定下借秋桐发脱二姐之策的因果心计推演。",
+        "generalityHint": "贾琏纳秋桐以及凤姐特定借刀杀人策略的事件记录。",
+        "rationale": "文本详细叙述了贾琏带回秋桐，凤姐定下坐山观虎斗之策暗中挑动秋桐，使尤二姐上下受气的全过程。",
+        "passageIds": [
+          "p-497960",
+          "p-497060",
+          "p-497470"
+        ]
+      },
+      {
+        "label": "尤三姐托梦劝杀妒妇遭拒",
+        "identityLabel": "三姐托梦劝杀",
+        "summary": "尤二姐受气成疾，梦见尤三姐手捧宝剑劝其斩杀奸狡妒妇同归警幻案下，二姐自认一生品行有亏、得此报应系当然，不愿再造杀戮之冤而长叹惊醒。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "梦境对话展现尤三姐与尤二姐对因果报应与反抗的不同认知判断。",
+        "generalityHint": "小说特定人物的梦境与命运观念呈现。",
+        "rationale": "记录了尤二姐受折磨病重后，在梦中与尤三姐关于报应与复仇的一席对话。",
+        "passageIds": [
+          "p-498739"
+        ]
+      },
+      {
+        "label": "胡君荣庸医误下虎狼药堕胎",
+        "identityLabel": "庸医误诊打胎",
+        "summary": "贾琏请来太医胡君荣为二姐诊视，胡君荣妄断非胎气而用通经破血之药，致尤二姐腹痛打下一已成形男胎，元气大伤；凤姐则借求神算命反咬属兔的秋桐冲犯，加深秋桐与二姐之怨隙。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "庸医误用药物导致男胎被打下，凤姐借此进一步嫁祸挑唆秋桐。",
+        "generalityHint": "具体的误诊事件及由此引发的妻妾矛盾激化。",
+        "rationale": "文本详细记述胡君荣看脉下药打胎、贾琏愤怒追究以及凤姐借属相冲犯做戏的情节。",
+        "passageIds": [
+          "p-499258"
+        ]
+      },
+      {
+        "label": "尤二姐绝望吞生金自逝",
+        "identityLabel": "尤二姐吞金自尽",
+        "summary": "尤二姐深知病势沉重且日遭折磨，又逢骨肉打下无可悬心，不愿再受零气，遂自箱中取出沉重生金忍痛吞下，穿戴齐整自尽炕上，次日平儿众人见状无不伤心痛哭。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "二姐因身体摧残与精神凌辱至极而做出自绝生命的决断。",
+        "generalityHint": "单一角色的绝望抉择与自杀事件。",
+        "rationale": "对应尤二姐与平儿谈心后深思病已成势，下定决心吞生金自尽的完整经过。",
+        "passageIds": [
+          "p-500740",
+          "p-500460"
+        ]
+      },
+      {
+        "label": "贾琏悲恸治丧与平儿暗助",
+        "identityLabel": "贾琏梨香院治丧",
+        "summary": "贾琏见尤二姐身亡悲恸欲绝，将灵柩停放梨香院并立誓复仇；凤姐装病克扣丧葬银两，贾母亦主张薄葬，幸得平儿偷赠二百两碎银，贾琏得以赊购楠木好板赶办棺椁守灵。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾琏发誓报仇到筹办丧事中各方反应（凤姐推托、平儿私赠银两）的因果推展。",
+        "generalityHint": "特定丧事办理过程中的人物冲突与情感表现。",
+        "rationale": "记述了贾琏在梨香院痛哭、贾母凤姐对丧事的冷漠苛刻以及平儿私递银两助办大板棺椁的情节。",
+        "passageIds": [
+          "p-501123",
+          "p-502065"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "秋桐在凤姐纵容挑拨下的百般辱骂虐待，直接导致尤二姐积郁成疾并引出三姐托梦的情节。",
+        "passageIds": [
+          "p-497960",
+          "p-498739"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "尤二姐梦醒后向贾琏坦陈怀胎半年，从而促使贾琏急忙延请胡君荣看病。",
+        "passageIds": [
+          "p-498739",
+          "p-499258"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "庸医下药打掉男胎且令二姐元气伤尽，加之秋桐受冲犯之激大肆叫骂，成为二姐自认无可悬心、决意吞金自尽的关键原因。",
+        "passageIds": [
+          "p-499258",
+          "p-500740"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "尤二姐吞金自亡直接引出贾琏回府大哭停灵梨香院以及凤姐、平儿各自应对的治丧过程。",
+        "passageIds": [
+          "p-500740",
+          "p-501123"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "r9icarGNHdCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 10812,
+    "candidatesTokenCount": 2179,
+    "totalTokenCount": 12991,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10812
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2179
+      }
+    ]
+  },
+  "durationMs": 18032,
+  "requestHash": "a68d42ee0c66ea61d573a8a2f1469ada94b82fc46bd086a6d06f2275c7efb44e"
+}

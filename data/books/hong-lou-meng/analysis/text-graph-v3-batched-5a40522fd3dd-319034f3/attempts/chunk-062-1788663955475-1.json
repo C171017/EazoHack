@@ -1,0 +1,172 @@
+{
+  "value": {
+    "summary": "第六十二回记述平儿妥善化解厨房与窃案风波，恢复柳家当差；恰逢宝玉、平儿、宝琴、岫烟同日生辰，众人在红香圃开筵行射覆、拇战等酒令；湘云醉卧芍药裀石凳；探春决断惩处违规婆子，黛玉与宝玉议论贾府入不敷出的家计危机；随后香菱斗草弄脏石榴红绫裙，宝玉巧借袭人同款新裙为其换下化解尴尬，并掩埋夫妻蕙与并蒂菱。",
+    "nodes": [
+      {
+        "label": "平儿息事宁人退秦显家的",
+        "identityLabel": "平儿息事决狱",
+        "summary": "平儿遵行“大事化为小事，小事化为没事”原则，释放柳家母女回厨房当差，退回刚趁机谋位的秦显家的；彩云告知贾环实情却反遭疑忌与斥骂，只得将私赠之物弃于水中。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于平儿处置偷窃与厨房纷争的具体过程，说明贾府内部权力纠纷与平儿的处事策略。",
+        "generalityHint": "单一特定事件中的人事处分与内部矛盾呈现。",
+        "rationale": "承接前一回茯苓霜与玫瑰露事件，平儿到场宣布处置结果，反映了仆役间的明争暗斗及贾环的猜忌性格。",
+        "passageIds": [
+          "p-433958"
+        ]
+      },
+      {
+        "label": "宝玉探春等知同日生辰凑分子",
+        "identityLabel": "四人同日生辰与凑分子",
+        "summary": "宝玉清晨行礼后，发现平儿、宝琴、岫烟同在此日过生日，探春提议众人凑分子单为平儿备酒席，并交由柳家的在内厨房操办。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从日常拜寿情节引出多人生日巧合及大观园内姐妹为平儿凑分子过寿的决定。",
+        "generalityHint": "大观园内部特定时日的人际往来与庆生活动。",
+        "rationale": "展现大观园青年男女与丫鬟平儿之间亲密平等的情谊，也推动了红香圃聚宴的发生。",
+        "passageIds": [
+          "p-435378",
+          "p-434838"
+        ]
+      },
+      {
+        "label": "宝钗锁角门警示大观园失窃",
+        "identityLabel": "宝钗治家防嫌",
+        "summary": "宝钗进角门后命婆子锁门自守，告诫宝玉贾府近日失窃之事远不止露霜两件，提醒其谨慎防嫌且不可声张，平儿亦已心明其理。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由日常锁门细节推论出对贾府内部混乱与门户防范的清醒见解。",
+        "generalityHint": "宝钗对大家族治家防盗与自保规矩的原则性认识。",
+        "rationale": "宝钗的对话展现其洞察贾府积弊与治家严谨的性格，同时呼应了平儿处理窃案的深层背景。",
+        "passageIds": [
+          "p-437031"
+        ]
+      },
+      {
+        "label": "红香圃众芳行令与酒底射覆",
+        "identityLabel": "红香圃行酒令",
+        "summary": "众人在红香圃三间小敞厅开宴，平儿拈得射覆，袭人拈得拇战，宝琴、香菱、宝钗、探春等射覆赋诗，湘云划拳输酒且出令逗趣，引出联句与欢闹。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "细致记述行令规则、对点射覆的诗词引用及彼此谑趣过程。",
+        "generalityHint": "特定聚会中的文学游戏与文化才情展现。",
+        "rationale": "集中展现大观园众女子的才情与活泼性格，也是红楼梦中最生动的雅集酒令场景之一。",
+        "passageIds": [
+          "p-437695",
+          "p-439389",
+          "p-439637",
+          "p-439992"
+        ]
+      },
+      {
+        "label": "憨湘云醉眠芍药裀",
+        "identityLabel": "湘云醉卧芍药裀",
+        "summary": "湘云因多饮数杯，避热纳凉而在山石僻处青板石凳上酣睡，落花飞满衣襟，手中落扇，蜂蝶围飞，口中犹念酒令，醒后方觉自愧。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接描摹湘云醉眠名场面及其娇憨脱俗的神态细节。",
+        "generalityHint": "单一人物的经典生活情境与美学意象。",
+        "rationale": "小说中最富诗意与艺术美感的经典特写之一，集中体现史湘云豪爽率真的性情。",
+        "passageIds": [
+          "p-440920",
+          "p-441165"
+        ]
+      },
+      {
+        "label": "黛玉忧贾府后手不接",
+        "identityLabel": "探春理家与黛玉忧后手不接",
+        "summary": "探春从容处置刁蛮婆子，黛玉观后向宝玉赞探春懂进退守分寸，并指出贾府如今出多入少、若不省俭日后必至后手不接，宝玉则乐天回应“短不了咱们两个”。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "由探春理事延伸推导至贾府财政日蹙的宏观危机，展现黛玉的经济洞察。",
+        "generalityHint": "针对贾府整体财政收支走向与家族兴衰趋势的预判。",
+        "rationale": "点明贾府内部盛极转衰、入不敷出的经济实况，与宝玉的不谙世务形成鲜明对照。",
+        "passageIds": [
+          "p-441326"
+        ]
+      },
+      {
+        "label": "香菱斗草污石榴裙",
+        "identityLabel": "香菱斗草与污裙",
+        "summary": "香菱与豆官等在园中采花斗草，因辩论“夫妻蕙”被豆官闹跌在草地积水中，弄脏了宝琴所赠的新石榴红绫裙。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从斗草词句的争执逐步演变为打闹并致湿裙的因果过程。",
+        "generalityHint": "大观园青年女子与丫鬟嬉戏的具体生活场景。",
+        "rationale": "以轻快嬉戏起笔，引出香菱身份命运的微妙隐喻以及后续换裙情节。",
+        "passageIds": [
+          "p-443754"
+        ]
+      },
+      {
+        "label": "宝玉换裙解困并掩埋菱蕙",
+        "identityLabel": "情解石榴裙与埋香草",
+        "summary": "宝玉见香菱污裙恐薛姨妈责怪，取来袭人相同的未穿红裙替香菱换下，解其困窘，又感叹香菱身世；事后将夫妻蕙与并蒂菱挖坑铺花安葬。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉细心周全替香菱免去责难，并以体贴珍重花草之举体现其“情极之毒”的心理与性格。",
+        "generalityHint": "宝玉对待受苦女子特有的体恤与怜惜行为。",
+        "rationale": "回目“呆香菱情解石榴裙”的核心情节，体现宝玉对薄命女子的悲悯以及珍视纯洁自然之情。",
+        "passageIds": [
+          "p-443754",
+          "p-445444"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "发现同日生辰后，探春等人出资凑份子让内厨房备席，直接促成了红香圃的盛大聚会与行令。",
+        "passageIds": [
+          "p-435378",
+          "p-437695"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "红香圃席间行令划拳、罚酒甚多，湘云不胜酒力，才离席走到僻处石凳酣睡。",
+        "passageIds": [
+          "p-439992",
+          "p-440920"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "香菱因斗草打闹污湿石榴裙陷入发愁，宝玉方才借袭人之裙为其换解并埋葬菱蕙。",
+        "passageIds": [
+          "p-443754",
+          "p-445444"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "gticarf0OLCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 15901,
+    "candidatesTokenCount": 2360,
+    "totalTokenCount": 18261,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15901
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2360
+      }
+    ]
+  },
+  "durationMs": 16832,
+  "requestHash": "846e3395d6d8fe0f72d5036df87cd3f33e5f003ea72d4819e44729ac80af7329"
+}

@@ -1,0 +1,40 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-92-2",
+        "reason": "节点sourceRole标为dialogue，但speaker为null，且其证据段落p-673400为叙述迎春处来人向凤姐禀报前情并夹杂叙述者叙事的叙述文段，并非单一人格的主体对话观点，类型标注不符；同时summary将报官与殉情混列为对话亦存在角色混淆。"
+      }
+    ],
+    "rejectedEdges": [
+      {
+        "id": "e-96-3",
+        "reason": "边类型标注为challenges不恰当。傻大姐在山石后哭泣并无心向黛玉泄露婚讯，属于偶发事件，构成了推动情节发展、使掉包计信息败露的承接推进（develops/triggers），并非对凤姐计策的逻辑反驳、观点异议或挑战。"
+      }
+    ],
+    "notes": "其余关于第92至97回通灵宝玉失落、海棠反常开花、元妃薨逝、掉包计与黛玉病危呕血焚稿等叙事节点与逻辑边均核验无误，证据引文与情节发展吻合。"
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "sdqcat-BKKKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 78508,
+    "candidatesTokenCount": 301,
+    "totalTokenCount": 78809,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 78508
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 301
+      }
+    ]
+  },
+  "durationMs": 5915,
+  "requestHash": "75240db0cfeb449cdb2f53744c323257698e4d23f836ff7279acade9449d3aaa"
+}

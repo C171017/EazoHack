@@ -1,0 +1,164 @@
+{
+  "value": {
+    "summary": "本回讲述凤姐因病无法照料丧事，鸳鸯念及贾母恩情与自身前途无望，在套间自缢殉主，魂归太虚幻境，贾政等人为其备棺成全。随后贾母出殡，荣府空虚，周瑞干儿子何三勾结外盗潜入盗窃老太太房中财物，包勇英勇御贼打死盗贼一人，众贼败退，凤姐查验失物并追究上夜之人。",
+    "nodes": [
+      {
+        "label": "鸳鸯自缢殉主",
+        "identityLabel": "鸳鸯自缢殉主",
+        "summary": "鸳鸯在贾母丧期悲痛难当，自思贾母去世后自身无所归宿、不愿受人折磨，得秦氏魂魄引度后悬梁自尽，魂魄归入太虚幻境执掌情司。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于贾母去世后鸳鸯的身世处境与绝望抉择所产生的叙事结局。",
+        "generalityHint": "涉及具体红楼人物命运的个别叙事事件。",
+        "rationale": "文本直接叙述鸳鸯悲恸回屋，受秦可卿魂魄点化与引导后自缢身亡并归于情司。",
+        "passageIds": [
+          "p-800169",
+          "p-801119"
+        ]
+      },
+      {
+        "label": "荣府备棺发引与各人反应",
+        "identityLabel": "贾母送殡与褒赞鸳鸯",
+        "summary": "贾政、宝玉、宝钗等人发现鸳鸯殉节后深感叹息，买棺备殓停于贾母棺后，次日全家送殡出城发引至铁槛寺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从发现鸳鸯自缢后，荣府主子因其忠殉而打破常规礼制的连带行为。",
+        "generalityHint": "具体事件中荣府各主子对殉主的礼遇态度与送殡过程。",
+        "rationale": "文中叙述了贾政赞叹鸳鸯并命买棺随殡，宝玉行礼，宝钗奠酒，众人随后发引出殡。",
+        "passageIds": [
+          "p-801441",
+          "p-801958"
+        ]
+      },
+      {
+        "label": "何三勾引外盗",
+        "identityLabel": "何三勾结盗贼",
+        "summary": "周瑞的干儿子何三被逐出后在赌场因赌资匮乏，向赌徒泄露贾母留有巨资、府中空虚的消息，暗中定计引盗入府抢夺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "何三怀恨贾府且贪财，基于府中出殡守备空虚推导出可引盗入室的因果行为。",
+        "generalityHint": "特定人物勾结盗匪的局部犯罪情节。",
+        "rationale": "文中详述何三在赌场同赌徒密谋，借助干妈关系与府中空虚引海边强盗入内分赃。",
+        "passageIds": [
+          "p-802630"
+        ]
+      },
+      {
+        "label": "妙玉惜春对弈夜话",
+        "identityLabel": "妙玉伴惜春",
+        "summary": "妙玉至大观园探望独自留守看家的惜春，两人品茶对弈直至深夜，为随后遭遇盗贼制造了在场情境。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "惜春害怕孤寂，请妙玉留宿伴夜，由此形成二人同室对局的情节。",
+        "generalityHint": "二人特定夜晚的交往与起居叙事。",
+        "rationale": "文本详细叙述妙玉被邀至惜春处，携茶具煮茶对弈连下数盘至深夜的情形。",
+        "passageIds": [
+          "p-804348",
+          "p-803701"
+        ]
+      },
+      {
+        "label": "包勇勇退盗贼",
+        "identityLabel": "包勇退贼",
+        "summary": "盗贼夜入贾母房中洗劫并窥视惜春屋，看园的包勇闻声持棍跃上屋顶击退盗匪，并打死一人，群贼败走。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由于府中上夜者胆怯不敢上前，包勇凭一身武艺挺身而出驱散贼众。",
+        "generalityHint": "特定打斗与保卫宅邸事件。",
+        "rationale": "文本描述包勇持棍跃房击落盗贼，在园中独斗数贼并打死周瑞干儿子何三，众贼溃逃。",
+        "passageIds": [
+          "p-804348",
+          "p-805742"
+        ]
+      },
+      {
+        "label": "查勘失盗与严惩守夜",
+        "identityLabel": "荣府查验失盗",
+        "summary": "天明后营官查勘贼踪，凤姐扶病查点贾母房中失物，得知箱柜皆空且有内奸何三参与，盛怒之下命将上夜妇人尽行捆送官营审问。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "失盗事实确凿且涉及家奴通盗，凤姐据此对失职及涉嫌通敌的守夜仆妇作出惩办决断。",
+        "generalityHint": "贾府管事者对特定失窃案的处置决断。",
+        "rationale": "文本记述营官查验、凤姐查看失物发现全空后，震怒下令将上夜女人捆送军营审讯。",
+        "passageIds": [
+          "p-806262",
+          "p-806486"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "鸳鸯自缢殉主后，直接引出了贾政、宝玉等人的哀痛反应及以义烈之礼备棺成殓的发引安排。",
+        "passageIds": [
+          "p-801441",
+          "p-801958"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾母送殡出城导致荣府守备空虚，为赌场中的何三密谋勾结外盗乘虚而入提供了契机。",
+        "passageIds": [
+          "p-801958",
+          "p-802630"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "何三引盗入府直接导致群贼夜袭上屋及惜春院，从而引发包勇持械御贼打斗。",
+        "passageIds": [
+          "p-802630",
+          "p-804348"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "妙玉在惜春房中作伴至四更，群贼偷看生出歹念欲踹门，促成了包勇及时赶到并在房顶院内退贼的情境。",
+        "passageIds": [
+          "p-804348"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "包勇打退盗贼并打死何三后，官营与贾芸、林之孝、凤姐等人随后勘察现场并清点失物、处置看夜仆妇。",
+        "passageIds": [
+          "p-805742",
+          "p-806486"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "lNmcaq_PC-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 9425,
+    "candidatesTokenCount": 1991,
+    "totalTokenCount": 11416,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9425
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1991
+      }
+    ]
+  },
+  "durationMs": 15259,
+  "requestHash": "3854ccdb772c71b5be900d49dfcdfb74fc30f7c9b884a53decf1e6fd0e5aadfa"
+}

@@ -1,0 +1,44 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-25-5",
+        "reason": "sourceRole被错误标记为dialogue并将speaker归于王熙凤。该节点叙述不仅包含凤姐的戏言，还包含黛玉回房烦闷、李纨调笑、众人尝暹罗茶等多句交替对话与叙述性背景，属于完整叙事单元（narrative），不应定为凤姐单一口吻的dialogue。"
+      }
+    ],
+    "rejectedEdges": [
+      {
+        "id": "e-22-3",
+        "reason": "边类型错误。n-22-4为宝玉作偈，n-22-5为钗黛破禅。黛玉宝钗针对宝玉的偈语进行反驳和破斥，是n-22-5反驳挑战n-22-4；若以n-22-4为source，n-22-4并未主动挑战n-22-5，方向倒置或关系类型不当。"
+      },
+      {
+        "id": "cross-55",
+        "reason": "过度推导跨章节发展关系。小红对佳蕙说的‘千里搭长棚，没有个不散的筵席’是下层丫鬟对自身差使与人情流转的世俗感慨，与第31回黛玉‘喜散不喜聚’、宝玉‘愿常聚’的性灵哲学对照无文本上的直接因果承接或概念派生关系。"
+      }
+    ],
+    "notes": "其余关于宝玉读庄子、黛玉题绝句、贾琏与多姑娘私通、平儿掩护、宝钗过生日荐戏、宝黛共读西厢、贾芸钻营谋事（求舅拒赊、倪二借银、贿赂凤姐得差）、小红受排挤及贾环推灯、马道婆魇魔法术等节点与边均有充足原典引文支持，事实与逻辑关系匹配。"
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "mdqcapOtDqKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 53630,
+    "candidatesTokenCount": 469,
+    "totalTokenCount": 54099,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 53630
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 469
+      }
+    ]
+  },
+  "durationMs": 5787,
+  "requestHash": "9624d2c6f51e4248a0bf5fa8184c93a8930fc18ac13cd403a502692f1b11ee0c"
+}

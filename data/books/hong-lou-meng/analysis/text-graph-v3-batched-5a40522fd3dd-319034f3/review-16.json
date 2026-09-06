@@ -1,0 +1,68 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-78-2",
+        "reason": "sourceRole标注为dialogue且指定speaker为薛宝钗，但该节点文本涵盖了王夫人与凤姐私下讨论、王夫人命人请宝钗、宝钗对答及王凤二人的回应等整段叙事经过，且包含王夫人凤姐二人多段言论与旁白叙述，非单一角色独白或纯dialogue，sourceRole应为narrative或speaker应为null。"
+      },
+      {
+        "id": "n-78-4",
+        "reason": "sourceRole为narrative却错误指定了speaker为贾宝玉。narrative文本叙述宝玉走访落空的心路历程，并非宝玉的言语道白，不应分配speaker。"
+      },
+      {
+        "id": "n-78-5",
+        "reason": "sourceRole为narrative却指定speaker为贾政。该节点统括老学士闲征姽婳词事件始末、宝玉作诗及幕客称赞，属于叙事单元，不应分配单一speaker贾政。"
+      },
+      {
+        "id": "n-78-6",
+        "reason": "sourceRole为narrative却指定speaker为贾宝玉。该节点包含宝玉备祭品、夜奠芙蓉花、行礼、悬挂宣读诔文及后文变故的完整事件叙述，叙述角色应无具体发言者speaker。"
+      },
+      {
+        "id": "n-79-3",
+        "reason": "sourceRole为narrative却指定speaker为贾宝玉。该节点叙述宝玉感怀徘徊紫菱洲及题诗经过，为叙事单元，不应分配speaker。"
+      },
+      {
+        "id": "n-80-5",
+        "reason": "sourceRole标为dialogue且speaker标为迎春，但该节点总结与文本涵盖了迎春归宁哭诉、王夫人解劝、安排住宿、住三日往邢夫人处、邢夫人塞责塞事及被孙家接走的整段叙事流程，属于包含对话的narrative叙事单元，而非迎春单一发言dialogue。"
+      },
+      {
+        "id": "n-81-6",
+        "reason": "primaryTheme标注为“儿女痴情、性灵知己与婚变离散”明显错误。该节点核心为贾政训诫宝玉禁止诗词游荡、强行勒令专习八股举业立身，其主旨为家族教子与科举立身，应属“世家荣枯、宗族盛衰与抄家败亡”或治家教子范畴，与儿女痴情无关。"
+      }
+    ],
+    "rejectedEdges": [
+      {
+        "id": "e-78-4",
+        "reason": "关系类型不当。n-78-5是贾政书房父子幕僚应题作《姽婳词》，n-78-6是宝玉夜至芙蓉花前祭奠晴雯杜撰《芙蓉女儿诔》，二者是完全独立的两个诗词创作事件，《姽婳词》并未在论述或情节结构上develops（扩展或推进）晴雯的祭奠与诔文。"
+      },
+      {
+        "id": "cross-161",
+        "reason": "关系类型不当且方向勉强。节点n-80-3叙述夏金桂以魇魔法陷害香菱致香菱投奔宝钗，节点n-82-3为袭人因香菱与尤二姐之惨痛而心生兔死狐悲之感并与黛玉谈论妻妾处境。n-80-3是具体事件，并不是对n-82-3观点的exemplifies（例证），逻辑上若有关联也应是supports，且将前期事件直接向后续人物议论连exemplifies不合关系定义。"
+      }
+    ],
+    "notes": "部分节点存在sourceRole为narrative却误赋speaker，或将通段叙事误标为某一发言者的dialogue的问题。此外部分跨回目与并列文学创作事件的关系类型标注不准确。"
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "qtqcasLfAaKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 89165,
+    "candidatesTokenCount": 1002,
+    "totalTokenCount": 90167,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 89165
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1002
+      }
+    ]
+  },
+  "durationMs": 10671,
+  "requestHash": "4df43bc489e397e10775d915e790e6242de381b1c73be1590ea0648a6b1a56c6"
+}

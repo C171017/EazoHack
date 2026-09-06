@@ -1,0 +1,164 @@
+{
+  "value": {
+    "summary": "第八十六回讲述薛蟠人命官司在上下使钱、串通证人与行贿知县后，将斗殴砸死改判为误伤；贾府中误传贵妃薨逝引出元妃命理之议；宝玉至潇湘馆见黛玉研读琴谱，黛玉向其讲解减字谱与琴理心法，后因赏兰花触动身世心事而感伤。",
+    "nodes": [
+      {
+        "label": "小厮述薛蟠酒肆打死张三缘由",
+        "identityLabel": "薛蟠误伤人命起因",
+        "summary": "小厮向薛姨妈转述薛蟠南下因嫌当槽儿张三换酒迟慢，拿碗砸破其头致死的经过。",
+        "sourceRole": "dialogue",
+        "speaker": "小厮",
+        "reasoningHint": "从听闻转述薛蟠自身所言直接引出打死人命的初始口供和情节起因。",
+        "generalityHint": "涉及具体案件发生过程的个案陈述。",
+        "rationale": "基于薛家小厮向薛姨妈汇报薛蟠杀人起因的具体对话内容。",
+        "passageIds": [
+          "p-632850"
+        ]
+      },
+      {
+        "label": "薛蝌行贿翻供改误伤计策",
+        "identityLabel": "薛家行贿翻案策略",
+        "summary": "薛蝌来信述及通过行贿吴良与打点上下，代递呈子将薛蟠自认斗杀辩解为泼酒失手误伤张三。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于初审不利口供，由幕友出谋划策以拉拢同席者并代递呈底翻案。",
+        "generalityHint": "记录具体诉讼计谋与文书的单一案件情节。",
+        "rationale": "基于薛蝌来书及所附呈底和知县初批文书的叙述。",
+        "passageIds": [
+          "p-633386",
+          "p-633603",
+          "p-633844"
+        ]
+      },
+      {
+        "label": "知县受贿重审薛案定为误伤",
+        "identityLabel": "知县受贿翻案定谳",
+        "summary": "贾琏薛家重金买告知县后，知县坐堂压制尸亲张王氏，改口供与尸格，将薛蟠定为误伤候详。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在贾府出面及数千银两贿赂生效后，知县于堂审中推翻原供、依伪证定案。",
+        "generalityHint": "描写特定官衙受贿舞弊、枉法断案的具体事件。",
+        "rationale": "对应回目中“受私贿老官翻案牍”的核心情节，详述审判全过程。",
+        "passageIds": [
+          "p-634054"
+        ]
+      },
+      {
+        "label": "宝钗忆算命者推元妃八字",
+        "identityLabel": "元妃命理推论",
+        "summary": "因周贵妃薨逝引发误传，宝钗忆及曾有术士推算元妃八字大贵却荣华不久、逢寅年卯月恐有劫数。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "由宫中贵妃薨逝的讹传引申至早年算命先生根据八字五行生克对元妃荣枯的推论。",
+        "generalityHint": "针对元春生辰八字及特定命理格局的具体批断。",
+        "rationale": "宝钗针对贾母等人疑心及外间讹言，讲述元妃生辰八字推算的具体情节。",
+        "passageIds": [
+          "p-635597"
+        ]
+      },
+      {
+        "label": "黛玉解琴谱减字与指法",
+        "identityLabel": "黛玉解琴谱",
+        "summary": "宝玉见黛玉读琴谱不识其字，黛玉向其解说琴谱减字为指法与徽弦合成的一声之法。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "由宝玉对天书般字体的疑问直接解释减字谱的构成结构与弹奏手法。",
+        "generalityHint": "针对古琴指法与减字谱读法的技艺性解说。",
+        "rationale": "黛玉为宝玉解析古琴文字谱与左右手指法（如左手按徽、右手钩弦）。",
+        "passageIds": [
+          "p-637580"
+        ]
+      },
+      {
+        "label": "黛玉论琴理与修身心法",
+        "identityLabel": "黛玉琴理心法论",
+        "summary": "黛玉阐发“琴者禁也”的古义，指出抚琴需择清静环境、端正身心、涵养性情方能与道合妙。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "从传统琴道引经据典，展开关于抚琴环境、心境与修身关系的完整论述。",
+        "generalityHint": "关于琴道涵养性情与知音之道的普遍原理性论述。",
+        "rationale": "对应回目“寄闲情淑女解琴书”，集中体现黛玉关于古琴精神与演奏礼仪的阐述。",
+        "passageIds": [
+          "p-637580"
+        ]
+      },
+      {
+        "label": "黛玉对兰花感身世伤怀",
+        "identityLabel": "黛玉对兰伤春悲己",
+        "summary": "宝玉见兰花提及《猗兰操》，黛玉独对双朵兰花触景生情，自伤病弱青春如残春花柳，不禁落泪。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从宝玉无心之语及眼前盛开兰花，联想自身多病孤弱的身世与前景，触发悲情。",
+        "generalityHint": "个体人物在特定情境下的心理自伤与生命感喟。",
+        "rationale": "本回结尾处黛玉由琴而花、反生悲戚的关键心理与细节描写。",
+        "passageIds": [
+          "p-638799"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "薛蟠殴打致死张三的实情是薛蝌构思串供与翻供计策的直接事实前件。",
+        "passageIds": [
+          "p-632850",
+          "p-633386"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "薛蝌设计的“泼酒失手误碰”说词与买通证人的安排，为知县坐堂翻案提供了具体口供依据。",
+        "passageIds": [
+          "p-633603",
+          "p-634054"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "在向宝玉解释具体琴谱符号之后，黛玉进一步上升至古人制琴修身的琴理心法。",
+        "passageIds": [
+          "p-637580"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "因黛玉论琴引起宝玉提到《猗兰操》，进而促使黛玉对送来的兰花产生感触而悲泣。",
+        "passageIds": [
+          "p-637580",
+          "p-638799"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "BNmcaonkE7Ci0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 8632,
+    "candidatesTokenCount": 1976,
+    "totalTokenCount": 10608,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8632
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1976
+      }
+    ]
+  },
+  "durationMs": 13696,
+  "requestHash": "bf721ece9deb0ac38adf234c78920929b3761bdb5c5eaa27ce67a5df33588220"
+}

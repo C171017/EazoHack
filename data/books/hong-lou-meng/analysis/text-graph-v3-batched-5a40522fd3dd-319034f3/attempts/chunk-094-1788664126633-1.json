@@ -1,0 +1,158 @@
+{
+  "value": {
+    "summary": "第九十四回中，贾琏向王夫人请示后遣散水月庵女尼并惩处贾芹；怡红院枯萎海棠冬日异常绽放，众人各抒己见，贾母设宴赏花作诗；宴后宝玉发觉通灵宝玉遗失，怡红院陷入恐慌并展开搜查、测字打卦等多方追索。",
+    "nodes": [
+      {
+        "label": "王夫人定夺遣散女尼女道",
+        "identityLabel": "水月庵案善后处理",
+        "summary": "贾琏因贾政无暇查问揭帖事宜而请示王夫人，王夫人主张遣送女尼返乡，严诫贾芹并断绝水月庵私通，贾琏随后依计令赖大执行。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾政交托、贾琏卸责请示到王夫人权衡家族体统与慈悲心肠所作的推论安排。",
+        "generalityHint": "涉及贾府治家、管束子弟与处置寄居尼姑的具体家务决策。",
+        "rationale": "基于p-684255与p-685090，王夫人不仅决断遣还女尼以绝后患，还对贾芹及水月庵立规矩，贾政亦认可销案。",
+        "passageIds": [
+          "p-684255",
+          "p-685090"
+        ]
+      },
+      {
+        "label": "怡红院海棠冬日反常开花",
+        "identityLabel": "海棠花开之异象",
+        "summary": "怡红院枯萎一年的海棠在十一月小阳春忽开繁花，惊动贾母及全府众人前来观看，引发关于吉凶征兆的议论。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接叙述海棠反常盛开的事实，引出各房人物对草木异象的各自解读。",
+        "generalityHint": "单一特定场景中的自然反常事件，成为全回后半段情节的触发器。",
+        "rationale": "根据p-686375，枯萎的海棠不合时令地绽放，引得全府主子纷纷聚集并引发吉凶之争。",
+        "passageIds": [
+          "p-686375"
+        ]
+      },
+      {
+        "label": "贾母设宴赏花与诸子咏诗",
+        "identityLabel": "宴海棠贾母赏花",
+        "summary": "贾母驳斥花妖怪异之说，坚持定性为喜事并开宴赏花，命宝玉、贾环、贾兰各作一首七言绝句志喜。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于贾母强行护持吉兆的意志，借席间赋诗展现诸孙心性与才情。",
+        "generalityHint": "大观园内一次特定家族宴饮诗会，承载了贾府内各人的微妙心态。",
+        "rationale": "根据p-687303、p-687535至p-687674，贾母压制异论摆宴作诗，宝玉、贾环、贾兰依次献诗，贾母评判褒贬。",
+        "passageIds": [
+          "p-687303",
+          "p-687535",
+          "p-687674"
+        ]
+      },
+      {
+        "label": "换衣惊觉通灵宝玉遗失",
+        "identityLabel": "宝玉失落通灵宝玉",
+        "summary": "贾母席散后，宝玉更衣时袭人发现通灵宝玉失落，怡红院上下惊慌搜寻无果，恐招弥天大祸。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因赏花迎接贾母匆忙更衣解玉，到宴后发觉玉不见的直接经过与院中恐慌情绪。",
+        "generalityHint": "关乎宝玉生命根基与全书核心隐喻的单一核心危机事件。",
+        "rationale": "根据p-688130，宝玉摘玉忘带，袭人及众丫鬟翻箱倒柜全无踪影，众人惊骇万分不敢声张。",
+        "passageIds": [
+          "p-688130"
+        ]
+      },
+      {
+        "label": "大观园内部闭门搜查与疑忌",
+        "identityLabel": "失玉后搜检与追问贾环",
+        "summary": "探春下令闭门并悬赏寻玉，李纨主张搜查随身丫鬟，探春疑及贾环促狭；平儿试探反遭贾环与赵姨娘大闹。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因寻玉无着引发对盗窃与促狭的推想，进而在大观园内部实施搜检，激化了赵姨娘房与众人的矛盾。",
+        "generalityHint": "府内危机应对中引发的内部审讯与家族内房派系冲突。",
+        "rationale": "根据p-688911、p-689457与p-689865，从解怀搜身到怀疑贾环，继而引来赵姨娘哭闹，反映了内部猜疑与混乱。",
+        "passageIds": [
+          "p-688911",
+          "p-689457",
+          "p-689865"
+        ]
+      },
+      {
+        "label": "凤姐献计暗访与多方占卜寻玉",
+        "identityLabel": "暗访与占测通灵玉",
+        "summary": "王夫人得知失玉震怒，凤姐献计秘而不宣、暗加踩缉以防毁赃；下人封锁门户，林之孝求刘铁嘴测字，岫烟提议求妙玉扶乩。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "结合人情利害推想偷玉者心理（凤姐分析逼急毁玉灭口），进而转向封门查访与占卜求仙的双重应对。",
+        "generalityHint": "贾府在面临毁灭性危机时的多重求索方式（权术暗查、测字打卦、神仙扶乩）。",
+        "rationale": "根据p-690670与p-691268，凤姐设谋防止毁玉灭迹，李纨等封门限期，并通过测字与扶乩探寻下落。",
+        "passageIds": [
+          "p-690670",
+          "p-691268"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "海棠冬日反常开花直接引发了贾母前来观赏并决定摆宴题诗。",
+        "passageIds": [
+          "p-686375",
+          "p-687303"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "正因为贾母赏花开宴，宝玉匆忙更衣解下通灵宝玉，宴后才发现玉已丢失。",
+        "passageIds": [
+          "p-687830",
+          "p-688130"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "通灵宝玉在怡红院失落后无法找到，导致探春、李纨介入，开启闭门搜检与盘问贾环。",
+        "passageIds": [
+          "p-688130",
+          "p-688911"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "私下盘查与大闹惊动了王夫人，凤姐闻讯献上暗访之策，李纨等遂封锁园门并托人测字寻玉。",
+        "passageIds": [
+          "p-689865",
+          "p-690211",
+          "p-690670",
+          "p-691268"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MNmcatysLNCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 11609,
+    "candidatesTokenCount": 2168,
+    "totalTokenCount": 13777,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11609
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2168
+      }
+    ]
+  },
+  "durationMs": 14619,
+  "requestHash": "3fd50fbf1f05e1fbff6d7ac91ef7a9407b3c0b2909505e4e69342d26b84e2637"
+}

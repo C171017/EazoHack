@@ -1,0 +1,150 @@
+{
+  "value": {
+    "summary": "第一百一十八回中，惜春执意出家修行，王夫人允其在家带发修行，紫鹃自愿随侍；宝玉口诵判词预示结局，引得众人惊悲。同时，赖尚荣薄待贾政求助反欲脱籍；贾环、贾芸、王仁等人起意瞒骗邢夫人将巧姐许与外藩，幸得平儿机警察觉并报与王夫人。宝玉沉迷释道之书，宝钗与袭人苦口苦谏后，宝玉借贾政家信之机佯作改悟、封存杂书并备考乡试，实则心怀‘从此而止’的彻底出尘之念。",
+    "nodes": [
+      {
+        "label": "惜春修行紫鹃相随",
+        "identityLabel": "惜春出家",
+        "summary": "王夫人因劝阻惜春无效，许其在府中带发修行并设静室，紫鹃主动请缨终身服侍惜春。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文惜春绞发求出家的情节，王夫人退步折中，紫鹃感恩黛玉决意相从。",
+        "generalityHint": "涉及惜春、紫鹃及贾府内眷处理出家事宜的具体事件。",
+        "rationale": "文本详述了邢王二夫人、李纨、尤氏商议准许惜春在屋里修行，紫鹃跪求王夫人派她跟侍惜春一辈子。",
+        "passageIds": [
+          "p-847211",
+          "p-848312"
+        ]
+      },
+      {
+        "label": "宝玉诵判词惊众人",
+        "identityLabel": "勘破三春判词",
+        "summary": "宝玉闻惜春出家不仅不悲反赞好事，并念诵‘勘破三春景不长’之诗，令王夫人与宝钗等惊痛。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉引用前文太虚幻境所见册页诗句印证惜春命运，由此引发王夫人和宝钗对其迷执的担忧。",
+        "generalityHint": "针对惜春乃至贾家四春命运的具体判词谶语。",
+        "rationale": "宝玉借诗道破惜春出家命运，引得王夫人、宝钗、李纨各有所感与悲戚。",
+        "passageIds": [
+          "p-848277",
+          "p-848312"
+        ]
+      },
+      {
+        "label": "贾环王仁谋卖巧姐",
+        "identityLabel": "巧姐议婚风波",
+        "summary": "贾环因恨凤姐，与贾芸、王仁串通，借外藩买偏房之机哄骗邢夫人将巧姐许配以图利。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由赖尚荣脱籍、贾芸赌输缺钱引发，贾环趁机公报私仇，串通王仁欺蒙邢夫人。",
+        "generalityHint": "家族内部恶子串通欺瞒长辈、谋害幼女的具体阴谋事件。",
+        "rationale": "贾环、贾芸、王仁、邢大舅各怀私心，哄骗邢夫人应允外藩相看巧姐之事。",
+        "passageIds": [
+          "p-849316",
+          "p-849788"
+        ]
+      },
+      {
+        "label": "平儿察奸谋求告王夫人",
+        "identityLabel": "平儿护巧姐",
+        "summary": "平儿察觉外藩相看有异，打听实情后急告李纨、宝钗转报王夫人，然邢夫人执迷作主令事情悬而未决。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "平儿观察到相亲来路不正，迅速通过下人查实风声并寻求贾府内部救助。",
+        "generalityHint": "贾府内部忠仆尽力救助孤弱的具体事件。",
+        "rationale": "平儿看出相看者为外头路数，求告王夫人；邢夫人却刚愎自用，执意作主。",
+        "passageIds": [
+          "p-850106",
+          "p-850403",
+          "p-850613"
+        ]
+      },
+      {
+        "label": "宝钗袭人苦谏宝玉",
+        "identityLabel": "妻妾规箴宝玉",
+        "summary": "宝钗见宝玉细玩《庄子》，以圣贤忠孝与赤子之心相劝其求取功名；袭人亦以人情世理相劝。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "宝钗立足儒家伦理与功名观念驳斥宝玉的虚无离群之说，力促其回头走仕途经济之路。",
+        "generalityHint": "儒道思想碰撞及仕途经济与出世解脱的人生道路争辩。",
+        "rationale": "宝钗与宝玉辨析‘赤子之心’与‘巢许夷齐’，袭人进而规谏宝玉体谅长辈与人心。",
+        "passageIds": [
+          "p-851846"
+        ]
+      },
+      {
+        "label": "宝玉佯作改悟备考",
+        "identityLabel": "宝玉假意收心",
+        "summary": "宝玉见贾政来信催促场期，顺势与贾兰谈文，并搬开道书释典、入静室用功，暗含绝尘决意。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉借宝钗‘从此而止’一语立定主意，以求取一第作为报答父母天恩并借机斩断尘缘的前奏。",
+        "generalityHint": "宝玉应付科举与告别尘世之转折举动。",
+        "rationale": "宝玉封存杂书、收敛心神备考，使宝钗、袭人、王夫人误以为其真心回心转意。",
+        "passageIds": [
+          "p-852817",
+          "p-853374",
+          "p-853676"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "惜春定意修行引发宝玉念诵判词，进一步推展了众人的悲戚与宝玉的入迷表象。",
+        "passageIds": [
+          "p-847211",
+          "p-848277",
+          "p-848312"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾环、贾芸等人的阴谋导致外藩相看，进而促使平儿警觉并向王夫人求告。",
+        "passageIds": [
+          "p-849788",
+          "p-850106",
+          "p-850403"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝钗劝宝玉‘博得一第便从此而止’，成为宝玉借题发挥、佯装改悟备考的直接契机。",
+        "passageIds": [
+          "p-851846",
+          "p-852817",
+          "p-853374"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ttmcaur_ArCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 10381,
+    "candidatesTokenCount": 1879,
+    "totalTokenCount": 12260,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10381
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1879
+      }
+    ]
+  },
+  "durationMs": 14739,
+  "requestHash": "2765024815fa7b6f1aba4d31e0a3f8aafa79ef7970f2569c64bcdb102cba45d0"
+}

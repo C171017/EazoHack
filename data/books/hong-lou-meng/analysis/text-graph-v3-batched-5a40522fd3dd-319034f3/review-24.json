@@ -1,0 +1,39 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-120-2",
+        "reason": "The sourceRole is marked as narrative, but the speaker field is filled with '贾政'. According to guidelines, narrative nodes should have speaker set to null, or be marked as dialogue if attributing direct speech."
+      },
+      {
+        "id": "n-120-6",
+        "reason": "The sourceRole is marked as narrative, but speaker is attributed to '曹雪芹'. In narrative nodes, speaker must be null unless it is dialogue."
+      }
+    ],
+    "rejectedEdges": [],
+    "notes": "Reviewed target nodes and edges against cited evidence. All textual relationships and content summaries align accurately with the narrative of chapters 117-120; only two nodes had mismatched sourceRole ('narrative') and non-null speaker attributes."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "vNqcasWHAaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 64843,
+    "candidatesTokenCount": 200,
+    "totalTokenCount": 65043,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 64843
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 200
+      }
+    ]
+  },
+  "durationMs": 3676,
+  "requestHash": "a2d93420b13178adcacd63c8c98fbac2b4c86f5e6e090abe8330113f09bf2fbd"
+}

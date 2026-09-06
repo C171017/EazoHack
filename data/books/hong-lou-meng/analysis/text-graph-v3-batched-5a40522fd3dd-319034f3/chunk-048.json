@@ -1,0 +1,178 @@
+{
+  "value": {
+    "summary": "薛蟠因挨打羞于见人，决意跟随张德辉南下贩货游历，薛姨妈与宝钗商定后允准其行。薛蟠出门后，宝钗引香菱入大观园蘅芜苑作伴。平儿到来提及贾琏因石呆子古扇之事遭贾赦毒打，并向薛家讨要棒疮药。随后，香菱拜黛玉为师苦心学诗，黛玉传授作诗首重立意与揣摩名家之法。香菱领略诗趣后两度作月诗未臻佳境，终在如痴如醉中于梦中得句。",
+    "nodes": [
+      {
+        "label": "薛蟠避羞随商出门",
+        "identityLabel": "薛蟠出行做买卖",
+        "summary": "薛蟠因遭柳湘莲毒打在家养伤羞见亲友，趁铺面伙计张德辉将南下贩卖纸札香扇，决意随同出门避羞并游览山水；宝钗劝薛姨妈放行令其历练，终得成行。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从薛蟠挨打羞愤的心态与张德辉谈生意，推导其借做买卖出门避羞的行动决策。",
+        "generalityHint": "单一人物因特定处境做出的具体行动决策。",
+        "rationale": "基于p-326567及p-327244，薛蟠欲避羞并见世面，经宝钗劝解后薛姨妈同意其随张德辉外出。",
+        "passageIds": [
+          "p-326567",
+          "p-327244"
+        ]
+      },
+      {
+        "label": "香菱进园入蘅芜苑",
+        "identityLabel": "香菱入住大观园",
+        "summary": "薛蟠走后薛家人口减少，宝钗提议让香菱随其搬进大观园蘅芜苑作伴，香菱遂得偿夙愿入住园中。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述薛家内宅防守与人口安排的调整，引出香菱搬进大观园的顺理成章。",
+        "generalityHint": "单个事件中的人物居住环境变动。",
+        "rationale": "基于p-327921与p-328271，薛蟠走后薛姨妈收拢人员，宝钗顺势带香菱进园作伴。",
+        "passageIds": [
+          "p-327921",
+          "p-328271"
+        ]
+      },
+      {
+        "label": "贾琏因石呆子扇遭笞打",
+        "identityLabel": "石呆子扇案引发贾琏挨打",
+        "summary": "平儿向宝钗倾诉贾雨村讹害石呆子强夺古扇献给贾赦，贾琏因不忿贾赦行径而出言顶撞，遭贾赦毒打致伤，特来讨要棒疮药。",
+        "sourceRole": "dialogue",
+        "speaker": "平儿",
+        "reasoningHint": "平儿借叙述石呆子扇子事件与贾琏的回护抗辩，解释贾琏获罪挨打的原委。",
+        "generalityHint": "特定权势横暴抢夺物产导致的家庭冲突事件。",
+        "rationale": "基于p-328814，平儿向前来探询的宝钗详述贾雨村借官逼夺石呆子古扇及贾琏触怒贾赦被打之经过。",
+        "passageIds": [
+          "p-328814"
+        ]
+      },
+      {
+        "label": "黛玉授诗法倡不以词害意",
+        "identityLabel": "林黛玉诗学论述",
+        "summary": "香菱拜黛玉为师学诗，黛玉指出起承转合与格调规矩皆为末事，关键在于立意与真趣，并为其规划了读王维、杜甫、李白等人的读诗进阶路线。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "黛玉结合近体诗规矩与创作真谛，推演出重意不重词的论断并给出经典阅读训练序列。",
+        "generalityHint": "关于诗歌创作核心法门与学诗路径的通则理论。",
+        "rationale": "基于p-329641，黛玉系统讲授作诗法则，倡导‘不以词害意’并赠王维五言律供其细揣。",
+        "passageIds": [
+          "p-329641"
+        ]
+      },
+      {
+        "label": "香菱悟诗境得三昧",
+        "identityLabel": "香菱领悟王维诗境",
+        "summary": "香菱读完王维诗后向黛玉阐述读后体会，认为好诗在于看似无理却想来逼真情切，获得宝玉与黛玉对其领悟得诗家三昧的赞赏与指点。",
+        "sourceRole": "dialogue",
+        "speaker": "香菱",
+        "reasoningHint": "香菱以王维《塞上》等诗句为证据归纳出诗歌造境的心理共鸣，黛玉则引陶诗印证化用痕迹。",
+        "generalityHint": "对诗歌炼字造境艺术规律的具体体悟与审美分析。",
+        "rationale": "基于p-330455与p-330948，香菱举王诗具体字眼谈逼真之感，宝玉赞其得三昧，黛玉以陶诗揭示师承脉络。",
+        "passageIds": [
+          "p-330455",
+          "p-330948"
+        ]
+      },
+      {
+        "label": "香菱连番吟月入痴魔",
+        "identityLabel": "香菱作诗与入迷",
+        "summary": "黛玉出十四寒韵命香菱作咏月诗，香菱初作措词不雅，再作过于穿凿切月色，但其神思专一、茶饭无心，甚至把日常说话听成诗韵，被众人戏称为诗魔。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从香菱连续两次作诗的修改与评判，展现其痴迷苦构的精神状态及创作递进。",
+        "generalityHint": "刻画特定人物执着学艺的痴迷行为与初学过程。",
+        "rationale": "基于p-331583、p-331905与p-332384，记录香菱两次作诗得批及池边树下苦吟痴怔之状。",
+        "passageIds": [
+          "p-331583",
+          "p-331905",
+          "p-332384"
+        ]
+      },
+      {
+        "label": "香菱梦中得句诗成",
+        "identityLabel": "香菱梦中得诗",
+        "summary": "香菱日夜苦思寝食难安，夜间五更朦胧睡去后精血诚聚，终在梦呓中构得绝妙八句，醒后录出急往寻黛玉评定。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由日间苦思无果到夜间精诚专一，最终在潜意识的梦境中爆发诗思完成创作。",
+        "generalityHint": "具体艺术构思在极端专注下通过梦境顿悟的个案呈现。",
+        "rationale": "基于p-332797，香菱通宵构思终在梦中偶得八句，宝钗笑叹其诚心通仙。",
+        "passageIds": [
+          "p-332797"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "薛蟠决意随商远行使得薛家内宅防守需变动，直接促成了宝钗将香菱带入园中作伴。",
+        "passageIds": [
+          "p-327244",
+          "p-327921"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "香菱得以住进大观园蘅芜苑，才有了闲暇并就近前往潇湘馆拜黛玉为师学习作诗。",
+        "passageIds": [
+          "p-328271",
+          "p-329641"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "黛玉向香菱推荐读王维五言律，香菱读毕后领会其中真趣，向黛玉汇报心得并获进一步点拨。",
+        "passageIds": [
+          "p-329641",
+          "p-330455"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "香菱领悟诗意三昧后央求黛玉出题实作，黛玉命其作十四寒月诗，引发香菱连番苦吟构思。",
+        "passageIds": [
+          "p-330948",
+          "p-331583"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "香菱日间两度作诗未成所积累的苦思冥想与精血诚聚，最终孕育了梦中得诗的结果。",
+        "passageIds": [
+          "p-332384",
+          "p-332797"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "OdicavGwAtCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 9599,
+    "candidatesTokenCount": 2426,
+    "totalTokenCount": 12025,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9599
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2426
+      }
+    ]
+  },
+  "durationMs": 18276,
+  "requestHash": "b64dcc62bdd6b7b5adcd70a9b2d66701fd28c8a667353b8dd520ca38f81343e4"
+}

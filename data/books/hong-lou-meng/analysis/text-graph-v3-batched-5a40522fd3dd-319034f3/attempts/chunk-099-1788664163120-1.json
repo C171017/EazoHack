@@ -1,0 +1,168 @@
+{
+  "value": {
+    "summary": "第九十九回叙贾府及贾政外任情事。王熙凤以宝玉与宝钗逗趣之态宽慰贾母并筹办圆房；贾政出任江西粮道，初欲守正廉洁，却遭胥吏家奴以怠工相逼；恶奴李十儿巧言说项，诱其纵容下属枉法营私以图自保；随后贾政接周琼求亲书信，又自邸报中见薛蟠误杀人命案发并牵扯自己当年托请，忧心忡忡。",
+    "nodes": [
+      {
+        "label": "凤姐说笑解悲",
+        "identityLabel": "凤姐说笑解悲",
+        "summary": "凤姐见贾母与薛姨妈因思念黛玉而伤心，遂描摹新婚后宝玉拉扯宝钗、宝钗端肃规避的闺房趣事，引得二人大笑，贾母随后命择吉日为宝玉宝钗圆房。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述凤姐借宝玉宝钗婚后情状说趣并促成圆房之过程，属于直接叙事与对话交织。",
+        "generalityHint": "涉及宝玉、宝钗、贾母、凤姐等人的特定家庭生活场景。",
+        "rationale": "基于p-721507详细叙述凤姐模仿二人情态并禀报圆房之议。",
+        "passageIds": [
+          "p-721507"
+        ]
+      },
+      {
+        "label": "贾政外任立威受阻",
+        "identityLabel": "贾政外任立威受阻",
+        "summary": "贾政就任江西粮道，因不熟外省吏治陋习，执意出示严禁折收勒索、拒收州县馈送，致使随行长随家仆借贷落空、无利可图，长随聚众告假离去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "交代贾政初到外任所持之清廉态度及其在官僚恶俗环境下面临的初次抵制。",
+        "generalityHint": "记述贾政任粮道初期官场生态与主仆矛盾的具体事件。",
+        "rationale": "出处p-722992完整记载贾政发告示禁弊端及随从仆役因无油水而告假离去之事。",
+        "passageIds": [
+          "p-722992"
+        ]
+      },
+      {
+        "label": "家奴胥吏故意怠工",
+        "identityLabel": "家奴胥吏故意怠工",
+        "summary": "贾政出行拜客时，站班、接鼓、吹打等胥吏仆从故意缺席迟滞，以无衣、无食为借口怠工，使贾政在官场应酬中狼狈不堪且私囊告罄。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从家奴与胥吏勾结后的具体行为展开叙述，说明贾政遭受软抵抗的具体表现。",
+        "generalityHint": "特定衙门仪式与外任出巡时的怠工场景。",
+        "rationale": "见p-724307所载贾政出巡拜客时执事不齐、轿夫拖延的窘境。",
+        "passageIds": [
+          "p-724307"
+        ]
+      },
+      {
+        "label": "李十儿巧言惑主",
+        "identityLabel": "李十儿巧言惑主",
+        "summary": "管门家人李十儿趁贾政窘迫之际，以官场潜规则、节度使制衡及保全名利为由巧言劝诱，说动贾政默许私下营私舞弊，贾政遂放弃坚持、撒手不问。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "展现恶奴以歪理逐步攻破贾政防线的对话与心理推移。",
+        "generalityHint": "揭示清代官场官奴勾结、贪腐机制的典型个案对话。",
+        "rationale": "依p-724569李十儿长篇大论说服贾政保全自身之叙述。",
+        "passageIds": [
+          "p-724569"
+        ]
+      },
+      {
+        "label": "放任舞弊相安无事",
+        "identityLabel": "放任舞弊相安无事",
+        "summary": "贾政放手后李十儿钩连内外专擅威福，上下得利反觉事事周到；贾政不仅不疑反更信赖，幕友因苦劝不从纷纷辞去，粮道漕务得以暂告完竣。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "顺承李十儿说动贾政之后的结果，勾勒出官场同流合污后的表面平静。",
+        "generalityHint": "一任漕务运行中官场内外的畸形平衡状态。",
+        "rationale": "引自p-725805，描述贾政被蒙蔽、幕友辞去及漕务告毕之情状。",
+        "passageIds": [
+          "p-725805"
+        ]
+      },
+      {
+        "label": "周琼来信为子求聘",
+        "identityLabel": "周琼来信为子求聘",
+        "summary": "海门总制周琼致信贾政，重提京中所议儿女之盟，为子向探春求聘；贾政权衡门第相当，打算回京商议以定姻缘。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "公文来信引发贾政对探春婚事的权衡与盘算。",
+        "generalityHint": "探春婚配线索的推进，属于贾府重要人际联姻事件。",
+        "rationale": "根据p-725941、p-726013及p-726218中周琼来信与贾政心思之记录。",
+        "passageIds": [
+          "p-725941",
+          "p-726013",
+          "p-726218"
+        ]
+      },
+      {
+        "label": "阅邸报惊悉薛蟠案发",
+        "identityLabel": "阅邸报惊悉薛蟠案发",
+        "summary": "贾政在公馆翻阅刑部邸报，得悉薛蟠殴死张三并串供捏称误杀案被驳回复审、拟抵绞监候，贾政因曾代薛家向知县托情，深恐受牵连而惊骇难安。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾政通过公文邸报获悉薛蟠命案实情，进而产生因旧日托情而自危的心理波折。",
+        "generalityHint": "薛蟠命案的司法文书复核及贾政私相托请所致的特定隐患。",
+        "rationale": "对应p-726403、p-726525、p-727003中贾政看报大惊、李十儿宽慰及贾政自忧受累之全过程。",
+        "passageIds": [
+          "p-726403",
+          "p-726525",
+          "p-727003"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾政出示严禁导致长随家仆告假离去，留在衙署的恶奴胥吏便以怠工方式进一步逼迫贾政。",
+        "passageIds": [
+          "p-722992",
+          "p-724307"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "胥吏仆从的消极怠工与财政告急，为李十儿进言劝诱贾政放弃清廉提供了直接现实借口。",
+        "passageIds": [
+          "p-724307",
+          "p-724569"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾政听信李十儿‘保性命、顾自身’的说辞后，李十儿全面接管内外舞弊事宜，反使漕务表面事事顺利。",
+        "passageIds": [
+          "p-724569",
+          "p-725805"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "漕务办毕后贾政在省城公馆候差，于无事闲居中翻阅公文邸报，从而发现薛蟠案发牵连自己。",
+        "passageIds": [
+          "p-725805",
+          "p-726403",
+          "p-727003"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Udmcasi1NLCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 8767,
+    "candidatesTokenCount": 2257,
+    "totalTokenCount": 11024,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8767
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2257
+      }
+    ]
+  },
+  "durationMs": 17609,
+  "requestHash": "7e145071e559de1bf58db8ae46ac49291947b3c577819d957afbb1fd08e4c7f7"
+}

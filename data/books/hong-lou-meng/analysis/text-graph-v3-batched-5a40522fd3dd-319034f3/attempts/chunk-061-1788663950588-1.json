@@ -1,0 +1,138 @@
+{
+  "value": {
+    "summary": "第六十一回围绕大观园厨房的矛盾与内失失窃案展开。柳家的与司棋房里的莲花儿因鸡蛋起争端，司棋大闹厨房；五儿赠茯苓霜却撞上查夜被当成窃贼搜捕。平儿查知失物实为彩云盗赠贾环，宝玉为顾全探春与众人体面主动顶赃瞒赃，平儿巧妙调解并劝服王熙凤息事宁人。",
+    "nodes": [
+      {
+        "label": "司棋大闹厨房",
+        "identityLabel": "大观园厨房争端",
+        "summary": "莲花儿替司棋要炖鸡蛋遭柳家的拒绝，司棋大怒，率小丫头砸翻厨房菜蔬箱柜以泄愤。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从两房积怨与鸡蛋短缺的对话，直接升级为司棋带人砸闹厨房的行动。",
+        "generalityHint": "涉及迎春房丫鬟与厨房管事人之间的具体冲突事件。",
+        "rationale": "基于p-427973与p-429375，莲花儿因炖蛋与柳家的口角，添油加醋回报后引发司棋率众大闹厨房。",
+        "passageIds": [
+          "p-429375",
+          "p-427973"
+        ]
+      },
+      {
+        "label": "五儿被当窃贼拘押",
+        "identityLabel": "五儿涉窃案被扣",
+        "summary": "五儿夜送茯苓霜给芳官回程遇林之孝家的，被小蝉、莲花儿指控私藏玫瑰露与茯苓霜并遭拘押顶缸。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由正房失窃背景及私藏物证，众人顺理成章将五儿当作现行贼人拿办。",
+        "generalityHint": "一次具体的园内夜巡抓捕与屈陷个案。",
+        "rationale": "根据p-430079和p-430741，林之孝家的在厨房搜出露瓶与茯苓霜，平儿暂且将申辩冤屈的五儿交夜班婆子看守。",
+        "passageIds": [
+          "p-430079",
+          "p-430741",
+          "p-431165"
+        ]
+      },
+      {
+        "label": "平儿查访窃案实情",
+        "identityLabel": "失窃案真相调查",
+        "summary": "平儿向袭人、芳官求证露水来历，并同晴雯道破太太房里失窃实系彩云偷给贾环。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "通过串联芳官供词、怡红院日常往来及彩云玉钏争执等线索，推断出真实案情。",
+        "generalityHint": "贾府内宅小范围失窃案的侦查与内幕澄清。",
+        "rationale": "依据p-431341，平儿私访怡红院，证实露水系芳官转赠，并明确太太屋内的失窃为彩云所为。",
+        "passageIds": [
+          "p-431341"
+        ]
+      },
+      {
+        "label": "宝玉顶赃与投鼠忌器",
+        "identityLabel": "投鼠忌器宝玉瞒赃",
+        "summary": "平儿与宝玉恐深究伤及探春体面，宝玉主动将露水与霜认作自己贪玩所取，彩云亦感发认罪后依计瞒下。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "在'投鼠忌器'顾全探春体面的动机下，平儿与宝玉设计出由宝玉顶替认赃的化解之策。",
+        "generalityHint": "处理涉及家族主子体面与奴仆私盗时的特定权衡处事原则。",
+        "rationale": "在p-431341中，平儿伸出三指点出探春，宝玉愿应下偷盗名目以保全体面，彩云亦感发坦白后依计行事。",
+        "passageIds": [
+          "p-431341"
+        ]
+      },
+      {
+        "label": "平儿劝凤姐行权宽免",
+        "identityLabel": "平儿行权处事",
+        "summary": "凤姐欲严刑拷打丫头、革退柳家的，平儿以得放手时须放手、免结小人仇怨且保全凤姐身体为由劝服凤姐宽免结案。",
+        "sourceRole": "dialogue",
+        "speaker": "平儿",
+        "reasoningHint": "结合凤姐的病体与长远利害，反驳严苛追查主张，提出宽大放手的处事哲学。",
+        "generalityHint": "一种内宅奴仆管理中'得放手时须放手'的处世息事智慧。",
+        "rationale": "据p-433541，凤姐本主张严惩挂误，平儿以'得放手时须放手'劝说，成功促使凤姐听凭其去裁处发放。",
+        "passageIds": [
+          "p-433541"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "莲花儿因大闹厨房结怨，随后带领众人搜查厨房并指认五儿窝藏露瓶。",
+        "passageIds": [
+          "p-430079"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "五儿被押申冤促使平儿次日一早前往怡红院暗访核实露水与霜的真相。",
+        "passageIds": [
+          "p-430741",
+          "p-431341"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "平儿查明实情后与宝玉等人计议，促成了'投鼠忌器'由宝玉瞒赃的决策。",
+        "passageIds": [
+          "p-431341"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "宝玉顶赃的安排需要回明凤姐，平儿据此向凤姐汇报并进一步劝其宽厚化解。",
+        "passageIds": [
+          "p-431341",
+          "p-433541"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "gticauRXsKLRyQ-Q_e3wCQ",
+  "usage": {
+    "promptTokenCount": 9258,
+    "candidatesTokenCount": 1689,
+    "totalTokenCount": 10947,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9258
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1689
+      }
+    ]
+  },
+  "durationMs": 14077,
+  "requestHash": "f20a11771307332467c9d60c074024457c3e4936ccea8706eba2d51c982531be"
+}

@@ -1,0 +1,137 @@
+{
+  "value": {
+    "summary": "第六十三回通过怡红院群芳夜宴占花名、妙玉贺寿帖子的槛外人典故、贾敬服丹暴毙及宁国府办丧等一系列情节，展现了红楼群芳命运的隐喻与宁府风月荒唐的对照。",
+    "nodes": [
+      {
+        "label": "怡红院夜宴占花名",
+        "identityLabel": "怡红夜宴占花名",
+        "summary": "宝玉与众丫鬟夜聚怡红院，后又请来宝钗、黛玉、探春、李纨、湘云、香菱等人，众人摇骰占象牙花名签取乐。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从夜宴聚饮到众人行令占花名签，叙述具体的集会情节。",
+        "generalityHint": "单一具体的夜宴场景，涉及大观园主要女子。",
+        "rationale": "夜宴占花名是全书核心谶语场景之一，集中呈现了诸位女子的花名签与判词性质的诗句。",
+        "passageIds": [
+          "p-448174",
+          "p-447460"
+        ]
+      },
+      {
+        "label": "群芳花名签寄寓命运",
+        "identityLabel": "群芳签诗命运隐喻",
+        "summary": "宝钗得牡丹签“任是无情也动人”，探春得杏花签“日边红杏倚云栽”，李纨得老梅，湘云得海棠，麝月得荼縻，香菱得并蒂花，黛玉得芙蓉签“莫怨东风当自嗟”，袭人得桃花签，各自谶示未来归宿与品格。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "依据签上花名、题词及唐宋诗句，赋予各人品格与命运预示。",
+        "generalityHint": "涵盖在场多位核心女性人物的命运谶语。",
+        "rationale": "文本详细列出宝钗、探春、李纨、湘云、麝月、香菱、黛玉、袭人的签文与注语，构成强烈的人物命运隐喻。",
+        "passageIds": [
+          "p-448668",
+          "p-449164",
+          "p-450081"
+        ]
+      },
+      {
+        "label": "妙玉寿帖自称槛外人",
+        "identityLabel": "槛外人与槛内人",
+        "summary": "妙玉打发人送来粉笺贺寿，自署“槛外人”；岫烟为宝玉解说其典出“纵有千年铁门槛，终须一个土馒头”，指点宝玉回帖自署“槛内人”。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "岫烟解释妙玉孤僻性格与用典根源，由此指导宝玉如何作答。",
+        "generalityHint": "关于妙玉与宝玉二人思想寄托与交往的特定事件。",
+        "rationale": "岫烟解释妙玉不合时宜的脾气与“槛外人”典故，是理解妙玉身世思想与贾府铁槛寺之名的关键文本。",
+        "passageIds": [
+          "p-452050",
+          "p-451659"
+        ]
+      },
+      {
+        "label": "宝玉芳官等改扮男妆",
+        "identityLabel": "戏子改扮男妆戏谑",
+        "summary": "宝玉命芳官改换男装并更名“耶律雄奴”、“温都里纳”（玻璃），湘云将葵官改扮并取名“韦大英”，豆官改称“豆童”，众人在园中嬉戏游玩。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由日常戏谑引申出关于服饰、名号及天下四海宾服的闲谈。",
+        "generalityHint": "大观园内几位公子姑娘及女伶的嬉戏习俗。",
+        "rationale": "芳官、葵官、豆官等改名换扮，体现了大观园儿女偷安享乐的承平生活图景。",
+        "passageIds": [
+          "p-452969",
+          "p-453584"
+        ]
+      },
+      {
+        "label": "贾敬吞丹暴亡尤氏理丧",
+        "identityLabel": "贾敬之死与尤氏发丧",
+        "summary": "贾敬因在玄真观烧丹服砂中毒暴毙，贾珍父子随驾在外国丧未归，尤氏独自果断锁禁道士，将贾敬灵柩挪送铁槛寺并主持入殓开丧。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因贾敬道术虚妄导致中毒身亡，尤氏审时度势采取一系列应对措施。",
+        "generalityHint": "宁国府最高辈分长辈去世这一重大宗族事件。",
+        "rationale": "贾敬暴亡是全书重要转折点，展现尤氏料理家务之才，同时引出铁槛寺发丧与朝廷恩旨赐恤。",
+        "passageIds": [
+          "p-454499",
+          "p-455169"
+        ]
+      },
+      {
+        "label": "贾蓉调戏尤氏二妹",
+        "identityLabel": "贾蓉调戏二尤",
+        "summary": "贾蓉回宁府料理停灵，见尤氏继母带尤二姐、尤三姐同住上房，便在热孝中嬉皮笑脸与二姨调笑撕闹，更以“脏唐臭汉”为贾府内帏秽行辩解。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾蓉借古论今，以荒唐言论合理化自身的非礼举止和宁荣二府的乱账。",
+        "generalityHint": "贾蓉个人的品行及其对贾府门风的揭示。",
+        "rationale": "贾蓉在贾敬大丧期间与尤二姐、尤三姐及丫鬟嬉闹厮混，揭露宁国府礼教伪饰之下的道德败坏。",
+        "passageIds": [
+          "p-455169",
+          "p-456091"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "夜宴聚会直接引出行令抽花名签的活动，从而展开对各人命运的象征性描摹。",
+        "passageIds": [
+          "p-448174",
+          "p-448668"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾敬暴亡发丧导致尤老娘与尤氏二妹进宁府看家，贾蓉回家料理丧事才有了调戏二尤的荒诞场面。",
+        "passageIds": [
+          "p-455053",
+          "p-455169"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "hdicapmoGPGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 15102,
+    "candidatesTokenCount": 1766,
+    "totalTokenCount": 16868,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15102
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1766
+      }
+    ]
+  },
+  "durationMs": 13192,
+  "requestHash": "c310bd988c8a5f072ab961708dfb13407d8644259100adffbad05d77281e6cee"
+}

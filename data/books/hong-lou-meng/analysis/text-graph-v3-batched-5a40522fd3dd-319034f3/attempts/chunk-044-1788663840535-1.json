@@ -1,0 +1,166 @@
+{
+  "value": {
+    "summary": "第四十四回叙述凤姐生日宴上多饮回房，撞破贾琏与鲍二家的私通并遭二人咒骂，凤姐大怒殴打鲍二家的与平儿，引发贾琏拔剑逞威。贾母出面压制贾琏并护下凤姐和平儿。平儿在怡红院得宝玉细心宽慰与理妆；次日贾琏向凤姐、平儿赔礼认错。随后鲍二家的上吊身亡，贾琏私下威逼利诱掩盖事态。",
+    "nodes": [
+      {
+        "label": "凤姐借酒醉回房撞破私情",
+        "identityLabel": "凤姐撞破私通",
+        "summary": "贾母令众人给凤姐敬酒，凤姐吃醉离席回房，途中截住放哨小丫头拷问出贾琏偷情鲍二家的情由，赶回窗下偷听见二人咒己死并夸赞平儿。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述凤姐离席回房的由头、拷问丫头得到的情报及偷听内容，构成本回冲突的核心起因。",
+        "generalityHint": "记录这一特定情节事件。",
+        "rationale": "基于p-297407和p-298270叙述凤姐审问丫头得知贾琏引鲍二家的进屋，并在窗前亲耳听到贾琏与鲍二家的议论。",
+        "passageIds": [
+          "p-297407",
+          "p-298270"
+        ]
+      },
+      {
+        "label": "凤姐泼醋迁怒与贾琏拔剑",
+        "identityLabel": "变生不测闹剧",
+        "summary": "凤姐怒打鲍二家的并迁怒殴打平儿，贾琏恼羞成怒踢打平儿并拔剑逞凶，致平儿寻死、凤姐奔逃求救。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文偷听内容，凤姐与贾琏在醉酒与羞愤刺激下矛盾迅速激化为持械争端。",
+        "generalityHint": "记录凤姐、贾琏及平儿撕打并惊动众人的具体突发风波。",
+        "rationale": "基于p-298617，凤姐疑平儿背地怨己而动手，贾琏拔剑要杀人，凤姐转而跑向贾母处求救。",
+        "passageIds": [
+          "p-298617"
+        ]
+      },
+      {
+        "label": "贾母断案与护抚平儿",
+        "identityLabel": "贾母调停家变",
+        "summary": "贾母喝退撒泼的贾琏，以年轻人馋嘴为贾琏开脱，同时查明真相洗清平儿冤枉，派琥珀传话安抚平儿并许诺次日令主子赔不是。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾母对贾琏、凤姐及平儿各自反应的处置，展现其持家调解模式和长辈权威。",
+        "generalityHint": "贾府最高家长的个案调停事件。",
+        "rationale": "基于p-299229与p-299681，贾母喝止贾琏逞强，听尤氏等人说明后立即改口体恤平儿无辜受气。",
+        "passageIds": [
+          "p-299229",
+          "p-299681"
+        ]
+      },
+      {
+        "label": "怡红院宝玉体恤与平儿理妆",
+        "identityLabel": "平儿理妆",
+        "summary": "平儿受委屈避入怡红院，宝玉代兄嫂赔礼，悉心备办衣物、紫茉莉花种粉、花露胭脂与秋蕙为平儿理妆，暗叹平儿薄命。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "展现宝玉对体贴女儿的特有情感和精细审美，以及平儿在受辱后得到体面修复的过程。",
+        "generalityHint": "描摹宝玉怡红院中抚慰女儿的特定温情场景。",
+        "rationale": "基于p-300186与p-301055，详叙平儿换衣梳妆细节及宝玉心中对平儿处境的怜惜与自喜。",
+        "passageIds": [
+          "p-300186",
+          "p-301055"
+        ]
+      },
+      {
+        "label": "贾琏凤姐向平儿赔礼讲和",
+        "identityLabel": "贾母逼琏赔礼",
+        "summary": "次日贾母严训贾琏并命其向凤姐作揖赔罪，随后贾母又命贾琏凤姐安抚平儿，平儿跪拜谢恩，主仆三人和解回房。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在贾母威权主导下，贾琏不得不低头认错，凤姐亦因愧对平儿而落泪化解了表面矛盾。",
+        "generalityHint": "贾府内部家庭风波平息的具体场景。",
+        "rationale": "基于p-301382与p-301944，贾母命贾琏作揖认错，又逼其安慰平儿，凤姐与平儿互相抚慰垂泪。",
+        "passageIds": [
+          "p-301382",
+          "p-301944"
+        ]
+      },
+      {
+        "label": "鲍二家的自尽与贾琏私了",
+        "identityLabel": "鲍二媳妇自缢事件",
+        "summary": "鲍二家的上吊身亡，娘家欲告官，凤姐要强逞威，贾琏则暗中联络林之孝赔付二百两银子、借王子腾官威压服人命并笼络鲍二私了。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "展现出偷情闹剧激化为人命案后，凤姐的嘴硬与贾琏动用家族特权、金钱摆平官司的手段。",
+        "generalityHint": "记录贾府处理下人人命争端的一桩典型恶性个案。",
+        "rationale": "基于p-302638与p-303108，贾琏背着凤姐许给丧葬银子并调动番役衙差平息命案，凤姐房中则再次悄悄宽慰平儿。",
+        "passageIds": [
+          "p-302638",
+          "p-303108"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "凤姐听得贾琏与鲍二家的密语是其当场大闹撕打并迁怒平儿的直接导火索。",
+        "passageIds": [
+          "p-298270",
+          "p-298617"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "凤姐与贾琏持械大闹直接惊动了贾母，引发贾母出面裁决与调解。",
+        "passageIds": [
+          "p-298617",
+          "p-299229"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "平儿因无辜被打受委屈逃出大观园，才有了宝玉邀至怡红院理妆安慰的后续。",
+        "passageIds": [
+          "p-298617",
+          "p-300186"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "次日贾琏下跪领罪与向凤姐、平儿赔礼，正是贾母前日立下的规矩与安排的结果。",
+        "passageIds": [
+          "p-299681",
+          "p-301382",
+          "p-301944"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "鲍二家的被凤姐当场捉奸痛打受辱，是其后来自尽身亡的直接原因。",
+        "passageIds": [
+          "p-298617",
+          "p-302638"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Eticas6DL_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 9783,
+    "candidatesTokenCount": 2149,
+    "totalTokenCount": 11932,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9783
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2149
+      }
+    ]
+  },
+  "durationMs": 14280,
+  "requestHash": "6b0b64fda6acf9f454b7543debb70673ce9e17bf0bb0df7171d53ab085581171"
+}

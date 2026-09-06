@@ -1,3 +1,19 @@
+# Live activation progress — 2026-09-06
+
+This section supersedes the earlier local-only implementation status below.
+
+- User approved the Google support/contact email and explicitly approved accepting the Google API Services User Data Policy and creating the web OAuth client.
+- Google OAuth configuration and a Web application client were created in `eazo-hack-20260905-c1710`; callback is the project's Supabase `/auth/v1/callback`. The Google client secret is never stored in repository code. Its entry into Supabase is a browser-policy user handoff.
+- Google external audience remains Testing, with the approved owner account added as a test user.
+- Hosted migration 007 applied and postflight verified. Existing book/source/job preserved, source storage reservation backfilled to 1,316 bytes, and managed Storage ownership preserved.
+- Supabase Site URL is `https://eazo-hack-account-sync-c171017.vercel.app`; exactly one callback URL ending `/auth/callback` is allowed. A proposed query wildcard was rejected by automatic approval review and removed; matching Site URL origin accepts the state-bearing callback without it.
+- Current `read.vin` is associated with Production through GitHub/main. This task preserves that public deployment and validates a separate protected Preview. Old deployment notes describing read.vin as protected Preview are outdated.
+- Release snapshot `/private/tmp/eazo-account-release-k1j_dfsj` isolates the account feature from unrelated concurrent changes. Tests, typecheck, lint, Vercel build and eleven HTTP smoke checks passed. Preview deployment `dpl_AibKdBMPneGDKdmaBLpCKgSZx2mE` reached READY and serves the dedicated alias. Both preview URLs return unauthenticated 302 to Vercel authentication; public Production routing was not changed.
+
+- Hosted lifecycle test: a newly-created, uniquely marked synthetic account uploaded and saved a small source, then was deleted through the app. Its records, auth identity and Storage API download paths were removed; late worker and signed uploads were fenced. Existing accounts untouched; no model calls.
+- Hosted A/B checks passed for distinct identities, source upload, revision/idempotency/conflict handling, and app/RPC/RLS/Storage cross-account isolation. Final checks also passed for paginated owner-only export, actual access-token refresh, secure session cookies, invalid-session cleanup, cross-origin rejection, and the removed password endpoint. The suite used two real hosted Supabase synthetic accounts, not two completed Google consent flows.
+- Google provider is still disabled pending the user-only client credential entry/save step in the open Supabase panel. Application Google-only UI is deployed, but a completed Google consent round trip has not yet been verified. Email provider has not yet been disabled; complete Google activation before removing that existing provider. Test sessions were minted only for the retained synthetic QA accounts; the application exposes only Google login.
+
 # Account synchronization implementation status — 2026-09-06
 
 Implemented locally with Google as the only application login option. No live provider configuration, hosted schema migration, or deployment was performed in this task.

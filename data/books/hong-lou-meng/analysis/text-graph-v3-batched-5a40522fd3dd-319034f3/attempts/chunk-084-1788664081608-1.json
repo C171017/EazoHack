@@ -1,0 +1,154 @@
+{
+  "value": {
+    "summary": "第八十四回围绕宝玉的学业、议婚以及巧姐患病展开。贾母与贾政商议为宝玉择配并强调品貌；贾政查验宝玉八股窗课并命其拟破题，初步认可其进步；门客王尔调提亲张家因招赘被贾母回绝，凤姐则挑明“金玉良缘”；期间巧姐突发惊风，贾环探视时失手打翻牛黄药铫，致使贾环、赵姨娘与王熙凤矛盾进一步激化。",
+    "nodes": [
+      {
+        "label": "贾母提议为宝玉择配",
+        "identityLabel": "宝玉议婚标准",
+        "summary": "贾母提及元妃惦念宝玉，向贾政提出宝玉已大，应择配订婚，不求门第贫富，重在姑娘品性容貌周全，贾政则主张宝玉自身须先立品向学。",
+        "sourceRole": "dialogue",
+        "speaker": "贾母",
+        "reasoningHint": "贾母从宝玉年岁渐长及元妃问询出发，提出为其择配的现实考虑，贾政随之补充学业成人的前提条件。",
+        "generalityHint": "涉及贾府核心继承人宝玉婚事择偶的标准与家规观念，属特定人物的重大人生节点主张。",
+        "rationale": "出处p-617539直接呈现贾母与贾政就宝玉议婚的标准进行商议交流。",
+        "passageIds": [
+          "p-617539"
+        ]
+      },
+      {
+        "label": "贾政考查宝玉制艺窗课",
+        "identityLabel": "贾政查验宝玉八股窗课",
+        "summary": "贾政唤宝玉至内书房细看代儒批改的窗课文章，评析破题与立论得失，并命宝玉就《惟士为能》另拟破题，见其应对尚可后命其回贾母处。",
+        "sourceRole": "dialogue",
+        "speaker": "贾政",
+        "reasoningHint": "贾政基于贾母教诲与督促子弟成人的责任，具体检验宝玉讲书开笔成果，并以命题测试其心裁与分界把握。",
+        "generalityHint": "八股制艺写作规范及贾政对宝玉应试教育的具体考察场景。",
+        "rationale": "出处p-618720与p-620093详细记录贾政逐篇批点宝玉三篇艺文并现场命题破题的完整过程。",
+        "passageIds": [
+          "p-618720",
+          "p-620093"
+        ]
+      },
+      {
+        "label": "贾母极口赞赏薛宝钗",
+        "identityLabel": "贾母赞薛宝钗温厚识大体",
+        "summary": "在薛姨妈诉说夏金桂改名闹事之苦时，贾母盛赞宝钗温厚和平、心胸百里挑一，做媳妇必得公婆喜爱与上下宾服；随后对比黛玉灵性虽齐但稍欠宽厚让让。",
+        "sourceRole": "dialogue",
+        "speaker": "贾母",
+        "reasoningHint": "贾母根据薛家闹剧见闻及薛姨妈叙述，推论并概括宝钗的德性品格及其作为人妇的理想特质。",
+        "generalityHint": "论及封建家族中对理想儿媳妇德行标准的评价，具有鲜明的家庭伦理属性。",
+        "rationale": "出处p-620772和p-621797展现贾母在宴饮与闲谈中明确表态推崇宝钗的脾性气度。",
+        "passageIds": [
+          "p-620772",
+          "p-621797"
+        ]
+      },
+      {
+        "label": "门客保媒与贾母拒赘",
+        "identityLabel": "张家提亲招赘遭贾母拒回",
+        "summary": "门客王尔调向贾政说合南韶道张家小姐，但邢夫人打听到张家因娇养独女要求男方入赘当家，贾母断然回绝，称宝玉断不可给人家赘去当家。",
+        "sourceRole": "dialogue",
+        "speaker": "贾母",
+        "reasoningHint": "从门客提亲、打听亲底细到因‘入赘’条件触碰贾府嫡宗底线而遭到贾母直接否决。",
+        "generalityHint": "门阀贵族通婚原则的个案体现，反映绝不接受嫡孙入赘的宗法礼制。",
+        "rationale": "出处p-622010与p-622679贯穿门客荐亲至次日贾母听闻招赘后立即断然否决。",
+        "passageIds": [
+          "p-622679",
+          "p-622010"
+        ]
+      },
+      {
+        "label": "王熙凤借金锁挑明金玉",
+        "identityLabel": "凤姐提宝玉金锁天配姻缘",
+        "summary": "在贾母因张家婚事不称心时，凤姐当众挑明‘宝玉’与‘金锁’乃现成天配姻缘，提醒老太太薛家就在眼前，贾母与众人皆笑领会。",
+        "sourceRole": "dialogue",
+        "speaker": "王熙凤",
+        "reasoningHint": "凤姐顺应贾母对宝钗的极力赞赏及刚回绝外头求亲的契机，机智点破全家心照不宣的金玉良缘。",
+        "generalityHint": "贾府高层对宝玉婚事具体对象的倾向明朗化，具有重要的叙事转折意义。",
+        "rationale": "出处p-623140中凤姐直接点出“一个‘宝玉’，一个‘金锁’”，贾母笑答“可是我背晦了”。",
+        "passageIds": [
+          "p-623140"
+        ]
+      },
+      {
+        "label": "贾环泼药打翻巧姐药铫",
+        "identityLabel": "贾环打翻药铫重结冤仇",
+        "summary": "巧姐患惊风需用珍贵真牛黄煎药，贾环借探病之名乱摸乱看，失手将熬药吊子打翻弄灭炭火，激怒凤姐痛骂其使促狭害人，引发赵姨娘训斥与新仇旧恨。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "巧姐病情急迫需真牛黄施救，贾环冒失闯祸触犯凤姐逆鳞，将两房矛盾进一步激化。",
+        "generalityHint": "贾府嫡庶二房之间矛盾的爆发性事件，直接导致人物关系恶化。",
+        "rationale": "出处p-623998与p-624640叙述了贾环掀翻药吊子逃跑、凤姐怒骂及赵姨娘斥骂贾环的完整连锁反应。",
+        "passageIds": [
+          "p-623998",
+          "p-624640"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾政因贾母提出为宝玉择配需其先成人立品，回到房中便传唤宝玉查验其窗课与学力。",
+        "passageIds": [
+          "p-618448",
+          "p-618720"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾政因贾母提起择配而将王尔调提亲张家之事纳入考虑，贾母随后针对张家入赘要求予以驳回。",
+        "passageIds": [
+          "p-622010",
+          "p-622679"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "贾母前晚极力赞美宝钗品性适于做媳妇，为凤姐次日顺理成章提起‘宝玉与金锁’奠定了心理与舆论基础。",
+        "passageIds": [
+          "p-620772",
+          "p-623140"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "张家亲事因入赘被贾母彻底否决后，凤姐趁势提出何须外处寻找，点明宝玉金锁之配。",
+        "passageIds": [
+          "p-622679",
+          "p-623140"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "AtmcarneD_GY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10320,
+    "candidatesTokenCount": 2269,
+    "totalTokenCount": 12589,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10320
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2269
+      }
+    ]
+  },
+  "durationMs": 16091,
+  "requestHash": "3fd520f601f575fb8d847e06c7b7e729b683291f351f65883b5f4d72e9d7dcde"
+}

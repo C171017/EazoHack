@@ -1,0 +1,39 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-99-2",
+        "reason": "Primary theme assignment is clearly wrong: '儿女痴情、性灵知己与婚变离散' does not match the node's content, which concerns official corruption, administrative malpractice, and master-servant conflict in officialdom."
+      },
+      {
+        "id": "n-99-3",
+        "reason": "Primary theme assignment is clearly wrong: '儿女痴情、性灵知己与婚变离散' does not fit yamen runners and domestic servants going on strike/passive resistance against Jia Zheng's incorruptibility."
+      }
+    ],
+    "rejectedEdges": [],
+    "notes": "Reviewed all target nodes and edges against cited text passages. Nodes n-99-2 and n-99-3 were erroneously assigned the theme '儿女痴情、性灵知己与婚变离散' despite dealing entirely with官场吏治与家奴怠工 (belonging under themes such as世家荣枯、宗族盛衰与抄家败亡). Other nodes and all edges are properly supported by text and correctly directed."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "tNqcapmzC4uKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 79382,
+    "candidatesTokenCount": 268,
+    "totalTokenCount": 79650,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 79382
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 268
+      }
+    ]
+  },
+  "durationMs": 4475,
+  "requestHash": "e19280aaf19dc6d991526c548c97fb1db728521b5985fd8c2467dd844f8e0521"
+}

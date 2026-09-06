@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges are well-grounded in the cited textual passages. Attributions, source roles, narrative/dialogue boundaries, and relations accurately reflect the chapters and actions in Dream of the Red Chamber."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "pdqcapHcCaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 96993,
+    "candidatesTokenCount": 66,
+    "totalTokenCount": 97059,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 96993
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 66
+      }
+    ]
+  },
+  "durationMs": 4373,
+  "requestHash": "ffe40d8544d9ac35ee0d29fe4c6dfb177acc9268c04999991af5a5c05cfa6bf2"
+}

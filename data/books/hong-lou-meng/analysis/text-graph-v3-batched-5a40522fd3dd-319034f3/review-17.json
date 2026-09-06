@@ -1,0 +1,35 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "e-83-3",
+        "reason": "夏金桂吵闹时讥讽'天下有几个都是贵妃的命'只是随口泄愤泛指，并无因果递进或承接贾府入宫省元妃疾（n-83-4）的情节关联，develops关系牵强无据。"
+      }
+    ],
+    "notes": "Target nodes all have solid grounding in the designated chapter texts (81-86). Edge e-83-3 artificially links the royal concubine visit in n-83-4 to Xia Jingui's domestic dispute in n-83-5 based solely on an incidental verbal mention of '贵妃', lacking direct causal or inferential connection."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "rNqcat_mKIuKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 90049,
+    "candidatesTokenCount": 188,
+    "totalTokenCount": 90237,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 90049
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 188
+      }
+    ]
+  },
+  "durationMs": 4919,
+  "requestHash": "ece7bcb5ce288b138e79501aac28e0346665ad913b93d601328b5171ccd07160"
+}

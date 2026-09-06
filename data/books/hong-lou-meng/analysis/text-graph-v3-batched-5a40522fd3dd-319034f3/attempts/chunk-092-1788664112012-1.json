@@ -1,0 +1,117 @@
+{
+  "value": {
+    "summary": "第九十二回叙述宝玉因消寒会放假与巧姐品评《列女传》，凤姐听闻司棋与潘又安殉情之事并派人了结；随后冯紫英携母珠、鲛绡帐等珍奇洋货上门求售，贾政与凤姐皆因家境与远虑不肯受纳，席间贾政等借贾雨村升迁与甄家被抄之变，深参人世聚散与仕途荣枯。",
+    "nodes": [
+      {
+        "label": "宝玉为巧姐解说列女传",
+        "identityLabel": "宝玉评说列女传",
+        "summary": "巧姐在贾母房中提起自己诵读《女孝经》与《列女传》，宝玉便向她列举历代后妃才女、贤妻孝女诸人事迹以作讲解。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉应巧姐与贾母之言，具体列举并讲解《列女传》中各色女子形象。",
+        "generalityHint": "具体事件，记录宝玉与巧姐、贾母关于读书识字的问答场景。",
+        "rationale": "基于p-671518，宝玉向巧姐讲解《列女传》中诸名女的贤孝才艺，点明回目‘评女传巧姐慕贤良’。",
+        "passageIds": [
+          "p-671518"
+        ]
+      },
+      {
+        "label": "司棋潘又安双双殉情",
+        "identityLabel": "司棋殉情",
+        "summary": "来人向凤姐禀报司棋因母亲阻拦其随潘又安而触墙身死，随后潘又安亦拔刀自刎，二人殉情以致里坊欲要报官。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "通过来人家人的转述，交代司棋与潘又安以死殉情的经过及官府纠纷。",
+        "generalityHint": "特定人物事件，叙述司棋与潘又安的烈性结局。",
+        "rationale": "基于p-673400，详述司棋坚守前情、触墙身亡，潘又安携资殉身，凤姐感其烈性并答应让旺儿排解。",
+        "passageIds": [
+          "p-673400"
+        ]
+      },
+      {
+        "label": "冯紫英携奇珍洋货求售",
+        "identityLabel": "玩赏母珠与鲛绡帐",
+        "summary": "冯紫英拜访贾政，展示广西同知带来的母珠与鲛绡帐等稀世洋货，并演示母珠吸附小珠的奇观。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "详叙母珠与鲛绡帐的特性演示，引出两万两银子的求售意向。",
+        "generalityHint": "特定场景叙述，记录冯紫英在贾政书房展示外洋奇物。",
+        "rationale": "基于p-674969，冯紫英展示母珠、鲛绡帐并开价两万两，照应回目‘玩母珠贾政参聚散’。",
+        "passageIds": [
+          "p-674969"
+        ]
+      },
+      {
+        "label": "凤姐主张置办不动根基",
+        "identityLabel": "凤姐之防败远虑",
+        "summary": "贾琏将母珠等物送至内室，凤姐力陈贾家无须办贡，应将银钱用于置办祭地、义庄与坟屋等不易动摇的家业底子以防子孙败落。",
+        "sourceRole": "dialogue",
+        "speaker": "王熙凤",
+        "reasoningHint": "从家族长远生存与子孙退路出发，推导不应虚掷巨款购奇玩而应购置恒产的理家观点。",
+        "generalityHint": "关于大家族防范败落、置备退路的管理与治家主张。",
+        "rationale": "基于p-675889，凤姐明确指出应购置祭地义庄为子孙留底子，拒绝采买两万两洋货，贾母众人表示认同。",
+        "passageIds": [
+          "p-675889"
+        ]
+      },
+      {
+        "label": "贾政对甄家抄没深怀忧惧",
+        "identityLabel": "贾政参悟荣枯与聚散",
+        "summary": "酒席上论及贾雨村起复升官与世交甄家抄家败落，贾政深感仕途风波难测，对身无德行才情却空享祖荫的现状流露出深切忧思。",
+        "sourceRole": "dialogue",
+        "speaker": "贾政",
+        "reasoningHint": "结合雨村升迁与甄家被抄的鲜明对照，反思自身家族衣租食税而乏德才的潜在危机。",
+        "generalityHint": "关于世家兴衰无常、仕途险恶与家族命运的警醒与感慨。",
+        "rationale": "基于p-676655，贾政借甄家被抄之鉴反省‘做官的怕不怕’与‘白白的衣租食税，那里当得起’，照应参聚散之旨。",
+        "passageIds": [
+          "p-676655"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "冯紫英求售两万两洋货由贾琏送入内室，凤姐由此引出不该买玩物而应置办不动根基的讨论。",
+        "passageIds": [
+          "p-674969",
+          "p-675889"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "凤姐拒绝买洋货并忧心家底败落的清醒认识，与后文贾政在席上因甄家抄没而深感世事荣枯不可恃的心态相互呼应。",
+        "passageIds": [
+          "p-675889",
+          "p-676655"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "I9mcav3tCfGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 9793,
+    "candidatesTokenCount": 1608,
+    "totalTokenCount": 11401,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9793
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1608
+      }
+    ]
+  },
+  "durationMs": 13647,
+  "requestHash": "59b55a3f761542999ccd03a27cb8706f44ef19deca1930eb500541cddbc9c1d9"
+}

@@ -1,0 +1,187 @@
+{
+  "value": {
+    "summary": "贾琏替贾政打点回京后，薛家传来夏金桂服毒身亡的消息。宝钗与贾琏主持料理，查出金桂原欲下砒霜毒害香菱却因宝蟾换碗自食其果，迫使夏家母子具结息事。贾雨村升任出巡，在急流津破庙巧遇出家参禅的甄士隐，二人机锋相对。",
+    "nodes": [
+      {
+        "label": "王夫人论贾政外任之弊",
+        "identityLabel": "贾政外任家仆弊端",
+        "summary": "王夫人与贾琏商议贾政被参之事，认为外任反倒让跟从家人瞒主捞钱、累及名声，回京做官反能合家放心、保住声名。",
+        "sourceRole": "dialogue",
+        "speaker": "王夫人",
+        "reasoningHint": "基于贾政放外任后家仆骄奢而家中贴钱的观察，王夫人推论出外官难做且易招祸。",
+        "generalityHint": "涉及贾府外任做官家仆弄权这一家族官场情境，属特定家族特定事件的经验概括。",
+        "rationale": "王夫人根据贾政任职江西的实情，向贾琏说明降职回京反保平安的缘由。",
+        "passageIds": [
+          "p-745992"
+        ]
+      },
+      {
+        "label": "金桂暴毙薛家乱报凶讯",
+        "identityLabel": "夏金桂暴毙",
+        "summary": "薛姨妈派婆子到贾府求助，称夏金桂不是好好死的，薛蟠服刑在外，薛家无人支撑急需贾府爷们协助料理。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从薛婆子语无伦次、王夫人派贾琏前往查验这一具体情节直接叙述而来。",
+        "generalityHint": "单一具体事件，即金桂身死引发薛家向贾府求救。",
+        "rationale": "叙述金桂猝死引发的薛家慌乱与向荣国府求援的开端。",
+        "passageIds": [
+          "p-746378"
+        ]
+      },
+      {
+        "label": "宝钗贾琏定计报官与羁押",
+        "identityLabel": "宝钗贾琏析案处置",
+        "summary": "薛姨妈疑心香菱并将其捆绑，宝钗与贾琏指出汤乃宝蟾所作，当兼捆宝蟾并一面报夏家一面报刑部相验。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "依据投毒疑点在汤以及香菱病弱等线索推导，指出不能偏私偏查，必须平衡报官以待公断。",
+        "generalityHint": "针对命案嫌疑人控制与应对官府相验的应变策略。",
+        "rationale": "宝钗和贾琏冷静分析了现场情势，纠正了薛姨妈只捆香菱的盲目举措。",
+        "passageIds": [
+          "p-746946"
+        ]
+      },
+      {
+        "label": "夏母撒泼索命受制贾府",
+        "identityLabel": "夏家母子闹薛府",
+        "summary": "夏金桂之母与继子进薛府拼命索命撒泼，贾琏带领家人压伏夏家儿子，并以刑部相验与内外规矩震慑夏家。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "夏家仗势撒泼与贾琏带人以官府验尸相压制的情节直叙。",
+        "generalityHint": "夏薛两家姻亲冲突与争讼现场的特定事件描写。",
+        "rationale": "记录了夏家母子图谋讹诈与贾琏周瑞家的借贾府威势与刑部程仪将其镇住的过程。",
+        "passageIds": [
+          "p-748608",
+          "p-749291"
+        ]
+      },
+      {
+        "label": "查检房室揭露盗卖与砒霜",
+        "identityLabel": "金桂首饰亏空与药包之疑",
+        "summary": "宝钗众人检视金桂内室，发现金桂房中金银首饰被席卷一空，并搜出包砒霜的纸包，令夏母心虚、宝蟾推诿。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从空箱柜及旧药纸包的搜出，顺理成章推断出金桂暗中转移家私与购药隐情。",
+        "generalityHint": "具体刑侦现场搜检出的证据与当事人心理变化。",
+        "rationale": "搜查结果动摇了夏家母子反咬薛家的立场，为真相大白奠定证据基础。",
+        "passageIds": [
+          "p-750271",
+          "p-750546"
+        ]
+      },
+      {
+        "label": "宝蟾招供换碗自毙真相",
+        "identityLabel": "金桂下毒自毙案情大白",
+        "summary": "宝蟾道出金桂怨恨薛蟠、欲毒害香菱的内情，且因宝蟾调换放盐的汤碗，金桂误饮自己下的砒霜而毙命。",
+        "sourceRole": "dialogue",
+        "speaker": "宝蟾",
+        "reasoningHint": "宝蟾基于私心多放一把盐并互换汤碗的行动，合理解释了金桂本欲害人却自食其果的因果链条。",
+        "generalityHint": "揭露一桩毒杀未遂反自毙的具体家庭凶杀案实情。",
+        "rationale": "通过宝蟾的当众陈词，彻底洗清香菱冤屈并揭示金桂自作自受的死亡经过。",
+        "passageIds": [
+          "p-750927"
+        ]
+      },
+      {
+        "label": "夏家惧罪求息具结免验",
+        "identityLabel": "夏薛命案私了具结",
+        "summary": "真相大白后夏家母子心虚惧罪，反求薛姨妈息事，并在贾琏威吓下主动前往刑部具结拦验，薛家买棺入殓。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从夏母理亏且儿子可能涉嫌买砒霜的恐慌中，顺理成章导致其态度彻底逆转求和。",
+        "generalityHint": "具体宗族亲友间命案经调解与官府具结消弭的事件。",
+        "rationale": "交代了夏金桂暴毙风波的最终结局与平息方式。",
+        "passageIds": [
+          "p-751655"
+        ]
+      },
+      {
+        "label": "贾雨村急流津遇甄士隐",
+        "identityLabel": "雨村急流津遇旧",
+        "summary": "贾雨村升任京兆府尹出勘地亩，在急流津荒庙偶遇参禅打坐的甄士隐，士隐以机锋暗语点化，雨村疑悟未定被催渡河。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "士隐引用雨村昔日旧诗与葫芦旧事，通过真假机锋点化雨村，雨村虽悟前因却仍困于利禄。",
+        "generalityHint": "包含儒释道出世入世哲理对话以及首尾呼应的象征性寓意情节。",
+        "rationale": "呼应小说第一回的因缘，展现了急流津边甄士隐的超脱与贾雨村的利名执迷。",
+        "passageIds": [
+          "p-751935",
+          "p-752361"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "金桂暴毙引来贾琏与宝钗的介入，进而产生具体的应对与羁押策略。",
+        "passageIds": [
+          "p-746946"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "报官与通报夏家的决定引来了夏家母子的上门寻衅与贾琏的压制。",
+        "passageIds": [
+          "p-748608",
+          "p-749291"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾琏等人控制局面并准备相验，促成了对金桂内室的检视与搜出空箱及药包。",
+        "passageIds": [
+          "p-749831",
+          "p-750271"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "搜出的空箱与药包令宝蟾与夏母相互攻讦，迫使宝蟾彻底吐露金桂换碗服毒的真相。",
+        "passageIds": [
+          "p-750546",
+          "p-750927"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "宝蟾道出金桂自害真相后，夏母彻底理亏情怯，只得求薛姨妈息事具结。",
+        "passageIds": [
+          "p-751655"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ZdmcaszfHvGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 9245,
+    "candidatesTokenCount": 2396,
+    "totalTokenCount": 11641,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9245
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2396
+      }
+    ]
+  },
+  "durationMs": 17507,
+  "requestHash": "4c477065a566726854c1f8269a2276ea77655bc445f4ad97f8961a01096588e2"
+}

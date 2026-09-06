@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges are well-supported by the cited passages. The narrative/dialogue attributions, reasoning summaries, theme assignments, and narrative sequential developments accurately reflect the textual evidence."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "n9qcapKGBouKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 72255,
+    "candidatesTokenCount": 61,
+    "totalTokenCount": 72316,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 72255
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 61
+      }
+    ]
+  },
+  "durationMs": 3205,
+  "requestHash": "f1ffd0418c38648f68084b833aaf05fa8f90003f1f018626bbe254c87fdc2003"
+}

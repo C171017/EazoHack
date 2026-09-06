@@ -1,0 +1,178 @@
+{
+  "value": {
+    "summary": "贾宝玉与送玉和尚相见后顿悟，执意还玉断绝尘缘，遭袭人、紫鹃与王夫人、宝钗等竭力阻拦，玉虽暂留，宝玉却已心如槁木。贾琏接贾赦病危家信南下，托付贾芸、贾蔷照看家务。贾芸贾蔷遂与王仁、邢大舅、贾环等聚众聚赌酗酒，外书房乌烟瘴气，席间更妄议巧姐亲事及贾雨村被拿、妙玉下落等事。最后惜春立意出家，绞发哭求，尤氏硬做主张留她在府中静室修行，众人各怀心思。",
+    "nodes": [
+      {
+        "label": "和尚点化与宝玉决意还玉",
+        "identityLabel": "宝玉还玉断尘缘",
+        "summary": "癞头和尚上门索玉问其来历，宝玉受点化看破红尘，决意将通灵宝玉退还以斩断尘缘。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于前文宝玉病愈及历经变故的心理演变，和尚一番来历点醒促成其当下决心。",
+        "generalityHint": "涉及宝玉个人的特定宿命与顿悟时刻。",
+        "rationale": "文本直接叙述宝玉见僧、被问及玉之来历后宛如当头棒喝，当即决定还玉。",
+        "passageIds": [
+          "p-839555"
+        ]
+      },
+      {
+        "label": "众女阻玉与宝钗收存",
+        "identityLabel": "佳人阻宝玉还玉",
+        "summary": "袭人、紫鹃死命抱住宝玉阻其送玉，宝钗明决劝解并收存宝玉，宝玉讥讽众人“重玉不重人”。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接宝玉欲还玉之举，袭人紫鹃王夫人宝钗各本其立场竭力阻拦。",
+        "generalityHint": "局限于荣国府内室关于护玉的特定冲突场景。",
+        "rationale": "详细描写袭人死拉、紫鹃抱住，以及王夫人责备与宝钗收下通灵宝玉的经过。",
+        "passageIds": [
+          "p-840047"
+        ]
+      },
+      {
+        "label": "宝玉心生离世之念",
+        "identityLabel": "宝玉欲断尘缘",
+        "summary": "僧人飘然而去后，宝玉宣称断绝尘缘、一子出家，对家中诸人皆感疏离冷淡，王夫人闻之伤心痛哭。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉在和尚离去后对世俗生活完全灰心，顺承点化后的心态转变。",
+        "generalityHint": "记录宝玉个人的出家意向及其家庭反响。",
+        "rationale": "宝玉向小厮和王夫人讲述和尚话意并言出家之好，引得王夫人痛哭，随后又佯作攻书度日。",
+        "passageIds": [
+          "p-841253",
+          "p-843959"
+        ]
+      },
+      {
+        "label": "贾琏南下托付家务",
+        "identityLabel": "贾琏奔丧托家",
+        "summary": "贾琏得贾赦病危信急于探视，将巧姐托给平儿与王夫人，并将外事托付贾芸、贾蔷照看后启程。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾赦病重属于外部突发事由，引致贾琏离京与荣府权力监管的真空。",
+        "generalityHint": "特定家族人事安排与离别事件。",
+        "rationale": "贾琏向王夫人禀报父亲病危并辞行，将外事交代给贾芸、贾蔷，巧姐对此极为不满却无可奈何。",
+        "passageIds": [
+          "p-841253",
+          "p-843252"
+        ]
+      },
+      {
+        "label": "恶子聚党设局酗酒",
+        "identityLabel": "贾芸贾蔷外书房聚赌",
+        "summary": "贾芸贾蔷在外书房日夜聚赌，引得王仁、邢大舅、贾环等汇聚滥饮，荣国府内外失序。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "长辈不在且二人得势，使得府中子弟家奴无所顾忌，造成家风进一步败坏。",
+        "generalityHint": "贾府败落期子弟放浪行径的典型缩影。",
+        "rationale": "贾琏走后，贾蔷贾芸同邢大舅、王仁在书房酗酒聚赌、行令搳拳，贾环亦深陷其中。",
+        "passageIds": [
+          "p-843484",
+          "p-844389"
+        ]
+      },
+      {
+        "label": "席间妄议外藩选妃与案情",
+        "identityLabel": "群小议巧姐与凶信",
+        "summary": "陪酒人提及外藩王爷选妃，王仁暗自心动；随后赖家子弟带来贾雨村被拿及疑似妙玉遇害之传闻。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "醉酒闲谈中流露出众恶人的歹念与外界朝局动荡的传闻。",
+        "generalityHint": "特定对话，伏下巧姐日后被卖等重大情节脉络。",
+        "rationale": "酒席上论及巧姐美貌与外藩选妃，王仁动心；赖林子弟入座通报贾雨村被参拿问与海疆贼寇杀害妙玉的传闻。",
+        "passageIds": [
+          "p-844389",
+          "p-845811"
+        ]
+      },
+      {
+        "label": "惜春坚执削发出家",
+        "identityLabel": "惜春绞发求出家",
+        "summary": "惜春毅然绞发誓要为尼，王夫人与邢夫人无计可施，最终尤氏硬做主张留她在府中净室修行。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "惜春自幼抱出世之愿，历经抄家与家族破亡，至此彻底爆发并付诸行动。",
+        "generalityHint": "贾府四春之一贾惜春个人宿命的关键转折。",
+        "rationale": "惜春在内室绞发求出家，贾芸贾蔷敷衍推脱，尤氏出面担承主张留其在府中空屋诵经修行。",
+        "passageIds": [
+          "p-846771"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉受和尚启发要还玉，直接引发袭人、紫鹃等人拼死阻拦护玉的情节。",
+        "passageIds": [
+          "p-839555",
+          "p-840047"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝玉被迫交出玉后，虽不能出走，但出家断缘之意更加笃定，对人世愈加淡漠。",
+        "passageIds": [
+          "p-840047",
+          "p-841253",
+          "p-843959"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "贾琏南下将外务托付给贾芸、贾蔷，直接为二人在外书房聚党设赌提供了无拘无束的权力与空间条件。",
+        "passageIds": [
+          "p-843252",
+          "p-843484"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "外书房设宴聚赌的放纵环境，催生了席间对巧姐婚事的不轨图谋及对雨村、妙玉下落的探听妄议。",
+        "passageIds": [
+          "p-844389",
+          "p-845811"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "宝玉此前在闲谈中与惜春机锋相契，相互坚定了斩断尘缘修行的决心，促成了惜春随后的绞发逼争。",
+        "passageIds": [
+          "p-843959",
+          "p-846771"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "tdmcasm9Iemj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10371,
+    "candidatesTokenCount": 2332,
+    "totalTokenCount": 12703,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10371
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2332
+      }
+    ]
+  },
+  "durationMs": 15387,
+  "requestHash": "2e5a2da8fe085bde6005927e11f9c369c3f7a561960d3093cecc1204a07c75df"
+}

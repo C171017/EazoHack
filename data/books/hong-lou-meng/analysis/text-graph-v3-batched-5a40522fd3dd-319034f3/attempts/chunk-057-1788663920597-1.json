@@ -1,0 +1,179 @@
+{
+  "value": {
+    "summary": "第五十七回围绕紫鹃试探宝玉真心与大观园内婚姻生计展开。紫鹃谎称黛玉将回苏州，致使宝玉急痛攻心、如痴如狂；随后紫鹃劝诫黛玉及早定下终身大事。与此同时，薛姨妈为薛蝌求娶邢岫烟，贾母作保促成婚事；宝钗暗中接济照料岫烟，并在潇湘馆与薛姨妈、黛玉笑谈宝黛亲事。",
+    "nodes": [
+      {
+        "label": "紫鹃谎言试宝玉",
+        "identityLabel": "慧紫鹃情辞试莽玉",
+        "summary": "紫鹃在沁芳亭畔试探宝玉，谎称林家早晚要接黛玉回苏州并索还原物，宝玉听闻如遭雷击。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "紫鹃因担忧黛玉日后归宿而有意设辞试探，构成回目核心冲突的开端。",
+        "generalityHint": "特定人物之间带有试探意图的情节交锋。",
+        "rationale": "基于p-397824，紫鹃借赵姨娘、燕窝等话头引出林家接黛玉回籍的谎言，激起宝玉巨大震动。",
+        "passageIds": [
+          "p-397824"
+        ]
+      },
+      {
+        "label": "宝玉闻黛玉将去而发呆病",
+        "identityLabel": "宝玉急痛迷心",
+        "summary": "宝玉听信紫鹃之言后热汗直眼、痰迷失魂，直至见到紫鹃才放声大哭，并死拉不放、草木皆兵。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由紫鹃的谎言直接引发宝玉精神与身体上的剧烈崩溃反应及太医诊治。",
+        "generalityHint": "单一典型痴狂事件的叙述与描写。",
+        "rationale": "基于p-398790、p-399619、p-399995，宝玉因误信黛玉回南而痰迷发病，连见金西洋船、听‘林’字皆惊乱，印证其用情之深。",
+        "passageIds": [
+          "p-398790",
+          "p-399619",
+          "p-399995"
+        ]
+      },
+      {
+        "label": "宝玉明志与紫鹃夜劝黛玉",
+        "identityLabel": "紫鹃劝黛玉定大事",
+        "summary": "病愈后宝玉对紫鹃立下同生共死化灰化烟之誓；紫鹃夜间力劝黛玉趁贾母康健早定婚事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从病愈解释顺承至二人交心，进而紫鹃基于现实利害向黛玉进言深谋远虑。",
+        "generalityHint": "针对孤女命运与高门婚姻现实的权衡劝谕。",
+        "rationale": "基于p-401173与p-402241，宝玉吐露生死与共的痴语，紫鹃回潇湘馆后深切指出‘万两黄金容易得，知心一个也难求’，劝黛玉早作定夺。",
+        "passageIds": [
+          "p-402241",
+          "p-401173"
+        ]
+      },
+      {
+        "label": "薛姨妈为薛蝌聘邢岫烟",
+        "identityLabel": "贾母保山结姻缘",
+        "summary": "薛姨妈见邢岫烟端雅稳重，商之凤姐并由贾母做保山，邢夫人顺从应允，薛蝌与岫烟定下亲事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "长辈权衡双方品性与门第利益促成联姻，推进次要人物的命运线。",
+        "generalityHint": "家族内部婚姻联结的具体事件与礼法运作。",
+        "rationale": "基于p-403040，薛姨妈避开薛蟠而选薛蝌，凤姐转告贾母，贾母硬作保山促成此桩奇缘。",
+        "passageIds": [
+          "p-403040",
+          "p-403808"
+        ]
+      },
+      {
+        "label": "宝钗雪中送炭体贴岫烟",
+        "identityLabel": "宝钗体恤岫烟困窘",
+        "summary": "宝钗发现岫烟因迎春房内盘剥与父母所索而典当冬衣，出言开导其从实守分，并答应代赎冬衣。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过典当冬衣与佩玉细节，展开宝钗对贫家远亲的处世指导与周全接济。",
+        "generalityHint": "大家族边缘亲属生存处境与宝钗守分治家观的体现。",
+        "rationale": "基于p-404144，岫烟道出二两月钱不足以应付下人刁难的困境，宝钗劝慰忍耐并主动要当票代赎。",
+        "passageIds": [
+          "p-404144"
+        ]
+      },
+      {
+        "label": "慈姨妈爱语提宝黛姻缘",
+        "identityLabel": "薛姨妈潇湘馆慰宝黛",
+        "summary": "薛姨妈在潇湘馆宽慰抚恤黛玉，宝钗笑提求配亲事，薛姨妈亦动念欲做媒保成宝玉与黛玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前段宝玉痴狂与认亲玩笑，薛姨妈口头点出老太太心意与宝黛极配。",
+        "generalityHint": "关于儿女婚配天定与长辈撮合的一席私谈。",
+        "rationale": "基于p-405238，薛姨妈叹‘千里姻缘一线牵’并慈爱抚慰黛玉，随后与宝钗、紫鹃谈及撮合宝黛之意，满室欢悦。",
+        "passageIds": [
+          "p-405238"
+        ]
+      },
+      {
+        "label": "当票风波与湘黛动情",
+        "identityLabel": "当票显物伤其类",
+        "summary": "湘云拾得当票引发众人议论，宝钗私下告知原委后，黛玉感叹物伤其类，湘云欲打抱不平。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由当票在千金小姐间的误认生出对下层和贫寒者的不同反应，强化大观园各人性格与心境。",
+        "generalityHint": "由一张当票折射出的闺阁身份隔阂与同情心态。",
+        "rationale": "基于p-406874与p-407363，湘云黛玉不识当票，得知岫烟困窘后黛玉叹‘兔死狐悲’，湘云义愤填膺，被宝钗抚平。",
+        "passageIds": [
+          "p-407363",
+          "p-406874"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "紫鹃的谎言直接触发了宝玉的急痛迷心与痴狂大病。",
+        "passageIds": [
+          "p-397824",
+          "p-398790"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "宝玉因病表白真情，使紫鹃看清其深心，进而促使紫鹃夜劝黛玉早定终身。",
+        "passageIds": [
+          "p-401173",
+          "p-402241"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "薛蝌与岫烟定亲后，宝钗更加关切岫烟在大观园迎春处的艰难处境并私下相助。",
+        "passageIds": [
+          "p-403808",
+          "p-404144"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "岫烟给宝钗的当票被篆儿、莺儿转手，继而被湘云拾得，从而在潇湘馆引发众人波澜。",
+        "passageIds": [
+          "p-404144",
+          "p-406874",
+          "p-407363"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "紫鹃对黛玉婚姻的忧虑在潇湘馆薛姨妈母女的玩笑爱语中再次被正面提及并寄予希望。",
+        "passageIds": [
+          "p-402241",
+          "p-405238"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "X9icaruZOfGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 13179,
+    "candidatesTokenCount": 2315,
+    "totalTokenCount": 15494,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13179
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2315
+      }
+    ]
+  },
+  "durationMs": 17045,
+  "requestHash": "ed3da10c22b564db644cf2bd0d0dacd2e19fbb597d7f2917316d8403174e9882"
+}

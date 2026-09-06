@@ -1,0 +1,124 @@
+{
+  "value": {
+    "summary": "贾雨村遇庙火且得知士隐仙去，回京后惩治醉金刚倪二；倪家求贾芸帮忙无果反结怨倪二，引发对贾府仗势作为的怨恨；贾政被参回京谢罪，得知皇帝留心贾姓劣迹并深感忧虑，回家后得知黛玉死讯；贾宝玉借故不寝，私下向袭人倾吐对黛玉的深切怀念与未能致祭的悔恨。",
+    "nodes": [
+      {
+        "label": "倪二醉冲雨村受惩",
+        "identityLabel": "倪二醉冲雨村受惩",
+        "summary": "贾雨村回京途中，倪二醉酒躺在街心冲撞仪仗，自恃放肆被贾雨村下令鞭打并押送衙门收监。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述倪二醉酒抗官被贾雨村直接拿办的始末，属于局部事实事件。",
+        "generalityHint": "单一具体冲突事件。",
+        "rationale": "基于p-753186，叙述倪二在街心拦路冲撞新任京兆府尹贾雨村而被责打收监。",
+        "passageIds": [
+          "p-753186"
+        ]
+      },
+      {
+        "label": "贾芸托词难救结怨倪二",
+        "identityLabel": "贾芸托词难救结怨倪二",
+        "summary": "倪二妻女求贾芸托荣府说情，贾芸进不得荣府大门且心怀怨尤，回绝倪家；倪二被释后痛骂贾芸忘恩负义并扬言揭发贾家罪行。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接倪二被捕情节，展现贾芸无力办事敷衍推诿，导致底层人物对贾府产生怨恨并埋下告发伏笔。",
+        "generalityHint": "涉及倪二贾芸交往及贾府名声的具体事件脉络。",
+        "rationale": "基于p-753802、p-754280及p-754673，贾芸应承却无法面见主子，倪二出来后深恨贾芸忘恩负义，并扬言抖落贾府欺压良民之事。",
+        "passageIds": [
+          "p-754280",
+          "p-753802",
+          "p-754673"
+        ]
+      },
+      {
+        "label": "雨村知士隐仙去",
+        "identityLabel": "雨村知士隐仙去",
+        "summary": "衙役回禀火灾现场只余蒲团瓢儿且触手成灰，无任何尸骨，贾雨村心知士隐仙去，隐瞒未与家眷实说。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由从人查访庙火的汇报推断出士隐羽化成仙的事实。",
+        "generalityHint": "士隐与雨村特定因缘的情节收束。",
+        "rationale": "基于p-755307，衙役冒火查看回报，雨村心下明白士隐已仙去。",
+        "passageIds": [
+          "p-755307",
+          "p-752906"
+        ]
+      },
+      {
+        "label": "贾政内廷谢罪心怀隐忧",
+        "identityLabel": "贾政内廷谢罪心怀隐忧",
+        "summary": "贾政因江西粮道被参回京谢罪，主上过问云南私带神枪及贾范强占良民案，贾政深感主上已留心贾姓劣迹，并告诫家中子侄行事需严紧。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾政从皇帝盘问贾姓远族犯法的情势，推断出贾家潜在的政治危机，进而告诫贾珍、贾琏戒备。",
+        "generalityHint": "贾府家族政治处境与盛极转衰的预警。",
+        "rationale": "基于p-755682与p-757391，贾政在内廷战战兢兢应对圣问，回家后敲打贾珍贾琏谨慎行事。",
+        "passageIds": [
+          "p-755682",
+          "p-757391"
+        ]
+      },
+      {
+        "label": "宝玉痴怀黛玉怨悔未祭",
+        "identityLabel": "宝玉痴怀黛玉怨悔未祭",
+        "summary": "宝玉借故不寝，向袭人痛诉自己被安排成负心之人，追念林黛玉并为未能亲自作祭文致祭而悲伤焦急，欲求见紫鹃问清黛玉临终心意。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "宝玉内心长期压抑的悲伤因贾政提及黛玉而被触动，结合以往晴雯之死与黛玉烧诗稿等细节，推理倾吐内心的痛苦与执念。",
+        "generalityHint": "宝玉个人情感世界与对黛玉悼念的核心心迹剖白。",
+        "rationale": "基于p-757805与p-757620，宝玉夜不能寐，向袭人详述对黛玉的悔疚以及怀疑黛玉成仙登遐的痴想。",
+        "passageIds": [
+          "p-757805",
+          "p-757620"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "倪二被拘直接促使倪家向贾芸求援，贾芸的推诿与冷淡反激化了倪二的怨恨。",
+        "passageIds": [
+          "p-753580",
+          "p-753802",
+          "p-754673"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾政到家后问及黛玉引发王夫人隐瞒，宝玉由此触动前情，夜间向袭人彻底倾吐哀痛。",
+        "passageIds": [
+          "p-756956",
+          "p-757620",
+          "p-757805"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ctmcaqi8KNCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 10230,
+    "candidatesTokenCount": 1612,
+    "totalTokenCount": 11842,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10230
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1612
+      }
+    ]
+  },
+  "durationMs": 12197,
+  "requestHash": "7a9457ed6fecafac2e35a7fde0284522d8c1aa652cb0f24f8b262d524348df3a"
+}

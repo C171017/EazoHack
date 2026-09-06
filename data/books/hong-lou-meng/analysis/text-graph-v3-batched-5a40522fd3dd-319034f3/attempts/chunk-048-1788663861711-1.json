@@ -1,0 +1,204 @@
+{
+  "value": {
+    "summary": "第四十八回叙述薛蟠挨打后借随张德辉南下贩货避羞经商，宝钗劝薛姨妈放行并带香菱入大观园作伴。平儿向宝钗披露贾赦为谋石呆子古扇唆使贾雨村抄没扇子并痛打贾琏之始末。入园后香菱慕雅拜黛玉为师学诗，历经精读王维、杜甫诗作与悟通诗理，在连作两首月诗被指不雅及穿凿后苦吟成魔，最终于梦中得句。",
+    "nodes": [
+      {
+        "label": "薛蟠借外出经商避羞",
+        "identityLabel": "薛蟠外出游艺经商",
+        "summary": "薛蟠挨打后愧见亲友装病在家，听闻伙计张德辉将南下贩卖纸札香扇，遂决定打点本钱随其同行，借外出经商逛山水之名以避羞。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于前文挨打之羞耻与伙计年账谈话引发的因果决断。",
+        "generalityHint": "单一具体事件，涉及薛蟠个人去向之动机与安排。",
+        "rationale": "由被打不敢见人的处境，薛蟠因张德辉贩货言谈而决意随行，既是避羞也是游艺尝试。",
+        "passageIds": [
+          "p-326567",
+          "p-326899"
+        ]
+      },
+      {
+        "label": "宝钗劝母放薛蟠出门历练",
+        "identityLabel": "宝钗论薛蟠历练",
+        "summary": "薛姨妈恐薛蟠在外生事而不欲放行，宝钗分析与其常年困守家中不通世路，不如交予少许本银听其在外历练，若举眼无靠反而可能收敛省事，薛姨妈遂应允并嘱托张德辉。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "由薛蟠素日习性及常情推演得出的一套管教与历练权衡方案。",
+        "generalityHint": "针对薛蟠个人处境的具体家庭决策分析。",
+        "rationale": "宝钗以尽人力听天命、举眼无靠反而省事的推理说服薛姨妈，促成薛蟠出行。",
+        "passageIds": [
+          "p-327244"
+        ]
+      },
+      {
+        "label": "宝钗携香菱入园作伴",
+        "identityLabel": "香菱搬入大观园",
+        "summary": "薛蟠出行后薛家院内人少，薛姨妈原欲香菱同睡，宝钗提议将香菱带入大观园蘅芜苑作伴，香菱遂得遂心愿搬入园中住下。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "薛蟠出行导致起居防范调整，宝钗顺势提出安排。",
+        "generalityHint": "局限于薛家内眷在贾府园中起居安排的具体情境。",
+        "rationale": "薛蟠离家后防务变动促成宝钗带香菱进园，为后文香菱得以向黛玉学诗铺垫了空间条件。",
+        "passageIds": [
+          "p-327921",
+          "p-328271"
+        ]
+      },
+      {
+        "label": "贾雨村籍没石呆子扇致贾琏挨打",
+        "identityLabel": "石呆子扇案与贾琏挨打",
+        "summary": "平儿向宝钗道出贾琏挨打始末：贾赦索求石呆子古扇未果，贾雨村以拖欠官银为由抄没其家产送来古扇，贾琏因直言此举算不得能为忤逆贾赦而遭痛打求药。",
+        "sourceRole": "dialogue",
+        "speaker": "平儿",
+        "reasoningHint": "平儿叙述贾雨村构陷石呆子与贾琏仗义直言遭父毒打的前因后果。",
+        "generalityHint": "讲述贾府内外权势夺物伤人的一桩具体黑幕事件。",
+        "rationale": "揭示贾府长辈之贪酷与贾雨村之枉法，同时交代贾琏挨打之伤情药石。",
+        "passageIds": [
+          "p-328814"
+        ]
+      },
+      {
+        "label": "黛玉向香菱传授诗道立意之要",
+        "identityLabel": "林黛玉诗道论",
+        "summary": "香菱正式拜黛玉为师，黛玉阐述作诗之道在于格调规矩为末、意趣真纯不以词害意为上，并指定按王维五律、老杜七律、李白七绝的次第精熟揣摩以为底子。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "黛玉由诗歌修辞与立意的轻重关系推导出系统的学诗方法论。",
+        "generalityHint": "黛玉所持有的对于古典诗歌本质与修习进阶路径的总体主张。",
+        "rationale": "黛玉打破拘泥格律形式的成见，提出以王孟李杜为根柢、立意为先的作诗门径。",
+        "passageIds": [
+          "p-329641"
+        ]
+      },
+      {
+        "label": "香菱悟摩诘诗境理趣",
+        "identityLabel": "香菱谈诗悟境",
+        "summary": "香菱读完王维红圈诗作后向黛玉阐发体悟，指出王诗妙在词语似无理而想去有理有情，黛玉引陶渊明诗说明其化用之迹，宝玉探春亦赞其已得三昧并邀其入社作诗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "香菱结合个人生活乘船远行所见，细品“直”“圆”“青”“白”诸字之造化。",
+        "generalityHint": "香菱对王维诗作意象逼真与无理而妙特征的诗美学解读。",
+        "rationale": "香菱通过自身生活经验与读诗印证，展示出对诗歌精髓的迅速领悟。",
+        "passageIds": [
+          "p-330455",
+          "p-330948"
+        ]
+      },
+      {
+        "label": "香菱初试咏月两遭指瑕",
+        "identityLabel": "香菱初作月诗受评",
+        "summary": "香菱以十四寒韵作首首月诗，黛玉评其措词不雅、受旧诗约束；香菱另起构思成第二首，黛玉又评其过于穿凿，宝钗亦笑其句句实是月色而非吟月，探春等引其往暖香坞看画散心。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉、宝钗根据两首诗的具体用词与构思缺陷予以具体批驳指导。",
+        "generalityHint": "香菱习作与众姐妹诗评的特定文学评点过程。",
+        "rationale": "展示初学者从生硬凑韵到刻意穿凿的必经阶段，黛玉直指病痛以促其放开胆子。",
+        "passageIds": [
+          "p-331583",
+          "p-331850",
+          "p-332190",
+          "p-332384"
+        ]
+      },
+      {
+        "label": "香菱痴心入魔梦中成诗",
+        "identityLabel": "香菱梦中得诗",
+        "summary": "香菱两度被评仍不肯罢手，起坐行卧挖心搜胆，将探春劝语误为出韵，至三更后五更眠，精血诚聚之下竟于梦中吟得八句，醒后忙录出欲再寻黛玉讲究。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从白日苦吟不辍、心神专一到潜意识入梦成诗的心理过程描写。",
+        "generalityHint": "香菱苦志学诗直至诚心通仙的特定艺术狂热状态。",
+        "rationale": "回应回目“苦吟诗”之题旨，将香菱学诗的热诚与超拔推向高潮。",
+        "passageIds": [
+          "p-332797",
+          "p-332384"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "薛蟠提出跟从张德辉经商的想法后，薛姨妈与宝钗进一步商议并敲定放行方案。",
+        "passageIds": [
+          "p-326899",
+          "p-327244"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "正因宝钗力主促成薛蟠外出，家中起居人员变动，才有了宝钗带香菱入园作伴的安排。",
+        "passageIds": [
+          "p-327244",
+          "p-327921"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "香菱住入大观园后得以闲暇，方能至潇湘馆拜黛玉为师正式学诗。",
+        "passageIds": [
+          "p-328271",
+          "p-329641"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "黛玉授以王维五律为底子并点拨真意，香菱读完后如实领悟并向黛玉回馈体察心得。",
+        "passageIds": [
+          "p-329641",
+          "p-330455"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "在品诗得三昧后，黛玉命香菱以十四寒韵赋月，香菱连续写出两首诗并受黛玉宝钗批改。",
+        "passageIds": [
+          "p-330948",
+          "p-331583",
+          "p-332190"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "前两首诗屡作屡被指不雅及穿凿，不仅未挫其志，反促使香菱苦思成魔，终至梦中得句。",
+        "passageIds": [
+          "p-332384",
+          "p-332797"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IticaqfPBvGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 9502,
+    "candidatesTokenCount": 2728,
+    "totalTokenCount": 12230,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9502
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2728
+      }
+    ]
+  },
+  "durationMs": 19886,
+  "requestHash": "b64dcc62bdd6b7b5adcd70a9b2d66701fd28c8a667353b8dd520ca38f81343e4"
+}

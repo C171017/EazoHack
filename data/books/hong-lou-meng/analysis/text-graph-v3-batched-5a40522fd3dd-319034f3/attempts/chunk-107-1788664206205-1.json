@@ -1,0 +1,163 @@
+{
+  "value": {
+    "summary": "第一零七回叙述贾政奉旨入内听旨，圣上宽免治家不正之罪，将贾赦贾珍从宽发配效力，家产给还。贾母得知后明大义，开箱倾出私蓄分派各房以解燃眉之急并资助路费，又亲自探视安抚病重的王熙凤。随后朝廷下旨命贾政承袭荣国公世职。荣府衰败之际奴仆离心，投靠而来的包勇因忠心护主在街头痛骂忘恩负义的贾雨村，反被贾政派去看守大观园。",
+    "nodes": [
+      {
+        "label": "圣祖宽宥贾氏发配革职",
+        "identityLabel": "朝廷定案贾赦贾珍处置",
+        "summary": "贾政奉召进内听旨，北静王传旨贾赦发往台站、贾珍革世职发往海疆效力，贾蓉免罪，贾政免治治家不正之罪并给还家产。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于朝廷调查审理结果得出的宽大结案判断。",
+        "generalityHint": "涉及贾赦、贾珍及贾政等数人的具体案件判决。",
+        "rationale": "出处p-770327详载北静王传达皇帝谕旨及定案处置结果。",
+        "passageIds": [
+          "p-770327"
+        ]
+      },
+      {
+        "label": "贾政诉家底亏空难支",
+        "identityLabel": "贾府败落实情之陈奏",
+        "summary": "贾政向贾母具陈旧库虚空、外有亏空、田亩透支且世俸革除后举借无门的困窘败落真相。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从抄家后的财务盘查直接推导出无力支撑家计的结论。",
+        "generalityHint": "荣府当下财政与家运断绝的具体状况说明。",
+        "rationale": "出处p-771109中贾母垂询后贾政具实禀告家底已空并无着落。",
+        "passageIds": [
+          "p-771109"
+        ]
+      },
+      {
+        "label": "贾母开箱散资分派各房",
+        "identityLabel": "贾母散资安抚家族",
+        "summary": "贾母开箱倾出历年积攒资财，分派贾赦贾珍作盘费度日、资助凤姐及归葬黛玉等，并定裁减冗员、量入为出之策。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母针对家产抄空、子侄即将遣戍的危局作出的通盘调度应对。",
+        "generalityHint": "涵盖贾府各房生计安排与后续收敛守门的具体决断。",
+        "rationale": "出处p-772577详载贾母开箱分派现银、首饰衣物及遣散裁员之交代。",
+        "passageIds": [
+          "p-772577",
+          "p-772279"
+        ]
+      },
+      {
+        "label": "贾母慰探病危王熙凤",
+        "identityLabel": "贾母宽慰探视凤姐",
+        "summary": "贾母不顾疲累亲自探视气绝受惊的王熙凤，好言宽慰其毋须自责并赐予资财，凤姐感极含愧伏枕立誓。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由丰儿报信凤姐垂危引发贾母宽释罪责与抚慰举动。",
+        "generalityHint": "针对凤姐一人在败落获咎情境下的特定宽抚探视。",
+        "rationale": "出处p-774197及p-773872体现贾母深明大义与亲探抚慰凤姐过程。",
+        "passageIds": [
+          "p-774197",
+          "p-773872"
+        ]
+      },
+      {
+        "label": "贾政承袭荣国公世职",
+        "identityLabel": "贾政奉旨袭职与谢恩",
+        "summary": "朝廷降旨命贾政承袭荣国公世职，贾政感愧交加，谢恩并奏请将赏还第园入官未蒙允准，亲友趋附复至。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "皇帝对功臣之后额外施恩所作出的袭职恩典。",
+        "generalityHint": "针对贾政承袭世职与府第处置的具体事件。",
+        "rationale": "出处p-775138叙述旨意降下后众人贺喜及贾政感极上折之情状。",
+        "passageIds": [
+          "p-775138"
+        ]
+      },
+      {
+        "label": "包勇痛骂雨村反遭派园",
+        "identityLabel": "包勇醉骂贾雨村受抑",
+        "summary": "忠仆包勇闻贾雨村落井下石背恩负德，醉后当街斥骂雨村，荣府家人进谗，贾政唯恐生事将其派去看守荒园。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由市井闲话揭出贾雨村倾轧内幕，引发包勇义愤醉骂与后续被逐看园。",
+        "generalityHint": "荣府仆役与新贵恩怨纠葛的个案事件。",
+        "rationale": "出处p-775569详细描写包勇街头怒骂贾雨村反受贾政责罚派看大观园的始末。",
+        "passageIds": [
+          "p-775569"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "朝廷处置下达后，贾母过问善后资用，贾政进而道出家私早已彻底亏空的实情。",
+        "passageIds": [
+          "p-770327",
+          "p-771109"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "正因荣宁二府底空且挪移无门，贾母才毅然散出己身历年私蓄分派各房以济急。",
+        "passageIds": [
+          "p-771109",
+          "p-772577"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾母分派家资并顾念凤姐操劳致病，随即亲自前去卧榻探抚并赐物安其心。",
+        "passageIds": [
+          "p-772577",
+          "p-773872",
+          "p-774197"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "在贾赦被革世职发配后，朝廷再降特恩令贾政承袭荣国公世职。",
+        "passageIds": [
+          "p-770327",
+          "p-775138"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾政袭职后家计依旧萧条，贾政胆小怕事，促成了包勇见贾雨村忘恩负义出言斥骂反被贾政派园的结果。",
+        "passageIds": [
+          "p-775138",
+          "p-775569"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "f9mcaocwsKLRyQ-Q_e3wCQ",
+  "usage": {
+    "promptTokenCount": 8822,
+    "candidatesTokenCount": 2072,
+    "totalTokenCount": 10894,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8822
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2072
+      }
+    ]
+  },
+  "durationMs": 15926,
+  "requestHash": "a43e0a8d5db6a1b4e8ce51f4a36d89ada1e9d126a0874106178df15bf8a87376"
+}

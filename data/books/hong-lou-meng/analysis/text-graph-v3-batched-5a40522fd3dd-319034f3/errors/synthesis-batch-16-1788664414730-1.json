@@ -1,0 +1,4 @@
+{
+  "attempt": 1,
+  "error": "[\n  {\n    \"origin\": \"array\",\n    \"code\": \"too_big\",\n    \"maximum\": 30,\n    \"inclusive\": true,\n    \"path\": [\n      \"crossEdges\"\n    ],\n    \"message\": \"Too big: expected array to have <=30 items\"\n  }\n]"
+}

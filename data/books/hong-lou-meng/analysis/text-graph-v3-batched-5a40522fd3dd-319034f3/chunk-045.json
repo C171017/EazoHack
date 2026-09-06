@@ -1,0 +1,151 @@
+{
+  "value": {
+    "summary": "第四十五回叙述李纨与姊妹们拉凤姐入诗社并为平儿争气，赖嬷嬷因孙儿得官来贾府道喜并调解周瑞家儿子之事；随后写宝钗探病黛玉，二人推心置腹冰释前嫌，黛玉感怀风雨写下《秋窗风雨夕》，宝玉冒雨夜探及宝钗送燕窝，尽显深闺情谊与凄凉心绪。",
+    "nodes": [
+      {
+        "label": "李纨姊妹拉凤姐入诗社",
+        "identityLabel": "大观园诗社与凤姐之约",
+        "summary": "探春与李纨等邀凤姐做诗社监社御史，凤姐看穿其欲拉自己做“进钱铜商”，反算李纨月钱进项丰厚，后应允出五十两银子作东道并代办惜春画具。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于探春和李纨的说辞，凤姐当场算清李纨的收入账目并妥协出资。",
+        "generalityHint": "涉及大观园诗社运作与贾府内眷之间人情往还的特定事件。",
+        "rationale": "文本直接叙述众姊妹找凤姐要钱办诗社与画具，李纨借机替平儿抱不平，凤姐应允资助。",
+        "passageIds": [
+          "p-303228",
+          "p-303963",
+          "p-304417"
+        ]
+      },
+      {
+        "label": "赖嬷嬷道喜与劝诫",
+        "identityLabel": "赖家得官与奴仆处世之道",
+        "summary": "赖嬷嬷因孙儿赖尚荣选官向贾府道喜，席间训诫后辈戒骄安分，兼述贾府长辈往昔管教严厉之规，并出面替周瑞之子求情免于被撵。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从赖嬷嬷自述管教儿孙的道理及依仗太太体面说情推导而来。",
+        "generalityHint": "反映贾府奴仆阶层上升过程中的处世哲学与豪门主仆伦理规则。",
+        "rationale": "详细记录赖嬷嬷叙说赖尚荣做官始末、借古训诫宝玉及化解周瑞家危机的具体情节。",
+        "passageIds": [
+          "p-305180",
+          "p-305892",
+          "p-306930"
+        ]
+      },
+      {
+        "label": "宝黛金兰契互剖金兰语",
+        "identityLabel": "宝黛释嫌与金兰之契",
+        "summary": "宝钗探病黛玉并指点食疗燕窝之法，黛玉推心置腹承认往日多心错怪宝钗，坦陈寄人篱下、一无所有的烦难与顾虑，宝钗承诺照应并代送燕窝。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉自述由前日行酒令行径转而感知宝钗诚意，从而展开肺腑之谈。",
+        "generalityHint": "聚焦于黛玉与宝钗两人由戒备转为知心金兰的关键人物关系发展。",
+        "rationale": "记叙二人关于吃药调养、寄人篱下处境及彼此肺腑之言的深入对话，体现金兰之好。",
+        "passageIds": [
+          "p-307708",
+          "p-308073"
+        ]
+      },
+      {
+        "label": "黛玉风雨夕制词",
+        "identityLabel": "黛玉制《秋窗风雨夕》",
+        "summary": "秋雨黄昏，黛玉因病抱闷，感怀身世与秋景，拟乐府体制写下凄凉哀怨的《秋窗风雨夕》。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由外部秋雨阴沉气候直接触动黛玉孤苦病体的心境而触发作诗。",
+        "generalityHint": "特定的抒情创作活动，体现黛玉孤凄自怜的悲剧意境。",
+        "rationale": "文本详细叙述黛玉作诗的缘由、诗题与诗词全文。",
+        "passageIds": [
+          "p-309013",
+          "p-309186"
+        ]
+      },
+      {
+        "label": "宝玉风雨夜探与赠灯",
+        "identityLabel": "宝玉风雨夜访黛玉",
+        "summary": "宝玉披蓑戴笠冒雨探视黛玉问候饮食，二人笑谈渔翁渔婆，黛玉将明亮的玻璃绣球灯赠予宝玉照路回房。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉见宝玉冒雨前来且持瓦灯路滑，出于关心而赠送绣球灯。",
+        "generalityHint": "描摹宝黛日常亲密互动与互相关照的具体情境。",
+        "rationale": "记录宝玉着蓑衣前来看望、黛玉羞言渔婆及二人赠灯对话的情节。",
+        "passageIds": [
+          "p-309357",
+          "p-309512",
+          "p-309891"
+        ]
+      },
+      {
+        "label": "蘅芜苑送燕窝与夜感",
+        "identityLabel": "宝钗夜馈燕窝与黛玉夜叹",
+        "summary": "宝钗遣婆子冒雨送来上等燕窝与雪花洋糖，黛玉赏钱致意，夜卧枕上感念宝钗体贴，复念身世凄凉，彻夜难眠。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接白天宝钗所允诺之事，并引发黛玉夜半独处时的深层愁绪。",
+        "generalityHint": "黛玉面对金兰情意与无依宿命的个人内心反思。",
+        "rationale": "叙述送燕窝始末以及黛玉在风雨声中辗转反侧直至四更将阑的情态。",
+        "passageIds": [
+          "p-310492",
+          "p-310806"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝钗白天提出燕窝调理并应允私下相赠，入夜后果然派婆子送来，黛玉由是心生感念。",
+        "passageIds": [
+          "p-308073",
+          "p-310492",
+          "p-310806"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "宝钗去后，黛玉体察病况与自身孤立无依的处境，兼遇黄昏秋雨，感伤遂化为《秋窗风雨夕》。",
+        "passageIds": [
+          "p-308073",
+          "p-309013"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "黛玉刚写完《秋窗风雨夕》，宝玉即冒雨至潇湘馆探问病情并读其诗稿。",
+        "passageIds": [
+          "p-309186",
+          "p-309357",
+          "p-309891"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "E9icapuYKLCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 10201,
+    "candidatesTokenCount": 1982,
+    "totalTokenCount": 12183,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10201
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1982
+      }
+    ]
+  },
+  "durationMs": 14547,
+  "requestHash": "9baee615bbba658e3efb18c35be8fbf01004fc996bb16c014b07c19b7bc7835b"
+}

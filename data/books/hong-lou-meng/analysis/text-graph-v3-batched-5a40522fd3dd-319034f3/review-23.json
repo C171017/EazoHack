@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges are well-grounded in the provided passage texts and reflect accurate narrative and causal progressions without hallucination or misattribution."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "uNqcauKLIoKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 74703,
+    "candidatesTokenCount": 52,
+    "totalTokenCount": 74755,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 74703
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 52
+      }
+    ]
+  },
+  "durationMs": 3422,
+  "requestHash": "4a486481740599ccfac2b96a7fefc99bfd11a19586571de4412ac39a78964f3a"
+}

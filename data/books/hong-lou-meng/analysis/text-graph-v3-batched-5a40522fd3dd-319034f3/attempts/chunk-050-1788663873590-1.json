@@ -1,0 +1,168 @@
+{
+  "value": {
+    "summary": "本回叙述大观园众人在芦雪广联句作即景排律诗，湘云、黛玉与宝琴抢联极多，宝玉落后受罚往栊翠庵折红梅。众人分赋红梅诗后，贾母雪中乘轿来探，领众人往暖香坞看惜春作画并提议制作春灯谜。回贾母处后薛姨妈提及宝琴婚事，次日众人于暖香坞各自制春灯谜，宝琴拟作十首怀古诗灯谜待续。",
+    "nodes": [
+      {
+        "label": "凤姐起句与芦雪广联诗",
+        "identityLabel": "芦雪广即景联句起首",
+        "summary": "宝钗定下拈阄次序，王熙凤自告奋勇说出首句'一夜北风紧'，李纨等依序相继联句成篇。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述起联规矩、凤姐出粗中带巧的首句以及众人开始按韵作排律诗的过程。",
+        "generalityHint": "单一具体叙事事件，即芦雪广联句诗会的开端与组织方式。",
+        "rationale": "基于p-340463与p-340787，交代联诗开端与首句的产生。",
+        "passageIds": [
+          "p-340463",
+          "p-340787",
+          "p-340802"
+        ]
+      },
+      {
+        "label": "湘黛琴争联二萧韵",
+        "identityLabel": "湘黛琴争诗联句",
+        "summary": "联句进行中，史湘云、薛宝琴与林黛玉争相抢联，诗思敏捷且打趣不断，最终李纨李绮收尾并评湘云得鹿肉之力最多。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文联句规则，因湘云、黛玉、宝琴抢联而打破原有顺序。",
+        "generalityHint": "特定诗会场景中三人竞技的高潮过程。",
+        "rationale": "基于p-341184与p-341831、p-342053，生动展现三人敏捷争联即景诗及事后讲评。",
+        "passageIds": [
+          "p-341184",
+          "p-341831",
+          "p-342053"
+        ]
+      },
+      {
+        "label": "罚宝玉乞红梅及赋诗",
+        "identityLabel": "栊翠庵乞红梅与限字赋诗",
+        "summary": "因宝玉联句落后，李纨罚其往栊翠庵向妙玉乞得一枝红梅；宝钗命岫烟、李纹、宝琴以'红梅花'分韵赋七律，湘云更命宝玉作访梅诗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "联句评议后李纨对落第者的惩罚决定，引出赏梅和限字赋诗的任务安排。",
+        "generalityHint": "围绕乞梅与分韵创作的一连串具体事件。",
+        "rationale": "基于p-342124、p-342778和p-343003，记叙取梅惩罚与命题七律的具体布置。",
+        "passageIds": [
+          "p-342124",
+          "p-342778",
+          "p-343003"
+        ]
+      },
+      {
+        "label": "贾母赏雪并至暖香坞催画",
+        "identityLabel": "贾母踏雪探梅与暖香坞催画",
+        "summary": "众人赏诗之际，贾母乘小竹轿踏雪而至，赞赏红梅并提议制作春灯谜，随后带众人转至暖香坞察看惜春作大观园图的进度。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母突然到来引发的长辈与孙辈间游宴互动，并推动作画与猜谜议题。",
+        "generalityHint": "特定雪天游园与长幼齐聚的场面。",
+        "rationale": "基于p-343800与p-344447，展现贾母关照小辈、催促图画并提议春灯谜的情节转移。",
+        "passageIds": [
+          "p-343800",
+          "p-344447"
+        ]
+      },
+      {
+        "label": "雪后双艳图与薛姨妈论亲",
+        "identityLabel": "雪下折梅景致与宝琴求配之意",
+        "summary": "出园时贾母见宝琴披凫靥裘执梅立雪犹如画中人，回房后细询其生辰家况，薛姨妈察知贾母欲为宝玉说媒，因已许梅家遂婉言道出原委。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由雪地梅景引发贾母对宝琴品貌的赞赏，进而萌生议亲心思与薛姨妈的隐微回应。",
+        "generalityHint": "涉及宝玉与宝琴婚配试探的关键人物互动场景。",
+        "rationale": "基于p-345008与p-346027，描写贾母赞赏雪中美景以及试探宝琴婚约的过程。",
+        "passageIds": [
+          "p-345008",
+          "p-346027"
+        ]
+      },
+      {
+        "label": "暖香坞众人制作春灯谜",
+        "identityLabel": "暖香坞春灯谜创作",
+        "summary": "次日雪晴，众人聚集暖香坞，李纨、李纹、李绮、湘云、宝钗、宝玉、黛玉各出灯谜互猜，宝琴更拟选十处古迹赋怀古诗兼作俗物谜。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "践行贾母前日作春灯谜之提议，由四书典故转向浅近俗物，最后引出宝琴的怀古诗谜构想。",
+        "generalityHint": "暖香坞中众人各自构思灯谜的文墨集会。",
+        "rationale": "基于p-346399与p-347404，交代制谜始末与宝琴怀古十首之发端。",
+        "passageIds": [
+          "p-346399",
+          "p-347404"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "凤姐开出首句并定下规则后，众姊妹依韵顺联，进而在湘云、宝琴、黛玉之间演变成激烈的争相抢联。",
+        "passageIds": [
+          "p-340463",
+          "p-341184"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "争联即景诗结束后，李纨评点众人诗作，因宝玉未能抢联而判定其落第，罚其去栊翠庵折梅并引出新诗题。",
+        "passageIds": [
+          "p-342053",
+          "p-342124"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "众人正观赏咏评红梅花诗作与宝玉访梅诗时，贾母冒雪乘轿前来赏梅，引申出转往暖香坞与制作春灯谜的倡议。",
+        "passageIds": [
+          "p-343800"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "从暖香坞出园时，贾母见山坡上宝琴披裘执梅的身影胜过名画，引发晚间在房中询问生辰并欲为宝玉提亲的对话。",
+        "passageIds": [
+          "p-345008",
+          "p-346027"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "贾母在芦雪广与暖香坞提出的'作些灯谜正月里好顽'的主意，成为次日众人齐聚暖香坞各自制编春灯谜的直接缘起。",
+        "passageIds": [
+          "p-343800",
+          "p-346399"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "M9icavAC8ZTRyQ-E9e-5Ag",
+  "usage": {
+    "promptTokenCount": 14430,
+    "candidatesTokenCount": 2198,
+    "totalTokenCount": 16628,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14430
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2198
+      }
+    ]
+  },
+  "durationMs": 15317,
+  "requestHash": "f74b2f5c41a23907395930c796755c2edbdc8fd67ed95d589507edae29d435da"
+}

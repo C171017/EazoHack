@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges are well-grounded in the cited passages, source roles are correctly marked, summaries accurately reflect the underlying textual evidence, and the edge relations conform to the text dynamics."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "t9qcaqPuIaGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 98745,
+    "candidatesTokenCount": 62,
+    "totalTokenCount": 98807,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 98745
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 62
+      }
+    ]
+  },
+  "durationMs": 6707,
+  "requestHash": "5647b22fcfdcaeec95846ae06a6bb23de3983035f15d20b37af9d6f17716e342"
+}

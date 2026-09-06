@@ -1,0 +1,43 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "e-73-4",
+        "reason": "Relation 'supports' is inappropriate. Xing Furen berating Yingchun for being spineless does not grounds/support the claim of Wang Zhuer's wife defaulting and extorting; it is an antecedent prediction or thematically parallel instance rather than logical evidence/support."
+      },
+      {
+        "id": "e-74-4",
+        "reason": "Relation 'challenges' is inaccurate in type. While it is a dramatic irony ('说嘴打嘴') for Wang Shanbao's wife, the finding of Siqi's love tokens does not contradict or challenge node n-74-2 (Wang Shanbao's slander of Qingwen/prompting the search), but rather directly results from/develops the inspection triggered by her."
+      },
+      {
+        "id": "cross-143",
+        "reason": "Relation 'challenges' is incorrect. The text depicts a contrast between the Jia Mother's prohibition in Chapter 73 and Jia Zhen's illicit gambling in Chapter 75; this is narrative disobedience/transgression rather than logical refutation or objection ('challenges')."
+      }
+    ],
+    "notes": "Reviewed 18 nodes and 19 edges across Chapters 71 to 76. All target nodes accurately summarize and represent textual evidence, speaker roles, and primary themes. Three edges were rejected due to improper relation typing (attributing 'supports' or 'challenges' to dramatic ironies, behavioral violations, or antecedent narrative parallels without direct logical support or refutation)."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "qdqcauCXC6KMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 137740,
+    "candidatesTokenCount": 366,
+    "totalTokenCount": 138106,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 137740
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 366
+      }
+    ]
+  },
+  "durationMs": 7292,
+  "requestHash": "6674ad42574e067176974410a3633e73bca16eb4bc4e19619435746cad585f85"
+}

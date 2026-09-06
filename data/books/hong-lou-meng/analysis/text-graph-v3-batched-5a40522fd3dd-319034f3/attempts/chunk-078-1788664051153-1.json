@@ -1,0 +1,154 @@
+{
+  "value": {
+    "summary": "第七十八回中，王夫人向贾母禀明撵逐晴雯及暗定袭人之事，宝钗因避嫌执意迁出大观园；贾政召宝玉、贾环、贾兰作《姽婳词》吊林四娘，宝玉成得长篇歌行受赞；回园后宝玉惊闻晴雯已死并被焚化，由小丫鬟谎言得到感悟，夜间在芙蓉花前作长篇《芙蓉女儿诔》设祭。",
+    "nodes": [
+      {
+        "label": "王夫人向贾母回明晴雯与袭人事",
+        "identityLabel": "王夫人向贾母回明房中丫头去留",
+        "summary": "王夫人向贾母汇报撵逐晴雯及戏子丫头出园，并阐述暗提袭人二两月银的原因，贾母认可其做法。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述王夫人向贾母汇报处置晴雯和看重袭人的原委，直接展示贾府内部人事决断。",
+        "generalityHint": "涉及宝玉房中特定丫鬟安排的家族内部决策。",
+        "rationale": "出处见第78回开头，交代了晴雯被逐后的定性和袭人姨娘地位的暗中确立。",
+        "passageIds": [
+          "p-571285"
+        ]
+      },
+      {
+        "label": "宝钗避嫌执意搬出大观园",
+        "identityLabel": "宝钗辞园",
+        "summary": "王夫人与凤姐挽留宝钗，宝钗以母亲身体欠佳、哥哥将娶亲需要操办家事以及出入门户避嫌等理由，执意辞园迁出。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗条分缕析道出搬出园子的三点理由，并劝贾府裁省大观园费用。",
+        "generalityHint": "针对寄居贾府与大观园日常管理的个人决断与建言。",
+        "rationale": "出处见薛宝钗与王夫人、凤姐在早饭后的对话。",
+        "passageIds": [
+          "p-572248"
+        ]
+      },
+      {
+        "label": "小丫头诌告晴雯化为芙蓉花神",
+        "identityLabel": "晴雯为花神传说",
+        "summary": "小丫鬟见宝玉深切悲痛，顺应宝玉问话见景生情，谎称晴雯死后升天司掌芙蓉花神，宝玉信以为真转悲为喜。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "小丫鬟为了宽慰宝玉编造谎言，宝玉结合自身杂学观念加以确信。",
+        "generalityHint": "局限于宝玉对晴雯夭亡的个人慰藉和附会。",
+        "rationale": "小丫鬟谎言是后文宝玉作诔祭奠芙蓉花的前因。",
+        "passageIds": [
+          "p-574243"
+        ]
+      },
+      {
+        "label": "宝玉深感大观园诸芳离散之悲",
+        "identityLabel": "大观园离散之感",
+        "summary": "宝玉探晴雯灵柩落空，转至蘅芜苑见屋空人去，感伤司棋、芳官等人相继散去，预感到大观园群芳终将零落。",
+        "sourceRole": "narrative",
+        "speaker": "贾宝玉",
+        "reasoningHint": "宝玉从晴雯被焚化及宝钗搬家推及园中所有女子的命运，生发出天地无情、诸人不久俱散的悲观推论。",
+        "generalityHint": "涵盖大观园中所有姊妹丫鬟命运流向的全局性心理感悟。",
+        "rationale": "出处详述宝玉扑空晴雯灵柩后巡视空苑的心路历程。",
+        "passageIds": [
+          "p-575313"
+        ]
+      },
+      {
+        "label": "贾政聚子侄咏作姽婳词",
+        "identityLabel": "贾政征作姽婳词",
+        "summary": "贾政传宝玉、贾环、贾兰至书房，以青州林四娘殉节轶事为题命各作挽词，宝玉作长篇歌行《姽婳词》大受幕宾称赏。",
+        "sourceRole": "narrative",
+        "speaker": "贾政",
+        "reasoningHint": "贾政根据恒王好武及林四娘战死的原序出题，贾宝玉运用古体长歌形式将风流与忠义结合完成全诗。",
+        "generalityHint": "记叙青州恒王与林四娘历史/传闻事件的一篇命题挽词创作。",
+        "rationale": "第七十八回前半回的核心回目事件“老学士闲征姽婳词”。",
+        "passageIds": [
+          "p-576130",
+          "p-577896",
+          "p-579344"
+        ]
+      },
+      {
+        "label": "宝玉夜奠芙蓉花宣读诔文",
+        "identityLabel": "宝玉杜撰芙蓉诔",
+        "summary": "宝玉回园后依凭晴雯为芙蓉花神之说，备下四样祭品，夜至芙蓉花前悬挂宣读《芙蓉女儿诔》，寄托深挚哀思并揭露谗毁构陷。",
+        "sourceRole": "narrative",
+        "speaker": "贾宝玉",
+        "reasoningHint": "宝玉借用屈赋风格与神话典故，从晴雯之质洁貌美推导至遭谗被芟的悲剧，抒发不与世俗合流的至情。",
+        "generalityHint": "宝玉为夭亡丫鬟晴雯撰写的特定挽诔长篇，兼含对大观园诸芳受摧残的普遍哀鸣。",
+        "rationale": "回目事件“痴公子杜撰芙蓉诔”，为全书重要的悲剧抒情高潮。",
+        "passageIds": [
+          "p-579586",
+          "p-580362",
+          "p-581918"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "王夫人逐晴雯及诸优伶的决断，成为宝玉在园中触目惊心、深感离散的直接现实起因。",
+        "passageIds": [
+          "p-571285",
+          "p-575313"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "宝钗搬空蘅芜苑的既成事实，直接加深了宝玉对大观园诸人不久都将散尽的宿命感叹。",
+        "passageIds": [
+          "p-572248",
+          "p-575313"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "小丫头诌称晴雯为芙蓉花神，直接启发了宝玉在月夜下对着芙蓉花神行祭礼并写作《芙蓉女儿诔》。",
+        "passageIds": [
+          "p-574243",
+          "p-579586"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉在作《姽婳词》中展现的长歌才情和闺阁寄托，与随后在芙蓉花前不受拘束地拟楚辞体自撰《芙蓉女儿诔》形成创作与情志上的承接与呼应。",
+        "passageIds": [
+          "p-577896",
+          "p-579586"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "49icavXSHvGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 16324,
+    "candidatesTokenCount": 1998,
+    "totalTokenCount": 18322,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 16324
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1998
+      }
+    ]
+  },
+  "durationMs": 16734,
+  "requestHash": "579d92434237aec9c8ca2639a5b01bbc75151a6186b049ec7eb07e7a83857545"
+}

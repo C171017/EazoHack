@@ -1,0 +1,162 @@
+{
+  "value": {
+    "summary": "第九十六回叙述贾府因宝玉病笃需冲喜而筹划金玉联姻，凤姐献出‘掉包计’以瞒过宝玉；傻大姐无意泄密，黛玉得知真相后神魂失守，探视宝玉相对傻笑，归途吐血病危。",
+    "nodes": [
+      {
+        "label": "贾母提议冲喜娶宝钗",
+        "identityLabel": "宝玉冲喜联姻",
+        "summary": "贾母因宝玉失玉病重且贾政将赴江西任，依算命之说主张娶金命的薛宝钗冲喜，并提出破格从简办婚事以应急。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于宝玉失玉痴傻、贾政升任将行及算命冲喜之说，贾母推导出必须速办宝钗婚事这一权变决定。",
+        "generalityHint": "涉及贾府高层对宝玉婚姻与病情的特定决断与礼制权变。",
+        "rationale": "文本详载贾母向贾政提出算命冲喜、宝钗金玉相合以及从简速娶的谋划。",
+        "passageIds": [
+          "p-700068"
+        ]
+      },
+      {
+        "label": "袭人密陈宝黛私情之患",
+        "identityLabel": "袭人进言情弊",
+        "summary": "袭人深知宝玉唯系心黛玉，若知另娶宝钗恐反成‘催命’，遂向王夫人跪请转圜与筹谋万全之策。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从宝玉往昔情痴表现推演出其若知另娶必致病情危笃乃至一害三人的因果结论。",
+        "generalityHint": "关于宝玉心理与内情危机的个案洞察与警示。",
+        "rationale": "袭人向王夫人详述宝玉素日对黛玉的心事，提醒冲喜若处置不当恐成大祸。",
+        "passageIds": [
+          "p-701638",
+          "p-702141"
+        ]
+      },
+      {
+        "label": "王熙凤献掉包奇谋",
+        "identityLabel": "掉包计",
+        "summary": "王熙凤针对宝玉心病提出‘掉包儿’之策，主张佯称给宝玉娶黛玉以安其心，实则娶宝钗进门，严防消息泄露。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "针对袭人指出的致命冲突，凤姐推理设计出以欺瞒调换为核心的解决策略。",
+        "generalityHint": "贾府内廷为化解危机而采纳的特定瞒骗方案。",
+        "rationale": "凤姐向贾母、王夫人献策，提出假称娶林妹妹来稳住宝玉的掉包法子。",
+        "passageIds": [
+          "p-702613"
+        ]
+      },
+      {
+        "label": "傻大姐无意泄机关",
+        "identityLabel": "泄露婚讯",
+        "summary": "傻大姐因说错话挨打在山石后哭泣，恰遇黛玉，在询问下直言贾府商议给宝二爷娶宝姑娘冲喜且不许声张之事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接叙述傻大姐因无知泄露严密封锁的婚嫁机密。",
+        "generalityHint": "一次偶然交谈导致的关键剧情转折事件。",
+        "rationale": "黛玉在葬花处从哭泣的傻大姐口中意外得知宝玉将娶宝钗的真实内幕。",
+        "passageIds": [
+          "p-703452"
+        ]
+      },
+      {
+        "label": "黛玉迷性问疾傻笑",
+        "identityLabel": "黛玉迷失本性",
+        "summary": "黛玉闻讯如雷轰顶，神思恍惚前往探看宝玉，二人相见不复常态，对坐傻笑，问答‘为林姑娘病了’令侍女惊骇。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉在极度心碎幻灭下精神错乱，导致与痴傻宝玉之间产生异常的对笑互动。",
+        "generalityHint": "描写特定人物在绝望受击下的迷妄心理与癫狂场景。",
+        "rationale": "记叙黛玉恍恍惚惚走到宝玉处，两人痴狂对笑，宝玉直言为林姑娘得病。",
+        "passageIds": [
+          "p-704354",
+          "p-704730"
+        ]
+      },
+      {
+        "label": "黛玉归馆呕血濒危",
+        "identityLabel": "黛玉吐血",
+        "summary": "黛玉自宝玉处辞出快步归去，刚至潇湘馆门前便栽倒呕血，数年心病在绝望下彻底爆发。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "强撑神魂后的身体彻底崩溃，是闻讯并探视宝玉后的生理必然结果。",
+        "generalityHint": "黛玉病势急剧恶化的特定高潮事件。",
+        "rationale": "黛玉自贾母房中走回潇湘馆门首，身子前栽吐血倒地。",
+        "passageIds": [
+          "p-705431"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾母敲定娶宝钗冲喜后，袭人敏锐意识到宝玉心系黛玉，进而密告王夫人防备生变。",
+        "passageIds": [
+          "p-701638",
+          "p-702141"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "正因袭人挑明宝玉若知弃黛娶宝必会催命，凤姐才相应拟定‘掉包计’来两全。",
+        "passageIds": [
+          "p-702613"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "challenges",
+        "rationale": "凤姐计谋的核心在于秘而不宣、严防泄密，而傻大姐的无意泄露直接打破了这一防线。",
+        "passageIds": [
+          "p-702613",
+          "p-703452"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "黛玉从傻大姐处得知宝玉娶宝钗之讯，大受刺激而迷失本性、恍惚去见宝玉。",
+        "passageIds": [
+          "p-703452",
+          "p-704354",
+          "p-704730"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "黛玉探视宝玉时的痴迷傻笑是心力耗竭的表现，归馆至门前即引发生理崩溃、呕血倒地。",
+        "passageIds": [
+          "p-704730",
+          "p-705431"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "P9mcarzBDfGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 9354,
+    "candidatesTokenCount": 1955,
+    "totalTokenCount": 11309,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9354
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1955
+      }
+    ]
+  },
+  "durationMs": 15868,
+  "requestHash": "b2672299eb12a96c0f0601b25ea0122b11c9ca098291d57d1dfb8d8dca1635ee"
+}

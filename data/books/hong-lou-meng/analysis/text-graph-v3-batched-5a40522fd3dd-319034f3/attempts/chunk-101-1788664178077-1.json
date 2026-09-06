@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "第一零一回讲述王熙凤在黄昏入大观园探望探春时遭遇怪异惊吓并恍惚见秦可卿幽魂，次日贾琏因王仁亏空与自身公务四处奔波引发夫妻口角与自叹薄命。随后凤姐访宝钗宝玉，提及调柳五儿进房承继晴雯之影。散花寺尼姑大了来访荐神，促使凤姐赴庙求签，抽得看似大吉实含隐凶的“王熙凤衣锦还乡”签文，众人随喜而宝钗独存疑窦。",
+    "nodes": [
+      {
+        "label": "大观园月夜感幽魂",
+        "identityLabel": "王熙凤夜感秦氏幽魂",
+        "summary": "凤姐夜走大观园欲视探春，途中遇恶犬与阴风惊骇，恍惚间见秦氏责怪其只顾享荣华而忘立基之托，惊跌后匆忙离园。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述具体惊吓事件及幻觉对话，作为凤姐心境转变的直接诱因。",
+        "generalityHint": "单一具体场景的叙事描写。",
+        "rationale": "基于p-733106和p-733554，详细记载了凤姐走入凄清大观园后遇狗、见秦氏幽魂并被其质问的事件。",
+        "passageIds": [
+          "p-733554",
+          "p-733106"
+        ]
+      },
+      {
+        "label": "凤姐自叹不久与平儿抚慰",
+        "identityLabel": "凤姐叹寿短病躯",
+        "summary": "凤姐因夜间受惊与李妈虐打大姐儿之事长叹自身体弱运蹇，自料寿数无多，嘱托平儿善待孤女，平儿垂泪劝解。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从夜间见鬼和李妈生事推导出自身荣景不再、死期将至的悲凉心境。",
+        "generalityHint": "凤姐对自己人生宿命与病况的局部分析与预感。",
+        "rationale": "根据p-734473，凤姐与平儿对话，悲叹自己‘也不久了’、‘寿字儿上头缺一点儿’。",
+        "passageIds": [
+          "p-734473"
+        ]
+      },
+      {
+        "label": "贾琏怒斥王仁亏空生隙",
+        "identityLabel": "王仁亏空与贾琏迁怒",
+        "summary": "贾琏为替王仁打点海疆亏空之事求托裘世安未果，回房摔碗发难，揭露王仁借生日敛财等恶行，引得凤姐与平儿伤心争辩。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "朝廷抄报与王仁托情失败激化夫妻矛盾，呈现王家败落与贾王两家关系微妙变化。",
+        "generalityHint": "贾琏针对王仁为人与海疆案借力求情的家庭矛盾事件。",
+        "rationale": "基于p-735449和p-736791，贾琏详细说明了王仁被御史参劾亏空并借办生辰敛财的前因后果，并与凤姐爆发口角。",
+        "passageIds": [
+          "p-735449",
+          "p-736791"
+        ]
+      },
+      {
+        "label": "议调五儿入宝玉房中",
+        "identityLabel": "凤姐许调五儿承晴雯影",
+        "summary": "凤姐至怡红院见宝玉宝钗恩爱，因雀金呢谈及故去晴雯，主动提出将容貌相似的柳五儿调入宝玉房中，宝玉闻之大喜。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从晴雯旧事顺理成章转至提携面貌相像的五儿补入，显示凤姐主动缓和怡红院人事。",
+        "generalityHint": "荣府内部丫鬟人员调配的具体安排。",
+        "rationale": "基于p-737724，袭人提起雀金呢与晴雯，凤姐因而提起五儿并应承调其补缺。",
+        "passageIds": [
+          "p-737724"
+        ]
+      },
+      {
+        "label": "大了荐佛与凤姐动念",
+        "identityLabel": "散花寺尼姑说佛动凤姐",
+        "summary": "散花寺姑子大了述说菩萨降妖除邪之神异，素不信神鬼的凤姐因昨夜见鬼心疑，遂生往散花寺抽签求验之念。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由夜间遇怪的前情转折至向宗教求助的心理变化过程。",
+        "generalityHint": "单一求签动机的形成事件。",
+        "rationale": "基于p-739348，大了向贾母与凤姐宣讲散花菩萨神异，凤姐素日不信鬼神却因心虚而决意去求签验看。",
+        "passageIds": [
+          "p-739348"
+        ]
+      },
+      {
+        "label": "散花寺抽得衣锦还乡签",
+        "identityLabel": "凤姐散花寺求得异兆神签",
+        "summary": "凤姐赴散花寺虔诚求签，得第三十三签‘王熙凤衣锦还乡’，签诗含‘蜂采百花成蜜后，为谁辛苦为谁甜’等语，众人皆以为吉兆。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "神签直接借用凤姐本名并暗伏其辛苦一场皆空的命数，属于象征命运转折的关键谶纬。",
+        "generalityHint": "具体抽签所得之签文及其表面附会。",
+        "rationale": "基于p-740183、p-740512与p-740565，记录凤姐抽得同名神签的原文与当时众人的逢迎解签。",
+        "passageIds": [
+          "p-740183",
+          "p-740512",
+          "p-740565"
+        ]
+      },
+      {
+        "label": "宝钗独疑衣锦还乡之兆",
+        "identityLabel": "宝钗深疑神签内情",
+        "summary": "宝钗细看凤姐签帖，不同于众人的盲目附会欢喜，敏锐指出‘衣锦还乡’四字里恐别有缘故，引发宝玉不解。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对看似上上大吉的签文提出反思与保留，暗识衰亡预兆的理性推度。",
+        "generalityHint": "对神签吉凶义涵的具体个人审视。",
+        "rationale": "基于p-740782，宝钗向宝玉直言签文内有原故，展现其独到识见与疑虑。",
+        "passageIds": [
+          "p-740782"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "凤姐夜遇幽魂受惊着凉，直接诱发了次日清晨身心交瘁、预感不久人世的悲叹。",
+        "passageIds": [
+          "p-733554",
+          "p-734473"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "凤姐素来不信神佛，正因夜间见鬼心神不定，才对大了所说的菩萨显灵产生好奇并动念求签。",
+        "passageIds": [
+          "p-733554",
+          "p-739348"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "凤姐听信大了之言约定初一前往散花寺，才有了随后在大殿抽得第三十三签之事。",
+        "passageIds": [
+          "p-739348",
+          "p-740183"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "challenges",
+        "rationale": "大众对神签‘衣锦还乡’皆附会为喜庆大吉，宝钗则出面质疑其背后必另有原故，对其表面吉兆构成怀疑与保留。",
+        "passageIds": [
+          "p-740565",
+          "p-740782"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "YNmcaofQHumj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10955,
+    "candidatesTokenCount": 2229,
+    "totalTokenCount": 13184,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10955
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2229
+      }
+    ]
+  },
+  "durationMs": 18248,
+  "requestHash": "a56c30c704fd9b54b6be7df965591885370cae15ff20104f12c7b08a4f41966d"
+}

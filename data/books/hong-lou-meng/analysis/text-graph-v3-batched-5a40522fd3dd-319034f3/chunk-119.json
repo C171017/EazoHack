@@ -1,0 +1,190 @@
+{
+  "value": {
+    "summary": "贾宝玉进场赴考前语带谶意、向王夫人等人诀别；贾环等人图谋将巧姐卖与外藩，幸得刘姥姥赶至献策救巧姐出城；宝玉与贾兰同中乡魁，宝玉交卷后出场走失不归；朝廷大赦天下并加恩贾家，贾琏返家迎回巧姐平儿，全家既喜世泽复延又悲宝玉遁去。",
+    "nodes": [
+      {
+        "label": "宝玉辞别家人进场",
+        "identityLabel": "宝玉赴考诀别",
+        "summary": "宝玉临赴考场向王夫人下跪叩头，预言自己必中举人以了结今世差使，并语带双关向王夫人、李纨及宝钗辞别，言行异样宛若生离死别。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于此前宝玉顿悟后的反常举止，在临别时将其应试化为报答母恩、割断尘缘的终局仪式。",
+        "generalityHint": "具体事件，记录宝玉离家应考前的情态与辞别言辞。",
+        "rationale": "文本详尽描写宝玉跪辞王夫人、预言中举、与宝钗作别等行径，表现其决意了结尘缘的决绝心理。",
+        "passageIds": [
+          "p-855182"
+        ]
+      },
+      {
+        "label": "贾环贾芸谋卖巧姐",
+        "identityLabel": "贾环贾芸谋巧姐婚事",
+        "summary": "贾环趁家中无人做主，串通邢夫人、贾芸及王仁，欲趁贾琏不在家将巧姐急匆匆给外藩公馆立文书作妾并兑取银两。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾环报复王夫人的私怨及邢夫人贪图权势财物的性格，直接推演出背着巧姐父母擅定婚事的勾当。",
+        "generalityHint": "具体事件，涉及贾环、邢夫人、贾芸等人的密谋行动。",
+        "rationale": "文中叙述贾环想为母报仇，挑唆邢夫人应允外藩亲事并令贾芸等办契兑银。",
+        "passageIds": [
+          "p-856356"
+        ]
+      },
+      {
+        "label": "刘姥姥定策救走巧姐",
+        "identityLabel": "刘姥姥智救巧姐",
+        "summary": "刘姥姥恰至荣府，闻知巧姐危局，献策将巧姐乔装藏往乡下村庄；王夫人与平儿依计行事，暗雇车马将巧姐和平儿送出贾府避祸。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "根据外藩三天娶人的紧迫情势与邢夫人专断的困局，推理出唯有乔装潜逃离京暂避方能拖延至贾琏归来。",
+        "generalityHint": "具体行动计策及实施过程。",
+        "rationale": "刘姥姥以民间鼓儿词的法子提出将巧姐藏到屯里，王夫人绊住邢夫人，平儿巧扮巧姐潜逃出城。",
+        "passageIds": [
+          "p-857606"
+        ]
+      },
+      {
+        "label": "外藩畏例退婚",
+        "identityLabel": "外藩惧罪拒婚",
+        "summary": "外藩得知贾家为世代勋戚，深恐干犯朝廷禁令获罪，怒斥并逐走送年庚的贾芸与王仁，贾环等人阴谋落空。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "根据外藩不敢违例纳勋戚之女为使唤女人的政治避嫌心理推断。",
+        "generalityHint": "一桩具体交涉及其结局。",
+        "rationale": "文中写明外藩相看之人回禀后，藩王深知干犯例禁，严命逐客，贾芸等人抱头鼠窜。",
+        "passageIds": [
+          "p-858839"
+        ]
+      },
+      {
+        "label": "宝玉中举出场走失",
+        "identityLabel": "宝玉中举走失",
+        "summary": "贾宝玉高中第七名举人、贾兰中第一百三十名，但交卷出场时宝玉在龙门口突然失踪，众人四出搜寻无果，荣府上下陷入极度悲痛恐慌。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉出考场失踪是其断绝尘缘的直接实现，印证了出场前的谶语与众人心中的不祥预感。",
+        "generalityHint": "贾府核心人物命运转折的关键事件。",
+        "rationale": "贾兰回府报称二叔走失，随后捷报传到，宝玉中举与遁世并存，荣府全家惊恸寻找。",
+        "passageIds": [
+          "p-859840",
+          "p-861022"
+        ]
+      },
+      {
+        "label": "朝廷大赦赏还家产",
+        "identityLabel": "贾府蒙恩复官还产",
+        "summary": "皇帝阅卷嘉许贾宝玉、贾兰，复查贾氏功勋，降旨赦免贾赦贾珍之罪，复宁荣二府世职并全行赏还被抄家产，下旨五营寻访宝玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "朝廷因海疆靖寇河清海晏施恩大赦，并念及贾妃一族功勋与叔侄同科之瑞，作出平反还产的综合决断。",
+        "generalityHint": "皇权对特定家族全面施恩与政策宽宥。",
+        "rationale": "通过知贡举呈卷、皇上查复功勋及大赦天下，颁发恩旨免罪复爵并全行赏还家产。",
+        "passageIds": [
+          "p-861816",
+          "p-862157"
+        ]
+      },
+      {
+        "label": "贾琏归家迎回巧姐",
+        "identityLabel": "贾琏归府平息家患",
+        "summary": "贾琏逢赦归府接旨，闻知巧姐遭逼走大怒；板儿打听到贾家复兴消息，刘姥姥平儿等护送巧姐归府团聚，邢王二夫人前嫌暂息。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾府复官还产与贾琏归家，使巧姐避难的外部危险彻底解除，归家团聚理所当然。",
+        "generalityHint": "家族内部危机随外在恩遇与当家人归来而平复的团圆结局。",
+        "rationale": "贾琏归家接管门户，刘姥姥车送巧姐回府，贾琏深情感激平儿并拟扶正，一家相聚释嫌。",
+        "passageIds": [
+          "p-862749",
+          "p-863605",
+          "p-863897"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉赴考前的辞别预言中举和决绝之语，直接在考场交卷后的走失成道中得以兑现。",
+        "passageIds": [
+          "p-855182",
+          "p-859840"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "贾环贾芸擅自立约卖巧姐给外藩，造成千钧一发的危机，直接促成了平儿与刘姥姥定策出逃。",
+        "passageIds": [
+          "p-856356",
+          "p-857606"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾环贾芸前往外藩公馆立契送八字，直接引发了外藩知情惧祸退婚的结果。",
+        "passageIds": [
+          "p-856356",
+          "p-858839"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝玉贾兰同中乡魁引起皇上垂询，皇帝念及贾氏功勋并喜宝玉文章，成为大赦复爵赏还家产的直接契机。",
+        "passageIds": [
+          "p-861022",
+          "p-861816",
+          "p-862157"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "刘姥姥将巧姐护送至屯中藏匿，保全了巧姐，待贾琏归家、贾府蒙恩后方能安全护送巧姐回府团聚。",
+        "passageIds": [
+          "p-857606",
+          "p-862749",
+          "p-863605"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "朝廷降旨大赦复官并赏还家产，贾琏得以回京接旨重掌家事，为巧姐平安回府创造了根本前提。",
+        "passageIds": [
+          "p-862157",
+          "p-862749",
+          "p-863211"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "wdmcatnHH_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 12234,
+    "candidatesTokenCount": 2447,
+    "totalTokenCount": 14681,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12234
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2447
+      }
+    ]
+  },
+  "durationMs": 18669,
+  "requestHash": "97169a8645c116b3521827f12c7c2379c19d680256fef53eeb1c1cd182884e3b"
+}

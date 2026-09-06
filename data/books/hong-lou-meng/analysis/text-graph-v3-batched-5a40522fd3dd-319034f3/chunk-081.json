@@ -1,0 +1,161 @@
+{
+  "value": {
+    "summary": "第八十一回叙述迎春出嫁受虐引发宝玉与王夫人、黛玉对女子出阁及大观园诸芳离散之悲，随后大观园中李纹、探春等钓鱼占旺相；贾母与王夫人核实当年宝玉、凤姐中邪实由马道婆魇魔法术所致；贾政与王夫人商议后命宝玉断绝诗词、重入家塾习学八股举业，宝玉次日奉严命往见贾代儒。",
+    "nodes": [
+      {
+        "label": "宝玉议留迎春与王夫人训诫",
+        "identityLabel": "宝玉议留迎春与王夫人训诫",
+        "summary": "宝玉痛惜迎春受虐，向王夫人提议回明贾母将迎春长久接回紫菱洲同住；王夫人斥其呆气，以出嫁从夫、命运前定与日后磨合训诫，严禁其向贾母透露。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "基于迎春回门诉苦的直接反应，引出宝玉对出嫁礼俗的幼稚抗拒与王夫人的现实规训。",
+        "generalityHint": "涉及宝玉、迎春与王夫人对女子婚嫁命运的具体分歧。",
+        "rationale": "宝玉不忍二姐姐受辱提出强留迎春之议，王夫人以传统婚制礼俗予以反驳和禁言（p-593663）。",
+        "passageIds": [
+          "p-593663"
+        ]
+      },
+      {
+        "label": "宝玉对黛玉感叹诸芳离散",
+        "identityLabel": "宝玉对黛玉感叹诸芳离散",
+        "summary": "宝玉至潇湘馆痛哭，向黛玉感叹人生长大出阁之苦及结海棠社后宝钗归家、香菱不来、迎春出嫁等光景大变；黛玉听闻心酸叹息躺下。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "由迎春受委屈和王夫人拒议直接推演，上升到对诸钗流散及大观园盛景难再的悲观慨叹。",
+        "generalityHint": "概括大观园儿女由聚到散的悲剧性境遇与衰败预感。",
+        "rationale": "宝玉将迎春遭遇与园中诸人离散联系起来，深感青春聚会终归幻灭，黛玉亦由此感伤（p-594399）。",
+        "passageIds": [
+          "p-594399"
+        ]
+      },
+      {
+        "label": "四美蓼溆钓鱼占旺相",
+        "identityLabel": "四美蓼溆钓鱼占旺相",
+        "summary": "探春、李纹、李绮、邢岫烟在蓼溆钓鱼占年内运气，四人先后得鱼；宝玉性急抡竿求鱼，反而碰断钓竿振断鱼线，引发众人欢笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "园中游钓游戏，宝玉提议以钓鱼占卜运气，构成情节对比与转折。",
+        "generalityHint": "描写特定场景下探春、宝玉等人的游赏与占验细节。",
+        "rationale": "对应回目中的“占旺相四美钓游鱼”，展现宝玉与诸姊妹垂钓占吉凶的过程（p-595501）。",
+        "passageIds": [
+          "p-595501"
+        ]
+      },
+      {
+        "label": "马道婆魇魔败露对证旧疾",
+        "identityLabel": "马道婆魇魔败露对证旧疾",
+        "summary": "贾母与王夫人因马道婆获罪败露，向宝玉、凤姐核对当年重病情形；凤姐与贾母推断当年中邪实系马道婆施法与赵姨娘暗害，王夫人主张事大且无对证不可声张。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "刑部破案查抄出纸人魔王等物，反向印证第二十五回宝玉与凤姐中邪的真正根源与家族内幕。",
+        "generalityHint": "针对贾府昔日重大中邪疑案的历史对证与处置态度。",
+        "rationale": "借锦衣府抄没马道婆家财揭开宿怨，点破昔年魇魔法害宝玉凤姐的真相（p-596844, p-597123）。",
+        "passageIds": [
+          "p-597123",
+          "p-596844"
+        ]
+      },
+      {
+        "label": "贾政定议命宝玉再入家塾",
+        "identityLabel": "贾政定议命宝玉再入家塾",
+        "summary": "王夫人向贾政转述迎春遭遇与宝玉痴话，贾政深感男儿若不济事干系非浅，决定不请外头平和先生，令宝玉重入家塾受代儒弹压攻读。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾政由生女与生儿的区别考量家族立身，权衡塾师风格后做出让宝玉再入家塾的决定。",
+        "generalityHint": "体现贾政对家族子弟立身成名与家塾管教机制的考量。",
+        "rationale": "贾政从迎春遭遇与宝玉荒怠反思儿子前途，定下重回家塾管教的策略（p-598449）。",
+        "passageIds": [
+          "p-598449"
+        ]
+      },
+      {
+        "label": "贾政严训宝玉限期习八股",
+        "identityLabel": "贾政严训宝玉限期习八股",
+        "summary": "贾政次日训斥宝玉散荡荒废正事，严令其禁止作诗对句，限期一年专习八股举业，否则不再认作儿子，并定次日亲自送其至家学。",
+        "sourceRole": "dialogue",
+        "speaker": "贾政",
+        "reasoningHint": "贾政依据科举应试选举的现实需求，对宝玉沉迷诗词丫鬟的行为进行严厉否定与通牒。",
+        "generalityHint": "贾政对举业立身与科举文章至上原则的强制执行要求。",
+        "rationale": "贾政向宝玉下达最后通牒，将举业文章定为成人立身正途，强力斩断其诗词散荡（p-599026）。",
+        "passageIds": [
+          "p-599026"
+        ]
+      },
+      {
+        "label": "贾政托付代儒与宝玉入塾",
+        "identityLabel": "贾政托付代儒与宝玉入塾",
+        "summary": "贾政亲自送宝玉至家塾托付代儒严加管教、专求举业；代儒定下理书、写字、讲书、念文章日程，并欲试其讲书，令宝玉心惊且念及秦钟凄然。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接贾政严命，在家塾完成立规程与拜托仪式，奠定后文宝玉受管教的局面。",
+        "generalityHint": "家塾师徒传授与宗族子弟课程规范的具体确立。",
+        "rationale": "贾政与代儒达成科举举业重于风云月露的一致意见，宝玉重回旧日塾学情境（p-599754, p-600147）。",
+        "passageIds": [
+          "p-599754",
+          "p-600147"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉在王夫人处受挫后憋闷前往潇湘馆，将对迎春婚姻的痛惜进一步扩大为对整个大观园离散衰败的悲叹。",
+        "passageIds": [
+          "p-594399"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "王夫人向贾政转述宝玉要接留迎春的痴话，促使贾政感慨宝玉整日闲在园中无所事事，从而决意命其重入家塾读书。",
+        "passageIds": [
+          "p-598449"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾政在房中与王夫人商定送宝玉入塾后，次日一早便在书房直接对宝玉严词训诫并立下专习八股的一年期限。",
+        "passageIds": [
+          "p-599026"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "贾政向宝玉下达严词警告后，次日亲自带宝玉到家塾引见代儒，将专攻举业立身之意正式交代给塾师。",
+        "passageIds": [
+          "p-599754"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "8ticapifK-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10540,
+    "candidatesTokenCount": 2351,
+    "totalTokenCount": 12891,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10540
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2351
+      }
+    ]
+  },
+  "durationMs": 18117,
+  "requestHash": "d7b21975c5d2e1fb8c1d55b9bdee5c099d6dba03cddf84aaebcd40773b51e1e9"
+}

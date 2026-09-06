@@ -1,0 +1,141 @@
+{
+  "value": {
+    "summary": "第一百回叙述贾政在任所因节度关照得知镇海总制求亲之意，遣人回京商议迎娶探春；薛家薛蟠被刑部驳审定死罪，家业败落，夏金桂企图勾引薛蝌未果反深恨香菱；贾母与王夫人议定探春远嫁，赵姨娘反觉称愿，而宝玉闻探春将嫁再度悲痛发病，感叹姊妹离散，宝钗与袭人极力规劝。",
+    "nodes": [
+      {
+        "label": "贾政议结总制姻亲",
+        "identityLabel": "探春远嫁之议",
+        "summary": "贾政见节度得知镇海总制求亲之请，李十儿怂恿应允，贾政遂打发家人进京探听薛蟠案情并回明贾母迎探春至任所备嫁。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾政官场交往与李十儿促成联姻的具体经过，承接前文邸报风波。",
+        "generalityHint": "单一具体事件，涉及贾政任所求亲与通报京中。",
+        "rationale": "出场叙述贾政与节度会面消弭恐慌，因总制求亲而定计将探春接至任所。",
+        "passageIds": [
+          "p-727486"
+        ]
+      },
+      {
+        "label": "薛家败落薛蟠定罪",
+        "identityLabel": "薛家衰落与薛蟠秋审",
+        "summary": "薛蟠被刑部驳审定为死罪候秋审，薛家当铺亏空折变、伙计乘危勒索，宝钗力劝啼哭的薛姨妈保重身体并理清家务。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从刑部驳审与薛姨妈哭诉亏空推导出薛家势败人散的危局，宝钗剖析人情冷暖与善后之策。",
+        "generalityHint": "薛家全家所处困境与家产破败之局面。",
+        "rationale": "承接前文薛蟠打死人案，交代薛家财力耗尽、薛蟠难逃死罪的家族崩解情境。",
+        "passageIds": [
+          "p-727819"
+        ]
+      },
+      {
+        "label": "金桂诱薛蝌受阻恨香菱",
+        "identityLabel": "夏金桂构陷与怨恨",
+        "summary": "夏金桂借酒意在院中纠缠薛蝌并强拉其入室，宝蟾示警香菱走来使薛蝌脱身，金桂迁怒香菱并对其恨入骨髓。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "金桂见薛蝌守正不从，又因香菱撞见而坏事，由此产生强烈的妒恨心理。",
+        "generalityHint": "薛家内宅特定人物冲突与仇隙形成。",
+        "rationale": "对应回目“破好事香菱结深恨”，展现金桂放荡狠戾及香菱所处之险境。",
+        "passageIds": [
+          "p-730152",
+          "p-729662"
+        ]
+      },
+      {
+        "label": "贾母王夫人定议探春远嫁",
+        "identityLabel": "探春婚事定夺",
+        "summary": "王夫人向贾母禀明探春配与同乡总制之子，贾母虽伤感路远难再相见，但鉴于迎春近嫁受虐之惨状，最终同意择吉日送探春赴任完婚。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对比迎春近嫁所遭家暴折磨，论证远嫁做官人家若得遇良人亦是造化，由此贾母同意定亲。",
+        "generalityHint": "贾府对闺阁子女婚姻归宿之考量与决策。",
+        "rationale": "正面描写荣府内堂商议探春远嫁，以迎春的不幸反衬并推动探春出嫁决议。",
+        "passageIds": [
+          "p-730636"
+        ]
+      },
+      {
+        "label": "赵姨娘刻薄幸灾",
+        "identityLabel": "赵姨娘与探春母女嫌隙",
+        "summary": "赵姨娘闻知探春将远嫁不但不惜反而欢喜，认为探春在家看不起自己、挡了贾环出路，特意前去冷嘲热讽，探春隐忍垂泪不理。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "赵姨娘出于母女长期隔阂与私利算计，推导出探春远嫁对自己有利，乃至诅咒其如迎春受苦。",
+        "generalityHint": "展现赵姨娘特定性格及其与探春的病态亲子关系。",
+        "rationale": "刻画探春临嫁前承受来自生母的刻薄伤害，加深探春悲凉处境。",
+        "passageIds": [
+          "p-731509"
+        ]
+      },
+      {
+        "label": "宝玉悲姊妹离散发旧疾",
+        "identityLabel": "宝玉感伤流散",
+        "summary": "宝玉听闻探春将远嫁，痛哭病倒，痛感林妹妹已逝成仙、迎春受虐、探春远嫁等姊妹云散之悲，宝钗以人伦大理与现实劝导开解。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉将探春远嫁与黛玉死、迎春苦等逐一串联，推论出大观园诸姊妹彻底流散之虚无痛苦；宝钗则以明理婚嫁反驳其痴想。",
+        "generalityHint": "宝玉对整个大观园女儿群体流散离析的宿命式感叹。",
+        "rationale": "对应回目“悲远嫁宝玉感离情”，揭示大观园风流云散的核心主题。",
+        "passageIds": [
+          "p-731779"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "贾政自任所打发家人进京提亲，直接引发了贾母与王夫人在京中商议并敲定探春远嫁之事。",
+        "passageIds": [
+          "p-727486",
+          "p-730636"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "探春婚事定议传出后，引起赵姨娘反常的幸灾乐祸与当面讥刺。",
+        "passageIds": [
+          "p-730636",
+          "p-731509"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝钗自贾母处听闻探春远嫁回房与袭人谈及，宝玉闻听此信导致旧病复发、悲感离情。",
+        "passageIds": [
+          "p-730636",
+          "p-731779"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "VtmcaojdDfGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 7869,
+    "candidatesTokenCount": 1842,
+    "totalTokenCount": 9711,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7869
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1842
+      }
+    ]
+  },
+  "durationMs": 15255,
+  "requestHash": "aa8738c441f0649eca117f2cd072cdeebdacf14964ceb90df84aabbcbcc60236"
+}

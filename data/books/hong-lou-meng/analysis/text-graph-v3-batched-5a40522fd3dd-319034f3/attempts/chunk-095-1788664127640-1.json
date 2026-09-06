@@ -1,0 +1,158 @@
+{
+  "value": {
+    "summary": "第九十五回叙述贾府寻找失落的通灵宝玉无果，妙玉扶乩得隐语。其后元春暴病薨逝，贾府备受打击；宝玉失玉后神魂失散、日渐呆滞，贾母命悬赏万两寻玉，引得市井之徒持假玉前来冒领，终被识破。",
+    "nodes": [
+      {
+        "label": "妙玉扶乩示青埂仙机",
+        "identityLabel": "妙玉扶乩",
+        "summary": "岫烟求妙玉扶乩卜玉，仙乩降下指涉‘青埂峰’与‘入我门来’之隐语，李纨众人莫辨真意。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从扶乩降语直接呈现，由众人各自揣摩其寓意，属文本直接描写的神秘启示。",
+        "generalityHint": "涉及宝玉通灵玉来源与归宿的特定情节预言。",
+        "rationale": "出自妙玉应岫烟之请扶拐仙求玉的经过及所得乩语文本。",
+        "passageIds": [
+          "p-692786",
+          "p-693123",
+          "p-693159"
+        ]
+      },
+      {
+        "label": "黛玉闻失玉悲喜交集",
+        "identityLabel": "黛玉思金玉与海棠",
+        "summary": "黛玉闻知宝玉失玉，先喜金玉良缘或破，又思及海棠反常与通灵玉关涉，恐兆不祥，一悲一喜至五更。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于金玉旧话与近日海棠异象展开的内心推演与心理矛盾。",
+        "generalityHint": "聚焦黛玉个人对宝黛姻缘与宝玉命运的私密心曲。",
+        "rationale": "表现黛玉在失玉事件后复杂的心理投射与情感纠葛。",
+        "passageIds": [
+          "p-693655"
+        ]
+      },
+      {
+        "label": "元妃痰疾暴病薨逝",
+        "identityLabel": "元妃薨逝",
+        "summary": "贾政传报元妃痰厥暴疾，贾母与王夫人遵旨进宫探视，元妃目不能言，旋即薨逝，存年四十三岁。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述元妃发病至暴卒的突发事件，为贾府外戚权势的关键转折。",
+        "generalityHint": "贾府家族由盛转衰的历史性具体事件。",
+        "rationale": "元春作为贾府政治依靠的猝逝，是全书败落阶段的标志性事件。",
+        "passageIds": [
+          "p-693907",
+          "p-694480"
+        ]
+      },
+      {
+        "label": "宝玉失玉神魂失散",
+        "identityLabel": "宝玉因失玉而呆癫",
+        "summary": "自失玉后，宝玉终日懒怠、言语糊涂、日渐痴呆，甚至教一句说一句，呈神魂失散之象。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因失去命根子通灵玉而导致的精神衰竭与失智状态。",
+        "generalityHint": "宝玉个体生命机能与神智状态的核心转变。",
+        "rationale": "通灵宝玉与宝玉心智合一设定的具象化展现，也是其后调包计的前提。",
+        "passageIds": [
+          "p-694940",
+          "p-695974"
+        ]
+      },
+      {
+        "label": "贾母重赏悬榜寻玉",
+        "identityLabel": "贾母悬重赏寻玉",
+        "summary": "贾母察知宝玉失玉实情后大惊，命贾琏悬赏万两、移宝玉至自己房中以避邪祟；贾政闻讯叹气并命揭帖。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母因视玉为宝玉命根子而作出的救急决断，引起市井骚动与贾政不安。",
+        "generalityHint": "荣国府应对宝玉病危与失玉危机的家族应对决策。",
+        "rationale": "交代万两赏格的由来及其在街坊引起的骚动，为后文送假玉铺垫。",
+        "passageIds": [
+          "p-695974",
+          "p-696994",
+          "p-697366"
+        ]
+      },
+      {
+        "label": "以假混真宝玉识破弃玉",
+        "identityLabel": "贾宝玉识破假玉",
+        "summary": "市井之人依赏格送来仿制假玉，众人难辨真伪，宝玉接玉即撂地冷笑识破，贾母宽待遣其离去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过宝玉虽呆痴却能直觉感知假玉的反应，众人始悟其为贪赏作假。",
+        "generalityHint": "围绕悬赏引发的具体市井行骗与辨伪事件。",
+        "rationale": "照应回目‘以假混真宝玉疯颠’，揭示假玉无法替代通灵宝玉。",
+        "passageIds": [
+          "p-697716",
+          "p-698251"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "妙玉扶乩言宝玉之玉去留非凡，黛玉随后亦由失玉反思金玉之说与前途吉凶。",
+        "passageIds": [
+          "p-693159",
+          "p-693655"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "宝玉失玉后日渐痴傻、神魂失散，迫使贾母下定决心出万两重赏悬帖寻玉并迁其同住。",
+        "passageIds": [
+          "p-695974",
+          "p-696994"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾母悬出重赏告示，直接诱使市井游民依样伪造假玉登门冒领谢银。",
+        "passageIds": [
+          "p-697366",
+          "p-697716",
+          "p-698251"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉虽神魂失散、如痴似呆，却在本能上立辨真伪，将假玉掷于地上。",
+        "passageIds": [
+          "p-695974",
+          "p-698251"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "MtmcaqvTHbCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 9637,
+    "candidatesTokenCount": 1791,
+    "totalTokenCount": 11428,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9637
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1791
+      }
+    ]
+  },
+  "durationMs": 13402,
+  "requestHash": "a9ff440c7136f58c517c8e8bfa0a8a3b692958f57ffad5edd9ae38cfc30c7f4c"
+}

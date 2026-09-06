@@ -1,0 +1,163 @@
+{
+  "value": {
+    "summary": "第六十回叙述贾府内各色奴仆及姬妾之间的纷争与攀附：芳官用茉莉粉充作蔷薇硝打发贾环，引发赵姨娘大闹怡红院并遭小戏子围攻，探春出面喝止训诫；柳家媳妇借结交芳官为女儿柳五儿谋划怡红院差事，获赠玫瑰露并转送亲戚，又由其嫂处得来外贡的茯苓霜，伏下后文失窃与争斗的线索。",
+    "nodes": [
+      {
+        "label": "芳官以茉莉粉替蔷薇硝",
+        "identityLabel": "茉莉粉替蔷薇硝",
+        "summary": "贾环见芳官持有蕊官所赠蔷薇硝便索要，芳官不愿给，因奁中空空，遂听从麝月建议包了茉莉粉掷与贾环敷衍了事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于贾环向宝玉讨要蔷薇硝以及芳官不舍蕊官之赠的直接行动描写。",
+        "generalityHint": "涉及大观园内贾环、芳官、麝月等具体人物的具体交接事件。",
+        "rationale": "文本直接记录了麝月教唆芳官拿茉莉粉充当蔷薇硝，芳官掷给贾环的经过（p-420609, p-420863）。",
+        "passageIds": [
+          "p-420863",
+          "p-420609"
+        ]
+      },
+      {
+        "label": "赵姨娘受挑唆大闹怡红院",
+        "identityLabel": "赵姨娘大闹怡红院",
+        "summary": "彩云识破茉莉粉，赵姨娘大怒贾环不中用，又听信夏婆子撺掇，径奔怡红院将粉撒在芳官脸上并撕打，引来众小戏子合力围攻。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾环受愚弄引出赵姨娘的愤恨，夏婆子的推波助澜直接促发其去怡红院动武。",
+        "generalityHint": "记录了赵姨娘与芳官、葵官、豆官等小戏子在大观园怡红院的具体冲突场面。",
+        "rationale": "叙述了赵姨娘受夏婆子挑唆后冲入怡红院撒粉打芳官，众小戏子前来助阵混战的情节（p-421050, p-421840, p-422325, p-422917）。",
+        "passageIds": [
+          "p-422325",
+          "p-421050",
+          "p-421840"
+        ]
+      },
+      {
+        "label": "探春弹压并训诫赵姨娘",
+        "identityLabel": "探春训诫赵姨娘",
+        "summary": "探春赶至喝止打斗，劝解并严词训诫赵姨娘不自重、听信奴才挑唆失了体统，赵姨娘无言而退。",
+        "sourceRole": "dialogue",
+        "speaker": "探春",
+        "reasoningHint": "探春作为当家理事的小姐，对生母不合体统的泼闹行为进行威权压制与劝喻规诫。",
+        "generalityHint": "针对赵姨娘个人行为的直接训话，体现了探春对主奴身份及治家体统的管束原则。",
+        "rationale": "探春直指小丫头如猫狗顽意儿，主子不该大吆小喝自失身份，劝赵姨娘忍耐勿做旁人枪手（p-423214, p-423393, p-423633）。",
+        "passageIds": [
+          "p-423393",
+          "p-423214",
+          "p-423633"
+        ]
+      },
+      {
+        "label": "柳家母女谋求怡红院差事",
+        "identityLabel": "柳五儿谋差怡红院",
+        "summary": "柳家的借小意殷勤结交芳官，央其向宝玉求情，欲将体弱的女儿柳五儿补入怡红院空缺当差。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "柳家得知宝玉房内缺人且将来放人，因势利导通过结纳得宠小戏子谋取出路。",
+        "generalityHint": "描述贾府底层厨役阶层托关系谋取内房侍妾差事的具体家族筹划。",
+        "rationale": "文本详细交代五儿的身世病况及柳家的通过芳官向宝玉求差事的原委与交涉（p-424902, p-425041, p-425414, p-425839）。",
+        "passageIds": [
+          "p-425041",
+          "p-424902",
+          "p-425839"
+        ]
+      },
+      {
+        "label": "芳官赠玫瑰露与柳五儿",
+        "identityLabel": "芳官转赠玫瑰露",
+        "summary": "芳官向宝玉索得小半瓶玫瑰露赠与柳五儿调养，柳家的又将其中半分送与患热病的侄儿。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉房内珍稀物品顺畅流出至厨役仆从，并成为仆人之间的人情礼品。",
+        "generalityHint": "具体财物（玫瑰露）由内园向外院仆妇及其亲属流转的具体情节。",
+        "rationale": "叙述了宝玉大方赏给芳官玫瑰露，芳官转交五儿，柳氏又分送给外甥的完整过程（p-425250, p-425414, p-426212）。",
+        "passageIds": [
+          "p-425414",
+          "p-425250",
+          "p-426212"
+        ]
+      },
+      {
+        "label": "柳家得茯苓霜并招致疑心",
+        "identityLabel": "茯苓霜引出嫌疑",
+        "summary": "柳氏因拒钱槐求亲匆匆离去，得嫂子转赠门上分得的粤东官员所送茯苓霜，带回角门时遭守门小么儿盘诘起疑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从门上分赃所得珍贵补品，在园门严紧与家宅不宁的背景下带入内园，直接触发门卫的盘查疑心。",
+        "generalityHint": "特定私人物品流转引发门禁猜忌的具体事件，为后续失窃案伏笔。",
+        "rationale": "文本记述了柳氏在哥嫂家避钱槐、获赠茯苓霜，以及回角门时被小厮当场疑心质问的经过（p-426534, p-426790, p-427214）。",
+        "passageIds": [
+          "p-426790",
+          "p-427214",
+          "p-426534"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "以茉莉粉充蔷薇硝的欺瞒之举，直接引爆了赵姨娘对芳官等小戏子的盛怒并引发大闹怡红院。",
+        "passageIds": [
+          "p-421050",
+          "p-421840",
+          "p-422325"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "赵姨娘在怡红院与小戏子扭打失控，迫使管事的探春等人赶来喝止并予以严厉管束教训。",
+        "passageIds": [
+          "p-423214",
+          "p-423393"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "柳家母女与芳官的交好攀附关系，促成了芳官向宝玉求取玫瑰露转赠给柳五儿调养身体。",
+        "passageIds": [
+          "p-425041",
+          "p-425250",
+          "p-425414"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "柳家为了送玫瑰露去哥哥家，才在哥家碰见钱槐并随后获赠茯苓霜，两件事紧密衔接，暗藏私物纠缠。",
+        "passageIds": [
+          "p-426212",
+          "p-426790"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ddicatjGBtCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 10772,
+    "candidatesTokenCount": 2279,
+    "totalTokenCount": 13051,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10772
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2279
+      }
+    ]
+  },
+  "durationMs": 16255,
+  "requestHash": "fbccfef0743c78be18a5a6e75135fff0abbacd0293529a18ac3a8dde6ddf0dde"
+}

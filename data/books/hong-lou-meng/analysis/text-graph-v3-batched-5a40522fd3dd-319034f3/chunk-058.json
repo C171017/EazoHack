@@ -1,0 +1,176 @@
+{
+  "value": {
+    "summary": "第五十八回叙述老太妃薨逝，贾母、王夫人等入朝随祭送灵，薛姨妈入园照管诸姊妹，尤氏协理荣宁两府事务。贾府遣散并分派十二个戏班女孩子入各房使唤。清明时节，宝玉偶见小生藕官在山石后烧纸钱，为其解围后向芳官探问原由，得知藕官假戏真情祭奠早逝小旦菂官，宝玉深为感佩，并阐发了祭奠贵在心诚意洁而非烧纸虚名的痴情之理。同时，芳官与其干娘因洗头琐事起争执，袭人、晴雯、麝月等人严词整饬规矩。",
+    "nodes": [
+      {
+        "label": "太妃薨逝与两府内务调整",
+        "identityLabel": "太妃薨逝与内务照管",
+        "summary": "老太妃薨逝后贾府女眷每日入朝随祭送灵，家中无人，遂由尤氏协理两府，薛姨妈搬入潇湘馆照管林黛玉与众姊妹。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述故事背景与外部礼法事件直接引发的贾府内部照管格局变化，属于直接叙事起点。",
+        "generalityHint": "涉及贾府内外多位核心人物与重大丧仪制度变动，属于家族级安排。",
+        "rationale": "出处见段落p-407814，明确交代老太妃薨后贾母、王夫人随祭，尤氏协理、薛姨妈入潇湘馆照应黛玉等安排。",
+        "passageIds": [
+          "p-407814",
+          "p-408386"
+        ]
+      },
+      {
+        "label": "遣散梨香院戏女与各房分派",
+        "identityLabel": "梨香院戏女分派",
+        "summary": "王夫人与尤氏顺应时势裁撤戏班，愿回家者给盘缠领回，不愿去者文官、芳官、藕官等十二人被分派到园中各房使唤。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从国丧禁乐的规定推演出贾府顺势遣散戏班，并依王夫人之议安置不愿离去的优伶。",
+        "generalityHint": "涵盖梨香院戏女群体的人身处置与大观园内侍从结构的改变。",
+        "rationale": "出处见段落p-408570，记叙尤氏与王夫人商议，女孩子们各作选择并分派各房，芳官入宝玉处，藕官指与黛玉等。",
+        "passageIds": [
+          "p-408570",
+          "p-409468"
+        ]
+      },
+      {
+        "label": "宝玉对杏感叹与生之悲悯",
+        "identityLabel": "宝玉对杏伤春",
+        "summary": "宝玉清明步出院外，见大杏树绿叶成荫子满枝，联想到邢岫烟订婚及女儿出嫁后韶华易逝，感伤落泪。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从见杏子结实推及岫烟成婚与青春流逝，展开宝玉标志性的联想与情感投射。",
+        "generalityHint": "通过单株杏树的自然物候引发对一切好女儿青春命运的普遍伤感。",
+        "rationale": "出处见段落p-410038，宝玉引古诗并由杏花结子想到邢岫烟出嫁与红颜似槁，对杏流泪啼雀。",
+        "passageIds": [
+          "p-410038"
+        ]
+      },
+      {
+        "label": "藕官烧纸与宝玉圆谎解围",
+        "identityLabel": "藕官烧纸获救",
+        "summary": "藕官在山石后私烧纸钱被婆子撞破拿问，宝玉挺身而出，借口自己梦见杏花神求纸钱，替藕官圆谎解围。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "针对婆子抓现行告状的危局，宝玉即兴编造神道托梦之辞施加威吓，救下藕官。",
+        "generalityHint": "特定场景下的突发冲突与个体救助行为。",
+        "rationale": "出处见段落p-410394与p-411319，记叙藕官烧纸被执，宝玉以梦见花神吓退婆子，藕官感佩托宝玉问芳官。",
+        "passageIds": [
+          "p-410394",
+          "p-411319"
+        ]
+      },
+      {
+        "label": "芳官洗头争端与丫鬟立威",
+        "identityLabel": "芳官与干娘冲突",
+        "summary": "芳官干娘用残水令其洗头并克扣盘剥，引发争吵；晴雯、麝月出面训诫，严明主仆名分与内帏规矩，斥退干娘。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "干婆子欺凌幼小与主仆规矩冲突，麝月依据园内主仆从属原则进行推论驳斥。",
+        "generalityHint": "大观园内干娘与丫鬟、下层婆子与上房规矩之间的权力层级与矛盾。",
+        "rationale": "出处见段落p-411649与p-413265，芳官干娘偏心生衅，麝月、晴雯借规矩立威，将婆子震慑并推挤出去。",
+        "passageIds": [
+          "p-411649",
+          "p-413265"
+        ]
+      },
+      {
+        "label": "假凤泣虚凰与情痴之理",
+        "identityLabel": "藕官情痴与续弦之理",
+        "summary": "芳官向宝玉道出藕官与死去的菂官因戏生情、并视蕊官如续弦之深情大理；宝玉叹为知己并赞其超越尘俗。",
+        "sourceRole": "dialogue",
+        "speaker": "芳官",
+        "reasoningHint": "以夫妻戏文入戏至深推演出日常相爱，再以男子丧妻续弦大义论证情深意重不忘亡者。",
+        "generalityHint": "对至情至性、生死眷恋及续弦伦理的专门哲理化诠释。",
+        "rationale": "出处见段落p-413932，芳官详述藕官祭奠菂官原由及其续弦之说，宝玉深为赞叹合其呆性。",
+        "passageIds": [
+          "p-413932"
+        ]
+      },
+      {
+        "label": "宝玉论祭祀心诚意洁之旨",
+        "identityLabel": "宝玉祭祀尚诚论",
+        "summary": "宝玉嘱托芳官转告藕官切勿再烧纸，指出纸钱非孔子遗训，祭祀之法唯在“诚心”二字，心诚意洁则土草水石皆可通神感格。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "从批评纸钱为后人异端与俗人等例出发，归结出凡物凡境皆可祭、唯存敬诚的祭祀原则。",
+        "generalityHint": "对祭祀神佛死者本质的普适性原则批判与建构，反对虚名形式，强调内在真诚。",
+        "rationale": "出处见段落p-413932，宝玉借案上供香供水之例，系统阐述敬不在虚名、但凭心诚意洁的祭奠之道。",
+        "passageIds": [
+          "p-413932"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "国丧太妃薨逝与家规严禁宴乐的背景，直接促成了尤氏与王夫人遣散梨香院戏女的决定。",
+        "passageIds": [
+          "p-407814",
+          "p-408570"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "戏女散入园中各房使唤，才有了藕官进驻潇湘馆并于清明日在园内山石旁烧纸的契机。",
+        "passageIds": [
+          "p-408570",
+          "p-410394"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "戏女随干娘归房使唤，外来三等婆子与戏女之间因克扣管束不当引发洗头纠纷。",
+        "passageIds": [
+          "p-408570",
+          "p-411649"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉在山石后为藕官烧纸解围，赢得了藕官信任，从而指引宝玉回房向芳官探问私祭隐情。",
+        "passageIds": [
+          "p-411319",
+          "p-413932"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "芳官转述藕官以假作真的痴情哀悼后，宝玉借此进一步生发阐述祭奠在诚不在虚名的祭祀哲理。",
+        "passageIds": [
+          "p-413932"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Y9icauaeA_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 9945,
+    "candidatesTokenCount": 2490,
+    "totalTokenCount": 12435,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9945
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2490
+      }
+    ]
+  },
+  "durationMs": 18101,
+  "requestHash": "54f0a8bc96610414276965da6368c7ebf682645122deb3eb2c9a4aca91b54c93"
+}

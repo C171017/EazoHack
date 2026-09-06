@@ -1,0 +1,201 @@
+{
+  "value": {
+    "summary": "第九十七回叙述贾府推行王熙凤的“调包计”，一方面紧锣密鼓地安排贾宝玉迎娶薛宝钗以冲喜，另一方面严密隐瞒消息。林黛玉得知婚事真相后悲愤焚稿、断绝痴情，病入膏肓；而宝玉在被蒙蔽中完婚，揭盖头见是宝钗后旧病陡发，酿成悲剧。",
+    "nodes": [
+      {
+        "label": "黛玉吐血求死",
+        "identityLabel": "林黛玉病危求速死",
+        "summary": "林黛玉听闻宝玉定亲之事后吐血昏迷，苏醒后回想傻大姐之言，心灰意冷，一心但求速死以了结情债。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述黛玉急怒吐血及苏醒后求死的心境转变",
+        "generalityHint": "具体事件与个人情感受挫的情境",
+        "rationale": "黛玉在潇湘馆苏醒，由急怒迷性转为清醒后的绝望，交代其决意断念求速死的心境起点。",
+        "passageIds": [
+          "p-705684",
+          "p-706016"
+        ]
+      },
+      {
+        "label": "贾母凤姐密议成亲",
+        "identityLabel": "贾府筹办宝玉宝钗婚事",
+        "summary": "贾母探望黛玉后认为其病难好，且对儿女私情生疑生厌；遂与王夫人、凤姐商定加速操办宝玉与宝钗的婚事以冲喜，并设法瞒过众人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从黛玉病情恶化与封建礼教考量，推导出加速娶宝钗冲喜并保密的决策",
+        "generalityHint": "贾府长辈处理家族危机与儿女婚事的策略与态度",
+        "rationale": "贾母对黛玉起疑心，定下为宝玉娶宝钗冲喜的方针，展现家族礼法决策机制。",
+        "passageIds": [
+          "p-706423",
+          "p-707627"
+        ]
+      },
+      {
+        "label": "凤姐诱哄宝玉",
+        "identityLabel": "宝玉受哄以为娶黛玉",
+        "summary": "凤姐借娶林妹妹之说试探宝玉，宝玉信以为真、欣喜若狂，贾府上下依计行事，绝口不提薛宝钗之名以维持冲喜假局。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐利用宝玉对黛玉的执念进行试探与诱导，宝玉顺理成章深信不疑",
+        "generalityHint": "调包计的具体执行过程与个体受愚弄的典型表现",
+        "rationale": "展现宝玉在失玉昏愦中被骗过程，为后续婚礼上揭开盖头的悲剧埋下伏笔。",
+        "passageIds": [
+          "p-706986",
+          "p-708743"
+        ]
+      },
+      {
+        "label": "黛玉焚稿断痴情",
+        "identityLabel": "林黛玉焚稿断情",
+        "summary": "黛玉病势日重，见府中冷清无人问津，挣扎着索要题诗旧帕与诗稿，狠命掷入火盆焚毁，以绝痴情。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉在彻底明了世态凉薄与爱情破灭后，以焚毁信物诗稿作为对情感的诀绝",
+        "generalityHint": "特定主人公具有象征意义的悲剧决绝行为",
+        "rationale": "小说高潮核心情节，黛玉焚稿断痴情，完成了生命与精神层面的双重告别。",
+        "passageIds": [
+          "p-709714",
+          "p-710125"
+        ]
+      },
+      {
+        "label": "紫鹃知情与潇湘馆凄凉",
+        "identityLabel": "潇湘馆冷落与紫鹃探知真相",
+        "summary": "紫鹃探听贾母房与怡红院，得知宝玉当夜娶亲实情，悲愤交加，回到潇湘馆见黛玉垂危，急请孀居的李纨与平儿前来照料后事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过紫鹃所见两处冷热对比，串联起黛玉垂危与贾府办喜事的双线叙事",
+        "generalityHint": "两极对比的人物境遇与人情冷暖的观察",
+        "rationale": "紫鹃探知真相揭穿贾府谎言，李纨、平儿到场料理黛玉后事，与婚礼的热闹形成鲜明反差。",
+        "passageIds": [
+          "p-710125",
+          "p-711517",
+          "p-711784"
+        ]
+      },
+      {
+        "label": "雪雁被借调作障眼法",
+        "identityLabel": "调包计调派雪雁扶新人",
+        "summary": "王凤姐为防宝玉生疑，特意向潇湘馆借调黛玉贴身丫鬟雪雁去搀扶新娘，使宝玉误以为所娶果真是黛玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐偷梁换柱之计的细部推理：雪雁是黛玉南边带来的人，能彻底消除宝玉戒心",
+        "generalityHint": "家族内部欺瞒计策的具象操作手段",
+        "rationale": "平儿与李纨安排雪雁替换紫鹃，雪雁成为这场虚假婚礼的重要道具有效蒙蔽了宝玉。",
+        "passageIds": [
+          "p-711784",
+          "p-713321",
+          "p-713832"
+        ]
+      },
+      {
+        "label": "宝玉揭盖头见宝钗",
+        "identityLabel": "宝玉洞房见宝钗致旧病复发",
+        "summary": "婚礼礼毕，宝玉揭开盖头赫然发现新娘是薛宝钗，惊疑如堕梦中，追问林姑娘无果后，急怒之下旧病陡发、陷入昏愦。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从深信迎娶黛玉到亲睹宝钗的巨大现实落差，直接导致宝玉精神崩溃与病势爆发",
+        "generalityHint": "核心冲突爆发与悲剧幻灭的典型情节",
+        "rationale": "调包计被当场拆穿，宝玉从狂喜跌入昏狂，与潇湘馆黛玉的香消玉殒遥相呼应。",
+        "passageIds": [
+          "p-714130",
+          "p-715020"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾母探视黛玉吐血病况后，认为其病难愈且疑有心病，促成了从速迎娶宝钗冲喜的决定。",
+        "passageIds": [
+          "p-706016",
+          "p-706423"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾母定下迎娶宝钗冲喜并保密的方针后，凤姐依计前往哄骗宝玉是娶黛玉以促其成婚。",
+        "passageIds": [
+          "p-706423",
+          "p-706986"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "黛玉在求死念头与得知婚讯打击下病势沉重，最终采取决绝的焚稿撕绢行动以斩断痴情。",
+        "passageIds": [
+          "p-705684",
+          "p-709714"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "黛玉焚稿后命在旦夕，导致紫鹃出门探听并目睹贾府为宝玉大办喜事的情形，引出李纨平儿来潇湘馆准备后事。",
+        "passageIds": [
+          "p-710125",
+          "p-711517"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "李纨平儿在潇湘馆照应时，林之孝家的传令借人，平儿顺水推舟安排雪雁前去新房充作掩护。",
+        "passageIds": [
+          "p-711784"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "凤姐诱骗宝玉以为娶黛玉，直接导致宝玉在洞房满心欢喜揭开盖头时骤见宝钗而精神彻底崩溃。",
+        "passageIds": [
+          "p-706986",
+          "p-714130"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "雪雁扶新人使宝玉深信新娘就是黛玉，彻底稳固了骗局，直至揭去盖头才暴露真相。",
+        "passageIds": [
+          "p-713832",
+          "p-714130"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "QNmcauXjBumj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 12432,
+    "candidatesTokenCount": 2458,
+    "totalTokenCount": 14890,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12432
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2458
+      }
+    ]
+  },
+  "durationMs": 17867,
+  "requestHash": "47d270df08b3f69adaa7b3bcb42cfb50136568ebd5a526b1332593b8b9a31b47"
+}

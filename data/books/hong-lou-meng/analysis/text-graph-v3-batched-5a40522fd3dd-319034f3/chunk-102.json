@@ -1,0 +1,190 @@
+{
+  "value": {
+    "summary": "第一百零二回叙述探春远嫁后大观园愈加荒凉冷落。尤氏因穿行大观园归家而致病，毛半仙占卦断言冲撞伏虎凶煞，引发两府人心惶惶，附会妖邪谣言四起。贾赦带人入园查勘遇虚惊后，请道士设坛做法驱邪以安众心。随后贾琏打探得贾政因失察属员被节度使参劾、皇上降级留用召其回京之信。",
+    "nodes": [
+      {
+        "label": "王夫人托付家事与探春远嫁",
+        "identityLabel": "探春远嫁与王夫人嘱托",
+        "summary": "王夫人向宝钗交代探春出嫁在即，嘱其开导探春并照看宝玉，提及自身与凤姐抱病，欲将家事托付于宝钗；探春以纲常大体劝慰宝玉后启程远嫁。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从探春将嫁及长辈病弱的现状，推导并交代后辈分担家事与探春临别劝导的叙事起点。",
+        "generalityHint": "涉及荣府几位核心家庭成员的具体人事与离别情境。",
+        "rationale": "基于王夫人对宝钗的嘱咐以及探春辞别宝玉登程的叙述，展现荣府内眷交接与骨肉分离的场景。",
+        "passageIds": [
+          "p-741051",
+          "p-741499"
+        ]
+      },
+      {
+        "label": "尤氏夜热谵语与大观园荒落",
+        "identityLabel": "大观园荒凉与尤氏患病",
+        "summary": "大观园诸姊妹搬离后人迹罕至、台榭荒凉；尤氏送探春后穿园而归，触景怅然，回家后随即发热并谵语狂乱，医治未见起色。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由大观园萧条冷落之景与尤氏晚间穿园的情境，推导尤氏身心受感而骤起病热。",
+        "generalityHint": "记录大观园荒废环境及尤氏发病的特定事件。",
+        "rationale": "描写大观园败落为后文附会鬼怪提供了环境依据，尤氏病热谵语直接引出了占卦与风波。",
+        "passageIds": [
+          "p-741589"
+        ]
+      },
+      {
+        "label": "毛半仙占课断煞",
+        "identityLabel": "毛半仙占课大六壬",
+        "summary": "贾蓉延请毛半仙为尤氏起卦，毛半仙借‘未济’之卦与六壬‘魄化课’，断言旧宅伏虎作怪，傍晚得病且日暮凶险，然巳上有贵神终得魄化魂归。",
+        "sourceRole": "dialogue",
+        "speaker": "毛半仙",
+        "reasoningHint": "毛半仙根据排卦与神煞推衍，由卦象中官鬼、白虎等要素演绎出撞客与病候吉凶的预测。",
+        "generalityHint": "玄学占卦在特定问病场景下的术数推断。",
+        "rationale": "毛半仙对未济卦与六壬课象的解说直接给尤氏之病贴上了‘旧宅伏虎撞客’的神秘标签。",
+        "passageIds": [
+          "p-741922"
+        ]
+      },
+      {
+        "label": "两府疑神疑鬼与妖言滋蔓",
+        "identityLabel": "大观园妖异谣言传布",
+        "summary": "宁府向园内烧纸且尤氏依卦渐愈，加之贾珍贾蓉相继患病与吴贵媳妇暴毙，众人疑神疑鬼，附会芙蓉神等传闻，看园人造言生事，大观园终致封锁无人敢近。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由偶合的病情好转与接连生病，一步步推演出妖魔作祟的群体恐慌与谣言泛滥。",
+        "generalityHint": "描述贾府上下群体心理反应与管理瘫痪的特定过程。",
+        "rationale": "文中叙述宁荣两府由病生惧，风声鹤唳、草木皆妖，形成全府性的恐慌与经济、管理恶化。",
+        "passageIds": [
+          "p-743139",
+          "p-743893"
+        ]
+      },
+      {
+        "label": "贾赦验园受惊与设坛驱妖",
+        "identityLabel": "贾赦请道驱妖",
+        "summary": "贾赦本不信邪带人入园查勘，因家人误认野鸡受惊而回，遂请道纪司四十九位道众在大观园正殿设坛诵经、洒水挥剑，宣称收禁妖邪于观塔之下。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾赦在查验未果反遭惊吓后，不得不采取官方道教仪轨进行驱邪以弭谤安内。",
+        "generalityHint": "记录贾府在特定地点举办的道场法事全过程。",
+        "rationale": "贾赦入园虚惊后延道士作法，以大张旗鼓的符水捉妖仪式给府内的谣言画上休止符。",
+        "passageIds": [
+          "p-743893",
+          "p-744537",
+          "p-744775"
+        ]
+      },
+      {
+        "label": "贾珍释疑与法事平息人心",
+        "identityLabel": "驱邪法事成效与贾珍解说",
+        "summary": "贾蓉等暗笑法师虚张声势，贾珍斥其不知‘妖聚成形散成气’之理；法事后下人疑心渐消无人再提，贾珍等病愈复原，虽有知情人言及野鸡之谎亦无人深究。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "借助贾珍对妖怪聚散之理的辩解以及下人疑心消散的心理变化，解释这场法事达到的平息效果。",
+        "generalityHint": "针对特定驱邪事件在府内各层人物心理上引发的收尾反应。",
+        "rationale": "展现了法事虽无实物妖怪，但通过心理暗示与权威解说成功恢复了表面的秩序。",
+        "passageIds": [
+          "p-745091"
+        ]
+      },
+      {
+        "label": "贾政被参降级与奉旨还京",
+        "identityLabel": "贾政外任被参回京",
+        "summary": "贾琏打探证实贾政因失察属员、重征粮米遭节度使参奏，皇上念其初任外职受人蒙蔽，从宽降三级并令即日回京仍以工部员外郎行走。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "依据吏部确报及引见知县的证言，厘清节度使参劾与朝廷从宽降级调回的原委。",
+        "generalityHint": "涉及贾政个人仕途及贾府外任官场地位的重大事件。",
+        "rationale": "贾政被参并召回是贾府政治局势恶化的重要节点，承接前文节度贺亲与探春远嫁的背景。",
+        "passageIds": [
+          "p-745408",
+          "p-745631"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "探春远嫁后尤氏送行穿园，直接触发了大观园凄凉满目与尤氏受感发热的情节。",
+        "passageIds": [
+          "p-741499",
+          "p-741589"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "尤氏因穿园致病且服药无效，直接导致贾珍贾蓉延请毛半仙占卦寻因。",
+        "passageIds": [
+          "p-741589",
+          "p-741922"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "毛半仙占断旧宅伏虎凶煞，促使尤氏烧纸并依期渐愈，从而坐实并激发了全府关于妖孽作祟的流言。",
+        "passageIds": [
+          "p-741922",
+          "p-743139"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "妖孽传闻日盛致使大观园荒废封锁，贾赦亲自查勘反被家人谎言吓回，最终决定延请道士驱邪。",
+        "passageIds": [
+          "p-743139",
+          "p-743893",
+          "p-744537"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "法官在大观园行法收妖后，贾珍向贾蓉解说其效用，下人疑心渐去，闹妖风波暂告平息。",
+        "passageIds": [
+          "p-744775",
+          "p-745091"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "前文探春抵任所送抵海疆并与节度认亲，引出后文节度使参劾贾政、贾政被降职回京的官场转折。",
+        "passageIds": [
+          "p-741499",
+          "p-745408",
+          "p-745631"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Y9mcavDqGvGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 7647,
+    "candidatesTokenCount": 2559,
+    "totalTokenCount": 10206,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7647
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2559
+      }
+    ]
+  },
+  "durationMs": 18300,
+  "requestHash": "3770f81bebaf1e7fa6ed1ea34902b37a680ccb9d36c78b666cfc6fa23d236fc2"
+}

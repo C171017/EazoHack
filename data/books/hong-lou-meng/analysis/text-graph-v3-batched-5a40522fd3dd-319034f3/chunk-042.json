@@ -1,0 +1,167 @@
+{
+  "value": {
+    "summary": "第四十二回中，刘姥姥临别时为大姐儿命名巧哥儿，贾府众人重礼相赠并延请王太医诊脉。宝钗私下以读杂书移性情之理开导黛玉，二人释嫌修好；随后众人在稻香村商议惜春绘制大观园图，黛玉戏拟《携蝗大嚼图》，宝钗则条分缕析地指导画法与开列画具单子。",
+    "nodes": [
+      {
+        "label": "刘姥姥为大姐儿取名巧哥儿",
+        "identityLabel": "巧哥儿起名",
+        "summary": "凤姐求刘姥姥替大姐儿起名以借寿压灾，刘姥姥因其生于七月初七，定名巧哥儿，取以毒攻毒、遇难成祥逢凶化吉之意。",
+        "sourceRole": "dialogue",
+        "speaker": "刘姥姥",
+        "reasoningHint": "从庄家人的贫苦借寿经验推及逢凶化吉的命名寄寓",
+        "generalityHint": "针对大姐儿个人的特定命运谶语与命名",
+        "rationale": "刘姥姥针对大姐儿生于七月初七这一具体情况，提出以毒攻毒的起名原由。",
+        "passageIds": [
+          "p-282842",
+          "p-282247"
+        ]
+      },
+      {
+        "label": "刘姥姥满载辞行贾府",
+        "identityLabel": "刘姥姥辞行贾府",
+        "summary": "王夫人、凤姐、平儿、贾母及鸳鸯等人纷纷赠送银两、衣料、干果、药品等物，刘姥姥感激涕零后作辞出府。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府上下对刘姥姥的回馈与赠礼过程",
+        "generalityHint": "一次特定的贵族家庭济贫与结缘事件",
+        "rationale": "文本详细记叙平儿、鸳鸯等分别清点转交各房馈赠，刘姥姥拜谢离去。",
+        "passageIds": [
+          "p-283389",
+          "p-284909"
+        ]
+      },
+      {
+        "label": "王太医为贾母大姐儿请脉",
+        "identityLabel": "王太医诊视脉疾",
+        "summary": "贾母与大姐儿微恙，王太医入府诊脉，断定贾母仅偶感风凉无大碍，大姐儿清净饥饿两顿即可，显出世家看诊规矩与医理。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "记叙诊脉过程及王太医结合受凉与积食给出的从容医理",
+        "generalityHint": "贾母与巧哥儿偶患微疾的具体诊疗场景",
+        "rationale": "文本叙述王太医入内室为贾母及大姐儿看诊并开方说病因的过程。",
+        "passageIds": [
+          "p-284170",
+          "p-284565"
+        ]
+      },
+      {
+        "label": "宝钗兰言规劝黛玉读正经书",
+        "identityLabel": "宝钗劝诫黛玉杂书之论",
+        "summary": "宝钗私下点出黛玉行酒令时失于检点引用《牡丹亭》《西厢记》，并以自身少年经历为鉴，劝黛玉女子当以正经道德修养为重，切莫被杂书移了性情，黛玉心悦诚服。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗从自身读书阅历与男女分内之事推演出读书移性情之害的完整教诫",
+        "generalityHint": "面向闺阁女子读书与修身养性的普遍道德戒律",
+        "rationale": "宝钗在蘅芜苑向黛玉推心置腹分析读书不明理之害，黛玉暗伏。",
+        "passageIds": [
+          "p-285574"
+        ]
+      },
+      {
+        "label": "黛玉雅谑拟《携蝗大嚼图》",
+        "identityLabel": "黛玉雅谑惜春作画",
+        "summary": "众人商议惜春告假画大观园，黛玉戏称刘姥姥为“母蝗虫”，并取笑画中须点缀草虫，提议题跋画名《携蝗大嚼图》，引得满堂哄堂大笑。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "从刘姥姥游园吃喝的形象联想到蝗虫与画卷草虫的点缀",
+        "generalityHint": "诗社姊妹聚会时的特定戏谑即兴讽喻",
+        "rationale": "黛玉在稻香村借刘姥姥与惜春画画生发谐谑，宝钗称其用“春秋”笔法。",
+        "passageIds": [
+          "p-286491"
+        ]
+      },
+      {
+        "label": "宝钗论通景画法与开列画具",
+        "identityLabel": "宝钗论画与开列器具",
+        "summary": "宝钗详尽剖析绘制大观园图的章法布局、起稿界划、人物位置，并逐一开列排笔、颜料、绢箩及炉锅作料等画具单子，展现渊博杂学。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "从构图远近主宾、界画界尺规则到颜料工具特性的专业推演",
+        "generalityHint": "绘制大幅工细园林与人物通景图的一般法则与物料规范",
+        "rationale": "宝钗向惜春、宝玉等人详细分析画园难处，并指点如何用图样删补与预备物料。",
+        "passageIds": [
+          "p-287697",
+          "p-288156"
+        ]
+      },
+      {
+        "label": "钗黛二人和解亲昵",
+        "identityLabel": "钗黛情谊释嫌",
+        "summary": "黛玉打趣宝钗开列的单子像嫁妆，宝钗要拧其脸，黛玉以年纪小求饶，宝钗替黛玉拢发，二人彻底消除前嫌，情同骨肉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从前番兰言规劝承接至打趣求饶与拢发，展现二人心意相通的转变",
+        "generalityHint": "薛宝钗与林黛玉二人之间个人情谊的深层转折",
+        "rationale": "叙述黛玉央告宝钗饶恕并提及教导之恩，宝钗怜惜拢发，两人关系产生实质性贴近。",
+        "passageIds": [
+          "p-289212"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "刘姥姥替大姐儿起名安妥后，凤姐和平儿等更放心地打点并奉上丰厚赠礼打发其归家。",
+        "passageIds": [
+          "p-283189",
+          "p-283389"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "宝钗在蘅芜苑以兰言教导黛玉，成为稻香村中黛玉戏称求姐姐教导并最终亲昵拢发的情感基础。",
+        "passageIds": [
+          "p-285574",
+          "p-289212"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "稻香村众人就惜春画园大笑取乐后，宝钗止住戏谑，提出关于画法与画具的严肃公道之论。",
+        "passageIds": [
+          "p-286491",
+          "p-287697"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "宝钗开列完画具单子后，黛玉戏谑其为嫁妆单子，引发二人随后的厮闹与拢发和解。",
+        "passageIds": [
+          "p-288156",
+          "p-289212"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "A9icatXGNbCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 9944,
+    "candidatesTokenCount": 2215,
+    "totalTokenCount": 12159,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9944
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2215
+      }
+    ]
+  },
+  "durationMs": 15061,
+  "requestHash": "724bcc0a67024995e5a6f978a01c967e70a4d10b14408300594dfe7b3f24145a"
+}

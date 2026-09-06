@@ -1,0 +1,166 @@
+{
+  "value": {
+    "summary": "第一百一十二回记叙贾府遭盗后，惜春愧惧，包勇叫骂尼姑；众贼因何三被打死且垂涎妙玉美色，夜入栊翠庵用闷香劫走妙玉，惜春闻讯更坚出家之念；贾政、贾琏等人核对失单、查究家贼周瑞并返京，铁槛寺内赵姨娘突遭冤孽缠身癫狂自供旧日魇魔罪过，贾政感叹家运衰败。",
+    "nodes": [
+      {
+        "label": "查盗核单与包勇斥尼",
+        "identityLabel": "贾府失窃善后与非议",
+        "summary": "贾府被盗后，凤姐命捆押上夜妇人，贾芸报信于铁槛寺；包勇在院中大骂三姑六婆引贼，惜春闻之羞愧惊恐，贾琏回府后核定失单送官。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于失窃事实与包勇所见，引出贾府上下处置被盗的惊惶与家奴嫌疑。",
+        "generalityHint": "涉及贾府失窃案处理及惜春、凤姐、贾琏等具体当事人的特定情境。",
+        "rationale": "依据p-806738、p-807175、p-809102，叙述了失窃后的报官、对质、包勇混嚷及拟定失单等具体善后经过。",
+        "passageIds": [
+          "p-807175",
+          "p-806738",
+          "p-809102"
+        ]
+      },
+      {
+        "label": "贼党谋算妙玉",
+        "identityLabel": "贼党窥伺妙玉",
+        "summary": "贼伙逃聚后得知何三被打死并报官，商议出关投奔海盗，因前夜窥见妙玉美貌，遂起意在出关前潜入栊翠庵劫掳妙玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从打探风声、同伙毙命与前夕窗外窥见的色心，推导出潜入再劫的企图。",
+        "generalityHint": "记录这伙盗贼特定行动动机的局部事件叙述。",
+        "rationale": "依据p-807810、p-808011，明确展现了贼人商议逃遁与起意劫持栊翠庵姑子的缘由和谋划。",
+        "passageIds": [
+          "p-807810",
+          "p-808011"
+        ]
+      },
+      {
+        "label": "栊翠庵妙玉遭劫",
+        "identityLabel": "妙玉遭劫下落不明",
+        "summary": "强盗于三更潜入栊翠庵，五更时以闷香迷倒妙玉并将其背走出城，同伙会合奔指南海，妙玉生死下落未明。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由贼人潜伏、施放闷香到载车潜越城门，依时间顺序列述劫难经过。",
+        "generalityHint": "针对妙玉个人悲剧遭遇的单次事件叙述。",
+        "rationale": "依据p-810111、p-810479，叙述了妙玉独坐感怀、遭香迷晕被掠以及出城远遁的始末与叙述者感慨。",
+        "passageIds": [
+          "p-810111",
+          "p-810479"
+        ]
+      },
+      {
+        "label": "惜春断发誓出家",
+        "identityLabel": "惜春勘破尘缘立意出家",
+        "summary": "惜春因看家失窃负咎，又闻妙玉失踪疑遭强贼掳掠，深感孤苦与宿命无常，自绞青丝决意出家为尼。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从自身处境、众姊妹悲剧与妙玉变故中推导出世俗不可留的结论，付诸削发行动。",
+        "generalityHint": "贾惜春个人思想演变与人生决断的具体事件描写。",
+        "rationale": "依据p-811239、p-811541，写惜春思想迎春、探春等人命运并感同身受，在得知妙玉被劫后死定出家之念并绞发。",
+        "passageIds": [
+          "p-811239",
+          "p-811541"
+        ]
+      },
+      {
+        "label": "赵姨娘暴疾发狂自供",
+        "identityLabel": "赵姨娘中邪受报",
+        "summary": "贾府诸人辞灵返家之际，赵姨娘突发暴疾吐沫倒地，作被阴司拘提之态，狂乱中自供当年勾结马道婆使用魇魔法陷害宝玉凤姐的罪行。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过赵姨娘发狂语狂态，揭露旧日隐秘阴谋，作为因果报应的情节展现。",
+        "generalityHint": "特定人物中邪临终胡言的具体场景描写。",
+        "rationale": "依据p-812302、p-812713，详细记录了赵姨娘在贾母灵前突然发病、呼喊阎王与马道婆魇魔旧案并向凤姐求饶的场面。",
+        "passageIds": [
+          "p-812302",
+          "p-812713"
+        ]
+      },
+      {
+        "label": "贾政拿周瑞叹家运衰败",
+        "identityLabel": "贾政惩内奸感叹家运",
+        "summary": "贾政回府后得知家贼周瑞与鲍二通盗，怒令捆解周瑞送官审问；又见凤姐重病、赵姨娘垂危，深叹家运衰败一至于此。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "结合被盗家奴负恩、媳妇病危与妾室发狂等多重打击，得出家族败落的沉痛慨叹。",
+        "generalityHint": "针对贾府整体衰退命运的当家人评判与具体惩处指令。",
+        "rationale": "依据p-813309、p-813539，记录了贾政审讯失窃底细怒拿周瑞，并对贾琏感叹家运衰败的情景。",
+        "passageIds": [
+          "p-813309",
+          "p-813539"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "首日盗案被包勇打退何三并引官府介入，直接导致贼众次日商议善后并进而动念劫掠栊翠庵。",
+        "passageIds": [
+          "p-807810"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贼党商定掳掠妙玉的计谋直接导致当夜四更强行翻墙以闷香劫掠妙玉的行动发生。",
+        "passageIds": [
+          "p-808011",
+          "p-810007",
+          "p-810111"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "妙玉遭劫下落不明的消息传来，坐实了包勇的闲话，促使惜春深感世态凶险而坚决绞发出家。",
+        "passageIds": [
+          "p-811541"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "赵姨娘在庙中暴病中邪发狂，成为贾政回到家中感叹家族祸事频仍、家运衰败的重要诱因之一。",
+        "passageIds": [
+          "p-812713",
+          "p-813539"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "从前一日报案核单到次日官府搜获鲍二、供出周瑞引贼，贾政据此严办家奴并正视家败惨状。",
+        "passageIds": [
+          "p-809102",
+          "p-813309"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ldmcapDNM_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 9860,
+    "candidatesTokenCount": 2185,
+    "totalTokenCount": 12045,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9860
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2185
+      }
+    ]
+  },
+  "durationMs": 16338,
+  "requestHash": "5c0da58c13a6a8d4ebb523508ca3cdc1970af6a7e1c12fd5549dc0de5779321f"
+}

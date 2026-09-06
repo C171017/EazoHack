@@ -1,0 +1,155 @@
+{
+  "value": {
+    "summary": "本回叙述惜春受水月庵、栊翠庵诸事及家境衰颓触发，决意出家；二宝玉初会，贾宝玉因甄宝玉谈论文章经济、立身扬名而大失所望，斥为禄蠹，旧病复发且危在旦夕；幸得和尚持通灵宝玉索银救命，宝玉得玉复苏，却又因麝月失言再次倒下。",
+    "nodes": [
+      {
+        "label": "惜春听尼僧之言坚立矢志",
+        "identityLabel": "惜春矢志出家",
+        "summary": "地藏庵姑子探访惜春并谈及妙玉遭劫与出家修行之由，惜春深有所触，向其表白早已决意斩断红尘、不恋火坑，任谁劝阻皆执迷不从。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从栊翠庵妙玉遭劫及自身处境中直接推导出荣华难保、唯有出家避祸修善果的结论。",
+        "generalityHint": "涉及惜春个人立志及对贵族女子荣华难保命运的狭义体悟。",
+        "rationale": "惜春指发剖白心迹，无论尤氏、彩屏及邢王二夫人如何劝解皆绝食欲绞发出家，奠定其断绝红尘之志。",
+        "passageIds": [
+          "p-826236",
+          "p-827309"
+        ]
+      },
+      {
+        "label": "贾惜春以死相逼求居栊翠庵",
+        "identityLabel": "惜春以死抗争",
+        "summary": "尤氏奉贾政之命规劝惜春，惜春以迎春横死为鉴，以死相挟，提出不出家门、留在贾府基址栊翠庵修行之折中方案。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在家族阻拦出家与自身决绝志向的冲突下，援引二姐之死与两府关系，推论出退守栊翠庵的两全之策。",
+        "generalityHint": "针对惜春个人与贾府长辈博弈的具体安置方案。",
+        "rationale": "惜春以死明志，并以妙玉当家处仍为贾府产业为由，迫使尤氏与长辈妥协，深化了其矢志出家的线索。",
+        "passageIds": [
+          "p-830294"
+        ]
+      },
+      {
+        "label": "二宝玉初会谈道冰炭不投",
+        "identityLabel": "二宝初会失相知",
+        "summary": "贾宝玉与甄宝玉初次相见，贾宝玉原期盼遇同心知己，甄宝玉却陈说功名经济、言忠言孝之正途，贾宝玉深感不投、引以为俗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾宝玉从甄宝玉改崇立德立言、尽忠尽孝的话语中，直接判定其已沦为与世俗无异的禄蠹。",
+        "generalityHint": "展现贾宝玉与甄宝玉两人思想价值取向的具体碰撞与分野。",
+        "rationale": "二宝玉虽同名同貌，但精神内核截然相反，打破了宝玉寄予的知己幻想，呼应回目'证同类宝玉失相知'。",
+        "passageIds": [
+          "p-828053",
+          "p-827676"
+        ]
+      },
+      {
+        "label": "宝玉斥甄宝玉禄蠹致旧疾复发",
+        "identityLabel": "宝玉斥甄诱疾",
+        "summary": "贾宝玉向宝钗抱怨甄宝玉虽具奇貌却满口文章经济乃一禄蠹，遭宝钗抢白驳斥，宝玉悒郁之下旧疾复发，日渐糊涂发呆。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从对甄宝玉言论的幻灭反感及宝钗的抢白，推至内心苦闷淤积，进而引发精神失常旧疾。",
+        "generalityHint": "围绕宝玉对世俗仕途经济的反感及其个人情志病发。",
+        "rationale": "承接与甄宝玉会谈的破灭，宝玉在此将甄宝玉彻底定性为禄蠹，并由此直接触发重病病危。",
+        "passageIds": [
+          "p-829824",
+          "p-830693"
+        ]
+      },
+      {
+        "label": "和尚持真玉索银救宝玉",
+        "identityLabel": "疯僧送玉救命",
+        "summary": "在宝玉病危气绝、全家备办后事之际，一粗鲁和尚携通灵宝玉登门强索万银，并将玉交还宝玉耳边呼唤，宝玉触玉即时复苏。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "众人及贾政基于既往僧道显灵的经验，在绝境中接受和尚送玉索银之举以挽回性命。",
+        "generalityHint": "属于通灵宝玉与贾宝玉性命互为表里的神异情节。",
+        "rationale": "和尚持玉救命为宝玉命悬一线时的关键转折，重演了通灵宝玉失而复得并起死回生的超自然命数。",
+        "passageIds": [
+          "p-831110",
+          "p-831588"
+        ]
+      },
+      {
+        "label": "麝月失言使宝玉再度昏绝",
+        "identityLabel": "麝月失言复危",
+        "summary": "宝玉进食回神、渐有起色，麝月搀扶时欣喜失言提及当初几乎砸玉之事，宝玉闻言变色撂玉，再度仰面倒下、生死未卜。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "麝月无心之言触及宝玉潜意识中对玉的复杂禁忌与旧事刺激，致其精神骤受震荡倒下。",
+        "generalityHint": "描绘具体言语失当引发的突发病危情节。",
+        "rationale": "章末高潮逆转，刚还阳的宝玉因'砸玉'之语再遭重创，构成回末悬念并导向下一回幻境神游。",
+        "passageIds": [
+          "p-832301"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "惜春坚立出家之念后，面对家族的阻挠，进一步发展为以死相逼并提出就近入栊翠庵的具体方案。",
+        "passageIds": [
+          "p-826236",
+          "p-830294"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "甄宝玉在会谈中所流露的文章经济之论，直接成为贾宝玉回房后将其痛斥为禄蠹并心结难解引发旧疾的缘由。",
+        "passageIds": [
+          "p-828053",
+          "p-829824"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉旧疾复发后病情逐步加重，直至人事不省、医石罔效，从而引出了和尚持玉登门起死回生的情节。",
+        "passageIds": [
+          "p-829824",
+          "p-831110",
+          "p-831588"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "和尚送玉使宝玉刚刚苏醒进食，旋即因麝月提及该玉当初险遭砸碎而神色骤变、再度绝倒。",
+        "passageIds": [
+          "p-831588",
+          "p-832301"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ptmcaoqgFLCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 9405,
+    "candidatesTokenCount": 2056,
+    "totalTokenCount": 11461,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9405
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2056
+      }
+    ]
+  },
+  "durationMs": 15405,
+  "requestHash": "26fe20d9fcb2e5bf81dad82b60aed4a850875bdcc0798bb227808c1edc4c05b9"
+}

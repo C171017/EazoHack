@@ -1,0 +1,194 @@
+{
+  "value": {
+    "summary": "第一百一十回叙述贾母临终遗言及寿终归地府，荣宁两府筹办丧事。贾政主张崇尚俭省悲戚，邢夫人乘机扣紧银两防家计艰难；凤姐虽领命总理内帏，却因银钱不到手、奴仆推诿不听调派，加之邢夫人王夫人责备与鸳鸯误解，力竭委屈，终在坐夜之日受讥吐血倒地。",
+    "nodes": [
+      {
+        "label": "贾母临终嘱托与逝世",
+        "identityLabel": "贾母逝世",
+        "summary": "贾母临终前勉励宝玉争气，嘱咐贾兰孝顺母亲，劝凤姐太聪明应修福，并念及史湘云未至，随后安详辞世，享年八十三岁，荣府上下举哀成服。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾母临终对诸子孙媳妇的诀别言语，反映其生平经历及贾府内各人关系，并引出丧事的开端。",
+        "generalityHint": "单一具体事件，记录贾母病危辞世的场景。",
+        "rationale": "通过贾母临终言谈和咽气停灵的描写，直接确立了全回丧事及家族后续冲突的发生背景。",
+        "passageIds": [
+          "p-792737"
+        ]
+      },
+      {
+        "label": "鸳鸯求凤姐体面办丧",
+        "identityLabel": "鸳鸯求办体面丧事",
+        "summary": "鸳鸯向凤姐下跪磕头，担忧贾政崇尚悲戚省费致丧事简陋，求凤姐拿出主意风光大办，并表示可用贾母留下的私房折变贴补。",
+        "sourceRole": "dialogue",
+        "speaker": "鸳鸯",
+        "reasoningHint": "基于对贾母深厚恩义的感念及对贾政省俭念头的忧虑，推导出必须借凤姐之才力与老太太遗银来维护体面。",
+        "generalityHint": "针对贾母丧葬规格的特定诉求与主张。",
+        "rationale": "鸳鸯的心意体现了忠婢对亡主的深情，也直接为凤姐后续办丧的心理预期定下体面标准。",
+        "passageIds": [
+          "p-793693"
+        ]
+      },
+      {
+        "label": "贾琏转达贾政治丧主张与困局",
+        "identityLabel": "贾政治丧主张与款项掣肘",
+        "summary": "贾琏告知凤姐贾政欲留银两购置南边祭田与阴宅，邢夫人附和扣紧银两，外头分文未发且奴仆推诿托病，导致丧事调度陷入无米之炊。",
+        "sourceRole": "dialogue",
+        "speaker": "贾琏",
+        "reasoningHint": "从抄家后防止招摇及贾政宗族长远设想出发，解释了为何银钱迟迟不发，并指出下人怠工的现实。",
+        "generalityHint": "贾府经抄家破败后应对重大典礼的宗族策略与管理困境。",
+        "rationale": "贾琏的话揭示了凤姐无法施展才干的根源：贾政的大道理、邢夫人的私心克扣以及银钱不到位。",
+        "passageIds": [
+          "p-794764"
+        ]
+      },
+      {
+        "label": "邢王二夫人责难凤姐",
+        "identityLabel": "长辈对凤姐的责备与掣肘",
+        "summary": "邢夫人因防备家计而借贾政之言死卡银两，见鸳鸯灵前啼哭反怪凤姐不用心；王夫人亦责凤姐照应不周，凤姐有口难辨、忍气吞声。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "结合邢夫人的私心戒备与王夫人对表面体面的要求，推出凤姐夹在长辈挑剔与缺钱之间的两难。",
+        "generalityHint": "荣府婆媳、长幼权力关系在丧事操办中的具象化体现。",
+        "rationale": "描摹了凤姐所受的上下挤压，展现出管家权力丧失实质支持后的脆弱。",
+        "passageIds": [
+          "p-795822"
+        ]
+      },
+      {
+        "label": "下人推诿与凤姐央告",
+        "identityLabel": "下人抗拒与凤姐威严尽失",
+        "summary": "凤姐召集女仆严词吩咐，下人借口上头主意不一、缺钱少物而诸多埋怨，凤姐只得委曲求全、低声下气央求下人配合。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "根据没有银钱发放且缺乏主子全力支持的事实，下人借机懈怠，导致凤姐昔日的威严彻底瓦解。",
+        "generalityHint": "贾府奴仆见风使舵、无利不起早的群体行为模式。",
+        "rationale": "对比昔日协理宁国府的威风，显出凤姐如今力诎失人心的凄凉处境。",
+        "passageIds": [
+          "p-796369"
+        ]
+      },
+      {
+        "label": "李纨叹凤姐之苦与家道颓败",
+        "identityLabel": "李纨评述凤姐困境与世态",
+        "summary": "李纨洞察凤姐无钱难办大事的苦衷，吩咐手下人不得落井下石，并从贾兰好学、宝玉环哥儿各异与借车雇车之举中感叹家势日益衰落。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过旁观者的冷静审视，李纨以“没米之粥”点破凤姐的困局，并由此及彼联想到家族后嗣与财力见绌的现实衰象。",
+        "generalityHint": "涵盖荣府掌权、当家、后辈品行及家族衰落的综合评议。",
+        "rationale": "李纨的公允同情与对家族诸事的观察，为凤姐的困境与贾府的没落提供了冷静客观的旁观视角。",
+        "passageIds": [
+          "p-797312",
+          "p-797887"
+        ]
+      },
+      {
+        "label": "凤姐力竭受讥呕血倒地",
+        "identityLabel": "凤姐力诎吐血",
+        "summary": "坐夜之期宾客繁多，凤姐勉力张罗几近力竭，小丫头转述邢夫人讥刺其“躲着受用”之语，凤姐气急攻心，一口鲜血喷出倒地不起。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "长期身心透支、上下受气与最终莫须有的恶言指责叠加，直接引发身体生理上的彻底崩溃。",
+        "generalityHint": "单一具体高潮事件，标志凤姐管家生涯与身体的彻底崩解。",
+        "rationale": "本回终结性的高潮情节，直接扣合回目中“王凤姐力诎失人心”的核心结局。",
+        "passageIds": [
+          "p-799196"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "贾母逝世直接促成鸳鸯向凤姐跪求将丧事办得风光体面。",
+        "passageIds": [
+          "p-792737",
+          "p-793693"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "鸳鸯对贾政俭省的担忧在贾琏与凤姐的对话中得到证实，贾琏述及贾政欲留银买祭田而不发银两。",
+        "passageIds": [
+          "p-793693",
+          "p-794764"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "贾政的主张被邢夫人利用以借机死扣银钱，进而造成凤姐处处被动反遭邢王二夫人责难。",
+        "passageIds": [
+          "p-794764",
+          "p-795822"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "由于外头银钱不发、差使难办，下人们乘机抵触推诿，迫使凤姐从严厉惩处变为低声央求。",
+        "passageIds": [
+          "p-794764",
+          "p-796369"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "邢王二夫人对凤姐的责备和不放银钱，引来李纨对其“巧媳妇做不上没米粥”的私下理解与感叹。",
+        "passageIds": [
+          "p-795822",
+          "p-797312"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "邢夫人等人的成见与猜疑最终化为小丫头传来的诛心讥讽，促使凤姐气急吐血倒地。",
+        "passageIds": [
+          "p-795822",
+          "p-799196"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "下人推诿难调配导致内里事务一团混乱，成为邢夫人指责凤姐偷懒躲避并导致其气竭吐血的直接诱因。",
+        "passageIds": [
+          "p-796369",
+          "p-799196"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "j9mcatXREvGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 9115,
+    "candidatesTokenCount": 2538,
+    "totalTokenCount": 11653,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9115
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2538
+      }
+    ]
+  },
+  "durationMs": 21155,
+  "requestHash": "c0bd422875fc8222236d192d96784361b11128b987484d42e1bd1c049021331e"
+}

@@ -1,0 +1,135 @@
+{
+  "value": {
+    "summary": "第八十三回叙黛玉因婆子窗外叱骂疑心致疾，王太医诊脉定由郁结并拟疏肝保肺之方；周瑞家的向凤姐回禀黛玉窘况与外间虚名谣言；宫中元妃染恙，贾母率邢、王二夫人及凤姐奉旨入宫探视；薛家夏金桂借酒肆虐闹闺阃，宝钗含忍劝解，薛姨妈气极肋痛。",
+    "nodes": [
+      {
+        "label": "黛玉闻骂疑心绝望",
+        "identityLabel": "黛玉闻骂惊厥",
+        "summary": "黛玉在潇湘馆骤听窗外婆子恶语叱骂，疑心系冲己而来，思及自身无依孤苦，肝肠崩裂哭晕，随后探春外出喝止并释明实情。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从黛玉寄人篱下寸步留心的孤绝心态，直接引申出其因偶遇婆子骂外孙女而生发的极端疑惧与绝望反应。",
+        "generalityHint": "单一特定场景下的心理触发与病态发作描写。",
+        "rationale": "基于p-609031与p-609295，黛玉因听见窗外叱骂“你这不成人的小蹄子”，疑心专骂自己，悲愤至极以致哭晕，构成回首核心情节。",
+        "passageIds": [
+          "p-609031",
+          "p-609295",
+          "p-609557"
+        ]
+      },
+      {
+        "label": "王太医诊脉立案",
+        "identityLabel": "王太医论黛玉病源",
+        "summary": "王太医为黛玉诊脉，断定病根在平日积郁、肝阴亏损与心气衰耗，立下黑逍遥开先、归肺固金继后之方，贾琏折服其以鳖血拌炒柴胡之法。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "医家依据脉象理论（六脉皆弦、木旺乘土）层层推论病因与用药权衡。",
+        "generalityHint": "针对黛玉一人病理所作的中医医案学理推演与药方制定。",
+        "rationale": "基于p-611032、p-611821和p-611960，详述王大夫诊脉推论病症、开方论药的完整推理过程。",
+        "passageIds": [
+          "p-611032",
+          "p-611821",
+          "p-611960"
+        ]
+      },
+      {
+        "label": "凤姐叹虚名与支绌",
+        "identityLabel": "贾府内囊虚名之患",
+        "summary": "周瑞家的替黛玉代请预支月钱并转述外间对贾府富贵泼天的讹传，凤姐道出入不敷出之实情，叹息“人怕出名猪怕壮”的虚名隐患，私赠数两银子贴补。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "由黛玉支用银两的细故，引出贾府账目吃紧、规矩难开，再结合外间夸张谣言，推导出家族外强中干、虚名贾祸的深层忧虑。",
+        "generalityHint": "涵盖贾府整个大家族经济运转窘局与社会虚名反差的评价。",
+        "rationale": "基于p-612235，周瑞家的回禀与凤姐论断揭示贾府收支失衡及外部虚名暗藏危机的现实。",
+        "passageIds": [
+          "p-612235"
+        ]
+      },
+      {
+        "label": "奉旨入宫探问元妃",
+        "identityLabel": "贾府入宫省元妃疾",
+        "summary": "内相传旨宣召亲丁探疾，贾母携邢、王二夫人及凤姐入宫朝见元妃，元妃垂泪感叹深宫骨肉难聚，并询问家事学业后赐宴。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "按天子旨意与礼法程序展开，叙述贾府核心眷属应旨探病的始末。",
+        "generalityHint": "特定宫闱召见与贾府主眷进宫探病的历史场景叙述。",
+        "rationale": "基于p-613535、p-614110和p-614555，贾府接旨、整备并由贾母带领进宫探视欠安的元妃，承接回目“省宫闱贾元妃染恙”。",
+        "passageIds": [
+          "p-614555",
+          "p-613535",
+          "p-614110"
+        ]
+      },
+      {
+        "label": "金桂大闹闺阃薛家受气",
+        "identityLabel": "夏金桂闹闺阃",
+        "summary": "夏金桂因薛蟠外出而借酒撒泼欺侮宝蟾，薛姨妈与宝钗闻声往劝，反遭金桂冷嘲热讽指桑骂槐，宝钗隐忍退让，薛姨妈气得暴发肋痛。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "夏金桂的嫉妒挑衅直接诱发薛家母女前往弹压，进而产生激烈言语冲突导致薛姨妈急病发作。",
+        "generalityHint": "薛府内部特定婆媳、妻妾与姑嫂之间的伦理闹剧描写。",
+        "rationale": "基于p-615350、p-616008及p-616797，对应回目“闹闺阃薛宝钗吞声”，展现薛家内乱及宝钗母女的忍辱委屈。",
+        "passageIds": [
+          "p-615350",
+          "p-616008",
+          "p-616797"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "黛玉受惊吐血病情加剧，直接促成次日贾琏延请王太医诊脉论病并开立黑逍遥散。",
+        "passageIds": [
+          "p-609031",
+          "p-611032"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾琏向凤姐转述太医用药后，周瑞家的趁机禀报黛玉病笃需钱买药，引发凤姐对月钱规矩及府内空虚的感慨。",
+        "passageIds": [
+          "p-611960",
+          "p-612235"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "金桂借题发挥大闹时言语讽刺“天下有几个都是贵妃的命”，与前文贾府探视元妃归省的皇恩虚华形成对照与情节接续。",
+        "passageIds": [
+          "p-614555",
+          "p-616008"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "89icapS7K_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 10788,
+    "candidatesTokenCount": 1926,
+    "totalTokenCount": 12714,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10788
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1926
+      }
+    ]
+  },
+  "durationMs": 14116,
+  "requestHash": "0d9cdf18ecd151814897537d85c687e99d278226f0e5ce709d5bdd7f0a25bb66"
+}

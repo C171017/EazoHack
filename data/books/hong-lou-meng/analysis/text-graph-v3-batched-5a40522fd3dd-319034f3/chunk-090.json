@@ -1,0 +1,157 @@
+{
+  "value": {
+    "summary": "第九十回叙述林黛玉因绝粒病危，后暗中听得侍书与雪雁所谈贾母属意亲上作亲之语，疑团顿释，病情渐见好转。贾母与王夫人、凤姐密议宝玉婚事，决意迎娶薛宝钗而瞒过黛玉。大观园中邢岫烟失衣受婆子絮叨，王熙凤查觉其清寒，遣平儿赠衣救济。薛家薛蝌感念岫烟贫苦，因见夏金桂命宝蟾送来酒果调唆，察觉举止反常而心生戒惧警惕。",
+    "nodes": [
+      {
+        "label": "黛玉绝粒释疑转机",
+        "identityLabel": "林黛玉心病释怀",
+        "summary": "黛玉绝粒垂危之际，暗中闻得侍书与雪雁所言贾母欲亲上作亲、人选在园中之语，自以为是指己，疑团冰释，遂进水转安。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于侍书与雪雁在屋内的私语被病重中的黛玉听入耳中，由此直接触发其由寻死到神爽求生的心理转折。",
+        "generalityHint": "单一特定人物在重病误会下的转机情境。",
+        "rationale": "黛玉病势垂危，因听得侍书转述凤姐与二奶奶关于园中定亲之语，引发心理转变，心病得药，精神转见平复。",
+        "passageIds": [
+          "p-659242",
+          "p-660029",
+          "p-660780"
+        ]
+      },
+      {
+        "label": "贾母王夫人密定宝钗",
+        "identityLabel": "宝玉婚事密议",
+        "summary": "贾母向邢王二夫人及凤姐言及宝玉与黛玉长大当避嫌，因嫌黛玉乖僻多病不寿，明确决意定娶宝钗，并吩咐密瞒黛玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接众人对黛玉病情起伏的揣测，贾母结合黛玉性格与体质推断其不宜配宝玉，从而作出家族择偶决策。",
+        "generalityHint": "涉及贾府核心长辈对宗族承袭婚配的决断与约束。",
+        "rationale": "贾母因黛玉忽病忽好觉出端倪，同王夫人商定以宝钗为妇，并定下先娶亲再给黛玉找人家且严禁走漏风声的计策。",
+        "passageIds": [
+          "p-661167"
+        ]
+      },
+      {
+        "label": "婆子逞蛮凤姐弹压",
+        "identityLabel": "紫菱洲失衣之争",
+        "summary": "邢岫烟失衣遭看守婆子言语冲撞，凤姐巡园撞见后厉声惩处，斥责奴才颠倒名分，因岫烟求情始行宽贷。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从婆子依仗家奴身份顶撞寄居亲戚的争端出发，凤姐当场依据主仆秩序进行威权干预。",
+        "generalityHint": "园内奴仆恃强凌辱客居弱质的具体人事纠纷。",
+        "rationale": "紫菱洲守果婆子在岫烟失衣后出言不逊，被凤姐撞破当场喝止，显示出大观园内部主奴尊卑秩序与人情冷暖。",
+        "passageIds": [
+          "p-661167"
+        ]
+      },
+      {
+        "label": "凤姐爱重赠衣周全",
+        "identityLabel": "凤姐怜助岫烟",
+        "summary": "凤姐体察岫烟朴素安分之品格与贫寒境遇，命平儿执意送去御寒衣物，岫烟愧领。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐观察岫烟居处陈设与衣物薄弱，推断其受窘境遇，遂生敬爱之心并予实物周济。",
+        "generalityHint": "特定掌权者对旁支贫困孤女的私下照应。",
+        "rationale": "凤姐见岫烟不贪虚饰、性情端雅，派平儿打发丰儿强致衣物，妥善照料寄食亲戚的体面。",
+        "passageIds": [
+          "p-662383",
+          "p-662733"
+        ]
+      },
+      {
+        "label": "薛蝌感怀岫烟苦境",
+        "identityLabel": "薛蝌忧思身世",
+        "summary": "薛蝌为薛家家事奔走，念及已聘之岫烟寄人篱下且受贫受辱，感叹造化不均而作诗寄怀。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "薛蝌由薛蟠惹祸与薛姨妈之托，联系到自身与岫烟同处逆境，引发命途坎坷之感怀。",
+        "generalityHint": "个别士子对自身姻眷艰难处境之叹惋。",
+        "rationale": "薛家闻得岫烟失衣之事后，薛蝌在房中对照金桂与岫烟贫富反差，自感同在泥涂而赋诗自遣。",
+        "passageIds": [
+          "p-663333",
+          "p-663859",
+          "p-664026"
+        ]
+      },
+      {
+        "label": "宝蟾送酒薛蝌生疑",
+        "identityLabel": "金桂夜试薛蝌",
+        "summary": "夏金桂命宝蟾以道乏为名私送酒果给薛蝌，宝蟾言辞挑逗，薛蝌深察其非礼与叵测之谋而心生戒备。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "薛蝌结合宝蟾鬼祟态度、夏金桂平生品行及家中利害，推断出此举可能包藏图谋或败德之计。",
+        "generalityHint": "家族内部婶嫂侍婢暗生苟且引诱之特异情势。",
+        "rationale": "宝蟾夜送酒果并出言试探，薛蝌虽秉性温厚，但警觉到金桂素无闺阁矩度，遂提防构陷而自加收敛。",
+        "passageIds": [
+          "p-664061",
+          "p-664822"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "黛玉因误信贾母有亲上作亲之意而病情稍愈，反衬出贾母等人随后正式决定择宝钗而瞒黛玉的讽刺与悲剧走向。",
+        "passageIds": [
+          "p-660029",
+          "p-661167"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "婆子辱骂岫烟事件引来凤姐弹压，凤姐因而目睹岫烟居室萧索寒酸，直接促成了赠送御寒衣物的举动。",
+        "passageIds": [
+          "p-661167",
+          "p-662383"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "凤姐平儿赠衣之事被传回薛家，促使宝钗薛姨妈动容，也引发了薛蝌对岫烟清贫苦境的长夜深思。",
+        "passageIds": [
+          "p-663120",
+          "p-663333",
+          "p-663859"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "薛蝌方在房中为岫烟赋诗感怀，宝蟾便携金桂酒果深夜入室，由静思幽闺转入应对暗算的情节交织。",
+        "passageIds": [
+          "p-664026",
+          "p-664061"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IdmcapjxENCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 8992,
+    "candidatesTokenCount": 2093,
+    "totalTokenCount": 11085,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8992
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2093
+      }
+    ]
+  },
+  "durationMs": 17449,
+  "requestHash": "f94d9d134ff93b37ef91e27a5644cd895e17233a38a1f2be70c758831c54c0b0"
+}

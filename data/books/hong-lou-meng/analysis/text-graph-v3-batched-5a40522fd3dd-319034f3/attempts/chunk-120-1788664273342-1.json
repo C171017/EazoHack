@@ -1,0 +1,154 @@
+{
+  "value": {
+    "summary": "《红楼梦》第一百二十回叙述贾政在毘陵驿见宝玉辞别随僧道归大荒；袭人改嫁蒋玉菡成就前缘；贾雨村遇甄士隐，士隐详解太虚幻境与荣宁归宿；最终顽石归彼大荒，空空道人携抄本托曹雪芹传世，全书圆满归结。",
+    "nodes": [
+      {
+        "label": "宝玉雪夜拜别贾政",
+        "identityLabel": "宝玉雪中辞父",
+        "summary": "贾政泊舟毘陵驿，雪中见宝玉光头赤足身披猩红斗篷下拜，随后宝玉随一僧一道歌咏归彼大荒而去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从贾政亲眼所见及僧道唱词直接叙述事件经过，属于情节事实呈现。",
+        "generalityHint": "具体事件，发生于毘陵驿雪中宝玉与贾政相遇的一幕。",
+        "rationale": "文本详细记述贾政在毘陵驿见到宝玉倒身下拜及随后跟随僧道离去的过程（p-865078, p-865486）。",
+        "passageIds": [
+          "p-865078",
+          "p-865486"
+        ]
+      },
+      {
+        "label": "贾政悟宝玉下凡历劫",
+        "identityLabel": "贾政悟劫",
+        "summary": "贾政结合僧道三次出现与宝玉种种反常行径，省悟宝玉乃下凡历劫之人，写家书劝慰合家不必悲伤。",
+        "sourceRole": "narrative",
+        "speaker": "贾政",
+        "reasoningHint": "贾政串联出生衔玉、僧道三次显圣及宝玉生平性格等已知事实得出其历劫归真的结论。",
+        "generalityHint": "贾政个人对宝玉一生来历与结局的推论总结。",
+        "rationale": "贾政归船后向众人陈述对宝玉来历的领悟并书写家信告诫家人（p-865634）。",
+        "passageIds": [
+          "p-865634"
+        ]
+      },
+      {
+        "label": "袭人改嫁成全前定",
+        "identityLabel": "袭人嫁蒋玉菡",
+        "summary": "袭人遵王夫人之命改嫁，洞房中凭借猩红与松花绿汗巾与蒋玉菡相认，方信前缘已定，叹息承顺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "袭人历经多次生死犹疑，直至见到交换的汗巾信物，印证了早前汗巾伏笔的因果。",
+        "generalityHint": "叙述袭人个人的终局与宿命因缘。",
+        "rationale": "文本记载袭人出嫁及与蒋玉菡认出汗巾相印证的始末，并借息夫人诗感慨（p-869130, p-868325）。",
+        "passageIds": [
+          "p-869130",
+          "p-868325"
+        ]
+      },
+      {
+        "label": "甄士隐详释情缘因果",
+        "identityLabel": "士隐解说幻境",
+        "summary": "甄士隐于草庵向贾雨村解说宝玉形质归一、金陵闺秀情天孽海及贾府将来兰桂齐芳、家道复初之理。",
+        "sourceRole": "dialogue",
+        "speaker": "甄士隐",
+        "reasoningHint": "甄士隐从福善祸淫、太虚幻境与情缘前定等超验法则，解释整部作品主要人物与家族的结局。",
+        "generalityHint": "概括全书诸闺秀归宿、贾府盛衰规律及情字本质的普遍性原理解释。",
+        "rationale": "甄士隐在觉迷渡口草庵与贾雨村对谈，逐一解说宝玉本末、诸钗结局与贾府未来（p-869811）。",
+        "passageIds": [
+          "p-869811"
+        ]
+      },
+      {
+        "label": "顽石归彼大荒",
+        "identityLabel": "宝玉归青埂峰",
+        "summary": "甄士隐度脱香菱至太虚幻境，僧道携通灵宝玉回归女娲补天之处安放，尘世情缘完结。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接全书开端的补天神话，实现从下界历劫到返本还原的完整闭环叙事。",
+        "generalityHint": "神话框架层面的特定事件终结。",
+        "rationale": "记述僧道将玉携回青埂峰女娲炼石处安放（p-870949）。",
+        "passageIds": [
+          "p-870949"
+        ]
+      },
+      {
+        "label": "空空道人传书悼红轩",
+        "identityLabel": "石头记传世归结",
+        "summary": "空空道人于青埂峰再抄石头记，经急流津睡者指点往悼红轩托付曹雪芹，曹氏以此同消寂寞、游戏笔墨传布世间。",
+        "sourceRole": "narrative",
+        "speaker": "曹雪芹",
+        "reasoningHint": "通过空空道人、觉迷渡口睡者与曹雪芹的互动，完成全书文本创作与流传元叙事的首尾呼应。",
+        "generalityHint": "针对全书性质的元小说层面的普遍性阐释与收束。",
+        "rationale": "空空道人再抄奇文，在觉迷渡口得指引，最终在悼红轩转交曹雪芹编撰传世（p-871147, p-871647）。",
+        "passageIds": [
+          "p-871147",
+          "p-871647"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "贾政亲眼在雪夜见到宝玉出家辞别，从而证实并推理出宝玉实乃下凡历劫的仙真。",
+        "passageIds": [
+          "p-865078",
+          "p-865634"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "宝玉辞别贾政归去的情节，在士隐与雨村对话中被提升为形质归一、太虚悟道的本体阐释。",
+        "passageIds": [
+          "p-865078",
+          "p-869811"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉辞别红尘后，僧道最终将其形质（通灵玉）送归大荒山无稽崖青埂峰下。",
+        "passageIds": [
+          "p-865439",
+          "p-865078",
+          "p-870949"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝玉归还青埂峰补全了首尾故事，空空道人方得以在石上见到完整的收缘结果话头并再次抄录。",
+        "passageIds": [
+          "p-870949",
+          "p-871147"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "xdmcasIt0JfRyQ-A8JbBDw",
+  "usage": {
+    "promptTokenCount": 9817,
+    "candidatesTokenCount": 1925,
+    "totalTokenCount": 11742,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9817
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1925
+      }
+    ]
+  },
+  "durationMs": 12879,
+  "requestHash": "39d26a2e6c8314fe1e7fe66f7801d6d6e3d26dc6e174e9e6e2c55a069c671130"
+}

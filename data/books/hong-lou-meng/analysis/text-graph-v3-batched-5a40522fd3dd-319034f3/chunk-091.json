@@ -1,0 +1,149 @@
+{
+  "value": {
+    "summary": "第九十一回叙述夏金桂与宝蟾借送酒果挑逗薛蝌未遂后，金桂与宝蟾合谋笼络算计薛蝌，并私引过继兄弟夏三进府；薛蟠案情出现反复，薛蝌连夜赶往探视，宝钗劳碌病倒；贾政王夫人与薛姨妈商议宝玉与宝钗的婚期安排；宝玉察觉贾母房中神色有异，至潇湘馆见黛玉，二人互借机锋与禅语剖白心迹。",
+    "nodes": [
+      {
+        "label": "宝蟾夜探与晨取酒果试探薛蝌",
+        "identityLabel": "薛蝌拒诱",
+        "summary": "宝蟾在窗外试探并怨怪薛蝌不解风情，次日清晨又未梳洗、着艳丽紧身便衣前往取盘碟，薛蝌始终持重端正、冷淡回避。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝蟾与金桂暗中窥探及次日早晨设计的试探过程，直接描绘动作与薛蝌防备之意。",
+        "generalityHint": "涉及宝蟾、金桂与薛蝌个人的具体生活事件。",
+        "rationale": "第九十一回开篇承接前情，通过窗外吹纸、晨起取盘等具体情节点明宝蟾与金桂对薛蝌的诱引与试探。",
+        "passageIds": [
+          "p-665153"
+        ]
+      },
+      {
+        "label": "金桂宝蟾定计笼络灌醉薛蝌",
+        "identityLabel": "金桂宝蟾定计",
+        "summary": "宝蟾向金桂献计，主张平时借叔嫂名义多加关照，待薛蝌感恩后再在房中摆席灌醉，若不从便借调戏之名加以威吓。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝蟾根据薛蝌的谨慎态度推理出对策，金桂采纳该计策改变策略。",
+        "generalityHint": "记录金桂与宝蟾在薛家的特定算计与密谋。",
+        "rationale": "文本详细叙述了宝蟾与金桂的对话，宝蟾借由‘那个耗子不偷油’的世俗逻辑向金桂献策并获得首肯。",
+        "passageIds": [
+          "p-665964"
+        ]
+      },
+      {
+        "label": "夏三过继进府引风波伏笔",
+        "identityLabel": "夏三进府",
+        "summary": "金桂将过继兄弟夏三引见给薛姨妈过了明路，私下托其代买物品，为日后薛家风波埋下伏笔。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "交代夏三到来的背景与金桂借其身份采买物品的行动，并有叙述者预示后事的评注。",
+        "generalityHint": "涉及夏家兄弟进薛家这一具体情节线索与后文因果铺垫。",
+        "rationale": "薛姨妈撞见金桂房中男子，金桂借过继兄弟名义将其正式走明路，叙述者明确提示‘从此生出无限风波’。",
+        "passageIds": [
+          "p-667372"
+        ]
+      },
+      {
+        "label": "薛蟠案情反复与宝钗劳病",
+        "identityLabel": "薛案反复宝钗病倒",
+        "summary": "薛蟠来信告知案情遭道里驳回需亲提，薛蝌携银连夜起程，宝钗操劳家事至四更，随后身热病倒，赖冷香丸调治得愈。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "案情逆转直接导致薛蝌离家与宝钗忧劳发病，具有紧密的事件因果链。",
+        "generalityHint": "薛家官司与宝钗个人病情的具体变故。",
+        "rationale": "薛蟠来信告急打破了薛家暂时的平静，引起薛姨妈与宝钗的恐慌及薛蝌赴外，宝钗亦因此病倒。",
+        "passageIds": [
+          "p-668068",
+          "p-668222",
+          "p-668318"
+        ]
+      },
+      {
+        "label": "贾政定计宝玉宝钗婚期步骤",
+        "identityLabel": "贾薛议婚",
+        "summary": "王夫人向贾政提及早日娶宝钗过门，贾政商定今冬放定、明春过礼、过老太太寿诞后定日完娶，并由王夫人转告薛姨妈与贾母。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾政考虑宝钗病情、薛家忙乱及岁暮家务，提出分步推进婚事的实际规划。",
+        "generalityHint": "贾府与薛家关于宝玉、宝钗婚姻议程的家族内部决议。",
+        "rationale": "贾政与王夫人商议宝钗早娶，并拟定了冬定、春礼、寿后完婚的具体步骤，贾母深表欢喜。",
+        "passageIds": [
+          "p-668637"
+        ]
+      },
+      {
+        "label": "宝玉向黛玉借禅机剖白心迹",
+        "identityLabel": "宝黛谈禅剖心",
+        "summary": "黛玉以‘任凭好与不好’连番设问，宝玉以‘任凭弱水三千，我只取一瓢饮’等禅语应答，赌咒表明专一专情的心意。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "宝玉因薛姨妈冷淡生疑，黛玉借机以禅语连环诘问试探其心，宝玉借偈语推理给出终极态度。",
+        "generalityHint": "宝玉与黛玉二人之间关于爱情执念的核心精神表白与哲学式机锋。",
+        "rationale": "回目‘布疑阵宝玉妄谈禅’的核心所在，黛玉层层追问，宝玉借‘弱水三千一瓢饮’与‘莫向春风舞鹧鸪’断绝旁意，互证盟誓。",
+        "passageIds": [
+          "p-669352"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "晨起试探受挫后，宝蟾进一步与金桂密谋，由直接挑拨转为长期放线灌醉的更深沉计策。",
+        "passageIds": [
+          "p-665964"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "金桂在设法笼络薛蝌的同时私引夏三入府，逐步在薛家培植自身内外势力。",
+        "passageIds": [
+          "p-667372"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "薛家因薛蟠官司困顿不堪且宝钗劳碌患病，促使王夫人向贾政提出尽早完婚以照拂宝钗。",
+        "passageIds": [
+          "p-668637"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "贾母房中商议宝钗婚事导致众人避讳宝玉，宝玉心生猜疑，遂去潇湘馆找黛玉引发谈禅对话。",
+        "passageIds": [
+          "p-668637",
+          "p-669352"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "IdmcavqIEdCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 8723,
+    "candidatesTokenCount": 1948,
+    "totalTokenCount": 10671,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8723
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1948
+      }
+    ]
+  },
+  "durationMs": 13937,
+  "requestHash": "74bed4e0844de779b8a64b00fc28d0769671f200fb3e46ae5688b9e402b000fb"
+}

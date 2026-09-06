@@ -1,0 +1,40 @@
+{
+  "value": {
+    "rejectedNodes": [
+      {
+        "id": "n-4-2",
+        "reason": "The assigned primaryTheme '大观园风雅、结社唱和与清雅日常' directly contradicts the subject of the node, which depicts a violent assault, homicide, and trafficking ('薛蟠争买英莲打死冯渊'), belonging under family corruption/justice/legal decay or worldly struggles rather than Daguanyuan elegant poetry and daily pastimes."
+      }
+    ],
+    "rejectedEdges": [
+      {
+        "id": "e-4-3",
+        "reason": "Reversed relation and incorrect type: n-4-2 describes the concrete homicide/assault committed by Xue Pan, whereas n-4-5 describes Xue Pan's general arrogant, spendthrift nature and background. Thus n-4-2 exemplifies n-4-5, not n-4-2 exemplifies n-4-5 in the direction indicated where source is n-4-2 and target is n-4-5 with the rationale stating '薛蟠强买英莲打死冯渊的行为具体印证了他性情奢侈傲慢的品行' (the general character is exemplified by the specific act, so n-4-5 is exemplified by n-4-2, meaning source should be n-4-5 and target n-4-2, or the edge is misdirected)."
+      }
+    ],
+    "notes": "Reviewed all 16 target nodes and 21 target edges against cited textual evidence. Node n-4-2 has an untenable theme assignment ('大观园风雅、结社唱和与清雅日常' for薛蟠打死冯渊案). Edge e-4-3 has a reversed/misdirected 'exemplifies' relation between the general characterization node and the concrete incident node."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ltqcar-PAb2dx9gP-O3nsA0",
+  "usage": {
+    "promptTokenCount": 84357,
+    "candidatesTokenCount": 403,
+    "totalTokenCount": 84760,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 84357
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 403
+      }
+    ]
+  },
+  "durationMs": 6750,
+  "requestHash": "68267bf94ef6c26a76566b08599e21d91ddbc2cb3164821c0c207301540da267"
+}

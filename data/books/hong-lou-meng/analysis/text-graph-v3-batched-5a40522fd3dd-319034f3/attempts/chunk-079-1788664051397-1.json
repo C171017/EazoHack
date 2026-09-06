@@ -1,0 +1,161 @@
+{
+  "value": {
+    "summary": "第七十九回叙述宝玉与黛玉商榷改定芙蓉诔辞成谶；贾赦将迎春许配孙绍祖，贾母贾政虽不赞同却未强阻，宝玉为迎春将嫁及紫菱洲萧索而作歌感怀；薛蟠迎娶夏金桂，金桂性情骄悍，步步挟制薛蟠并蓄意弹压香菱，初见薛家内乱之端倪。",
+    "nodes": [
+      {
+        "label": "商榷芙蓉诔成谶",
+        "identityLabel": "芙蓉诔词改定",
+        "summary": "黛玉听宝玉诔晴雯，建议将熟滥的“红绡帐里”改为现成的“茜纱窗下”，宝玉几经推敲终改作“茜纱窗下，我本无缘，黄土垄中，卿何薄命”，黛玉闻之忡然变色。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "基于两人对诔文诗句修辞的对话推演，句意由诔晴雯暗转为切中黛玉自身命运的诗谶。",
+        "generalityHint": "涉及宝玉、黛玉与晴雯特定情境下的诔文拟作与谶语意味。",
+        "rationale": "文本详载宝黛二人对话，从“红绡帐”层层推敲改至“茜纱窗下，我本无缘”，触动黛玉心思，是该回关键开端。",
+        "passageIds": [
+          "p-582062"
+        ]
+      },
+      {
+        "label": "迎春许嫁孙绍祖",
+        "identityLabel": "迎春婚事底定",
+        "summary": "贾赦看重孙绍祖家当人品及世交之名将其择为东床，贾母疑阻难成只听任天意，贾政深恶孙家非诗礼名族劝谏未果，迎春婚期迫急并搬出大观园。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府内部贾赦主婚与贾母、贾政不同反应的原因与考量。",
+        "generalityHint": "关于迎春许嫁这一具体家族婚姻决策及各家长辈的态度态势。",
+        "rationale": "记录了迎春误嫁中山狼的具体前因与贾府诸人的反应分歧，推动迎春离开大观园的命运转折。",
+        "passageIds": [
+          "p-583145"
+        ]
+      },
+      {
+        "label": "紫菱洲题诗惜别",
+        "identityLabel": "紫菱洲感怀",
+        "summary": "宝玉见迎春迁出且带走四个丫鬟，伤感世上又少五个清洁人，徘徊紫菱洲睹凄凉萧索之景，遂题诗抒发骨肉惜别之悲痛。",
+        "sourceRole": "narrative",
+        "speaker": "贾宝玉",
+        "reasoningHint": "宝玉由迎春出嫁和紫菱洲景物萧索，即景生情推演出对青春女子流散的悲歌。",
+        "generalityHint": "记录宝玉个人的伤感心理与所题写的特定四句诗歌。",
+        "rationale": "承接迎春出嫁事件，集中展现宝玉对大观园诸女子离散的深切体悟与诗性宣泄。",
+        "passageIds": [
+          "p-583145",
+          "p-583696"
+        ]
+      },
+      {
+        "label": "香菱传桂花夏家姻讯",
+        "identityLabel": "薛蟠定亲夏家",
+        "summary": "香菱向宝玉提及薛蟠娶亲之事已定长安城大户“桂花夏家”，称赞夏家姑娘才貌并期盼增添作诗之人；宝玉却因忧虑反替香菱担忧，致香菱羞恼走开。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "从香菱的天真期盼与宝玉的直觉担忧对比展开，暗含对薛家未来命运的预警。",
+        "generalityHint": "聚焦于香菱与宝玉之间关于薛蟠新婚对象的特定传话与交谈。",
+        "rationale": "交代了夏金桂的家世背景与婚配缘由，并以宝玉的“耽心虑后”与香菱的乐观产生落差铺垫后文。",
+        "passageIds": [
+          "p-583765"
+        ]
+      },
+      {
+        "label": "宝玉感触交集致疾",
+        "identityLabel": "宝玉积忧成疾",
+        "summary": "宝玉因近日抄检大观园、逐司棋、别迎春、悲晴雯等惊恐悲凄交加，兼感风寒酿成重疾卧床，贾母命其休养百日不许出门，只得在怡红院与丫鬟厮闹释闷。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "综合大观园一连串变故对宝玉精神与身体造成的因果累积总结。",
+        "generalityHint": "属于宝玉个体阶段性的身心状态叙述。",
+        "rationale": "总结了抄检大观园以来的悲剧对宝玉的集中打击，同时也解释了薛蟠娶亲时宝玉无法亲临的原因。",
+        "passageIds": [
+          "p-583765"
+        ]
+      },
+      {
+        "label": "香菱殷勤盼迎新妇",
+        "identityLabel": "香菱待新妇之心",
+        "summary": "香菱抢白宝玉后心存戒备自避，以为薛蟠娶了有才有貌的大家闺秀便多了一层护身符，反比薛蟠更为殷切盼望新妇过门并倾心伏侍。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从香菱对妾室身份处境的朴素推理出发，展现其过于单纯的心理期待。",
+        "generalityHint": "针对香菱在薛蟠成婚前后心境与伏侍态度的叙述。",
+        "rationale": "刻画香菱单纯怯弱的性格特点，与其后金桂施暴形成鲜明悲剧反差。",
+        "passageIds": [
+          "p-585484"
+        ]
+      },
+      {
+        "label": "夏金桂逞威挟薛家",
+        "identityLabel": "夏金桂立威与薛家受制",
+        "summary": "夏金桂自幼骄生惯养、性气蛮横，过门后意图钤压众人；先借装病气病迫使薛蟠气概低矮、婆婆曲意迁就，继而忌惮宝钗难犯，转而开始寻隙刁难香菱。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从夏金桂的成长根由、权术心机与薛家各人反应的互动逻辑展开递进分析。",
+        "generalityHint": "描述夏金桂入薛门后的整体行径与家庭权力结构的变化。",
+        "rationale": "文本详细叙述了夏金桂如何一步紧似一步挟制薛蟠、持戈试马，是回目“薛文龙悔娶河东狮”的核心情节落实。",
+        "passageIds": [
+          "p-585697"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾赦将迎春许嫁孙绍祖导致迎春搬出大观园，直接触发了宝玉在紫菱洲题诗惜别。",
+        "passageIds": [
+          "p-583145"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "与香菱交谈薛蟠婚事及不欢而散，连同别迎春、悲晴雯等事共同促成了宝玉积郁成疾。",
+        "passageIds": [
+          "p-583765"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "香菱在与宝玉抢白之后，进一步加深了避开宝玉并一心盼望薛蟠娶妻以求解脱安宁的念头。",
+        "passageIds": [
+          "p-585484"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "challenges",
+        "rationale": "香菱一心盼望新妇能如护身符般带来安宁典雅，但夏金桂过门后的骄横霸道与容不下香菱彻底粉碎了香菱的幻想。",
+        "passageIds": [
+          "p-585484",
+          "p-585697"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "5NicasvdHbCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 7434,
+    "candidatesTokenCount": 2197,
+    "totalTokenCount": 9631,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7434
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2197
+      }
+    ]
+  },
+  "durationMs": 15172,
+  "requestHash": "030caf65bc189fd27ec4a1e475198bd35ac9d4d414c0c8ae7b94d6aa09658dae"
+}

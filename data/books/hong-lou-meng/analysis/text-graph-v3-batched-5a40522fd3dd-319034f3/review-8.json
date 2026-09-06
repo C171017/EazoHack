@@ -1,0 +1,39 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [
+      {
+        "id": "cross-76",
+        "reason": "Edge cross-76 connects n-38-6 ('宝钗螃蟹咏讽世居冠') to n-39-1 ('李纨品评平儿等得力丫头') with type 'develops'. In text, n-38-6 is the poetic critique/satire on crabs, whereas n-39-1 is Li Wan teasing Ping'er about her keys and evaluating the key senior maidservants of each house. The connection between them is mere narrative sequentiality across chapter division, not a thematic, conceptual, or argumentative development."
+      },
+      {
+        "id": "cross-77",
+        "reason": "Edge cross-77 links n-38-6 ('宝钗螃蟹咏讽世居冠') to n-39-3 ('刘姥姥送野味与见贾母') with type 'supports'. The fact that Liu Laolao calculates the cost of the crab feast (twenty-odd taels) references the crab meal itself (n-38-1 / n-38-3), not Xue Baochai's allegorical satirical poem 'Pangxie Yong' (n-38-6). Baochai's poem does not provide evidential support for Liu Laolao's visit or budgeting."
+      }
+    ],
+    "notes": "Reviewed target nodes n-36-2 through n-36-6, n-37-1 through n-37-6, n-38-1 through n-38-6, n-39-1 through n-39-6, n-40-1 through n-40-6, and n-41-1 through n-41-3, along with incoming and cross-chapter edges. All node summaries, attributions, source roles, and hints are faithfully grounded in cited passages. Cross-chapter edges cross-76 and cross-77 were rejected as they conflated thematic crab poem satire with mundane narrative progression and agricultural cost accounting."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ntqcaoLCJYuKx9gP6eTI-Ak",
+  "usage": {
+    "promptTokenCount": 86093,
+    "candidatesTokenCount": 474,
+    "totalTokenCount": 86567,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 86093
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 474
+      }
+    ]
+  },
+  "durationMs": 5960,
+  "requestHash": "cc32829dbb7dc5b9e729fe930f3fdf6c6ce1da2477bafb0fe86bad13acd8340a"
+}

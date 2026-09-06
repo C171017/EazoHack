@@ -1,0 +1,99 @@
+{
+  "value": {
+    "groups": [
+      {
+        "label": "大观园整肃、衰颓与妖异幽兆",
+        "rationale": "围绕大观园从抄检整肃、诸芳离散、内宅风波到园林空荒、草木反常、夜归发病及设坛驱妖的衰败与异兆过程。",
+        "members": [
+          0,
+          1,
+          10,
+          13,
+          20
+        ]
+      },
+      {
+        "label": "黛玉幽危、情结省悟与宝玉经世",
+        "rationale": "涵盖宝玉经世规训与婚姻议题、宝黛身世知音之叹、黛玉幽忧吐血身心危局，以及宝玉面对十二金钗的痴情追思与幻灭省悟。",
+        "members": [
+          4,
+          6,
+          8,
+          26
+        ]
+      },
+      {
+        "label": "婚变死别与闺秀芳华凋零",
+        "rationale": "涵盖晴雯遭谗夭亡、调包计与成婚冲喜、黛玉焚稿归天、探春远嫁海外以及迎春夭亡、妙玉遭劫与惜春出家等红颜命蹇散落。",
+        "members": [
+          2,
+          14,
+          15,
+          17,
+          25
+        ]
+      },
+      {
+        "label": "薛府内讧、命案讼累与香菱遭际",
+        "rationale": "集中展现夏金桂霸悍折磨香菱、薛蟠打死人命官司波折、薛家内宅诱引陷害及金桂下毒自毙等两府纠葛。",
+        "members": [
+          3,
+          9,
+          18
+        ]
+      },
+      {
+        "label": "贾府家道中落、抄家巨祸与宗族衰亡",
+        "rationale": "涵盖贾府外强中干的家道衰微、水月庵揭帖与世情聚散隐患、奉旨查抄大祸、朝廷定谳革职遣戍、贾母散产分资与病笃治丧风波。",
+        "members": [
+          5,
+          12,
+          22,
+          23,
+          24,
+          27
+        ]
+      },
+      {
+        "label": "宦海仕途、官场潜规与外部筹谋",
+        "rationale": "围绕官场姻缘谋划、贾政外任粮道受困于家奴下人营私欺蒙而被降职，以及贾雨村等官场周旋与宦海沉浮。",
+        "members": [
+          7,
+          16
+        ]
+      },
+      {
+        "label": "释道玄虚、幽冥谶语与市井仙凡",
+        "rationale": "展现妙玉走魔与惜春禅偈、凤姐梦魂与神签谶语、贾雨村遇士隐机锋羽化及倪二贾芸等市井恩怨与宿命警示。",
+        "members": [
+          11,
+          19,
+          21
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "h9qcav_jIqKMx9gPrO2IwAg",
+  "usage": {
+    "promptTokenCount": 3230,
+    "candidatesTokenCount": 726,
+    "totalTokenCount": 3956,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3230
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 726
+      }
+    ]
+  },
+  "durationMs": 6684,
+  "requestHash": "34f249092c1c9786f8f549b74f9e3c7ca301162365ba7fb7a475917b08c81985"
+}

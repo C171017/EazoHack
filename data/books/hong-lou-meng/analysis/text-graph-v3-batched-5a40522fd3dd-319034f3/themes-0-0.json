@@ -1,0 +1,99 @@
+{
+  "value": {
+    "groups": [
+      {
+        "label": "宿命前定与盛衰幻灭",
+        "rationale": "涵盖神话源起、大纲旨归、太虚幻境判词、甄士隐一家盛衰、《好了歌》警示、释道禅理参悟，以及饯花神、葬花与对造化聚散等关乎全书形而上宿命与人生虚妄的哲思。",
+        "members": [
+          0,
+          1,
+          17,
+          23
+        ]
+      },
+      {
+        "label": "世家荣枯与官场盛事",
+        "rationale": "围绕四大家族官场网络、宁荣二府盛衰预兆、元春晋封与元宵省亲大典，以及大观园的筹划营建与题名试才等家族政治荣耀与公室盛仪展开。",
+        "members": [
+          2,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "label": "宗族纠葛与丧殡风云",
+        "rationale": "聚焦义学风波、秦氏沉疴与极盛大丧、凤姐协理宁国府与水月庵弄权，以及贾瑞痴迷招致的风月之惩等家族宗支与风月孽债故事。",
+        "members": [
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "label": "儿女前缘与大观园诗雅",
+        "rationale": "涵盖大观园前期的日常交往、亲友依附、园内分迁入住、经典启蒙带来的青春觉醒、贵胄文酒宴集，以及结海棠社、咏菊等闺秀才情唱和与雅致审美。",
+        "members": [
+          4,
+          14,
+          22,
+          26
+        ]
+      },
+      {
+        "label": "木石盟誓与儿女深情",
+        "rationale": "聚焦宝玉、黛玉、宝钗等人的性情品藻、深层灵犀、试探误会、金玉纠葛、闭门摔玉、诉肺腑定分以及超越世俗名教的情痴情悟。",
+        "members": [
+          3,
+          15,
+          21,
+          24
+        ]
+      },
+      {
+        "label": "内宅嫌隙与伦理冲突",
+        "rationale": "记录深宅内部妻妾争端、乳母弄权、姬妾嫉恨、马道婆魇魔巫蛊，以及忠顺王府索人与贾环谗构导致的贾政严笞宝玉等伦常矛盾与家庭风波。",
+        "members": [
+          5,
+          18,
+          20,
+          25
+        ]
+      },
+      {
+        "label": "主奴生态与微末心机",
+        "rationale": "反映袭人等大丫鬟的规劝进言、贾芸小红等微末仆从的人情奔走与攀结、以及大观园内外尊卑秩序、房闱私计与主奴交往细节。",
+        "members": [
+          16,
+          19,
+          27
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "etqcavb7AoKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 3435,
+    "candidatesTokenCount": 739,
+    "totalTokenCount": 4174,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 3435
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 739
+      }
+    ]
+  },
+  "durationMs": 6286,
+  "requestHash": "f05b4787acae929ea04d89d7a52d2ed2deeb8e50c4192a78a71af3e2bc28761d"
+}

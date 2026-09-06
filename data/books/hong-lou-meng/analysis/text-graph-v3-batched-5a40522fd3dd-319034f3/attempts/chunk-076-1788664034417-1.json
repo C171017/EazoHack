@@ -1,0 +1,169 @@
+{
+  "value": {
+    "summary": "第七十六回叙贾府中秋夜宴之情状。贾母率众人在凸碧堂赏月品笛，因人事凋零与笛声幽怨而感怀落泪，至四更方散。黛玉与湘云则离席转至近水的凹晶溪馆联句赏月，二人即景对吟，互出奇险之句，吟得鹤影花魂之警句。妙玉忽至，止其凄楚，邀二人至栊翠庵饮茶并亲续全篇，将诗境翻转归正。后黛玉与湘云归潇湘馆同榻，二人皆辗转难眠。",
+    "nodes": [
+      {
+        "label": "凸碧堂宴赏品笛",
+        "identityLabel": "凸碧堂品笛感怀",
+        "summary": "贾母在凸碧堂撤屏合席赏月，感叹人事不全，命女乐于桂花树下吹笛，笛音凄凉引得贾母伤感落泪，至四更夜深方散。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府中秋夜宴从合席、听笛到感伤散席的过程，交代了当时冷清寂寥的气氛背景。",
+        "generalityHint": "特定场景叙事，展现荣国府中秋夜宴的衰颓清冷之象。",
+        "rationale": "基于p-553223与p-554179中贾母叹息人事难全及闻笛落泪的完整叙写。",
+        "passageIds": [
+          "p-553223",
+          "p-554179"
+        ]
+      },
+      {
+        "label": "黛湘转往凹晶馆",
+        "identityLabel": "凹晶馆对月释怀",
+        "summary": "黛玉因感怀身世暗自垂泪，湘云劝慰并邀其至近水的凹晶溪馆联诗赏月，二人论及轩馆命名之雅意与人生求全之不易。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉感物伤情，湘云豪迈开解并提出下山联诗，为后文联句作铺垫。",
+        "generalityHint": "刻画黛玉与湘云二人寄寓贾府的独特心境与高雅情趣。",
+        "rationale": "基于p-555663与p-556551中二人的谈话及移步凹晶馆的行动。",
+        "passageIds": [
+          "p-555663",
+          "p-556551"
+        ]
+      },
+      {
+        "label": "凹晶馆联诗对句",
+        "identityLabel": "凹晶馆排律联句",
+        "summary": "黛玉与湘云在水边数栏杆定韵，即景起社联吟五言排律，由眼前的良夜景致逐渐推向清寂冷峻的诗境。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由闲步观月直接引发的文学对吟活动，二人切磋竞胜。",
+        "generalityHint": "记录一段具体的限韵即景联诗全过程。",
+        "rationale": "基于p-557120至p-558732关于数栏定韵与轮流联句的描写。",
+        "passageIds": [
+          "p-557120",
+          "p-558357"
+        ]
+      },
+      {
+        "label": "鹤影花魂警句",
+        "identityLabel": "寒塘冷月联句",
+        "summary": "二人见池中惊飞之白鹤，湘云吟出“寒塘渡鹤影”，黛玉苦思后对以“冷月葬花魂”，意境极清奇诡谲却又颓丧悲凉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从池中投石惊鹤的突发动作直接激发灵感，推出整首诗的高潮警句。",
+        "generalityHint": "特定诗句的构思与评点，带有谶语式的悲凉色彩。",
+        "rationale": "基于p-558923与p-559105中二人对鹤影与花魂两句诗的唱和与赞叹。",
+        "passageIds": [
+          "p-558923",
+          "p-559105",
+          "p-559214"
+        ]
+      },
+      {
+        "label": "妙玉现身止悲续诗",
+        "identityLabel": "栊翠庵妙玉续貂",
+        "summary": "妙玉在山石后听闻联诗，出面止住二人颓败之句，邀入栊翠庵烹茶，并亲自濡墨挥毫续成三十五韵，将颓丧翻转为闺阁雅趣。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "妙玉出场评诗，认为警句不可继续堆砌，必须归拢翻转题目以存闺阁本色。",
+        "generalityHint": "表现妙玉深藏不露的诗才与其关于诗艺与气数合一的独到观念。",
+        "rationale": "基于p-559214、p-559522及p-560092中妙玉的言行与续诗文本。",
+        "passageIds": [
+          "p-559214",
+          "p-559522",
+          "p-560092"
+        ]
+      },
+      {
+        "label": "潇湘馆双美失眠",
+        "identityLabel": "二美同榻难寐",
+        "summary": "联诗散后湘云同宿潇湘馆，因湘云有择席之癖、黛玉常年体虚失眠，二人在锦衾之内辗转反侧、低声叙语。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接栊翠庵饮茶归来后的安寝情节，揭示中秋喧腾过后的凄楚残局。",
+        "generalityHint": "对黛玉、湘云二人身体与宿命况味的细节收尾。",
+        "rationale": "基于p-560408中二人归馆安寝、枕上对话的叙写。",
+        "passageIds": [
+          "p-560408"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾母夜宴的冷清与感伤触动黛玉身世之悲，促使黛玉离席并与湘云前往凹晶馆。",
+        "passageIds": [
+          "p-554179",
+          "p-555663"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "湘云劝慰黛玉并提议起社联诗，二人来到凹晶水边正式数栏杆起韵联句。",
+        "passageIds": [
+          "p-555663",
+          "p-557120"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "二人在五言排律联句渐入佳境之时，由惊鹤之景激发出“鹤影”与“花魂”的极险极绝之句。",
+        "passageIds": [
+          "p-558732",
+          "p-558923",
+          "p-559105"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "challenges",
+        "rationale": "妙玉认为“葬花魂”过于凄楚颓败关乎气数，出面打断并替其收结翻转诗意。",
+        "passageIds": [
+          "p-559113",
+          "p-559214",
+          "p-559522"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "栊翠庵抄诗品茗至将晓，黛玉与湘云辞出归潇湘馆同榻而卧，因劳累与病弱失眠。",
+        "passageIds": [
+          "p-560262",
+          "p-560408"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "09icat_UE_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 12000,
+    "candidatesTokenCount": 2093,
+    "totalTokenCount": 14093,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12000
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2093
+      }
+    ]
+  },
+  "durationMs": 15697,
+  "requestHash": "7783b1ca1ca56c5ea2898ee591a08b4e87c392e612855047216d9dc55b1007bf"
+}

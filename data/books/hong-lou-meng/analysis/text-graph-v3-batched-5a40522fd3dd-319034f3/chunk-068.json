@@ -1,0 +1,134 @@
+{
+  "value": {
+    "summary": "第六十八回叙述王熙凤乘贾琏外出公干之际，假意贤良将尤二姐赚入大观园安置，暗中唆使张华赴都察院控告贾琏与贾蓉，借官司发难大闹宁国府，威逼尤氏母子出银打点并服从其善后安排。",
+    "nodes": [
+      {
+        "label": "凤姐赚尤二姐入园",
+        "identityLabel": "凤姐赚二姐入大观园",
+        "summary": "凤姐乘贾琏远行在外，素衣亲至尤二姐处，以自责之辞与情深之态诱劝二姐搬入大观园李纨处暂住。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于贾琏外出两月这一前提，凤姐布设骗局，利用尤二姐轻信善良的心态将其纳入掌控之中。",
+        "generalityHint": "涉及凤姐、尤二姐等特定人物的具象叙事行动。",
+        "rationale": "出处见第68回开头凤姐探知贾琏外出，素服前往花言巧语哄骗尤二姐入园。",
+        "passageIds": [
+          "p-487744",
+          "p-488139",
+          "p-488912"
+        ]
+      },
+      {
+        "label": "大观园暗中虐二姐",
+        "identityLabel": "大观园内孤立苛待尤二姐",
+        "summary": "尤二姐入园后，凤姐撤换其随从并安插心腹善姐，善姐渐生怠慢欺侮，而凤姐表面仍虚意关切。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接尤二姐进入大观园后的处境推演，展现凤姐明一套暗一套的控制手段。",
+        "generalityHint": "局限于尤二姐在大观园内被下人怠慢的特定情节情境。",
+        "rationale": "出处见第68回关于凤姐换丫头善姐、善姐苛待尤二姐而二姐不敢言述之描写。",
+        "passageIds": [
+          "p-489609",
+          "p-489945"
+        ]
+      },
+      {
+        "label": "凤姐唆使张华状告",
+        "identityLabel": "凤姐唆使张华告状",
+        "summary": "凤姐遣旺儿联络尤二姐原聘未婚夫张华，给资并指点其赴都察院状告贾琏停妻再娶与国孝家孝停婚诸罪。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐通过调查得知张华旧案，主动制造外部官司以作掣肘宁国府与逼迫贾琏的筹码。",
+        "generalityHint": "单一事件中凤姐暗使家仆勾结外人行险构陷的具体阴谋。",
+        "rationale": "出处见第68回凤姐查得张华底细并命旺儿出资唆使状告贾琏。",
+        "passageIds": [
+          "p-490560",
+          "p-490984"
+        ]
+      },
+      {
+        "label": "凤姐大闹宁国府",
+        "identityLabel": "凤姐大闹宁国府",
+        "summary": "都察院立案后，凤姐乘势直奔宁国府，当众辱骂尤氏与贾蓉，痛陈自己受屈背锅并扬言见官合族分证。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "官司发起后，凤姐利用张华诉状借题发挥，将事态政治伦理化以压制宁国府主事人。",
+        "generalityHint": "特定场面中的高潮冲突，涉及凤姐、尤氏、贾蓉三人。",
+        "rationale": "出处见第68回凤姐闯入宁府，唾骂尤氏、逼贾蓉自掴的激化场面。",
+        "passageIds": [
+          "p-491697",
+          "p-492246",
+          "p-492891"
+        ]
+      },
+      {
+        "label": "逼勒宁府出银善后",
+        "identityLabel": "凤姐逼勒尤氏贾蓉善后",
+        "summary": "凤姐在声势压制后转颜示弱，迫使尤氏与贾蓉自认不肖、认出五百两打点银两，并全盘听凭凤姐在贾母王夫人面前编词遮饰。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由大闹宁府的威吓转入利益索取与主导权控制，宁府母子彻底沦为被动顺从者。",
+        "generalityHint": "单一事件收尾阶段，凤姐对宁府母子的全面利益压制与话语垄断。",
+        "rationale": "出处见第68回末段贾蓉认罪、尤氏答应出银并全凭凤姐拿主意回明两府长辈。",
+        "passageIds": [
+          "p-493296",
+          "p-495004"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "尤二姐被赚进大观园直接促成了其在园内被凤姐撤换随从、受善姐暗中折磨的境遇。",
+        "passageIds": [
+          "p-488912",
+          "p-489609"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "凤姐暗唆张华状告都察院，为她随后借官司由头大闹宁国府提供了最关键的把柄与借口。",
+        "passageIds": [
+          "p-490560",
+          "p-491697"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "凤姐大闹宁国府、击溃尤氏与贾蓉的心理防线后，顺理成章转为榨取银两与掌控回明长辈全盘话语权。",
+        "passageIds": [
+          "p-492891",
+          "p-493296"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "p9icasOFN_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 11050,
+    "candidatesTokenCount": 1686,
+    "totalTokenCount": 12736,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11050
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1686
+      }
+    ]
+  },
+  "durationMs": 12354,
+  "requestHash": "57dd2394d058fa3017c69392eddae3e5cc59039681953da5bf19cf92a36488bc"
+}

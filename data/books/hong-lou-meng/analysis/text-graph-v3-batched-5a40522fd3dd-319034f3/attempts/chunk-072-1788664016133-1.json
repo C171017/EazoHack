@@ -1,0 +1,153 @@
+{
+  "value": {
+    "summary": "第七十二回围绕大观园与贾府内外的危机展开：司棋幽会事发后忧惧成疾，鸳鸯私下发誓保密以安其心；平儿向鸳鸯透露凤姐患血山崩却强撑隐瞒；贾琏因府内支绌向鸳鸯私借老太太金银器皿典当；太监索贿与林之孝裁减人口之议更显家道衰落；旺儿倚仗凤姐权势强逼彩霞许配给其不肖儿子，彩霞向赵姨娘求援。",
+    "nodes": [
+      {
+        "label": "鸳鸯守秘并抚慰司棋",
+        "identityLabel": "鸳鸯抚慰司棋",
+        "summary": "鸳鸯撞见司棋私会后严守秘密，闻得潘又安逃走且司棋忧惧成疾，特往探视并对天发誓绝不泄露，劝其安心养病安分守己。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于司棋私通被撞见后的恐惧生病，鸳鸯推己及人、主动化解危机的直接叙述与互动。",
+        "generalityHint": "涉及鸳鸯与司棋两人具体私隐事件的个案互动与承诺。",
+        "rationale": "见p-517697与p-517838，鸳鸯因事关人命且与己无干决意不言，后见司棋病重更当面立誓抚慰，促成司棋暂且安心。",
+        "passageIds": [
+          "p-517838",
+          "p-517697"
+        ]
+      },
+      {
+        "label": "凤姐恃强隐瞒血山崩重病",
+        "identityLabel": "王熙凤病势加重",
+        "summary": "平儿向鸳鸯透露凤姐经期经月不绝，已成血山崩重症，然凤姐好强忌讳，不肯请医服药，仍终日察三访四操持事务。",
+        "sourceRole": "dialogue",
+        "speaker": "平儿",
+        "reasoningHint": "平儿根据凤姐一个月以来的身体症状与性格特点作出的私下陈述与判断。",
+        "generalityHint": "针对王熙凤个人身体状况与好强性格的特定病情叙述。",
+        "rationale": "见p-517838，平儿向鸳鸯详叙凤姐淋漓不止之症，鸳鸯点出是‘血山崩’，揭示其‘恃强羞说病’的危局。",
+        "passageIds": [
+          "p-517838"
+        ]
+      },
+      {
+        "label": "贾琏求借贾母查不着家伙典当",
+        "identityLabel": "贾府入不敷出与贾琏偷当",
+        "summary": "因贾母寿辰耗资甚重且节礼开支浩大，各处地租未至，贾琏私向鸳鸯求借贾母不常查验的金银家伙偷运出府抵押千两银子周转。",
+        "sourceRole": "dialogue",
+        "speaker": "贾琏",
+        "reasoningHint": "贾琏基于府内用度接不上、各项大礼迫在眉睫的现实财务困境而策划的下策。",
+        "generalityHint": "反映贾府账面亏空、日用艰难这一阶段性家庭财政危机。",
+        "rationale": "见p-519372，贾琏列举南安府与重阳节等大笔礼项，力劝鸳鸯偷出一箱老太太金银家伙暂押银两支腾。",
+        "passageIds": [
+          "p-519372"
+        ]
+      },
+      {
+        "label": "太监接连勒索与贾琏凤姐典当应付",
+        "identityLabel": "宫中太监勒索贾府",
+        "summary": "夏太监借买房为由遣小内监索银二百两，凤姐无奈当掉两个金项圈得四百两凑付；贾琏提及周太监昨日亦索银千两，深叹外祟难休。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从太监屡次借借银之名索贿，推导出贾府面临得罪权阉与财务被掏空的双重现实压力。",
+        "generalityHint": "描绘外在政治权势对贾府持续勒索与掠夺的常态性窘境。",
+        "rationale": "见p-522880，小内监传话索借，凤姐不得不拿首饰典当应对，贾琏更揭出周太监张口千两，展现贾府‘外祟’之重。",
+        "passageIds": [
+          "p-522880"
+        ]
+      },
+      {
+        "label": "林之孝裁减人口与疏远雨村之议",
+        "identityLabel": "林之孝陈缩减开支之策",
+        "summary": "林之孝告知贾政贾赦交好之贾雨村降官传闻，并向贾琏进言称府内家道艰难、人口太重，建议开恩打发出力的老家人并削减内外丫鬟配人以省嚼谷。",
+        "sourceRole": "dialogue",
+        "speaker": "林之孝",
+        "reasoningHint": "林之孝从贾府入不敷出的人口包袱出发，提出裁撤老仆与丫鬟以缩减日常月米月钱的节流方案。",
+        "generalityHint": "针对贾府全族家道衰落所提出的结构性裁员节流对策。",
+        "rationale": "见p-523625，林之孝提议‘该使八个的使六个’，放老家人出去以省口粮，并议及雨村降官可能连累贾府。",
+        "passageIds": [
+          "p-523625"
+        ]
+      },
+      {
+        "label": "来旺妇倚势强逼彩霞成亲",
+        "identityLabel": "旺儿仗势逼娶彩霞",
+        "summary": "旺儿之子荒淫不肖，却倚仗凤姐威势欲求娶被放出的彩霞；彩霞之母虽不愿，迫于凤姐亲口做媒只得应允；彩霞忧惧，遣妹求赵姨娘作主。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "下人借助主子权力压制同类婚配选择，凤姐偏袒陪房而无视林之孝、贾琏关于旺儿之子不肖的提醒。",
+        "generalityHint": "展现贾府内部奴仆阶层倚仗豪奴特权与主子势焰进行的人身压迫。",
+        "rationale": "见p-521535、p-524515及p-524781，旺儿媳妇求助，凤姐出面迫使彩霞母亲应承，彩霞恐终身为患求助于赵姨娘及贾环贾政。",
+        "passageIds": [
+          "p-524781",
+          "p-521535",
+          "p-524515"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "凤姐抱病难支与贾琏为公私亏空私当老太太器皿并置，共同揭示荣国府管家夫妇在生理与经济上的双重透支。",
+        "passageIds": [
+          "p-517838",
+          "p-519372"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾琏刚向鸳鸯筹借银两周转节礼，内廷太监随即登门勒索，直接加剧了夫妻二人质押首饰度日的财政拮据。",
+        "passageIds": [
+          "p-519372",
+          "p-522880"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "贾府对太监索贿等外祟支应艰难的现实，为林之孝随后向贾琏提出‘家道艰难、人口太重’必须裁减仆婢提供了现实背景与依据。",
+        "passageIds": [
+          "p-522880",
+          "p-523625"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "challenges",
+        "rationale": "林之孝直陈旺儿之子吃酒赌钱无所不为并劝贾琏别管这门亲事，但凤姐仍倚势定夺，促成了这桩仗势逼婚。",
+        "passageIds": [
+          "p-523625",
+          "p-524515"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "wdicaoj6HNCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 9430,
+    "candidatesTokenCount": 2275,
+    "totalTokenCount": 11705,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9430
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2275
+      }
+    ]
+  },
+  "durationMs": 15565,
+  "requestHash": "488554ac8465be600e8e06c0ceae461fcea239dbf0730d581fd04308e26f3a43"
+}

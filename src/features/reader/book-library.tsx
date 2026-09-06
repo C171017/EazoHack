@@ -10,6 +10,7 @@ import { cleanBookTitle, type ShelfPlacement } from './bookshelf-model';
 import type { UploadedBook } from './upload-book';
 import type { ImportState } from './pdf/import-model';
 import styles from './book-library.module.css';
+import { CloudMenu } from './cloud-menu';
 
 export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, importState, revision, onCancel, onRetry, sampleEmblem, onRemoved }: {
   onRemoved: (id: string) => void;
@@ -201,11 +202,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
 
   return <dialog ref={dialog} className={styles.library} aria-label="Library" aria-busy={busy} inert={!open} onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
     <div className={styles.inner}>
-      <a href="/cloud" style={{position:"absolute",top:24,right:32,zIndex:5}} aria-label="Open cloud library">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M7.5 19H18a4.5 4.5 0 0 0 0-9h-1.26A7.5 7.5 0 1 0 7.5 19Z" />
-        </svg>
-      </a>
+      <CloudMenu key={String(open)} />
       <div className={styles.shelfArea}>
         <div ref={shelf} className={styles.shelfViewport} role="region" aria-label="Bookshelf" tabIndex={0} onKeyDown={event => {
           if (event.target === event.currentTarget && ['ArrowLeft', 'ArrowRight'].includes(event.key)) { event.preventDefault(); moveShelf(event.key === 'ArrowRight' ? 1 : -1); }

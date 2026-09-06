@@ -1,0 +1,161 @@
+{
+  "value": {
+    "summary": "第七十一回主要叙述贾母八旬寿庆的盛况，南安太妃等人来贺引出探春等人相见；寿庆期间，尤氏因园门未关遣小丫头传人遭婆子顶撞，周瑞家的借机捆人，引发邢夫人借题发挥、当众给王熙凤难堪；凤姐委屈落泪，贾母明察并体恤；随后鸳鸯受贾母所托传话照看贫寒族妹，夜归时在园中偶遇司棋与表弟私通。",
+    "nodes": [
+      {
+        "label": "贾母八旬大庆设宴迎宾",
+        "identityLabel": "贾母寿庆盛宴",
+        "summary": "荣宁两府为贾母八旬之庆大开筵宴，接待皇亲、王公贵族及各方官长诰命，极尽奢华体面。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述故事背景与寿宴安排的大事件起点，属于直接引入的全局情境。",
+        "generalityHint": "涵盖贾母寿庆期间两府上下及诸多亲友贵宾的一整套系列仪式与规矩。",
+        "rationale": "基于p-508723，叙述贾政回京及贾府合族商议大办贾母八旬庆典，各方送礼入席的盛况。",
+        "passageIds": [
+          "p-508723"
+        ]
+      },
+      {
+        "label": "南安太妃相看诸女",
+        "identityLabel": "南安太妃看小姐",
+        "summary": "南安太妃在嘉荫堂问及小姐们，贾母命凤姐带探春、宝钗、黛玉、湘云、宝琴相见，太妃赞不绝口并赠礼。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从寿宴来客延伸到太妃指名见贾家小姐的具体情节，包含贾母的挑选用意。",
+        "generalityHint": "涉及贵族太妃在寿宴场合对名门闺秀的正式审视与赏赐这一特定事件。",
+        "rationale": "基于p-509796，南安太妃问及贾府小姐，贾母特意吩咐凤姐唤来黛玉、宝钗、宝琴、湘云并探春相见。",
+        "passageIds": [
+          "p-509796"
+        ]
+      },
+      {
+        "label": "尤氏查夜受辱与周瑞家的借势拿人",
+        "identityLabel": "查夜风波与捆婆子",
+        "summary": "尤氏见大观园角门未关，命人传管家媳妇，值守婆子因酒顶撞；周瑞家的得知后借凤姐之令将婆子捆缚马圈，挑起争端。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过小丫头与婆子的口角，以及周瑞家的公报私仇，展开下人之间及两府之间的裂痕。",
+        "generalityHint": "描写特定夜晚大观园管理疏漏及奴仆派系倾轧的具体冲突。",
+        "rationale": "基于p-510757与p-512224，尤氏入园查夜受婆子无礼顶撞，周瑞家的添油加醋回禀凤姐并借机捆人。",
+        "passageIds": [
+          "p-510757",
+          "p-512224"
+        ]
+      },
+      {
+        "label": "邢夫人当众给凤姐难堪",
+        "identityLabel": "邢夫人借事发难",
+        "summary": "邢夫人受陪房费婆子挑唆，积怨已久，趁散席当着众人之面以老太太寿日为名当众为婆子求情，使凤姐当众受辱羞哭。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由婆子被捆激化出邢夫人对凤姐、王夫人长久积怨的总爆发，具有深刻的家族矛盾推导。",
+        "generalityHint": "展现大宅门中婆媳、妯娌间借奴仆琐事进行人际倾轧与暗斗的典型场面。",
+        "rationale": "基于p-513287，费婆子哭诉挑唆后，邢夫人借贾母寿宴慈悲之名当众逼凤姐放人，令凤姐羞愤委屈落泪。",
+        "passageIds": [
+          "p-513287"
+        ]
+      },
+      {
+        "label": "贾母明辨是非与体恤贫寒族妹",
+        "identityLabel": "贾母洞察嫌隙并护族女",
+        "summary": "贾母看穿邢夫人借机给凤姐没脸的私心，又特意嘱咐下人不可因喜鸾、四姐儿贫寒而势利怠慢。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母基于对邢夫人素日性情的洞察作出判断，并对族中势利风气提出明确警告与关照。",
+        "generalityHint": "表现治家尊长对家族内部矛盾的洞察，以及反对‘富贵心、体面眼’的处世训诫。",
+        "rationale": "基于p-515487，贾母向鸳鸯指出邢夫人的真实算计，并交代鸳鸯嘱咐园中人照看穷房族女喜鸾和四姐儿。",
+        "passageIds": [
+          "p-515487"
+        ]
+      },
+      {
+        "label": "鸳鸯夜遇司棋私通",
+        "identityLabel": "大观园偶遇私通",
+        "summary": "鸳鸯往大观园传话后独自夜归，在山石树阴下无意撞破司棋与表弟幽会，司棋苦苦求告，鸳鸯答应隐瞒。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由夜间传话顺路引出无意撞破私情的偶然事件，为后续大观园抄检埋下关键隐患。",
+        "generalityHint": "发生在特定深夜假山石后的偶发隐私事件，直接关系到园内纪律败坏与人物命运。",
+        "rationale": "基于p-516922，鸳鸯夜过大观园小解，撞破司棋与其表弟私相幽会并被求告发誓保密。",
+        "passageIds": [
+          "p-516922"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "寿庆宴客中南安太妃的到访，促成了贾母召集众小姐相见。",
+        "passageIds": [
+          "p-508723",
+          "p-509796"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "寿期人多事杂，导致大观园门禁废弛，尤氏查夜从而引发与婆子的言语冲突。",
+        "passageIds": [
+          "p-508723",
+          "p-510757"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "周瑞家的擅自捆了邢夫人陪房亲家婆子，直接成为费婆子告状与邢夫人发难的导火索。",
+        "passageIds": [
+          "p-512224",
+          "p-513287"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "邢夫人当众给凤姐难堪后，凤姐委屈哭泣之事传到贾母耳中，引发贾母对嫌隙原由的点评。",
+        "passageIds": [
+          "p-513287",
+          "p-515487"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾母因吩咐照看喜鸾四姐儿派鸳鸯进园传话，才有了鸳鸯夜归时偶然撞见司棋表兄妹幽会之事。",
+        "passageIds": [
+          "p-515487",
+          "p-516922"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "s9icavHjN9CX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 11631,
+    "candidatesTokenCount": 2118,
+    "totalTokenCount": 13749,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11631
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2118
+      }
+    ]
+  },
+  "durationMs": 15764,
+  "requestHash": "c751074fdedf568340b0db3d75ca0e9f657336ffbf0fa2d4e9ea597ce115311a"
+}

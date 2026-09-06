@@ -1,0 +1,146 @@
+{
+  "value": {
+    "summary": "第五十一回中，众人评赏薛宝琴所作十首怀古诗谜，黛玉、李纨为后两首戏文古迹辩护；袭人因母病危回家探视，凤姐悉心周全衣物妆裹以顾全贾府体面，平儿借机转赠衣物照拂邢岫烟；晴雯夜间着凉受寒发病，庸医开具峻烈猛药遭宝玉识破撤换，改请王太医开温和疏散之剂，展现怡红院内部情谊与王熙凤提议大观园单设小厨房之关照。",
+    "nodes": [
+      {
+        "label": "评赏宝琴十首怀古诗",
+        "identityLabel": "宝琴怀古诗谜争论",
+        "summary": "宝琴以沿途名胜古迹作十首绝句诗谜，宝钗以末二首于正史无据拟删换，黛玉与李纨则据世俗戏文口耳相传之情理力主保留。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从诗谜文本呈现直接延伸到众人对历史考据与戏曲通俗典故的辩论，属情节内部直接推理。",
+        "generalityHint": "涉及正史考据与世俗流传文化价值取向的具体争论与特定诗歌。",
+        "rationale": "passage p-347550与p-348040展现了宝琴出示十首怀古绝句，宝钗以史鉴无考主张重作，黛玉反驳其胶柱鼓瑟，李纨结合风土传闻与戏曲通俗文化论证其流传价值并赞成保留。",
+        "passageIds": [
+          "p-347550",
+          "p-348040"
+        ]
+      },
+      {
+        "label": "凤姐周全袭人省家体统",
+        "identityLabel": "袭人探母与治家体面",
+        "summary": "袭人因母病告假回家，凤姐不仅指派车马从人，还查验其装裹并赏给高档皮褂与包袱，力求下人出门打扮体统以保全贾府当家声名。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐依据豪门规矩与体面原则，从袭人日常衣着直接推断并补充高规制器物。",
+        "generalityHint": "体现贾府对大丫头归家探亲的外出礼数与家族体面管理的普遍规矩。",
+        "rationale": "passage p-348596与p-348801记录了凤姐指派车马跟随，并亲自审视袭人衣饰，将自己的天马皮褂与厚呢包袱赏给袭人，解释宁可自己贴补也要维系体面名声。",
+        "passageIds": [
+          "p-348801",
+          "p-348596",
+          "p-348471"
+        ]
+      },
+      {
+        "label": "平儿体恤转赠大红羽纱",
+        "identityLabel": "平儿照拂邢岫烟",
+        "summary": "平儿替凤姐取衣物时，见邢岫烟雪天独穿旧毡斗篷寒酸可怜，顺手请出大红羽纱雪褂送去，深得凤姐体贴下人之心。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由众姊妹齐整着装对比邢岫烟衣着寒酸，推论出需暗中施赠救济以护其颜面。",
+        "generalityHint": "针对寄人篱下的亲戚个体的关照与暗中体恤行为。",
+        "rationale": "passage p-349373中平儿拿出雪褂子，顺势指出邢岫烟在大雪中唯穿旧毡斗篷、缩颈拱肩，主动提议转赠大红羽纱斗篷，凤姐称赞平儿深知己意。",
+        "passageIds": [
+          "p-349373"
+        ]
+      },
+      {
+        "label": "晴雯贪凉戏耍偶染风寒",
+        "identityLabel": "晴雯受寒起病",
+        "summary": "袭人不在怡红院期间，晴雯夜间仅着小棉袄欲出门吓唬麝月，受冷风透骨侵袭，次日头晕鼻塞、咳嗽发热。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因晴雯不耐寒冷且逞强未披外衣，直接导致肌体受寒发病的因果记录。",
+        "generalityHint": "单一具体生活情节与病因诱因的叙述。",
+        "rationale": "passage p-350942与p-351675描写了麝月外出时，晴雯贪玩不披衣出门意图吓唬人，骤感冷风透骨，次日出现鼻塞咳嗽等感冒症状。",
+        "passageIds": [
+          "p-350942",
+          "p-351675"
+        ]
+      },
+      {
+        "label": "宝玉识破庸医枳实麻黄",
+        "identityLabel": "宝玉辨药驳斥庸医",
+        "summary": "新请大夫为晴雯诊脉后开出含枳实、麻黄等峻烈发表药方，宝玉指斥其不辨男女体质妄用虎狼药，当即斥退并另请王太医调护。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "结合自身旧病受治经验与娇弱闺阁体质常识，推演出该方用药过猛有害。",
+        "generalityHint": "针对娇贵年轻女子受寒用药分寸与医道审慎的经验之谈。",
+        "rationale": "passage p-352821与p-353554中宝玉检视药方，见枳实、麻黄等重剂，指其用药粗疏禁不起，随后换王太医开出减量温和的当归、陈皮之方，并以杨树海棠比喻男女体质差异。",
+        "passageIds": [
+          "p-352821",
+          "p-352315",
+          "p-353554"
+        ]
+      },
+      {
+        "label": "凤姐商拟园中单设小厨",
+        "identityLabel": "大观园设小厨房之议",
+        "summary": "凤姐因冬日天寒路远、姑娘们往返奔波易受风受凉，向贾母与王夫人提议在大观园后门设立小厨房专管姑娘们伙食。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从天气严寒及林黛玉、宝玉等人不耐冷风空腹走动的事实，推导设立园中小厨房之必要与可行性。",
+        "generalityHint": "适用于大观园全体姑娘公子生活起居管理的制度调整提议。",
+        "rationale": "passage p-354072记录凤姐提议为免姑娘们在风雪中空心走动受寒，在园门内挑女厨专做饭食，贾母王夫人欣然赞同并敲定细则。",
+        "passageIds": [
+          "p-354072"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "平儿在奉凤姐之命为袭人张罗体统衣饰的过程中，顺势将多备的斗篷分赠邢岫烟，延伸了凤姐主导的体面与体恤下人之举。",
+        "passageIds": [
+          "p-348801",
+          "p-349373"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "晴雯因戏耍着凉感冒，直接引发后文请医诊治及宝玉辨识药方、斥退庸医的情节。",
+        "passageIds": [
+          "p-351675",
+          "p-352821"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝玉和晴雯等在大观园受寒生病的实际情况，支撑了凤姐关于天气严寒、姊妹们不宜冒风雪外出奔波吃饭而应在园内设厨的提议。",
+        "passageIds": [
+          "p-353554",
+          "p-354072"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "PticauOmHumj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 10155,
+    "candidatesTokenCount": 2150,
+    "totalTokenCount": 12305,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10155
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2150
+      }
+    ]
+  },
+  "durationMs": 15977,
+  "requestHash": "73306b77f2a0cc07f349ba4387aba634062ef18dc95933747a5110f3dbd61303"
+}

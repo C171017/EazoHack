@@ -1,0 +1,171 @@
+{
+  "value": {
+    "summary": "第一百零五回叙述贾府遭逢抄家巨变。锦衣府堂官赵全与西平王奉旨带兵查抄贾赦家产，赵全欲趁机全抄；北静王随后奉旨赶到，命赵全仅提贾赦质审，并与西平王共同约束番役、划定查抄范围。贾母闻讯惊厥，凤姐栽倒气绝后苏醒，贾琏挺身承担违例借券之罪被看守。贾政在惶恐中听焦大哭诉宁府被抄惨状，薛蝌又先后探得贾珍被参强占良民致死、贾赦勾结平安州等重罪消息，贾府大祸临头。",
+    "nodes": [
+      {
+        "label": "锦衣府与西平王奉旨查抄贾赦",
+        "identityLabel": "查抄贾赦家产",
+        "summary": "锦衣府堂官赵全与西平王率番役突然登门贾府，宣读圣旨指贾赦交通外官、依势凌弱并革去世职，番役按房把守搜查，赵全更意图借机尽抄贾宅。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述锦衣府突降贾府查抄贾赦家产的起因与现场情形，属于直接情节开端。",
+        "generalityHint": "涉及具体案件（革职贾赦并查抄其家产）的开端叙述。",
+        "rationale": "出处p-759171记叙贾政宴客时赵全与西平王至，宣旨革去贾赦世职并动手按房查抄登记。",
+        "passageIds": [
+          "p-759171"
+        ]
+      },
+      {
+        "label": "北静王传旨限制查抄范围",
+        "identityLabel": "两王照应与质审贾赦",
+        "summary": "北静王奉旨赶到大厅，传旨命赵全仅提贾赦质审，查办余事交由西平王；两王挑选诚实司役并安抚贾政，指示仅清缴贾赦名下家产以防荼毒扩及无辜。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文赵全滥抄之势，北静王传新旨收回锦衣府之权，并交代贾政应对策略。",
+        "generalityHint": "单一皇命传达与两王在特定查抄现场的处理措施。",
+        "rationale": "出处p-760638详叙北静王传宣新旨驱散闲杂番役，与西平王商议保全贾政，并令只交出贾赦所居房屋家产。",
+        "passageIds": [
+          "p-760638"
+        ]
+      },
+      {
+        "label": "贾母内宅惊骇病倒",
+        "identityLabel": "内宅女眷受惊",
+        "summary": "内宅女眷正在摆宴，忽闻强盗般番役闯入各处翻箱倒笼抄家，凤姐登时栽倒在地人事不省，贾母亦吓得涕泪交流、气短神昏。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "外朝查抄直接波及内宅妇孺，写出内闱突然面对灭顶之灾的惊骇绝望。",
+        "generalityHint": "贾母、王夫人、邢夫人、凤姐等内眷在查抄发生瞬间的具体反应。",
+        "rationale": "出处p-761234与p-761695描写平儿等人哭报抄家，凤姐一仰身栽倒，贾母吓至啼哭气逆，贾琏入内说明两王庇护才略微回气。",
+        "passageIds": [
+          "p-761234",
+          "p-761695"
+        ]
+      },
+      {
+        "label": "清点家产与贾琏承担借券",
+        "identityLabel": "清点抄没与贾琏认罪",
+        "summary": "司员详加开列查抄所得金银皮缎器具，面对抄出的违例重利借券，贾琏为保贾政挺身承认借券系自己房中所存，因而被就地看守并案办理。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "查抄登帐过程中追究违例重利借券来源，贾琏当场具结认罪的法律后果。",
+        "generalityHint": "具体财物清单记录与贾琏个人的认罪受押事件。",
+        "rationale": "出处p-761890记载了巨细靡遗的抄产清单，以及两王追问借券时贾政不知情、贾琏出头认罪并被拘押的情形。",
+        "passageIds": [
+          "p-761890"
+        ]
+      },
+      {
+        "label": "焦大哭诉宁国府彻底败落",
+        "identityLabel": "焦大哭诉东府被抄",
+        "summary": "焦大被押送至贾政处，号天蹈地哭诉宁国府珍大爷、蓉哥儿已被抓走，内眷被驱入空房，满府资财器皿尽被砸烂抄尽，宁府已彻底败亡。",
+        "sourceRole": "dialogue",
+        "speaker": "焦大",
+        "reasoningHint": "通过焦大亲见亲历的口述，补叙宁国府同时被彻底抄家拘拿的情节，印证贾氏宗族的一败涂地。",
+        "generalityHint": "焦大个人对东府抄家现场的目击口述。",
+        "rationale": "出处p-763405中焦大向贾政哭诉宁府主子被抓、女眷被关、家私被毁的惨剧，使贾政深感宗族大势已去。",
+        "passageIds": [
+          "p-763405"
+        ]
+      },
+      {
+        "label": "薛蝌探听御史弹劾重罪",
+        "identityLabel": "薛蝌探报两府重罪",
+        "summary": "薛蝌多方奔走打探，告知贾政宁府贾珍因引诱赌博、强占良民妻女逼死人命被御史参奏，平安州李御史又参奏贾赦包揽词讼、结交外官，使贾府陷入灭顶之灾。",
+        "sourceRole": "dialogue",
+        "speaker": "薛蝌",
+        "reasoningHint": "薛蝌汇总衙门打听到的弹劾内容，系统揭露宁荣二府获罪的具体罪状与朝局风向。",
+        "generalityHint": "针对贾珍与贾赦各自具体律法罪状的情报通报。",
+        "rationale": "出处p-763405及p-764192记载薛蝌向贾政详细汇报东府贾珍人命赌博案以及平安州御史参奏贾赦结交外官之罪，贾政闻言顿足绝望。",
+        "passageIds": [
+          "p-764192",
+          "p-763405"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "赵全借查抄贾赦企图扩大株连，北静王奉新旨介入后限定了查抄范围与人犯羁押，扭转了赵全的滥抄行动。",
+        "passageIds": [
+          "p-759171",
+          "p-760638"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "锦衣府官役按房查抄搜查直扑后宅，直接引发了贾母、凤姐等内眷的极端惊恐与病绝。",
+        "passageIds": [
+          "p-759171",
+          "p-761234"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "北静王与西平王在堂上指点并监督司役执行查点，导致随后的财物造册与违例借券的当面追责。",
+        "passageIds": [
+          "p-760638",
+          "p-761890"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "荣国府被抄的同时宁国府亦遭严厉查抄拘禁，焦大从东府逃出到荣国府门前，向贾政揭开了东府更悲惨的被抄全貌。",
+        "passageIds": [
+          "p-759171",
+          "p-763405"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "焦大揭露了东府人被拿空、家被抄尽的表象惨况，薛蝌紧接着打探并说明了贾珍获罪被办的具体御史弹劾罪由。",
+        "passageIds": [
+          "p-763405"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "薛蝌向贾政通报了导致西平王查抄贾赦的深层弹劾原由，即平安州御史参奏贾赦包揽词讼与交结外官之重款。",
+        "passageIds": [
+          "p-759171",
+          "p-764192"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ddmcauSSMPGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 7742,
+    "candidatesTokenCount": 2494,
+    "totalTokenCount": 10236,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7742
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2494
+      }
+    ]
+  },
+  "durationMs": 16800,
+  "requestHash": "d907f558859a2855c2b4f07284f01bff10f9a1d354139cf3dbac9df662c0d2e8"
+}

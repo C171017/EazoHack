@@ -1,0 +1,141 @@
+{
+  "value": {
+    "summary": "第四十回记叙贾母领众人宴游大观园，李纨启楼备器，众人为刘姥姥插花取乐。经潇湘馆贾母论辨“软烟罗”；至秋爽斋凤姐、鸳鸯设局捉弄刘姥姥引得合席大笑；游蘅芜苑贾母指点闺房陈设；最后于缀锦阁下由鸳鸯宣牙牌令，刘姥姥以庄稼语相和，满堂欢宴。",
+    "nodes": [
+      {
+        "label": "游园插花取乐",
+        "identityLabel": "游园插花取乐",
+        "summary": "李纨清晨启缀锦阁搬取高几与游船用具，贾母带众人进园，王熙凤将满盘各色菊花插满刘姥姥头上，众人哄堂大笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接叙述清晨准备过程及插花游乐场景，无复杂前设推理。",
+        "generalityHint": "具体事件，仅发生在贾母初入园游览之时。",
+        "rationale": "文本详细叙述李纨指派开楼取器物，贾母引刘姥姥进园，凤姐借插花逗趣开端。",
+        "passageIds": [
+          "p-266516"
+        ]
+      },
+      {
+        "label": "贾母论软烟罗",
+        "identityLabel": "贾母论软烟罗",
+        "summary": "贾母在潇湘馆见窗纱旧色，指点凤姐所称的蝉翼纱实为名贵的软烟罗，辨析其四种颜色并批评王熙凤见识浅薄。",
+        "sourceRole": "dialogue",
+        "speaker": "贾母",
+        "reasoningHint": "基于潇湘馆翠竹环境与旧纱对比，引出对旧藏名贵织物名称与功用的辨正。",
+        "generalityHint": "关于贵族陈设审美及特定古物纱罗种类的品鉴知识，具有较高审美经验代表性。",
+        "rationale": "贾母见潇湘馆竹绿窗旧，辨出软烟罗之名色、用法及如今难得，教导凤姐众人。",
+        "passageIds": [
+          "p-268271"
+        ]
+      },
+      {
+        "label": "晓翠堂弄局取笑",
+        "identityLabel": "晓翠堂弄局取笑",
+        "summary": "凤姐与鸳鸯密谋将刘姥姥当作“女篾片”取乐，特意给予沉重的象牙镶金筷子并暗中嘱咐口诀。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "二人因见外头老爷吃酒取笑而生出仿照设局的动机，并在席前精心布置。",
+        "generalityHint": "发生在秋爽斋晓翠堂开席前针对刘姥姥的特定戏弄安排。",
+        "rationale": "鸳鸯与凤姐商议取笑刘姥姥，暗授机宜并更换难使的牙箸，为席间大笑做铺垫。",
+        "passageIds": [
+          "p-269428"
+        ]
+      },
+      {
+        "label": "老刘食量大如牛",
+        "identityLabel": "老刘食量大如牛",
+        "summary": "刘姥姥在席间依鸳鸯所教高声念出村俗顺口溜并夹取鸽子蛋，滑稽举止引发贾母、黛玉、宝玉等满堂绝倒大笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文凤姐鸳鸯的预先嘱咐，刘姥姥顺水推舟刻意承欢取乐。",
+        "generalityHint": "宴席上爆发的单次群体狂欢事件，具有鲜明的情态刻画。",
+        "rationale": "刘姥姥依计行事，念粗鄙口诀、夹滚地鸽蛋，引得满座上下失态喷饭大笑，极为传神生动。",
+        "passageIds": [
+          "p-270242",
+          "p-271083"
+        ]
+      },
+      {
+        "label": "贾母指点蘅芜苑陈设",
+        "identityLabel": "贾母指点蘅芜苑陈设",
+        "summary": "贾母见宝钗蘅芜苑居室素净如雪洞，认为年轻姑娘房中过分素净犯忌讳且易失礼，遂命鸳鸯取自己的梯己古董替其重新陈设。",
+        "sourceRole": "dialogue",
+        "speaker": "贾母",
+        "reasoningHint": "由宝钗房内一色玩器全无的极简状态，推论出既失礼客亦违风水年轻之忌，给出合宜的居室布置方案。",
+        "generalityHint": "贵族世家针对年轻未婚闺秀绣房陈设的规范礼数与雅俗美学标准。",
+        "rationale": "贾母对宝钗雪洞房舍提出异议，指出过于素净不仅于理不合，也有失大家风度，并亲自指定摆件以求素净大方。",
+        "passageIds": [
+          "p-272867"
+        ]
+      },
+      {
+        "label": "鸳鸯三宣牙牌令",
+        "identityLabel": "鸳鸯三宣牙牌令",
+        "summary": "缀锦阁下设宴行令，鸳鸯主令严格宣牙牌，贾母、宝钗、黛玉等依次依韵吟诵，刘姥姥则以极富乡土风味的顺口溜谐趣应对。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于骨牌花色点数拆解与诗词俗语叶韵规则的多层文化游戏互动。",
+        "generalityHint": "结合了文人雅趣与民间乡俗的综合饮酒行令场景。",
+        "rationale": "第四十回回目核心事件之一，鸳鸯宣令严明，诸人各依身份才情答对，黛玉引出闺怨诗句，刘姥姥以本色庄稼语逗乐收尾。",
+        "passageIds": [
+          "p-274123"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "凤姐和鸳鸯在席前的商议与嘱咐，直接促成了席上刘姥姥高呼口诀及夹鸽蛋失手的滑稽大笑场面。",
+        "passageIds": [
+          "p-269428",
+          "p-270242"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾母在潇湘馆论纱体现的家居品味与陈设哲学，在蘅芜苑批评过于素净并重新布置闺房时进一步展开和完善。",
+        "passageIds": [
+          "p-268271",
+          "p-272867"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "晓翠堂饭桌上刘姥姥作为“女篾片”逗乐的默契，在随后的牙牌酒令中继续发展为本色庄稼打油令。",
+        "passageIds": [
+          "p-271083",
+          "p-274123"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9Necar76H7Ci0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 12869,
+    "candidatesTokenCount": 1841,
+    "totalTokenCount": 14710,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12869
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1841
+      }
+    ]
+  },
+  "durationMs": 14952,
+  "requestHash": "36a03a516203171bd4caba3fee271bd080529180cf27c180131e6a8d63c0e254"
+}

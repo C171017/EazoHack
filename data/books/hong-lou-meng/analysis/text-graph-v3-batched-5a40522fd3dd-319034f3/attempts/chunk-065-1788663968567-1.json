@@ -1,0 +1,156 @@
+{
+  "value": {
+    "summary": "第六十五回叙述贾琏偷娶尤二姐置办新房，贾珍趁隙再来寻欢，反遭尤三姐泼辣震慑与戏弄；尤三姐表白择婿心志，随后兴儿向二姐母女详述荣国府内凤姐等诸人为人情势。",
+    "nodes": [
+      {
+        "label": "贾琏偷娶尤二姐于新房",
+        "identityLabel": "贾琏偷娶尤二姐",
+        "summary": "贾琏、贾珍等谋划妥当，将尤老及二姐、三姐接入新房，贾琏拜堂成亲，与尤二姐颠鸾倒凤，百般恩爱。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述偷娶事件的发生与具体操办经过。",
+        "generalityHint": "涉及贾琏与尤二姐新婚的具体事件叙述。",
+        "rationale": "基于p-466569叙述贾琏商议停当、素轿迎娶二姐、拜过天地成婚的事实。",
+        "passageIds": [
+          "p-466569"
+        ]
+      },
+      {
+        "label": "贾琏托付梯己并瞒过凤姐",
+        "identityLabel": "贾琏供养尤二姐新房",
+        "summary": "贾琏称尤二姐为奶奶，给足月银并搬入私房钱，将凤姐为人告知二姐，许诺日后接其进府。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "交代贾琏对尤二姐的宠爱与日后打算，以及如何避过凤姐耳目。",
+        "generalityHint": "特定人物在新房生活上的安排与长远意图。",
+        "rationale": "根据p-466798，贾琏按月给供给、搬来梯己，并向二姐诉说凤姐为人，许诺凤姐死后接她进去。",
+        "passageIds": [
+          "p-466798"
+        ]
+      },
+      {
+        "label": "贾珍探望新房调戏尤三姐",
+        "identityLabel": "贾珍走访新房调戏三姐",
+        "summary": "贾珍打听得贾琏不在，晚间赶来新房探望，尤二姐知趣避开，贾珍遂与尤三姐挨肩擦脸、百般轻薄。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因由二姐成婚后贾珍寻机私会，直接引出贾珍与三姐的私下勾当。",
+        "generalityHint": "描绘具体夜晚贾珍来访的情节。",
+        "rationale": "依据p-467106，贾珍查明贾琏不在后悄然登门，二姐回避，贾珍百般轻薄三姐。",
+        "passageIds": [
+          "p-467106"
+        ]
+      },
+      {
+        "label": "尤三姐痛骂戏弄珍琏兄弟",
+        "identityLabel": "尤三姐反客为主斥骂贾珍贾琏",
+        "summary": "贾琏撞见贾珍在室，反来陪笑奉承；尤三姐痛斥二人把自己当粉头玩弄，揭破他们惧怕王熙凤之底细，反而豪饮戏耍二贾。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "面对贾琏推波助澜，三姐看穿其算盘并破口直言，反将二贾镇住。",
+        "generalityHint": "集中展示尤三姐反叛、泼辣性格的关键对抗场面。",
+        "rationale": "按p-467859与p-469582，三姐指贾琏破口痛骂，揭其畏惧凤姐，自己借酒放浪反客为主戏弄珍琏。",
+        "passageIds": [
+          "p-467859",
+          "p-469582"
+        ]
+      },
+      {
+        "label": "尤三姐立志自择如意夫婿",
+        "identityLabel": "尤三姐择婿自立",
+        "summary": "尤三姐在贾琏、二姐劝嫁时表态，虽有过往丑事，如今决意改过守分，非自己素日可心如意之人不嫁，并明言天下男子并非只有贾家。",
+        "sourceRole": "dialogue",
+        "speaker": "尤三姐",
+        "reasoningHint": "三姐审时度势，洞察凤姐必闹与寄人篱下之非长计，从而确立自主决断终身的要求。",
+        "generalityHint": "人物对自己婚姻选择权和人生归宿的明确主张。",
+        "rationale": "p-469582记载三姐言“终身大事，一生至一死，非同儿戏”，坚持要自择心爱之人。",
+        "passageIds": [
+          "p-469582"
+        ]
+      },
+      {
+        "label": "兴儿向尤二姐备述荣府人物",
+        "identityLabel": "兴儿演说荣国府人物",
+        "summary": "小厮兴儿奉贾琏命留守新房，向尤二姐详尽剖析凤姐两面三刀与平儿为人，并逐一评点李纨、三春及宝钗、黛玉的性格面貌。",
+        "sourceRole": "dialogue",
+        "speaker": "兴儿",
+        "reasoningHint": "下人视角对主子性格与府内关系的全面剖析，向不知内情的尤二姐预警凤姐险恶。",
+        "generalityHint": "借仆役之口对荣府诸主子性格与家族微观政治的全局勾勒。",
+        "rationale": "依据p-471220，兴儿详细向二姐母女描述王熙凤的狠毒、平儿的宽厚，以及大菩萨、二木头、玫瑰花与黛钗的形容。",
+        "passageIds": [
+          "p-471220"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "偷娶成亲之后，贾琏进一步安排供给、转移梯己，将新房过日子的安排落到实处。",
+        "passageIds": [
+          "p-466798"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "尤家母女搬入新房两个月后，引发了贾珍借探望为名前来私会戏耍的情节。",
+        "passageIds": [
+          "p-467106"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾珍在新房调戏尤三姐，随后贾琏赶来劝饮，直接引爆了尤三姐的反抗与痛斥。",
+        "passageIds": [
+          "p-467859"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "三姐震慑贾珍贾琏后，二姐与贾琏借机劝其择人聘嫁，促使三姐正式表达改过守分、自主定夺终身的誓言。",
+        "passageIds": [
+          "p-469582"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾琏在外瞒娶并提及凤姐，引发二姐向贾琏心腹小厮兴儿探询荣府与凤姐的底细。",
+        "passageIds": [
+          "p-471220"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "kticatijKbCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 9069,
+    "candidatesTokenCount": 1940,
+    "totalTokenCount": 11009,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9069
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1940
+      }
+    ]
+  },
+  "durationMs": 14259,
+  "requestHash": "e7521d90a9c117b2711a42fd84964e554cbbac5afda29ed428e7084614dff99f"
+}

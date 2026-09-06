@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges have been verified against their supporting textual passages from chapters 26 to 31. Text citations, summaries, themes, and relational dependency links (including cross-chapter structural edges) accurately reflect the narrative evidence without distortion."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "m9qcasrUHKGLx9gPquma2Qw",
+  "usage": {
+    "promptTokenCount": 58197,
+    "candidatesTokenCount": 73,
+    "totalTokenCount": 58270,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 58197
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 73
+      }
+    ]
+  },
+  "durationMs": 3022,
+  "requestHash": "50552f59588d24d9762da142ec96a06188d1946ed5b8be61484f322aa676375e"
+}

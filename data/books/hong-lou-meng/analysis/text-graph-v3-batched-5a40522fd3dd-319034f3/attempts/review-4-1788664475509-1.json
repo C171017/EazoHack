@@ -1,0 +1,30 @@
+{
+  "value": {
+    "rejectedNodes": [],
+    "rejectedEdges": [],
+    "notes": "All target nodes and edges have been strictly checked against the provided textual evidence and pass validation without errors or unsupported claims."
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "mNqcasuvLYKbx9gPltirgAc",
+  "usage": {
+    "promptTokenCount": 75747,
+    "candidatesTokenCount": 46,
+    "totalTokenCount": 75793,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 75747
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 46
+      }
+    ]
+  },
+  "durationMs": 3040,
+  "requestHash": "c2d11624ad10682aa8ed7d7fd4768aa9e43d81bb7b2121f6cfe9b1ea8ace681e"
+}

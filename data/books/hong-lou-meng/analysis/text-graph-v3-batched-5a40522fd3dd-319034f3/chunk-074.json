@@ -1,0 +1,161 @@
+{
+  "value": {
+    "summary": "第七十四回围绕绣春囊引发的风波展开。王夫人持香囊怒责王熙凤，凤姐辨明情由；王善保家的乘机挑唆王夫人并进谗晴雯，致使王夫人严斥晴雯并决意夜抄大观园。抄检过程中，晴雯倒箱自白，探春痛斥抄家乃“自杀自灭”并怒掴王善保家的，惜春查出入画私带财物而坚拒说情，司棋箱中搜出与潘又安之私情物证致王善保家的自打嘴巴。事后惜春决意与宁国府割席自保，痛绝尤氏。",
+    "nodes": [
+      {
+        "label": "王夫人持绣春囊质责凤姐",
+        "identityLabel": "绣春囊问责",
+        "summary": "王夫人因邢夫人转交在大观园拾得的绣春囊，疑心是凤姐与贾琏闺房私物，含泪严厉质问；凤姐据理分析香囊粗制、自己断不敢随身携带等情由，洗脱嫌疑并建议暗中访查。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从突发的物证危机到条分缕析的自辩逻辑，凤姐以多层事实论证推翻王夫人的主观臆断。",
+        "generalityHint": "涉及荣国府最高当家女主人与管家少奶奶之间对闺阁体统与失控隐患的直面交锋。",
+        "rationale": "出处为第七十四回王夫人突访凤姐处掷出香囊并审问的情节。王夫人因恐闺阁名声败坏而盛怒，凤姐跪诉五条理由辩明清白并提出暗查方略。",
+        "passageIds": [
+          "p-534369"
+        ]
+      },
+      {
+        "label": "王善保家的谗言挑唆与晴雯受斥",
+        "identityLabel": "谗构晴雯",
+        "summary": "王善保家的借机向王夫人进谗，构陷晴雯掐尖要强、举止轻薄；王夫人唤来病中的晴雯痛加训斥，并扬言回过贾母将其撵逐。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "奴仆利用主子偏见公报私仇，王夫人将对伤风败俗的恐惧直接转嫁于样貌标致的晴雯身上。",
+        "generalityHint": "展现大观园内部主仆矛盾及以貌取人、借势进谗的权力运作。",
+        "rationale": "王善保家的因私怨借香囊事件进谗，王夫人偏信并斥责晴雯，为后续抄检大观园和晴雯悲剧埋下伏笔。",
+        "passageIds": [
+          "p-536073",
+          "p-536949"
+        ]
+      },
+      {
+        "label": "晴雯倒箱抗拒抄检",
+        "identityLabel": "怡红院抄检",
+        "summary": "夜间众人抄检怡红院，晴雯挽发闯入，愤然将箱子朝天倾倒于地以证清白，令王善保家的无功而返。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对屈辱和猜忌以极度决绝的肢体动作做出的正面抗争。",
+        "generalityHint": "单一具体场景，深刻刻画晴雯孤傲刚烈的性格特质。",
+        "rationale": "抄检大观园首站至怡红院，晴雯受辱后不假辞色倒箱以抗，与袭人等人的顺从形成鲜明对比。",
+        "passageIds": [
+          "p-537732"
+        ]
+      },
+      {
+        "label": "探春护仆痛陈败亡并掴王家的",
+        "identityLabel": "探春抗抄与自绝预言",
+        "summary": "探春秉烛开门迎检，严禁搜查丫鬟箱物，痛斥抄家乃“自杀自灭”的亡家之兆，并在王善保家的轻薄掀衣时怒掴其面颊，捍卫主子尊严。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从自查丑态中洞悉家族“百足之虫死而不僵、必先自杀自灭”的历史宿命，具有高层次的反思与预警。",
+        "generalityHint": "对贾府乃至封建豪门盛极而衰根本原因的深刻论断与控诉。",
+        "rationale": "探春在抄检中借古喻今痛陈家败先由内起，并对王善保家的以主子威严反击掌掴，是全书著名的批判高潮。",
+        "passageIds": [
+          "p-539032"
+        ]
+      },
+      {
+        "label": "司棋物证暴露致王家的现世报",
+        "identityLabel": "司棋情物败露",
+        "summary": "抄检迎春房内时，周瑞家的从司棋箱中搜出男子鞋袜、同心如意与潘又安之红笺字帖，一心拿人的王善保家的反被坐实外孙女私情之罪，羞愧自掴。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "戏剧性的因果讽刺，挑唆抄检者自身家庭反成伤风败俗的确凿源头。",
+        "generalityHint": "揭露抄检行动的荒谬与闹剧性质，直接牵出大观园风流公案的实证。",
+        "rationale": "凤姐借司棋字帖戏谑王善保家的，使王家的“说嘴打嘴”，成为抄检过程中最富戏剧反讽的情节。",
+        "passageIds": [
+          "p-540590"
+        ]
+      },
+      {
+        "label": "惜春拒恕入画并矢志绝宁国府",
+        "identityLabel": "惜春孤介绝府",
+        "summary": "惜春丫鬟入画因私藏贾珍所赏银锞靴袜被查，惜春执意将其撵出；尤氏求情未果，惜春进而以“不作狠心人难得自了汉”宣示独善自保，彻底与宁国府断绝往来。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由丫鬟私弊牵扯出对宁国府声名败坏的恐惧，推导出一套“心冷意狠、割席自了”的避祸哲学。",
+        "generalityHint": "反映贾府宗族内部嫌隙割裂，展现惜春独特的孤介与佛禅出世倾向。",
+        "rationale": "回目“矢孤介杜绝宁国府”的核心落脚点，入画私带物件直接触发惜春与尤氏决裂，显露其孤僻自保的处世方式。",
+        "passageIds": [
+          "p-540590",
+          "p-542397"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "绣春囊引发王夫人危机感，王善保家的顺势乘虚而入挑唆进谗。",
+        "passageIds": [
+          "p-534369",
+          "p-536073"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "王夫人受王善保家的挑唆决定连夜抄捡大观园，直接导致怡红院晴雯倒箱抗争。",
+        "passageIds": [
+          "p-537732"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "王善保家的在抄检队伍中气焰嚣张，在探春房中变本加厉掀衣受辱挨掌。",
+        "passageIds": [
+          "p-537732",
+          "p-539032"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "challenges",
+        "rationale": "王善保家的本欲挑刺搜查他人，结果反在自己外孙女司棋箱中搜出私通物证，构成强烈反讽。",
+        "passageIds": [
+          "p-536073",
+          "p-540590"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "抄检大观园激化的宗族内耗与自灭之兆，在惜春决绝驱逐入画、与尤氏宁府割席断交上得到进一步体现。",
+        "passageIds": [
+          "p-539032",
+          "p-542397"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "w9icarCPKPGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 13836,
+    "candidatesTokenCount": 2218,
+    "totalTokenCount": 16054,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13836
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2218
+      }
+    ]
+  },
+  "durationMs": 16796,
+  "requestHash": "8ecb9ea36e8aaa156904beb6c0d6c88dd2c2ad17b437f043c188d3c09abcb834"
+}

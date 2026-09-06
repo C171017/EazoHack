@@ -1,0 +1,183 @@
+{
+  "value": {
+    "summary": "第六十六回中，尤三姐与兴儿、尤二姐谈及宝玉为人及自身择偶柳湘莲的心志，誓言改过自新、非柳不嫁。贾琏赴平安州途中巧遇薛蟠与柳湘莲，做媒定亲并取鸳鸯剑为凭。后柳湘莲进京向宝玉打探，因嫌东府名声不洁疑三姐不端而欲退簪索剑。尤三姐以死明志刎颈自尽，柳湘莲悔恨交加，在幻梦得三姐辞别与跛足道人点化后断发出家。",
+    "nodes": [
+      {
+        "label": "尤三姐品评贾宝玉",
+        "identityLabel": "尤三姐品评贾宝玉",
+        "summary": "尤三姐纠正兴儿对贾宝玉“外清内浊、糊涂”的贬损看法，指出宝玉在女儿面前行事周全、体贴入微，只是不合外人规矩。",
+        "sourceRole": "dialogue",
+        "speaker": "尤三姐",
+        "reasoningHint": "基于尤三姐往日观察（穿孝绕棺挡和尚、换茶碗等事）作出的即时评价，推翻他人表面印象。",
+        "generalityHint": "针对贾宝玉个人行事性格的专门判断。",
+        "rationale": "尤三姐通过两个具体生活细节反驳兴儿的说辞，得出宝玉并非真糊涂的结论。",
+        "passageIds": [
+          "p-473423"
+        ]
+      },
+      {
+        "label": "尤三姐定誓非柳不嫁",
+        "identityLabel": "尤三姐择配柳湘莲与折簪立誓",
+        "summary": "尤三姐直言看中柳湘莲，若此人不来宁愿持斋修行甚至守候百年，折断玉簪立誓，自此改过自新、言行端正。",
+        "sourceRole": "dialogue",
+        "speaker": "尤三姐",
+        "reasoningHint": "从五年前见柳湘莲起意，在改过守分的当下做出终身誓言，以折簪为决绝保证。",
+        "generalityHint": "尤三姐对自身终身归宿和处世态度的决绝立誓。",
+        "rationale": "承接前文思嫁柳二郎之心愿，尤三姐在贾琏与二姐面前正式折簪立誓并立即践行。",
+        "passageIds": [
+          "p-474958",
+          "p-474371"
+        ]
+      },
+      {
+        "label": "贾琏遇湘莲薛蟠议婚",
+        "identityLabel": "贾琏平安州道中议婚受剑",
+        "summary": "贾琏于平安州途中遇结为生死之交的薛蟠与柳湘莲，向柳提亲并索要柳家传代鸳鸯剑作为信物定礼。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾琏借薛蟠与湘莲言谈之机顺势促成婚约，并以防湘莲爽约游移为由索定礼。",
+        "generalityHint": "涉及贾琏、柳湘莲、薛蟠之间订立婚约的具体事件。",
+        "rationale": "文中叙述薛柳冰释前嫌、贾琏趁机做媒并取得鸳鸯剑作定礼的全过程。",
+        "passageIds": [
+          "p-475269"
+        ]
+      },
+      {
+        "label": "三姐得剑自喜终身有靠",
+        "identityLabel": "尤三姐见鸳鸯剑珍藏待嫁",
+        "summary": "贾琏办差归来将鸳鸯剑交给尤三姐，三姐见剑大喜，将雌雄合体剑挂于绣房床头，满心以为终身有托。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "三姐根据信物鸳鸯剑确定婚事已定，从而确认自己改过守分的期待得以落实。",
+        "generalityHint": "尤三姐个人的心理期许与行止表现。",
+        "rationale": "文本细致描写宝剑形制与三姐挂剑自慰、安分守己的心理状态。",
+        "passageIds": [
+          "p-476246"
+        ]
+      },
+      {
+        "label": "湘莲疑贾府索还定礼",
+        "identityLabel": "柳湘莲向宝玉探问并登门悔婚",
+        "summary": "柳湘莲向贾宝玉核实女方底细，因宝玉称东府尤物且叹东府不洁而疑心三姐不端，遂至贾琏处借口姑母定亲索还宝剑退婚。",
+        "sourceRole": "dialogue",
+        "speaker": "柳湘莲",
+        "reasoningHint": "从定亲仓促生疑，结合宝玉“尤物”与东府风评推理出尤三姐必非清白，从而决意悔婚。",
+        "generalityHint": "柳湘莲依据自身宗法贞节观念对东府女子做出的整体怀疑与退婚决断。",
+        "rationale": "湘莲与宝玉对话后自悔定亲，决绝到贾琏处找借口索剑退亲。",
+        "passageIds": [
+          "p-476829"
+        ]
+      },
+      {
+        "label": "尤三姐引剑刎颈自尽",
+        "identityLabel": "尤三姐耻情自刎",
+        "summary": "尤三姐在房内听得湘莲嫌弃退亲之意，不愿受辱被弃，当面交还鸳鸯剑并拔雌锋抹颈自尽，以死明其贞烈。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "三姐洞察到湘莲退婚背后对自身名节的鄙弃，自知无从辩白且不甘受辱，由誓言与刚烈推导出以死报情与洗耻。",
+        "generalityHint": "尤三姐以生命对抗名节污名与被弃命运的极端具体事件。",
+        "rationale": "回目“情小妹耻情归地府”之核心事件，三姐还剑自刎，湘莲见其刚烈方悔之莫及。",
+        "passageIds": [
+          "p-476829"
+        ]
+      },
+      {
+        "label": "柳湘莲冷然断发出家",
+        "identityLabel": "柳湘莲梦醒随道出家",
+        "summary": "柳湘莲悔恨悲恸中恍惚见尤三姐捧剑执册辞别，惊觉置身荒庙，受跛足道人点拨后挥雄剑断发随道士出家。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从见三姐自尽之悔恨，到梦遇三姐太虚幻境辞别之“冷然”，再到道士空无之语点破，最终得出看破红尘、截发出家的决断。",
+        "generalityHint": "柳湘莲个人的顿悟与终身归宿抉择，亦关涉红楼梦情空哲理。",
+        "rationale": "回目“冷二郎一冷入空门”的核心情节，叙述湘莲从幻梦醒悟至挥剑断发遁入空门。",
+        "passageIds": [
+          "p-478072"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "三姐立誓非柳湘莲不嫁，成为贾琏在途中替湘莲与三姐做媒议婚的直接前因与动机。",
+        "passageIds": [
+          "p-474371",
+          "p-475269"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾琏在路上向湘莲求得鸳鸯剑定礼，回京后转交给尤三姐，使三姐悬心落地以为终身有托。",
+        "passageIds": [
+          "p-475269",
+          "p-476246"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾琏道中仓促求定鸳鸯剑，使得柳湘莲事后反复生疑，进而找宝玉打探并萌生索剑退婚之意。",
+        "passageIds": [
+          "p-475269",
+          "p-476829"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "柳湘莲当面坚决索还鸳鸯剑并决意退亲，直接促成了尤三姐还剑并刎颈自尽。",
+        "passageIds": [
+          "p-476829"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "尤三姐收下的鸳鸯剑本为定情信物，最终成为她当面交割并用以自刎的兵刃。",
+        "passageIds": [
+          "p-476246",
+          "p-476829"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "尤三姐的刚烈自尽令柳湘莲陷入极度悔恨与悲恸，直接引发出随后的太虚梦别与断发出家。",
+        "passageIds": [
+          "p-476829",
+          "p-478072"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "nticasmNCLCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 10139,
+    "candidatesTokenCount": 2400,
+    "totalTokenCount": 12539,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10139
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2400
+      }
+    ]
+  },
+  "durationMs": 16946,
+  "requestHash": "964bb57490dca4871c7893f504dc5006cfb2ae933030de30e2328e0f56c8c48e"
+}

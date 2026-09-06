@@ -1,0 +1,156 @@
+{
+  "value": {
+    "summary": "第九十三回讲述临安伯请戏贾宝玉重逢蒋玉菡；落难的甄家遣忠仆包勇投奔贾府，并叙述甄宝玉醒悟读书之由；荣府门前忽现匿名揭帖揭露贾芹在水月庵聚赌淫乱，贾琏与赖大设法替贾芹遮瞒私了。",
+    "nodes": [
+      {
+        "label": "临安伯府看戏逢玉菡",
+        "identityLabel": "宝玉与蒋玉菡重逢",
+        "summary": "贾赦带宝玉前往临安伯府听戏，蒋玉菡登场献艺并唱《占花魁》，宝玉为之倾倒且暗叹其人材品貌。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述临安伯宴请与宝玉在席间与蒋玉菡交互的情节。",
+        "generalityHint": "涉及宝玉、蒋玉菡与临安伯的具体交际事件。",
+        "rationale": "基于p-678293和p-679016，宝玉随贾赦赴宴看戏，与改任掌班的蒋玉菡相见并赏戏。",
+        "passageIds": [
+          "p-678293",
+          "p-679016"
+        ]
+      },
+      {
+        "label": "甄家仆包勇投靠荣府",
+        "identityLabel": "包勇投靠贾府",
+        "summary": "甄家抄没获谴后，甄老爷写信荐忠诚老实的家仆包勇投奔贾府，贾政阅信后收留包勇。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过书信与问话交待甄府没落后仆人星散的局面。",
+        "generalityHint": "单一特定事件，记录包勇个人投主经过。",
+        "rationale": "基于p-679760、p-679941与p-680057前段，叙述甄家荐书与贾政接纳包勇的过程。",
+        "passageIds": [
+          "p-679760",
+          "p-679941",
+          "p-680057"
+        ]
+      },
+      {
+        "label": "包勇述甄宝玉改性",
+        "identityLabel": "甄宝玉改性之谈",
+        "summary": "包勇向贾政叙述甄宝玉大病昏死见薄命司鬼怪册子后幡然醒悟，从此摒弃玩乐、专心读书理家。",
+        "sourceRole": "dialogue",
+        "speaker": "包勇",
+        "reasoningHint": "包勇以亲历见闻解释甄宝玉性格转变成因。",
+        "generalityHint": "针对甄宝玉这一人物经历与心性转变的陈述。",
+        "rationale": "基于p-680057后半段包勇回答贾政提问，详述甄宝玉梦醒变好念书的奇事。",
+        "passageIds": [
+          "p-680057"
+        ]
+      },
+      {
+        "label": "贾府门前现匿名揭帖",
+        "identityLabel": "水月庵揭帖案",
+        "summary": "荣国府门前及夹道墙上贴出揭帖，揭发贾芹在水月庵聚众窝娼赌博的不端行径，贾政见后大怒。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从门上发现字纸到贾政、贾琏等得知丑事的事件起因。",
+        "generalityHint": "特定风波的导火索事件。",
+        "rationale": "基于p-680894、p-681185与p-681237，贾政见匿名揭帖揭露贾芹淫乱聚赌丑闻。",
+        "passageIds": [
+          "p-680894",
+          "p-681185",
+          "p-681237"
+        ]
+      },
+      {
+        "label": "赖大查庵查获贾芹行乐",
+        "identityLabel": "赖大水月庵带人",
+        "summary": "赖大奉贾政之命假托宫里传唤，前往水月庵查拿女尼女道，撞见贾芹正聚众饮酒作乐。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾政下令后赖大实地抓拿的情节发展。",
+        "generalityHint": "水月庵现场的特定抓捕与撞破经过。",
+        "rationale": "基于p-681297与p-681551，赖大带车赴水月庵，见贾芹与小尼道喝酒行乐并将人押回。",
+        "passageIds": [
+          "p-681551",
+          "p-681297"
+        ]
+      },
+      {
+        "label": "贾琏赖大私庇贾芹",
+        "identityLabel": "贾琏替贾芹遮饰",
+        "summary": "贾芹向贾琏磕头求救，贾琏恐家丑外扬，遂与赖大商定让贾芹死不承认，并将女尼道托媒卖出以遮盖风波。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾琏权衡利弊后做出的掩盖与私了决策。",
+        "generalityHint": "针对贾芹风月案的具体处置举措。",
+        "rationale": "基于p-683136，贾芹求饶，贾琏与赖大商议遮庇并打算卖掉尼道以混过贾政查问。",
+        "passageIds": [
+          "p-683136"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾政接见甄家仆人包勇后，进一步向其询问甄宝玉的近况，引出甄宝玉改性读书的陈述。",
+        "passageIds": [
+          "p-680057"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "门前揭帖揭发水月庵丑事后，贾政下令赖大前往水月庵将女尼道士全数带回。",
+        "passageIds": [
+          "p-681237",
+          "p-681297",
+          "p-681551"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "赖大将贾芹和女尼道带回贾府后，引发贾芹向贾琏求救以及贾琏、赖大合谋庇护。",
+        "passageIds": [
+          "p-681551",
+          "p-683136"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "揭帖指责的丑闻是贾琏必须替贾芹遮掩、防止外传的直接起因。",
+        "passageIds": [
+          "p-681185",
+          "p-683136"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "L9mcav3fJLCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 9558,
+    "candidatesTokenCount": 1906,
+    "totalTokenCount": 11464,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9558
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1906
+      }
+    ]
+  },
+  "durationMs": 15993,
+  "requestHash": "b18c709095a84b9af6fe59e1d078db58935296f32aa87a621aa5c092b6b555ad"
+}

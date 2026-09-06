@@ -1,0 +1,144 @@
+{
+  "value": {
+    "summary": "第三十九回中，李纨与众人品评平儿、鸳鸯、彩霞、袭人等得力丫鬟，随后平儿向袭人透露凤姐私自挪用月钱放利钱的秘密。刘姥姥带着乡下瓜菜二进荣国府，不仅得凤姐接纳，还投合了贾母喜好，留宿府中。刘姥姥为取悦贾母与众人编造雪地抽柴的小姑娘故事，宝玉信以为真，私下细问茗玉小姐祠堂原委并遣茗烟前去寻访，却只寻得一座瘟神破庙。",
+    "nodes": [
+      {
+        "label": "李纨品评平儿等得力丫头",
+        "identityLabel": "丫鬟品评与家族骨干",
+        "summary": "李纨借平儿身上带的钥匙打趣，指出平儿是王熙凤的总钥匙，并与宝钗、宝玉、探春一同品评鸳鸯、彩霞、袭人等丫鬟各自处事公道、辅佐主子周全，感叹主子得力全赖这般膀臂。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于各房主子日常处境对几位主要大丫鬟作用的直接归纳与评价。",
+        "generalityHint": "涵盖贾府几个主要房头中核心大丫头与主子关系的群像评价。",
+        "rationale": "李纨、宝钗等针对平儿、鸳鸯、彩霞、袭人的能力展开具体讨论，属于局部的议论归纳。",
+        "passageIds": [
+          "p-260438",
+          "p-260020"
+        ]
+      },
+      {
+        "label": "平儿透露凤姐放利钱",
+        "identityLabel": "王熙凤私放利钱",
+        "summary": "平儿悄悄告诉袭人，当月迟迟未发月钱是因为王熙凤早已支取银子放债收取利息，待别处利钱收齐方才补放发放，一年私房利钱可翻出上千两银子。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "平儿向袭人私下道出府内迟发月钱的真实缘由与凤姐理财手段。",
+        "generalityHint": "涉及荣国府内部财务管理及王熙凤个人放利钱行为的特定事实。",
+        "rationale": "平儿对袭人的对话直接交代了凤姐克扣并挪用月钱放利钱的内情。",
+        "passageIds": [
+          "p-261240",
+          "p-262769"
+        ]
+      },
+      {
+        "label": "刘姥姥送野味与见贾母",
+        "identityLabel": "刘姥姥二进荣国府与贾母接见",
+        "summary": "刘姥姥带板儿送来头茬瓜菜孝敬贾府，算得一顿螃蟹钱抵得上庄稼人过一年；王熙凤留其过夜，贾母正欲找积古老人说话，遂命引刘姥姥相见，两人畅叙家常并被留宿府内。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "刘姥姥进府送瓜菜、平儿引见至贾母处交谈的叙事经过。",
+        "generalityHint": "关于刘姥姥初见贾母的具体事件叙述及贫富生活的对照。",
+        "rationale": "叙述了刘姥姥二进荣国府、核算螃蟹花费、得凤姐留宿并承贾母召见的完整事件。",
+        "passageIds": [
+          "p-261742",
+          "p-263066"
+        ]
+      },
+      {
+        "label": "刘姥姥编说抽柴女与神佛送孙",
+        "identityLabel": "刘姥姥说谎博笑",
+        "summary": "刘姥姥为讨贾母和哥儿姐儿欢心，现场编撰雪夜极标致姑娘抽柴的故事，因失火中断后，又顺应贾母王夫人心事编造九旬老妪诚心求佛得孙的故事，令满座听得入神。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "刘姥姥察言观色、迎合贾母及宝玉等人心理所做的即兴虚构。",
+        "generalityHint": "刘姥姥在贾府特定宴饮谈笑场合讲故事的场景。",
+        "rationale": "描写刘姥姥察觉贾母和众人的喜好，随口编造奇闻神怪故事博取欢心的行为。",
+        "passageIds": [
+          "p-263969"
+        ]
+      },
+      {
+        "label": "宝玉细询茗玉小姐故事",
+        "identityLabel": "宝玉追寻茗玉小姐",
+        "summary": "宝玉深信刘姥姥抽柴故事，私下追问究竟，刘姥姥便随口胡诌出早逝的茗玉小姐塑像成精之说；宝玉斥成精为‘虽死不死’，打算出资募化重修祠堂，并向刘姥姥问明庙宇座落方位。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉因多情痴性将刘姥姥的荒诞戏言当成真事，并在逻辑上赋予其神圣解释。",
+        "generalityHint": "宝玉个人面对女子生死故事特有的痴情反应。",
+        "rationale": "记录宝玉私下拉住刘姥姥追究抽柴女孩来历并拟定修庙计划的经过。",
+        "passageIds": [
+          "p-265154",
+          "p-264901"
+        ]
+      },
+      {
+        "label": "茗烟踏勘破庙寻得瘟神",
+        "identityLabel": "茗烟寻庙与破灭",
+        "summary": "宝玉次日清早派茗烟带钱按刘姥姥所述方向踏勘寻庙；茗烟寻访一日，在东北田埂破庙中只见到一尊青脸红发的瘟神泥胎，宝玉仍执迷不悟，嘱其改日闲暇再去寻找。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "根据宝玉吩咐实地查验刘姥姥谎言结果的叙事闭环。",
+        "generalityHint": "一次具体的寻访尝试及其落空结果。",
+        "rationale": "通过茗烟跑腿找庙的滑稽结局，印证了刘姥姥的谎谈与宝玉的痴情求觅。",
+        "passageIds": [
+          "p-265720"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "刘姥姥受贾母召见留宿后，换上衣服在贾母榻前编故事讨老太太欢心，承接了留宿贾母处的情节。",
+        "passageIds": [
+          "p-263066",
+          "p-263969"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉因记挂刘姥姥在贾母房中所讲雪地抽柴故事，散席后背地里拉着刘姥姥深挖底细，促使刘姥姥进一步编造出茗玉小姐祠堂的谎言。",
+        "passageIds": [
+          "p-263969",
+          "p-265154"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉深信刘姥姥虚构的茗玉小姐祠堂方位，次日派遣茗烟实地踏勘寻访，直接导致茗烟寻得瘟神破庙的结局。",
+        "passageIds": [
+          "p-265154",
+          "p-265720"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "9NecasqdDOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 8034,
+    "candidatesTokenCount": 2037,
+    "totalTokenCount": 10071,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8034
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2037
+      }
+    ]
+  },
+  "durationMs": 15263,
+  "requestHash": "c9032682dead2399d6ec3a04cb8e76b3ebc5c125c3628970f5a6b870c58cd905"
+}

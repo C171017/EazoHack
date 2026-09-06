@@ -1,0 +1,169 @@
+{
+  "value": {
+    "summary": "第六十七回围绕薛蟠自江南贩货归来带回土仪，以及王熙凤查问贾琏在外偷娶尤二姐两条主线展开。宝钗将薛蟠带来的江南土物分送各处，林黛玉睹物思乡触痛身世，贾宝玉与紫鹃从旁劝慰；赵姨娘因分得土仪往王夫人处奉承却碰壁。另一边，王熙凤察觉风声，逼讯家童旺儿与兴儿，全盘查实贾琏停妻偷娶尤二姐的隐情，暗中定下计谋。",
+    "nodes": [
+      {
+        "label": "薛家议柳尤变故与发货酬谢",
+        "identityLabel": "薛家闻变与酬谢伙计",
+        "summary": "薛姨妈与宝钗、薛蟠议论尤三姐自刎与柳湘莲出家之事，薛蟠伤感寻人不获，宝钗劝母亲放宽心思，并提醒尽快设宴酬谢辛劳同行的伙计。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文柳湘莲退亲、三姐自尽、湘莲出家的结局，薛家母子妹妹各自作出反应并转移回日常经营事务。",
+        "generalityHint": "涉及薛姨妈、宝钗、薛蟠等特定人物在特定情境下的家庭对话与处事态度。",
+        "rationale": "基于薛姨妈听闻消息叹息，宝钗劝说前生命定莫伤感并提醒酬客，薛蟠进门哭诉寻访无果的情节。",
+        "passageIds": [
+          "p-478627",
+          "p-479025"
+        ]
+      },
+      {
+        "label": "宝钗分送江南土物",
+        "identityLabel": "宝钗分送土仪",
+        "summary": "薛蟠所带土物箱子送至，宝钗细致检视后，留用之余一分分备办妥帖分送贾府诸人，送给林黛玉的尤为厚重。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从薛蟠带回两箱笔墨玩物等家常土产，推展到宝钗处事周到、按人分发礼物的行为。",
+        "generalityHint": "记录贾府与薛家日常人情往来及宝钗特定分物安排的具体事件。",
+        "rationale": "文中叙述薛蟠取出送妹妹的箱子，宝钗送回房中配合妥当，使莺儿各处分送，并特意厚待黛玉。",
+        "passageIds": [
+          "p-479623",
+          "p-480263"
+        ]
+      },
+      {
+        "label": "黛玉睹土仪思乡伤怀",
+        "identityLabel": "黛玉见土仪伤感",
+        "summary": "林黛玉见宝钗送来的家乡土物触景生情，感叹父母双亡身世飘零而落泪，紫鹃与赶来的宝玉各尽心思劝慰解闷。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "江南土物作为客体符号，直接勾起黛玉寄人篱下、无亲人挂念的深层心理防御与悲情。",
+        "generalityHint": "针对黛玉孤女身世与宝黛二人特殊相处模式的典型个案描写。",
+        "rationale": "黛玉见物伤心落泪，紫鹃以身体及宝姑娘好意相劝，宝玉插科打诨逗其开心并引其往宝钗处散心。",
+        "passageIds": [
+          "p-480389",
+          "p-480792",
+          "p-482075"
+        ]
+      },
+      {
+        "label": "赵姨娘借土仪逢迎碰壁",
+        "identityLabel": "赵姨娘借物讨好王夫人",
+        "summary": "赵姨娘因贾环亦得分得土仪而赞赏宝钗大方会做人，趁机拿东西往王夫人面前卖好，却遭王夫人冷淡回应，只得悻悻而归。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "赵姨娘因受惠产生攀附与拉踩心理，其言行反映出其在荣国府内特殊的卑微与尴尬处境。",
+        "generalityHint": "刻画贾府妻妾尊卑关系及赵姨娘个人性格行为的一幕具体事件。",
+        "rationale": "赵姨娘对比黛玉与宝钗后去王夫人处陪笑称赞，王夫人看破其用意冷言应对，赵姨娘回房暗自生气。",
+        "passageIds": [
+          "p-482534"
+        ]
+      },
+      {
+        "label": "袭人园中规劝婆子与探视凤姐",
+        "identityLabel": "袭人探病凤姐",
+        "summary": "袭人在园中撞见老祝妈赶蜂并正色申明不可私尝未供鲜果的规矩，随后前往凤姐处请安，察觉院内气氛凝重、有下人悄密回话而告退。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "作为凤姐查秘事前的情境转换与气氛铺垫，体现袭人的恪守规矩及大观园内风吹草动。",
+        "generalityHint": "展现贾府下人规矩管理及大观园到凤姐院落过渡场景的局部事件。",
+        "rationale": "袭人教训老祝妈守规矩，至凤姐院中探视，见凤姐言语异常、丫头屏声息气，得知有事便告辞。",
+        "passageIds": [
+          "p-483714",
+          "p-484280"
+        ]
+      },
+      {
+        "label": "凤姐严讯兴儿查实外室秘事",
+        "identityLabel": "凤姐审讯家童",
+        "summary": "凤姐听闻小厮私议后，厉声盘诘旺儿与兴儿；兴儿受震慑后尽数招供贾蓉说媒、私置房舍、退张华之亲及偷娶尤二姐的全部内情。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从门童漏风的小线索出发，凤姐运用威慑手段逐步榨取全盘真相，推动整部书后半段尤二姐悲剧的发生。",
+        "generalityHint": "记录王熙凤治家威权与侦破贾琏背叛行为的具象审讯过程。",
+        "rationale": "凤姐先逼旺儿再喝令兴儿掌嘴，兴儿从头招认东府送殡、贾蓉撮合、买房退亲、尤三姐自尽等细节。",
+        "passageIds": [
+          "p-484820",
+          "p-485485"
+        ]
+      },
+      {
+        "label": "凤姐暗自定计处置二姐事",
+        "identityLabel": "凤姐暗定计谋",
+        "summary": "凤姐严令封锁消息，屏退下人后与平儿商议，心生定计，准备对贾琏偷娶尤二姐一事展开处置。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由获取偷娶真相直接引发凤姐的报复与应对心理，构成下一回大闹宁国府、赚尤二姐入园的直接因果起因。",
+        "generalityHint": "凤姐特定决策形成的瞬间心理与密谋阶段。",
+        "rationale": "凤姐威胁旺儿兴儿不许泄露半字，独留平儿冷笑沉思，眉头一皱计上心来，引出后文情节。",
+        "passageIds": [
+          "p-485485",
+          "p-487507"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝钗将土物分送黛玉且加厚一倍，直接引发黛玉睹物伤情、思念故里与身世落泪。",
+        "passageIds": [
+          "p-480263",
+          "p-480389"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "宝钗给贾环也送了土仪，促使赵姨娘以此为由跑去向王夫人讨好卖乖。",
+        "passageIds": [
+          "p-482534"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "袭人探访凤姐时正值旺儿在门外伺候，袭人刚走，凤姐便正式传讯旺儿并提审兴儿。",
+        "passageIds": [
+          "p-484280",
+          "p-484820"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "兴儿彻底招供了贾琏偷娶尤二姐与置房退亲的所有底细，构成了凤姐眉头一皱心生应对之计的事实基础。",
+        "passageIds": [
+          "p-485485",
+          "p-487507"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "oNicatOvO_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 11845,
+    "candidatesTokenCount": 2332,
+    "totalTokenCount": 14177,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11845
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2332
+      }
+    ]
+  },
+  "durationMs": 16315,
+  "requestHash": "051108fb6ebfa3aaee548466ec8b1a72dec6b4a252921a699d94f26ce12d8180"
+}

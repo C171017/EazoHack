@@ -1,0 +1,193 @@
+{
+  "value": {
+    "summary": "This outline traces the key narrative movements in Chapter 94: Wang Furen resolves the scandal surrounding Jia Qin and the displaced nuns; Zijuan ponders Daiyu's prospects regarding Baoyu after hearing servant gossip; the garden's withered begonia inexplicably blossoms in winter, sparking divergent interpretations and a family banquet; Baoyu misplaces his spiritual jade while changing clothes; and an escalating crisis of suspicion, failed domestic investigations, and divinations unfolds across the household.",
+    "nodes": [
+      {
+        "label": "王夫人善后水月庵案",
+        "identityLabel": "王夫人遣发女尼并诫饬贾芹",
+        "summary": "贾政因公务将水月庵揭帖案交贾琏处理，贾琏请示王夫人。王夫人定策将女尼女道发还本家，遣散文书并支给盘缠，同时销除钱粮档子，严加规诫贾芹，贾政闻后顺势息事宁人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于贾政交代查办与贾琏推卸干系的考虑，王夫人作出不愿多造杀孽但严密扫尾的行政处置决策。",
+        "generalityHint": "涉及贾府内部女尼安置、族人贾芹管束及避免家丑外扬的宗族治家特例。",
+        "rationale": "出处见贾琏进见王夫人商议及赖大照令执行遣发女尼女道与诫饬贾芹的过程。",
+        "passageIds": [
+          "p-684255",
+          "p-685090"
+        ]
+      },
+      {
+        "label": "紫鹃探听傅家亲事与自省",
+        "identityLabel": "紫鹃为黛玉婚事悬心与心态转变",
+        "summary": "紫鹃向鸳鸯打听时得知傅试家遣妇夸耀小姐并讨好贾母与宝玉，深感天下皆图宝玉而黛玉痴心多病；几番辗转思忖后，紫鹃决意放下无谓闲心，专一侍奉黛玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从傅家仆妇献媚和鸳鸯所言，推演至黛玉多病的心病根源，进而辨析宝玉性情与自身干涉的无益，完成心态自省。",
+        "generalityHint": "关于大观园丫鬟对其主子情感受挫与个人责任边界的心态审视。",
+        "rationale": "集中呈现于紫鹃在贾母院外闻听傅家提亲议论以及归途潇湘馆途中的层层内心独白。",
+        "passageIds": [
+          "p-685374",
+          "p-685869"
+        ]
+      },
+      {
+        "label": "怡红院冬日海棠反季开花",
+        "identityLabel": "怡红院海棠反常开花引发吉凶议论",
+        "summary": "怡红院枯萎已久的海棠在初冬反常绽放。贾母、李纨与黛玉视之为和暖或兆喜的祥瑞，贾赦与探春则疑其为妖孽，贾政主张听其自然，贾母最终决意置酒赏花。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "各人基于自身处境与自然天道认知，对草木不时而发是吉兆还是花妖作出截然相反的推断。",
+        "generalityHint": "贾府上下对自然反常物候（异象）的家族命运预兆性阐释。",
+        "rationale": "见众人齐聚怡红院观赏反季海棠，各抒见解，最终贾母定调为喜事的叙述。",
+        "passageIds": [
+          "p-686375"
+        ]
+      },
+      {
+        "label": "赏花小集与赋诗志喜",
+        "identityLabel": "贾母宴赏海棠与宝玉等题诗",
+        "summary": "贾母在怡红院传席赏花，命宝玉、贾环、贾兰赋诗志喜。宝玉睹物思晴雯又喜袭五儿，凤姐派平儿送红绸贺礼挂花以图吉兆。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "以应制即席写诗与挂红讨巧为手段，将反常花开强行导入家族祝寿增福与迎祥的吉祥逻辑之中。",
+        "generalityHint": "家族内部利用诗宴应景与礼节包装掩盖异兆的社交礼仪实践。",
+        "rationale": "涵盖宝玉、贾环、贾兰三人题诗及王熙凤遣平儿送红绸挂花消灾祈吉的场景。",
+        "passageIds": [
+          "p-687303",
+          "p-687674",
+          "p-687830"
+        ]
+      },
+      {
+        "label": "宝玉换装匆忙失落通灵宝玉",
+        "identityLabel": "通灵宝玉在怡红院失落引恐慌",
+        "summary": "贾母散席后，袭人伺候宝玉更衣，惊觉通灵宝玉不知去向。怡红院内众人翻箱倒柜追查无果，袭人等因深知干系重大而惊恐万状，陷入不敢声张的瘫痪与绝望。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从宝玉为迎贾母仓促更衣摘玉的疏漏，直接导出玉件失落及全院丫鬟深知性命难保的惊恐后果。",
+        "generalityHint": "核心命根象征物丢失引发的怡红院内廷局部系统性恐慌。",
+        "rationale": "详尽描写了宝玉更衣发现失玉、袭人翻查恐慌及众人不敢张扬的窘迫情状。",
+        "passageIds": [
+          "p-688130"
+        ]
+      },
+      {
+        "label": "探春李纨搜园与疑诘贾环",
+        "identityLabel": "大观园搜身与误疑贾环激化冲突",
+        "summary": "李纨主张搜身丫鬟以洗嫌疑，探春则认为外人偷玉无用必是熟人恶作剧并疑及贾环。平儿奉命暗诘贾环引发贾环与赵姨娘大闹，众人试图编造南安王府失落假话也被王夫人当场戳破。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "李纨与探春基于不同刑侦逻辑排查（搜查下人 vs 推测促狭者动机），因怀疑贾环导致赵姨娘反扑，谎言随即破产。",
+        "generalityHint": "大观园内部遭遇重案失窃时的排查逻辑、权力运作及妻妾庶出冲突的爆发。",
+        "rationale": "见李纨搜检平儿等丫鬟、探春指疑贾环、赵姨娘哭闹反攻及王夫人盘问戳破宝玉谎言的过程。",
+        "passageIds": [
+          "p-688911",
+          "p-689457",
+          "p-689865"
+        ]
+      },
+      {
+        "label": "凤姐献秘访策与王夫人定限",
+        "identityLabel": "王熙凤献计暗中踩缉与王夫人限期寻玉",
+        "summary": "病中的凤姐赶来建言：为防窃玉者因惧罪毁玉灭口，对外宜扬言此物不值钱以稳住偷儿，对内则暗派心腹察访。王夫人采纳此策，严厉封锁消息并勒令袭人三日内找回。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐从作案人心理机制（防逼急毁物灭口）逆向推演出‘外宽内紧’的安抚诱捕策略，为王夫人所认可。",
+        "generalityHint": "危机公关策略：通过信息管控和假动作避免案情恶化以保全核心财物。",
+        "rationale": "记录凤姐带病献策防毁玉灭口及王夫人限定三日破案的决策。",
+        "passageIds": [
+          "p-690670"
+        ]
+      },
+      {
+        "label": "封锁门户与测字扶乩求玉",
+        "identityLabel": "大观园锁门缉查与刘铁嘴测字附会",
+        "summary": "李纨等命人三日内封锁园门防下人夹带出入；林之孝请刘铁嘴测‘赏’字附会出当铺赎物之说，岫烟提议求妙玉扶乩，众人寄望神断时焙茗在门外声称已得确切音信。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在常规搜寻穷尽后，府内转而依赖物理解构拆字（刘铁嘴拆‘赏’字）与民间占卜来建立希望与行动依据。",
+        "generalityHint": "面对不可解的危机失物时由物理封锁延伸至巫术、拆字及卜筮求助的群体应对模式。",
+        "rationale": "见李纨吩咐林之孝家的锁园门、林之孝测字‘赏’字的附会推论以及焙茗回报准信的收尾情节。",
+        "passageIds": [
+          "p-691268",
+          "p-692154"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "海棠开花的吉凶争论被贾母强行定为喜事，随即促成贾母下令怡红院摆席赏花与众人赋诗。",
+        "passageIds": [
+          "p-686375",
+          "p-687303"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "正是为了迎接贾母前来赏花，宝玉仓促更衣换褂摘下宝玉，直接造成了通灵宝玉的遗落未佩。",
+        "passageIds": [
+          "p-688130"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "袭人等私下寻找宝玉无果后事情闹大，李纨与探春进场主持局面，演变为搜查丫鬟与盘诘贾环。",
+        "passageIds": [
+          "p-688130",
+          "p-688911"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "探春李纨搜检贾环闹出赵姨娘哭闹，王夫人亲临现场，促使凤姐前来献上防毁灭口的暗访保全计策。",
+        "passageIds": [
+          "p-689865",
+          "p-690211",
+          "p-690670"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "王夫人采纳凤姐策略并限期三日后，李纨与管事妇人随即执行三日封门指令，并衍生出测字与打听当铺的行动。",
+        "passageIds": [
+          "p-690670",
+          "p-691268"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "QNmcasbcNrCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 11706,
+    "candidatesTokenCount": 2853,
+    "totalTokenCount": 14559,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11706
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2853
+      }
+    ]
+  },
+  "durationMs": 21328,
+  "requestHash": "3fd50fbf1f05e1fbff6d7ac91ef7a9407b3c0b2909505e4e69342d26b84e2637"
+}

@@ -32,6 +32,11 @@ const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),
 export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId}:{preview:BookPreview;graph:MapBootstrap;initialTitle?:string;cloudSourceId?:string;cloudOwnerId?:string}) {
   const [uploaded, setUploaded] = useState<TextBook | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
+  useEffect(() => {
+    if (new URLSearchParams(window.location.search).get('library') === '1') {
+      queueMicrotask(() => setLibraryOpen(true));
+    }
+  }, []);
   const [importState, setImportState] = useState<ImportState | null>(null);
   const [libraryRevision, setLibraryRevision] = useState(0);
   const importing = useRef<AbortController | null>(null);
@@ -113,6 +118,7 @@ export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId
 }
 
 function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSourceId, cloudOwnerId, analyzeUploaded}: {analyzeUploaded?:boolean;cloudSourceId?:string;cloudOwnerId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
+  const [mobileMapOpen, setMobileMapOpen] = useState(false);
   const analysis = useBookAnalysis(initialGraph.bookId, preview, !!analyzeUploaded);
   const graph = analysis.graph ?? initialGraph;
   const bookId = graph.bookId;
@@ -273,8 +279,8 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
   }, [placements,artifacts,anchors,preview,bookId,interactionState,setInteractionState,requests,selections,busy,exercise]);
   const unresolvedArtifacts=useMemo(()=>artifacts.filter(a=>!slots.some(s=>s.id===a.id)),[artifacts,slots]);
 
-  return <main onPointerDownCapture={sync.interact} onWheelCapture={sync.interact} onKeyDownCapture={sync.interact} onTouchStartCapture={sync.interact} className="flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
-    <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
+  return <main data-mobile-map-open={mobileMapOpen} onPointerDownCapture={sync.interact} onWheelCapture={sync.interact} onKeyDownCapture={sync.interact} onTouchStartCapture={sync.interact} className="reading-workspace flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
+    <div className="reading-workspace-panes flex min-h-0 flex-1 flex-col lg:flex-row">
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
@@ -288,8 +294,8 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
         </div>}
         <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onLibrary={onLibrary} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
-      <section className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
-        <div className="absolute inset-0">{graph.unavailable?<div className="mx-auto max-w-xl p-8 text-sm text-muted" role="status" aria-live="polite">
+      <section id="reading-exploration-space" className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
+        <div className="absolute inset-0 overflow-auto">{graph.unavailable?<div className="mx-auto max-w-xl p-8 text-sm text-muted" role="status" aria-live="polite">
           <p className="mb-3 text-xs uppercase tracking-widest">Text ready to read</p>
           <h2 className="mb-3 font-reading text-xl text-ink">{analyzeUploaded ? analysis.status === 'unavailable' ? 'Book map unavailable' : analysis.status === 'failed' ? 'Book map needs attention' : analysis.status === 'ready' ? 'Opening book map' : 'Building your book map' : cloudSourceId ? 'Book map pending' : 'Map is unavailable'}</h2>
           <p>{analyzeUploaded ? analysis.stage : cloudSourceId ? 'Check the Cloud library for this book’s analysis status. You can keep reading here.' : 'The saved map could not be loaded. Reading and passage enhancements are available.'}</p>
@@ -302,6 +308,14 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
         </div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
 
       </section>
+    </div>
+    <div className="mobile-map-controls">
+      <button type="button" aria-expanded={mobileMapOpen} aria-controls="reading-exploration-space" onClick={() => setMobileMapOpen(open => !open)}>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+          <path d={mobileMapOpen ? 'm6 9 6 6 6-6' : 'm6 15 6-6 6 6'} />
+        </svg>
+        {mobileMapOpen ? 'Close 3D space' : 'Open 3D space'}
+      </button>
     </div>
   </main>;
 }

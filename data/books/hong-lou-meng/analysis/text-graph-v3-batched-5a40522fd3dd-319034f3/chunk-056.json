@@ -1,0 +1,154 @@
+{
+  "value": {
+    "summary": "第五十六回中，探春提出蠲免买办脂粉银及承包大观园花木等节用兴利举措，宝钗进而提出统筹全局、小惠均沾、免入官账以全大体之策；随后江南甄府送礼请安，甄家四妇人提及亦有一名为宝玉且性貌相仿之哥儿，引出宝玉的疑幻之思与梦会甄宝玉。",
+    "nodes": [
+      {
+        "label": "探春议蠲买办与承包大观园",
+        "identityLabel": "探春兴利除弊",
+        "summary": "探春指出头油脂粉买办中饱私囊且重复支领，建议蠲免买办分例，并效仿赖大家小园，提议将大观园分派老妈妈料理承包以省工费。",
+        "sourceRole": "dialogue",
+        "speaker": "贾探春",
+        "reasoningHint": "基于府中月银与买办开支重叠的实际开销对比，并借鉴赖大家花园承包收益所得出的管理改革提议。",
+        "generalityHint": "适用于贾府内部特定开销与大观园园圃承包的局部家政管理决策。",
+        "rationale": "探春结合自身观察、平儿解说以及赖大家园子收益，推导出除宿弊与兴利的具体管理构想。",
+        "passageIds": [
+          "p-387899",
+          "p-389197"
+        ]
+      },
+      {
+        "label": "宝钗倡学问即正事与用物之道",
+        "identityLabel": "理学与实务之辨",
+        "summary": "宝钗引用朱子《不自弃文》指出天下无不可用之物、物尽其用即值钱，强调将学问义理融于治家理务的小事上方显高雅不流俗。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "从儒家义理与朱子之文出发，推演出实务管理与学问非两截事的原则性见解。",
+        "generalityHint": "贯通义理学问与治事实务的普遍原则。",
+        "rationale": "宝钗驳斥探春认为朱子文章只是勉人虚浮之词，确立了学问与日常理政相结合的道理。",
+        "passageIds": [
+          "p-388799"
+        ]
+      },
+      {
+        "label": "宝钗小惠全大体与免归官账",
+        "identityLabel": "小惠全大体",
+        "summary": "宝钗建议承包款项免交账房以免受层层克扣，改由承包者分担姑娘们日常脂粉草料等动用，并提议出资均摊给未管地的老妈妈，使利不独占、顾全大局体统。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "综合考虑账房剥削、上下利益冲突、未承包者的嫉恨与园内秩序维护，推演出均沾利益、买通人心之策。",
+        "generalityHint": "适用于家族或组织内部兼顾节用与防范内部怨隙的利益协调原则。",
+        "rationale": "宝钗深入剖析了单纯节用入官可能引发的怨声，提出用余利包揽定例并分惠众人以维系体统。",
+        "passageIds": [
+          "p-391447",
+          "p-392492"
+        ]
+      },
+      {
+        "label": "甄府送礼与提及江南宝玉",
+        "identityLabel": "甄宝玉信息传入",
+        "summary": "江南甄府遣女人们进荣府请安，谈及家中亦有一位极受老太太宠爱且同名、同貌、同样淘气古怪的宝玉哥儿，贾母唤贾宝玉相见比对。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由甄府妇人陈述与贾母、李纨等当场验证所共同呈现的事实引入，无深层论证。",
+        "generalityHint": "涉及甄贾两府世交关系与两名特殊同名子弟的具体叙事事件。",
+        "rationale": "甄府送礼并由四个管家娘子道出甄宝玉的存在，直接构成后文宝玉疑思与入梦的情节前因。",
+        "passageIds": [
+          "p-393205",
+          "p-393485",
+          "p-394195"
+        ]
+      },
+      {
+        "label": "宝玉湘云同名同貌之辩",
+        "identityLabel": "同名同貌之争",
+        "summary": "贾宝玉认为天下虽有同名或同貌之人，但不可能同名又同貌，疑心甄府妇人是奉承贾母之词；史湘云引相如与孔子阳虎之例驳诘，宝玉辩称古例非名貌俱同。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "基于历史典故（蔺相如/司马相如、孔子/阳虎）对姓名与容貌偶然重合概率所作的反驳与逻辑辨析。",
+        "generalityHint": "关于世间人物姓名容貌重合可能性的经验与名实思辨。",
+        "rationale": "宝玉在与湘云的辩论中坚决不信两样俱同，从而加深了自身的疑惑并引发后续寻梦。",
+        "passageIds": [
+          "p-395015"
+        ]
+      },
+      {
+        "label": "宝玉入梦会见甄宝玉",
+        "identityLabel": "贾宝玉梦会甄宝玉",
+        "summary": "贾宝玉日有所思恍惚入梦，梦至一座似曾相识的花园，被丫鬟斥为臭小厮，入室见榻上卧着的甄宝玉正叹息都中宝玉，二人相见欢喜之际被老爷呼唤惊醒，醒来对镜方知是梦。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "白天听闻与湘云争辩后的疑惑心理投射，经由大镜对照与梦境虚实映射完成的情感意象深化。",
+        "generalityHint": "针对贾宝玉个人意识与真假、虚实主题的高度特异化梦幻叙事。",
+        "rationale": "梦境细致呼应白日甄家丫鬟与性情言论，并在大镜前惊醒，揭示真假宝玉互照的哲理象征与叙事关节点。",
+        "passageIds": [
+          "p-395385",
+          "p-395785",
+          "p-396213"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "探春将园圃物产折算收益的务实想法，被宝钗提升到朱子《不自弃文》与物尽其用的学问高度。",
+        "passageIds": [
+          "p-388799"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝钗针对探春让管地婆子年终归账的初步构想，进一步完善为免归官账、包揽定例和小惠均沾的方案。",
+        "passageIds": [
+          "p-391447"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "甄府仆妇讲述江南甄宝玉的具体形貌性情，直接引发了宝玉与湘云关于是否存在同名同貌之人的争论。",
+        "passageIds": [
+          "p-394195",
+          "p-395015"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉与湘云辩论未解的疑虑使他心生纳闷、榻上盘算，直接诱发了随后的梦境体验。",
+        "passageIds": [
+          "p-395015",
+          "p-395385"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "dNicauszsKLRyQ-Q_e3wCQ",
+  "usage": {
+    "promptTokenCount": 10262,
+    "candidatesTokenCount": 2049,
+    "totalTokenCount": 12311,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10262
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2049
+      }
+    ]
+  },
+  "durationMs": 14998,
+  "requestHash": "3cd5c88af018a98e682c453de8f275eb944e92db5743a9b0b6cad49c76a70be2"
+}

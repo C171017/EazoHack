@@ -1,0 +1,178 @@
+{
+  "value": {
+    "summary": "第六十二回记述了平儿秉持息事宁人原则了结厨房失窃公案，复柳嫂旧职；随后恰逢贾宝玉、宝琴、岫烟与平儿同日诞辰，大观园众人在红香圃设宴行令欢聚；史湘云醉卧芍药裀；黛玉与宝玉暗论贾府后手不接与探春管事之才；香菱斗草污裙后，宝玉借调袭人之裙巧妙解围。",
+    "nodes": [
+      {
+        "label": "平儿了结窃案与秦显家落空",
+        "identityLabel": "平儿息事化小",
+        "summary": "平儿传令息事宁人，复柳家母女之职，秦显家的筹谋落空还倒赔亏空；彩云向贾环剖白遭疑，赌气将私赠之物尽弃河中。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于前一回窃案调查的决断，平儿直接执行化大事为无事的治事策略并引发连锁反应。",
+        "generalityHint": "涉及荣府内部家下人争权与仆妇恩怨的具体事件处置。",
+        "rationale": "平儿遵循‘大事化为小事’原则结案，体现了大观园内部利益分配和管家逻辑。",
+        "passageIds": [
+          "p-433958"
+        ]
+      },
+      {
+        "label": "四人同日生辰与凑份庆生",
+        "identityLabel": "群芳同日生辰",
+        "summary": "宝玉清晨祭祖拜寿毕，发现宝琴、邢岫烟及平儿均在同日过生日，探春遂提议凑份子单为平儿设席，交柳家的备办酒席。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从各人生辰线索自然推导出在大观园内单独为平儿补过生日的决议。",
+        "generalityHint": "记录大观园特定群体的生辰聚会与私下交往礼数。",
+        "rationale": "同日寿辰引发了园内众姐妹为平儿凑份办席的活动，也顺理成章起用刚复职的柳嫂子备席。",
+        "passageIds": [
+          "p-435378",
+          "p-434838"
+        ]
+      },
+      {
+        "label": "宝钗论防患锁角门与平儿知情",
+        "identityLabel": "宝钗防患锁门",
+        "summary": "宝钗命婆子锁上角门防范闲杂人等抄近路，并提醒宝玉防患未然；同时透露平儿早已知晓内情，避免连累无辜。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗由近日府内失窃事件推演出的自保与防范管理逻辑。",
+        "generalityHint": "针对贾府治安亏空与人情防范的持家处世法则。",
+        "rationale": "借角门琐事揭示宝钗对贾府内部混乱与平儿处事内情的清醒认知。",
+        "passageIds": [
+          "p-437031"
+        ]
+      },
+      {
+        "label": "红香圃行令射覆与划拳戏谑",
+        "identityLabel": "红香圃射覆拇战",
+        "summary": "众人在红香圃设宴，探春平儿等行射覆与拇战酒令，宝琴、宝钗、黛玉、湘云等人巧妙引经据典，席间欢笑戏谑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "众人行令互射、用典与对句的现场文学游戏过程。",
+        "generalityHint": "大观园青年女子聚会行令的一幕诗意与才情展示。",
+        "rationale": "红香圃射覆是全回核心活动，串联起席间众人性格、才情及彩云失窃的隐秘心病。",
+        "passageIds": [
+          "p-437695",
+          "p-439992"
+        ]
+      },
+      {
+        "label": "憨湘云醉眠芍药裀",
+        "identityLabel": "湘云醉眠芍药裀",
+        "summary": "湘云行令饮酒过多，醉卧山石僻处青板石凳上，芍药花飞满一身，蜂蝶环绕，口中犹喃喃作睡语说酒令，众人见之又怜又笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "湘云贪杯豪爽的性格与醉后行为的具体呈现。",
+        "generalityHint": "极具代表性的大观园经典诗意场景。",
+        "rationale": "回目点题之笔，展现湘云天真烂漫、娇憨不羁的个性与大观园的青春极致之美。",
+        "passageIds": [
+          "p-440920",
+          "p-441130",
+          "p-441165"
+        ]
+      },
+      {
+        "label": "黛玉忧贾府后手不接",
+        "identityLabel": "黛玉算计后手不接",
+        "summary": "探春果断处置小丫头彩儿之娘，黛玉看在眼里，私下向宝玉赞赏探春守分不作威福，并指出贾府如今入不敷出、后手不接的危机。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "黛玉从探春管事细节推展到对贾府整体经济入不敷出、必致败落的推算与忧虑。",
+        "generalityHint": "对贾府整体经济走势与衰亡趋势的高层观察与断言。",
+        "rationale": "黛玉鲜见地表露对荣国府经济危机的洞察，与宝玉‘短不了咱们两个’的避世态度形成对照。",
+        "passageIds": [
+          "p-441326"
+        ]
+      },
+      {
+        "label": "呆香菱斗草污裙与宝玉换裙",
+        "identityLabel": "香菱情解石榴裙",
+        "summary": "香菱与众丫鬟斗草嬉闹跌入积雨洼弄脏石榴裙；宝玉体谅其难处，主动献策让袭人拿出同款新裙替换解围，并细心埋葬夫妻蕙与并蒂菱。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由斗草打闹脏裙推演至惧怕薛姨妈唠叨，宝玉因怜惜香菱身世而策划换裙与葬花草。",
+        "generalityHint": "表现宝玉体恤爱护受压迫薄命女子的一贯性情与行动。",
+        "rationale": "回目另一核心情节，体现香菱的天真痴态与宝玉的体贴深情，且暗含对香菱薄命的怜悯。",
+        "passageIds": [
+          "p-443754",
+          "p-445444"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "平儿了结窃案恢复柳嫂之职，才有了探春在随后平儿生日时让柳家的在园内承办酒席。",
+        "passageIds": [
+          "p-433958",
+          "p-435378"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "平儿处理玫瑰露窃案的内情，正是宝钗向宝玉解释平儿‘是个明白人’且告诫锁门防盗的直接背景。",
+        "passageIds": [
+          "p-433958",
+          "p-437031"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "众人凑份为平儿及同日生辰者庆生，随后齐聚红香圃开席行令射覆。",
+        "passageIds": [
+          "p-435378",
+          "p-437695"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "湘云在红香圃席间行令划拳输酒甚多，导致散席后醉卧于芍药花丛之中。",
+        "passageIds": [
+          "p-437695",
+          "p-440920"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "红香圃酒宴渐散后，丫鬟群芳移步园中花草丛中斗草嬉戏，直接引出香菱弄脏石榴裙。",
+        "passageIds": [
+          "p-439992",
+          "p-443754"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ldicavDSOfGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 15998,
+    "candidatesTokenCount": 2265,
+    "totalTokenCount": 18263,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15998
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2265
+      }
+    ]
+  },
+  "durationMs": 17485,
+  "requestHash": "846e3395d6d8fe0f72d5036df87cd3f33e5f003ea72d4819e44729ac80af7329"
+}

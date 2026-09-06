@@ -1,0 +1,169 @@
+{
+  "value": {
+    "summary": "第三十八回叙述贾母众人游藕香榭赏桂吃蟹，席间凤姐凑趣活跃气氛。长辈散后，诗社诸人围坐，就宝钗湘云所拟十二个菊花题各选赋诗，经李纨公评推林黛玉所作为魁。随后宝玉、黛玉、宝钗各作螃蟹诗，宝钗之作寓意深刺，被众人赞为绝唱。",
+    "nodes": [
+      {
+        "label": "藕香榭赏桂设宴",
+        "identityLabel": "藕香榭宴集",
+        "summary": "湘云依前夕所拟邀请贾母、王夫人、薛姨妈等人至大观园藕香榭赏桂吃蟹，众人登曲折竹桥入水榭。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宴会起始之景与地点选择，直接叙事，无复杂推论。",
+        "generalityHint": "涉及特定地点与人物的单次游赏聚会事件。",
+        "rationale": "开篇叙述湘云依计设局，贾母带众人至池中藕香榭，交待赏桂吃蟹的场景原委。",
+        "passageIds": [
+          "p-254365",
+          "p-254657"
+        ]
+      },
+      {
+        "label": "凤姐抹蟹黄取笑",
+        "identityLabel": "凤姐廊下戏闹",
+        "summary": "凤姐席间张罗伺候贾母等人吃蟹，复至廊下与鸳鸯、平儿说笑喝酒，平儿失手将蟹黄抹在凤姐脸上，引得众人大笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接宴饮情节展开的具体家常嬉闹叙事。",
+        "generalityHint": "描写特定主仆情态与宴间插曲。",
+        "rationale": "写吃蟹时凤姐替湘云张罗，又与鸳鸯、平儿互相调侃抹蟹黄，贾母等人闻声同乐，体现宴会轻松融洽的气氛。",
+        "passageIds": [
+          "p-255338"
+        ]
+      },
+      {
+        "label": "菊花题各赋其诗",
+        "identityLabel": "大观园题咏菊花",
+        "summary": "贾母回房后，宝玉提议散坐作诗；众人将十二个菊花题目贴出，不拘格律韵脚，宝钗、黛玉、宝玉、湘云、探春各领数题挥毫成篇。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于上回所拟诗题次序在实际席间逐一选作的过程叙述。",
+        "generalityHint": "诗社具体某次拟作活动的情境展开。",
+        "rationale": "承上回拟题，诸人各选题目（如忆菊、访菊、对菊、咏菊等）并由迎春总誊雪浪笺。",
+        "passageIds": [
+          "p-256530",
+          "p-256928"
+        ]
+      },
+      {
+        "label": "李纨公评黛玉夺魁",
+        "identityLabel": "菊花诗公评",
+        "summary": "李纨评定菊花诗，《咏菊》《问菊》《菊梦》立意新奇，公推林黛玉为魁，众人各称引诸诗妙句互相激赏。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "李纨与社中众人基于各首诗篇文本质量及构思新巧程度作出的评价与判定。",
+        "generalityHint": "针对本次菊花诗赛结果的评点定评。",
+        "rationale": "李纨主持评诗，定潇湘妃子为魁，众人随后就各人警句进行分析点评。",
+        "passageIds": [
+          "p-258789"
+        ]
+      },
+      {
+        "label": "宝玉黛玉作螃蟹诗",
+        "identityLabel": "宝黛赋螃蟹诗",
+        "summary": "食蟹时宝玉提笔自创螃蟹诗，黛玉随手挥毫成篇后自认不及而撕毁烧去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "评诗后趁兴再作应景之作，黛玉敏捷反衬宝玉之兴。",
+        "generalityHint": "特定两人在宴席间的即兴唱和。",
+        "rationale": "众人复吃热蟹，宝玉先作《螃蟹咏》，黛玉挥笔写就后笑撕其稿，为宝钗之作引出对比。",
+        "passageIds": [
+          "p-259406",
+          "p-259554",
+          "p-259636",
+          "p-259705"
+        ]
+      },
+      {
+        "label": "宝钗螃蟹咏讽世绝唱",
+        "identityLabel": "薛蘅芜讽和螃蟹咏",
+        "summary": "宝钗写就螃蟹诗，借“眼前道路无经纬，皮里春秋空黑黄”讽刺世人，众人赞为寓大意于小题目之食蟹绝唱。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "众人根据诗句中对世情与小人的辛辣讽刺，得出小题寓大意的定论。",
+        "generalityHint": "由此首具体诗作生发出的关于咏物寓意与世情讽刺的公论评价。",
+        "rationale": "宝钗螃蟹诗以深深刻毒之语刺世，呼应回目“薛蘅芜讽和螃蟹咏”，成为全回高潮结穴处。",
+        "passageIds": [
+          "p-259816",
+          "p-259851",
+          "p-259890",
+          "p-259925"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "藕香榭设席之后，凤姐在席间上下穿梭服侍、并在廊下与丫鬟取笑抹蟹黄，是宴席活动的自然展开。",
+        "passageIds": [
+          "p-254657",
+          "p-255338"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾母及长辈宴毕离去后，众人留在藕香榭继续饮酒并依题赋菊花诗。",
+        "passageIds": [
+          "p-256530",
+          "p-256928"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "众人分别写就十二首菊花诗后交由迎春誊清，成为李纨公评优劣、黛玉夺魁的文本依据。",
+        "passageIds": [
+          "p-256928",
+          "p-258789"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "评诗完毕后，众人复要热蟹，宝玉倡议“不可无诗”，由菊花诗转入螃蟹诗的创作。",
+        "passageIds": [
+          "p-258789",
+          "p-259406"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉与黛玉各成螃蟹诗之后，宝钗接着写出“皮里春秋”一首，推向螃蟹咏的讽世高潮。",
+        "passageIds": [
+          "p-259705",
+          "p-259816",
+          "p-259925"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "8tecatrdHvGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 11315,
+    "candidatesTokenCount": 1963,
+    "totalTokenCount": 13278,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11315
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1963
+      }
+    ]
+  },
+  "durationMs": 16258,
+  "requestHash": "022d2666264f15bdf346d42573a1830ff2cf9e488f1d863f619ff5e4a6ac9e39"
+}

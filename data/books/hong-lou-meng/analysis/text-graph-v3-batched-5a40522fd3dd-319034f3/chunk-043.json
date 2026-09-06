@@ -1,0 +1,158 @@
+{
+  "value": {
+    "summary": "第四十三回叙述贾母提议众人凑份子为王熙凤办生日，上下等级各出银两，尤氏私下退还数人份银；生日正日，宝玉私自着素服出城至水仙庵井台祭奠亡魂，茗烟从旁相助并劝其兼顾孝道，宝玉返家后巧言遮掩并入席看戏。",
+    "nodes": [
+      {
+        "label": "贾母提议凑份子庆寿",
+        "identityLabel": "贾母凑份子给凤姐庆生",
+        "summary": "贾母因凤姐生辰将至，提议学小家子大家凑份子办生日，叫来贾府上下媳妇姑娘共同商议。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母直接提出打破以往各自送礼的旧规矩，改为合力凑份子取乐的开端事件。",
+        "generalityHint": "涉及贾府内部的一次特定祝寿聚会安排。",
+        "rationale": "基于文本p-290066，贾母向王夫人提出学小家子凑份子为凤姐做生日，并召集众人前来商议。",
+        "passageIds": [
+          "p-290066"
+        ]
+      },
+      {
+        "label": "商定份分子银两",
+        "identityLabel": "贾府上下凑银等级与计较",
+        "summary": "贾府按主仆、长幼分派份子银两，凤姐口齿机巧为李纨免银并派给两位太太，又拉上赵周二姨娘，最终凑得一百五十余两交由尤氏操办。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接贾母凑份子的提议，众人依据地位次序定出数额，并展开言语交锋与最终汇总。",
+        "generalityHint": "涵盖贾府内部多阶层关系的具体银两派定与交涉规则。",
+        "rationale": "文本p-290622与p-291893详细记载了贾母、邢王二夫人、少奶奶、妈妈及丫鬟等层层分摊银两的经过及凤姐的算计。",
+        "passageIds": [
+          "p-290622",
+          "p-291893"
+        ]
+      },
+      {
+        "label": "尤氏退还下层份银",
+        "identityLabel": "尤氏私退份银",
+        "summary": "尤氏在收齐银两后，私下将平儿、鸳鸯、彩云以及赵周二姨娘的份子钱退还，体恤下人与妾室的艰难。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在既定份银汇总之后，尤氏针对个别困难或受制于凤姐的人所做的私下修正。",
+        "generalityHint": "特定针对平儿、姨娘等数个个体的退款行为。",
+        "rationale": "见p-292681，尤氏当面点银并指责凤姐过苛，随后暗中将银两退还平儿、鸳鸯、彩云及周、赵二人。",
+        "passageIds": [
+          "p-292681"
+        ]
+      },
+      {
+        "label": "宝玉清晨私自出奔",
+        "identityLabel": "宝玉庆寿日私自出奔",
+        "summary": "九月初二正日，众人热闹备宴开社，宝玉却着素衣私带茗烟出北门往冷清荒郊疾驰而去，引起众人诧异。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉的反常举动打破了庆寿与诗社的正常秩序，构成本回另一条关键叙事线。",
+        "generalityHint": "宝玉个人在特定时间（凤姐生日当日）的离家行动。",
+        "rationale": "基于p-293341与p-293876，李纨众人找寻宝玉不得，而宝玉其实早借口去北静王府，实则与茗烟出城奔走。",
+        "passageIds": [
+          "p-293341",
+          "p-293876"
+        ]
+      },
+      {
+        "label": "借水仙庵井台祭奠",
+        "identityLabel": "宝玉水仙庵撮土为香",
+        "summary": "宝玉为寻冷清之所借用水仙庵香炉，在后院井台掏出随身沉速香含泪祭奠亡魂，茗烟从旁代为祝祷来生相伴。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "出奔的具体目的在此揭晓，宝玉借洛神之境、选井台以寄哀思，茗烟祝词更道明心意。",
+        "generalityHint": "发生在郊外水仙庵井台的具体祭奠事件。",
+        "rationale": "文本p-294180、p-294834与p-295059叙述宝玉因洛神传说选定水仙庵，并在井台焚香祭拜，茗烟跪地替其祷告。",
+        "passageIds": [
+          "p-294180",
+          "p-294834",
+          "p-295059"
+        ]
+      },
+      {
+        "label": "宝玉还府归宴看戏",
+        "identityLabel": "宝玉归府圆谎入席",
+        "summary": "宝玉听从茗烟劝告素食后返城，换上华服来到花厅宴席，向贾母等人谎称赴北静王府吊唁姬妾，掩饰私祭并入席看戏。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由出奔祭奠收束回大观园正宴，宝玉通过谎言化解危机，使两线叙事合流。",
+        "generalityHint": "宝玉返家回话以及贾府家宴看戏的特定场景。",
+        "rationale": "文本p-295311、p-295791与p-295974叙述宝玉听从茗烟返城，换装入席以北静王姬妾亡故为由圆谎，众人继续看《荆钗记》。",
+        "passageIds": [
+          "p-295974",
+          "p-295311",
+          "p-295791"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾母提出凑份子后，众人进一步商定各级具体出资银两与分摊方式。",
+        "passageIds": [
+          "p-290066",
+          "p-290622"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "在定出各人份银并汇总后，尤氏在经手办理时私自将弱势者的银两退回。",
+        "passageIds": [
+          "p-290622",
+          "p-292681"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉清晨秘密出城奔走，其直接行动与目的地便是水仙庵井台祭奠。",
+        "passageIds": [
+          "p-293876",
+          "p-294180",
+          "p-294834"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "祭拜完毕后，茗烟劝宝玉兼顾孝道尽早进城，宝玉遂结束祭祀返府入席。",
+        "passageIds": [
+          "p-295059",
+          "p-295311",
+          "p-295974"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "EdicavavNemj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 9086,
+    "candidatesTokenCount": 2097,
+    "totalTokenCount": 11183,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9086
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2097
+      }
+    ]
+  },
+  "durationMs": 14793,
+  "requestHash": "30ef16490a3b929fd356f4755112d3d31d44acfa319496168e63a118e939c980"
+}

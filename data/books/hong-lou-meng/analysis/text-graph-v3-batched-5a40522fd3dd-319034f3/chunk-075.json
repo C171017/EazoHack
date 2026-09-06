@@ -1,0 +1,176 @@
+{
+  "value": {
+    "summary": "第七十五回叙写抄检大观园后余波未平：甄家获罪抄家之信传来，尤氏在李纨处遇宝钗辞出、探春讥评骨肉相残。贾珍借习射聚众赌博，邢德全醉怨邢夫人把持家私，异兆悲音示警。荣府八月中秋夜宴凸碧堂，贾政与贾赦借令说笑话、评子弟诗句，显露家族内耗与衰落之兆。",
+    "nodes": [
+      {
+        "label": "甄家抄没与避嫌相瞒",
+        "identityLabel": "甄家获罪抄家",
+        "summary": "尤氏闻听邸报载江南甄家犯罪抄没家私，且见甄家女眷慌张造访荣府送物，老嬷嬷劝尤氏暂避王夫人上房以避机密。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从邸报与下人传话中直接获知甄家败落之确切消息，揭开贾府面临外部政治风波之隐忧。",
+        "generalityHint": "涉及政治同盟甄府抄家的特定历史事件与贾府对此的机密反应。",
+        "rationale": "出处见尤氏刚从惜春处出来，嬷嬷劝告与尤氏对答一段，明确揭示外戚世家被抄这一外部巨变。",
+        "passageIds": [
+          "p-543663"
+        ]
+      },
+      {
+        "label": "探春论骨肉相戕与亲戚远避",
+        "identityLabel": "探春借宝钗辞出叹家族内斗",
+        "summary": "宝钗以母病为由借故辞避大观园，探春赞成并冷笑指出贾府自家亲骨肉如同乌眼鸡般恨不得互相吞噬，反不如先走以远嫌疑。",
+        "sourceRole": "dialogue",
+        "speaker": "贾探春",
+        "reasoningHint": "基于昨夜抄检大观园、自己打王善保家的等内乱事件，探春归纳出家族骨肉互相残害的严峻现实。",
+        "generalityHint": "对贾府乃至豪门内部亲情破裂、自相倾轧现象的深刻论断。",
+        "rationale": "探春面对尤氏说笑时径直道出‘有叫人撵的，不如我先撵’，痛陈‘咱们倒是一家子亲骨肉呢，一个个不象乌眼鸡，恨不得你吃了我’。",
+        "passageIds": [
+          "p-544956",
+          "p-544530"
+        ]
+      },
+      {
+        "label": "贾府缩减用度与月下行食",
+        "identityLabel": "荣府用度日窘与米粮限量",
+        "summary": "贾母用饭时见各房加菜，下令日后蠲免，又因盛上下人之米饭得知细米短缺，王夫人与鸳鸯解释为近年水旱不收且凡事皆‘可著头做帽子’。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母发现白粳米不足而盛下人米饭，王夫人与鸳鸯解释收成艰难与定量供给，显露用度吃紧的客观事实。",
+        "generalityHint": "反映全府物资供应与经济状况正在不可逆转地走下坡路。",
+        "rationale": "文中细致刻画贾母分菜、吃红稻米粥，以及尤氏添饭时下人饭与白粳米的周折，鸳鸯明确指出如今再无一点富余。",
+        "passageIds": [
+          "p-544956"
+        ]
+      },
+      {
+        "label": "贾珍借习射聚赌与邢舅怨姐",
+        "identityLabel": "宁府聚赌与邢德全醉诉家私",
+        "summary": "贾珍在天香楼下设鹄习射，渐次演变成夜夜斗叶掷骰之赌局，薛蟠、邢德全在其中混杂聚饮；邢德全酒后向贾珍大发牢骚，痛斥邢夫人克扣其家私。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从居丧无聊设射到放头开局，层层推演出世家子弟与外戚借赌消遣、内怨交加的颓靡态势。",
+        "generalityHint": "展示宁国府聚赌乱象及外戚内部利益割裂的普遍糜烂风貌。",
+        "rationale": "详细叙述贾珍借射为名开赌、哄骗长辈，以及邢德全酒后因娈童势利而拍案痛诉邢夫人把持邢家家私之实情。",
+        "passageIds": [
+          "p-547300",
+          "p-548971"
+        ]
+      },
+      {
+        "label": "会芳园夜宴祠堂异兆发悲音",
+        "identityLabel": "丛绿堂中秋夜宴祠堂发悲音",
+        "summary": "贾珍十四夜在丛绿堂带领妻妾私宴赏月，三更酒酣之际忽闻祠堂墙下长叹之声、风过树穿，祠内槅扇自开自阖，众人毛骨悚然。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从清爽月色与管弦乐声突然转向森森风气与祠堂悲音，构成家族运数由盛转衰的通灵异兆。",
+        "generalityHint": "单一超自然示警事件，但象征整个宁国府乃至贾氏祖先对子孙荒淫衰微的警兆与悲叹。",
+        "rationale": "文本明确交代地点邻近祠堂、三更长叹之声、槅扇开阖以及次日清晨开祠行礼却无异状等经过。",
+        "passageIds": [
+          "p-549766"
+        ]
+      },
+      {
+        "label": "凸碧山庄中秋开宴与击鼓传花",
+        "identityLabel": "凸碧堂中秋行令与人数冷清",
+        "summary": "贾母率众登凸碧山庄赏月，感叹人丁稀落不及当年，命屏后击鼓传花行令，贾政、宝玉、贾兰等人依次承欢作笑话与即景秋诗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对比往昔盛况与当下圆桌半空之景，贾母借行令冲淡凄凉，宝玉与贾兰分别作诗以试情思与学业。",
+        "generalityHint": "贾府核心家庭在中秋团圆夜的集体礼仪与精神状态映射。",
+        "rationale": "贾母叹息‘咱们的人也甚少’，贾政说怕老婆笑话，宝玉奉命作秋诗得扇子赏赐，贾兰亦做诗得赏。",
+        "passageIds": [
+          "p-550628"
+        ]
+      },
+      {
+        "label": "贾赦偏心之讥与赞环骨气",
+        "identityLabel": "贾赦说偏心笑话与赞贾环诗",
+        "summary": "贾赦接花罚说笑话，借‘婆子针灸针肋条因父母心偏’暗讥贾母；随后见贾环诗带奇诡仙鬼之意，大加夸赞有侯门骨气，许其承袭前程。",
+        "sourceRole": "dialogue",
+        "speaker": "贾赦",
+        "reasoningHint": "贾赦借笑话发泄积怨，又借贾环诗句反驳贾政的严格规矩，以世袭特权否定苦读折桂，借题发挥敲打两房关系。",
+        "generalityHint": "揭露荣国府大房与二房、长子与母系权威之间的深层矛盾与教育观对立。",
+        "rationale": "笑话中‘天下父母心偏的多呢’引起贾母不悦；随后赞赏贾环‘定跑不了你袭’更引发贾政当场阻拦劝解。",
+        "passageIds": [
+          "p-552316",
+          "p-552586"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "supports",
+        "rationale": "甄家犯罪被抄的政治警讯直接加剧了园中抄检后的惊惶氛围，成为促使宝钗避嫌搬出、探春慨叹家族危亡的外部背景。",
+        "passageIds": [
+          "p-543663",
+          "p-544956"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "探春对内部骨肉互相倾轧的批判，与贾母用膳时所暴露出的府内度支匮乏、细米难继共同构成了家族内外交困的现实图景。",
+        "passageIds": [
+          "p-544956"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "贾珍在居丧期间荒淫聚赌、纵欲不轨的行径，正是会芳园夜宴时引来祖先祠堂发悲音警兆的直接因果由来。",
+        "passageIds": [
+          "p-547300",
+          "p-549766"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "日常用度不足的紧缩之象，在凸碧山庄中秋团圆宴人数冷落、半桌皆空的凄清氛围中得到进一步印证与承接。",
+        "passageIds": [
+          "p-544956",
+          "p-550628"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "击鼓传花行令的过程中，贾赦接替贾政饮酒，由此引出针灸偏心的讥讽笑话以及对贾环诗作的借题发挥。",
+        "passageIds": [
+          "p-550628",
+          "p-552316",
+          "p-552586"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "0dicat6DKfGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 14108,
+    "candidatesTokenCount": 2548,
+    "totalTokenCount": 16656,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14108
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2548
+      }
+    ]
+  },
+  "durationMs": 20089,
+  "requestHash": "d81daba8e7a9c0a56fe8da2d111d2327944174c328da1b9bd186734ba810720a"
+}
