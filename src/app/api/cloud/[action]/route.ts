@@ -1,10 +1,13 @@
 import { cookies } from 'next/headers';
 import { z } from 'zod';
 import { createHash } from 'node:crypto';
-import { backend, cloudConfig, cloudUser, sameOrigin, serviceKey, setSession } from '@/server/cloud/backend';
+import { backend, cloudConfig, cloudUser, sameOrigin, serviceKey, signOut, clearSession } from '@/server/cloud/backend';
 import { readJson, requestError, RequestBodyError } from '@/server/http';
 import { invokeBookAnalysis } from '@/server/book-analysis/cloud/invoke';
-import { WorkspaceSnapshotSchema } from '@/features/persistence';
+import { WorkspaceSnapshotSchema, type WorkspaceSnapshot } from '@/features/persistence';
+import { assertAccountActive, accountSummary, exportAccount, exportAccountFile, deleteAccount } from '@/server/cloud/account';
+import { validateSnapshotSource } from '@/server/cloud/snapshot';
+import { sourceTextCache } from '@/server/cloud/source-cache';
 export const runtime='nodejs';
 const uuid=z.uuid();
 const json=(body:unknown)=>Response.json(body,{headers:{'Cache-Control':'private, no-store'}});
@@ -13,22 +16,19 @@ export async function GET(request:Request,context:{params:Promise<{action:string
  try {
   const {action}=await context.params;
   if(action==='session') {
-   try {const user=await cloudUser();return json({email:user.email,id:user.id});}catch {
-    const refresh=(await cookies()).get('eazo-refresh')?.value;
-    if(!refresh)return json({email:null});
-    try {
-     const session=await backend<{access_token:string;refresh_token:string;expires_in:number}>('/auth/v1/token?grant_type=refresh_token',cloudConfig().key,{method:'POST',body:JSON.stringify({refresh_token:refresh})});
-     await setSession(session);const user=await cloudUser();return json({email:user.email,id:user.id});
-    }catch{return json({email:null});}
-   }
+   try {const user=await cloudUser();return json({email:user.email,id:user.id});}
+   catch(error) {if(error instanceof RequestBodyError && error.status===401)return json({email:null,id:null});throw error;}
   }
   const user=await cloudUser();
+  checkOwner(request,user.id);
+  if(action==='account')return json(await accountSummary(user));
+  if(action==='export')return Response.json(await exportAccount(user,new URL(request.url).searchParams.get('cursor')??undefined),{headers:{'Cache-Control':'private, no-store','Content-Disposition':'attachment; filename="eazo-account.json"'}});
+  await assertAccountActive(user);
   if(action==='books')return json(await backend('/rest/v1/books?select=*,book_sources(*)&order=created_at.desc&limit=100',user.token));
   if(action==='jobs')return json(await backend('/rest/v1/analysis_jobs?select=id,book_id,status,attempt,error_code,created_at&order=created_at.desc&limit=50',user.token));
   if(action==='snapshot') {
    const source=uuid.parse(new URL(request.url).searchParams.get('source'));
-   const rows=await backend<{payload:unknown}[]>(`/rest/v1/reading_snapshots?source_id=eq.${source}&order=created_at.desc&limit=1&select=payload`,user.token);
-   return json(rows[0]?.payload??null);
+   return json(await backend('/rest/v1/rpc/eazo_snapshot_head',user.token,{method:'POST',body:JSON.stringify({p_source:source})}));
   }
   throw new RequestBodyError('Unknown cloud action.',404);
  }catch(error){return requestError(error);}
@@ -36,23 +36,30 @@ export async function GET(request:Request,context:{params:Promise<{action:string
 export async function POST(request:Request,context:{params:Promise<{action:string}>}) {
  try {
   sameOrigin(request);const {action}=await context.params;const body=await readJson(request,action==='snapshot'?3*1024*1024:128*1024);
-  if(action==='login') {
-   const input=z.object({email:z.email(),password:z.string().min(1).max(1000)}).parse(body);
-   const session=await backend<{access_token:string;refresh_token:string;expires_in:number}>('/auth/v1/token?grant_type=password',cloudConfig().key,{method:'POST',body:JSON.stringify(input)});
-   await setSession(session);return json({ok:true});
-  }
+  if(action==='login')throw new RequestBodyError('Use Continue with Google to sign in.',410);
   if(action==='logout') {
-   const jar=await cookies();const token=jar.get('eazo-access')?.value;
-   try {if(token)await backend('/auth/v1/logout',token,{method:'POST'});}catch { /* Expired sessions must still sign out locally. */ }
-   jar.delete('eazo-access');jar.delete('eazo-refresh');jar.delete('eazo-book');return json({ok:true});
+   if(request.headers.has('x-eazo-owner')) {
+    try {checkOwner(request,(await cloudUser()).id);}catch(error){if(!(error instanceof RequestBodyError)||error.status!==401)throw error;}
+   }
+   return json({ok:true,...await signOut()});
   }
   const user=await cloudUser();
+  checkOwner(request,user.id);
+  if(action==='delete-account') {
+   z.object({confirmation:z.literal('DELETE')}).parse(body);
+   sourceTextCache.clearOwner(user.id);await deleteAccount(user);await clearSession();return json({ok:true});
+  }
+  await assertAccountActive(user);
+  if(action==='export-file'){
+   const input=z.object({kind:z.enum(['source','original','manifest','graph','hierarchy']),id:uuid}).parse(body);
+   return json(await exportAccountFile(user,input));
+  }
   if(action==='prepare') {
-   const input=z.object({localBookId:z.string().min(1).max(200),title:z.string().min(1).max(1000),fileHash:z.string().regex(/^[a-f0-9]{64}$/),extractionVersion:z.string().min(1).max(160),sourceSha256:z.string().regex(/^[a-f0-9]{64}$/)}).parse(body);
+   const input=z.object({localBookId:z.string().min(1).max(200),title:z.string().min(1).max(1000),fileHash:z.string().regex(/^[a-f0-9]{64}$/),extractionVersion:z.string().min(1).max(160),sourceSha256:z.string().regex(/^[a-f0-9]{64}$/),sourceBytes:z.number().int().positive().max(50*1024*1024)}).parse(body);
    let books=await backend<{id:string}[]>(`/rest/v1/books?owner_id=eq.${user.id}&local_book_id=eq.${encodeURIComponent(input.localBookId)}&select=id`,user.token);
    if(!books.length)books=await backend('/rest/v1/books',user.token,{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({owner_id:user.id,local_book_id:input.localBookId,title:input.title,format:'txt'})});
    const book=books[0];let sources=await backend<Source[]>(`/rest/v1/book_sources?book_id=eq.${book.id}&file_hash=eq.${encodeURIComponent(input.fileHash)}&extraction_version=eq.${encodeURIComponent(input.extractionVersion)}`,user.token);
-   if(!sources.length){const id=crypto.randomUUID();sources=await backend('/rest/v1/book_sources',user.token,{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({id,owner_id:user.id,book_id:book.id,file_hash:input.fileHash,extraction_version:input.extractionVersion,source_object:`${user.id}/${book.id}/${id}/source.txt`,manifest:{sourceSha256:input.sourceSha256}})});}
+   if(!sources.length){const id=crypto.randomUUID();sources=await backend('/rest/v1/book_sources',user.token,{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({id,owner_id:user.id,book_id:book.id,file_hash:input.fileHash,extraction_version:input.extractionVersion,source_object:`${user.id}/${book.id}/${id}/source.txt`,manifest:{sourceSha256:input.sourceSha256,sourceBytes:input.sourceBytes}})});}
    const source=sources[0];if(source.manifest.sourceSha256!==input.sourceSha256)throw new RequestBodyError('Source identity conflicts with an existing version.',409);
    const upload=await backend<{url:string}>(`/storage/v1/object/upload/sign/eazo-sources/${source.source_object}`,user.token,{method:'POST',body:'{}'});
    return json({source,uploadUrl:cloudConfig().url+'/storage/v1'+upload.url});
@@ -70,11 +77,15 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    return json({url:cloudConfig().url+'/storage/v1'+result.signedURL,source:sources[0]});
   }
   if(action==='snapshot') {
-   const {source:id,payload,device}=z.object({source:uuid,payload:WorkspaceSnapshotSchema,device:uuid}).parse(body);
+   const {source:id,payload,device,baseRevision,mutationId}=z.object({source:uuid,payload:WorkspaceSnapshotSchema,device:uuid,baseRevision:z.number().int().nonnegative(),mutationId:uuid}).parse(body);
    const [source]=await backend<Source[]>(`/rest/v1/book_sources?id=eq.${id}`,user.token);if(!source)throw new RequestBodyError('Book not found.',404);
    const [book]=await backend<{local_book_id:string}[]>(`/rest/v1/books?id=eq.${source.book_id}&select=local_book_id`,user.token);
-   if(payload.bookId!==book.local_book_id||payload.anchors.some(a=>a.fileHash!==source.file_hash||a.extractionVersion!==source.extraction_version))throw new RequestBodyError('Saved reading does not match this source.',400);
-   await backend('/rest/v1/reading_snapshots',user.token,{method:'POST',body:JSON.stringify({owner_id:user.id,book_id:source.book_id,source_id:id,checkpoint_id:payload.id,device_id:device,payload})});return json({ok:true});
+   const {downloadSource}=await import('@/server/cloud/map');
+   const sourceText=await sourceTextCache.get({ownerId:user.id,sourceId:source.id,fileHash:source.file_hash,extractionVersion:source.extraction_version,sourceSha256:source.manifest.sourceSha256},()=>downloadSource(source.source_object,user.token));
+   validateSnapshotSource(payload,{bookId:book.local_book_id,fileHash:source.file_hash,extractionVersion:source.extraction_version,sourceText});
+   const result=await backend<{status:'saved'|'conflict';revision:number;payload:WorkspaceSnapshot|null}>('/rest/v1/rpc/eazo_save_snapshot',user.token,{method:'POST',body:JSON.stringify({p_source:id,p_device:device,p_mutation:mutationId,p_base_revision:baseRevision,p_payload:payload})});
+   if(result.status==='conflict')return Response.json({error:{code:'snapshot_conflict',message:'This book changed on another device. Both versions have been kept.'},current:{revision:result.revision,payload:result.payload}},{status:409,headers:{'Cache-Control':'private, no-store'}});
+   return json({revision:result.revision,payload:result.payload});
   }
   if(action==='connection') {
    // Authenticate both cloud identities without starting a job or making a model call.
@@ -111,4 +122,9 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
   }
   throw new RequestBodyError('Unknown cloud action.',404);
  }catch(error){return requestError(error);}
+}
+
+function checkOwner(request:Request,owner:string) {
+ const expected=request.headers.get('x-eazo-owner');
+ if(expected && expected!==owner)throw new RequestBodyError('Your account changed. Reopen your library before continuing.',403);
 }

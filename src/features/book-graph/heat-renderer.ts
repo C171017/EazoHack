@@ -12,7 +12,8 @@ const colorVector = (rgb: readonly number[]) => `vec3(${rgb.map(c => (c / 255).t
 const fragment = `#version 300 es
 precision highp float;
 precision highp sampler3D;
-uniform sampler3D volume;
+uniform sampler3D volume, previousVolume;
+uniform float reveal;
 uniform vec2 resolution, viewport, pan;
 uniform vec3 lower, upper, center, rightAxis, downAxis, depthAxis;
 uniform float scale;
@@ -46,7 +47,8 @@ void main() {
   for (int i = 0; i < 128; i++) {
     float t = mix(enter, leave, (float(i) + .5) / 128.0);
     vec3 uvw = (origin + depthAxis * t - lower) / (upper - lower);
-    density = max(density, texture(volume, uvw).r);
+    float nextDensity = texture(volume, uvw).r;
+    density = max(density, reveal >= 1.0 ? nextDensity : mix(texture(previousVolume, uvw).r, nextDensity, reveal));
     if (density > .998) break;
   }
   float value = density * ${HEAT_MAX.toFixed(1)};
@@ -70,30 +72,50 @@ export function createHeatRenderer(canvas: HTMLCanvasElement) {
   gl.attachShader(program, vs); gl.attachShader(program, fs); gl.linkProgram(program);
   gl.deleteShader(vs); gl.deleteShader(fs);
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) { gl.deleteProgram(program); throw new Error('Heat shader link failed'); }
-  const texture = gl.createTexture()!;
-  gl.bindTexture(gl.TEXTURE_3D, texture);
+  const texture = gl.createTexture()!, previousTexture = gl.createTexture()!;
+  for (const target of [texture, previousTexture]) {
+  gl.bindTexture(gl.TEXTURE_3D, target);
   gl.texParameteri(gl.TEXTURE_3D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
   gl.texParameteri(gl.TEXTURE_3D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
   for (const axis of [gl.TEXTURE_WRAP_S, gl.TEXTURE_WRAP_T, gl.TEXTURE_WRAP_R]) gl.texParameteri(gl.TEXTURE_3D, axis, gl.CLAMP_TO_EDGE);
-  const uniforms = new Map(['volume', 'resolution', 'viewport', 'pan', 'lower', 'upper', 'center', 'rightAxis', 'downAxis', 'depthAxis', 'scale']
+  }
+  const uniforms = new Map(['previousVolume', 'reveal', 'volume', 'resolution', 'viewport', 'pan', 'lower', 'upper', 'center', 'rightAxis', 'downAxis', 'depthAxis', 'scale']
     .map(name => [name, gl.getUniformLocation(program, name)]));
   let uploaded: HeatVolume | null = null;
+  let previousData = new Uint8Array(0), changedAt = 0;
+  const blendAt = (now: number, duration: number) => {
+    const t = duration ? Math.min(1, Math.max(0, (now - changedAt) / duration)) : 1;
+    return t * t * (3 - 2 * t);
+  };
   return {
-    draw(field: HeatVolume, view: MapView, size: Size, readingProgress: number) {
+    draw(field: HeatVolume, view: MapView, size: Size, readingProgress: number, transitionMs = 0) {
       if (!size.width || !size.height || gl.isContextLost()) return;
       // At most 180k shaded pixels, independent of display DPR or a 4K window.
       const ratio = Math.min(1, Math.sqrt(180000 / (size.width * size.height)));
       const width = Math.max(1, Math.round(size.width * ratio)), height = Math.max(1, Math.round(size.height * ratio));
       if (canvas.width !== width || canvas.height !== height) { canvas.width = width; canvas.height = height; }
       gl.viewport(0, 0, width, height); gl.useProgram(program); gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_3D, texture);
+      const now = performance.now();
       if (uploaded !== field) {
+        const blend = blendAt(now, transitionMs);
+        // Continue from the currently visible density when arrivals overlap.
+        // Both replay volumes use the final field's fixed bounds and grid.
+        previousData = uploaded && previousData.length === field.data.length
+          ? Uint8Array.from(uploaded.data, (value, i) => Math.round(previousData[i] + (value - previousData[i]) * blend))
+          : new Uint8Array(field.data.length);
+        changedAt = now;
         gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1);
         gl.texImage3D(gl.TEXTURE_3D, 0, gl.R8, ...field.dimensions, 0, gl.RED, gl.UNSIGNED_BYTE, field.data);
+        gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_3D, previousTexture);
+        gl.texImage3D(gl.TEXTURE_3D, 0, gl.R8, ...field.dimensions, 0, gl.RED, gl.UNSIGNED_BYTE, previousData);
         uploaded = field;
       }
       const c = view.framing?.center ?? { x: 0, y: 0, z: 0 };
       const cy = Math.cos(view.yaw), sy = Math.sin(view.yaw), cp = Math.cos(view.pitch), sp = Math.sin(view.pitch);
       gl.uniform1i(uniforms.get('volume')!, 0);
+      gl.uniform1i(uniforms.get('previousVolume')!, 1);
+      const reveal = blendAt(now, transitionMs);
+      gl.uniform1f(uniforms.get('reveal')!, reveal);
       gl.uniform2f(uniforms.get('resolution')!, width, height);
       gl.uniform2f(uniforms.get('viewport')!, size.width, size.height);
       gl.uniform2f(uniforms.get('pan')!, view.x, view.y);
@@ -106,7 +128,8 @@ export function createHeatRenderer(canvas: HTMLCanvasElement) {
       gl.uniform3f(uniforms.get('depthAxis')!, -sy * cp, cy * cp, sp);
       gl.uniform1f(uniforms.get('scale')!, baseScale(size) * (view.framing?.scale ?? 1) * view.zoom);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
+      return reveal < 1;
     },
-    destroy() { gl.deleteTexture(texture); gl.deleteProgram(program); },
+    destroy() { gl.deleteTexture(texture); gl.deleteTexture(previousTexture); gl.deleteProgram(program); },
   };
 }

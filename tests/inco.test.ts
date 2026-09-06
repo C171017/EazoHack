@@ -24,7 +24,7 @@ test('Inco routes all three methods and preserves validated artifacts and proven
     assert.equal(result.payload.provider,'inco');
     assert.equal(result.payload.kind,kind);
     assert.deepEqual(result.payload.anchorIds,fixtureSelection.anchorIds);
-    assert.equal(dispatchProvider('real',[kind]),'vertex_ai');
+    assert.equal(dispatchProvider('real',[kind]),'inco');
   }
 });
 

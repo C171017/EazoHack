@@ -14,12 +14,11 @@ set local role authenticated;
 select set_config('request.jwt.claim.sub','11111111-1111-4111-8111-111111111111',true);
 insert into public.books(id,owner_id,local_book_id,title,format) values
  ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',auth.uid(),'txt:local','Test','txt');
-insert into public.book_sources(id,book_id,owner_id,file_hash,extraction_version,source_object) values
+insert into public.book_sources(id,book_id,owner_id,file_hash,extraction_version,source_object,manifest) values
  ('bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb','aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa',auth.uid(),'hash','v1',
- '11111111-1111-4111-8111-111111111111/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa/bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb/source.txt');
+ '11111111-1111-4111-8111-111111111111/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa/bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb/source.txt',jsonb_build_object('sourceBytes',10,'sourceSha256',repeat('a',64)));
 insert into storage.objects(bucket_id,name) select 'eazo-sources',source_object from public.book_sources;
-insert into public.reading_snapshots(book_id,source_id,owner_id,checkpoint_id,device_id,payload)
- values ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',auth.uid(),'checkpoint',gen_random_uuid(),'{}');
+select public.eazo_save_snapshot('bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',gen_random_uuid(),gen_random_uuid(),0,'{"id":"checkpoint","bookId":"txt:local","anchors":[]}');
 insert into public.reading_events(book_id,source_id,owner_id,device_id,local_event_id,kind,payload)
  values ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',auth.uid(),gen_random_uuid(),'1','selection','{}');
 select pg_temp.assert((select count(*)=1 from public.books),'owner read');
@@ -44,20 +43,22 @@ select pg_temp.assert((select count(*)=0 from public.reading_events),'other user
 select pg_temp.assert((select count(*)=0 from storage.objects),'other user storage');
 with changed as (update public.books set title='attack' returning *) select pg_temp.assert(count(*)=0,'other user update') from changed;
 select pg_temp.denied($q$insert into public.books(owner_id,local_book_id,title,format) values ('11111111-1111-4111-8111-111111111111','attack','attack','txt')$q$,'forged owner');
-select pg_temp.denied($q$insert into public.reading_snapshots(book_id,source_id,owner_id,checkpoint_id,device_id,payload) values ('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',auth.uid(),'attack',gen_random_uuid(),'{}')$q$,'cross-owner source FK');
+select pg_temp.denied($q$select public.eazo_save_snapshot('bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',gen_random_uuid(),gen_random_uuid(),1,'{"id":"attack","bookId":"txt:local","anchors":[]}')$q$,'cross-owner source snapshot');
+select pg_temp.denied($q$insert into public.reading_events(book_id,source_id,owner_id,device_id,local_event_id,kind,payload) values('aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',auth.uid(),gen_random_uuid(),'attack','selection','{}')$q$,'cross-owner source FK');
 select pg_temp.denied($q$insert into storage.objects(bucket_id,name) values ('eazo-sources','11111111-1111-4111-8111-111111111111/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa/bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb/original.pdf')$q$,'cross-user upload');
 reset role;
 set local role service_role;
 insert into public.analysis_jobs(id,book_id,source_id,owner_id,idempotency_key,pipeline_version,model) values
  ('cccccccc-cccc-4ccc-8ccc-cccccccccccc','aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb','11111111-1111-4111-8111-111111111111','once','v1','test');
-select pg_temp.assert((select count(*)=1 from public.claim_analysis_job('cccccccc-cccc-4ccc-8ccc-cccccccccccc')),'claim queued');
-select pg_temp.assert((select count(*)=0 from public.claim_analysis_job('cccccccc-cccc-4ccc-8ccc-cccccccccccc')),'duplicate claim fenced');
+select pg_temp.assert(public.eazo_worker('claim','cccccccc-cccc-4ccc-8ccc-cccccccccccc','dddddddd-dddd-4ddd-8ddd-dddddddddddd')->>'id'='cccccccc-cccc-4ccc-8ccc-cccccccccccc','claim queued');
+select pg_temp.assert(public.eazo_worker('claim','cccccccc-cccc-4ccc-8ccc-cccccccccccc','eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee')->>'busy'='true','duplicate claim fenced');
 select pg_temp.assert(not public.complete_analysis_job('cccccccc-cccc-4ccc-8ccc-cccccccccccc',gen_random_uuid(),'v1',repeat('a',64)),'wrong lease rejected');
 select pg_temp.assert(public.heartbeat_analysis_job(id,lease_token),'heartbeat') from public.analysis_jobs;
 update public.analysis_jobs set lease_expires_at=now()-interval '1 second';
 select pg_temp.assert(not public.heartbeat_analysis_job(id,lease_token),'expired heartbeat rejected') from public.analysis_jobs;
 select pg_temp.assert(not public.complete_analysis_job(id,lease_token,'v1',repeat('a',64)),'expired publish rejected') from public.analysis_jobs;
-select pg_temp.assert((select attempt=2 from public.claim_analysis_job('cccccccc-cccc-4ccc-8ccc-cccccccccccc')),'reclaim expired');
+select pg_temp.assert(public.eazo_worker('claim','cccccccc-cccc-4ccc-8ccc-cccccccccccc','eeeeeeee-eeee-4eee-8eee-eeeeeeeeeeee')->>'id'='cccccccc-cccc-4ccc-8ccc-cccccccccccc','reclaim expired');
+select pg_temp.assert((select attempt=2 from public.analysis_jobs where id='cccccccc-cccc-4ccc-8ccc-cccccccccccc'),'reclaim increments attempt');
 select pg_temp.assert(public.complete_analysis_job(id,lease_token,'v1',repeat('a',64)),'publish valid lease') from public.analysis_jobs;
 select pg_temp.assert((select status='succeeded' from public.analysis_jobs),'atomic success');
 insert into storage.objects(bucket_id,name) select 'eazo-analysis',manifest_object from public.graph_versions;

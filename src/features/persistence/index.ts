@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { FootprintSchema } from "../book-graph/reading-heat";
 import { ArtifactPlacementSchema } from '../reader/artifact-placement';
 import {
   ArtifactSchema,
@@ -35,6 +36,7 @@ export const WorkspaceSnapshotSchema = z.object({
     extractionVersion: z.string().min(1).max(160),
     startOffset: z.number().int().nonnegative(),
   }).strict().nullable().default(null),
+  footprints: z.array(FootprintSchema).max(10_000).default([]),
   bookmarks: z.array(z.string().min(1)).max(10_000).default([]),
   savedAt: z.string().datetime(),
 }).strict().superRefine((snapshot, context) => {
@@ -51,6 +53,9 @@ export const WorkspaceSnapshotSchema = z.object({
       }
     });
   }
+  snapshot.footprints.forEach((event, index) => {
+    if (event.bookId !== snapshot.bookId) issue(["footprints", index], "Checkpoint cannot mix books");
+  });
   const anchors = new Set(snapshot.anchors.map((anchor) => anchor.id));
   const selections = new Map(snapshot.selections.map((selection) => [selection.id, selection]));
   const artifacts = new Set(snapshot.artifacts.map((artifact) => artifact.id));

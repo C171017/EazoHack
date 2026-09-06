@@ -1,3 +1,4 @@
+import { getBookPreview } from '@/features/reader/book-preview';
 import { cookies } from 'next/headers';
 import { createHash } from 'node:crypto';
 import { z } from 'zod';
@@ -5,7 +6,7 @@ import { backend, cloudConfig, cloudUser } from './backend';
 import { GraphSchema } from '@/shared/schemas';
 import { validateHierarchy } from '@/shared/zoom-hierarchy';
 import { validateGraphSource } from '../book-analysis/graph';
-import { createMapStore, mapBootstrap } from '../book-map/store';
+import { createMapStore, mapBootstrap, loadMapStore } from '../book-map/store';
 async function object(bucket:string,path:string,token:string) {
  const {url,key}=cloudConfig();
  const response=await fetch(`${url}/storage/v1/object/authenticated/${bucket}/${path.split('/').map(encodeURIComponent).join('/')}`,{headers:{apikey:key,Authorization:`Bearer ${token}`},cache:'no-store',signal:AbortSignal.timeout(30000)});
@@ -16,10 +17,10 @@ async function object(bucket:string,path:string,token:string) {
 }
 export const downloadSource=(path:string,token:string)=>object('eazo-sources',path,token);
 const hash=(bytes:Buffer)=>createHash('sha256').update(bytes).digest('hex');
-export async function selectedCloudBook() {
+export async function selectedCloudBook({refresh=true}:{refresh?:boolean}={}) {
  if(!process.env.SUPABASE_URL)return null;
  const id=(await cookies()).get('eazo-book')?.value;if(!id)return null;z.uuid().parse(id);
- const user=await cloudUser();
+ const user=await cloudUser({refresh});
  const [source]=await backend<{id:string;book_id:string;source_object:string;file_hash:string;extraction_version:string;manifest:{sourceSha256:string}}[]>(`/rest/v1/book_sources?id=eq.${id}`,user.token);
  if(!source)throw new Error('Cloud source is unavailable for this account.');
  const [book]=await backend<{local_book_id:string;title:string}[]>(`/rest/v1/books?id=eq.${source.book_id}`,user.token);
@@ -39,5 +40,13 @@ export async function selectedCloudBook() {
   if(graph.bookId!==book.local_book_id)throw new Error('Map book mismatch.');
   const hierarchy=validateHierarchy(JSON.parse(h.toString()),graph);store=createMapStore(graph,hierarchy);
  }
- return {sourceId:id,title:book.title,preview,store,graph:store?mapBootstrap(store):{bookId:book.local_book_id,graphVersion:book.local_book_id,version:book.local_book_id,roots:[],depth:0,totalNodes:0,unplaced:0,territories:[],unavailable:true}};
+ // Copying the public sample into an account retains its already-verified map.
+ // Match the entire immutable source before sharing this public analysis.
+ if(!store && book.local_book_id==='plato-republic') {
+  try {
+   const sample=await getBookPreview();
+   if(sample.fileHash===source.file_hash && sample.extractionVersion===source.extraction_version && sample.sourceText===sourceText)store=await loadMapStore();
+  } catch { /* Reading remains available when the optional public map is absent. */ }
+ }
+ return {sourceId:id,ownerId:user.id,title:book.title,preview,store,graph:store?mapBootstrap(store):{bookId:book.local_book_id,graphVersion:book.local_book_id,version:book.local_book_id,roots:[],depth:0,totalNodes:0,unplaced:0,territories:[],unavailable:true}};
 }

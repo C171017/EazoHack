@@ -41,7 +41,7 @@ export function fitEntries(entries:MapEntry[],view:MapView,size:Size,progress:nu
 
 // Apply the same screen-space limits to gestures, restored views and resizing.
 export function confinePan(view:MapView,size:Size):MapView {
-  if(view.projection==='3d'||size.width<=0||size.height<=0)return view;
+  if(size.width<=0||size.height<=0)return view;
   const {min,max}=GRID_PAN_BOUNDS;
   const unpanned={...view,x:0,y:0};
   const corners=[min.x,max.x].flatMap(x=>[min.y,max.y].flatMap(y=>[min.z,max.z].map(z=>screenWorld({x,y,z},unpanned,size))));

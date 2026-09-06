@@ -73,5 +73,7 @@ export function imageProviderName(): "fal" | "bfl" {
 
 export function routeProviderName(kind: RouteKind): "vertex_ai" | "inco" | "bfl" | "fal" {
   if (kind === "generated_image") return imageProviderName();
-  return devModelChoice(kind) === "inco" ? "inco" : "vertex_ai";
+  const override = devModelChoice(kind);
+  if (override === "vertex_ai" || override === "inco") return override;
+  return kind === "source_discovery" ? "vertex_ai" : "inco";
 }

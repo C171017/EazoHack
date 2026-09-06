@@ -10,6 +10,7 @@ import { sourceWorld } from './projection';
 import { SpatialHeat } from './spatial-heat';
 import { readingTrajectory, replayFrame, replayHeat, replayView, type ReplayVisit } from './reading-replay';
 import styles from './reading-replay.module.css';
+import { replayCurve, replayProgress } from './replay-curve';
 
 export function ReadingReplay({ points, loading, error, view, size, readingProgress, axisVersion, onStart }: {
   points: HeatPoint[]; loading?: boolean; error?: string | null; view: MapView; size: Size;
@@ -49,6 +50,7 @@ function ReplayScene({ visits, base, size, progress, axisVersion, onFinish }: {
   const fullField = useMemo(() => buildHeatVolume(allPoints, 'all')!, [allPoints]);
   const field = useMemo(() => count === visits.length ? fullField : buildHeatVolume(replayHeat(visits, count), 'all', fullField), [visits, count, fullField]);
   const projected = useMemo(() => visits.map(visit => screenWorld(sourceWorld(visit.point.leaf.position, [0, 1], progress), view, size)), [visits, view, size, progress]);
+  const curve = useMemo(() => replayCurve(projected), [projected]);
   useEffect(() => {
     const element = canvas.current!, ctx = element.getContext('2d');
     if (!ctx) { const timer = setTimeout(onFinish, 0); return () => clearTimeout(timer); }
@@ -56,50 +58,42 @@ function ReplayScene({ visits, base, size, progress, axisVersion, onFinish }: {
     element.width = Math.max(1, Math.round(size.width * ratio)); element.height = Math.max(1, Math.round(size.height * ratio));
     ctx.scale(ratio, ratio);
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const path = new Path2D(curve.path);
     let frame = 0, lastHeatUpdate = -Infinity;
     const draw = (now: number) => {
       started.current ??= now;
       const elapsed = now - started.current;
       const state = replayFrame(visits.length, elapsed, reduced);
       if (state.done) { onFinish(); return; }
+      const distance = curve.length * replayProgress(state.cursor / Math.max(1, visits.length - 1));
+      let arrived = 1;
+      if (curve.length > 0) {
+        while (arrived < visits.length && curve.stops[arrived] <= distance) arrived++;
+      } else arrived = state.count;
       // Heat uploads are capped at 8 Hz for long histories; the trail stays smooth.
-      if (now - lastHeatUpdate >= 125 || state.count === visits.length) { setCount(state.count); lastHeatUpdate = now; }
+      if (now - lastHeatUpdate >= 125 || arrived === visits.length) { setCount(arrived); lastHeatUpdate = now; }
       ctx.clearRect(0, 0, size.width, size.height);
       ctx.globalAlpha = state.opacity;
-      const index = Math.floor(state.cursor), fraction = state.cursor - index;
-      const from = projected[index], to = projected[Math.min(index + 1, projected.length - 1)];
-      const head = { x: from.x + (to.x - from.x) * fraction, y: from.y + (to.y - from.y) * fraction };
-      // Neutral, fine lines carry time; green/yellow/orange/red remain density only.
-      ctx.beginPath(); ctx.moveTo(projected[0].x, projected[0].y);
-      for (let i = 1; i <= index; i++) ctx.lineTo(projected[i].x, projected[i].y);
-      ctx.lineTo(head.x, head.y);
-      ctx.strokeStyle = '#10151b'; ctx.lineWidth = 4; ctx.lineJoin = 'round'; ctx.stroke();
-      ctx.strokeStyle = '#e1e9cf'; ctx.lineWidth = 1.4; ctx.stroke();
-      // One marker per visited location, even when many generations return there.
-      const seen = new Set<string>();
-      for (let i = 0; i <= index; i++) {
-        const id = visits[i].point.leaf.id;
-        if (seen.has(id)) continue;
-        seen.add(id); ctx.beginPath(); ctx.arc(projected[i].x, projected[i].y, 2.6, 0, Math.PI * 2);
-        ctx.fillStyle = '#e1e9cf'; ctx.fill();
+      if (curve.length > 0 && (reduced || distance > .01)) {
+        // One translucent milk-white ribbon, without an outline or stop/head dots.
+        ctx.setLineDash(reduced || distance >= curve.length ? [] : [distance, curve.length + 1]);
+        ctx.strokeStyle = 'rgba(255, 252, 242, 0.62)';
+        ctx.lineWidth = 1.8; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+        ctx.shadowColor = 'rgba(255, 252, 242, 0.24)'; ctx.shadowBlur = 5;
+        ctx.stroke(path);
       }
-      // A ring makes repeated visits at identical coordinates visible too.
-      ctx.beginPath(); ctx.arc(head.x, head.y, reduced ? 8 : 7 + 5 * (1 - fraction), 0, Math.PI * 2);
-      ctx.strokeStyle = '#e7efd9'; ctx.lineWidth = 1; ctx.stroke();
-      ctx.beginPath(); ctx.arc(head.x, head.y, 4, 0, Math.PI * 2);
-      ctx.fillStyle = '#f7faed'; ctx.fill();
       frame = requestAnimationFrame(draw);
     };
     frame = requestAnimationFrame(draw);
     return () => cancelAnimationFrame(frame);
-  }, [projected, visits, size, onFinish]);
+  }, [curve, visits, size, onFinish]);
   const event = visits[count - 1]?.event;
   return <div className={styles.overlay} data-reading-replay data-replay-count={count} data-replay-total={visits.length}
     onKeyDown={e => e.stopPropagation()} onWheel={e => e.stopPropagation()}>
     <svg width="100%" height="100%" aria-hidden="true">
       <MapGrid size={size} projection={view.projection} screen={p => screenWorld(p, view, size)} axisVersion={axisVersion} readingProgress={progress} />
     </svg>
-    {field && <SpatialHeat field={field} view={view} size={size} readingProgress={progress} />}
+    {field && <SpatialHeat transitionMs={650} field={field} view={view} size={size} readingProgress={progress} />}
     <canvas ref={canvas} className={styles.trail} aria-hidden="true" />
     <div className={styles.caption}><span>{count} / {visits.length}</span><span aria-hidden="true">·</span>
       {event && <time dateTime={event.createdAt}>{new Date(event.createdAt).toLocaleString(undefined, { month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' })}</time>}

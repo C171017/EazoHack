@@ -1,4 +1,4 @@
-.control { position: absolute; top: 16px; left: 16px; z-index: 8; width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid #87978935; border-radius: 50%; background: #171e22dd; color: #d1dfd3; transition: background .18s, border-color .18s; }
+.control { position: absolute; top: 16px; right: 16px; z-index: 8; width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid #87978935; border-radius: 50%; background: #171e22dd; color: #d1dfd3; transition: background .18s, border-color .18s; }
 .control:hover:not(:disabled) { background: #29382e; border-color: #aecdb6; }
 .control:focus-visible { outline: 2px solid #d0e7cf; outline-offset: 4px; }
 .control:disabled { opacity: .35; cursor: default; }

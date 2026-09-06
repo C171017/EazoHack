@@ -14,8 +14,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ b
     const graph: MapBootstrap = {bookId: 'hong-lou-meng', graphVersion: 'sample-pending', version: 'sample-pending', roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true};
     return <Workspace key="hong-lou-meng" preview={preview} graph={graph} initialTitle="红楼梦"/>;
   }
-  let cloud;try {cloud=book === 'plato-republic' ? null : await selectedCloudBook();} catch {redirect('/cloud');}
-  if(cloud)return <Workspace key={cloud.sourceId} preview={cloud.preview} graph={cloud.graph} initialTitle={cloud.title} cloudSourceId={cloud.sourceId}/>;
+  let cloud;try {cloud=book === 'plato-republic' ? null : await selectedCloudBook({refresh:false});} catch {redirect('/cloud');}
+  if(cloud)return <Workspace key={`${cloud.ownerId}:${cloud.sourceId}`} preview={cloud.preview} graph={cloud.graph} initialTitle={cloud.title} cloudSourceId={cloud.sourceId} cloudOwnerId={cloud.ownerId}/>;
   const preview = await getBookPreview();
   let graph:MapBootstrap;
   try { graph=mapBootstrap(await loadMapStore()); }

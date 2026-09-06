@@ -98,4 +98,13 @@ export function createSelectionActivityRepository(options: { indexedDB?: IDBFact
 
 // SSR-safe and shared across readers; it opens only after a user selection.
 const activity = createSelectionActivityRepository();
-export const recordSelectionActivity = activity.record;
+const accounts = new Map<string, ReturnType<typeof createSelectionActivityRepository>>();
+export function recordSelectionActivity(selection: Selection, anchors: SourceAnchor[], selectedAt?: string, ownerId?: string) {
+  if (!ownerId) return activity.record(selection, anchors, selectedAt);
+  let repository = accounts.get(ownerId);
+  if (!repository) {
+    repository = createSelectionActivityRepository({ databaseName: `eazo-selection-activity:account:${ownerId}` });
+    accounts.set(ownerId, repository);
+  }
+  return repository.record(selection, anchors, selectedAt);
+}

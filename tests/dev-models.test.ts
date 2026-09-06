@@ -1,6 +1,8 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { DEFAULT_DEV_MODELS, DevModelsSchema, isLocalDevelopment, readDevModels, saveDevModels } from '../src/server/providers/dev-models';
+import { routeProviderName } from '../src/server/providers';
+import { analysisModel } from '../src/server/book-analysis/vertex';
 import { GET, POST } from '../src/app/api/dev/models/route';
 
 test('development model choices reject unsupported providers and extra fields', () => {
@@ -14,6 +16,8 @@ test('production refuses both settings and local panel assets', async () => {
   Object.assign(process.env, { NODE_ENV: 'production' });
   try {
     assert.deepEqual(readDevModels(), DEFAULT_DEV_MODELS);
+    for (const kind of ['interactive_ui', 'concept_diagram', 'interactive_panel'] as const) assert.equal(routeProviderName(kind), 'inco');
+    assert.equal(analysisModel(), process.env.GEMINI_MODEL?.trim() || 'gemini-3.8-flash');
     assert.throws(() => saveDevModels(DEFAULT_DEV_MODELS));
     for (const url of ['http://localhost:3000/api/dev/models', 'http://localhost:3000/api/dev/models?asset=panel']) assert.equal((await GET(new Request(url))).status, 404);
     assert.equal((await POST(new Request('http://localhost:3000/api/dev/models', { method: 'POST' }))).status, 404);
