@@ -16,7 +16,7 @@ export function extractionPrompt(chunk: TextChunk, sourceText: string) {
   return `Read ALL the core text. Produce a selective navigational outline: normally 4-8 significant occurrences, fewer (including zero) for front matter, repetitive index entries, or insufficient content. This is an overview, not exhaustive concept recall.
 Each node needs 1-3 supplied passage IDs; the FIRST must be a CORE passage that best supports the occurrence. Quote text is resolved by code. Context-only passages cannot create new occurrences. Consider the beginning, middle, and end of the core, not only its opening.
 Use short node labels (ideally <= 32 characters), precise summaries, a reusable identityLabel, sourceRole, speaker, reasoningHint, generalityHint, and a concise source-grounded rationale. Extract supported local directed edges using zero-based node indexes. Empty edges are valid.
-Source section hint: ${chunk.section}. Hints describe the edition's location; classify embedded commentary separately.
+Source section hint: ${chunk.section}. Section and role hints are fallible navigation metadata, not evidence of authorship or text type. An unknown role means classify from the passage itself. Text before a recognized heading is not automatically front matter. Classify embedded commentary separately.
 CORE TEXT (application-supplied passage IDs precede each exact passage):\n${sourceText.slice(chunk.start, chunk.passages[0].start)}${chunk.passages.map((p, i) => `\n[PASSAGE ${p.id} | section ${p.section} | role hint ${p.role}]\n${sourceText.slice(p.start, chunk.passages[i + 1]?.start ?? chunk.end)}`).join('')}
 NEIGHBOUR CONTEXT, NOT EXTRACTION TARGETS:\n${JSON.stringify(chunk.context)}`;
 }

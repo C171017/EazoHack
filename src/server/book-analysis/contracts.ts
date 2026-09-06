@@ -36,7 +36,7 @@ export const ReviewSchema = z.object({
 }).strict();
 export type Review = z.infer<typeof ReviewSchema>;
 
-export type Passage = { id: string; start: number; end: number; text: string; section: string; role: z.infer<typeof Role> };
+export type Passage = { id: string; start: number; end: number; text: string; section: string; role: z.infer<typeof Role> | 'unknown' };
 export type TextChunk = { id: string; start: number; end: number; passages: Passage[]; context: Passage[]; section: string };
 export type Candidate = Extraction['nodes'][number] & { id: string; chunkId: string };
 export type CandidateEdge = { id: string; source: string; target: string; type: typeof RELATIONS[number]; rationale: string; passageIds: string[] };

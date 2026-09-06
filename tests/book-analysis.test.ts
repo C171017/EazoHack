@@ -15,6 +15,24 @@ import { mapWindow, SPATIAL_PAGE_SIZE } from '../src/features/book-graph/map-win
 import { initialView } from '../src/features/book-graph/projection';
 import { getBookPreview } from '../src/features/reader/book-preview';
 import { createSampleGraph } from '../src/features/book-graph/sample-graph';
+import { extractionPrompt } from '../src/server/book-analysis/prompts';
+
+test('unheaded stories and PDF text are not classified as front matter by segmentation', () => {
+  for (const source of ['The Community Garden\n\nNeighbors share water and learn from their harvests.', 'SCHEDULE OF BENEFITS\n\n1.0 GENERAL PROVISIONS\n\nThe plan describes covered services.']) {
+    const chunks = prepareText(source);
+    assert.ok(chunks.every(chunk => chunk.section === 'Source text'));
+    assert.ok(chunks.flatMap(chunk => chunk.passages).every(passage => passage.role === 'unknown'));
+    const prompt = extractionPrompt(chunks[0], source);
+    assert.match(prompt, /unknown role means classify from the passage itself/);
+    assert.doesNotMatch(prompt, /role hint paratext/);
+    for (const passage of chunks.flatMap(chunk => chunk.passages)) assert.equal(source.slice(passage.start, passage.end), passage.text);
+  }
+});
+
+test('explicit editorial and chapter headings retain their distinct segmentation hints', () => {
+  const chunks = prepareText('PREFACE.\n\nAn editor introduces this edition.\n\nBOOK I\n\nA dialogue follows.\n\nINDEX.\n\nGarden, 1');
+  assert.deepEqual(chunks.map(chunk => chunk.passages[0].role), ['commentary','dialogue','paratext']);
+});
 
 test('Republic text segmentation covers every character and preserves exact passages and real book headings', async () => {
   const preview = await getBookPreview();

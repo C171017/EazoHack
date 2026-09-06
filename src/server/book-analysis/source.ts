@@ -5,7 +5,9 @@ export function prepareText(text: string, maxChunkCharacters = 36_000): TextChun
   if (!text.trim()) throw new Error('Text input is empty.');
   if (maxChunkCharacters < 2400) throw new Error('Chunk size must be at least 2400 characters.');
   const passages: Passage[] = [];
-  let section = 'Front matter', role: Passage['role'] = 'paratext';
+  // Uploaded essays, stories and PDFs need not contain our sample-book headings.
+  // Absence of a recognized heading says nothing about a passage's source role.
+  let section = 'Source text', role: Passage['role'] = 'unknown';
   for (const match of text.matchAll(/\S(?:[\s\S]*?\S)?(?=\n\s*\n|\s*$)/g)) {
     const block = match[0];
     if (/^INTRODUCTION AND ANALYSIS\.\s*$/.test(block)) { section = 'Introduction and analysis'; role = 'commentary'; }
