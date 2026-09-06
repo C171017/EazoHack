@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const PROMPT_VERSION = 'text-graph-v2';
+export const PROMPT_VERSION = 'text-graph-v3-batched';
 export const RELATIONS = ['defines', 'supports', 'challenges', 'exemplifies', 'develops'] as const;
 const Label = z.string().min(1).max(180);
 const Note = z.string().min(1).max(1500);
@@ -21,7 +21,7 @@ export const ExtractSchema = z.object({
 export type Extraction = z.infer<typeof ExtractSchema>;
 
 export const SynthesisSchema = z.object({
-  themes: z.array(z.object({ label: Label, rationale: Note, nodeIds: Ids.min(1) }).strict()).min(3).max(7),
+  themes: z.array(z.object({ label: Label, rationale: Note, nodeIds: Ids.min(1) }).strict()).min(1).max(7),
   identities: z.array(z.object({ label: Label, nodeIds: Ids.min(1) }).strict()).min(1).max(500),
   crossEdges: z.array(z.object({
     source: z.string(), target: z.string(), type: z.enum(RELATIONS), rationale: Note,

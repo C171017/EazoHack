@@ -1,4 +1,5 @@
 'use client';
+import { useBookAnalysis } from '../book-graph/use-book-analysis';
 import { cloudRequest } from '../cloud/library';
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -74,7 +75,7 @@ export function Workspace({preview,graph,initialTitle,cloudSourceId}:{preview:Bo
       await bookLibrary.save(book, placement?.slot);
       controller.signal.throwIfAborted();
       setUploaded(book);
-      setImportState({ title, status: 'ready', percent: 100, stage: 'Ready to read', note: book.originalPdf ? pdfImportNote(book.originalPdf.manifest) : undefined });
+      setImportState({ title, status: 'ready', percent: 100, stage: 'Text ready · 100%', note: [book.originalPdf ? pdfImportNote(book.originalPdf.manifest) : '', 'You can read now. Book map analysis runs separately; open the book to see its progress.'].filter(Boolean).join(' ') });
       setLibraryRevision(value => value + 1);
       void ensureBookEmblem(book).then(() => setLibraryRevision(value => value + 1)).catch(() => {
         // The built-in line emblem remains usable if the provider is unavailable.
@@ -98,14 +99,16 @@ export function Workspace({preview,graph,initialTitle,cloudSourceId}:{preview:Bo
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
   return <>
     <div className={libraryStyles.readerSurface} data-library-open={libraryOpen || undefined}>
-    <TextWorkspace cloudSourceId={uploaded ? undefined : cloudSourceId} key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
+    <TextWorkspace analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
     </div>
-    <BookLibrary open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
+    <BookLibrary onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
       importState={importState} revision={libraryRevision} sampleEmblem={graph.bookEmblem} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />
   </>;
 }
 
-function TextWorkspace({preview, graph, title, onLibrary, cloudSourceId}: {cloudSourceId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
+function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSourceId, analyzeUploaded}: {analyzeUploaded?:boolean;cloudSourceId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
+  const analysis = useBookAnalysis(initialGraph.bookId, preview, !!analyzeUploaded);
+  const graph = analysis.graph ?? initialGraph;
   const bookId = graph.bookId;
   const footprints = useReadingFootprints(bookId);
   const recordFootprints = footprints.record;
@@ -274,7 +277,15 @@ function TextWorkspace({preview, graph, title, onLibrary, cloudSourceId}: {cloud
         <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onLibrary={onLibrary} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
       <section className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
-        <div className="absolute inset-0">{graph.unavailable?<div className="p-8 text-sm text-muted" role="status"><h2 className="mb-3 font-reading text-xl text-ink">The book map is not ready</h2><p>You can read and explore selected passages. A whole-book map requires separate analysis of this book.</p>{bookId === "plato-republic" && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Reload map</button>}</div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
+        <div className="absolute inset-0">{graph.unavailable?<div className="mx-auto max-w-xl p-8 text-sm text-muted" role="status" aria-live="polite">
+          <p className="mb-3 text-xs uppercase tracking-widest">Text ready to read</p>
+          <h2 className="mb-3 font-reading text-xl text-ink">{analyzeUploaded ? analysis.status === 'failed' ? 'Book map needs attention' : analysis.status === 'ready' ? 'Opening book map' : 'Building your book map' : 'Map analysis has not started'}</h2>
+          <p>{analyzeUploaded ? analysis.stage : 'No map analysis is running for this book. Reading and passage enhancements are available.'}</p>
+          {analyzeUploaded && (analysis.status==='running'||analysis.status==='starting') && <><progress aria-label="Book map analysis in progress" className="my-5 w-full"/><p>Extraction is complete. We’re now finding concepts, checking source evidence, and arranging the map. Long books can take a while. You can keep reading; the map opens automatically when ready.</p><p className="mt-3">Analysis continues on this computer if you close the reader. Reopen this book to reconnect.</p></>}
+          {analysis.error && analyzeUploaded && <p className="mt-4" role="alert">{analysis.error}</p>}
+          {analyzeUploaded && (analysis.status==='failed'||analysis.status==='idle') && <button className="mt-4 underline" onClick={analysis.retry}>Retry book map</button>}
+          {!analyzeUploaded && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Check map again</button>}
+        </div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
 
       </section>
     </div>

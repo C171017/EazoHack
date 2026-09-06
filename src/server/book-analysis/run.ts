@@ -1,10 +1,11 @@
+import { scalableSynthesis } from './scalable-synthesis';
 import { calibrateBookAxes } from './axis-calibration';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { z } from 'zod';
-import { ExtractSchema, IdentityRepairSchema, PROMPT_VERSION, ReviewSchema, SynthesisSchema, type Candidate, type CandidateEdge, type Generate, type ModelReply, type Review } from './contracts';
-import { assembleGraph, missingIdentityNodes, validateSynthesis, validateSynthesisForRepair } from './graph';
-import { extractionPrompt, reviewPrompt, synthesisPrompt, SYSTEM } from './prompts';
+import { ExtractSchema, PROMPT_VERSION, ReviewSchema, type Candidate, type CandidateEdge, type Generate, type ModelReply, type Review } from './contracts';
+import { assembleGraph } from './graph';
+import { extractionPrompt, reviewPrompt, SYSTEM } from './prompts';
 import { prepareText, validateExtraction } from './source';
 import { ModelRequestError } from './vertex';
 import { BookEmblemSchema } from '../../shared/book-emblem';
@@ -22,8 +23,7 @@ export async function analyzeText(input: {
   const text = input.raw.toString('utf8').replace(/\r\n?/g, '\n');
   const fileHash = input.sourceIdentity?.fileHash ?? createHash('sha256').update(input.raw).digest('hex');
   const chunks = prepareText(text);
-  // Keep this MVP within its explicit persisted graph contract, never silently truncate.
-  if (chunks.length * 8 > 500) throw new Error(`Text exceeds this MVP's 500-occurrence analysis budget (${chunks.length} chunks).`);
+
   const runId = `${PROMPT_VERSION}-${fileHash.slice(0, 12)}-${createHash('sha256').update(input.model).digest('hex').slice(0, 8)}`;
   const root = path.join(input.outputRoot, runId);
   const log = input.log ?? (() => {});
@@ -89,26 +89,17 @@ export async function analyzeText(input: {
   }
   try {
     log(`Processing ${text.length.toLocaleString()} source characters across ${chunks.length} chunks; model ${input.model}.`);
-    const extracted = await batch(chunks, async chunk => call(chunk.id, extractionPrompt(chunk, text), ExtractSchema, v => validateExtraction(v, chunk)));
+    let completedChunks = 0;
+    const extracted = await batch(chunks, async chunk => {
+      const value = await call(chunk.id, extractionPrompt(chunk, text), ExtractSchema, v => validateExtraction(v, chunk));
+      log(`Analyzing passages: ${++completedChunks} of ${chunks.length} sections complete`);
+      return value;
+    });
     const nodes: Candidate[] = extracted.flatMap((value, i) => value.nodes.map((n, j) => ({ ...n, id: `n-${i + 1}-${j + 1}`, chunkId: chunks[i].id })));
     if (!nodes.length) throw new Error('No meaningful occurrences extracted.');
     const edges: CandidateEdge[] = extracted.flatMap((value, i) => value.edges.map((e, j) => ({ id: `e-${i + 1}-${j + 1}`, source: `n-${i + 1}-${e.sourceIndex + 1}`, target: `n-${i + 1}-${e.targetIndex + 1}`, type: e.type, rationale: e.rationale, passageIds: [...new Set(e.passageIds)] })));
     await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'running', phase: 'synthesizing', completedChunks: chunks.length });
-    const draft = await call('synthesis', synthesisPrompt(nodes, passages), SynthesisSchema, v => validateSynthesisForRepair(v, nodes), 24_576);
-    const synthesis = structuredClone(draft);
-    const missing = missingIdentityNodes(synthesis, nodes);
-    if (missing.length) {
-      const repair = await call('identity-repair', `Assign EVERY target occurrence to one existing shared identity by its zero-based index, or use null to keep a separate identity when merging is not justified. Return exactly one assignment per target node. Never change other occurrences.\nTARGETS:\n${JSON.stringify(missing.map(n => ({ ...n, evidence: n.passageIds.map(id => passages.get(id)!.text) })))}\nEXISTING IDENTITIES:\n${JSON.stringify(synthesis.identities.map((i, index) => ({ index, label: i.label, members: nodes.filter(n => i.nodeIds.includes(n.id)).map(n => ({ label: n.label, summary: n.summary, sourceRole: n.sourceRole })) })))}`, IdentityRepairSchema, value => {
-        const ids = value.assignments.map(a => a.nodeId);
-        if (ids.length !== missing.length || new Set(ids).size !== missing.length || ids.some(id => !missing.some(n => n.id === id)) || value.assignments.some(a => a.identityIndex !== null && !synthesis.identities[a.identityIndex])) throw new Error('Identity repair must assign each missing target exactly once to a valid identity index or null.');
-        return value;
-      });
-      for (const assignment of repair.assignments) {
-        if (assignment.identityIndex === null) synthesis.identities.push({ label: missing.find(n => n.id === assignment.nodeId)!.identityLabel, nodeIds: [assignment.nodeId] });
-        else synthesis.identities[assignment.identityIndex].nodeIds.push(assignment.nodeId);
-      }
-    }
-    validateSynthesis(synthesis, nodes);
+    const synthesis = await scalableSynthesis(nodes, passages, call, log);
     await writeJson(path.join(root, 'synthesis-resolved.json'), synthesis);
     for (const [index, e] of synthesis.crossEdges.entries()) {
       if (edges.some(existing => existing.source === e.source && existing.target === e.target && existing.type === e.type)) continue;
@@ -130,7 +121,7 @@ export async function analyzeText(input: {
     });
     const baseGraph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, extractionVersion: input.sourceIdentity?.extractionVersion, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
     // Summaries cover every analyzed section; the emblem has a reusable checkpoint.
-    baseGraph.bookEmblem = await call('book-emblem', emblemPrompt({ title: input.bookId, excerpt: JSON.stringify(extracted.map((chunk, index) => ({ section: chunks[index].section, summary: chunk.summary }))) }), BookEmblemSchema, value => value, 2048, EMBLEM_SYSTEM);
+    baseGraph.bookEmblem = await call('book-emblem', emblemPrompt({ title: input.bookId, excerpt: JSON.stringify(synthesis.themes.map(({label,rationale}) => ({label,rationale}))) }), BookEmblemSchema, value => value, 2048, EMBLEM_SYSTEM);
     let graph = await assignBookAxes({graph:baseGraph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     graph = await calibrateBookAxes({graph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     await writeJson(path.join(root, 'graph.json'), graph);

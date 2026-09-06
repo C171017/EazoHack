@@ -29,7 +29,11 @@ export async function setSession(session:{access_token:string;refresh_token:stri
 }
 export function sameOrigin(request:Request) {
   const origin=request.headers.get('origin');
-  if(origin!==new URL(request.url).origin)throw new RequestBodyError('Unrecognized request origin.',403);
+  let parsed: URL;try {parsed=new URL(origin??'');}catch {throw new RequestBodyError('Unrecognized request origin.',403);}
+  // Next's internal Request URL can use localhost behind a reverse proxy. Host is
+  // the browser-facing authority; never accept an arbitrary forwarded-host header.
+  const host=request.headers.get('host')??new URL(request.url).host;
+  if(origin!==parsed.origin||parsed.host!==host||!['http:','https:'].includes(parsed.protocol))throw new RequestBodyError('Unrecognized request origin.',403);
 }
 export async function guardGeneration(request:Request) {
   if(!process.env.VERCEL && !process.env.SUPABASE_URL)return;

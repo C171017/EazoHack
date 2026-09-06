@@ -98,7 +98,8 @@ export const ArtifactSchema = z.discriminatedUnion("kind", [
 });
 
 const Unit = z.number().finite().min(0).max(1);
-const Evidence = z.object({ rationale: Text, ruleVersion: Id, confidence: Unit.nullable(), anchorIds: UniqueIds.refine(ids => ids.length > 0, "Coordinate evidence required") }).strict();
+const GraphIds = z.array(Id).refine(ids => new Set(ids).size === ids.length, "Duplicate IDs");
+const Evidence = z.object({ rationale: Text, ruleVersion: Id, confidence: Unit.nullable(), anchorIds: GraphIds.refine(ids => ids.length > 0, "Coordinate evidence required") }).strict();
 export const GraphSchema = z.object({
   bookEmblem: BookEmblemSchema.optional(),
   id: Id, bookId: Id, graphVersion: Id, fileHash: Text, extractionVersion: Id,
@@ -112,20 +113,20 @@ export const GraphSchema = z.object({
     reviewStatus: z.literal('model_reviewed'), rejectedNodes: z.number().int().nonnegative(),
     rejectedEdges: z.number().int().nonnegative(),
   }).strict().optional(),
-  anchors: z.array(SourceAnchorSchema).max(1000),
-  territories: z.array(z.object({ id: Id, label: ShortText, centroidX: Unit, anchorIds: UniqueIds.refine(ids => ids.length > 0), coverage: Unit, evidence: Evidence, orderLocked: z.literal(true) }).strict()).min(1).max(7),
-  identities: z.array(z.object({ id: Id, label: ShortText, summary: Text, occurrenceIds: UniqueIds.refine(ids => ids.length > 0) }).strict()).max(500),
+  anchors: z.array(SourceAnchorSchema),
+  territories: z.array(z.object({ id: Id, label: ShortText, centroidX: Unit, anchorIds: GraphIds.refine(ids => ids.length > 0), coverage: Unit, evidence: Evidence, orderLocked: z.literal(true) }).strict()).min(1).max(7),
+  identities: z.array(z.object({ id: Id, label: ShortText, summary: Text, occurrenceIds: GraphIds.refine(ids => ids.length > 0) }).strict()),
   nodes: z.array(z.object({
     id: Id, identityId: Id, kind: z.literal('occurrence'), label: ShortText, summary: Text,
-    anchorIds: UniqueIds.refine(ids => ids.length > 0), themeTerritoryIds: UniqueIds,
+    anchorIds: GraphIds.refine(ids => ids.length > 0), themeTerritoryIds: GraphIds,
     structuralLevel: z.number().int().min(0).max(4).nullable(),
     axisAssessment: StoredAxisAssessmentSchema.optional(),
     position: z.object({ x: Unit.nullable(), y: z.number().finite().min(0).max(4).nullable(), z: Unit.nullable() }).strict(),
     evidence: Evidence, sourceLabel: ShortText,
     sourceRole: z.enum(['dialogue', 'commentary', 'paratext']).optional(),
     speaker: ShortText.nullable().optional(),
-  }).strict()).max(500),
-  edges: z.array(z.object({ id: Id, source: Id, target: Id, type: ShortText, evidenceAnchorIds: UniqueIds.refine(ids => ids.length > 0), rationale: Text, provenance: z.enum(['book_supported', 'model_inferred', 'editorial', 'mock']) }).strict()).max(1500),
+  }).strict()),
+  edges: z.array(z.object({ id: Id, source: Id, target: Id, type: ShortText, evidenceAnchorIds: GraphIds.refine(ids => ids.length > 0), rationale: Text, provenance: z.enum(['book_supported', 'model_inferred', 'editorial', 'mock']) }).strict()),
 }).strict().superRefine((graph, ctx) => {
   const fail = (message: string) => ctx.addIssue({code:'custom',message});
   if(graph.analysis && (graph.analysis.completedChunks !== graph.analysis.totalChunks || graph.analysis.processedCharacters !== graph.sourceLength)) fail('Complete analysis must cover all chunks and source characters');

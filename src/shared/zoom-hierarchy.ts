@@ -1,19 +1,19 @@
 import { z } from 'zod';
 import type { Graph } from './schemas';
 
-export const ZOOM_POLICY = { version:'zoom-v1', roots:8, children:8, maxDepth:6, nodes:36, transitions:72, edges:64, labels:18, cachePages:48, duration:260, step:1.8, hysteresis:.86, minZoom:1.5, maxZoom:48 } as const;
+export const ZOOM_POLICY = { version:'zoom-v2-adaptive-depth', roots:8, children:8, nodes:36, transitions:72, edges:64, labels:18, cachePages:48, duration:260, step:1.8, hysteresis:.86, minZoom:1.5, maxZoom:48 } as const;
 const Vec = z.object({x:z.number().finite(),y:z.number().finite(),z:z.number().finite()}).strict();
 export const MapEntrySchema = z.object({
   id:z.string(), parentId:z.string().nullable(), kind:z.enum(['cluster','occurrence']), label:z.string().min(1).max(500), summary:z.string().max(20_000),
   positionRule:z.literal('representative-v1').optional(), position:Vec.nullable(), bounds:z.object({min:Vec,max:Vec}).strict().nullable(),
-  leafCount:z.number().int().positive(), childCount:z.number().int().min(0).max(ZOOM_POLICY.children), height:z.number().int().min(0).max(ZOOM_POLICY.maxDepth),
+  leafCount:z.number().int().positive(), childCount:z.number().int().min(0).max(ZOOM_POLICY.children), height:z.number().int().min(0),
   themeIds:z.array(z.string()), roles:z.array(z.string()), sourceLabel:z.string(),
 }).strict();
 export type MapEntry = z.infer<typeof MapEntrySchema>;
 export type Bounds = NonNullable<MapEntry['bounds']>;
 export const HierarchySchema = z.object({
   version:z.string(), graphVersion:z.string(), fileHash:z.string(), extractionVersion:z.string(), promptVersion:z.string(), model:z.string(), createdAt:z.string(),
-  roots:z.array(z.string()).min(1).max(ZOOM_POLICY.roots), depth:z.number().int().min(0).max(ZOOM_POLICY.maxDepth),
+  roots:z.array(z.string()).min(1).max(ZOOM_POLICY.roots), depth:z.number().int().min(0),
   entries:z.array(MapEntrySchema).min(1), children:z.record(z.string(),z.array(z.string()).min(2).max(ZOOM_POLICY.children)),
   rationale:z.string(),
 }).strict();

@@ -35,16 +35,20 @@ export function zoomCentered(view:MapView,zoom:number,size:Size,roots?:MapEntry[
   }
   return next;
 }
+function depthThreshold(level:number,maxDepth:number) {
+  return maxDepth>6 ? ZOOM_POLICY.minZoom * (ZOOM_POLICY.maxZoom / ZOOM_POLICY.minZoom) ** (level / maxDepth) : ZOOM_POLICY.step ** level;
+}
 export function zoomLevel(zoom:number,previous:number,maxDepth:number) {
   let level=previous;
-  while(level<maxDepth&&zoom>=ZOOM_POLICY.step**(level+1))level++;
-  while(level>0&&zoom<ZOOM_POLICY.step**level*ZOOM_POLICY.hysteresis)level--;
+  while(level<maxDepth&&zoom>=depthThreshold(level+1,maxDepth)-1e-8)level++;
+  while(level>0&&zoom<depthThreshold(level,maxDepth)*ZOOM_POLICY.hysteresis)level--;
   return Math.min(level,maxDepth);
 }
 // Navigate through the existing world: never refit children, which would cancel
 // the magnification. The representative stays above the overlaid inspector.
-export function zoomIntoGroup(node:MapEntry,view:MapView,size:Size,depth:number,readingProgress:number):MapView {
-  const zoom=Math.min(ZOOM_POLICY.maxZoom,Math.max(view.zoom*ZOOM_POLICY.step,ZOOM_POLICY.step**(depth+1)*1.04));
+export function zoomIntoGroup(node:MapEntry,view:MapView,size:Size,depth:number,readingProgress:number,totalDepth=6):MapView {
+  const step=Math.min(ZOOM_POLICY.step,ZOOM_POLICY.maxZoom ** (1 / Math.max(1,totalDepth)));
+  const zoom=Math.min(ZOOM_POLICY.maxZoom,Math.max(view.zoom*step,depthThreshold(depth+1,totalDepth)*1.04));
   const next={...view,zoom,selectedNodeId:node.id};
   if(!node.position)return next;
   const point=toScreen(node.position,next,size,[0,1],readingProgress);

@@ -1,10 +1,15 @@
+import { loadLocalMap } from '@/server/book-analysis/local-jobs';
+import { requireLocalAnalysis } from '@/server/book-analysis/local-access';
 import { selectedCloudBook } from '@/server/cloud/map';
 import { loadMapStore, nodeDetail, visibleLinks, unplacedNotes, heatIndexPage } from '@/server/book-map/store';
 import { ZOOM_POLICY } from '@/shared/zoom-hierarchy';
 export const runtime='nodejs';
 export async function GET(request:Request) {
   try {
-    const url=new URL(request.url),q=url.searchParams,cloud=await selectedCloudBook(),store=cloud?(cloud.store??(()=>{throw new Error('Map pending');})()):await loadMapStore();
+    const url=new URL(request.url),q=url.searchParams;
+    const localKey=q.get('version')?.match(/^local:([a-f0-9]{64}):/)?.[1];
+    if(localKey)requireLocalAnalysis(request);
+    const cloud=localKey?null:await selectedCloudBook(),store=localKey?await loadLocalMap(localKey):cloud?(cloud.store??(()=>{throw new Error('Map pending');})()):await loadMapStore();
     const {graph,hierarchy,entries}=store;
     if(q.get('version')!==hierarchy.version)return Response.json({error:'Map version changed. Reload to open the new version.'},{status:409});
     const json=(body:object)=>Response.json({version:hierarchy.version,...body},{headers:{'Cache-Control':'private, no-store'}});

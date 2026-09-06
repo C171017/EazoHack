@@ -72,6 +72,29 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
         return request;
       });
     },
+    async move(id: string, slot: number) {
+      if (!Number.isSafeInteger(slot) || slot < 1 || slot >= 10000) throw new Error('Choose an available shelf space.');
+      await transaction('readwrite', tx => {
+        const catalogue = tx.objectStore('catalogue');
+        const request = catalogue.getAll() as IDBRequest<LibraryEntry[]>;
+        request.onsuccess = () => {
+          const entries = placeLegacyEntries(request.result);
+          const moving = entries.find(entry => entry.id === id);
+          if (!moving) return;
+          const displaced = entries.find(entry => entry.shelf.slot === slot);
+          for (const entry of entries) catalogue.put(entry.id === id
+            ? { ...entry, shelf: { ...entry.shelf, slot } }
+            : entry.id === displaced?.id ? { ...entry, shelf: { ...entry.shelf, slot: moving.shelf.slot } } : entry);
+        };
+        return request;
+      });
+    },
+    async remove(id: string) {
+      await transaction('readwrite', tx => {
+        tx.objectStore('books').delete(id);
+        return tx.objectStore('catalogue').delete(id);
+      });
+    },
     async load(id: string): Promise<UploadedBook> {
       const book = await transaction<UploadedBook | undefined>('readonly', tx => tx.objectStore('books').get(id));
       if (!book) throw new Error('This book is no longer available. Please upload it again.');

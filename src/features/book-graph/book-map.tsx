@@ -149,7 +149,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       install({[node.id]:children});
       let depth=0,parent=node.parentId;while(parent){depth++;parent=index.get(parent)?.parentId??null;}
       const {current:from,size:viewport}=latest.current;
-      const next=zoomIntoGroup(node,from,viewport,depth,readingProgress);
+      const next=zoomIntoGroup(node,from,viewport,depth,readingProgress,graph.depth);
       setSourceActivation(null);setHeatSelection(null);
       const publish=(view:MapView)=>{latest.current={...latest.current,current:view};onViewChange(view);};
       if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){publish(next);return;}

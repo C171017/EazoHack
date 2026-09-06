@@ -127,3 +127,49 @@ test('map pages retain source coordinates and filters can expose every occurrenc
   assert.equal(mapWindow(graph, { ...view, nodePage: 999 }, [0, 1]).page, 4);
   assert.equal(JSON.stringify(graph.nodes.map(n => n.position)), before);
 });
+
+test('long books exceed the former 62-section and 500-node limits with bounded requests and exact coverage', async () => {
+  const { GraphSchema } = await import('../src/shared/schemas');
+  const { axisContext } = await import('../src/server/book-analysis/axis-prompts');
+  const { zoomLevel } = await import('../src/features/book-graph/semantic-window');
+  const root = await mkdtemp(path.join(os.tmpdir(), 'eazo-long-book-'));
+  const raw = Buffer.from(Array.from({length:1300},(_,i)=>`Paragraph ${i}. ${'A supported discussion of a concept and its concrete example. '.repeat(35)}`).join('\n\n'));
+  const chunks=prepareText(raw.toString());
+  assert.ok(chunks.length>62);
+  let largestSynthesis=0;
+  const generate:Generate=async(_system,prompt,schema)=>{
+    let value:unknown;
+    if(schema===ExtractSchema){
+      const core=prompt.split('NEIGHBOUR CONTEXT')[0];
+      const ids=[...core.matchAll(/\[PASSAGE (p-\d+)/g)].slice(0,8).map(m=>m[1]);
+      value={summary:'Supported concepts.',nodes:ids.map(id=>({label:id,identityLabel:id,summary:'A concept and its example.',sourceRole:'commentary',speaker:null,reasoningHint:'Introduced directly.',generalityHint:'An example.',rationale:'Supplied passage.',passageIds:[id]})),edges:[]};
+    }else if(schema===SynthesisSchema){
+      const nodes=JSON.parse(prompt.slice(prompt.lastIndexOf('\n')+1)) as {id:string}[];
+      largestSynthesis=Math.max(largestSynthesis,nodes.length);
+      value={themes:[{label:'Concepts',rationale:'Concepts and examples.',nodeIds:nodes.map(n=>n.id)}],identities:nodes.map(n=>({label:n.id,nodeIds:[n.id]})),crossEdges:[]};
+    }else if(schema===ReviewSchema)value={rejectedNodes:[],rejectedEdges:[],notes:'Fixture evidence review.'};
+    else if(schema===AxisReviewSchema)value={rejected:[]};
+    else if(schema===AxisBatchSchema){
+      const data=JSON.parse(prompt.split('DATA:\n')[1]);
+      value={assignments:data.targets.map((id:string)=>{const n=data.catalog.find((n:{id:string})=>n.id===id);return {nodeId:id,assessment:{reasoningDepth:{value:0,rationale:'Direct introduction.',anchorIds:n.anchorIds,prerequisiteNodeIds:[]},generality:{value:1,rationale:'Concrete example.',anchorIds:n.anchorIds}}};})};
+    }else if(schema===BookEmblemSchema)value=REPUBLIC_EMBLEM;
+    else {
+      const themes=JSON.parse(prompt.slice(prompt.lastIndexOf('\n')+1)) as {index:number}[];
+      value={groups:[{label:'Concepts',rationale:'Collected concepts and examples.',members:themes.map(t=>t.index)}]};
+    }
+    return {value,model:'fixture',modelVersion:'fixture',usage:{},durationMs:1};
+  };
+  try {
+    const {graph}=await analyzeText({raw,bookId:'long-fixture',outputRoot:root,model:'fixture',generate});
+    assert.ok(graph.nodes.length>500);
+    assert.equal(graph.analysis?.completedChunks,chunks.length);
+    assert.equal(graph.sourceLength,raw.length);
+    assert.equal(graph.nodes.length,chunks.reduce((n,c)=>n+Math.min(8,c.passages.length),0));
+    assert.ok(largestSynthesis<=48);
+    GraphSchema.parse(graph);
+    validateGraphSource(graph,raw.toString(),graph.fileHash);
+    assert.ok(axisContext(graph,graph.nodes.slice(0,24)).catalog.length<=192);
+    assert.equal(zoomLevel(1.5,0,20),0,'Large-book overview starts at the root level');
+    assert.equal(zoomLevel(48,0,20),20,'Deep hierarchies remain reachable at maximum zoom');
+  } finally { await rm(root,{recursive:true,force:true}); }
+});

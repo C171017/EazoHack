@@ -20,7 +20,7 @@ export function validateGroups(value:z.infer<typeof GroupSchema>,nodes:MapEntry[
 export function spatialBatches(nodes:MapEntry[],limit=24):MapEntry[][] {
   if(nodes.length<=limit)return [nodes];
   const axes=['x','y','z'] as const;
-  const span=(axis:typeof axes[number])=>{const values=nodes.map(n=>(n.position?.[axis]??0)/(axis==='y'?4:1));return Math.max(...values)-Math.min(...values);};
+  const span=(axis:typeof axes[number])=>{let min=Infinity,max=-Infinity;for(const n of nodes){const value=(n.position?.[axis]??0)/(axis==='y'?4:1);min=Math.min(min,value);max=Math.max(max,value);}return max-min;};
   const axis=[...axes].sort((a,b)=>span(b)-span(a))[0];
   const sorted=[...nodes].sort((a,b)=>(a.position?.[axis]??-1)-(b.position?.[axis]??-1)||a.id.localeCompare(b.id));
   const mid=Math.floor(sorted.length/2);return [...spatialBatches(sorted.slice(0,mid),limit),...spatialBatches(sorted.slice(mid),limit)];
@@ -53,14 +53,18 @@ export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}
   await writeJson(path.join(dir,'manifest.json'),{status:'running',graphVersion:graph.graphVersion,version,phase:'grouping'});
   try {
     while(frontier.length>ZOOM_POLICY.roots) {
-      level++;if(level>ZOOM_POLICY.maxDepth)throw new Error('Hierarchy exceeds the depth budget; revise grouping, do not discard leaves.');
+      level++;
       const batches=spatialBatches(frontier),next:MapEntry[]=[];
       // Two bounded concurrent provider calls; complete a whole level before the next.
       for(let start=0;start<batches.length;start+=2) {
         const results=await Promise.allSettled(batches.slice(start,start+2).map(async(nodes,offset)=>{
           const batch=start+offset,key=`level-${level}-batch-${batch+1}`;
-          const leafSet=new Set(nodes.flatMap(n=>leafIds.get(n.id)!));
-          const evidence=[...leafSet].map(id=>{const n=sourceNodes.get(id)!;return {id,label:n.label,sourceRole:n.sourceRole,speaker:n.speaker,passages:n.anchorIds.map(id=>({id,quote:anchors.get(id)!.quote}))};});
+          // Higher levels use already reviewed child summaries, not all descendant text.
+          // Every leaf still belongs to the hierarchy and retains exact source anchors.
+          const evidence=nodes.map(entry=>{
+            const n=sourceNodes.get(entry.id);
+            return n ? {id:n.id,label:n.label,sourceRole:n.sourceRole,speaker:n.speaker,passages:n.anchorIds.map(id=>({id,quote:anchors.get(id)!.quote}))} : {id:entry.id,label:entry.label,reviewedSummary:entry.summary,leafCount:entry.leafCount};
+          });
           let groups=await call(key,hierarchyPrompt(nodes,level,evidence),GroupSchema,v=>validateGroups(v,nodes));
           for(let revision=0;revision<3;revision++) {
             const review=await call(`${key}-review-${revision}`,hierarchyReviewPrompt(groups.groups,nodes,evidence),ReviewSchema,v=>{if(v.rejected.some(r=>r.index>=groups.groups.length))throw new Error('Review index outside groups');return v;});

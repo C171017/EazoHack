@@ -99,3 +99,10 @@
   .spine::after { display: none; }
   .emptyOutline, .plus { opacity: 1; }
 }
+
+.slot:not([data-slot='0']) .book { touch-action: none; user-select: none; cursor: grab; }
+.slot[data-dragging] .book { visibility: hidden; }
+.slot[data-dragging]::after { content: ''; position: absolute; bottom: 0; width: 64px; height: 300px; border: 1px dashed #403a3150; border-radius: 3px; }
+.flyingBook { position: fixed; z-index: 20; pointer-events: none; transform: rotate(-8deg); filter: drop-shadow(10px 16px 8px #403a3125); }
+.flyingBook .spine { transform: none; }
+.cardDrawing { display: block; }
