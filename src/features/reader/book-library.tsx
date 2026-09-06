@@ -228,7 +228,6 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, onRe
                       : <button type="button" className={styles.emptySlot} disabled={busy || loading || !!error} aria-label={`Add a book in space ${slot + 1}`} onClick={() => { selectedSlot.current = slot; input.current?.click(); }}>
                         <svg className={styles.emptyOutline} viewBox="0 0 72 302" preserveAspectRatio="none" aria-hidden="true"><path d="M1 20V5Q1 1 5 1H20 M52 1H67Q71 1 71 5V20 M1 282V297Q1 301 5 301H20 M52 301H67Q71 301 71 297V282"/></svg>
                         <svg className={styles.plus} viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V19 M5 12H19"/></svg>
-                        <span className={styles.spaceCaption} aria-hidden="true">Place a book</span>
                       </button>}
                 </div>;
               })}
