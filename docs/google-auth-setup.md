@@ -9,7 +9,8 @@ The application code alone cannot activate Google sign-in. These settings must b
 1. In Google Auth Platform, configure Eazo's audience and branding: application name, support contact, homepage, privacy policy, authorized domains, and developer contact. For a beta, keep the external audience in Testing and explicitly add test users; publish the audience when ready for public users. Follow any branding verification requested by Google.
 2. Create a **Web application** OAuth client. Use the application's origin under Authorized JavaScript origins. Under Authorized redirect URIs, enter the callback displayed in the Supabase Google provider settings: normally `https://<project-ref>.supabase.co/auth/v1/callback`. This Google callback is different from Eazo's callback below.
 3. Request only `openid`, email, and profile scopes. Put the client ID and secret in **Supabase → Authentication → Sign In / Providers → Google**, and enable Google. Enable new-user signups so a first Google login can create an Eazo account. Disable Email/password sign-in, phone, anonymous sign-in, and other providers for a Google-only launch. Remove unused test accounts separately after confirming their data is no longer needed.
-4. In Supabase Auth URL configuration, set **Site URL** to the deployed Eazo origin. Add the exact Eazo callback URL `https://<eazo-host>/auth/callback` and a callback query pattern `https://<eazo-host>/auth/callback\?state=*` to the redirect allow list. The query pattern accepts the random browser-bound state parameter; do not use an unrestricted production hostname wildcard. For local work against hosted Supabase, add the corresponding `http://127.0.0.1:<port>/auth/callback` entries. Use the same browser hostname throughout the flow.
+4. In Supabase Auth URL configuration, set **Site URL** to the deployed Eazo origin and add its exact callback URL `https://<eazo-host>/auth/callback`. The random browser-bound state remains in the callback query: Supabase permits redirects on the same scheme, host, and port as Site URL, so this setup needs no wildcard entry. Do not point an unverified or public preview at another application's callback. For a different local hostname, explicitly review the local callback configuration before testing it against hosted Supabase.
+
 5. Add server-only deployment variables:
 
    ```dotenv
@@ -23,7 +24,7 @@ The application code alone cannot activate Google sign-in. These settings must b
 
 6. Redeploy after setting variables. Ensure Supabase refresh-token rotation and its standard reuse interval remain enabled; simultaneous requests across server instances depend on that interval. Apply all repository migrations before enabling synchronization.
 
-Current local inspection found no Supabase or site-origin variable names in `.env.local`; deployed configuration was not inspected. No provider-console settings were changed by this implementation.
+Local `.env.local` remains independent of deployed account configuration. See the dated deployment status for the actually activated provider, callback origin, and tested deployment; this guide alone is not activation evidence.
 
 ## Application contract
 
@@ -52,3 +53,5 @@ Complete these live checks with two Google test accounts and two browsers/device
 These provider/device checks remain required even when local tests pass. Google account recovery is handled by Google; Eazo has no password-reset flow.
 
 Sources checked during implementation: [Supabase Google setup](https://supabase.com/docs/guides/auth/social-login/auth-google), [Supabase PKCE](https://supabase.com/docs/guides/auth/sessions/pkce-flow), [redirect allow-list rules](https://supabase.com/docs/guides/auth/redirect-urls), and the [Supabase Auth client protocol](https://github.com/supabase/auth-js/blob/master/src/GoTrueClient.ts). Also read the installed Next.js Route Handler, cookies, and Proxy guides before implementing the routes.
+
+Redirect implementation verified: https://github.com/supabase/auth/blob/master/internal/utilities/request.go (`IsRedirectURLValid`). The current preview uses only its exact callback allow-list entry and the matching Site URL.

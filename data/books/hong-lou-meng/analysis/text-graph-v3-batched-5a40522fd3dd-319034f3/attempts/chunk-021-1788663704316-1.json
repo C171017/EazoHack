@@ -1,0 +1,159 @@
+{
+  "value": {
+    "summary": "本回讲述宝玉清晨在黛玉、湘云处梳洗嬉闹并顺手尝胭脂，袭人借故娇嗔规劝；宝玉受冷落后读《庄子》愤而续篇，次日黛玉题诗嘲讽，宝玉亦向袭人折簪认错重修旧好。后半回转写巧姐出痘，贾琏搬至外书房斋戒，暗中勾搭多姑娘；巧姐病愈贾琏回房，平儿搜出多姑娘青丝却巧语瞒过凤姐替贾琏遮掩。",
+    "nodes": [
+      {
+        "label": "袭人娇嗔箴宝玉",
+        "identityLabel": "袭人箴宝玉",
+        "summary": "宝玉在黛玉房中梳头尝胭脂，袭人因见其终日与姊妹厮闹无分寸，故意冷落不理，借柔情与娇嗔劝谏宝玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述袭人观察到宝玉与姊妹不避嫌隙后的故意冷淡举措及心思，由梳洗起因直接推导至二人赌气互动。",
+        "generalityHint": "涉及宝玉与袭人这一特定侍从关系中的规劝常态与相处模式。",
+        "rationale": "围绕袭人因宝玉早起混迹于姊妹房中梳洗、不遵礼节而心生不满，以冷言与佯睡加以警诫的事件展开。",
+        "passageIds": [
+          "p-134026",
+          "p-133819"
+        ]
+      },
+      {
+        "label": "宝玉读庄子愤而续篇",
+        "identityLabel": "宝玉续庄子",
+        "summary": "宝玉因被袭人冷落且赌气不理众人，独坐夜读《南华经·胠箧》，借酒兴提笔续写焚花散麝、戕仙姿灰灵窍之语以宣泄被闺阁情思羁绊之苦。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从袭人的冷落与宝玉横心‘当他们死了’的心态出发，读庄子至《胠箧》而生发推导，写下戏作断念之词。",
+        "generalityHint": "宝玉个人在特定赌气心境下对庄子哲学的一种借题发挥与极端情绪表达。",
+        "rationale": "基于宝玉深夜独对孤灯读《庄子》并顺势写下排遣闺阁纠葛的续文叙述。",
+        "passageIds": [
+          "p-135348",
+          "p-134983",
+          "p-135191"
+        ]
+      },
+      {
+        "label": "黛玉题绝句讥宝玉",
+        "identityLabel": "黛玉题绝句讥宝玉",
+        "summary": "黛玉翻看宝玉案头所续《庄子》，见其归咎钗黛花麝，不觉又气又笑，提笔题诗一绝讥刺宝玉不悔自己无见识而丑语怪他人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉直接对宝玉所写续文做出阅读反应与批评反驳。",
+        "generalityHint": "记录黛玉对宝玉特定续文的文学批评与讥嘲戏谑。",
+        "rationale": "叙述黛玉读到宝玉续庄之文后提笔作诗嘲弄的完整场景。",
+        "passageIds": [
+          "p-136060",
+          "p-136131"
+        ]
+      },
+      {
+        "label": "宝玉折簪认错和好",
+        "identityLabel": "宝玉折簪认错",
+        "summary": "次晨袭人仍假意赌气，宝玉情急之下将玉簪一折两段立誓听劝，二人随即解开心结和好梳洗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "接续前日冷战，通过袭人继续拿‘四儿’排揎和宝玉急躁折簪的举动，推向二人情绪的和解。",
+        "generalityHint": "展现宝玉对袭人规劝的妥协与其情感依恋的特定行为表现。",
+        "rationale": "记载宝玉与袭人经过一日冷战后，通过折簪誓言彻底化解矛盾的过程。",
+        "passageIds": [
+          "p-135462"
+        ]
+      },
+      {
+        "label": "巧姐见喜贾琏居外私通",
+        "identityLabel": "贾琏私通多姑娘",
+        "summary": "凤姐之女出痘斋戒，贾琏搬至外书房独居难熬，与轻浮美貌的多姑娘暗通款曲、海誓山盟。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因女儿出痘需隔房斋戒这一前因，贾琏耐不住清冷而勾搭多姑娘，情节推进自然直接。",
+        "generalityHint": "展现贾琏本性荒淫及多姑娘其人其事的叙述片段。",
+        "rationale": "详述贾琏因凤姐之女出疹而迁往外书房，借机与多姑娘幽会苟合的经过。",
+        "passageIds": [
+          "p-136428",
+          "p-136190"
+        ]
+      },
+      {
+        "label": "平儿藏发软语护贾琏",
+        "identityLabel": "平儿软语救贾琏",
+        "summary": "贾琏回房后平儿在其枕套中抖出多姑娘头发，虽以此取笑贾琏并握为把柄，但在凤姐突来盘查时巧言掩护，化解危机。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "平儿发现头发推知贾琏出轨，面对凤姐查问迅速应变，合情合理地化险为夷。",
+        "generalityHint": "反映平儿在贾琏与凤姐之间周旋平衡、保全家庭表面安稳的生存手腕与性格。",
+        "rationale": "文本叙述平儿抖出青丝追问贾琏、在凤姐疑心盘查时机智圆谎并替贾琏脱罪的始末。",
+        "passageIds": [
+          "p-137113",
+          "p-137337",
+          "p-137727"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "袭人因规劝而赌气不理宝玉，导致宝玉落落寡欢，由此引发宝玉深夜对灯看《庄子》并借题续文宣泄。",
+        "passageIds": [
+          "p-134026",
+          "p-134983",
+          "p-135348"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "challenges",
+        "rationale": "黛玉看到宝玉续文将闺阁之累归咎于钗黛花麝，题绝句批驳其‘不悔自己无见识，却将丑语怪他人’。",
+        "passageIds": [
+          "p-136060",
+          "p-136131"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "次晨袭人继续以娇嗔冷落宝玉，宝玉情急折簪发誓悔改，完成了袭人‘以柔情警之’的规劝全过程。",
+        "passageIds": [
+          "p-134026",
+          "p-135462"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾琏在外书房与多姑娘幽会留下了青丝发绺，这一物证在回房后被平儿抖落搜出，从而引出平儿遮瞒相救的情节。",
+        "passageIds": [
+          "p-136428",
+          "p-137113",
+          "p-137337"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "itecasPlFdCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 9279,
+    "candidatesTokenCount": 2053,
+    "totalTokenCount": 11332,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9279
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2053
+      }
+    ]
+  },
+  "durationMs": 14473,
+  "requestHash": "f58a7da3af5351d135a6312536924a5568f718478c9331c6d45c8c39d8da86b1"
+}

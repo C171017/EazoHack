@@ -1,0 +1,111 @@
+{
+  "value": {
+    "summary": "第六回叙述宝玉梦醒后与袭人初试云雨情，确立二人特殊亲密关系；随后转叙刘姥姥因家计艰难，携外孙板儿进贾府投奔王夫人，经周瑞家的引见得会王熙凤，最终获赠二十两银子及一吊钱以济冬事。",
+    "nodes": [
+      {
+        "label": "宝玉与袭人初试云雨",
+        "identityLabel": "宝玉与袭人初试云雨",
+        "summary": "宝玉梦醒后，袭人察觉其梦遗并细问缘由，宝玉遂告知警幻所授之事，二人遂按警幻所训偷试云雨情。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于第五回警幻仙子传授云雨之事的梦境延伸，叙述宝玉回到现实后与袭人的实际接触。",
+        "generalityHint": "单一特定情节事件，聚焦于宝玉与袭人二人。",
+        "rationale": "文中叙述宝玉将梦中警幻所授告知袭人，并与袭人偷试，自此二人关系较别个更为亲密。",
+        "passageIds": [
+          "p-36356",
+          "p-36141"
+        ]
+      },
+      {
+        "label": "刘姥姥提议投奔王夫人",
+        "identityLabel": "刘姥姥定计借势",
+        "summary": "因年冬家贫无计，刘姥姥劝说女婿狗儿，提议利用昔年与金陵王家连宗的旧瓜葛，赴贾府向王夫人寻求接济。",
+        "sourceRole": "dialogue",
+        "speaker": "刘姥姥",
+        "reasoningHint": "从两家昔日连宗的旧情及贾府豪门怜贫恤老的传闻中推导出可以前去求援的计策。",
+        "generalityHint": "涉及狗儿一家的生计决策与特定求助策略。",
+        "rationale": "刘姥姥提出‘谋事在人，成事在天’，因王家早年连宗且王夫人好善，建议走动走动以求拔得‘一根寒毛’。",
+        "passageIds": [
+          "p-37454",
+          "p-36592"
+        ]
+      },
+      {
+        "label": "刘姥姥经周瑞引荐入贾府",
+        "identityLabel": "周瑞家的引路传信",
+        "summary": "刘姥姥带板儿依计找到贾府陪房周瑞家的，周瑞家的念及昔日狗儿相助之情并欲显弄体面，应允破例引荐其会见管事的王熙凤。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "周瑞家的基于旧日狗儿相助之人情与展示自身体面的动机，做出带刘姥姥见凤姐的决定。",
+        "generalityHint": "描述豪门仆妇与底层穷亲戚之间交往的具体事件与机制。",
+        "rationale": "周瑞家的因丈夫买地曾得狗儿之力，便向刘姥姥说明如今是琏二奶奶凤姐当家，并答应代为通报引见。",
+        "passageIds": [
+          "p-38980",
+          "p-38729",
+          "p-39516"
+        ]
+      },
+      {
+        "label": "王熙凤借资接济刘姥姥",
+        "identityLabel": "凤姐资助刘姥姥",
+        "summary": "凤姐在处理家务与接待贾蓉借屏风之余，会见刘姥姥，一面申明贾府‘大有大的艰难’，一面给予二十两银子及一吊钱以济其冬事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐在权衡王夫人‘不可简慢’的交代、贾府门面以及自身裁夺权后，作出给银资助的决定。",
+        "generalityHint": "叙述豪门当家主妇应对连宗穷亲戚求助的具体行为。",
+        "rationale": "刘姥姥诉苦求援，凤姐体察来意后，拿出原定做衣裳的二十两银子和雇车的一吊钱赠与刘姥姥，完成初次接济。",
+        "passageIds": [
+          "p-42745",
+          "p-42986",
+          "p-42293"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "刘姥姥提出的借由旧日瓜葛走动王家的计划，在通过寻找周瑞家的得以落实并进入贾府。",
+        "passageIds": [
+          "p-37784",
+          "p-38980"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "周瑞家的通报引荐与王夫人的裁夺指示，为凤姐正式接见刘姥姥并给予银两资助提供了前提条件。",
+        "passageIds": [
+          "p-39516",
+          "p-42293",
+          "p-42745"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "QdecatfwLOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 9475,
+    "candidatesTokenCount": 1300,
+    "totalTokenCount": 10775,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9475
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1300
+      }
+    ]
+  },
+  "durationMs": 10396,
+  "requestHash": "994a26451c4b3e5a572a2c80756032d348810e6ea4e2fce464a827a48b2b38ff"
+}

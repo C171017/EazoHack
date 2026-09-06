@@ -1,0 +1,120 @@
+{
+  "value": {
+    "summary": "第三十二回围绕宝玉与黛玉的知己肺腑之言以及金钏儿投井引发的府内反应展开。史湘云劝宝玉走仕途经济引发争执，黛玉暗中窥探却听得宝玉视自己为知己的赞叹；宝玉随后向黛玉直言‘你放心’，并因心神激荡错将肺腑之言诉与袭人，令袭人深忧后患。金钏儿投井身亡后，王夫人深感不安与自责，宝钗则以人情与理法宽慰王夫人并献衣妆裹。",
+    "nodes": [
+      {
+        "label": "宝玉斥仕途经济与黛玉知己之感",
+        "identityLabel": "仕途经济与知己之契",
+        "summary": "湘云劝宝玉结交为官做宰之人、讲究仕途经济，宝玉斥其为混帐话并称黛玉从未说过此类言语；窗外黛玉闻言又惊又喜又叹又悲，深感宝玉确为平生知己。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于湘云对宝玉的规劝，宝玉作出反驳并以此对照黛玉，黛玉由此引申出知己与金玉之论、命薄之叹的内心省思。",
+        "generalityHint": "展现宝玉与黛玉超越世俗功名的一致价值观，局限于二人情感与知己关系的界定。",
+        "rationale": "文本直接叙述了宝玉对湘云所言‘仕途经济’的反感与逐客之言，以及黛玉在窗外听到宝玉评语后的强烈情感波动与知己认同。",
+        "passageIds": [
+          "p-213444"
+        ]
+      },
+      {
+        "label": "宝玉向黛玉诉‘你放心’",
+        "identityLabel": "宝黛诉肺腑",
+        "summary": "宝玉追上黛玉，以‘你放心’三字剖白二人素日心照不宣的情意，指出黛玉多病皆因不放心所致，令黛玉深感言语比肺腑还恳切。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从黛玉拭泪与试探之语出发，宝玉直接推及二人长期的相互体贴与黛玉的心病根源。",
+        "generalityHint": "限于宝玉与黛玉之间极为私密的心灵沟通与情感确立。",
+        "rationale": "该段承接黛玉听闻知己之言后的离去，宝玉追赶而至直诉肺腑，成为红楼梦中宝黛爱情的关键确立节点。",
+        "passageIds": [
+          "p-215197"
+        ]
+      },
+      {
+        "label": "宝玉错诉心事与袭人惊惧",
+        "identityLabel": "错诉心事致祸之忧",
+        "summary": "宝玉因神思恍惚误将赶来送扇的袭人认作黛玉，大胆诉说满腔心事与为之成病之苦；袭人魂飞魄散，深忧将来不免生出‘丑祸’。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉未能看清来人即脱口告白，袭人根据所听推导出此话必因黛玉而起，进而引申出防范家族丑闻的决意。",
+        "generalityHint": "具体事件波及袭人对大观园内男女大防与怡红院规矩的担忧。",
+        "rationale": "文本详细叙述宝玉因‘出神’拉住袭人吐露心声，引发袭人对‘将来难免不才之事’的恐慌与谋划。",
+        "passageIds": [
+          "p-216001",
+          "p-216317"
+        ]
+      },
+      {
+        "label": "宝钗论湘云家境与人情难处",
+        "identityLabel": "湘云家境之实",
+        "summary": "宝钗指出湘云在史家不能做主且日夜赶做针线，劝袭人勿因小节使湘云为难累及自身，并主动代揽针线活计。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗由湘云的神情举止与日常言语推知史家裁省费用、湘云身不由己的家庭实情。",
+        "generalityHint": "涉及贵族世家表面光鲜下的家计艰辛与湘云个人的处境。",
+        "rationale": "宝钗对袭人的提醒揭示了史湘云的身世辛酸与为人处世的体谅，也展示了宝钗洞察人情的特点。",
+        "passageIds": [
+          "p-216651"
+        ]
+      },
+      {
+        "label": "金钏儿投井与宝钗劝慰王夫人",
+        "identityLabel": "金钏之死与宝钗献衣",
+        "summary": "金钏儿含羞投井身亡，王夫人垂泪自责；宝钗以金钏或是失脚或属糊涂来开解王夫人，劝其多给赏银尽主仆之情，并主动捐出新衣以备妆裹。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "面对金钏儿投井的突发惨剧，宝钗从安抚王夫人负疚心理与伦理主仆之道进行推论开脱，并以实际行动解其燃眉之急。",
+        "generalityHint": "反映贾府主奴秩序与宝钗维护长辈心态、遵守宗法礼数的处事原则。",
+        "rationale": "金钏之死是第三十二回下半段的核心事件，宝钗在此处的应答与献衣不仅抚慰了王夫人，也展现了其独有的处世伦理与理性。",
+        "passageIds": [
+          "p-217294",
+          "p-217539",
+          "p-218303"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉在屋内视黛玉为不讲仕途经济的知己，随后在园中追上黛玉，将这份知己理解直接推进为‘你放心’的肺腑告白。",
+        "passageIds": [
+          "p-213444",
+          "p-215197"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝玉与黛玉诉肺腑后心神失控，误认袭人为黛玉而进一步吐露深藏心底之语，引发袭人的惊骇与后患防范。",
+        "passageIds": [
+          "p-215197",
+          "p-216001"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ztecavatENCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 9486,
+    "candidatesTokenCount": 1703,
+    "totalTokenCount": 11189,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9486
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1703
+      }
+    ]
+  },
+  "durationMs": 12947,
+  "requestHash": "35ce60ea1477b6ab2556f0bbf8a00927a19535d71ef483bef419c023acb09862"
+}

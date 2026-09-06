@@ -1,0 +1,202 @@
+{
+  "value": {
+    "summary": "《红楼梦》第一回开篇交代作书缘起与石头入世的神话源流，继而以甄士隐的梦幻、家破人亡及悟道出家，与贾雨村受助进京赴考并荣归任官的线索交织展开。",
+    "nodes": [
+      {
+        "label": "作者交代作书旨归",
+        "identityLabel": "作书缘起与主旨",
+        "summary": "作者自述历经梦幻之后，将真事隐去，借通灵之说编述此书，意在为当日行止见识出于己上的闺阁女子立传，消愁破闷而非怨世骂时。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "开篇直接交代创作意图与全书题旨，属于原初设定与自述说明。",
+        "generalityHint": "涵盖整部小说的书写原则与主旨框架，具有贯穿全书的宏观纲领性。",
+        "rationale": "基于p-23，作者自道撰写《石头记》之原委与题纲正义。",
+        "passageIds": [
+          "p-23"
+        ]
+      },
+      {
+        "label": "顽石思凡与二仙幻化",
+        "identityLabel": "女娲遗石与幻形入世",
+        "summary": "女娲炼石补天剩下一块未用，弃于青埂峰下；此石自通灵性，听闻一僧一道谈论红尘富贵后动凡心苦求入世，僧道遂施幻术将其化为可佩美玉携往繁华地。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "讲述小说最核心的神话起源设定，二仙预言美中不足、万境归空，奠定全书命运基调。",
+        "generalityHint": "专指女娲遗石与一僧一道之间的互动契约，构成整部叙事的形而上起点。",
+        "rationale": "基于p-591与p-723，详细描绘了顽石的来历及二仙度其入世的因由。",
+        "passageIds": [
+          "p-591",
+          "p-723"
+        ]
+      },
+      {
+        "label": "空空道人见石录奇",
+        "identityLabel": "石头记的传抄定名",
+        "summary": "空空道人经青埂峰见石上编述历历，初疑其无朝代与忠孝大节，石头驳以不借熟套、直录真情之理；道人遂抄录问世，后经历次题名与曹雪芹披阅增删。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过空空道人与石头的辩难，推演并确立了非正史、重情理与真传的叙事规范。",
+        "generalityHint": "讨论野史传奇与才子佳人文风的通病，确立本书独特的文学体式与命名流变。",
+        "rationale": "基于p-1711与p-2464，呈现故事从石上记录到人间传抄刊刻的过程。",
+        "passageIds": [
+          "p-1711",
+          "p-2464"
+        ]
+      },
+      {
+        "label": "神瑛绛珠还泪公案",
+        "identityLabel": "木石前盟与还泪宿缘",
+        "summary": "甄士隐梦中听闻僧道叙述赤瑕宫神瑛侍者日以甘露灌溉绛珠草，绛珠修成女体后欲随其下世，以一生眼泪偿还灌溉之恩，由此勾出风流冤家同赴尘世造劫。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "神话层面解释男女主人公（木石）下凡的宿世情缘机制。",
+        "generalityHint": "界定了全书情痴男女入世造劫的核心因果法则与特定群体设定。",
+        "rationale": "基于p-2979，僧人向道人透露神瑛侍者与绛珠仙子的还泪公案。",
+        "passageIds": [
+          "p-2979"
+        ]
+      },
+      {
+        "label": "士隐梦醒与僧道预言",
+        "identityLabel": "甄士隐梦睹通灵与僧道诫言",
+        "summary": "甄士隐在梦中得见镌有“通灵宝玉”字样的美玉，醒后抱女英莲出游，忽逢疯癫僧道，僧指英莲为有命无运之物并念偈预言元宵之后家散火起。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由神话境界过渡到人间实景，预言不仅针对英莲，更隐喻甄家的盛极而衰。",
+        "generalityHint": "针对甄士隐及其女儿英莲的个案命数，同时具有警省人世的象征意味。",
+        "rationale": "基于p-3747与p-4103，士隐见宝玉与僧道现身街头口念谶言。",
+        "passageIds": [
+          "p-3747",
+          "p-4103",
+          "p-4401"
+        ]
+      },
+      {
+        "label": "士隐资助贾雨村赴考",
+        "identityLabel": "贾雨村受助进京",
+        "summary": "寄居庙中的落魄儒生贾雨村因甄家丫鬟回顾而自拟知己，中秋之夜对月感怀抒发抱负，甄士隐慷慨赠予五十两白银及冬衣助其进京赴考，雨村次日清晨不辞而别。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "写雨村的心志与士隐的轻利重义，展现二人的交谊及雨村仕途起点。",
+        "generalityHint": "描写特定人物的相遇、赠资与行止，为日后雨村发迹埋下伏笔。",
+        "rationale": "基于p-4929与p-5811，表现丫鬟回顾、二人对饮畅谈及士隐出资相助。",
+        "passageIds": [
+          "p-5811",
+          "p-4929"
+        ]
+      },
+      {
+        "label": "甄家遭难与士隐悟道",
+        "identityLabel": "甄家衰亡与士隐解好了歌",
+        "summary": "元宵夜英莲走失，紧接三月葫芦庙火灾烧毁家产，士隐投靠岳丈封肃又遭刻薄冷遇，贫病交迫之际闻跛足道人《好了歌》，顿悟后作注解并弃家随道人飘然而去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从家庭横祸与世态炎凉中推导出生死成败、荣华归空的彻悟哲理。",
+        "generalityHint": "《好了歌》及其解注揭示了功名富贵终归幻灭的人世通则。",
+        "rationale": "基于p-6534、p-7225及p-7404，交代甄家衰亡全过程及士隐的彻底解脱。",
+        "passageIds": [
+          "p-7225",
+          "p-6534",
+          "p-7404"
+        ]
+      },
+      {
+        "label": "娇杏偶窥与雨村荣归",
+        "identityLabel": "贾雨村得志与查访甄家",
+        "summary": "士隐出家后封氏主仆依附封肃度日，昔日回顾雨村之丫鬟于门前见新太爷到任乌帽猩袍，当晚新官差人传人问话，正是贾雨村得胜荣归后登门查访旧恩。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "前文赠银与回顾的伏笔在此交汇，形成雨村得志与甄家衰亡的对照。",
+        "generalityHint": "属于特定剧情转折与人物命运起落的勾连点。",
+        "rationale": "基于p-7793，新官到任惊动封家，引出雨村荣身复访的情节。",
+        "passageIds": [
+          "p-7793"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "顽石入世经历风流繁华后将往事刻于石上，空空道人路过青埂峰方得检阅抄录。",
+        "passageIds": [
+          "p-1477",
+          "p-1711"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "顽石思凡入世被僧道夹带于神瑛侍者与绛珠仙子造劫了结的风流公案之中。",
+        "passageIds": [
+          "p-2979"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "甄士隐在梦境中所闻的还泪公案与所见的通灵宝玉，正是神话入世情节的投射与显现。",
+        "passageIds": [
+          "p-3747"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 6,
+        "type": "supports",
+        "rationale": "疯僧在门前针对英莲的预言（元宵后烟消火灭）在甄家失女失火的惨剧中完全应验。",
+        "passageIds": [
+          "p-4401",
+          "p-5811",
+          "p-6534"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 7,
+        "type": "supports",
+        "rationale": "贾雨村得士隐资助进京大比，方有后来中举为官、乌帽猩袍荣归到任并传唤甄家。",
+        "passageIds": [
+          "p-5811",
+          "p-7793"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "士隐出家后封氏主仆在封家艰难营生，新太爷贾雨村的忽然差传打破了这一境遇，前后形成兴衰对比。",
+        "passageIds": [
+          "p-7669",
+          "p-7793"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Ldecau2xEPGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 10689,
+    "candidatesTokenCount": 2640,
+    "totalTokenCount": 13329,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10689
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2640
+      }
+    ]
+  },
+  "durationMs": 21222,
+  "requestHash": "9fbb3ee5c3cf939f43353eafb9e017b841add506e8df5574f20a83c8da6cab20"
+}

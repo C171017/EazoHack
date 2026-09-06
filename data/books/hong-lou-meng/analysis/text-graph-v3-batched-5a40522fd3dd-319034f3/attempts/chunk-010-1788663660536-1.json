@@ -1,0 +1,211 @@
+{
+  "value": {
+    "summary": "第十回叙述金荣闹学堂受辱归家后怨气未消，其母胡氏以学房利益多、依傍薛蟠周济为由劝阻金荣闹事。随后璜大奶奶贾氏探视寡嫂，得知此事盛怒之下赶赴宁国府欲找秦可卿理论，却被尤氏叙述秦氏重病及家常客气应对所化解，怒气全消而归。贾珍因遍请名医无果，得冯紫英引荐请得张友士诊脉。张先生细辨脉象与病源，指出秦氏忧虑伤脾、水亏木旺，立下“益气养荣补脾和肝汤”并断定今冬可保无碍。",
+    "nodes": [
+      {
+        "label": "金荣心怀不忿",
+        "identityLabel": "金荣怀恨秦钟",
+        "summary": "金荣被迫向秦钟磕头赔罪后回家愤愤不平，认为秦钟同样是附学外戚且仗势目中无人，自己并不惧怕闹出事端。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于学堂受辱的前因直接抒发不满与反抗心理。",
+        "generalityHint": "单一人物在特定事件后的心理与言行。",
+        "rationale": "金荣因学堂被逼向秦钟赔礼磕头，心中怨愤难平，回家发泄不甘。",
+        "passageIds": [
+          "p-63175"
+        ]
+      },
+      {
+        "label": "金母算计忍气",
+        "identityLabel": "胡氏算计依附利益",
+        "summary": "金荣母亲胡氏劝阻其争闲气，指出入塾是托贾琏二奶奶人情所得，兼能省下嚼用并获薛蟠银两资助，告诫不可失了立足之地。",
+        "sourceRole": "dialogue",
+        "speaker": "胡氏",
+        "reasoningHint": "从家庭经济状况与依附贵族的实际利益权衡利害得失，得出金荣必须忍耐的结论。",
+        "generalityHint": "贫困寄生族亲对待贵族豪门的依附算计与保全处境之策。",
+        "rationale": "胡氏从省嚼用和薛大爷周济两方面权衡利害，严词弹压金荣的意气用事。",
+        "passageIds": [
+          "p-63367"
+        ]
+      },
+      {
+        "label": "璜大奶奶闻讯欲理论",
+        "identityLabel": "贾璜之妻为侄出头",
+        "summary": "贾璜之妻听闻金荣在义学受辱，大怒不平，决定前往宁国府找尤氏和秦氏质问理论，不顾寡嫂劝阻。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因亲戚偏袒不平而引发冲动出头之举。",
+        "generalityHint": "特定人物的情感反应及家庭交涉行动。",
+        "rationale": "璜大奶奶自恃贾门嫡派亲戚身份，不忿秦钟得势，执意登门兴师问罪。",
+        "passageIds": [
+          "p-63821",
+          "p-63668"
+        ]
+      },
+      {
+        "label": "尤氏陈说秦氏沉疴",
+        "identityLabel": "尤氏述秦可卿病势与个性",
+        "summary": "尤氏向金氏倾诉秦可卿经期停滞、精神怠倦的重病，点明秦氏心思过细、遇事思虑过度，且因学房吵闹受气而绝食。",
+        "sourceRole": "dialogue",
+        "speaker": "尤氏",
+        "reasoningHint": "通过观察儿媳日常症状和脾性推断病因根源，说明病情凶险与家庭担忧。",
+        "generalityHint": "对个案病因和特定人物性格机制的细致解释。",
+        "rationale": "尤氏热情款待金氏的同时大诉苦水，详尽介绍秦氏病重及病由性起的内情。",
+        "passageIds": [
+          "p-64147"
+        ]
+      },
+      {
+        "label": "璜大奶奶化怒为喜",
+        "identityLabel": "金氏知难而退客套逢迎",
+        "summary": "金氏听闻秦氏重病不敢再提争执之事，兼之贾珍夫妻待其客气周到，盛气全消，顺水推舟告退回家。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "结合对方重病处境与自身依附地位迅速调整应对策略。",
+        "generalityHint": "贫弱宗亲在势利与情理压制下的心理转变与妥协。",
+        "rationale": "金氏闻病而胆怯，又受贾府礼遇，原有的寻衅兴师之意烟消云散。",
+        "passageIds": [
+          "p-64923"
+        ]
+      },
+      {
+        "label": "贾珍商议延医",
+        "identityLabel": "贾府病困与求请张友士",
+        "summary": "贾珍批评寻常大夫顺应人意无效劳人，采纳冯紫英举荐，差人下帖聘请深通医理、能断死生的名士张友士前来诊治。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对以往大夫浮泛医术的否定，推导出求请名医之必要。",
+        "generalityHint": "权贵世家面对重疾时的延医困境与求医决策。",
+        "rationale": "贾珍夫妇对庸医走马换药极其不满，急切托冯紫英请张友士来诊秦氏。",
+        "passageIds": [
+          "p-65219"
+        ]
+      },
+      {
+        "label": "张太医论病穷源",
+        "identityLabel": "张友士诊脉辨病机",
+        "summary": "张友士切脉后准确推断出秦氏各部脉象与病症，断定为心气虚、肝郁血亏及忧虑伤脾，并非喜脉，乃由聪慧过甚、思虑太过所致。",
+        "sourceRole": "dialogue",
+        "speaker": "张先生",
+        "reasoningHint": "从中医经络五行与四诊脉象层层反推至心性思虑过度之病根，完成系统辨证。",
+        "generalityHint": "中医病理学中情志致病与脏腑相克的普遍辨证模型应用。",
+        "rationale": "张太医不待家属介绍先诊脉说症，切中所有病状并点破水亏木旺之根由。",
+        "passageIds": [
+          "p-67029",
+          "p-67451"
+        ]
+      },
+      {
+        "label": "立方断期释疑",
+        "identityLabel": "张友士开方与断生死",
+        "summary": "张先生立下“益气养荣补脾和肝汤”，并预言秦氏得此调理今冬性命无碍、待交春分方有望痊愈，令贾珍父子稍得宽慰。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "结合脏腑虚实配伍方药，并根据季节与节气消长推断转机期限。",
+        "generalityHint": "医家依据病势深浅与季节五行论断生死病程的具体医案结语。",
+        "rationale": "张先生开具药方并对贾蓉点明病势缓急与存活期限，给贾府定下方寸。",
+        "passageIds": [
+          "p-67905",
+          "p-67790"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "金荣的不满引出了其母胡氏立足现实利益的劝诫与管束。",
+        "passageIds": [
+          "p-63175",
+          "p-63367"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "胡氏与金荣的家常琐事引来金氏探视，并促成金氏为侄出头的冲动决定。",
+        "passageIds": [
+          "p-63367",
+          "p-63821"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "金氏入宁府欲行兴师问罪，直面尤氏诉说秦氏危急病情。",
+        "passageIds": [
+          "p-63821",
+          "p-64147"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "尤氏陈明秦氏病势及厚待金氏的态度，直接促使金氏打消理论念头、转怒为喜。",
+        "passageIds": [
+          "p-64147",
+          "p-64923"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "尤氏对秦氏病情的极度忧虑促使贾珍设法托冯紫英延请良医张友士。",
+        "passageIds": [
+          "p-64147",
+          "p-65219"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "贾珍成功下帖延请张友士，引出次日张先生来府为秦氏切脉辨证。",
+        "passageIds": [
+          "p-65219",
+          "p-66541",
+          "p-67029"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "supports",
+        "rationale": "张友士对脉象病源的深入推断直接构成了其拟定药方与推断生死期限的医学依据。",
+        "passageIds": [
+          "p-67029",
+          "p-67451",
+          "p-67905"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "WtecavTRIOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 7587,
+    "candidatesTokenCount": 2573,
+    "totalTokenCount": 10160,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7587
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2573
+      }
+    ]
+  },
+  "durationMs": 18933,
+  "requestHash": "0ebeec15a3ba7a45e3aca7d9b2c50ac13cb9c45bc5fec8ea28d333c328b527c7"
+}

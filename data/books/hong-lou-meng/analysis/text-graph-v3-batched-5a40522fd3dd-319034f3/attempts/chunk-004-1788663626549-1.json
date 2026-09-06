@@ -1,0 +1,162 @@
+{
+  "value": {
+    "summary": "第四回叙述李纨身世及处境；贾雨村到任应天府审理薛蟠打死冯渊争买英莲案，门子出示护官符并献计，雨村遂徇情枉法结案；随后薛姨妈携薛蟠、薛宝钗进京，贾府留其住进梨香院。",
+    "nodes": [
+      {
+        "label": "李纨守寡持家背景",
+        "identityLabel": "李纨身世与德行",
+        "summary": "李纨乃贾珠之遗孀、名宦李守中之女，因恪守妇道只知侍亲养子、陪侍小姑，在膏粱锦绣中如槁木死灰。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述李纨家族背景与品性特点，作为大观园/贾府人物常态的交代，推理性较低。",
+        "generalityHint": "针对李纨这一特定人物的生活状态与守节规范进行概括。",
+        "rationale": "文本在黛玉与姊妹退至寡嫂房中时，直接叙明李纨之父、家教、丧夫守寡抚孤的行事原则。",
+        "passageIds": [
+          "p-22716",
+          "p-22644"
+        ]
+      },
+      {
+        "label": "薛蟠争买英莲打死冯渊",
+        "identityLabel": "冯渊薛蟠人命案起因",
+        "summary": "拐子将甄士隐之女英莲先卖与冯渊，复又卖与薛蟠，薛家仗势喝令豪奴将冯渊殴打致死，薛蟠旋即进京。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "原告陈词与门子私叙结合揭示此案缘由及死者被夺丫头的身世。",
+        "generalityHint": "单一具体案件的起因与原委。",
+        "rationale": "原告在应天府诉告薛家打死冯渊，随后门子进一步详述被拐女子即甄英莲及薛蟠行凶之举。",
+        "passageIds": [
+          "p-22992",
+          "p-24249",
+          "p-24756"
+        ]
+      },
+      {
+        "label": "门子出示护官符",
+        "identityLabel": "护官符制度与四大家族连带",
+        "summary": "门子阻止雨村发签拿人，指出做官必知本省极富极贵大乡绅名姓的“护官符”，贾史王薛四家联络有亲、一损俱损一荣俱荣。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从门子对地方官场潜规则的说明中抽引出四大家族权势网络。",
+        "generalityHint": "本省乃至各省做官者通行的官场潜规则及四大家族整体格局。",
+        "rationale": "门子向贾雨村详细解说护官符的含义，并出示记载贾史王薛权势连带的官场私单。",
+        "passageIds": [
+          "p-23676",
+          "p-23998",
+          "p-24062"
+        ]
+      },
+      {
+        "label": "门子献策与雨村枉法结案",
+        "identityLabel": "葫芦案审理与发配门子",
+        "summary": "雨村念及贾府王府提拔之恩，采纳门子掩饰之策，借乩仙与暴病为名胡乱判案，给冯家烧埋银了事，事后将门子充发远方。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "雨村在权衡朝廷律法与自身权位、家族报恩后作出枉法裁决的局部推论。",
+        "generalityHint": "特定案件的审判过程及其对当事人的后续处置。",
+        "rationale": "文本详细记述门子献计借乩仙了案，雨村徇情枉法并致信贾政、王子腾，最后远充知情的门子。",
+        "passageIds": [
+          "p-25726",
+          "p-26127",
+          "p-25300"
+        ]
+      },
+      {
+        "label": "薛蟠性情与进京缘由",
+        "identityLabel": "薛家进京动因与宝钗待选",
+        "summary": "薛蟠为人奢侈傲慢、老大无成，因送妹宝钗待选、望亲、销算旧账及游览京城而举家启程进京。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "作者直接交待薛蟠性情与薛家进京的三项动因及薛宝钗的品貌与才德。",
+        "generalityHint": "薛家一家多项行动动机与人物品性概述。",
+        "rationale": "文本以追叙方式交待薛蟠因溺爱无能、薛宝钗待选才人赞善以及薛家赴京的真实盘算。",
+        "passageIds": [
+          "p-26338",
+          "p-27057"
+        ]
+      },
+      {
+        "label": "薛家入住荣府梨香院",
+        "identityLabel": "薛家定居梨香院与子弟交往",
+        "summary": "薛姨妈率薛蟠、宝钗抵京拜见贾母、王夫人后，贾府安排其入住梨香院；薛蟠结交贾府纨绔子弟，反愈加放纵堕落。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从两府亲情留宿的安排到薛蟠与贾家子弟聚赌嫖娼的渐进叙述。",
+        "generalityHint": "薛家在贾府定居的生活状态及其引发的贾府子弟交往影响。",
+        "rationale": "叙述薛姨妈携子女投奔贾府，贾政贾母留住梨香院，薛蟠在此与族中纨绔交往引诱更坏的过程。",
+        "passageIds": [
+          "p-27735",
+          "p-27979",
+          "p-27557"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "薛蟠殴死冯渊案引发门子出面谏止发签，从而引出“护官符”与四大家族背景的说明。",
+        "passageIds": [
+          "p-23257",
+          "p-23676"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "护官符揭示的薛贾王利益同盟直接促使雨村打消依法拿人的初衷，转而徇情枉法结案。",
+        "passageIds": [
+          "p-24062",
+          "p-25300",
+          "p-26127"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "exemplifies",
+        "rationale": "薛蟠强买英莲打死冯渊并将人命视为儿戏的行为，具体印证了他性情奢侈傲慢、倚仗祖荫的纨绔品行。",
+        "passageIds": [
+          "p-24249",
+          "p-26338"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "薛蟠进京行程与避开母舅管束的算盘，顺势发展为全家入住荣国府梨香院并与贾族子侄沉溺声色。",
+        "passageIds": [
+          "p-27057",
+          "p-27735",
+          "p-27979"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "PNecapXaJ7Ci0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 8351,
+    "candidatesTokenCount": 1968,
+    "totalTokenCount": 10319,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8351
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1968
+      }
+    ]
+  },
+  "durationMs": 14474,
+  "requestHash": "4dd6c772ca80e6b71ecf2d8910ec7b2e78184d41520c8e3dd87a438ab958dc35"
+}

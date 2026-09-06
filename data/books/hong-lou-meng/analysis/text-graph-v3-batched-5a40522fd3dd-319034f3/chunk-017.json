@@ -1,0 +1,191 @@
+{
+  "value": {
+    "summary": "第十七回记叙贾政带领众清客并携宝玉初游新落成的大观园。贾政意在查验工程并测试宝玉才思，父子与清客在曲径通幽、沁芳亭、有凤来仪、稻香村、蘅芜苑、怡红院等各处景致赏景题咏。宝玉在对景拟额中展现出崇尚自然、化裁古人应制之体的情致与审美见解，虽屡遭贾政呵斥，却屡获众人赞赏。",
+    "nodes": [
+      {
+        "label": "大观园拟题之议与携宝玉游园",
+        "identityLabel": "游园拟额之始",
+        "summary": "大观园工程告竣，贾政与清客商议先按景致虚拟匾额对联，恰逢宝玉在园中，贾政因闻其有对联歪才，遂命其随行以试其才学。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述大观园修成后的游览起因，由贵妃省亲需备匾联直接推演出暂行拟额的游园行动。",
+        "generalityHint": "单一叙事事件与行动背景。",
+        "rationale": "基于p-101825与p-102432，贾珍回禀工程告竣，贾政与清客定计公拟虚匾，并偶然叫上宝玉同行，构成了全回收试才题咏的起点。",
+        "passageIds": [
+          "p-101825",
+          "p-102432"
+        ]
+      },
+      {
+        "label": "进门开景题曲径通幽",
+        "identityLabel": "迎面留题曲径通幽",
+        "summary": "贾政一行入园，见翠嶂遮景深合丘壑之妙；宝玉主张非主山正景且编新不如述旧，拟题唐人诗句“曲径通幽处”。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从开门障景的审美功能推出非主山正景的处理方式，并化用“编新不如述旧”原则得出题名。",
+        "generalityHint": "涉及园林探景造景的局部审美原则及单处题额。",
+        "rationale": "依据p-102620与p-102953，贾政赏识翠嶂挡景，宝玉以旧诗借题石碣，确立了不落俗套的题名基调。",
+        "passageIds": [
+          "p-102953",
+          "p-102620"
+        ]
+      },
+      {
+        "label": "沁芳亭拟额与题联",
+        "identityLabel": "沁芳亭题咏",
+        "summary": "面对水上石亭，宝玉辨析欧阳修酿泉用“泻”字之境，指出省亲应制需蕴藉含蓄，改拟“沁芳”，并口占“绕堤柳借三篙翠，隔岸花分一脉香”七言联。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从应制文体与水亭幽境两方面否定粗陋直白的“泻玉”，推导得出含蓄新雅的“沁芳”。",
+        "generalityHint": "特定水景建筑题额的审美甄别，兼及应制诗文体裁要求。",
+        "rationale": "基于p-103288与p-103848，宝玉现场驳议众人及贾政的化用欧文之失，提出“沁芳”并成联，贾政虽加挑剔却点头认可。",
+        "passageIds": [
+          "p-103288",
+          "p-103848"
+        ]
+      },
+      {
+        "label": "潇湘馆题有凤来仪",
+        "identityLabel": "竹林精舍颂圣题额",
+        "summary": "至翠竹掩映的幽舍，贾政称许其月夜读书之趣，宝玉认为此处为省亲首处宜颂圣，摒弃“淇水”“睢园”等陈腐字样，题为“有凤来仪”并缀以对联。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于省亲行幸首处的功能定位，得出必须以“颂圣”为宗旨的判断，选取现成古语。",
+        "generalityHint": "皇家省亲特定场景的题拟范式与功能考量。",
+        "rationale": "依据p-103866与p-104085，宝玉指出该处乃行幸要地，以“有凤来仪”既契合凤竹环境又暗喻贵妃，合乎颂圣礼仪。",
+        "passageIds": [
+          "p-104085",
+          "p-103866"
+        ]
+      },
+      {
+        "label": "稻香村评穿凿与争辩天然",
+        "identityLabel": "田庄天然与穿凿之辨",
+        "summary": "至茅舍农庄处，贾政赞其有归农之意，宝玉却直斥其背山无脉、临水无源，纯属人力穿凿扭捏，坚持“天然”当顺乎地势气理，引得贾政大怒叱责。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由“天然”本义展开园林美学批判，论证脱离地势与脉络的人造田庄违背“自然之理”。",
+        "generalityHint": "园林造景中“天然”与“穿凿”的普遍美学原理批判。",
+        "rationale": "基于p-105411、p-105635与p-105809，宝玉与贾政就稻香村是否符合“天然”发生激烈争辩，揭示出二人审美品位与价值观念的深层冲突。",
+        "passageIds": [
+          "p-105809",
+          "p-105411",
+          "p-105635"
+        ]
+      },
+      {
+        "label": "蘅芜苑辨识异草与题蘅芷清芬",
+        "identityLabel": "清凉瓦舍题咏蘅芜",
+        "summary": "至堆石掩蔽的异草清厦，宝玉博引《离骚》《文选》辨识奇草名色，并在题额时摒弃“麝兰明月”等着迹俗套，拟名“蘅芷清芬”，联语用典清新活泼。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从异草脱俗无木的特征出发，推求题匾联不得着迹实指，化用前人诗句加以翻新变体。",
+        "generalityHint": "文人借题异卉的考据知识与诗性提炼。",
+        "rationale": "依据p-106545与p-106966至p-107430，宝玉展现其异草博物见识，并提出不落形迹的作联主张，获得清客赞扬。",
+        "passageIds": [
+          "p-106545",
+          "p-107412",
+          "p-107430"
+        ]
+      },
+      {
+        "label": "怡红院题红香绿玉与出园迷路",
+        "identityLabel": "蕉棠院落与幽房奇设",
+        "summary": "至蕉棠并植的院落，宝玉指出兼顾红绿方得完备，题额“红香绿玉”；随后众人步入通透玲珑、嵌镜通户的内室，惊叹其搜神夺巧，迷径后始出园门。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从芭蕉与海棠两相对照的景观特征出发，推导出必须兼蓄“红”“绿”二意方称两全的命名逻辑。",
+        "generalityHint": "具体院落景物双全兼摄的题拟构思及巧构室内空间的陈设体验。",
+        "rationale": "基于p-107949与p-108780，宝玉定“红香绿玉”以全蕉棠二景，众人随贾珍游历隔板镜屏之室，终结此番游览。",
+        "passageIds": [
+          "p-107949",
+          "p-108780"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾政带宝玉游园后，第一处驻足题名即为翠嶂之上的曲径通幽。",
+        "passageIds": [
+          "p-102620",
+          "p-102953"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "入山口穿石洞后行至水亭，由山景题额自然推进到水亭题额。",
+        "passageIds": [
+          "p-103288"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "出亭过池后引入千竿翠竹之舍，宝玉继续就院落功能与格调拟额。",
+        "passageIds": [
+          "p-103866",
+          "p-104085"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "离开有凤来仪后步入杏花茅舍，宝玉更进一步将前处的自然之理与此处的穿凿农景相对比。",
+        "passageIds": [
+          "p-105635",
+          "p-105809"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "离开稻香村穿花度水后至清凉瓦舍，由农庄穿凿之争转入异草清厦的博考与拟题。",
+        "passageIds": [
+          "p-106100",
+          "p-106545"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "过正殿及水闸后至蕉棠院落，由蘅芜苑的清雅异草转至怡红院的蕉棠争艳及幽室机巧。",
+        "passageIds": [
+          "p-107949",
+          "p-108780"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "eNecasqPA-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 11023,
+    "candidatesTokenCount": 2675,
+    "totalTokenCount": 13698,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11023
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2675
+      }
+    ]
+  },
+  "durationMs": 18305,
+  "requestHash": "8a6c424b6e70f88f70b348ff639745041ca61781776bc5784a7f749c32f7d924"
+}

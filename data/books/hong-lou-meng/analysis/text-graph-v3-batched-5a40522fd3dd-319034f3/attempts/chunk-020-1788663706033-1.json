@@ -1,0 +1,157 @@
+{
+  "value": {
+    "summary": "第二十回叙述贾府内外的琐细争端与儿女情态：李嬷嬷借病迁怒并辱骂袭人，王熙凤巧言化解将其拉走；宝玉体恤麝月替其篦头而遭晴雯打趣；贾环玩骨牌输钱耍赖抱怨偏心，被王熙凤正言弹压教训；史湘云来访引发黛玉吃醋，宝玉以‘亲不间疏、先不僭后’倾心相劝，随后湘云黛玉俏语互戏。",
+    "nodes": [
+      {
+        "label": "李嬷嬷大骂袭人",
+        "identityLabel": "李嬷嬷怒骂袭人",
+        "summary": "李嬷嬷因见袭人躺在炕上，借旧怨大骂袭人妆狐媚哄宝玉，引得袭人委屈啼哭、宝玉出面分辩。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从李嬷嬷现场因袭人卧病未起而触发的激烈责骂展开叙述，不依赖复杂的全书前置推导。",
+        "generalityHint": "涉及宝玉房内乳母与侍妾丫鬟之间的特权与地位摩擦的单一场合描写。",
+        "rationale": "文本详细记述李嬷嬷拄拐进屋见袭人卧炕而发作，骂其忘本和妖媚哄主，袭人委屈落泪。",
+        "passageIds": [
+          "p-127487",
+          "p-127783"
+        ]
+      },
+      {
+        "label": "王熙凤巧解李嬷嬷之怒",
+        "identityLabel": "王熙凤调解李嬷嬷",
+        "summary": "王熙凤听闻李嬷嬷借故大嚷，以老太太喜庆规矩和热野鸡吃酒为由，顺水推舟将其拉走，平息风波。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在李嬷嬷吵闹不休的情境下，凤姐运用情理与奉承权术果断排解。",
+        "generalityHint": "记录凤姐处理家下仆妇纠纷的典型机变手腕。",
+        "rationale": "凤姐借吃酒拉走李嬷嬷，既保全了老太太的安宁，又解救了宝玉与袭人，众人叹其‘一阵风撮了去’。",
+        "passageIds": [
+          "p-127783"
+        ]
+      },
+      {
+        "label": "宝玉为麝月篦头与晴雯讽刺",
+        "identityLabel": "宝玉替麝月篦头",
+        "summary": "夜间麝月独留看屋，宝玉赞其如袭人并体贴替其篦头，被取钱折返的晴雯撞见冷语讥刺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于大观园及怡红院各丫鬟不同个性（麝月忠厚、晴雯尖锐）的直接互动场景。",
+        "generalityHint": "描摹宝玉怡红院内部亲昵日常与丫鬟间微妙言语龃龉的具体情境。",
+        "rationale": "麝月因尽责留守看屋，宝玉亲手为之篦头，晴雯进屋撞见冷讽‘交杯盏还没吃，倒上头了’。",
+        "passageIds": [
+          "p-128703",
+          "p-129094",
+          "p-129353"
+        ]
+      },
+      {
+        "label": "贾环耍赖与宝玉女儿至上观",
+        "identityLabel": "贾环赶围棋与宝玉浊物论",
+        "summary": "贾环与宝钗、莺儿赶围棋输钱耍赖痛哭，宝玉劝其弃此取彼；叙述并交代宝玉视女儿为灵秀、男子为浊物的痴念。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述包含贾环耍赖的具体事件，以及叙述者直接引申揭示宝玉‘天生万物之灵只钟于女儿’的核心心理依据。",
+        "generalityHint": "既包含具体赌戏纠纷，又触及贯穿全书的核心性格哲学（水作骨肉与泥作渣滓的信条）。",
+        "rationale": "贾环赌输不认账并自怨庶出，宝玉上前劝慰，旁白剖析宝玉不以兄长自尊辖治兄弟的根由在于认定理钟于女儿、男子皆浊物。",
+        "passageIds": [
+          "p-129353"
+        ]
+      },
+      {
+        "label": "王熙凤正言弹压贾环与赵姨娘",
+        "identityLabel": "凤姐弹斥贾环母子",
+        "summary": "赵姨娘辱骂贾环上高台盘讨没趣，王熙凤隔窗严词弹斥赵姨娘不知规矩，并教训贾环不可自轻自贱、歪心嫉妒。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接贾环输钱回去挨骂的情节，凤姐出面确立主奴名分与嫡庶规矩。",
+        "generalityHint": "展现贾府管家奶奶对庶子行为品格与妾室越权训子的权威训诫与规范。",
+        "rationale": "凤姐责备赵姨娘越位啐骂主子，训斥贾环不顾身份自甘下流，并命丰儿拿钱打发他再顽，点题回目‘正言弹妒意’。",
+        "passageIds": [
+          "p-130624"
+        ]
+      },
+      {
+        "label": "宝玉以亲疏先后温言慰黛玉",
+        "identityLabel": "宝玉温言剖心释黛玉之妒",
+        "summary": "黛玉因宝玉同宝钗顽笑而恼怒啼哭，宝玉以‘亲不间疏，先不僭后’及两心相印的真情剖白劝慰，化解黛玉心结。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝黛长期情感默契与猜疑互动的进一步深化推演。",
+        "generalityHint": "涉及宝玉黛玉核心情感契合与伦理亲疏排位的关键剖白。",
+        "rationale": "宝玉向黛玉阐发姑舅比两姨亲、先来后到的道理，黛玉答以‘我为的是我的心’，宝玉亦申明同心，二人情意释然。",
+        "passageIds": [
+          "p-131205",
+          "p-131461",
+          "p-131760"
+        ]
+      },
+      {
+        "label": "湘云来访与林黛玉俏语谑娇音",
+        "identityLabel": "黛玉湘云俏语戏谑",
+        "summary": "史湘云来访，黛玉取笑其咬舌口齿，湘云则借宝钗之全德反唇相讥，祝黛玉将来嫁个咬舌林姐夫，引得众人欢笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "接续儿女聚会的欢乐氛围，通过语言细节展示黛玉与湘云各不相让又天真烂漫的娇谑情致。",
+        "generalityHint": "姐妹间才趣相斗、语言娇俏的典型闺中互动，照应回目‘俏语谑娇音’。",
+        "rationale": "黛玉戏谑湘云叫‘爱哥哥’‘幺爱三四五’，湘云则回敬黛玉不敢挑宝姐姐短处并祝其得咬舌夫婿，两相逗乐打趣。",
+        "passageIds": [
+          "p-132221"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "李嬷嬷的大闹促发了王熙凤赶来以机智手段将其带走平息争端。",
+        "passageIds": [
+          "p-127783"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "贾环在薛姨妈处输钱耍赖受屈后回家向赵姨娘告状，由此引发凤姐隔窗听闻并严加弹斥。",
+        "passageIds": [
+          "p-129353",
+          "p-130624"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "宝玉刚向黛玉剖白心迹平复泣诉，史湘云随即走入房中，引发了黛玉与湘云之间的说笑互谑。",
+        "passageIds": [
+          "p-131760",
+          "p-132221"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "idecaoLlDfGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 7611,
+    "candidatesTokenCount": 2208,
+    "totalTokenCount": 9819,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7611
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2208
+      }
+    ]
+  },
+  "durationMs": 17343,
+  "requestHash": "fc1efb7cd31ab45fe7f0fea23966caf1e592ecc5dd57b35a1a83dbe11000e1c7"
+}

@@ -1,4 +1,4 @@
-import { getBookPreview } from '@/features/reader/book-preview';
+import { getBookPreview, getChineseBookPreview } from '@/features/reader/book-preview';
 import { cookies } from 'next/headers';
 import { createHash } from 'node:crypto';
 import { z } from 'zod';
@@ -6,7 +6,7 @@ import { backend, cloudConfig, cloudUser } from './backend';
 import { GraphSchema } from '@/shared/schemas';
 import { validateHierarchy } from '@/shared/zoom-hierarchy';
 import { validateGraphSource } from '../book-analysis/graph';
-import { createMapStore, mapBootstrap, loadMapStore } from '../book-map/store';
+import { createMapStore, mapBootstrap, loadMapStore, isSampleBookId } from '../book-map/store';
 async function object(bucket:string,path:string,token:string) {
  const {url,key}=cloudConfig();
  const response=await fetch(`${url}/storage/v1/object/authenticated/${bucket}/${path.split('/').map(encodeURIComponent).join('/')}`,{headers:{apikey:key,Authorization:`Bearer ${token}`},cache:'no-store',signal:AbortSignal.timeout(30000)});
@@ -42,10 +42,10 @@ export async function selectedCloudBook({refresh=true}:{refresh?:boolean}={}) {
  }
  // Copying the public sample into an account retains its already-verified map.
  // Match the entire immutable source before sharing this public analysis.
- if(!store && book.local_book_id==='plato-republic') {
+ if(!store && isSampleBookId(book.local_book_id)) {
   try {
-   const sample=await getBookPreview();
-   if(sample.fileHash===source.file_hash && sample.extractionVersion===source.extraction_version && sample.sourceText===sourceText)store=await loadMapStore();
+   const sample=await (book.local_book_id==='hong-lou-meng'?getChineseBookPreview():getBookPreview());
+   if(sample.fileHash===source.file_hash && sample.extractionVersion===source.extraction_version && sample.sourceText===sourceText)store=await loadMapStore(book.local_book_id);
   } catch { /* Reading remains available when the optional public map is absent. */ }
  }
  return {sourceId:id,ownerId:user.id,title:book.title,preview,store,graph:store?mapBootstrap(store):{bookId:book.local_book_id,graphVersion:book.local_book_id,version:book.local_book_id,roots:[],depth:0,totalNodes:0,unplaced:0,territories:[],unavailable:true}};

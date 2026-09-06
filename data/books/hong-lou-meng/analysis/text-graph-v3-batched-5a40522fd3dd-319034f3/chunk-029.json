@@ -1,0 +1,156 @@
+{
+  "value": {
+    "summary": "第二十九回讲述贾母带领贾府众女眷前往清虚观打醮看戏。期间凤姐掌掴乱撞的小道士，贾母显出宽仁予以安抚给钱；张道士为宝玉提亲，贾母婉拒；宝玉得道士赠法器并留金麒麟。打醮归来后，宝玉与黛玉因张道士提亲及金玉之说再次产生嫌隙，由口角升级至宝玉摔玉、黛玉剪穗，引发二人及侍妾侍女的痛哭纷争，贾母以“不是冤家不聚头”慨叹二人情痴。",
+    "nodes": [
+      {
+        "label": "清虚观打醮与门前风波",
+        "identityLabel": "清虚观打醮",
+        "summary": "贾母携贾府女眷浩浩荡荡前往清虚观打醮看戏，进观时一小道士误撞入凤姐怀中遭其掌掴，贾母得知后命人领来抚慰并赏钱。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾府打醮进庙的排场与突发事件，展现凤姐的暴烈与贾母的慈和，为清虚观诸事开端。",
+        "generalityHint": "特定事件记叙，呈现荣国府贵族仪仗及主仆等级关系。",
+        "rationale": "基于p-191434及p-192483，具体记叙了初一打醮进庙的过程，包含小道士冲撞与贾母的怜贫举动。",
+        "passageIds": [
+          "p-191434",
+          "p-192483"
+        ]
+      },
+      {
+        "label": "张道士提亲与贾母婉拒",
+        "identityLabel": "张道士提亲",
+        "summary": "张道士向贾母提及某家小姐品貌双全欲给宝玉说亲，贾母以和尚曾言宝玉命里不宜早娶为由婉言拒绝，并提出择偶不论家境只看模样性格的标准。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从张道士提亲推导出贾母当前的择媳态度，并埋下后续宝黛口角的直接导火索。",
+        "generalityHint": "围绕宝玉婚姻条件的具体对话，反映贾府核心人物对择配的准则与策略。",
+        "rationale": "基于p-194152，张道士提亲引发贾母对宝玉婚事的一番申说与婉拒。",
+        "passageIds": [
+          "p-194152"
+        ]
+      },
+      {
+        "label": "宝玉收留金麒麟",
+        "identityLabel": "得赠法器与金麒麟",
+        "summary": "张道士将众道友所赠法器敬献给宝玉，宝玉在盘中见得赤金点翠的金麒麟，得知史湘云亦有类似物件后特意留藏，引起黛玉注意与讽刺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "记录宝玉获取金麒麟及宝钗、探春、黛玉各人反应的过程，预设后文湘云与麒麟的情节线索。",
+        "generalityHint": "单一特定场景中的物品流转与人物互动。",
+        "rationale": "基于p-195035与p-195705，记录道士敬贺法器及宝玉私收金麒麟的情节细节。",
+        "passageIds": [
+          "p-195035",
+          "p-195705"
+        ]
+      },
+      {
+        "label": "两假相逢与口角摔玉",
+        "identityLabel": "两假相逢的心理症结与摔玉",
+        "summary": "宝黛二人因张道士提亲与“金玉”旧说互相猜度试探，各怀求近之心反弄成疏远之意，最终激化为宝玉狠命摔玉、黛玉伤心呕吐。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述者深入剖析宝黛二人‘因求近而反弄成疏远’的心理机制，并具体展现口角升级至暴烈砸玉的经过。",
+        "generalityHint": "探讨宝黛恋爱心理特质与沟通困境的典型剖析，兼具局部事件与深度心理概括。",
+        "rationale": "基于p-196623、p-197486和p-197686，详细阐释二人假意试探的痴病与砸玉冲突。",
+        "passageIds": [
+          "p-196623",
+          "p-197486",
+          "p-197686"
+        ]
+      },
+      {
+        "label": "黛玉剪穗与四人对泣",
+        "identityLabel": "黛玉剪穗",
+        "summary": "袭人劝解宝玉莫忘通灵宝玉上黛玉亲穿的穗子，黛玉闻言夺过剪断，宝黛袭紫四人各有委屈痛惜，陷入无言对泣之境。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "袭人的劝导反激起黛玉的绝望举动，展现各方心理错位与情感压抑后的悲泣。",
+        "generalityHint": "特定房间内的情感爆发与冲突细节。",
+        "rationale": "基于p-197949及p-198462，记载黛玉剪断穗子以及四人相对哭泣的情节。",
+        "passageIds": [
+          "p-198462",
+          "p-197949"
+        ]
+      },
+      {
+        "label": "不是冤家不聚头",
+        "identityLabel": "不是冤家不聚头的感悟",
+        "summary": "贾母因宝黛争执不下而慨叹‘不是冤家不聚头’，此语传入各自院中，宝黛如参禅般深味其意，虽身居两地却情发一心。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾母的叹语成为点醒宝黛情缘的契机，将具体的争吵升华为人居两地、心意相通的情感印证。",
+        "generalityHint": "由特定情感矛盾引发的命运式谶语与情感共鸣体验。",
+        "rationale": "基于p-199117，贾母的感叹与宝黛二人各自暗泣反思形成呼应。",
+        "passageIds": [
+          "p-199117",
+          "p-198914"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "清虚观打醮为张道士面见贾母并伺机提亲提供了空间与情境背景。",
+        "passageIds": [
+          "p-191434",
+          "p-194152"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "张道士提亲一事直接让宝玉心中不快，成为次日黛玉言辞奚落与宝黛爆发争吵摔玉的导火索。",
+        "passageIds": [
+          "p-194152",
+          "p-196623"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉砸玉引来袭人紫鹃劝解，袭人提及玉穗子，进一步激使黛玉夺剪断穗。",
+        "passageIds": [
+          "p-197686",
+          "p-198462"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "砸玉剪穗的大闹导致二人双双告假不去薛蟠生日，贾母因而发出‘不是冤家不聚头’的叹息。",
+        "passageIds": [
+          "p-198462",
+          "p-199117"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "tdecatrDB9CX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 11888,
+    "candidatesTokenCount": 2051,
+    "totalTokenCount": 13939,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11888
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2051
+      }
+    ]
+  },
+  "durationMs": 14155,
+  "requestHash": "7592e9d557b86610b03d3bec3a5cd3adedb4647d17d5be2afe07b4ee65c002cf"
+}

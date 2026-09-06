@@ -1,0 +1,148 @@
+{
+  "value": {
+    "summary": "本回讲述大观园芒种节饯花神，薛宝钗扑蝶并于滴翠亭机变移祸；小红（红玉）替凤姐办事口齿伶俐受其赏识；探春向宝玉托买朴素玩意并流露对生母赵姨娘的不满；最后宝玉至花冢偶闻林黛玉哭吟《葬花吟》。",
+    "nodes": [
+      {
+        "label": "芒种节大观园饯花神",
+        "identityLabel": "饯花神风俗",
+        "summary": "芒种节当日，大观园众闺阁少女依尚古风俗设各色礼物祭饯花神，闺中以此为乐，整座园子系满丝绦锦罗。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从古俗直接交代园中闺阁女子次日清晨齐集的节令背景。",
+        "generalityHint": "涉及园中所有少女共同遵循的时节风俗。",
+        "rationale": "叙述芒种节的气氛与风俗，为全回众人游园、扑蝶与葬花提供了共同的时空舞台。",
+        "passageIds": [
+          "p-175191"
+        ]
+      },
+      {
+        "label": "宝钗避嫌止步潇湘馆",
+        "identityLabel": "宝钗之避嫌保身",
+        "summary": "宝钗意欲寻黛玉，见宝玉先一步进院，因度二人自小无嫌隙且黛玉素好多心，便抽身返回以避嫌疑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于对黛玉与宝玉性情亲疏的观察做出的即时心机推断。",
+        "generalityHint": "体现宝钗处世谨小慎微、不涉他人嫌隙的一贯风格。",
+        "rationale": "宝钗由眼前宝玉进门之景，权衡利害后主动退避，引出后续扑蝶情节。",
+        "passageIds": [
+          "p-175578"
+        ]
+      },
+      {
+        "label": "宝钗滴翠亭戏蝶脱壳",
+        "identityLabel": "滴翠亭金蝉脱壳",
+        "summary": "宝钗因扑蝶行至滴翠亭，偶然听见红玉与坠儿私下授受手帕并定情之语；因怕二人恼羞成怒，故作寻黛玉之声施展“金蝉脱壳”之计遮掩过去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从偷听私密对话到迅速设局脱身并借黛玉作掩护的临机应变。",
+        "generalityHint": "具体事件中展现宝钗敏锐机智与自保为先的行事特点。",
+        "rationale": "滴翠亭事件不仅展现宝钗的应变机敏，也造成了红玉对黛玉的防备与误会。",
+        "passageIds": [
+          "p-175885",
+          "p-176075",
+          "p-176468"
+        ]
+      },
+      {
+        "label": "小红回话得凤姐赏识",
+        "identityLabel": "红玉口齿出众",
+        "summary": "红玉为凤姐跑腿取银回话，条理明晰、干脆利落，凤姐甚为赞赏并欲调其至身边，更得知其为林之孝之女。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "红玉因办差条理分明而获得凤姐从外貌到才干的连贯赏识与提拔意向。",
+        "generalityHint": "描写贾府下层奴仆凭借伶俐口齿求进阶的具体事例。",
+        "rationale": "生动展现红玉的才干与抱负，以及凤姐看重利落能干之人的用人取向。",
+        "passageIds": [
+          "p-177112",
+          "p-177972",
+          "p-178309"
+        ]
+      },
+      {
+        "label": "探春托买物并斥赵姨娘",
+        "identityLabel": "探春之持守与自尊",
+        "summary": "探春托宝玉采买朴而不俗的民间玩意，谈及做鞋之事时对生母赵姨娘的狭隘偏执大动肝火，坚守嫡庶秩序与自身尊严。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从日常托买物延伸至对庶出身份与生母阴微言行的辩白与决裂态度。",
+        "generalityHint": "反映探春在家族嫡庶矛盾与个人志趣上的鲜明立场。",
+        "rationale": "展现探春雅致的审美情趣以及因赵姨娘挑唆而激发的刚烈性格与治家观念。",
+        "passageIds": [
+          "p-179528",
+          "p-180047"
+        ]
+      },
+      {
+        "label": "黛玉幽咽吟《葬花吟》",
+        "identityLabel": "黛玉葬花吟咏",
+        "summary": "林黛玉独自往花冢掩埋落花，感物伤己，悲泣吟唱《葬花吟》，借落花自比身世飘零与高洁志向，宝玉在坡后听闻痴倒。",
+        "sourceRole": "narrative",
+        "speaker": "林黛玉",
+        "reasoningHint": "由伤春残红直接寄托身世孤凄、质本洁来之思，层层深化至花落人亡之叹。",
+        "generalityHint": "集中体现黛玉悲剧宿命感与审美核心意象的经典独白诗篇。",
+        "rationale": "回目的核心高潮，《葬花吟》全篇尽显黛玉内心的哀伤与寄托，并直接震撼宝玉心灵。",
+        "passageIds": [
+          "p-180703",
+          "p-180977",
+          "p-181417"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝钗因自潇湘馆抽身回走，在途中被彩蝶吸引，从而步入滴翠亭触发窃听与金蝉脱壳。",
+        "passageIds": [
+          "p-175578",
+          "p-175885"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "红玉在滴翠亭受惊散后，接着在园中山坡遇凤姐招唤，展现出其办事与回话的非凡口才。",
+        "passageIds": [
+          "p-176910",
+          "p-177112"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "芒种饯花、春残花落的节令情境，直接勾起黛玉深切的惜春愁思与伤己之情，促成了其荷锄葬花与吟诗。",
+        "passageIds": [
+          "p-175191",
+          "p-180703",
+          "p-180977"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "sdecavr2N-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 8751,
+    "candidatesTokenCount": 1817,
+    "totalTokenCount": 10568,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8751
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1817
+      }
+    ]
+  },
+  "durationMs": 14496,
+  "requestHash": "6df75323cedacb40fddd57c9bd4d6ce197289570eef903e622d2653d98e2e665"
+}

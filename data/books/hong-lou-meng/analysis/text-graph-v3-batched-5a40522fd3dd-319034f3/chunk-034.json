@@ -1,0 +1,145 @@
+{
+  "value": {
+    "summary": "第三十四回承接宝玉受笞之后，宝钗探伤送药并劝其在外头大事上用心；黛玉抽噎探望，宝玉赠旧帕传情引其题诗；袭人向王夫人进言防嫌，提议令宝玉迁出大观园以防微杜渐；宝钗因疑薛蟠进谗而与之争执，反被薛蟠揭及金玉姻缘之痛点而委屈痛哭。",
+    "nodes": [
+      {
+        "label": "宝钗送药探伤",
+        "identityLabel": "宝钗探宝玉",
+        "summary": "宝钗持药丸探视被打卧床的宝玉，言语间流露关切与娇羞，暗想宝玉若能将细心用在仕途大事上便不至吃亏，并劝其好生静养、勿怨他人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于第三十三回宝玉被贾政笞挞的既成后果，宝钗前来进行探视与实际疗治。",
+        "generalityHint": "描写特定人物探病事件与宝钗处事心境。",
+        "rationale": "出处见段落p-223246，宝钗送药并规劝宝玉静养，展现其体贴中寄托仕途经济劝勉的性格特质。",
+        "passageIds": [
+          "p-223246"
+        ]
+      },
+      {
+        "label": "黛玉无声痛哭与劝改",
+        "identityLabel": "黛玉探宝玉",
+        "summary": "黛玉于黄昏独自探视宝玉，双眼哭肿如桃，泣诉劝宝玉“从此可都改了罢”，宝玉则向其宽慰誓言“就便为这些人死了，也是情愿的”。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接宝玉重伤在床的情境，黛玉以至情至性前来相对，与宝钗劝导形成互文。",
+        "generalityHint": "涉及宝黛两人在具体私密会面中的真情流露。",
+        "rationale": "出处见段落p-224773，黛玉抽抽噎噎劝其改过，宝玉虽受创仍剖白心迹，为全回‘情中情’之核心。",
+        "passageIds": [
+          "p-224773"
+        ]
+      },
+      {
+        "label": "袭人向王夫人进言防嫌",
+        "identityLabel": "袭人进言防嫌",
+        "summary": "袭人领命见王夫人，借探讨管教宝玉之机，大胆建言变法让宝玉搬出园子，防范男女嫌疑与外人闲话，深受王夫人赞赏并获托付。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "袭人从宝玉挨打及金钏儿跳井事件吸取教训，引申出君子防未然的家族声名之虑。",
+        "generalityHint": "从个别事件上升到家族内男女大防与奴仆规避灾祸的普遍规则。",
+        "rationale": "出处见段落p-226293与p-226865，袭人劝王夫人‘君子防不然’，促成王夫人对袭人的极度信任并委托照看宝玉。",
+        "passageIds": [
+          "p-226865",
+          "p-226293"
+        ]
+      },
+      {
+        "label": "宝玉调开袭人赠旧帕",
+        "identityLabel": "宝玉赠帕传情",
+        "summary": "宝玉特意支开袭人去借书，命晴雯送两块半新不旧的帕子给黛玉，以含蓄方式传达知心情意。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉深知袭人多心与规劝态度，故行事特意避开袭人，因情而施巧策。",
+        "generalityHint": "局限于宝玉与晴雯、黛玉之间的秘密互动场景。",
+        "rationale": "出处见段落p-227994与p-228216，宝玉假借借书遣走袭人，借晴雯之手寄赠旧帕。",
+        "passageIds": [
+          "p-227994",
+          "p-228216"
+        ]
+      },
+      {
+        "label": "黛玉题帕感怀",
+        "identityLabel": "黛玉题帕三绝",
+        "summary": "黛玉悟出旧帕隐喻之深情，百感交集之下不顾避讳嫌疑，研墨题下三首绝句抒写满腔心事与哀戚。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉由接收旧帕这一物象推演体会出宝玉的知心之情，由物及意，进而转为诗歌抒情。",
+        "generalityHint": "单一人物因赠物引发的深层心理与诗歌创作活动。",
+        "rationale": "出处见段落p-228483、p-228682等，黛玉领会帕意后五内沸然，走笔写下著名的题帕三绝。",
+        "passageIds": [
+          "p-228483",
+          "p-228682",
+          "p-228795"
+        ]
+      },
+      {
+        "label": "薛蟠负屈揭金玉",
+        "identityLabel": "薛蟠兄妹争吵",
+        "summary": "薛蟠被薛姨妈与宝钗错怪为告发宝玉之人，辩白无果后急躁动怒，更脱口直指宝钗因惦记金玉良缘而偏护宝玉，致宝钗气极痛哭。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "起因于焙茗与袭人的无端揣度，宝钗与薛姨妈信以为真，导致薛蟠激愤之下揭出隐秘心事。",
+        "generalityHint": "描述薛家母子兄妹因外界传言引发的家庭内室风波。",
+        "rationale": "出处见段落p-228874与p-230277，薛蟠有口难分，以‘金要拣有玉的’反唇相讥，构成‘错里错以错劝哥哥’的落脚点。",
+        "passageIds": [
+          "p-228874",
+          "p-230277"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "黛玉痛哭探访后，宝玉心中念念不忘，因袭人在旁不能尽意，遂设法遣开袭人赠帕以报其深情。",
+        "passageIds": [
+          "p-226865",
+          "p-227994"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉命晴雯送去两条旧手帕，直接促成了黛玉领悟心意并在帕上题诗抒怀。",
+        "passageIds": [
+          "p-228216",
+          "p-228483"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "宝钗探病时听信袭人转述焙茗之言而怀疑薛蟠挑唆，回薛家后以此劝诫薛蟠，从而引爆两兄妹的剧烈冲突。",
+        "passageIds": [
+          "p-223246",
+          "p-228874"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "2NecaqXpINCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 9739,
+    "candidatesTokenCount": 1948,
+    "totalTokenCount": 11687,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9739
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1948
+      }
+    ]
+  },
+  "durationMs": 14367,
+  "requestHash": "611ddadeaef8b097d9b3c43c2bc254477f24c95674a03d8315faad62045c6beb"
+}

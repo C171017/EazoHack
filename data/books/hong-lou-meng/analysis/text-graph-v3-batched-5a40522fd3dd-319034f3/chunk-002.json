@@ -1,0 +1,182 @@
+{
+  "value": {
+    "summary": "贾雨村升任知府后因贪酷被革职，游历至维扬入林如海府中教女林黛玉读书。后在郊外智通寺及村肆偶遇古董商冷子兴，冷子兴为贾雨村详叙宁荣二府的族谱支系、家业现状与贾宝玉等子弟奇事，贾雨村亦阐发正邪两赋之理并述及金陵甄宝玉。",
+    "nodes": [
+      {
+        "label": "娇杏因顾成正室",
+        "identityLabel": "娇杏命运两济",
+        "summary": "贾雨村到任后纳娇杏为妾，娇杏一年生子且嫡妻亡故后被扶正，叙述因当年偶然一顾而带来的离奇际遇。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述前文士隐赠银考中及雨村报恩纳妾的直接结果，因果发展明确。",
+        "generalityHint": "涉及娇杏个人命运的具体生平情节。",
+        "rationale": "基于p-8214与p-8555，叙述娇杏自一回顾到生子扶正的过程。",
+        "passageIds": [
+          "p-8555",
+          "p-8214",
+          "p-8659"
+        ]
+      },
+      {
+        "label": "贾雨村革职与馆席维扬",
+        "identityLabel": "贾雨村起落游历",
+        "summary": "雨村因贪酷恃才被革职后游历天下，在维扬受托成为巡盐御史林如海之女黛玉之西宾。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从官员获罪被黜推展到其流寓扬州教馆维生的因果关联。",
+        "generalityHint": "贾雨村个人的仕途挫折及辗转维扬的特定生平事件。",
+        "rationale": "基于p-8673、p-8931和p-9268，勾勒雨村被参革职与出任林家馆席的经过。",
+        "passageIds": [
+          "p-8673",
+          "p-8931",
+          "p-9268"
+        ]
+      },
+      {
+        "label": "智通寺破额老僧",
+        "identityLabel": "智通寺警联与老僧",
+        "summary": "雨村游至破败的智通寺，见'身后有馀忘缩手，眼前无路想回头'之联，僧人老聩不能对答。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接通过雨村行步偶至观察所得的警语意象。",
+        "generalityHint": "一处具体荒凉寺庙场景及其具警示意味的楹联。",
+        "rationale": "根据p-9531，记载雨村村野闲步遇智通寺及老僧的场景与联语。",
+        "passageIds": [
+          "p-9531"
+        ]
+      },
+      {
+        "label": "冷子兴论贾府内囊与子弟",
+        "identityLabel": "冷子兴论宁荣二府衰兆",
+        "summary": "冷子兴于村肆与雨村对饮，指出贾府如今排场虚设、生齿日繁而安富尊荣，儿孙一代不如一代。",
+        "sourceRole": "dialogue",
+        "speaker": "冷子兴",
+        "reasoningHint": "由外表繁华推断内囊耗竭与后嗣凋零的综合分析。",
+        "generalityHint": "覆盖宁荣二公整个家族衰退趋势的系统观察与判断。",
+        "rationale": "见p-10069，冷子兴详谈贾府外强中干与子弟不如先代的现状。",
+        "passageIds": [
+          "p-10069"
+        ]
+      },
+      {
+        "label": "冷子兴演说宁荣家谱",
+        "identityLabel": "宁荣二府世系",
+        "summary": "冷子兴向雨村系统讲述贾代化、贾敬、贾珍以及贾代善、贾赦、贾政、衔玉而生的贾宝玉等宁荣两房世系与名位传承。",
+        "sourceRole": "dialogue",
+        "speaker": "冷子兴",
+        "reasoningHint": "冷子兴按代际罗列贾府各房袭爵、出身与子嗣情状。",
+        "generalityHint": "宁荣两府数代主要人物的名位谱系。",
+        "rationale": "依据p-10733，冷子兴详列宁荣两府嫡系子孙的名字、官职与承袭脉络。",
+        "passageIds": [
+          "p-10733"
+        ]
+      },
+      {
+        "label": "宝玉抓周与女儿清爽论",
+        "identityLabel": "贾宝玉之性情怪癖",
+        "summary": "冷子兴述及贾宝玉周岁抓周专取脂粉钗环，并持有女儿骨肉清爽而男子浊臭逼人的独特言行。",
+        "sourceRole": "dialogue",
+        "speaker": "冷子兴",
+        "reasoningHint": "由抓周与日常言语推论其为酒色之徒的常人认知。",
+        "generalityHint": "贾宝玉幼年异常言行的个体特征描述。",
+        "rationale": "引自p-11305，冷子兴描述贾宝玉抓周及对男女之别的议论。",
+        "passageIds": [
+          "p-11305"
+        ]
+      },
+      {
+        "label": "贾雨村正邪两赋之论",
+        "identityLabel": "天地正邪两赋论",
+        "summary": "雨村反驳冷子兴，提出天地生人除大仁大恶外，尚有正气与邪气相搏击、灵秀乖僻之气兼赋之类，生于富贵则为情痴情种、生于寒门则为逸士名倡。",
+        "sourceRole": "dialogue",
+        "speaker": "贾雨村",
+        "reasoningHint": "从天地元气运化推演出历史与当世特定人物性格与际遇的宏大理论构建。",
+        "generalityHint": "涵盖古今所有正邪灵秀兼秉之人的普遍人性与品评总论。",
+        "rationale": "出自p-11636，雨村详论大仁大恶与正邪两赋之理及其代表人物。",
+        "passageIds": [
+          "p-11636"
+        ]
+      },
+      {
+        "label": "金陵甄宝玉之憨痴异行",
+        "identityLabel": "甄宝玉之异行与家教",
+        "summary": "雨村印证正邪两赋之论，列举金陵体仁院甄家公子爱敬女儿、挨打唤姊妹解疼等与贾宝玉极其酷似的顽劣异行。",
+        "sourceRole": "dialogue",
+        "speaker": "贾雨村",
+        "reasoningHint": "以自身处馆见闻为实例，验证方才提出的正邪两赋之论。",
+        "generalityHint": "关于金陵甄家公子特殊性格与举止的具体实例。",
+        "rationale": "见p-12310与p-12484，贾雨村举甄家学生读书须女儿伴读等情状作为佐证。",
+        "passageIds": [
+          "p-12484",
+          "p-12310"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "冷子兴在指出贾府子孙一代不如一代后，紧接着通过列举两府世系具体人物来展开详述。",
+        "passageIds": [
+          "p-10069",
+          "p-10733"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "在交代贾政一房后嗣时，冷子兴重点展开讲述贾宝玉降生衔玉及其抓周异事。",
+        "passageIds": [
+          "p-10733",
+          "p-11305"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "challenges",
+        "rationale": "冷子兴认为贾宝玉是色鬼之流，贾雨村当即以正邪两赋之说反驳并重新定性其根底。",
+        "passageIds": [
+          "p-11305",
+          "p-11636"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "exemplifies",
+        "rationale": "雨村以金陵甄宝玉的亲身见闻作为其实例，佐证前面所立的正邪相生、同类相求理论。",
+        "passageIds": [
+          "p-11636",
+          "p-12310",
+          "p-12484"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Ldecao2vEPGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 8798,
+    "candidatesTokenCount": 2243,
+    "totalTokenCount": 11041,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8798
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2243
+      }
+    ]
+  },
+  "durationMs": 16088,
+  "requestHash": "be0e7aeedffc08f9ccd9b3cdb415770f094ae13655a18eb7480d21bccc3f17ea"
+}

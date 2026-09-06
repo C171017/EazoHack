@@ -1,0 +1,140 @@
+{
+  "value": {
+    "summary": "第三十一回叙袭人吐血心灰与宝玉延医调治，端阳宴上众人各怀心事；晴雯跌扇与宝玉、袭人爆发口角争端；随后宝玉借物各适其性之理纵晴雯撕扇作千金一笑；史湘云来访与翠缕大谈阴阳之理，并在蔷薇架下拾得宝玉遗落之金麒麟。",
+    "nodes": [
+      {
+        "label": "袭人吐血灰心与暗中调治",
+        "identityLabel": "袭人吐血",
+        "summary": "袭人见吐血在地，联想少年吐血命不久长的俗谈，争荣夸耀之心尽灰；因怕声张招怨，阻宝玉惊动众人，宝玉次日清晨私问王济仁取方调治。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从见到吐血直接联想到少年吐血为废人的成说，从而消解求荣之念。",
+        "generalityHint": "关于袭人个体命运感触及怡红院私密处置的具体事件。",
+        "rationale": "基于p-205404叙述袭人见血心凉，宝玉为之请医取药的经过。",
+        "passageIds": [
+          "p-205404"
+        ]
+      },
+      {
+        "label": "聚散悲喜之论",
+        "identityLabel": "聚散哲学观",
+        "summary": "黛玉天性喜散不喜聚，认为散时冷清不如不聚；宝玉则愿常聚常开，生怕散了添悲。端节筵席无兴而散，宝玉由此长吁短叹。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从聚散必然性推导出的两种对立审美与情感哲学。",
+        "generalityHint": "阐述黛玉与宝玉二人对待人生聚散无常的一般态度与情性原则。",
+        "rationale": "基于p-206058中叙述黛玉喜散与宝玉愿常聚的心性对比。",
+        "passageIds": [
+          "p-206058"
+        ]
+      },
+      {
+        "label": "晴雯跌扇与怡红院口角",
+        "identityLabel": "晴雯跌扇拌嘴",
+        "summary": "晴雯失手跌折扇股，遭宝玉斥责后反唇相讥，并借袭人劝解之语讥刺二人私情，激怒宝玉欲回太太撵逐晴雯，袭人等下跪求情方止。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因跌扇小过激化了众人此前积压的不快与丫鬟间的隐秘矛盾。",
+        "generalityHint": "怡红院内宝玉、晴雯、袭人之间具体的情感冲突与身份争端。",
+        "rationale": "基于p-206058与p-206515详细记录晴雯跌扇引发的拌嘴、争吵与求情。",
+        "passageIds": [
+          "p-206058",
+          "p-206515"
+        ]
+      },
+      {
+        "label": "黛玉戏语解颐与点化前言",
+        "identityLabel": "黛玉戏解争执",
+        "summary": "黛玉见宝玉、袭人哭泣，以争粽子吃和呼袭人为‘嫂子’调笑解围，并戏数宝玉动辄发誓做和尚的遭数。",
+        "sourceRole": "dialogue",
+        "speaker": "林黛玉",
+        "reasoningHint": "借诙谐戏谑之言化解房中僵局，同时敲打宝玉过往许诺。",
+        "generalityHint": "特定场景下的幽默调和与调侃。",
+        "rationale": "基于p-207635黛玉进门戏言‘作了两个和尚了’等言语化解紧张气氛。",
+        "passageIds": [
+          "p-207635"
+        ]
+      },
+      {
+        "label": "宝玉物各顺性与撕扇一笑",
+        "identityLabel": "撕扇千金一笑",
+        "summary": "宝玉向晴雯阐发器物借人所用、顺人爱好的道理，认为任情撕扇听响亦是爱物，并主动递扇纵晴雯撕毁以博一笑。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "将器物功用还原于人的情性满足，提出不因怒毁物而因喜撕扇乃为爱物的辩证之论。",
+        "generalityHint": "关于器物价值与人性喜好关系的特殊审美观与行为准则。",
+        "rationale": "基于p-208036中宝玉论述‘扇子原是扇的，你要撕着玩也可以使得’并引古人‘千金难买一笑’。",
+        "passageIds": [
+          "p-208036"
+        ]
+      },
+      {
+        "label": "湘云论阴阳与翠缕拾麒麟",
+        "identityLabel": "湘云论阴阳与金麒麟",
+        "summary": "湘云进园探望众人，在同翠缕谈论花草器物之阴阳造化时，翠缕在蔷薇架下拾得宝玉所遗落之大金麒麟，伏下双星线索。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从天地阴阳之气推衍到器物雌雄，正逢金麒麟拾得，理物相合。",
+        "generalityHint": "借宋儒理气之谈阐发天地造化之理，并贯穿于具体情节征兆。",
+        "rationale": "基于p-210693中湘云与翠缕辨析阴阳本末及拾得金麒麟的过程。",
+        "passageIds": [
+          "p-210693"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝玉因聚散之悲在房中长吁短叹的心绪，直接促成了晴雯跌扇时宝玉的易怒与口角激化。",
+        "passageIds": [
+          "p-206058"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "黛玉进屋正值晴雯哭泣、宝玉袭人相对流泪的僵局，黛玉的打趣化解了口角余波。",
+        "passageIds": [
+          "p-206515",
+          "p-207635"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "早间因跌扇引起的激烈争执，在晚间宝玉回院借论物之性情与撕扇举动得到彻底释怀与化解。",
+        "passageIds": [
+          "p-206058",
+          "p-208036"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "w9ecaqCcE_GY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 9615,
+    "candidatesTokenCount": 1780,
+    "totalTokenCount": 11395,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9615
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1780
+      }
+    ]
+  },
+  "durationMs": 12785,
+  "requestHash": "d02bd93974a872916c857e4b40e30dd660052fd24ecd22cb9a512e652bb579bf"
+}

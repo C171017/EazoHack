@@ -1,0 +1,156 @@
+{
+  "value": {
+    "summary": "第八回叙述贾宝玉探望薛宝钗，两人互看通灵宝玉与金锁吉谶，暗合‘金玉良缘’；林黛玉随后至，借物讽刺；宝玉在梨香院饮酒并被劝解热饮，回房后因李嬷嬷吃茶吃包子积怨借醉大发雷霆，袭人解围；次日秦钟来拜并定下贾塾陪读事宜。",
+    "nodes": [
+      {
+        "label": "宝玉梨香院探宝钗",
+        "identityLabel": "宝玉探薛宝钗",
+        "summary": "贾宝玉因闻宝钗养病，特意避开父亲绕道梨香院看望，二人初见互道安好并细致观察对方服饰与容貌气质。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因思宝钗小恙，主动前往探看，为后文赏鉴宝玉金锁及相聚设下开端场景。",
+        "generalityHint": "具体事件记叙，交代时间、地点与行动动机。",
+        "rationale": "基于p-51149与p-51737记载宝玉探视宝钗的由头及初相见的情景描写。",
+        "passageIds": [
+          "p-51149",
+          "p-51737"
+        ]
+      },
+      {
+        "label": "宝玉宝钗互看金玉吉谶",
+        "identityLabel": "互看金玉吉谶",
+        "summary": "宝钗鉴赏通灵宝玉上的篆文，莺儿透露宝钗项圈亦有对句，宝玉复观金锁，引出‘莫失莫忘’与‘不离不弃’之吉谶。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从互赏佩饰具体事件中引出‘金玉相对’的图文和谶语，为全书金玉姻缘之伏笔。",
+        "generalityHint": "特定情节中的核心象征事件，具有全书叙事线索的统领性。",
+        "rationale": "基于p-51737、p-52669与p-53008中宝玉宝钗对看玉与金锁及莺儿之语的描写。",
+        "passageIds": [
+          "p-52669",
+          "p-51737",
+          "p-53008"
+        ]
+      },
+      {
+        "label": "黛玉至梨香院借物言志",
+        "identityLabel": "黛玉梨香院言语讥刺",
+        "summary": "黛玉到来后语带机锋，后借雪雁送手炉之事借题发挥，暗示自己外来客套与宝黛之间的微妙醋意。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "黛玉目睹宝钗宝玉同处后产生敏感反应，通过言辞反讽与借丫鬟手炉作态表达心态。",
+        "generalityHint": "展现人物特定情态与性格交锋的局部叙述。",
+        "rationale": "基于p-53280与p-54189关于黛玉进门戏言与对手炉送来的言辞借题发挥。",
+        "passageIds": [
+          "p-53280",
+          "p-54189"
+        ]
+      },
+      {
+        "label": "薛宝钗论酒性辨冷热",
+        "identityLabel": "宝钗劝饮热酒",
+        "summary": "宝玉欲饮冷酒，薛姨妈与宝钗相劝，宝钗从五脏温散与发散机理解释冷酒伤身，说服宝玉喝热酒。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝钗以医理养生之常识进行推论劝诫，宝玉服膺从之，体现其知书识礼的性格反差。",
+        "generalityHint": "关于饮酒生冷与内脏调养的医理常识陈述与劝导。",
+        "rationale": "基于p-53681薛姨妈与宝钗劝止宝玉饮冷酒的对话。",
+        "passageIds": [
+          "p-53681"
+        ]
+      },
+      {
+        "label": "宝玉绛芸轩借醉发怒撵奶母",
+        "identityLabel": "绛芸轩醉砸茶盅",
+        "summary": "宝玉醉酒回绛芸轩，闻枫露茶被李嬷嬷饮用，积怒之下摔杯跳足要回贾母撵走乳母，终被袭人设法劝下。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉醉酒借枫露茶与早先包子之事爆发对乳母倚老弄权的不满，袭人以退为进软化其情绪。",
+        "generalityHint": "具体家庭冲突事件，反映主仆矛盾与宝玉性情及袭人处事策略。",
+        "rationale": "基于p-55672、p-56058与p-56403中宝玉归房、追问茶包子、砸盅动怒并为袭人所抚慰的记载。",
+        "passageIds": [
+          "p-56403",
+          "p-55672",
+          "p-56058"
+        ]
+      },
+      {
+        "label": "秦钟拜谒贾母及商定附塾",
+        "identityLabel": "秦钟拜谒入塾",
+        "summary": "贾蓉引秦钟拜见贾母等人，贾母极悦并予表礼，秦业倾囊备贽见礼，秦钟确定与宝玉一同入塾就读。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "秦钟外貌举止获贾府长辈认可，秦父虽贫力筹礼金送儿读书，促成二人同窗之事。",
+        "generalityHint": "交代秦钟家庭背景与进入贾塾就读的完整因果。",
+        "rationale": "基于p-56966与p-57187关于秦钟拜见贾母、贾蓉秦业交待以及入塾筹备的叙述。",
+        "passageIds": [
+          "p-56966",
+          "p-57187"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉探视宝钗的近距离交谈直接发展为互看通灵宝玉和金锁璎珞的吉谶情节。",
+        "passageIds": [
+          "p-51737",
+          "p-52669"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "金锁宝玉对看未久，黛玉突至并以言语讥刺，承接金玉对照所引发的情感涟漪。",
+        "passageIds": [
+          "p-53008",
+          "p-53280"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "在梨香院相聚饮宴背景下，宝玉要冷酒引出宝钗论酒理的规劝。",
+        "passageIds": [
+          "p-53681"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "宝玉在梨香院多饮了几杯热酒产生醉意，为回绛芸轩借酒劲迁怒李嬷嬷提供了前因。",
+        "passageIds": [
+          "p-54527",
+          "p-56403"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "TNecasDDAvGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 9285,
+    "candidatesTokenCount": 1938,
+    "totalTokenCount": 11223,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9285
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1938
+      }
+    ]
+  },
+  "durationMs": 13997,
+  "requestHash": "ba73ab88e61939375c82e275f028d52d0c322cb71c3306a472ad71945dd30369"
+}

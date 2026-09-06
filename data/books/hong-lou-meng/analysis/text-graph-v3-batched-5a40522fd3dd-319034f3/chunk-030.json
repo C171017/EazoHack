@@ -1,0 +1,165 @@
+{
+  "value": {
+    "summary": "第三十回叙述宝黛二人经调解和好，宝玉在贾母处将宝钗比作杨妃引发讥刺；随后宝玉与金钏儿调笑导致金钏儿被王夫人驱逐；宝玉进园目睹龄官画“蔷”而触动痴情，冒雨归院失手误踢袭人致其吐血。",
+    "nodes": [
+      {
+        "label": "宝黛释嫌和好",
+        "identityLabel": "宝黛和好",
+        "summary": "宝玉主动至潇湘馆向林黛玉赔不是并温存劝慰，王熙凤赶来携二人同至贾母跟前，二人重归于好。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于两人之前口角及各自的心意变化直接叙述和好过程。",
+        "generalityHint": "涉及宝玉、黛玉、凤姐的特定情境互动。",
+        "rationale": "根据p-200065和p-200902，宝玉在黛玉面前下气赔礼，凤姐随后将二人领至贾母处说笑解围，矛盾得以化解。",
+        "passageIds": [
+          "p-200065",
+          "p-200902"
+        ]
+      },
+      {
+        "label": "宝钗借机双敲",
+        "identityLabel": "宝钗借扇机带双敲",
+        "summary": "宝玉以体丰怯热将宝钗比作杨妃，宝钗大怒借无杨国忠之兄弟冷讽，并借小丫头寻扇指桑骂槐，更借戏名《负荆请罪》语带双敲反讥宝黛二人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从宝玉言语造次引发宝钗借扇与戏名反击的一连串对白互动。",
+        "generalityHint": "记录贾母跟前众人聚会中一次特定的人际机锋交锋。",
+        "rationale": "p-201288与p-201783中记录了宝玉失言比杨妃、宝钗斥责借扇丫头，以及借《负荆请罪》嘲讽宝黛二人赔罪和好的详细情节。",
+        "passageIds": [
+          "p-201288",
+          "p-201783"
+        ]
+      },
+      {
+        "label": "金钏遭逐",
+        "identityLabel": "金钏儿被逐",
+        "summary": "宝玉趁王夫人午歇与金钏儿耳鬓调笑，王夫人醒来掌掴金钏儿并执意将其逐出贾府，任凭金钏儿哭求不允。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉调笑与王夫人激烈反应的因果过程。",
+        "generalityHint": "关于王夫人房内特定主仆突发事件的记叙。",
+        "rationale": "p-202524和p-202893叙述了宝玉喂药丸、拉手挑逗，王夫人怒斥金钏儿教坏爷们并叫其母领走的经过。",
+        "passageIds": [
+          "p-202524",
+          "p-202893"
+        ]
+      },
+      {
+        "label": "龄官画蔷",
+        "identityLabel": "龄官划蔷痴及局外",
+        "summary": "宝玉在蔷薇架下见戏班女孩子龄官神情憔悴、以金簪在泥地上千百遍画“蔷”字，宝玉旁观体味其深情熬煎。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过宝玉的细致观察与内心揣摩层层揭示女孩子画字的情感内涵。",
+        "generalityHint": "描绘特定人物在蔷薇架下痴情专注的单独场景。",
+        "rationale": "p-203134详细记录宝玉窥探龄官用金簪画字、数出十八笔并悟出是个“蔷”字的过程及宝玉的心灵触动。",
+        "passageIds": [
+          "p-203134"
+        ]
+      },
+      {
+        "label": "暴雨提醒与遁归",
+        "identityLabel": "暴雨避雨",
+        "summary": "大雨突至，宝玉出言提醒龄官避雨，反被对方提醒自己浑身已湿，随后仓皇奔回怡红院。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由龄官画蔷的痴境自然转入骤雨降临的突发反应。",
+        "generalityHint": "特定自然气候引发的具体动作和对话情境。",
+        "rationale": "p-203941叙述骤雨骤降、宝玉忘我提醒龄官反被点醒自身湿透的情形。",
+        "passageIds": [
+          "p-203941"
+        ]
+      },
+      {
+        "label": "误踢袭人致吐血",
+        "identityLabel": "宝玉误踢袭人",
+        "summary": "宝玉冒雨回院扣门不应，忿怒之下抬腿踹门，误踢在开门的袭人肋上，致使袭人夜间咳吐鲜血。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由闭门玩笑转为误踢重伤，再到夜里伤势显现吐血的完整因果连环。",
+        "generalityHint": "怡红院内发生的单一严重误伤事故及其后续身体后果。",
+        "rationale": "p-204603和p-205059叙述宝玉因门久不开而误踢袭人，至夜间发现其青紫并呕出一口鲜血的惊险结局。",
+        "passageIds": [
+          "p-204603",
+          "p-205059"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝黛刚和好即来到贾母处，随之引出宝玉向宝钗搭讪惹祸及宝钗借戏讽刺宝黛和好的场面。",
+        "passageIds": [
+          "p-201288",
+          "p-201783"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝玉在宝钗处碰壁、黛玉处遭笑，心中无趣且忍气，漫步来到王夫人房中，进而引发与金钏儿的调笑之事。",
+        "passageIds": [
+          "p-202228",
+          "p-202341",
+          "p-202524"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "王夫人醒来发怒撵走金钏儿，宝玉狼狈逃出进大观园，路过蔷薇架下偶遇龄官画蔷。",
+        "passageIds": [
+          "p-202524",
+          "p-203134"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉痴看龄官画字，骤降大雨打破宁静，引出两人的互相关怀提醒与宝玉的奔走避雨。",
+        "passageIds": [
+          "p-203941"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉冒雨赶回怡红院，院门深锁久叫不开积攒了怒气，直接促成开门时的飞脚误踢及袭人受创吐血。",
+        "passageIds": [
+          "p-204372",
+          "p-204603",
+          "p-205059"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "wNecarLrGrCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 8484,
+    "candidatesTokenCount": 2011,
+    "totalTokenCount": 10495,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8484
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2011
+      }
+    ]
+  },
+  "durationMs": 13640,
+  "requestHash": "13d654a11922df01f49fe7568853f6c10f2e7f6e4ca9f2efbab2c764fa5d7d67"
+}

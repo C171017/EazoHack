@@ -1,0 +1,164 @@
+{
+  "value": {
+    "summary": "第十八回叙述宝玉归来佩物被小厮解去引致黛玉赌气误剪香囊，二人旋即释嫌；随后贾府齐备省亲事宜、延揽妙玉；元宵之夕元妃省亲，贾府极尽奢靡，元春与亲人涕泣相见，叹富贵隔绝天伦；元妃游园命题赐名，宝钗、黛玉暗助宝玉成诗；宴席看戏赏赐毕，元妃含泪还舆回宫。",
+    "nodes": [
+      {
+        "label": "黛玉误剪香囊",
+        "identityLabel": "黛玉误剪香囊",
+        "summary": "小厮尽解宝玉佩物，黛玉误以为自己所赠荷包亦被转赠他人，赌气铰剪未完之香袋，后见宝玉贴身佩戴始悔，二人悲喜释嫌。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从误会因由（佩物皆空）直接引发剪囊与悔意，属于紧凑的单线情节推展。",
+        "generalityHint": "单一特定情境下宝黛儿女私情互动的具体事件。",
+        "rationale": "基于宝玉回院佩物尽失及黛玉赌气铰香袋、宝玉贴身解示的情节记录。",
+        "passageIds": [
+          "p-109839",
+          "p-109576",
+          "p-110345"
+        ]
+      },
+      {
+        "label": "采买女戏与请妙玉",
+        "identityLabel": "采买女戏与请妙玉",
+        "summary": "贾蔷自姑苏采买女戏演习，林之孝家的回禀带发修行的官宦小姐妙玉事由，王夫人命备帖下聘请入省亲庵堂。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接叙述贾府省亲筹备之具体人事安排。",
+        "generalityHint": "涉及省亲排场与妙玉进府之特定筹备细节。",
+        "rationale": "基于王夫人处交割女戏采办及请妙玉住入大观园的叙述。",
+        "passageIds": [
+          "p-110623"
+        ]
+      },
+      {
+        "label": "元宵省亲盛典与奢华",
+        "identityLabel": "元宵省亲盛典与奢华",
+        "summary": "元宵上元贾妃归省，行宫内外金银焕彩、灯月辉映，陈设穷工极巧，元妃登舟观园却默叹奢华靡费。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接描写省亲当晚宏大陈设及元春心中关于奢华过度的即时感知。",
+        "generalityHint": "描写特定历史/叙事事件中贾府极盛场面。",
+        "rationale": "反映元妃入园省亲的仪仗铺陈与贾妃见景感叹的叙述。",
+        "passageIds": [
+          "p-111983",
+          "p-112619",
+          "p-111555"
+        ]
+      },
+      {
+        "label": "元妃骨肉对泣叹无趣",
+        "identityLabel": "元妃骨肉对泣叹无趣",
+        "summary": "元妃见贾母、王夫人相抱痛哭，隔帘对贾政感慨入宫乃‘不得见人的去处’，田舍布帛虽贫犹享天伦，深宫极贵却骨肉暌违毫无意趣。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由省亲相聚的具体仪节推导至对皇权宫闱隔绝骨肉天伦的沉痛省思。",
+        "generalityHint": "关于深宫富贵与民间天伦之乐对比的人生境遇评价。",
+        "rationale": "提炼元妃与贾母、王夫人相见痛哭及隔帘回贾政之语。",
+        "passageIds": [
+          "p-113725"
+        ]
+      },
+      {
+        "label": "大观园赐名与命题赋诗",
+        "identityLabel": "大观园赐名与命题赋诗",
+        "summary": "元妃赐园名‘大观园’并改题诸景，命诸姊妹与宝玉各赋五言律诗以试才情。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "元妃依此前试才情由赐名并组织当面试才的具体举措。",
+        "generalityHint": "大观园定名及主要建筑命名的枢纽性事件。",
+        "rationale": "基于元妃赐名正殿、诸景及要求姊妹宝玉作诗的叙述。",
+        "passageIds": [
+          "p-114958",
+          "p-115196"
+        ]
+      },
+      {
+        "label": "钗黛助宝玉赋律",
+        "identityLabel": "钗黛助宝玉赋律",
+        "summary": "宝玉作诗困顿，宝钗密指‘绿蜡’典故化解违碍，黛玉见其构思费神遂暗代《杏帘在望》一首，助宝玉蒙元妃嘉奖。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由宝钗之博识改字与黛玉敏捷代作，直接促成宝玉律诗获得赞赏之果。",
+        "generalityHint": "展现宝钗、黛玉不同才情与性格特点的具体交互事件。",
+        "rationale": "基于宝钗指点绿蜡及黛玉投递纸团代作杏帘一首之原文叙述。",
+        "passageIds": [
+          "p-115971",
+          "p-116422",
+          "p-116877"
+        ]
+      },
+      {
+        "label": "看戏颁赏与悲泣还舆",
+        "identityLabel": "看戏颁赏与悲泣还舆",
+        "summary": "元妃看戏点曲并重赏龄官，遍赐贾府上下诸人物品，至更深丑正太监催请回銮，元妃洒泪执手再四叮咛莫再靡费后忍痛登舆离去。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "省亲盛典按规制收尾，从演戏赐物到依限回宫的完整归结。",
+        "generalityHint": "省亲仪式告终的具体过程，寓富贵散场、无可奈何之意。",
+        "rationale": "基于元妃看戏、按等第颁赐诸人及丑正三刻依制别泪回銮的记载。",
+        "passageIds": [
+          "p-117873",
+          "p-117165",
+          "p-117472"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "元妃命宝玉单独题作四大处之律诗，直接引发宝钗点拨绿蜡及黛玉代作杏帘的情节。",
+        "passageIds": [
+          "p-115196",
+          "p-115971",
+          "p-116422"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "元妃目睹极盛盛典与园林奢华后，在与家人相见时抒发富贵无趣、骨肉隔绝的悲戚。",
+        "passageIds": [
+          "p-112619",
+          "p-113725"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "诸诗作毕受赏改额后，省亲筵宴进入点戏、颁赏及最后回銮程序。",
+        "passageIds": [
+          "p-116877",
+          "p-117050",
+          "p-117873"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "edecaqWhMtCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 14132,
+    "candidatesTokenCount": 2031,
+    "totalTokenCount": 16163,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 14132
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2031
+      }
+    ]
+  },
+  "durationMs": 15229,
+  "requestHash": "847897afa24580c0c2ebd3e7ae6f3fefa4020c52d7f260cea98f486034779b13"
+}

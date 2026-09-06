@@ -1,0 +1,123 @@
+{
+  "value": {
+    "summary": "第十四回叙述王熙凤正式接手并铁腕协理宁国府丧务，立定规矩、分派职责，整饬宿弊；五七正日严惩迟到仆人以树立威信；期间昭儿从苏州带回林如海逝世的消息；出殡之日宁府执事浩大，北静王水溶设棚路祭并特意召见贾宝玉。",
+    "nodes": [
+      {
+        "label": "凤姐定规分派整饬宁府",
+        "identityLabel": "王熙凤协理宁国府定规",
+        "summary": "王熙凤清点宁府名册，按项严格定班分工并规定领物赔偿与时限，一改过去混乱推诿、盗窃失迷的宿弊。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从点明宁府原本无章法的背景出发，详细叙述凤姐立规分派的具体方案及其实施后的成效。",
+        "generalityHint": "涉及宁国府内部丧务治理的全体仆妇及各项事务定规，属于家族内部管理方案。",
+        "rationale": "根据p-84036与p-84577，凤姐按职分班、定时定责，彻底整顿了宁府无头绪与偷闲等弊病。",
+        "passageIds": [
+          "p-84036",
+          "p-84577"
+        ]
+      },
+      {
+        "label": "凤姐责罚迟到仆人立威",
+        "identityLabel": "王熙凤责惩迟仆立威",
+        "summary": "五七点卯时，凤姐对迎送亲客迟到的一人严加斥责，责打二十板子并革一月银米，令两府上下悚惧肃然。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述凤姐在处理荣府支取事务的同时，借迟到个案杀鸡儆猴以杜绝下人侥幸心理的立威手段。",
+        "generalityHint": "具体的违纪惩处事件，用以确立宁荣两府中凤姐法令的绝对约束力。",
+        "rationale": "根据p-85385和p-85986，凤姐不容情面，以'明日有误打四十'之厉行确立纪律。",
+        "passageIds": [
+          "p-85986",
+          "p-85385"
+        ]
+      },
+      {
+        "label": "昭儿回京报林如海丧信",
+        "identityLabel": "林如海捐馆扬州",
+        "summary": "贾琏派昭儿自苏州回京报信，告知林如海于九月初三日身故，贾琏正护送林黛玉带灵回苏州并将于年底返京。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接叙述昭儿传递的关键家族变故信息，并带出宝玉叹息与凤姐记挂照料贾琏的情节。",
+        "generalityHint": "单一具体事件，即林如海去世及黛玉长居贾府的转折点。",
+        "rationale": "根据p-86980和p-87219，昭儿回府报丧，确立了林如海病故及黛玉长留荣国府的事实。",
+        "passageIds": [
+          "p-86980",
+          "p-87219"
+        ]
+      },
+      {
+        "label": "秦氏出殡与八公列侯送殡",
+        "identityLabel": "秦可卿大殡盛况",
+        "summary": "秦氏出殡起灵，铭旌赫然，贾珍极尽奢华，王公侯伯诸勋贵子弟及四王路祭齐备，送殡队伍绵延数里。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "全景式记录出殡的执事陈设、铭旌封号以及沿途各路王公贵族设祭送殡的宏大场面。",
+        "generalityHint": "展现四王八公及京中王孙公子齐聚的庞大家族社交网络场面。",
+        "rationale": "根据p-88084与p-88218，大殡排场极盛，八公后人及各路公侯子弟悉数登场送殡。",
+        "passageIds": [
+          "p-88218",
+          "p-88084"
+        ]
+      },
+      {
+        "label": "北静王设奠并欲见宝玉",
+        "identityLabel": "贾宝玉路谒北静王",
+        "summary": "北静王水溶设棚路祭，以世交之谊谦逊接见贾赦贾政等人，并因闻衔玉而诞之名，特命召见贾宝玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由北静王设祭的背景铺垫其为人与世交情义，进而引出其主动召见贾宝玉的具体互动。",
+        "generalityHint": "两府长辈与北静王交往的高层社交场合，具体聚焦于北静王与宝玉相会的契机。",
+        "rationale": "根据p-88541、p-88786与p-88961，水溶以世交之礼相见并当场要求会见宝玉。",
+        "passageIds": [
+          "p-88541",
+          "p-88786",
+          "p-88961"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "凤姐前设定规、强调时辰与不顾体面，在五七点卯时借迟到仆人严格执行板打革粮，进一步落实了其整肃权威。",
+        "passageIds": [
+          "p-84036",
+          "p-85986"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "出殡队伍沿途经过四王路祭，其中第四座祭棚正是北静王水溶设奠接见贾府众人的现场。",
+        "passageIds": [
+          "p-88218",
+          "p-88541"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "a9ecas6eObCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 8644,
+    "candidatesTokenCount": 1585,
+    "totalTokenCount": 10229,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8644
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1585
+      }
+    ]
+  },
+  "durationMs": 11894,
+  "requestHash": "69735955bd46759596ec7e148b16f9b0f730674418ec51e1596457f3bf3ec9e9"
+}

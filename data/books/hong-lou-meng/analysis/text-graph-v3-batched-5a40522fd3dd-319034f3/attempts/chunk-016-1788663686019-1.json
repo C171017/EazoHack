@@ -1,0 +1,161 @@
+{
+  "value": {
+    "summary": "第十六回主要叙述了王熙凤弄权之事的惨烈结局与贾府内部权财往来，贾元春晋封凤藻宫尚书、加封贤德妃使贾府上下欢庆并着手筹建省亲别院，林黛玉葬父后返京，以及秦业气绝、秦钟病重并在死前规劝宝玉立志功名。",
+    "nodes": [
+      {
+        "label": "金哥守备之子双双殉情",
+        "identityLabel": "金哥与守备之子殉情",
+        "summary": "王熙凤借云光之力退亲后，张金哥上吊自尽，守备之子亦投河殉情，张李两家人财两空，而凤姐坐享三千两银子且行事胆识愈壮。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述王熙凤弄权索贿的直接后果及两名青年的殉情悲剧。",
+        "generalityHint": "记录张李两家退婚自尽的具体事件及凤姐行径影响。",
+        "rationale": "基于p-94365，叙述金哥闻父母退亲自缢，守备之子投河，凤姐坐享银两且此后行事更加恣意。",
+        "passageIds": [
+          "p-94365"
+        ]
+      },
+      {
+        "label": "元春晋封凤藻宫贤德妃",
+        "identityLabel": "贾元春晋封",
+        "summary": "贾政生辰之日突奉特旨召入临敬殿，随后传出贾元春晋封为凤藻宫尚书、加封贤德妃的喜讯，贾母领众人进宫谢恩，宁荣两处欢腾。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从太监宣旨的恐慌转为贾府阖府大喜的转折叙事。",
+        "generalityHint": "涉及贾府核心政治命运改变的重大历史事件。",
+        "rationale": "基于p-94567与p-94787，描述夏守忠宣旨到赖大飞马报喜，元春晋封贤德妃，贾府上下盛装谢恩。",
+        "passageIds": [
+          "p-94567",
+          "p-94787"
+        ]
+      },
+      {
+        "label": "黛玉返京与拒绝转赠香串",
+        "identityLabel": "黛玉归贾府",
+        "summary": "贾琏护送林黛玉葬父后回府，宝玉珍重拿出北静王所赠的鹡鸰香串转赠黛玉，黛玉斥为“臭男人拿过的”掷而不取。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过林黛玉返府后的举止细节表现其性格与对宝玉赠物的态度。",
+        "generalityHint": "宝黛二人重逢互动的具体情节。",
+        "rationale": "基于p-95165与p-95544，记叙黛玉抵京回府、分送笔墨书籍，以及宝玉转赠香串被黛玉掷回的经过。",
+        "passageIds": [
+          "p-95544",
+          "p-95165"
+        ]
+      },
+      {
+        "label": "贾琏解释皇恩准允省亲缘由",
+        "identityLabel": "省亲诏令缘由",
+        "summary": "贾琏向赵嬷嬷与凤姐详述当今天子体念至孝天伦，太上皇与皇太后降谕准许椒房眷属凡有重宇别院者可启请内廷鸾舆入私第省亲。",
+        "sourceRole": "dialogue",
+        "speaker": "贾琏",
+        "reasoningHint": "从朝廷孝道伦理与体天格物推导出省亲别院政策的合法性与缘起。",
+        "generalityHint": "涵盖当朝贵戚妃嫔省亲制度与普遍规范的政策阐释。",
+        "rationale": "基于p-97808，贾琏向赵嬷嬷和凤姐阐明皇上因孝道请准椒房省亲、准修别院的始末。",
+        "passageIds": [
+          "p-97808"
+        ]
+      },
+      {
+        "label": "议定兼并两府土地修造别院",
+        "identityLabel": "省亲别院规制筹划",
+        "summary": "贾府商定自宁府会芳园起连缀荣府东大院，丈量三里半修建省亲别院，由老明公山子野负责画样与起造筹画，工役全面开工。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "借两府旧园山石水源地势归并，计算节约省事之方。",
+        "generalityHint": "贾府修建大观园工程的具体规划与营建决策。",
+        "rationale": "基于p-98746与p-100161，记载贾蓉传达定议地界、贾琏赞同，以及次日两府拆墙引水、山子野筹画起造过程。",
+        "passageIds": [
+          "p-100161",
+          "p-98746"
+        ]
+      },
+      {
+        "label": "贾蔷派买采办与凤姐安插亲信",
+        "identityLabel": "采办差事与人事请托",
+        "summary": "贾珍派贾蔷下姑苏采买女戏与乐器行头，动用甄家存银；凤姐乘机顺水推舟，将赵嬷嬷的两个儿子安插进采办差事分肥。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "家族内部借省亲公事谋取私利、安排人情网络。",
+        "generalityHint": "贾府支派公差及奴仆主子私下利益交换的典型事例。",
+        "rationale": "基于p-99347、p-99492与p-99770，贾蔷接办姑苏采买，凤姐趁机安排赵天梁、赵天栋随行。",
+        "passageIds": [
+          "p-99492",
+          "p-99347",
+          "p-99770"
+        ]
+      },
+      {
+        "label": "秦钟夭逝前劝宝玉立志功名",
+        "identityLabel": "秦钟临终悔悟",
+        "summary": "秦钟病危，秦业气绝后病情加剧；魂魄因宝玉到来暂被放回，临终垂泪悔悟以往虚掷光阴自误，劝勉宝玉以后应立志功名、荣耀显达，随后长逝。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过鬼判阴阳之辨与生死关头的临终对话，完成秦钟人生价值观的颠覆与劝诫。",
+        "generalityHint": "小说核心人物之一的生命终局与重大思想遗言。",
+        "rationale": "基于p-101170与p-101010，描述宝玉赶探垂危的秦钟，秦钟向宝玉留下悔悟前非、改求功名的遗言后夭逝。",
+        "passageIds": [
+          "p-101170",
+          "p-101010"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾元春晋封皇妃是贾府获准筹划省亲的直接前提，贾琏随后详细阐述了省亲政策出台的原委。",
+        "passageIds": [
+          "p-94787",
+          "p-97808"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "皇帝下旨准允贵戚私第省亲，成为贾府贾政贾赦商议丈量三里半土地修建省亲别院的直接依据。",
+        "passageIds": [
+          "p-97808",
+          "p-98746",
+          "p-100161"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "在定议修造省亲别院的大规模工程背景下，派生出下姑苏采买女乐行头及凤姐安插人手等具体采办差事。",
+        "passageIds": [
+          "p-98746",
+          "p-99347",
+          "p-99770"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "ddecauPALrCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 10494,
+    "candidatesTokenCount": 2161,
+    "totalTokenCount": 12655,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10494
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2161
+      }
+    ]
+  },
+  "durationMs": 16948,
+  "requestHash": "a705a8dae77cd8a6a12044904e690256c9ab4b14cba25c5035f8bef4187902b3"
+}

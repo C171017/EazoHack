@@ -1,0 +1,136 @@
+{
+  "value": {
+    "summary": "第七回围绕周瑞家的送宫花与贾宝玉结识秦钟两条主线展开。周瑞家的受薛姨妈之托，将宫花分送迎春、探春、惜春、王熙凤与林黛玉，途中串联起宝钗的冷香丸、香菱的身世叹息、惜春戏言剃度及黛玉的敏感情绪；次日宝玉随凤姐过宁府，与秦钟相见恨晚，二人相约同入贾府私塾念书；当晚醉酒的老仆焦大因派差不公大骂宁府诸人丑事，以马粪塞口作结。",
+    "nodes": [
+      {
+        "label": "宝钗述冷香丸配方",
+        "identityLabel": "冷香丸",
+        "summary": "宝钗向前来问候的周瑞家的详述自己胎带热毒所服之海上方“冷香丸”，说明其所需四季花蕊、特定节气水与漫长合药工序。",
+        "sourceRole": "dialogue",
+        "speaker": "薛宝钗",
+        "reasoningHint": "宝钗直接向周瑞家的说明僧人所赠药方之繁复与来历，属于初始设定与事实交代。",
+        "generalityHint": "涉及宝钗个人病症所用的特定海上方药料与制作步骤。",
+        "rationale": "基于p-44172和p-44549，宝钗详细道出冷香丸用料求‘可巧’的经过及药名效用。",
+        "passageIds": [
+          "p-44172",
+          "p-44549"
+        ]
+      },
+      {
+        "label": "周瑞家的叹香菱身世",
+        "identityLabel": "香菱身世",
+        "summary": "周瑞家的在梨香院外遇到香菱，赞其品格容貌似秦氏，询问其身世父母，香菱皆摇头称不记得，引得周瑞家的与金钏叹息。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述周瑞家的与金钏对香菱的观察与问答，由外貌关联到东府少奶奶，并叹其失忆沦落。",
+        "generalityHint": "限于香菱个人的容貌与遭遇，反映被拐丫鬟的孤苦处境。",
+        "rationale": "基于p-45091，周瑞家的询问香菱家世年岁，香菱忘却本源，二人为其伤感叹息。",
+        "passageIds": [
+          "p-45091"
+        ]
+      },
+      {
+        "label": "周瑞家的分送宫花",
+        "identityLabel": "送宫花",
+        "summary": "薛姨妈托周瑞家的将十二支宫制堆纱假花分送贾家三位姑娘、凤姐及黛玉；黛玉见花在最后送来，冷笑讥讽是别人挑剩的。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "记述周瑞家的依照薛姨妈吩咐与顺路次序逐处送花，至黛玉处引发黛玉的心思与反唇相讥。",
+        "generalityHint": "记录贾府内部走动、送礼次序与黛玉特定反应的单个情节线。",
+        "rationale": "基于p-44749和p-46812，串联薛姨妈托付送花至黛玉挑剔宫花的始末。",
+        "passageIds": [
+          "p-44749",
+          "p-46812",
+          "p-45351"
+        ]
+      },
+      {
+        "label": "宝玉秦钟初会相惜",
+        "identityLabel": "宝玉秦钟相会",
+        "summary": "宝玉在宁国府初见秦氏之弟秦钟，见其容貌出众、风度羞涩，二人各生自惭形秽之心，交谈之下迅速投契亲密。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述二人外貌举止给对方带来的震撼及各自内心关于富贵与清寒的感慨与推论。",
+        "generalityHint": "针对宝玉与秦钟两名具体人物初见时的心理活动与相互评价。",
+        "rationale": "基于p-48229与p-48521，描写秦钟仪表与二人一见如故、内心自比的过程。",
+        "passageIds": [
+          "p-48229",
+          "p-48521"
+        ]
+      },
+      {
+        "label": "商议附读家塾",
+        "identityLabel": "秦钟附读贾塾",
+        "summary": "宝玉与秦钟详谈课业，得知秦钟业师亡故且家父有延师之难，宝玉遂提议秦钟入贾府义学附读，二人相约为伴并议定禀明长辈。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "由双方读书缺伴与延师不便的具体境况，推理出结伴入读贾府家塾的互利方案。",
+        "generalityHint": "涉及二人后续学业安排与贾府义学制度的具体商议。",
+        "rationale": "基于p-49000，二人你来我往商定同往家塾读书，解决荒废学业之忧。",
+        "passageIds": [
+          "p-49000"
+        ]
+      },
+      {
+        "label": "焦大醉骂宁府丑事",
+        "identityLabel": "焦大醉骂",
+        "summary": "曾救主立功的老仆焦大因酒后被派深夜送秦钟而愤怒，先痛骂管家不公，遭贾蓉捆绑后更是口不择言痛骂宁府主子不肖与‘爬灰’丑事，终被小厮以马粪塞口。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从焦大的历史战功与特权心理，推出其敢于当众辱骂主子与揭露家族阴暗内幕的行为链条。",
+        "generalityHint": "借一个豪奴的醉骂，揭开宁国府世代更迭与内部道德堕落的阴暗面。",
+        "rationale": "基于p-49598、p-50029与p-50515，完整展现焦大的功劳背景及其醉骂宁府败德的始末。",
+        "passageIds": [
+          "p-50029",
+          "p-49598",
+          "p-50515"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉与秦钟初见相惜、互相倾慕的心理基础，直接促成了二人进一步计议同去贾府家塾读书的决定。",
+        "passageIds": [
+          "p-48521",
+          "p-49000"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "因秦钟与宝玉谈完后天色已晚准备告辞，尤氏派仆人护送，从而直接引发焦大被派差及随后的醉酒大骂。",
+        "passageIds": [
+          "p-49000",
+          "p-49598"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "S9ecavPtG_GU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 9824,
+    "candidatesTokenCount": 1830,
+    "totalTokenCount": 11654,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9824
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1830
+      }
+    ]
+  },
+  "durationMs": 15825,
+  "requestHash": "2a7d0c2c48bfabff333531533f31127b30f46f6c62017a9e18f31c46b32bbaa6"
+}

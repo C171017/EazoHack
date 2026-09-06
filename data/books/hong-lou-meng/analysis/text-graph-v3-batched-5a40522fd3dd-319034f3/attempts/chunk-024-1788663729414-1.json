@@ -1,0 +1,210 @@
+{
+  "value": {
+    "summary": "第二十四回叙写贾芸谋事与痴女儿红玉起相思的经过。贾芸为谋差事先向舅父卜世仁借香料未果，幸得泼皮倪二解囊相助；贾芸转而以冰麝奉承王熙凤，终揽得园中植树差事。同回写红玉在怡红院趁隙为宝玉倒茶，引致秋纹、碧痕斥责，并在外书房与贾芸目光交接、暗动情思。",
+    "nodes": [
+      {
+        "label": "香菱唤黛玉归潇湘馆",
+        "identityLabel": "香菱唤黛玉归潇湘馆",
+        "summary": "香菱打断林黛玉的幽思，拉其回潇湘馆看薛宝钗与凤姐送来的茶叶并下棋闲叙。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前一回末尾悬念的自然顺叙，属于直接描摹。",
+        "generalityHint": "单一特定场景与人物举止。",
+        "rationale": "文本直接叙写香菱击黛玉一掌并拉她回馆吃茶下棋，承接上回黛玉听曲后的情节。",
+        "passageIds": [
+          "p-151076"
+        ]
+      },
+      {
+        "label": "宝玉与贾芸认作父子",
+        "identityLabel": "宝玉贾芸认作父子",
+        "summary": "贾芸在荣国府前请安，贾宝玉戏称其像自己儿子，贾芸顺势机灵奉承愿认宝玉为父。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于两人对话中的应答与贾芸逢迎取巧心机的刻画。",
+        "generalityHint": "具体人物之间的特定言语交际场景。",
+        "rationale": "宝玉随口戏言贾芸像自己儿子，贾芸机敏地用俗语'摇车里的爷爷'迎合并攀附，展现其乖觉心计。",
+        "passageIds": [
+          "p-151693",
+          "p-151990"
+        ]
+      },
+      {
+        "label": "卜世仁拒赊冰麝",
+        "identityLabel": "卜世仁拒赊冰麝",
+        "summary": "贾芸向母舅卜世仁赊借冰片麝香谋事，卜世仁夫妇推三阻四、冷嘲热讽予以拒绝。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接交代贾芸谋事求援遭拒的亲戚世态描写。",
+        "generalityHint": "描绘亲属间炎凉世态的具体家族冲突场景。",
+        "rationale": "贾芸欲借香料钻营，亲舅卜世仁不仅不借且冷嘲热讽，夫妻二人唱双簧赶客。",
+        "passageIds": [
+          "p-153078",
+          "p-153440",
+          "p-153602"
+        ]
+      },
+      {
+        "label": "倪二仗义免息借银",
+        "identityLabel": "倪二仗义免息借银",
+        "summary": "泼皮倪二路遇受挫的贾芸，仗义直言并主动免息借与贾芸十五两三钱银子。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "与卜世仁的薄情冷漠形成鲜明反差的市井侠义行为描写。",
+        "generalityHint": "展现特定人物个性与市井邻里关系的具体情节。",
+        "rationale": "醉金刚倪二虽以放利债为业，得知贾芸受舅舅慢待后大怒，当场倾囊免息借银，突出'轻财尚义侠'。",
+        "passageIds": [
+          "p-154306",
+          "p-154554",
+          "p-155028"
+        ]
+      },
+      {
+        "label": "贾芸献香奉承王熙凤",
+        "identityLabel": "贾芸献香奉承王熙凤",
+        "summary": "贾芸用银买下冰麝后编造借口奉送凤姐，百般奉承迎合其虚荣排场，得其欢心。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾芸利用得到的银子购买香料并精准把握凤姐喜好的钻营策略。",
+        "generalityHint": "展现荣国府内部奉迎钻营手段的具体事件。",
+        "rationale": "贾芸深知凤姐好奉承尚排场，巧妙编造朋友送香由头进献，使凤姐大为受用。",
+        "passageIds": [
+          "p-155293",
+          "p-155693",
+          "p-156065"
+        ]
+      },
+      {
+        "label": "凤姐派贾芸种花差事",
+        "identityLabel": "凤姐派贾芸种花差事",
+        "summary": "贾芸次日顺水推舟告求凤姐，凤姐喜其恭维懂事，将大观园种花木的工程及银两批派与他。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "前文送香奉承结出的直接因果结果。",
+        "generalityHint": "荣国府管事权力运作与人事差遣的具体事例。",
+        "rationale": "次日凤姐主动挑明，贾芸顺势讨好，凤姐遂将大观园栽树工程交与贾芸并批得二百两银子。",
+        "passageIds": [
+          "p-157098",
+          "p-157356",
+          "p-157610"
+        ]
+      },
+      {
+        "label": "小红趁隙侍茶遭斥",
+        "identityLabel": "小红趁隙侍茶遭斥",
+        "summary": "怡红院丫头小红趁大丫头不在房中之机为宝玉倒茶，随后遭秋纹、碧痕百般辱骂讥讽。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "展现怡红院丫鬟阶层内部攀高与排挤倾轧的局部冲突。",
+        "generalityHint": "大家族内大丫头与小丫头地位悬殊及权力倾轧的典型情境。",
+        "rationale": "红玉欲在宝玉前现弄，趁无人端茶回话，秋纹和碧痕打水归来后严词斥骂其不安分。",
+        "passageIds": [
+          "p-158128",
+          "p-158333",
+          "p-158823"
+        ]
+      },
+      {
+        "label": "红玉外书房初见贾芸生情",
+        "identityLabel": "红玉外书房初见贾芸生情",
+        "summary": "贾芸在绮霰斋候宝玉时与红玉相遇对视，红玉受斥后闻知贾芸将进园监工，心动入梦。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由外书房偶遇至回房辗转暗生情愫的情感发展过程。",
+        "generalityHint": "特定男女角色萌生爱慕相思的心理描写。",
+        "rationale": "贾芸在外书房等宝玉时初见红玉，红玉对贾芸'下死眼钉了两眼'；受秋纹欺负后听闻贾芸种树更心动神驰入梦。",
+        "passageIds": [
+          "p-156548",
+          "p-156758",
+          "p-158823"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾芸在舅舅卜世仁处碰壁后气闷归家，才在街上偶遇醉酒的倪二，从而引发倪二借银。",
+        "passageIds": [
+          "p-153602",
+          "p-154306"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "倪二仗义借银十五两三钱，贾芸才得以次日清早至南门大香铺买下冰片麝香去奉承凤姐。",
+        "passageIds": [
+          "p-154554",
+          "p-155293"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "贾芸送香料讨得凤姐欢心，为次日凤姐主动提起差事并最终将种树工程派与贾芸奠定了基础。",
+        "passageIds": [
+          "p-156065",
+          "p-157098",
+          "p-157356"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 7,
+        "type": "supports",
+        "rationale": "因宝玉约贾芸次日来书房说话，贾芸才去外书房等候，从而引出与小红的初遇与搭话。",
+        "passageIds": [
+          "p-151990",
+          "p-156065",
+          "p-156548"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "凤姐派贾芸大观园种树之差事传到怡红院，小红听说后立刻对上号，情思由书房初遇进一步发酵入梦。",
+        "passageIds": [
+          "p-157356",
+          "p-158823"
+        ]
+      },
+      {
+        "sourceIndex": 6,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "小红因倒茶遭秋纹等人恶意啐骂而心灰意冷，在失落苦闷之时联想起外书房所见之贾芸，暗生相思情怀。",
+        "passageIds": [
+          "p-158823"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "mtecaqu5IvGY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 11239,
+    "candidatesTokenCount": 2538,
+    "totalTokenCount": 13777,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11239
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2538
+      }
+    ]
+  },
+  "durationMs": 23380,
+  "requestHash": "0cf77b944b48fb5e7ff73c80d89062e29f67f918bef326aec953957f976f742c"
+}

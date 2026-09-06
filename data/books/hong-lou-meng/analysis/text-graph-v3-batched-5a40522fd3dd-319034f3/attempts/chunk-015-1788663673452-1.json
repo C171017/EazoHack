@@ -1,0 +1,145 @@
+{
+  "value": {
+    "summary": "第十五回叙述送殡途中北静王水溶路谒并嘉许宝玉、赠鹡鸰香念珠；宝玉与秦钟随凤姐歇于农庄，宝玉好奇农具纺车并得见二丫头；随后移至馒头庵下榻，老尼净虚激说凤姐，凤姐遂应承弄权退婚谋利；秦钟趁黑与智能儿偷期得趣被宝玉撞见，凤姐权衡私利多留一日并假借贾琏之名修书长安节度使了结公案。",
+    "nodes": [
+      {
+        "label": "北静王赠珠勉学",
+        "identityLabel": "北静王路谒宝玉",
+        "summary": "水溶细看宝玉之玉，极赞其资质，告诫贾政勿要钟溺荒怠学业，延请宝玉常至王府会聚名士，并解腕上御赐鹡鸰香念珠赠与宝玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从北静王观玉问对直接引出勉学之言并赠物致意，为具体交往事件。",
+        "generalityHint": "涉及北静王、贾宝玉与贾政的特定历史与人际交际。",
+        "rationale": "基于p-89188、p-89469与p-89726，记叙水溶品评通灵宝玉与宝玉言谈，赠念珠为初会敬贺之礼。",
+        "passageIds": [
+          "p-89188",
+          "p-89469",
+          "p-89726"
+        ]
+      },
+      {
+        "label": "农庄观弄纺车与遇二丫头",
+        "identityLabel": "宝玉庄农体验",
+        "summary": "送殡途中宝玉与秦钟随凤姐入农家歇息，宝玉见农具感叹农耕劳苦，尝试纺车作耍引来村姑二丫头，临行时目送二丫头展眼无踪而怅然。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由富贵子弟初见农物的新奇推导出对诗句辛苦之叹，并叙述其对二丫头的怅惘。",
+        "generalityHint": "记录宝玉在特定庄农下处的游历见闻。",
+        "rationale": "基于p-90477与p-90887，具体刻画宝玉在村庄玩耍农具纺车及对二丫头的留连眷念。",
+        "passageIds": [
+          "p-90477",
+          "p-90887"
+        ]
+      },
+      {
+        "label": "入住馒头庵与情愫暗生",
+        "identityLabel": "水月庵安灵借宿",
+        "summary": "送殡至铁槛寺安灵后，凤姐嫌铁槛寺不便，携宝玉、秦钟下榻水月庵；秦钟与智能儿素有情愫，在此相遇借倒茶嬉戏。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "交代铁槛寺与馒头庵的由来及贾府族人排场分歧，直接引入水月庵中秦钟与智能儿的风月往还。",
+        "generalityHint": "描写贾府送殡寄宿安排及特定青年男女之情愫。",
+        "rationale": "基于p-91123，叙述凤姐移驻馒头庵的缘由与秦钟、智能儿二人眉目传情的互动。",
+        "passageIds": [
+          "p-91123"
+        ]
+      },
+      {
+        "label": "净虚激劝与凤姐弄权",
+        "identityLabel": "凤姐受贿揽事",
+        "summary": "老尼净虚求凤姐打发官书干预长安守备与张金哥退婚纠纷，凤姐初推辞，后被净虚话语相激，自恃不信阴司报应，索要三千两银子答应包揽摆平。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "净虚利用激将法直击凤姐要强好胜之心，凤姐从不管转为独断揽下。",
+        "generalityHint": "记录凤姐凭借权势包揽词讼的一桩典型事件。",
+        "rationale": "基于p-92317、p-92742与p-92894，细致叙述净虚诉说张家婚事原由及凤姐夸口揽事索贿的经过。",
+        "passageIds": [
+          "p-92894",
+          "p-92317",
+          "p-92742"
+        ]
+      },
+      {
+        "label": "秦鲸卿得趣馒头庵",
+        "identityLabel": "秦钟智能私通",
+        "summary": "秦钟夜间私会智能儿并于暗室成就私情，被宝玉撞破按住戏谑，二人相约歇下后再细细算账。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文二人情投意合的情节，夜间趁无人时偷期并被宝玉撞破取笑。",
+        "generalityHint": "叙述水月庵内秦钟与智能儿偷情的具体风月事件。",
+        "rationale": "基于p-93253，完整呈现秦钟得趣与宝玉戏谑抓包的情节经过。",
+        "passageIds": [
+          "p-93253"
+        ]
+      },
+      {
+        "label": "借权修书长安节度使",
+        "identityLabel": "凤姐假托贾琏退婚",
+        "summary": "凤姐因兼顾诸事谋算决定多留一日，派来旺儿假托贾琏之名致书长安节度使云光，云光依顺贾府情面两日便告办妥退婚。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐权衡送人情与得私利而延住，指令旺儿瞒天过海办妥退亲，展现其弄权手腕之成效。",
+        "generalityHint": "展现贾府权贵势力在地方官府中包揽词讼的运作机制。",
+        "rationale": "基于p-93744与p-93986，交代凤姐多留一日的算计及来旺儿借贾琏名义修书云光了结张家退婚案的经过。",
+        "passageIds": [
+          "p-93986",
+          "p-93744"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "水月庵中智能儿倒茶调笑的情意发展为夜间房内私通得趣。",
+        "passageIds": [
+          "p-91123",
+          "p-93253"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "凤姐应承净虚索银揽事后，随即命来旺儿借贾琏之名修书云光予以落实兑现。",
+        "passageIds": [
+          "p-92894",
+          "p-93986"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "秦钟恋着智能儿调唆宝玉求多住一日，为凤姐顺理成章延住以办妥净虚托付之事提供了契机与借口。",
+        "passageIds": [
+          "p-93744"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "bNecavX7PLCi0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 7675,
+    "candidatesTokenCount": 1923,
+    "totalTokenCount": 9598,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7675
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1923
+      }
+    ]
+  },
+  "durationMs": 12913,
+  "requestHash": "7a0681c1ed4299506cbbd77918c2d00c5d489f8455599db6d2fde24efcea4d9d"
+}

@@ -1,0 +1,168 @@
+{
+  "value": {
+    "summary": "第二十八回叙述宝玉因听黛玉葬花诗推想红颜老死、物是人非而大恸，随后追上黛玉倾诉自幼深情以解昨夜闭门之误会；贾母处众人谈及黛玉病症丸药方，王熙凤出面证实宝玉所言薛蟠寻药配方一事；宝玉赴冯紫英之宴，与薛蟠、蒋玉菡、云儿行酒令唱新曲，席后宝玉与蒋玉菡互赠扇坠与茜香罗汗巾，引致袭人规劝；元春赏赐端午节礼宝玉与宝钗独同，引起黛玉讥嘲金玉之说，宝玉急于剖白心迹，随后又在贾母处见宝钗褪红麝串而发呆，招致黛玉戏谑。",
+    "nodes": [
+      {
+        "label": "宝玉闻诗感恸推想无常",
+        "identityLabel": "宝玉推想大造与落落无常",
+        "summary": "宝玉因听黛玉葬花之词，推及黛玉、宝钗、袭人等终归无可寻觅，乃至自身安在、园林属谁，产生欲逃大造、出尘网之深悲。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从黛玉诗句触动出发，层层递推至众女儿之终局与自身归宿，构成存在无常之感悟。",
+        "generalityHint": "涉及人的生死无常与万物迁流之哲思体验。",
+        "rationale": "基于p-181465中宝玉由黛玉葬花词“一而二，二而三，反复推求了去”的心路描写。",
+        "passageIds": [
+          "p-181465"
+        ]
+      },
+      {
+        "label": "宝黛诉衷肠释前嫌",
+        "identityLabel": "宝黛释嫌与剖白肺腑",
+        "summary": "宝玉追上黛玉，忆及自幼同席共枕、体贴入微的深情，黛玉问明昨夜闭门原委，消释误会。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "由昨夜关门错疑起因，通过忆旧与盟誓层层说明并化解嫌隙。",
+        "generalityHint": "体现宝玉与黛玉之间特有的情感黏性与信任沟通模式。",
+        "rationale": "基于p-181955与p-182672，宝玉借“当初怎么样”剖白心迹，黛玉释怀。",
+        "passageIds": [
+          "p-181955",
+          "p-182672"
+        ]
+      },
+      {
+        "label": "议配奇药与凤姐佐证",
+        "identityLabel": "宝玉奇方与薛蟠配药",
+        "summary": "王夫人与黛玉谈论调养丸药，宝玉夸陈天价古怪秘方，薛宝钗推不知，王熙凤出面证实薛蟠寻珠拆花配药之实。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "宝玉口述秘方引来王夫人怀疑，凤姐叙述薛蟠借珍珠之事提供旁证。",
+        "generalityHint": "展现贾府内部日常谈笑打趣与各人间微妙反应。",
+        "rationale": "见p-183409与p-183804中关于配药药方真伪的对话与嬉闹。",
+        "passageIds": [
+          "p-183409",
+          "p-183804"
+        ]
+      },
+      {
+        "label": "冯府宴饮女儿悲愁喜乐令",
+        "identityLabel": "冯府酒宴悲愁喜乐令",
+        "summary": "冯紫英设宴，宝玉定下悲愁喜乐酒令，宝玉唱红豆曲，薛蟠粗俗胡诌，蒋玉菡引出袭人之名。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "酒席行令各抒情怀，词曲韵格反衬各人性格与文化修养高下。",
+        "generalityHint": "富贵公子及优伶间席面宴饮与诗曲唱和的典型场景。",
+        "rationale": "涵盖p-186401与p-188149关于酒席行令的过程及席间因“袭人”之名引发的逗趣。",
+        "passageIds": [
+          "p-186401",
+          "p-188149"
+        ]
+      },
+      {
+        "label": "宝玉蒋玉菡情赠茜香罗",
+        "identityLabel": "蒋玉菡情赠茜香罗汗巾",
+        "summary": "蒋玉菡在席后与宝玉私语，宝玉赠以玉玦扇坠，蒋玉菡回赠茜香国贡物大红汗巾；宝玉归后转赠袭人惹起叹息。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "互慕才貌而互换贴身信物，并引出袭人旧物与茜香罗的转手因缘。",
+        "generalityHint": "具体展现宝玉在外结交优伶的情感互动及其在闺阁中的波澜。",
+        "rationale": "基于p-188460与p-188987中二人廊下赠物及袭人识出红汗巾的经过。",
+        "passageIds": [
+          "p-188460",
+          "p-188987"
+        ]
+      },
+      {
+        "label": "端午赐礼相同与黛玉弄性",
+        "identityLabel": "元妃节礼暗合与金玉之谶",
+        "summary": "元妃端午赐礼宝玉与宝钗独独相同，黛玉引金玉之说嘲讽，宝玉极力赌咒发誓心中惟有黛玉。",
+        "sourceRole": "dialogue",
+        "speaker": null,
+        "reasoningHint": "元春赐礼引发金玉良缘之联想，直接激起黛玉的戒备与宝玉的辩白。",
+        "generalityHint": "借赏赐暗示婚姻走向，加剧宝黛钗之间的情感纠葛。",
+        "rationale": "结合p-189380与p-189944中端午赏赐清单及黛玉口出“金玉”之辞。",
+        "passageIds": [
+          "p-189380",
+          "p-189944"
+        ]
+      },
+      {
+        "label": "宝钗褪串宝玉发呆受诮",
+        "identityLabel": "薛宝钗羞笼红麝串与呆雁",
+        "summary": "宝玉欲看宝钗的红麝香珠串，见其丰泽酥臂与妩媚风流不觉看呆，被倚门的黛玉戏称为呆雁并掷帕打中。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "因红麝串引发对金玉之说的联想与对宝钗美貌的注视，随即由黛玉的戏弄收场。",
+        "generalityHint": "具象化描摹三人相处时的微妙心理、情愫流转与醋意交织。",
+        "rationale": "详见p-189944后半段宝玉观宝钗褪串发怔及黛玉掷手帕之描写。",
+        "passageIds": [
+          "p-189944"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉由葬花词引起无常之痛后，下山即赶上黛玉，展开对黛玉的深情追忆与辩解。",
+        "passageIds": [
+          "p-181465",
+          "p-181955"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "宝黛释嫌后一同去王夫人处吃饭，顺理成章转入众人关于黛玉病症与配药的对话。",
+        "passageIds": [
+          "p-182672",
+          "p-182985"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "酒令席间蒋玉菡误念“花气袭人知昼暖”，席后二人便在廊檐下相会并互赠茜香罗汗巾。",
+        "passageIds": [
+          "p-188149",
+          "p-188460"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "端午赐礼中宝钗所得的红麝串正是次日宝玉向宝钗借看并看呆的起因，深化了金玉姻缘的情节暗线。",
+        "passageIds": [
+          "p-189380",
+          "p-189944"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "x9ecavDdLumj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 12051,
+    "candidatesTokenCount": 2355,
+    "totalTokenCount": 14406,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 12051
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2355
+      }
+    ]
+  },
+  "durationMs": 16864,
+  "requestHash": "5111b2a1e7659bd3d0414eecc061e3c108ce84bf47d0d055910d8c0f2c9dbba7"
+}

@@ -1,0 +1,170 @@
+{
+  "value": {
+    "summary": "第二十五回叙述贾环因嫉恨宝玉与彩霞亲近，故意推翻蜡烛油烫伤宝玉脸面。马道婆借机骗取贾母香油钱后，又暗中勾结赵姨娘，以纸人纸鬼施魇魔法谋害宝玉与凤姐。二人随后发狂濒危，合家慌乱祈祷无验；关键时刻癞头和尚与跛足道人登门持诵通灵宝玉，点化宝玉因声色货利蒙尘，除邪化险使二人苏醒康复。",
+    "nodes": [
+      {
+        "label": "宝玉探看红玉生顾虑",
+        "identityLabel": "红玉宝玉相见生隙",
+        "summary": "宝玉次日清晨记挂红玉，隔窗寻见其出神，但因顾忌袭人等寒心且不知红玉品性而未敢轻率使唤。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于前一回红玉倒茶及宝玉次日清晨心理描写的直接叙述。",
+        "generalityHint": "描写特定人物在特定时刻的心理与行动顾忌。",
+        "rationale": "文本直接交代宝玉对红玉留心却怕袭人等人寒心、难于退送的心理活动。",
+        "passageIds": [
+          "p-159597"
+        ]
+      },
+      {
+        "label": "贾环嫉恨推灯烫伤宝玉",
+        "identityLabel": "贾环推灯烫宝玉",
+        "summary": "贾环在王夫人处抄经，见宝玉与彩霞顽笑亲近，暗生嫉恨，故意推倒油汪汪的蜡灯烫伤宝玉面部。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述贾环心理恨意与蓄意推灯导致宝玉受伤的过程。",
+        "generalityHint": "荣国府内贾环因嫉妒而对宝玉实施的具体伤害事件。",
+        "rationale": "明确记叙贾环暗中算计、故意失手推灯烫伤宝玉脸面，引出王夫人训斥赵姨娘等后续风波。",
+        "passageIds": [
+          "p-160899",
+          "p-160572"
+        ]
+      },
+      {
+        "label": "马道婆向贾母巧索香油",
+        "identityLabel": "马道婆巧言讨油",
+        "summary": "马道婆进府看视宝玉烫伤，谎称大家子弟常有促狭鬼作祟，诱使贾母每日许下五斤香油供奉大光明普照菩萨。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "马道婆利用贾母溺爱孙子的心理，以邪祟之说行骗取财。",
+        "generalityHint": "宗教方术游走于深宅权贵之间以神佛名义牟利的个案情境。",
+        "rationale": "详细描写马道婆以大光明普照菩萨与王妃例证劝说贾母每日舍油五斤的欺瞒过程。",
+        "passageIds": [
+          "p-161500"
+        ]
+      },
+      {
+        "label": "赵姨娘马道婆扎纸施魇",
+        "identityLabel": "赵姨娘魇魔贾宝玉凤姐",
+        "summary": "赵姨娘因怨恨凤姐与宝玉夺利，出银立下五百两欠契，向马道婆求得纸鬼纸人，暗中施法魇害宝玉凤姐二人。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从赵姨娘的不平嫉妒推导至暗害谋夺家私的密谋行动。",
+        "generalityHint": "特定妻妾矛盾引发的内宅巫蛊暗害犯罪。",
+        "rationale": "文本详尽记录二人密谈、定下欠银文契并交付纸人五鬼的作法步骤。",
+        "passageIds": [
+          "p-163201",
+          "p-162851"
+        ]
+      },
+      {
+        "label": "凤姐打趣黛玉作媳妇",
+        "identityLabel": "凤姐茶水戏黛玉",
+        "summary": "众人聚在怡红院谈论暹罗进贡茶叶，凤姐借茶打趣黛玉既然吃了贾家的茶，理当给贾家作媳妇，黛玉羞恼回击。",
+        "sourceRole": "dialogue",
+        "speaker": "王熙凤",
+        "reasoningHint": "以茶礼习俗作为日常言谈玩笑的推理依托。",
+        "generalityHint": "内宅亲友间的特定打趣言谈，涉及宝黛婚配意向。",
+        "rationale": "凤姐借吃茶由头直接挑明黛玉与宝玉人物门第相配，构成著名的戏谑对白。",
+        "passageIds": [
+          "p-164636",
+          "p-164117"
+        ]
+      },
+      {
+        "label": "宝玉凤姐中魇中邪发狂",
+        "identityLabel": "姐弟二人中邪濒危",
+        "summary": "宝玉与凤姐中魇后突然发狂乱砍寻死，百般医祷无效，几至气息奄奄，贾府上下大乱。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "前面马道婆施法直接导致二人发狂濒死的因果发展。",
+        "generalityHint": "特定巫蛊引发的危及生命的紧急事件。",
+        "rationale": "记载宝玉头痛大叫与凤姐持刀乱杀，全家束手无策，连后事衣履和棺椁都已齐备的危殆局面。",
+        "passageIds": [
+          "p-165142",
+          "p-165668",
+          "p-165919"
+        ]
+      },
+      {
+        "label": "僧道摩玉解厄除邪祟",
+        "identityLabel": "僧道诵宝玉解邪祟",
+        "summary": "癞头和尚与跛足道人登门，指明通灵宝玉因被声色货利所迷而失灵，持诵摩弄后令其悬于门槛，宝玉凤姐遂渐次苏醒还魂。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过揭示通灵宝玉神异本源及其被俗世声色污染的因由，完成施治与救赎。",
+        "generalityHint": "红楼梦神话框架在尘世危机中的直接干预与显圣。",
+        "rationale": "僧道二人辨识灵玉、念诵偈语并指导安放方法，使二人脱离险境，呼应全书神话构架。",
+        "passageIds": [
+          "p-166850",
+          "p-167062",
+          "p-167233"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "贾环推灯烫伤宝玉后，马道婆借探望宝玉之机向贾母巧言推销供油消灾。",
+        "passageIds": [
+          "p-161500"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "马道婆从贾母处诈得香油钱后转往赵姨娘房中，二人进而密谋魇魔暗害之事。",
+        "passageIds": [
+          "p-162635",
+          "p-163201"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 5,
+        "type": "supports",
+        "rationale": "赵姨娘与马道婆暗置纸人五鬼的作法，直接导致宝玉与凤姐突发狂疾、濒临死亡。",
+        "passageIds": [
+          "p-163201",
+          "p-165142"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "宝玉与凤姐中邪濒危百医无效，引出癞头和尚与跛足道人到府持诵通灵宝玉化解灾厄。",
+        "passageIds": [
+          "p-165919",
+          "p-166850",
+          "p-167233"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "pdecauD_K-mj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 11516,
+    "candidatesTokenCount": 2113,
+    "totalTokenCount": 13629,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11516
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2113
+      }
+    ]
+  },
+  "durationMs": 16225,
+  "requestHash": "0d76d260d3064e37c286efe79fa259f17e2a25f240acc21dc14a3339a179a4f7"
+}

@@ -1,0 +1,207 @@
+{
+  "value": {
+    "summary": "第三十三回叙述贾政见宝玉神情萎靡已生不满，接获忠顺王府长史官索要琪官（蒋玉菡）的质问，又遭贾环进谗诬告宝玉强奸金钏不遂致其投井。贾政震怒之下狠命笞挞宝玉，王夫人与贾母先后赶来阻止，贾母盛怒以回南京相逼，贾政叩首认罪；宝玉伤重被抬回怡红院，袭人向焙茗探问挨打缘由。",
+    "nodes": [
+      {
+        "label": "贾政见宝玉萎靡生怒",
+        "identityLabel": "贾政训饬宝玉萎靡",
+        "summary": "宝玉因金钏儿自尽五内摧伤、神色恍惚，迎面撞见贾政；贾政责其方才见贾雨村时谈吐毫无慷慨挥洒、满面愁闷，已生三分怒气。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因金钏儿之死心神不定与贾政撞个满怀的经过，直接交代父子冲突的初始情绪铺垫。",
+        "generalityHint": "单一具体父子碰面事件，体现贾政对宝玉言谈举止的一贯不满。",
+        "rationale": "基于p-218429与p-218838开头，贾政见宝玉应对失常已存怒意，是后续笞挞的伏线。",
+        "passageIds": [
+          "p-218429",
+          "p-218838"
+        ]
+      },
+      {
+        "label": "忠顺府索要琪官",
+        "identityLabel": "忠顺王府长史官索琪官",
+        "summary": "忠顺王府长史官登门索要出逃的优伶琪官，指出琪官与宝玉过从甚密，并道破红汗巾子一事；宝玉惊惧之下供出紫檀堡房舍，引得贾政又惊又怒。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文贾政对宝玉的不满，长史官以外部王府权势相逼并揭发宝玉交结优伶，直接加剧危机。",
+        "generalityHint": "涉及忠顺王府与贾府权势交往的具体冲突事件。",
+        "rationale": "依据p-218838与p-219355，长史官登门与问询坐实了宝玉招惹王府承奉之人的罪状。",
+        "passageIds": [
+          "p-218838",
+          "p-219355"
+        ]
+      },
+      {
+        "label": "贾环谗构金钏投井",
+        "identityLabel": "贾环诬告宝玉逼死金钏",
+        "summary": "贾环撞见盛怒中的贾政，乘机跪告金钏投井之事，谎称系宝玉在王夫人房中强奸不遂并殴打所致；贾政闻讯气极，决意严惩宝玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾环利用贾政暴怒之时进谗，将金钏之死恶意扭曲为宝玉淫辱母婢，直接引爆贾政杀子般的惩罚行动。",
+        "generalityHint": "特定家庭内部构陷事件，表现贾环母子对宝玉的敌意与贾政对家风败坏的恐惧。",
+        "rationale": "依据p-219875，贾环的话是彻底激怒贾政、引发大承笞挞的直接导火索。",
+        "passageIds": [
+          "p-219875"
+        ]
+      },
+      {
+        "label": "聋婆误传与求救受阻",
+        "identityLabel": "宝玉求救遇聋婆",
+        "summary": "宝玉自知凶多吉少，欲找人往内院报信，偏遇耳聋老姆姆将“要紧”误听为“跳井”，求救无门，随即被小厮押至贾政跟前。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉企图通风报信以求庇护的尝试因碰上聋婆而受挫，造成求救断绝的危急情境。",
+        "generalityHint": "单一滑稽却紧张的场面描摹。",
+        "rationale": "依据p-220617，叙述宝玉陷入孤立无援的具体经过。",
+        "passageIds": [
+          "p-220617"
+        ]
+      },
+      {
+        "label": "贾政狠命笞挞宝玉",
+        "identityLabel": "贾政大承笞挞",
+        "summary": "贾政盛怒之下喝令堵嘴痛打，嫌小厮下手太轻更亲自夺板狠命痛击三四十下，并痛斥门客纵容，称恐其将来酿成弑君杀父之祸。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "结合前两重罪状（交结优伶、逼死母婢），贾政将宝玉的不肖上升为危及宗族与名教的绝大罪愆并痛下毒手。",
+        "generalityHint": "具体的家庭宗法行刑事件，展现贾政以礼法祖训管教逆子的极端方式。",
+        "rationale": "依据p-220890，本回的核心情节“大承笞挞”在此展开。",
+        "passageIds": [
+          "p-220890"
+        ]
+      },
+      {
+        "label": "王夫人哭阻与贾母斥政",
+        "identityLabel": "王夫人与贾母相救宝玉",
+        "summary": "王夫人赶至哭抱宝玉板子并提及贾珠，贾政欲勒死宝玉；随后贾母盛怒而至，厉声斥责贾政苛虐并扬言携眷回南京，贾政惶恐跪地认罪止打。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "王夫人以母子之情与贾珠之死动之以情，贾母以最高家长权威与孝道伦理严厉压制贾政，化解宝玉的性命之危。",
+        "generalityHint": "贾府最高家长权威介入宗法父权惩戒的重大冲突场景。",
+        "rationale": "依据p-221129与p-222456，王夫人与贾母的先后介入扭转了局面，平息了毒打。",
+        "passageIds": [
+          "p-221129",
+          "p-222456"
+        ]
+      },
+      {
+        "label": "贾政愧悔与移送怡红院",
+        "identityLabel": "宝玉伤重还院与贾政自悔",
+        "summary": "众人用春凳将伤痕累累的宝玉抬进贾母房中，贾政随入见宝玉重伤、王夫人痛哭，心生灰心自悔，被贾母斥退；随后宝玉被送回怡红院疗治。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "暴烈笞挞后的善后与情绪余波，贾政在亲见伤情及母妻悲痛后态度转为自悔。",
+        "generalityHint": "笞挞事件收尾及人物心理转折的描摹。",
+        "rationale": "依据p-222456与p-222641，体现冲突平息后贾政的后悔与宝玉的重伤境况。",
+        "passageIds": [
+          "p-222641",
+          "p-222456"
+        ]
+      },
+      {
+        "label": "袭人向焙茗探问原委",
+        "identityLabel": "袭人向焙茗探究祸由",
+        "summary": "袭人至二门向焙茗细问挨打缘由，焙茗分析琪官之事多半因薛蟠吃醋在外挑唆，金钏投井则是贾环所告；袭人信了八九分，回房经心服侍宝玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从下人视点复盘并追查打人祸根，将琪官外事与金钏内乱两条因果线明晰化，并引向薛蟠与贾环。",
+        "generalityHint": "对挨打始末的调查与认知，承上启下引出后续宝钗探伤与各方反应。",
+        "rationale": "依据p-222851，袭人探问串联起事件的内外动因，为第三十四回的矛盾深化做准备。",
+        "passageIds": [
+          "p-222851"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "贾政对宝玉见贾雨村时表现不佳的怒气，在长史官登门索要琪官时被直接激化。",
+        "passageIds": [
+          "p-218838"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "宝玉结交琪官并引得王府索人，成为贾政下狠手痛打的一大主要罪状。",
+        "passageIds": [
+          "p-219355",
+          "p-220890"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "贾环诬告宝玉逼死金钏，是促使贾政彻底暴怒、坚决要将宝玉“着实打死”的最直接诱因。",
+        "passageIds": [
+          "p-219875",
+          "p-220890"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉求救聋婆失败，使他无法及时请来贾母或王夫人阻拦，导致贾政能顺利行杖施暴。",
+        "passageIds": [
+          "p-220617",
+          "p-220890"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "贾政下死手痛打宝玉濒危，直接引出王夫人舍命抱板相护与贾母赶来厉声斥责。",
+        "passageIds": [
+          "p-221129"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "贾母与王夫人的悲痛干预止住了刑罚，使贾政从震怒转入自悔，宝玉得以被抬回救治。",
+        "passageIds": [
+          "p-222456",
+          "p-222641"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 7,
+        "type": "develops",
+        "rationale": "宝玉惨遭毒打促使袭人私下向焙茗调查前因后果，探明究竟因何事惹出此祸。",
+        "passageIds": [
+          "p-222851"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "0Necaq-3A7Ci0ckPkP3t8Ak",
+  "usage": {
+    "promptTokenCount": 8513,
+    "candidatesTokenCount": 2941,
+    "totalTokenCount": 11454,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8513
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2941
+      }
+    ]
+  },
+  "durationMs": 20360,
+  "requestHash": "8b585c470f3597338cc9660a5da1cfd226946c38a0ed44333d5dcea974ac08e5"
+}

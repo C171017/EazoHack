@@ -1,0 +1,135 @@
+{
+  "value": {
+    "summary": "第二十六回叙述贾宝玉病愈回园，贾芸入园拜见宝玉并巧用手帕与小红传情；随后宝玉往潇湘馆以《西厢记》戏语戏逗黛玉致其着恼，旋即被薛蟠假托贾政之名哄出赴生日私宴并见冯紫英；夜晚黛玉探望宝玉，遭怡红院中使性的晴雯闭门拒纳，黛玉隔门闻听宝钗宝玉欢笑，悲感身世寄人篱下而于花阴下呜咽。",
+    "nodes": [
+      {
+        "label": "红玉佳蕙论人情散聚",
+        "identityLabel": "红玉佳蕙论筵席散聚",
+        "summary": "佳蕙向小红抱怨园中赏赐不公，小红看透人情，以“千里搭长棚，没有个不散的筵席”宽慰，指出各人终究要各自谋生。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从佳蕙抱怨贾母赏赐不均与贾芸手帕的伏笔，推至小红对荣府仆役境遇与人生聚散的透彻感悟。",
+        "generalityHint": "涉及大观园下层丫鬟群体的地位、心理以及对散聚命运的处境认识。",
+        "rationale": "基于段落p-168184与p-168396中佳蕙与红玉的对话，展现二人对主仆关系与长远前途的清醒认知。",
+        "passageIds": [
+          "p-168396",
+          "p-168184"
+        ]
+      },
+      {
+        "label": "蜂腰桥坠儿转帕传心",
+        "identityLabel": "蜂腰桥帕子传情",
+        "summary": "贾芸借进怡红院见宝玉之机，在蜂腰桥与红玉眉目传情，并在出园时托坠儿将自己的帕子转交红玉，暗结心曲。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾芸巧借遗帕之由，顺水推舟将自己的罗帕换出托坠儿转交，形成私情传递的关键动作。",
+        "generalityHint": "描绘贾芸与小红两个人之间的特定相思与私下传情事件。",
+        "rationale": "段落p-169437与p-170545明确叙述贾芸与小红蜂腰桥相遇及贾芸以帕相托的过程，是回目“蜂腰桥设言传心事”的核心情节。",
+        "passageIds": [
+          "p-170545",
+          "p-169437"
+        ]
+      },
+      {
+        "label": "潇湘馆宝玉戏语惹恼黛玉",
+        "identityLabel": "潇湘馆西厢曲文引嗔",
+        "summary": "宝玉探潇湘馆，因见黛玉春困娇懒，引用《西厢记》曲词戏笑，黛玉羞恼哭泣斥其拿混帐话取笑，引出宝玉发誓求饶。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "宝玉因黛玉随口念出的春困诗句而动情，脱口引用《西厢记》艳词，触怒了极重自尊与忌讳的黛玉。",
+        "generalityHint": "特指宝玉与黛玉在潇湘馆内因私情与言辞界限产生的局部冲突与情态互动。",
+        "rationale": "段落p-171359与p-171836记载宝玉入潇湘馆并以曲文戏逗惹恼黛玉，呼应回目“潇湘馆春困发幽情”。",
+        "passageIds": [
+          "p-171836",
+          "p-171359"
+        ]
+      },
+      {
+        "label": "薛蟠假托父命设宴弄画",
+        "identityLabel": "薛蟠假托贾政招宴与庚黄之笑",
+        "summary": "薛蟠为庆贺得稀罕寿礼，假托贾政传唤将宝玉骗出痛饮，席间错把“唐寅”认作“庚黄”引得众人取笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过薛蟠假借父名将宝玉唬出大观园的行径，显出其粗疏谐趣与纨绔做派，并引出错认唐寅的笑话。",
+        "generalityHint": "记录宝玉被骗赴薛蟠私宴的特定聚会场景及席间谈资。",
+        "rationale": "段落p-172264与p-172968详细记述薛蟠哄骗宝玉出园之由以及席间错认“庚黄”的插曲。",
+        "passageIds": [
+          "p-172264",
+          "p-172968"
+        ]
+      },
+      {
+        "label": "晴雯闭门误阻黛玉夜访",
+        "identityLabel": "怡红院晴雯拒门与黛玉误会",
+        "summary": "黛玉因挂念贾政传唤宝玉而夜访怡红院，值晴雯与碧痕拌嘴迁怒闭门，晴雯使性回绝不开；黛玉在门外闻宝钗宝玉笑语，误以为宝玉记恨早间言语而故意怠慢。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "晴雯的无心之怒与闭门盲拒，叠加上宝钗在室内的欢声，导致门外的黛玉推断出宝玉故意生隙的错误判断。",
+        "generalityHint": "具体事件：一次由于下人使性与闭门导致的典型主仆/男女主角间的误会事件。",
+        "rationale": "段落p-174386详叙晴雯拒门原因、黛玉隔门误解与悲愤心理，为本回末尾及次日葬花悲剧铺陈。",
+        "passageIds": [
+          "p-174386",
+          "p-174226"
+        ]
+      },
+      {
+        "label": "黛玉花阴泣残身世之悲",
+        "identityLabel": "黛玉花阴鸣咽与寄人篱下之叹",
+        "summary": "黛玉遭拒门外后，深感父母双亡、寄居客边的凄凉无助，更误痛宝玉情薄，遂独立花阴下悲戚鸣咽，引得宿鸟惊飞。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由夜访遭拒的直接刺激，触及黛玉孤苦依栖的宿命痛点，从而升华为对自身才貌、处境与感情的全面伤感。",
+        "generalityHint": "表达林黛玉对于自身寄人篱下宿命与知己疏离感的一贯性格与悲剧命运体验。",
+        "rationale": "段落p-174386与p-174965记录黛玉心理独白、啼哭动魄与结句诗词，为红楼梦经典情感悲剧场景之一。",
+        "passageIds": [
+          "p-174386",
+          "p-174965"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 2,
+        "targetIndex": 4,
+        "type": "supports",
+        "rationale": "黛玉在门外揣度宝玉闭门不见的缘由时，正是联想到早起潇湘馆中宝玉戏说西厢词后自己发怒之事。",
+        "passageIds": [
+          "p-174386"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "被晴雯拒门及听到室内宝玉宝钗谈笑的误会，直接引发了黛玉在花阴之下对自身寄人篱下孤苦身世的深沉痛哭。",
+        "passageIds": [
+          "p-174386",
+          "p-174965"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "pdecaqLQIPGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 9906,
+    "candidatesTokenCount": 2013,
+    "totalTokenCount": 11919,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 9906
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2013
+      }
+    ]
+  },
+  "durationMs": 14683,
+  "requestHash": "1b5338528059ac1300a8681e7c57579d70bd127ccec111be75cd9823d8a2a131"
+}

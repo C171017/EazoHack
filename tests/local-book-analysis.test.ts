@@ -40,12 +40,12 @@ test('job identity binds the exact extracted source and interrupted jobs are ret
 test('completed local maps load the correct source with a namespaced version and bounded bootstrap', async () => {
   const preview=await getBookPreview(),store=await loadMapStore();
   const source={bookId:store.graph.bookId,sourceText:preview.sourceText,fileHash:preview.fileHash,extractionVersion:preview.extractionVersion};
-  const key=localJobKey(source),root=localJobRoot(key),version=store.hierarchy.version;
+  const key=localJobKey(source),root=localJobRoot(key),version=store.hierarchy.version.replace(/^sample:[^:]+:/,'');
   try {
     await writeJson(path.join(root,'source.json'),source);
     await writeJson(path.join(root,'current-map.json'),{version});
     await writeJson(path.join(root,version,'graph.json'),store.graph);
-    await writeJson(path.join(root,version,'hierarchy.json'),store.hierarchy);
+    await writeJson(path.join(root,version,'hierarchy.json'),{...store.hierarchy,version});
     const loaded=await loadLocalMap(key),bootstrap=mapBootstrap(loaded);
     assert.equal(bootstrap.bookId,source.bookId);
     assert.equal(bootstrap.version,`local:${key}:${version}`);

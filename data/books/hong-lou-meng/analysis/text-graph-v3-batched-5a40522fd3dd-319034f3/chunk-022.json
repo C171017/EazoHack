@@ -1,0 +1,148 @@
+{
+  "value": {
+    "summary": "本回讲述贾母为薛宝钗操办将笄之年生日宴，看戏点戏期间宝钗念《寄生草》引宝玉动心；因取笑小旦貌似黛玉引发湘云、黛玉相继着恼，宝玉两头不讨好遂生厌烦写偈悟禅，次日反遭宝钗黛玉以禅宗语录问难解围。随后元春自宫中赐灯谜，贾政与贾母及姊妹猜谜，但所作诗谜皆含离散不祥之谶，令贾政深感悲戚沉思。",
+    "nodes": [
+      {
+        "label": "贾母筹办宝钗生辰",
+        "identityLabel": "贾母筹办宝钗生辰",
+        "summary": "贾母见宝钗稳重和平且适逢十五岁将笄之年，特意自蠲银两命凤姐大排家宴置酒唱戏，规矩规格皆胜往年。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述起因，由凤姐贾琏商量生辰规格到贾母出资置戏，属事件的直接起首。",
+        "generalityHint": "单一具体家庭事件及其筹备过程。",
+        "rationale": "基于p-138644与p-139142叙述贾母出银二十两置办宝钗十五岁生日酒戏。",
+        "passageIds": [
+          "p-139142",
+          "p-138644"
+        ]
+      },
+      {
+        "label": "宝钗荐戏与寄生草",
+        "identityLabel": "宝钗荐戏与寄生草",
+        "summary": "宝钗在筵席上点《鲁智深醉闹五台山》，并向宝玉诵解其中《寄生草》曲文，启宝玉参禅之机。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过宝钗念曲词展开情节，直接促成后文宝玉的顿悟与作偈。",
+        "generalityHint": "特定戏剧唱词交流及其对人物心绪的具体触发。",
+        "rationale": "依据p-139860与p-140313，宝钗为宝玉念诵《寄生草》“赤条条来去无牵挂”等句，引发宝玉击节称赏。",
+        "passageIds": [
+          "p-139860",
+          "p-140313",
+          "p-140377"
+        ]
+      },
+      {
+        "label": "戏子肖似黛玉之隙",
+        "identityLabel": "戏子肖似黛玉之隙",
+        "summary": "散戏时湘云直言小旦扮相貌似林黛玉，宝玉使眼色调和未果，反致湘云指责多心、黛玉恼其弄巧，落得两头埋怨。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从湘云失言到宝玉两边调解不成，展现人际嫌隙的层层发展与激化。",
+        "generalityHint": "大观园内部特定的人际误解与情绪龃龉。",
+        "rationale": "基于p-140377、p-140660与p-141395，众人看出戏子象黛玉，宝玉眼色惹恼湘黛二人。",
+        "passageIds": [
+          "p-140377",
+          "p-140660",
+          "p-141395"
+        ]
+      },
+      {
+        "label": "宝玉作偈填词悟禅",
+        "identityLabel": "宝玉作偈填词悟禅",
+        "summary": "宝玉因两头落谤并忆及庄子语，深感无趣与挂碍，遂借《寄生草》曲意提笔立偈并自填词一首抒发空寂脱俗之念。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接前文听曲与被黛、湘二人责难的连环受挫，推导并写下偈子。",
+        "generalityHint": "宝玉个人在特定挫败下对情与空的哲学感悟。",
+        "rationale": "依据p-141577、p-141813、p-142109和p-142379，宝玉感忿写偈“无可云证，是立足境”及《寄生草》词。",
+        "passageIds": [
+          "p-141813",
+          "p-141577",
+          "p-142109"
+        ]
+      },
+      {
+        "label": "钗黛破禅消释痴心",
+        "identityLabel": "钗黛破禅消释痴心",
+        "summary": "黛玉引六祖慧能公案续偈“无立足境是方干净”，并以“宝玉”二字机锋逼问，使宝玉顿感浅陋自愧，重归融洽。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "对宝玉前夜所作禅偈直接作答与破斥，层层引申禅理而化解其痴狂。",
+        "generalityHint": "特定三人之间通过禅宗机锋进行的思辨交流与情感和解。",
+        "rationale": "依据p-142436，宝钗、黛玉见偈后当面诘难，续言“无立足境”，宝玉哑然失对遂弃禅。",
+        "passageIds": [
+          "p-142436"
+        ]
+      },
+      {
+        "label": "元妃赐谜与贾政悲谶",
+        "identityLabel": "元妃赐谜与贾政悲谶",
+        "summary": "众人接元妃宫中灯谜作对，贾政晚间入席赏灯猜谜，见姊妹诸人所作爆竹、算盘、风筝、海灯之谜皆呈凋零衰败、孤独分散之兆，深觉不祥而伤悲难寐。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从各人所制灯谜中提炼物象隐喻，贾政由此推导出家族盛极而衰与众人命途不寿的凶谶。",
+        "generalityHint": "借上元制谜场景隐喻贾府诸人及家族整体命运的不祥预示。",
+        "rationale": "基于p-144617、p-144868、p-145082与p-145168，贾政详看诸谜深感“皆非永远福寿之辈”，忧郁离席感慨。",
+        "passageIds": [
+          "p-144868",
+          "p-144617",
+          "p-145082"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "宝钗念唱的《寄生草》提供了“赤条条来去无牵挂”的观念，直接催生了宝玉烦闷时的填词与参禅行为。",
+        "passageIds": [
+          "p-140313",
+          "p-141813"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "湘云与黛玉因戏子事件双双误会宝玉，宝玉调和两头俱受挫折，促使其心灰意冷进而写偈参禅。",
+        "passageIds": [
+          "p-141577",
+          "p-141813"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "challenges",
+        "rationale": "宝玉所作“无可云证是立足境”的自得之偈，次日被黛玉与宝钗以更高深的禅机和机锋彻底破除。",
+        "passageIds": [
+          "p-142436"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "l9ecao39N_GY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 10330,
+    "candidatesTokenCount": 1840,
+    "totalTokenCount": 12170,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10330
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1840
+      }
+    ]
+  },
+  "durationMs": 13199,
+  "requestHash": "3b5cfb5f7c67f5d1abf4e18fdd9562c8f3d09d6eff6cf8b26d4773a1d3d76bc6"
+}

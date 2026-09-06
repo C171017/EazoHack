@@ -1,0 +1,198 @@
+{
+  "value": {
+    "summary": "第三回讲述贾雨村得林如海举荐并借贾政之力起复应天府，林黛玉奉父命进京投奔贾府。黛玉初入荣国府，处处留心谨慎，拜会贾母、邢夫人、王夫人，并与王熙凤及三春姊妹相见。随后黛玉与贾宝玉初次相会，彼此心生旧识之感，席间宝玉因黛玉无玉而怒摔通灵宝玉，夜间袭人宽慰黛玉。次日王夫人处传来金陵薛蟠犯案之人命消息。",
+    "nodes": [
+      {
+        "label": "贾雨村托荐起复",
+        "identityLabel": "贾雨村托荐起复",
+        "summary": "贾雨村得旧同僚起复之信，央托林如海致书贾政，并护送黛玉进京，贾政助其谋得金陵应天府复职缺。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从闻听起复邸报到托请如海、进京面见贾政并获补应天府缺，呈现出一套基于世家乡谊与荐书运作的完整官场起复过程。",
+        "generalityHint": "涉及贾雨村个人起复及林如海、贾政特定个案，属于官宦私相引荐的特定事例。",
+        "rationale": "基于p-14057、p-14235与p-14814，详细叙述贾雨村借林如海与贾政之势成功补官应天府的经过。",
+        "passageIds": [
+          "p-14057",
+          "p-14235",
+          "p-14814"
+        ]
+      },
+      {
+        "label": "黛玉进贾府步步留心",
+        "identityLabel": "黛玉进贾府步步留心",
+        "summary": "黛玉因母亲亡故依傍外祖母进京，见贾府富丽森严不同凡俗，自此步步留心、时时在意，恐被人耻笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述黛玉寄人篱下的初始心态与入府观察，直接描写其处事准则与心理活动。",
+        "generalityHint": "针对黛玉初入荣国府这一具体场景和心理状态。",
+        "rationale": "基于p-14656与p-14998，描绘林黛玉辞父别家、登舟进京并进入荣府时的戒备与自尊自抑。",
+        "passageIds": [
+          "p-14998",
+          "p-14656"
+        ]
+      },
+      {
+        "label": "贾母迎黛玉与母女痛泣",
+        "identityLabel": "贾母迎黛玉",
+        "summary": "贾母与黛玉初次相见相拥痛哭，引见邢夫人、王夫人、李纨及迎春、探春、惜春三姊妹，并询问黛玉服药之症。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "直接呈现黛玉进内室拜见外祖母与母舅女眷的聚会情景及关于病症的交谈。",
+        "generalityHint": "特定场景事件，展现贾母对贾敏的怀念与对黛玉的特殊怜爱。",
+        "rationale": "依据p-15600、p-15829与p-16106，黛玉与贾母骨肉相见并正式引见贾府内眷姊妹。",
+        "passageIds": [
+          "p-15600",
+          "p-15829",
+          "p-16106"
+        ]
+      },
+      {
+        "label": "王熙凤放诞登场",
+        "identityLabel": "王熙凤登场",
+        "summary": "王熙凤后院高声笑语而来，服饰彩绣辉煌、言语机巧，既奉迎贾母又关照黛玉，尽显其管家权势与行事作风。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过其服饰外貌、与贾母及王夫人的应对交谈，刻画出其在贾府内帏的特殊地位与性格。",
+        "generalityHint": "围绕王熙凤个人的出场与性格展示。",
+        "rationale": "依据p-16388与p-17163，展示凤辣子出场的放诞、言辞的机敏及掌管府中月钱衣料的管家身份。",
+        "passageIds": [
+          "p-16388",
+          "p-17163"
+        ]
+      },
+      {
+        "label": "黛玉拜见二舅与王夫人诫宝玉",
+        "identityLabel": "王夫人诫宝玉",
+        "summary": "黛玉往拜贾赦未见，复往荣禧堂拜见贾政王夫人，王夫人告诫黛玉休睬家中顽劣异常的“混世魔王”贾宝玉。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "王夫人向黛玉陈述宝玉同姊妹娇养惯了的特殊性情，为二人相处提出预警。",
+        "generalityHint": "描述贾府内院礼节拜会及母亲对特定儿子的评价与告诫。",
+        "rationale": "依据p-17375、p-17994与p-18609、p-18960，黛玉依礼拜见二位舅父院宇，王夫人郑重嘱咐防备宝玉。",
+        "passageIds": [
+          "p-18609",
+          "p-17375",
+          "p-18960"
+        ]
+      },
+      {
+        "label": "宝黛初会与宝玉摔玉",
+        "identityLabel": "宝黛初会摔玉",
+        "summary": "宝玉与黛玉初会皆觉似曾相识，宝玉赠字“颦颦”，后因闻黛玉无玉而发作痴狂摔掷通灵宝玉，贾母急忙宽慰哄解。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从两相眼熟的默契到因黛玉无玉引发对自身佩玉的愤怒，通过摔玉行为展现宝玉叛逆乖张与真性情。",
+        "generalityHint": "宝黛宿命相遇与宝玉对人世身外异物之反感的关键特定情节。",
+        "rationale": "依据p-19977与p-20634，宝黛一见如故、互叙读书赠字，因玉之有无激起摔玉风波。",
+        "passageIds": [
+          "p-20634",
+          "p-19977"
+        ]
+      },
+      {
+        "label": "黛玉夜泣与袭人劝慰",
+        "identityLabel": "袭人夜劝黛玉",
+        "summary": "夜间黛玉安置碧纱橱内，因自责惹宝玉发狂摔玉而伤心淌泪，丫鬟袭人前来劝慰莫多心，并提及通灵宝玉之来历。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "承接白日摔玉事件，黛玉敏感情重，袭人以宝玉素常行止宽解，建立黛玉与宝玉房中主要侍女的互动。",
+        "generalityHint": "夜深私语的具体生活事件，揭示黛玉的敏锐自省与袭人温良本分之特性。",
+        "rationale": "依据p-21533、p-21716与p-22091，交代黛玉安置、丫鬟分配及夜间袭人温言劝解黛玉。",
+        "passageIds": [
+          "p-22091",
+          "p-21533",
+          "p-21716"
+        ]
+      },
+      {
+        "label": "薛蟠人命官司消息传入",
+        "identityLabel": "薛蟠命案传闻",
+        "summary": "次晨黛玉往王夫人处，撞见金陵来信并王家来人说话，探春等告知薛姨妈之子薛蟠在金陵打死人命，王子腾欲唤取进京。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过王夫人拆看金陵来信，引入薛家命案与应天府审理的背景，为贾雨村上任判案作直接伏笔。",
+        "generalityHint": "涉及薛蟠人命案及四大家族连带关照的特定事件引入。",
+        "rationale": "依据p-22426，金陵薛蟠命案信息传入荣府，并与应天府复职的贾雨村产生暗扣与后文关联。",
+        "passageIds": [
+          "p-22426"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "黛玉怀着处处留心谨慎之心进入荣府正室，随后在贾母处展开一系列拜会与交谈。",
+        "passageIds": [
+          "p-14998",
+          "p-15600"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "在贾母房中众人叙话未毕之时，王熙凤放诞登场，展开进一步引见与问候。",
+        "passageIds": [
+          "p-15829",
+          "p-16388"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "王夫人先前向黛玉严厉告诫休理会混世魔王贾宝玉，随后宝玉登场二人相见并激化摔玉情节。",
+        "passageIds": [
+          "p-18960",
+          "p-19977",
+          "p-20634"
+        ]
+      },
+      {
+        "sourceIndex": 5,
+        "targetIndex": 6,
+        "type": "develops",
+        "rationale": "宝玉摔玉吓坏众人，导致黛玉夜间深感自责淌泪，引发袭人入内劝慰。",
+        "passageIds": [
+          "p-20634",
+          "p-22091"
+        ]
+      },
+      {
+        "sourceIndex": 0,
+        "targetIndex": 7,
+        "type": "supports",
+        "rationale": "贾雨村受托赴任金陵应天府复职，与金陵薛蟠打死人命正押在应天府案下的情节形成承接与铺垫。",
+        "passageIds": [
+          "p-14814",
+          "p-22426"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "LdecapL8ENCX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 10982,
+    "candidatesTokenCount": 2707,
+    "totalTokenCount": 13689,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 10982
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2707
+      }
+    ]
+  },
+  "durationMs": 19293,
+  "requestHash": "243edff8be8811cbcbb3eab0712492898ac8d80a3c4feceeacf47a05287fad04"
+}

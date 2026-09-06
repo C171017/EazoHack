@@ -1,0 +1,162 @@
+{
+  "value": {
+    "summary": "第十九回叙宝玉因嫌宁府看戏繁闹而私访袭人家，见袭人家境安好；李嬷嬷在贾府赌气吃尽留给袭人的酥酪。回府后袭人借赎身之说探察宝玉并立下三条规劝，使宝玉应允；次日宝玉探视歇午的林黛玉，二人亲昵笑闹，宝玉编造“耗子精盗香芋”的典故逗黛玉，直至宝钗来访打破气氛。",
+    "nodes": [
+      {
+        "label": "宝玉私访花宅",
+        "identityLabel": "宝玉探访袭人家",
+        "summary": "宝玉在宁府看戏嫌烦，与茗烟私自骑马来到袭人家中探望，袭人虽惊慌于其擅自外出，仍悉心服侍并设法雇轿送宝玉回府。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉因百无聊赖而临时起意探访袭人家的具体情节，属于直接叙事起因与动作。",
+        "generalityHint": "单一具体叙事事件，局限于宝玉与袭人家人的私下交往互动。",
+        "rationale": "基于p-119327与p-120040，宝玉因无聊由茗烟带引出走，至袭人家中吃茶受待，体现宝玉对丫鬟袭人的特殊亲近与不拘小节。",
+        "passageIds": [
+          "p-119327",
+          "p-120040",
+          "p-120340"
+        ]
+      },
+      {
+        "label": "李嬷嬷赌气吃酥酪",
+        "identityLabel": "李嬷嬷酥酪风波",
+        "summary": "李嬷嬷见宝玉屋中丫鬟放肆赌博，又见特留给袭人的酥酪，因气愤自身地位被小丫头超越而赌气吃尽，引发茜雪之旧怨与袭人的周旋。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "由宝玉出门引发李嬷嬷撞见房中无主、借题发挥吃酥酪并宣泄积怨的情节。",
+        "generalityHint": "单一情节，体现荣府老奶母与得宠丫鬟之间的阶层权力摩擦。",
+        "rationale": "基于p-120340、p-121191与p-121542，李嬷嬷以抚养有功自居吃掉酥酪，袭人回来后巧妙以肚子疼和想吃栗子掩饰过去以息事宁人。",
+        "passageIds": [
+          "p-121191",
+          "p-120340",
+          "p-121542"
+        ]
+      },
+      {
+        "label": "袭人假言赎身试探",
+        "identityLabel": "袭人赎身之说",
+        "summary": "袭人谎称家人明年要赎她归家，以主奴有别及合情合理的规矩为由决绝表示必去，以此探察宝玉的情意并挫败其任性脾气。",
+        "sourceRole": "dialogue",
+        "speaker": "袭人",
+        "reasoningHint": "袭人故意设局，借助母亲赎身借口对宝玉进行心理层面的试探与压服。",
+        "generalityHint": "特定关系中的试探策略，体现袭人对宝玉性情的洞察与操控能力。",
+        "rationale": "基于p-122242、p-122533与p-123519，袭人表面坚执欲归，实则心中至死不走，以此作为后续进规劝诫的铺垫手段。",
+        "passageIds": [
+          "p-122242",
+          "p-122533",
+          "p-123519"
+        ]
+      },
+      {
+        "label": "情切切花解语箴规",
+        "identityLabel": "花解语进箴规",
+        "summary": "袭人趁宝玉伤感妥协之际提出三件事规劝：不可乱发轻生丧气之语、在长辈面前不可批驳诮谤读书人、不可毁僧谤道及贪吃胭脂唇膏。",
+        "sourceRole": "dialogue",
+        "speaker": "袭人",
+        "reasoningHint": "承接前文试探成功的成果，在此情势下对宝玉日常叛逆性格与坏毛病施加现实道德约束。",
+        "generalityHint": "针对宝玉个人性格的一整套行为规范，集中反映正统礼法与宝玉叛逆之间的折中与劝导。",
+        "rationale": "基于p-123519、p-123894、p-124132及p-124391，袭人借情进谏，宝玉一一应允，照应回目“情切切良宵花解语”。",
+        "passageIds": [
+          "p-123519",
+          "p-123894",
+          "p-124132"
+        ]
+      },
+      {
+        "label": "静日房中闻冷香",
+        "identityLabel": "宝黛对榻闻香",
+        "summary": "宝玉探望歇午的黛玉并强行同榻歪着，闻到黛玉袖中奇香，引出宝黛二人借金玉良缘与冷香丸互相打趣嘲弄。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从日常歇宿过渡到宝玉黛玉之间细致亲昵的言谈试探，由体香引发黛玉对薛宝钗冷香与金玉匹配的敏感戏谑。",
+        "generalityHint": "宝黛二人特定日常相处场景，反映黛玉敏锐的心思与二人情愫。",
+        "rationale": "基于p-124789、p-125002、p-125421与p-125844，宝玉同榻而卧，由香气引出黛玉借“暖香”“冷香”“金锁”对宝钗与宝玉的讥刺。",
+        "passageIds": [
+          "p-125421",
+          "p-125002",
+          "p-125844"
+        ]
+      },
+      {
+        "label": "诌香玉耗子精故事",
+        "identityLabel": "耗子精偷香芋",
+        "summary": "宝玉为恐黛玉饭后贪眠伤身，随口编造扬州黛山林子洞极小病弱耗子精摇身变成林老爷美貌小姐以盗“香玉”的谎话取悦打趣黛玉。",
+        "sourceRole": "dialogue",
+        "speaker": "贾宝玉",
+        "reasoningHint": "宝玉为哄黛玉不睡，顺承其扬州家世与身上的幽香，当场虚构拆字寓意的典故故事。",
+        "generalityHint": "宝玉虚构的寓言笑话，专为逗乐黛玉并对应其名“黛”“林”“香玉”。",
+        "rationale": "基于p-126128与p-126919，宝玉巧妙利用“盐课林老爷的小姐才是真正的香玉”，呼应回目“意绵绵静日玉生香”。",
+        "passageIds": [
+          "p-126128",
+          "p-126919",
+          "p-127025"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉去往袭人家中导致丫鬟无人约束，且宝玉留给袭人的酥酪被李嬷嬷撞见并赌气吃下。",
+        "passageIds": [
+          "p-120340",
+          "p-121191"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "袭人归来化解酥酪之争后，借剥栗子避人耳目，乘机发起赎身之论以试探宝玉。",
+        "passageIds": [
+          "p-121542",
+          "p-122242"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "supports",
+        "rationale": "袭人以坚决赎身使宝玉情绪沮丧屈服，为后文提出三件规劝创造了心理与情势的前提。",
+        "passageIds": [
+          "p-123519",
+          "p-123894"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉在黛玉房中闻得其幽香并引起打趣后，见黛玉不理欲睡，遂顺着香气与扬州风俗编造了小耗子变香玉的典故。",
+        "passageIds": [
+          "p-125844",
+          "p-126128"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "htecapSHI9CX0ckPgPCWwQ8",
+  "usage": {
+    "promptTokenCount": 11735,
+    "candidatesTokenCount": 2351,
+    "totalTokenCount": 14086,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 11735
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2351
+      }
+    ]
+  },
+  "durationMs": 17385,
+  "requestHash": "3b687ab0035cfd570ed3eeda5d0a434f757c4bc532e1f4999bfc7510ecc0a3a3"
+}

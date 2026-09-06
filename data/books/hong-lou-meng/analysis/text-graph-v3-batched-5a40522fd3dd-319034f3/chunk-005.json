@@ -1,0 +1,169 @@
+{
+  "value": {
+    "summary": "第五回中，贾宝玉随贾母等人至宁府赏梅，倦怠入秦可卿房中安歇，入梦游历太虚幻境。在警幻仙姑引导下，宝玉浏览薄命司诸册判词，听饮《红楼梦》十二支曲，受宁荣二公之托由仙姑引导领会‘意淫’并与仙姑之妹兼美完婚，最终惊坠迷津呼救还阳。",
+    "nodes": [
+      {
+        "label": "宝玉入秦氏绣房安歇入梦",
+        "identityLabel": "秦氏卧房入梦",
+        "summary": "宝玉因嫌弃正房劝学对联而转入秦可卿房中，见其奢华香艳之陈设，欣然卧下并入梦游仙境。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉厌弃世俗文章对联、喜好秦氏私密香闺之具体经过，构筑梦境触发的环境条件。",
+        "generalityHint": "单一具体叙事场景，叙述贾府内眷宴集后的歇息事件。",
+        "rationale": "文本详尽描写了宝玉拒入正房与进入秦氏卧房的经过，为其后的太虚幻境梦游提供了心理与物理诱因。",
+        "passageIds": [
+          "p-29312",
+          "p-29057",
+          "p-29643"
+        ]
+      },
+      {
+        "label": "游历太虚幻境与金陵册页",
+        "identityLabel": "薄命司册籍",
+        "summary": "警幻仙姑引宝玉入太虚幻境薄命司，宝玉翻阅金陵十二钗正、副、又副各册图画判词，却未能参透玄机。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从警幻接引直接承接至薄命司看册，包含警幻对录册标准的解释及宝玉的不解。",
+        "generalityHint": "涵盖金陵各等女子的宿命判词，具有作品全局性的象征与预言性质。",
+        "rationale": "太虚幻境薄命司判词为全书红楼女子的命运纲领，警幻向宝玉解释了录入女子的缘由及次序。",
+        "passageIds": [
+          "p-31030",
+          "p-30354",
+          "p-32329"
+        ]
+      },
+      {
+        "label": "宁荣二公托付警幻训诫",
+        "identityLabel": "二公托警幻警痴顽",
+        "summary": "警幻向众仙子说明因宁荣二公之灵嘱托，家运将尽且唯宝玉略可望成，特以情欲声色等事警其痴顽，冀其入于正路。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "转述宁荣二公关于贾府衰败宿命与宝玉性情特点的评判，并确立声色警幻的施教目的。",
+        "generalityHint": "关乎贾府百年盛衰命运与宝玉立身方向的重要主旨交代。",
+        "rationale": "文中警幻仙姑向众仙子阐述引宝玉到此的根本动机，揭示了梦境警幻背后的家族宗法期待与挽救意图。",
+        "passageIds": [
+          "p-32607"
+        ]
+      },
+      {
+        "label": "聆赏红楼梦十二支曲",
+        "identityLabel": "红楼梦仙曲",
+        "summary": "警幻命歌姬按原稿演唱新制《红楼梦》十二支曲，宝玉阅稿聆听，感其凄婉销魂却未明其原委深意。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "借仙曲唱词层层揭示主要人物的悲剧结局，宝玉则仅以此释闷，并未真正醒悟。",
+        "generalityHint": "全景式概括小说核心人物的命运轨迹与作品主题情绪。",
+        "rationale": "红楼梦十二曲是全书人物结局的集中预演，警幻意在借曲点醒，宝玉却止于声韵凄惋。",
+        "passageIds": [
+          "p-33350",
+          "p-33824",
+          "p-34867"
+        ]
+      },
+      {
+        "label": "警幻辨意淫并授云雨",
+        "identityLabel": "警幻释意淫",
+        "summary": "警幻称宝玉为天下古今第一淫人，辨析‘皮肤淫滥’与天分所生之‘意淫’，并将妹兼美许配以授云雨之事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "警幻提出核心概念‘意淫’，界定其在闺阁中为良友、于世道为迂阔怪诡之性质，并引导宝玉实历幻境声色以期改悟。",
+        "generalityHint": "对小说核心概念‘意淫’的哲理性定义与评价，贯穿对宝玉全人性情的理解。",
+        "rationale": "警幻仙姑对此概念作了详尽的阐发，是理解宝玉性格及整部小说情理观的核心节点。",
+        "passageIds": [
+          "p-35278",
+          "p-34994"
+        ]
+      },
+      {
+        "label": "迷津惊变梦醒呼可卿",
+        "identityLabel": "堕迷津还阳",
+        "summary": "宝玉与可卿游玩至迷津遭夜叉海鬼拖下，失声呼叫‘可卿救我’后被袭人等唤醒，房外秦氏闻其小名暗自纳罕。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从深陷幻境云雨到惊堕迷津，完成了从入梦到惊醒的闭环，小名呼叫将梦境与现实的秦氏相勾连。",
+        "generalityHint": "具体梦境终结与惊醒事件，兼具象征警示含义。",
+        "rationale": "结尾迷津之险象征沉湎声色的危机，梦中呼叫秦可卿小名更形成梦境与现实世界的巧妙互涉。",
+        "passageIds": [
+          "p-35668",
+          "p-35992"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉在秦氏房中睡去后，神游太虚幻境并随仙姑进入薄命司看册。",
+        "passageIds": [
+          "p-29846",
+          "p-30354",
+          "p-31030"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "仙姑见宝玉看册未悟，引其至后室，众仙子怪怨引入浊物，警幻遂交代宁荣二公托付之由。",
+        "passageIds": [
+          "p-32329",
+          "p-32607"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "仙姑既受二公之托以声色警其痴顽，遂摆设仙酿并演奏《红楼梦》十二支曲。",
+        "passageIds": [
+          "p-32607",
+          "p-33350"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "宝玉听曲仍未悟，警幻进而带其入房，正面阐发‘意淫’并授以云雨以作点化。",
+        "passageIds": [
+          "p-34994",
+          "p-35278"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "宝玉依言成婚并与兼美游玩，不慎行至迷津，遭鬼怪拉扯惊呼醒转。",
+        "passageIds": [
+          "p-35668",
+          "p-35992"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "P9ecate9MOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 13377,
+    "candidatesTokenCount": 2085,
+    "totalTokenCount": 15462,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 13377
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2085
+      }
+    ]
+  },
+  "durationMs": 16268,
+  "requestHash": "fc4fe5facb4e6d28334e2e2eac4b70e2d7832a3df046708ba23724f0a8daa070"
+}

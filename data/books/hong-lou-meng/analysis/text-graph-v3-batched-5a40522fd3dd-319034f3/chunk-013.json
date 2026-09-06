@@ -1,0 +1,158 @@
+{
+  "value": {
+    "summary": "第十三回叙述秦可卿托梦王熙凤预言家族盛衰并授长保之策，随后魂归长夜。贾府举哀大办丧事，贾珍恣意奢华，为贾蓉捐官龙禁尉以显风光。因尤氏病倒且内务无人主持，贾珍在宝玉引荐下求王夫人允准王熙凤协理宁国府丧务，凤姐欣然受命并敏锐洞悉宁府五大弊端。",
+    "nodes": [
+      {
+        "label": "秦氏托梦论盛衰保全策",
+        "identityLabel": "秦氏托梦",
+        "summary": "秦可卿临终托梦王熙凤，指出盛极必衰之理，建议趁富贵时在祖茔多置田庄房舍以供祭祀与家塾，以防后日败落无退路，并赠谶语告诫繁华不永。",
+        "sourceRole": "dialogue",
+        "speaker": "秦可卿",
+        "reasoningHint": "从‘月满则亏、登高必跌重’的规律推演出家族败落的隐患，进而提出置办不可入官的义田与家塾作为制度防线。",
+        "generalityHint": "关于大家族应对周期性盛衰长远保全策略的通论性主张。",
+        "rationale": "秦氏托梦王熙凤，深入分析贾府百年繁华背后的危机，并开出制度性退步良策，是全回乃至全书家族命运推演的关键节点。",
+        "passageIds": [
+          "p-78564",
+          "p-78859",
+          "p-79253"
+        ]
+      },
+      {
+        "label": "秦可卿死合家悲恸",
+        "identityLabel": "秦可卿之亡",
+        "summary": "秦可卿溘然长逝，合家惊疑痛悼；宝玉闻讯急火攻心吐血，贾珍更是如丧考妣，痛称长房绝灭无人，誓言尽其所有大办丧事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "基于秦氏生前的孝顺、和睦与慈怜，叙述全家上下的哀痛与贾珍不合常理的失态悲绝。",
+        "generalityHint": "针对秦可卿去世这一特定悲剧事件的叙写。",
+        "rationale": "秦氏之死是本回的核心转折事件，直接引发后续丧礼筹办、捐官及王熙凤协理宁国府等一系列情节。",
+        "passageIds": [
+          "p-79347",
+          "p-79435"
+        ]
+      },
+      {
+        "label": "贾珍恣意奢华治丧",
+        "identityLabel": "贾珍奢华治丧",
+        "summary": "贾珍因贾敬不问家事而恣意奢华，不仅不听贾政劝阻执意采用原为义忠亲王预备的潢海铁网山樯木板作棺，还超规格大设僧道水陆道场。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾珍由于过度悲痛及父亲贾敬的放任，在治丧用物上超越常礼，不顾贾政的僭越警示。",
+        "generalityHint": "记录宁府治丧过程中的奢华逾制行径。",
+        "rationale": "通过棺木用料和超度规模的描写，生动表现了贾珍的恣意和丧事的逾规越矩，为后续埋伏祸端。",
+        "passageIds": [
+          "p-80246",
+          "p-79435"
+        ]
+      },
+      {
+        "label": "贾蓉捐官五品龙禁尉",
+        "identityLabel": "贾蓉捐官",
+        "summary": "贾珍嫌贾蓉仅为黉门监在丧仪执事上不够体面，遂趁掌宫内相戴权来祭之机，花一千二百两银子为贾蓉捐得五品龙禁尉前程，以壮灵前威仪。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "贾珍为了丧礼上的虚荣与风光，借权贵门路以金钱快速买得官爵名分。",
+        "generalityHint": "贾家权贵利用内廷太监买官卖官的具体事例。",
+        "rationale": "呼应回目‘死封龙禁尉’，展现了贾府通过宦官戴权走后门买官的政治生态，也是丧事铺张风光的重要构成。",
+        "passageIds": [
+          "p-80741",
+          "p-81200",
+          "p-81537"
+        ]
+      },
+      {
+        "label": "贾珍延请王熙凤协理宁府",
+        "identityLabel": "延请凤姐协理",
+        "summary": "尤氏因病不能料理内务，贾珍采纳宝玉建议，向邢夫人、王夫人苦求借调凤姐协理一个月，并赋予其便宜行事之权交付对牌。",
+        "sourceRole": "dialogue",
+        "speaker": "贾珍",
+        "reasoningHint": "因内院大丧无人主理有失体面，贾珍看中凤姐杀伐决断的才干，并以死者为念极力说服王夫人放权。",
+        "generalityHint": "贾府两府之间临时移交内务管辖权的具体事件。",
+        "rationale": "推动‘王熙凤协理宁国府’主线展开的枢纽情节，展现了宝玉的机敏、贾珍的无奈恳切及凤姐的权柄拓展。",
+        "passageIds": [
+          "p-82066",
+          "p-82605",
+          "p-82944"
+        ]
+      },
+      {
+        "label": "凤姐敏察宁府五大弊端",
+        "identityLabel": "凤姐察宁府弊",
+        "summary": "凤姐接手后独坐抱厦，条分缕析归纳出宁国府存在的五大弊端：人口混杂、事无专执、需用过费、苦乐不均、家人豪纵。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "凤姐凭其敏锐的管理经验，在接事伊始即归纳提炼出宁国府深层管理混乱的症结所在，为接下来的整顿打下基础。",
+        "generalityHint": "对宁国府乃至封建大家族内部管理弊病的高度概括与系统诊断。",
+        "rationale": "凤姐初入宁府即切中管理要害，不仅展现其精明干练的管理才干，也为下一回严加整肃的行动奠定纲领。",
+        "passageIds": [
+          "p-83332",
+          "p-83466"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "秦可卿去世直接引致贾珍极度悲痛，从而促使其不管不顾地恣意奢华治丧。",
+        "passageIds": [
+          "p-79435",
+          "p-80246"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾珍为了丧礼更显威风光彩，在奢华治丧的基础上进一步借机为贾蓉捐纳五品龙禁尉。",
+        "passageIds": [
+          "p-80741"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "秦氏丧事繁重而内主妇尤氏病倒，造成宁国内部无人主事，直接促成贾珍求借凤姐协理。",
+        "passageIds": [
+          "p-81836",
+          "p-82066"
+        ]
+      },
+      {
+        "sourceIndex": 4,
+        "targetIndex": 5,
+        "type": "develops",
+        "rationale": "王熙凤受托接管宁国府对牌与治丧大权后，进驻抱厦，随即思考并理出宁府五大积弊。",
+        "passageIds": [
+          "p-82944",
+          "p-83332"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "Z9ecasuzHOmj0ckPyMrS-AQ",
+  "usage": {
+    "promptTokenCount": 8022,
+    "candidatesTokenCount": 2065,
+    "totalTokenCount": 10087,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8022
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 2065
+      }
+    ]
+  },
+  "durationMs": 14267,
+  "requestHash": "18779cc9790a390b0b530e8eea07e764f20eaea3d57e6d3c44d319342df29c71"
+}

@@ -1,0 +1,145 @@
+{
+  "value": {
+    "summary": "贾元春下谕命宝钗、黛玉及宝玉等搬入大观园居住读书。宝玉、黛玉各选其所，住进怡红院与潇湘馆。宝玉私得传奇小说《会真记》，并在沁芳闸边与黛玉共读、借词调笑；随后黛玉路经梨香院听闻《牡丹亭》曲文，深有所感，触动诗愁情思。",
+    "nodes": [
+      {
+        "label": "元春下谕入住大观园",
+        "identityLabel": "元妃命姊妹宝玉进大观园",
+        "summary": "贾元春因恐大观园自幸过之后封锁寥落，下谕命家中能诗会赋的姊妹们进去居住，并命自幼在姊妹丛中长大的宝玉随同进去读书。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从元春省亲后的园林空置考虑直接引发的指令，体现其对弟妹情谊与家族生活的安排。",
+        "generalityHint": "贾府大观园生活体制形成的关键起因事件。",
+        "rationale": "根据p-146744，元春自编题咏后恐大观园寂寞，特命太监夏守忠传谕宝钗、黛玉及宝玉等搬进大观园居住读书。",
+        "passageIds": [
+          "p-146744",
+          "p-146962"
+        ]
+      },
+      {
+        "label": "大观园入住分定",
+        "identityLabel": "众人分住大观园各馆",
+        "summary": "贾政定于二月二十二日让少爷小姐们搬入大观园。黛玉爱幽静竹林住潇湘馆，宝玉住怡红院，宝钗住蘅芜苑，探春住秋爽斋等，大观园自此花招绣带、热闹非凡。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在元春谕旨下各人选择居所并落实入住的记叙，包含宝玉与黛玉的商量契合。",
+        "generalityHint": "大观园各主要人物居所格局的确立。",
+        "rationale": "根据p-147710末尾与p-148346，黛玉钟爱潇湘馆曲栏修竹，宝玉居怡红院，众人分迁入住，园内顿复生机。",
+        "passageIds": [
+          "p-148346",
+          "p-147710"
+        ]
+      },
+      {
+        "label": "宝玉作四季即事诗并生烦闷",
+        "identityLabel": "宝玉大观园四时即事与百无聊赖",
+        "summary": "宝玉进园后日与姊妹丫鬟吟诗游乐，作有《春夜即事》《夏夜即事》等四季诗流传于外；但日子一长静中生烦，心怀无着，茗烟遂往书坊买来传奇传奇角本小说与他解闷。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从入住后的快意、作诗到产生内心百无聊赖的变化，引出私购闲书的情节转折。",
+        "generalityHint": "展现宝玉在大观园内的心境变化及情窦暗生的开端。",
+        "rationale": "根据p-148533、p-148960与p-149069，宝玉写下四时诗传颂一时，旋即陷入闷闷不乐，茗烟为博欢心引入传奇小说。",
+        "passageIds": [
+          "p-149069",
+          "p-148533",
+          "p-148960"
+        ]
+      },
+      {
+        "label": "宝黛共读西厢与戏语调笑",
+        "identityLabel": "宝黛共读西厢及借词传情",
+        "summary": "三月中浣，宝玉在沁芳闸桃花下读《会真记》，黛玉携花具来葬花。宝玉将书借予黛玉，二人共读叹赏；宝玉借书中词句调笑，惹黛玉嗔怒又破涕为笑。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "在读小说与葬花情境的交汇下，两人借曲词表达微妙男女情思的直接互动。",
+        "generalityHint": "宝黛二人情感发展与文化认同的重要标志性场景。",
+        "rationale": "根据p-149396、p-149552、p-149757与p-149993，宝玉携《会真记》坐石上读，黛玉葬花偶至，共读十六出并引“多愁多病身”“倾国倾城貌”戏谑传情。",
+        "passageIds": [
+          "p-149757",
+          "p-149552",
+          "p-149993"
+        ]
+      },
+      {
+        "label": "黛玉听牡丹亭艳曲警心",
+        "identityLabel": "黛玉听梨香院曲文感悟流年",
+        "summary": "黛玉独自回房路经梨香院墙角，听得戏班演习《牡丹亭》唱词，由“姹紫嫣红开遍”与“如花美眷，似水流年”联想到古人诗词与《西厢记》警句，心痛神痴，潸然泪下。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从听曲引发的文学联想与生命悲剧感，展示黛玉内心对青春易逝、美质难驻的深层共鸣。",
+        "generalityHint": "黛玉生命审美与多愁伤感内核的精神觉醒。",
+        "rationale": "根据p-150523，黛玉闻女伶唱词，“良辰美景奈何天”“如花美眷，似水流年”，结合自身学识诗情，深感心动神摇、落泪出神。",
+        "passageIds": [
+          "p-150523"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "元春的下谕直接促成了众人分派居室并正式进驻大观园。",
+        "passageIds": [
+          "p-146744",
+          "p-148346"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "develops",
+        "rationale": "入住大观园后，宝玉经历由最初的尽情快乐到无聊生烦，从而促成茗烟买小说入园。",
+        "passageIds": [
+          "p-148346",
+          "p-148533",
+          "p-149069"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "茗烟引入书坊小说，宝玉偷带入园并在桃花树下细玩《会真记》，才有了与黛玉共读的契机。",
+        "passageIds": [
+          "p-149069",
+          "p-149396",
+          "p-149757"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "黛玉刚读毕《西厢记》，随后在梨香院听闻《牡丹亭》曲文时，西厢词句与戏文古诗在心中融汇催发共鸣。",
+        "passageIds": [
+          "p-149993",
+          "p-150523"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "mNecaqKzI_GY0ckPnsyu8AE",
+  "usage": {
+    "promptTokenCount": 8659,
+    "candidatesTokenCount": 1948,
+    "totalTokenCount": 10607,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 8659
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1948
+      }
+    ]
+  },
+  "durationMs": 12901,
+  "requestHash": "20592986d16fbd5894b2de15da89914cd4c44ae0efbbbeb11fe1586b9d2ab52d"
+}

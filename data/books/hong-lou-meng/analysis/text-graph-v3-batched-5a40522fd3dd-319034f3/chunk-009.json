@@ -1,0 +1,143 @@
+{
+  "value": {
+    "summary": "第九回讲述宝玉与秦钟结伴入贾家义学读书，然而义学中龙蛇混杂，因秦钟、香怜暗中交好惹来金荣猜忌起衅。贾蔷暗中挑唆茗烟闹事，引爆学堂大混战，最终李贵平息混乱，强压金荣向秦钟磕头赔罪。",
+    "nodes": [
+      {
+        "label": "宝玉辞别众人家长赴学",
+        "identityLabel": "宝玉上学辞行",
+        "summary": "宝玉整理停当，袭人细心嘱咐照料身体与用功分寸，贾政严厉斥责训诫，黛玉打趣折桂，随后宝玉携秦钟同赴家塾。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "叙述宝玉入塾前从内宅到外书房的一系列互动，展现不同人对宝玉上学的态度与期待。",
+        "generalityHint": "涉及宝玉、袭人、贾政、李贵、黛玉等具体人物的单一事件情节。",
+        "rationale": "通过袭人的规劝、贾政的斥责以及李贵和黛玉的应对，完整交代宝玉入学前各方态度的具体过程。",
+        "passageIds": [
+          "p-57636",
+          "p-58278",
+          "p-58606"
+        ]
+      },
+      {
+        "label": "贾家义学背景与风气混杂",
+        "identityLabel": "贾家义学风气",
+        "summary": "贾家义学原为族中子弟而设，然而人员杂乱，薛蟠在此图谋男色，学中子弟阿附钻营，宝玉与秦钟到来后引来非议与暗潮。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "从义学的设立初衷交代到其实际运行中产生的道德沦落与男女私情暗流。",
+        "generalityHint": "描述贾家学堂这一特定体制与场所的内部环境与生态。",
+        "rationale": "文本详细叙述了义学的设立宗旨在济贫，但因缺乏正规管束，演变成薛蟠及顽童结党营私、流言四起的场所。",
+        "passageIds": [
+          "p-58606",
+          "p-59294"
+        ]
+      },
+      {
+        "label": "金荣发难与贾瑞偏袒引发积怨",
+        "identityLabel": "后院起衅与贾瑞裁处",
+        "summary": "秦钟与香怜借出恭在后院密语，金荣撞见并肆意嘲讽；秦钟告状至贾瑞处，贾瑞因私心与醋妒反怪罪香怜，金荣益发口出秽语。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "具体展现学堂内部矛盾由私下言语冲突升级为公开对峙的起因与贾瑞的失职处断。",
+        "generalityHint": "记录学童间特定口角与代管者偏私处断的场景。",
+        "rationale": "金荣抓住二人话柄加以讹诈，贾瑞出于对薛蟠的依附和嫉妒反打压秦钟一方，激化了矛盾。",
+        "passageIds": [
+          "p-59294"
+        ]
+      },
+      {
+        "label": "贾蔷借刀挑唆茗烟掀起混战",
+        "identityLabel": "贾蔷挑唆与学堂大闹",
+        "summary": "贾蔷因避薛蟠嫌疑不欲直接出面，遂暗唆宝玉贴身书童茗烟进屋大骂金荣；随后飞砚乱掷，贾菌、墨雨等蜂拥介入，学堂陷入混战。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "展示贾蔷权衡利害后利用书童挑起争端，以及由此引发的多方连锁肢体冲突。",
+        "generalityHint": "描述学堂内众人卷入打斗的具体戏剧性事件。",
+        "rationale": "贾蔷为秦钟出头却借茗烟之手挑事，金荣动手后飞砚误中贾菌桌案，继而牵动众小厮大打出手。",
+        "passageIds": [
+          "p-59294",
+          "p-61089",
+          "p-61459"
+        ]
+      },
+      {
+        "label": "李贵弹压并逼金荣磕头了局",
+        "identityLabel": "李贵息事与金荣磕头",
+        "summary": "李贵等大仆人喝止械斗，斥退小厮并点破贾瑞失职；在宝玉与秦钟不依不饶及贾瑞催逼下，金荣被迫磕头赔罪息事。",
+        "sourceRole": "narrative",
+        "speaker": null,
+        "reasoningHint": "通过李贵的说理弹压与权衡，揭示豪门仆人调解主子纠纷的手腕以及权势压人的收场。",
+        "generalityHint": "该冲突最终在学堂内达成妥协的具体结局。",
+        "rationale": "李贵制止事态扩大至贾政处，指出各方过错，贾瑞与李贵共同压迫起因者金荣低头认错，平息学堂闹剧。",
+        "passageIds": [
+          "p-61997",
+          "p-62587",
+          "p-62921"
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "sourceIndex": 0,
+        "targetIndex": 1,
+        "type": "develops",
+        "rationale": "宝玉与秦钟辞别入塾，直接引出贾府义学设立渊源及其复杂的内部风气。",
+        "passageIds": [
+          "p-58606"
+        ]
+      },
+      {
+        "sourceIndex": 1,
+        "targetIndex": 2,
+        "type": "supports",
+        "rationale": "义学中薛蟠结交契弟、贾瑞图财偏袒、众学童争风吃醋的背景，直接构成了金荣抓把柄发难与贾瑞偏袒的现实基础。",
+        "passageIds": [
+          "p-59294"
+        ]
+      },
+      {
+        "sourceIndex": 2,
+        "targetIndex": 3,
+        "type": "develops",
+        "rationale": "贾瑞的偏袒与金荣的放肆激怒了贾蔷，贾蔷遂借茗烟之手报复，致使口角迅速升级为学堂混战。",
+        "passageIds": [
+          "p-59294",
+          "p-61089"
+        ]
+      },
+      {
+        "sourceIndex": 3,
+        "targetIndex": 4,
+        "type": "develops",
+        "rationale": "混战鼎沸至极引来李贵等仆人进屋喝止，进而进入冲突的清算与平息阶段。",
+        "passageIds": [
+          "p-61459",
+          "p-61997",
+          "p-62921"
+        ]
+      }
+    ]
+  },
+  "model": "gemini-3.8-flash",
+  "modelVersion": "gemini-3.8-flash",
+  "responseId": "T9ecauaPNfGU0ckPhPXvuQI",
+  "usage": {
+    "promptTokenCount": 7913,
+    "candidatesTokenCount": 1736,
+    "totalTokenCount": 9649,
+    "trafficType": "ON_DEMAND",
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 7913
+      }
+    ],
+    "candidatesTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 1736
+      }
+    ]
+  },
+  "durationMs": 12764,
+  "requestHash": "d9c1a79741a5ed69c6fee6e8b4519288e6b2b1b96cfdfefc30961c58b4a082b1"
+}
