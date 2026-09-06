@@ -18,6 +18,7 @@ import { HeatInspector, type ReadingHeatData } from './reading-heat-view';
 import { heatCount } from './reading-heat';
 import { buildHeatVolume } from './heat-field';
 import { SpatialHeat } from './spatial-heat';
+import { ReadingReplay } from './reading-replay-view';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
 export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgress,onScrollSource,heat}:{
   graph:MapBootstrap;view:MapView|null;readingProgress:number;onScrollSource:(delta:number)=>void;
@@ -89,6 +90,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     const element=stage.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
     const wheel=(event:WheelEvent)=>{
+      if(event.target instanceof Element&&event.target.closest('[data-reading-replay]'))return;
       if(!(event.target instanceof Element)||!event.target.closest('svg,.map-timeline-control'))return;
       event.preventDefault();if(gesture)return;
       const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
@@ -103,6 +105,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       latest.current={current:confinePan(next,latest.current.size),size};onViewChange(next);
     };
     const gestureStart=(event:Event)=>{
+      if(element.querySelector('[data-reading-replay]')){event.preventDefault();return;}
       event.preventDefault();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
       gesture={view,size};
@@ -179,7 +182,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     finally{if(!controller.signal.aborted)setNavigating(false);}
   }
   const screen=(p:Point3)=>screenWorld(p,current,size);
-  const obstacles=[...mapObstacles(current,size,0),...(heatSelection!==null?[{x:16,y:size.height-494,width:size.width-32,height:430}]:[])];
+  const obstacles=[...mapObstacles(current,size,0),{x:12,y:12,width:48,height:48},...(heatSelection!==null?[{x:16,y:size.height-494,width:size.width-32,height:430}]:[])];
   const projectedPoints=animated.flatMap(item=>{
     if(!item.position)return [];
     const p=toScreen(item.position,current,size,range,readingProgress);
@@ -193,7 +196,9 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const labelCap=Math.max(1,Math.min(ZOOM_POLICY.labels,Math.floor((size.width-16)/250)*Math.floor((size.height-80)/34)));
   const {points,labels}=useMapLayout(projectedPoints,size.width,size.height,obstacles,labelCap,current.selectedNodeId,graph.version);
   const source=(anchor:SourceAnchor)=>{change({readerAnchorId:anchor.id});onSource(anchor);};
-  return <div className="book-map" onKeyDown={e=>{
+  return <div className="book-map" onKeyDownCapture={e=>{
+    if(stage.current?.querySelector('[data-reading-replay]')){e.stopPropagation();if(e.key!=='Tab')e.preventDefault();}
+  }} onKeyDown={e=>{
     if((e.target as HTMLElement).closest('input,select,textarea'))return;
     const i=['1','2','3','4'].indexOf(e.key);if(i>=0){e.preventDefault();const projection=PROJECTIONS[i].id;settle(current,{projection,...orientation(projection)});}
     if(e.key==='+'||e.key==='='){e.preventDefault();zoom(1.35);}if(e.key==='-'){e.preventDefault();zoom(1/1.35);}
@@ -256,6 +261,8 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
         </g>;})}
       </svg>
       <TimelineControl {...screen(ORIGIN)} visible={current.pitch < Math.PI / 2 - .12} progress={readingProgress} height={size.height} onScroll={onScrollSource}/>
+      {heat&&<ReadingReplay key={graph.version} points={heat.points} loading={heat.loading} error={heat.error} view={current} size={size}
+        readingProgress={readingProgress} axisVersion={graph.axisVersion} onStart={()=>{cancelMotion();navigation.current?.abort();setNavigating(false);}}/>}
       {(data.error||windowed.wanted.length>0)&&<div className="map-layer-status" aria-live="polite">{data.error?<><span>{data.error}</span> <button onClick={data.retry}>Retry loading</button></>:windowed.wanted.length?'Opening this part of the book…':null}</div>}
     </div>
     {restoredPath.error&&<p role="alert">{restoredPath.error} <button onClick={restoredPath.retry}>Retry</button></p>}{navigationError&&<p role="alert">{navigationError}</p>}{navigating&&<p role="status">Finding this note…</p>}

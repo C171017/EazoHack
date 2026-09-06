@@ -39,14 +39,15 @@ export function heatRgb(value: number): number[] {
 
 /** Rebuild only when activity/filter changes. Bounded grid, and each seed touches
  * only its local sphere. Reading/rotation affect the camera, never this density. */
-export function buildHeatVolume(points: HeatPoint[], filter: HeatFilter): HeatVolume | null {
+export function buildHeatVolume(points: HeatPoint[], filter: HeatFilter, bounds?: Pick<HeatVolume, 'min' | 'max'>): HeatVolume | null {
   const seeds = points.flatMap(point => {
     const weight = heatCount(point, filter);
     return weight ? [{ weight, position: sourceWorld(point.leaf.position, [0, 1], 0) }] : [];
   });
   if (!seeds.length) return null;
-  const min = { x: Infinity, y: Infinity, z: Infinity }, max = { x: -Infinity, y: -Infinity, z: -Infinity };
-  for (const seed of seeds) for (const axis of ['x', 'y', 'z'] as const) {
+  const min = bounds ? { ...bounds.min } : { x: Infinity, y: Infinity, z: Infinity };
+  const max = bounds ? { ...bounds.max } : { x: -Infinity, y: -Infinity, z: -Infinity };
+  if (!bounds) for (const seed of seeds) for (const axis of ['x', 'y', 'z'] as const) {
     min[axis] = Math.min(min[axis], seed.position[axis] - HEAT_RADIUS);
     max[axis] = Math.max(max[axis], seed.position[axis] + HEAT_RADIUS);
   }
