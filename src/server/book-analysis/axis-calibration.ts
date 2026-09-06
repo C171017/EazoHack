@@ -1,3 +1,4 @@
+import { pipelineStage, measureValidation, countPipeline } from './telemetry';
 import { BOOK_AXIS_VERSION, axisCoordinate, axisMaximum } from '../../shared/book-axes';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
@@ -28,7 +29,11 @@ export function requiredDepthFloors(graph:Graph) {
   for(const id of nodes.keys())floor(id);return values;
 }
 
-export async function calibrateBookAxes({graph,outputRoot,model,generate,log=()=>{}}:{graph:Graph;outputRoot:string;model:string;generate:Generate;log?:(message:string)=>void}):Promise<Graph> {
+export async function calibrateBookAxes(input: Parameters<typeof calibrateBookAxesImpl>[0]) {
+  return pipelineStage('calibration', () => calibrateBookAxesImpl(input));
+}
+
+async function calibrateBookAxesImpl({graph,outputRoot,model,generate,log=()=>{}}:{graph:Graph;outputRoot:string;model:string;generate:Generate;log?:(message:string)=>void}):Promise<Graph> {
   graph=GraphSchema.parse(graph);
   if(graph.axisVersion!==BOOK_AXIS_VERSION)throw new Error('Reassess axes with the current rubric before whole-book consistency review');
   if(graph.axisAnalysis?.consistencyVersion===CONSISTENCY_VERSION)return graph;
@@ -38,13 +43,14 @@ export async function calibrateBookAxes({graph,outputRoot,model,generate,log=()=
   async function call<T>(key:string,prompt:string,schema:z.ZodType<T>,validate:(v:T)=>T):Promise<T> {
     const requestHash=createHash('sha256').update(JSON.stringify({system:AXIS_SYSTEM,prompt,schema:z.toJSONSchema(schema),model})).digest('hex');
     const file=path.join(dir,`${key}.json`),cached=await readJson(file) as ModelReply|null;
-    if(cached?.requestHash===requestHash&&cached.model===model){const v=validate(schema.parse(cached.value));records.push({key,usage:cached.usage,durationMs:cached.durationMs});log(`${key}: restored`);return v;}
+    if(cached?.requestHash===requestHash&&cached.model===model){const v=measureValidation(() => validate(schema.parse(cached.value)));records.push({key,usage:cached.usage,durationMs:cached.durationMs});countPipeline('checkpoint.hit');log(`${key}: restored`);return v;}
     let failure='';
     for(let attempt=1;attempt<=3;attempt++) {
+      if (attempt > 1) countPipeline('retry');
       try {
         const reply=await generate(AXIS_SYSTEM,prompt+(failure?`\nCorrect: ${failure}`:''),schema,16_384);reply.requestHash=requestHash;
         await writeJson(path.join(dir,'attempts',`${key}-${Date.now()}-${attempt}.json`),reply);
-        const v=validate(schema.parse(reply.value));await writeJson(file,reply);records.push({key,usage:reply.usage,durationMs:reply.durationMs});log(`${key}: complete`);return v;
+        const v=measureValidation(() => validate(schema.parse(reply.value)));await writeJson(file,reply);records.push({key,usage:reply.usage,durationMs:reply.durationMs});log(`${key}: complete`);return v;
       }catch(error){failure=error instanceof Error?error.message:'Consistency review failed';if(error instanceof ModelRequestError&&!error.retryable)throw error;if(attempt===3)throw error;}
     }
     throw new Error('Consistency retries exhausted');

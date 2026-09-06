@@ -1,0 +1,9 @@
+{
+  "cssRawBytes": 307200,
+  "cssGzipBytes": 102400,
+  "functionTraceBytes": 250000000,
+  "readerTraceBytes": 100000000,
+  "readerHtmlBytes": 8388608,
+  "readerHtmlGzipBytes": 3145728,
+  "mapPageBytes": 1048576
+}

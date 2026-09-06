@@ -1,3 +1,4 @@
+import { withPipelineTelemetry } from '../src/server/book-analysis/telemetry';
 import path from 'node:path';
 import { LocalSourceSchema, localJobRoot, type LocalJob } from '../src/server/book-analysis/local-jobs';
 import { readJson, writeJson } from '../src/server/book-analysis/json-store';
@@ -33,4 +34,4 @@ async function main() {
     await report('failed', error instanceof Error ? error.message : 'Analysis failed. Retry to resume.');
   }
 }
-main().catch(() => { process.exitCode = 1; });
+withPipelineTelemetry(main).catch(() => { process.exitCode = 1; });

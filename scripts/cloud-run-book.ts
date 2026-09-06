@@ -1,3 +1,4 @@
+import { withPipelineTelemetry, countPipeline } from '../src/server/book-analysis/telemetry';
 import { randomUUID } from 'node:crypto';
 import path from 'node:path';
 import { z } from 'zod';
@@ -52,7 +53,8 @@ async function main() {
         const hash = sha256(JSON.stringify({ system, prompt, schema: z.toJSONSchema(schema), tokens, model: job.model }));
         const file = path.join(root, 'provider-replies', `${hash}.json`);
         const cached = await readJson(file) as ModelReply | null;
-        if (cached) return cached;
+        if (cached) { countPipeline('provider.reply.hit'); return cached; }
+        countPipeline('provider.reply.miss');
         const reply = await generateStructured(system, prompt, schema, tokens, { ...options,
           signal: options?.signal ? AbortSignal.any([controller.signal, options.signal]) : controller.signal });
         await writeJson(file, reply);
@@ -86,4 +88,4 @@ async function main() {
     process.removeListener('SIGTERM', stop); process.removeListener('SIGINT', stop);
   }
 }
-main().catch(() => { console.error('Analysis worker failed; inspect durable job status'); process.exitCode = 1; });
+withPipelineTelemetry(main).catch(() => { console.error('Analysis worker failed; inspect durable job status'); process.exitCode = 1; });

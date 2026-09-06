@@ -284,10 +284,6 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
-        {(sync.status === 'error' || sync.status === 'offline') && <div className="px-6 py-2 text-xs" role="status">
-          <span>{sync.message ?? 'Reading sync needs attention'}</span>{' '}
-          <button className="underline" onClick={sync.retry}>Retry sync</button>
-        </div>}
         {sync.status === 'conflict' && <div className="mx-6 mb-3 rounded border border-line p-3 text-sm" role="alert">
           <p>Both versions are kept. Choose which reading to continue; the other version is saved as a recovery copy on this device.</p>
           <div className="mt-2 flex flex-wrap gap-3"><button className="underline" onClick={() => sync.resolve('device')}>Continue this device’s reading</button><button className="underline" onClick={() => sync.resolve('cloud')}>Use cloud reading</button><button className="underline" onClick={sync.download}>Download both versions</button></div>
@@ -310,11 +306,10 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
       </section>
     </div>
     <div className="mobile-map-controls">
-      <button type="button" aria-expanded={mobileMapOpen} aria-controls="reading-exploration-space" onClick={() => setMobileMapOpen(open => !open)}>
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+      <button type="button" aria-label={mobileMapOpen ? 'Close 3D space' : 'Open 3D space'} aria-expanded={mobileMapOpen} aria-controls="reading-exploration-space" onClick={() => setMobileMapOpen(open => !open)}>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <path d={mobileMapOpen ? 'm6 9 6 6 6-6' : 'm6 15 6-6 6 6'} />
         </svg>
-        {mobileMapOpen ? 'Close 3D space' : 'Open 3D space'}
       </button>
     </div>
   </main>;

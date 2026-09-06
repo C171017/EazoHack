@@ -1,3 +1,4 @@
+import { withPipelineTelemetry } from '../src/server/book-analysis/telemetry';
 import { calibrateBookAxes } from '../src/server/book-analysis/axis-calibration';
 import { assignBookAxes } from '../src/server/book-analysis/axis-run';
 import { writeJson } from '../src/server/book-analysis/json-store';
@@ -41,4 +42,4 @@ async function main() {
   }
   finally { await lock.close(); await unlink(lockFile); }
 }
-main().catch(error => { console.error(error instanceof Error ? error.message : 'Analysis failed.'); process.exitCode = 1; });
+withPipelineTelemetry(main).catch(error => { console.error(error instanceof Error ? error.message : 'Analysis failed.'); process.exitCode = 1; });

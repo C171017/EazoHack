@@ -1,3 +1,4 @@
+import { pipelineStage, measureValidation, countPipeline } from './telemetry';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { z } from 'zod';
@@ -33,25 +34,30 @@ export function validateAxisBatch(batch:z.infer<typeof AxisBatchSchema>, graph:G
 
 // Generates a new staged graph. Publication happens only after the caller's
 // hierarchy build succeeds; source occurrences and original relations survive.
-export async function assignBookAxes({graph,outputRoot,generate,model,log=()=>{}}:{graph:Graph;outputRoot:string;generate:Generate;model:string;log?:(message:string)=>void}):Promise<Graph> {
+export async function assignBookAxes(input: Parameters<typeof assignBookAxesImpl>[0]) {
+  return pipelineStage('axes', () => assignBookAxesImpl(input));
+}
+
+async function assignBookAxesImpl({graph,outputRoot,generate,model,log=()=>{}}:{graph:Graph;outputRoot:string;generate:Generate;model:string;log?:(message:string)=>void}):Promise<Graph> {
   graph=GraphSchema.parse(graph);
   if(graph.axisVersion===BOOK_AXIS_VERSION && graph.axisAnalysis?.promptVersion===AXIS_PROMPT_VERSION && graph.axisAnalysis.model===model) return graph;
   const fingerprint=createHash('sha256').update(JSON.stringify({graph:{...graph,analysis:graph.analysis?{...graph.analysis,createdAt:undefined}:undefined},model,system:AXIS_SYSTEM,prompt:AXIS_PROMPT_VERSION,schema:z.toJSONSchema(AxisBatchSchema)})).digest('hex').slice(0,16);
   const version=`${AXIS_PROMPT_VERSION}-${fingerprint}`,dir=path.join(outputRoot,version);
   const completed=await readJson(path.join(dir,'graph.json'));
-  if(completed) { const saved=preserveSource(GraphSchema.parse(completed),graph); if(saved.graphVersion!==version||saved.axisVersion!==BOOK_AXIS_VERSION)throw new Error('Axis checkpoint version mismatch'); log(`${version}: restored`);return saved; }
+  if(completed) { const saved=preserveSource(GraphSchema.parse(completed),graph); if(saved.graphVersion!==version||saved.axisVersion!==BOOK_AXIS_VERSION)throw new Error('Axis checkpoint version mismatch'); countPipeline('checkpoint.hit');log(`${version}: restored`);return saved; }
   const calls:{key:string;usage:ModelReply['usage'];durationMs:number;modelVersion:string}[]=[];
   async function call<T>(key:string,prompt:string,schema:z.ZodType<T>,validate:(value:T)=>T):Promise<T> {
     const requestHash=createHash('sha256').update(JSON.stringify({system:AXIS_SYSTEM,prompt,model,schema:z.toJSONSchema(schema)})).digest('hex');
     const file=path.join(dir,`${key}.json`),cached=await readJson(file) as ModelReply|null;
-    if(cached?.requestHash===requestHash && cached.model===model) { const value=validate(schema.parse(cached.value));calls.push({key,usage:cached.usage,durationMs:cached.durationMs,modelVersion:cached.modelVersion});log(`${key}: restored`);return value; }
+    if(cached?.requestHash===requestHash && cached.model===model) { const value=measureValidation(() => validate(schema.parse(cached.value)));calls.push({key,usage:cached.usage,durationMs:cached.durationMs,modelVersion:cached.modelVersion});countPipeline('checkpoint.hit');log(`${key}: restored`);return value; }
     let failure='';
     for(let attempt=1;attempt<=3;attempt++) {
+      if (attempt > 1) countPipeline('retry');
       try {
         const reply=await generate(AXIS_SYSTEM,prompt+(failure?`\nCorrect the previous validation failure: ${failure}`:''),schema,16_384);
         reply.requestHash=requestHash;
         await writeJson(path.join(dir,'attempts',`${key}-${Date.now()}-${attempt}.json`),reply);
-        const value=validate(schema.parse(reply.value));await writeJson(file,reply);
+        const value=measureValidation(() => validate(schema.parse(reply.value)));await writeJson(file,reply);
         calls.push({key,usage:reply.usage,durationMs:reply.durationMs,modelVersion:reply.modelVersion});
         log(`${key}: complete (${Math.round(reply.durationMs/1000)}s)`);return value;
       } catch(error) {

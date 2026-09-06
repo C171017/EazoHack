@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import { vertexAccessToken } from '../providers/vertex-gemini';
 import type { Generate } from './contracts';
+import { measurePipeline, measureValidation, recordProviderUsage } from './telemetry';
 
 export const analysisModel = () => process.env.GEMINI_MODEL?.trim() || 'gemini-3.8-flash';
 export class ModelRequestError extends Error {
@@ -36,7 +37,8 @@ export const generateStructured: Generate = async (system, prompt, schema, maxOu
   const started = Date.now();
   const timeout = AbortSignal.timeout(options.timeoutMs ?? 180_000);
   const signal = options.signal ? AbortSignal.any([timeout, options.signal]) : timeout;
-  const token = await vertexAccessToken();
+  const token = await measurePipeline('auth', vertexAccessToken);
+  const body = await measurePipeline('provider', async () => {
   const response = await fetch(`https://aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`, {
     method: 'POST', signal,
     headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
@@ -47,16 +49,22 @@ export const generateStructured: Generate = async (system, prompt, schema, maxOu
     }),
   });
   if (!response.ok) {
-    const error = await response.json().catch(() => ({})) as { error?: { message?: string } };
+    const error = await response.json().catch(() => ({})) as { error?: { message?: string }; usageMetadata?: unknown };
+    recordProviderUsage(error.usageMetadata);
     throw new ModelRequestError(`Vertex request failed (${response.status}): ${error.error?.message?.slice(0, 1600) ?? 'No error detail.'}`, response.status === 429 || response.status >= 500);
   }
   const body = await response.json() as {
     modelVersion?: string; responseId?: string; usageMetadata?: Record<string, number>;
     candidates?: { finishReason?: string; content?: { parts?: { text?: string; thought?: boolean }[] } }[];
   };
+  recordProviderUsage(body.usageMetadata);
+  return body;
+  });
+  return measureValidation(() => {
   const candidate = body.candidates?.[0];
   if (candidate?.finishReason !== 'STOP') throw new ModelRequestError(`Vertex did not finish a complete answer (${candidate?.finishReason ?? 'no candidate'}).`, candidate?.finishReason === 'MAX_TOKENS');
   const raw = candidate.content?.parts?.filter(p => !p.thought).map(p => p.text ?? '').join('');
   if (!raw) throw new ModelRequestError('Vertex returned no structured content.', true);
   return { value: JSON.parse(raw), model, modelVersion: body.modelVersion ?? model, responseId: body.responseId, usage: body.usageMetadata ?? {}, durationMs: Date.now() - started };
+  });
 };

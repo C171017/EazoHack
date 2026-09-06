@@ -1,3 +1,4 @@
+import { pipelineStage, measureValidation, countPipeline } from './telemetry';
 import { createHash } from 'node:crypto';
 import { readJson, writeJson } from './json-store';
 import path from 'node:path';
@@ -26,7 +27,11 @@ export function spatialBatches(nodes:MapEntry[],limit=24):MapEntry[][] {
   const sorted=[...nodes].sort((a,b)=>(a.position?.[axis]??-1)-(b.position?.[axis]??-1)||a.id.localeCompare(b.id));
   const mid=Math.floor(sorted.length/2);return [...spatialBatches(sorted.slice(0,mid),limit),...spatialBatches(sorted.slice(mid),limit)];
 }
-export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}}:{graph:Graph;outputRoot:string;generate:Generate;model:string;log?:(message:string)=>void}) {
+export async function buildHierarchy(input: Parameters<typeof buildHierarchyImpl>[0]) {
+  return pipelineStage('hierarchy', () => buildHierarchyImpl(input));
+}
+
+async function buildHierarchyImpl({graph,outputRoot,generate,model,log=()=>{}}:{graph:Graph;outputRoot:string;generate:Generate;model:string;log?:(message:string)=>void}) {
   if(graph.axisVersion&&!graph.axisAnalysis?.consistencyVersion)throw new Error('Complete the whole-book axis consistency review before building a published map');
   const fingerprint=createHash('sha256').update(JSON.stringify({graph,model,prompt:HIERARCHY_PROMPT_VERSION,system:HIERARCHY_SYSTEM,policy:ZOOM_POLICY.version})).digest('hex').slice(0,16);
   const version=`${HIERARCHY_PROMPT_VERSION}-${fingerprint}`,dir=path.join(outputRoot,version);
@@ -36,13 +41,14 @@ export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}
   async function call<T>(key:string,prompt:string,schema:z.ZodType<T>,validate:(value:T)=>T):Promise<T> {
     const requestHash=createHash('sha256').update(JSON.stringify({prompt,system:HIERARCHY_SYSTEM,schema:z.toJSONSchema(schema),model})).digest('hex');
     const cached=await readJson(path.join(dir,`${key}.json`)) as ModelReply|null;
-    if(cached?.requestHash===requestHash){const value=validate(schema.parse(cached.value));calls.push({key,usage:cached.usage,durationMs:cached.durationMs,responseId:cached.responseId});log(`${key}: restored`);return value;}
+    if(cached?.requestHash===requestHash){const value=measureValidation(() => validate(schema.parse(cached.value)));calls.push({key,usage:cached.usage,durationMs:cached.durationMs,responseId:cached.responseId});countPipeline('checkpoint.hit');log(`${key}: restored`);return value;}
     let failure='';
     for(let attempt=1;attempt<=3;attempt++) {
+      if (attempt > 1) countPipeline('retry');
       try {
         const reply=await generate(HIERARCHY_SYSTEM,prompt+(failure?`\nCorrect the previous validation failure: ${failure}`:''),schema,8192);reply.requestHash=requestHash;
         await writeJson(path.join(dir,'attempts',`${key}-${Date.now()}-${attempt}.json`),reply);
-        const value=validate(schema.parse(reply.value));await writeJson(path.join(dir,`${key}.json`),reply);
+        const value=measureValidation(() => validate(schema.parse(reply.value)));await writeJson(path.join(dir,`${key}.json`),reply);
         calls.push({key,usage:reply.usage,durationMs:reply.durationMs,responseId:reply.responseId});log(`${key}: complete (${Math.round(reply.durationMs/1000)}s)`);return value;
       }catch(error){failure=error instanceof Error?error.message:'Hierarchy request failed';await writeJson(path.join(dir,'errors',`${key}-${Date.now()}-${attempt}.json`),{error:failure});if(attempt===3)throw new Error(`${key}: ${failure}`);}
     }

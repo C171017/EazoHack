@@ -318,6 +318,7 @@
 
 @media (width < 64rem) {
   .reading-workspace {
+    position: relative;
     height: 100dvh;
     min-height: 0;
     overflow: hidden;
@@ -355,24 +356,40 @@
   }
 
   .mobile-map-controls {
+    position: absolute;
+    z-index: 30;
+    bottom: calc(2px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    flex-shrink: 0;
-    justify-content: center;
-    padding: 4px 1rem calc(4px + env(safe-area-inset-bottom, 0px));
-    border-top: 1px solid #ded6c6;
-    background: #f6f2e6;
     color: #302a23;
   }
 
   .mobile-map-controls button {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    min-height: 44px;
-    width: 100%;
-    font-size: 0.8rem;
+    height: 44px;
+    width: 44px;
     cursor: pointer;
+  }
+
+  .mobile-map-controls button::before {
+    content: '';
+    position: absolute;
+    inset: -2px -8px;
+    pointer-events: none;
+    background: rgb(246 242 230 / 82%);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    -webkit-mask-image: radial-gradient(ellipse, #000 15%, transparent 72%);
+    mask-image: radial-gradient(ellipse, #000 15%, transparent 72%);
+  }
+
+  .mobile-map-controls svg {
+    position: relative;
+    filter: drop-shadow(0 1px 2px rgb(246 242 230 / 70%));
   }
 
   .mobile-map-controls button:focus-visible {

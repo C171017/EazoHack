@@ -1,3 +1,4 @@
+import { pipelineStage, measureValidation, countPipeline } from './telemetry';
 import { scalableSynthesis } from './scalable-synthesis';
 import { mapConcurrent } from './work-pool';
 import { calibrateBookAxes } from './axis-calibration';
@@ -16,7 +17,11 @@ import { readJson, writeJson, listJson } from './json-store';
 import { assignBookAxes } from './axis-run';
 export { readJson, writeJson } from './json-store';
 
-export async function analyzeText(input: {
+export async function analyzeText(input: Parameters<typeof analyzeTextImpl>[0]) {
+  return pipelineStage('analysis', () => analyzeTextImpl(input));
+}
+
+async function analyzeTextImpl(input: {
   raw: Buffer; bookId: string; outputRoot: string; model: string; generate: Generate;
   sourceIdentity?: { fileHash: string; extractionVersion: string };
   concurrency?: number; log?: (message: string) => void;
@@ -43,8 +48,8 @@ export async function analyzeText(input: {
     const invalidated = changedChunks.has(key) || changedChunks.size > 0 && !key.startsWith('chunk-');
     if (cached && !invalidated && cached.requestHash === requestHash) {
       if (cached.model !== input.model) throw new Error('Checkpoint model mismatch.');
-      const value = validate(schema.parse(cached.value));
-      replies.push({ key, reply: cached }); log(`${key}: restored`); return value;
+      const value = measureValidation(() => validate(schema.parse(cached.value)));
+      replies.push({ key, reply: cached }); countPipeline('checkpoint.hit');log(`${key}: restored`); return value;
     }
     // A complete provider reply may survive an interrupted write or a stricter
     // prior validator. Revalidate matching attempts before spending another call.
@@ -53,17 +58,18 @@ export async function analyzeText(input: {
       const reply = await readJson(path.join(root, 'attempts', name)) as ModelReply;
       if (reply.requestHash !== requestHash || reply.model !== input.model || invalidated) continue;
       let value: T;
-      try { value = validate(schema.parse(reply.value)); } catch { continue; }
-      await writeJson(file, reply); replies.push({ key, reply }); log(`${key}: recovered validated response`); return value;
+      try { value = measureValidation(() => validate(schema.parse(reply.value))); } catch { continue; }
+      await writeJson(file, reply); replies.push({ key, reply }); countPipeline('checkpoint.recovered');log(`${key}: recovered validated response`); return value;
     }
     let failure = '';
     for (let attempt = 1; attempt <= 3; attempt++) {
+      if (attempt > 1) countPipeline('retry');
       try {
         const reply = await input.generate(system, prompt + (failure ? `\nThe previous attempt failed validation: ${failure.slice(0, 1600)}. Regenerate a complete corrected response.` : ''), schema, tokens);
         reply.requestHash = requestHash;
         // Retain provider response and usage even when our validation rejects it.
         await writeJson(path.join(root, 'attempts', `${key}-${Date.now()}-${attempt}.json`), reply);
-        const value = validate(schema.parse(reply.value));
+        const value = measureValidation(() => validate(schema.parse(reply.value)));
         await writeJson(file, reply); replies.push({ key, reply });
         log(`${key}: complete (${Math.round(reply.durationMs / 1000)}s)`); return value;
       } catch (error) {
@@ -83,16 +89,16 @@ export async function analyzeText(input: {
   try {
     log(`Processing ${text.length.toLocaleString()} source characters across ${chunks.length} chunks; model ${input.model}.`);
     let completedChunks = 0;
-    const extracted = await batch(chunks, async chunk => {
+    const extracted = await pipelineStage('extraction', () => batch(chunks, async chunk => {
       const value = await call(chunk.id, extractionPrompt(chunk, text), ExtractSchema, v => validateExtraction(v, chunk));
       log(`Analyzing passages: ${++completedChunks} of ${chunks.length} sections complete`);
       return value;
-    });
+    }));
     const nodes: Candidate[] = extracted.flatMap((value, i) => value.nodes.map((n, j) => ({ ...n, id: `n-${i + 1}-${j + 1}`, chunkId: chunks[i].id })));
     if (!nodes.length) throw new Error('No meaningful occurrences extracted.');
     const edges: CandidateEdge[] = extracted.flatMap((value, i) => value.edges.map((e, j) => ({ id: `e-${i + 1}-${j + 1}`, source: `n-${i + 1}-${e.sourceIndex + 1}`, target: `n-${i + 1}-${e.targetIndex + 1}`, type: e.type, rationale: e.rationale, passageIds: [...new Set(e.passageIds)] })));
     await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'running', phase: 'synthesizing', completedChunks: chunks.length });
-    const synthesis = await scalableSynthesis(nodes, passages, call, log, concurrency);
+    const synthesis = await pipelineStage('synthesis', () => scalableSynthesis(nodes, passages, call, log, concurrency));
     await writeJson(path.join(root, 'synthesis-resolved.json'), synthesis);
     for (const [index, e] of synthesis.crossEdges.entries()) {
       if (edges.some(existing => existing.source === e.source && existing.target === e.target && existing.type === e.type)) continue;
@@ -102,7 +108,7 @@ export async function analyzeText(input: {
     await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'running', phase: 'reviewing', completedChunks: chunks.length });
     // Every node and edge is reviewed exactly once. Include target context for outgoing edges.
     const batches = Array.from({ length: Math.ceil(nodes.length / 32) }, (_, i) => nodes.slice(i * 32, (i + 1) * 32));
-    const reviews: Review[] = await batch(batches, async (group, i) => {
+    const reviews: Review[] = await pipelineStage('review', () => batch(batches, async (group, i) => {
       const ids = new Set(group.map(n => n.id));
       const localEdges = edges.filter(e => ids.has(e.source));
       const context = nodes.filter(n => !ids.has(n.id) && localEdges.some(e => e.target === n.id));
@@ -111,10 +117,10 @@ export async function analyzeText(input: {
         if (value.rejectedNodes.some(n => !ids.has(n.id)) || value.rejectedEdges.some(e => !localEdges.some(edge => edge.id === e.id))) throw new Error('Review referenced IDs outside its targets.');
         return value;
       });
-    });
+    }));
     const baseGraph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, extractionVersion: input.sourceIdentity?.extractionVersion, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
     // Summaries cover every analyzed section; the emblem has a reusable checkpoint.
-    baseGraph.bookEmblem = await call('book-emblem', emblemPrompt({ title: input.bookId, excerpt: JSON.stringify(synthesis.themes.map(({label,rationale}) => ({label,rationale}))) }), BookEmblemSchema, value => value, 2048, EMBLEM_SYSTEM);
+    baseGraph.bookEmblem = await pipelineStage('emblem', () => call('book-emblem', emblemPrompt({ title: input.bookId, excerpt: JSON.stringify(synthesis.themes.map(({label,rationale}) => ({label,rationale}))) }), BookEmblemSchema, value => value, 2048, EMBLEM_SYSTEM));
     let graph = await assignBookAxes({graph:baseGraph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     graph = await calibrateBookAxes({graph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});
     await writeJson(path.join(root, 'graph.json'), graph);

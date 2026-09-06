@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { IDBFactory } from 'fake-indexeddb';
+import { IDBFactory, IDBObjectStore as FakeObjectStore } from 'fake-indexeddb';
 import { createBookLibrary, uploadedBookId } from '../src/features/reader/book-library-store';
 import { readUploadedBook } from '../src/features/reader/upload-book';
 
@@ -47,4 +47,56 @@ test('moves persist, occupied spaces swap, and deletion removes source and catal
   assert.deepEqual((await library.list()).map(entry => entry.id), [b]);
   await assert.rejects(library.load(a), /no longer available/);
   assert.deepEqual(await library.load(b), second);
+});
+
+test('browsing writes nothing and moves only write affected catalogue entries', async t => {
+  const library = createBookLibrary(new IDBFactory());
+  const books = await Promise.all(['One', 'Two', 'Three'].map(text => readUploadedBook(new File([text], `${text}.txt`))));
+  for (let i = 0; i < books.length; i++) await library.save(books[i], i + 2);
+  const put = FakeObjectStore.prototype.put;
+  const writes: string[] = [];
+  t.mock.method(FakeObjectStore.prototype, 'put', function(this: IDBObjectStore, ...args: Parameters<typeof put>) {
+    if (this.name === 'catalogue') writes.push(args[0].id);
+    return Reflect.apply(put, this, args);
+  });
+  await library.list(); await library.list();
+  assert.deepEqual(writes, []);
+  await library.move(uploadedBookId(books[0]), 3);
+  assert.deepEqual(new Set(writes), new Set(books.slice(0, 2).map(uploadedBookId)));
+  assert.equal(writes.length, 2);
+  writes.length = 0;
+  await library.move(uploadedBookId(books[0]), 3);
+  assert.equal(writes.length, 0, 'moving to the current slot is a no-op');
+  await library.move(uploadedBookId(books[0]), 8);
+  assert.equal(writes.length, 1);
+  writes.length = 0;
+  await library.save(books[0]);
+  assert.deepEqual(writes, [uploadedBookId(books[0])]);
+});
+
+test('legacy placement repair writes only outdated records and runs once', async t => {
+  const factory = new IDBFactory(), library = createBookLibrary(factory);
+  const books = await Promise.all(['Legacy', 'Current'].map(text => readUploadedBook(new File([text], `${text}.txt`))));
+  for (let i = 0; i < books.length; i++) await library.save(books[i], i + 2);
+  const entries = await library.list();
+  const db = await new Promise<IDBDatabase>((resolve, reject) => {
+    const request = factory.open('eazo-book-library', 1);
+    request.onsuccess = () => resolve(request.result); request.onerror = () => reject(request.error);
+  });
+  await new Promise<void>((resolve, reject) => {
+    const tx = db.transaction('catalogue', 'readwrite');
+    tx.objectStore('catalogue').put({ ...entries[0], shelf: undefined });
+    tx.oncomplete = () => resolve(); tx.onerror = () => reject(tx.error);
+  });
+  db.close();
+  const put = FakeObjectStore.prototype.put, writes: string[] = [];
+  t.mock.method(FakeObjectStore.prototype, 'put', function(this: IDBObjectStore, ...args: Parameters<typeof put>) {
+    if (this.name === 'catalogue') writes.push(args[0].id);
+    return Reflect.apply(put, this, args);
+  });
+  const repaired = await library.list();
+  assert.deepEqual(writes, [entries[0].id]);
+  assert.deepEqual(repaired.find(entry => entry.id === entries[1].id), entries[1]);
+  assert.deepEqual(await library.list(), repaired);
+  assert.equal(writes.length, 1);
 });
