@@ -1,5 +1,22 @@
 # Production workload identity readiness
 
+## Update: Production reader assistance repaired (2026-09-06)
+
+The user explicitly approved the exact Production Gemini impersonation binding and
+the Preview/Production provider allowlist. Applied both changes and verified the
+provider condition. The Gemini service-account policy now contains exactly the
+existing Preview member plus the approved Production member under
+`roles/iam.workloadIdentityUser`. The jobs-invoker policy was not changed; the
+historical proposal below includes that separate, still-unapplied change.
+
+Live verification on `https://read.vin/?book=hong-lou-meng`: the existing failed
+interactive-panel retry initially still failed while permissions propagated, then
+generated “凤姐暂退歇息的动静转换”. The existing failed concept-diagram retry also
+completed and rendered a passage concept diagram. Both displayed “Results added
+to their original passage.” No application-code change or redeployment was needed.
+
+The sections below preserve the earlier inspection and approval history.
+
 Read-only inspection on 2026-09-06 confirmed:
 
 - Project: `eazo-hack-20260905-c1710`, number `592771495287`.

@@ -18,6 +18,7 @@ import { type WorkspaceSnapshot } from '../persistence';
 import { recordSelectionActivity, selectionTimestamp } from '../persistence/selection-activity';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
 import { resolveTxtAnchor } from '../reader/source-anchor';
+import { readingBookmark } from '../reader/reading-bookmark';
 import { artifactEnhancement, routeEnhancement } from '@/shared/enhancements';
 import type { EnhancementHighlight } from '../reader/enhancement-highlights';
 import { enhancementHistoryReducer, emptyEnhancementHistory } from './enhancement-history';
@@ -155,11 +156,12 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
     setSelections(saved.selections); setAnchors(saved.anchors);
     dispatchEnhancements({ type: 'reset', state: saved }); setMapView(saved.mapView);
     recordFootprints(saved.footprints);
-    if (saved.readerPosition) {
-      setReadingPosition(saved.readerPosition.startOffset);
-      requestAnimationFrame(() => reader.current?.scrollToOffset(saved.readerPosition!.startOffset));
+    const bookmark = readingBookmark(saved, { ...preview, bookId });
+    if (bookmark !== null) {
+      setReadingPosition(bookmark);
+      requestAnimationFrame(() => reader.current?.scrollToOffset(bookmark, 'instant'));
     }
-  }, [recordFootprints]);
+  }, [recordFootprints, preview, bookId]);
   const sync = useReadingSync({ ownerId: cloudOwnerId, sourceId: cloudSourceId, bookId, preview, snapshot, restore: restoreReading });
 
   useEffect(() => {

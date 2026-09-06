@@ -1,5 +1,5 @@
 'use client';
-import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
+import { useCallback, useEffect, useEffectEvent, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
 import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, PROJECTIONS, type Point3 } from './projection';
@@ -74,6 +74,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const edges=useMapRequest<{links:MapLink[];total:number}>(graph.version,{kind:'edges',id:windowed.nodes.map(n=>n.id).sort(),start:'0',end:'1'},140);
   const animatedEdges=useEdgeTransition(edges.data?.links);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
+  const detailPanel=useRef<HTMLElement>(null);
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
   const pointers=useRef(new MapPointerInput()),safari=useRef(new SafariGestureInput()),stageTouches=useRef(new Set<number>());
   const drag=useRef<{view:MapView;latest:MapView;motion:OrbitMotion}|null>(null);
@@ -137,6 +138,15 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   },[graph.roots,readingProgress,updates]);
   const cancelMotion=()=>{updates.current?.flush();if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
   const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch){setSourceActivation(null);if(patch.selectedNodeId)setHeatSelection(null);}cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:confinePan(next,latest.current.size)};onViewChange(next);};
+  const dismissDetail=useEffectEvent((event:PointerEvent)=>{
+    if(event.button!==0||!(event.target instanceof Node)||detailPanel.current?.contains(event.target))return;
+    change({selectedNodeId:null});
+  });
+  useEffect(()=>{
+    if(!current.selectedNodeId)return;
+    document.addEventListener('pointerdown',dismissDetail,true);
+    return()=>document.removeEventListener('pointerdown',dismissDetail,true);
+  },[current.selectedNodeId]);
   function activateLeaf(id:string) {
     change({selectedNodeId:id});
     setSourceActivation({id,ticket:++sourceTicket.current});
@@ -302,7 +312,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     </div>
     {restoredPath.error&&<p role="alert">{restoredPath.error} <button onClick={restoredPath.retry}>Retry</button></p>}{navigationError&&<p role="alert">{navigationError}</p>}{navigating&&<p role="status">Finding this note…</p>}
     {heat&&selectedHeat&&!current.selectedNodeId&&<HeatInspector key={selectedHeat.leaf.id} point={selectedHeat} filter="all" onClose={()=>setHeatSelection(null)} onSource={source} onLocate={id=>{setHeatSelection(null);void locate(id);}}/>}
-    {current.selectedNodeId&&<section className="map-detail" aria-label={selectedEntry?.kind==='cluster'?'Selected group':'Selected occurrence'}><div className="map-detail-content">
+    {current.selectedNodeId&&<section ref={detailPanel} className="map-detail" aria-label={selectedEntry?.kind==='cluster'?'Selected group':'Selected occurrence'}><div className="map-detail-content">
       <div className="map-title-row"><div>{selectedEntry?.kind!=='cluster'&&<small>{selected?.node.sourceLabel??'Source occurrence'}</small>}<h3>{selectedEntry?.label??selected?.node.label??'Loading note…'}</h3></div></div>
       {selectedEntry?.kind==='cluster'?<><p>{selectedEntry.summary}</p></>:detail.error?<p role="alert">{detail.error} <button onClick={detail.retry}>Retry</button></p>:selected?<div className="map-detail-body"><div><blockquote>{selected.anchors.find(a=>a.id===selected.node.anchorIds[0])?.quote}</blockquote>{selected.node.axisAssessment?<p>X · Reasoning depth: {axisValue(selected.node.axisAssessment.reasoningDepth.value,graph.axisVersion)}<br/>Y · Generality: {axisValue(selected.node.axisAssessment.generality.value,graph.axisVersion)}</p>:<p>Legacy structure: {selected.node.structuralLevel===null?'Unclassified':LEVELS[selected.node.structuralLevel]}</p>}</div><div><p>{selected.node.summary}</p>{selected.node.anchorIds.map((id,i)=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>{i?'Additional evidence':'Read this passage'} ↗ </button>:null;})}
         <p>Shared concept: {selected.identity.label}</p><div className="map-related">{selected.identity.occurrenceIds.filter(id=>id!==selected.node.id).map(id=><button key={id} onClick={()=>void locate(id)}>{selected.neighbours.find(n=>n.id===id)?.label} ↗</button>)}</div>
