@@ -139,7 +139,10 @@ function TextWorkspace({preview, graph, title, onLibrary, cloudSourceId}: {cloud
       const value=await cloudRequest(`snapshot?source=${cloudSourceId}`);if(!value){setNotice('No saved reading yet.');return;}
       const saved=WorkspaceSnapshotSchema.parse(value);
       if(saved.bookId!==bookId||saved.anchors.some(a=>a.fileHash!==preview.fileHash||a.extractionVersion!==preview.extractionVersion))throw new Error('Saved reading belongs to a different source.');
-      setSelections(saved.selections);setAnchors(saved.anchors);dispatchEnhancements({type:'reset',state:saved});setMapView(saved.mapView);if(saved.readerPosition){if(saved.readerPosition.fileHash!==preview.fileHash||saved.readerPosition.extractionVersion!==preview.extractionVersion||saved.readerPosition.startOffset>preview.sourceText.length)throw new Error('Saved position does not match this source.');reader.current?.scrollToOffset(saved.readerPosition.startOffset);}setNotice('Saved reading restored.');
+      if(saved.readerPosition&&(saved.readerPosition.fileHash!==preview.fileHash||saved.readerPosition.extractionVersion!==preview.extractionVersion||saved.readerPosition.startOffset>preview.sourceText.length))throw new Error('Saved position does not match this source.');
+      setSelections(saved.selections);setAnchors(saved.anchors);dispatchEnhancements({type:'reset',state:saved});setMapView(saved.mapView);
+      if(saved.readerPosition)reader.current?.scrollToOffset(saved.readerPosition.startOffset);
+      setNotice('Saved reading restored.');
     } catch(error){setNotice(error instanceof Error?error.message:'Could not restore reading.');}
   }
 

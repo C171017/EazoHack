@@ -28,13 +28,44 @@ test('PDF import processes every page, preserves exact Unicode text and original
   assert.match(pdfImportNote(result.manifest), /any scanned text on them is not included/);
 });
 
-test('damaged embedded text blocks conversion rather than dropping text or requesting OCR', async () => {
-  await assert.rejects(page(0, text('\uFFFD\uFFFD bad')), IncompatiblePdfError);
-  await assert.rejects(page(0, text('\uFFFD\uFFFD bad'), text('')), IncompatiblePdfError);
-  await assert.rejects(page(0, text(''), {text: '', fragments: [], rawText: 'Text without positions'}), IncompatiblePdfError);
+test('damaged pages retain evidence and do not reject the readable remainder', async () => {
+  const damaged = [
+    await page(0, text('\uFFFD\uFFFD bad')),
+    await page(1, text('\uFFFD\uFFFD bad'), text('')),
+    await page(2, text(''), {text: '', fragments: [], rawText: 'Text without positions'}),
+  ];
+  assert.ok(damaged.every(item => item.status === 'damaged-text'));
+  assert.equal(damaged[0].native.text, '\uFFFD\uFFFD bad');
+  const visited: number[] = [];
+  const result = await convertPdfPages(hash, 902, async index => {
+    visited.push(index);
+    return page(index, text(index === 900 ? '\uFFFD\uFFFD bad' : `Page ${index + 1} 😀.`));
+  }, new AbortController().signal, () => {});
+  assert.equal(visited.length, 902);
+  assert.ok(result.sourceText.endsWith('Page 902 😀.'));
+  assert.ok(!result.sourceText.includes('\uFFFD'));
+  for (const item of result.manifest.pages) {
+    assert.equal(result.sourceText.slice(item.startOffset, item.endOffset), item.status === 'text' ? item.source.text : '');
+  }
+  assert.match(pdfImportNote(result.manifest), /Partial text: 1 page was omitted.*PDF pages: 901/);
   const repaired = await page(0, text('Joinedwords.'), text('Joined words.'));
   assert.equal(repaired.method, 'geometry');
   assert.equal(repaired.native.text, 'Joinedwords.');
+});
+
+test('page format errors are skipped, including wrapped PDF.js errors', async () => {
+  for (const error of [Object.assign(new Error('Bad page'), {name: 'FormatError'}),
+    Object.assign(new Error('Bad page'), {name: 'UnknownErrorException', details: 'FormatError: Bad page'})]) {
+    const result = await convertPdfPages(hash, 3, async index => {
+      if (index === 1) throw error;
+      return page(index, text(`Page ${index + 1}.`));
+    }, new AbortController().signal, () => {});
+    assert.equal(result.sourceText, 'Page 1.\n\nPage 3.');
+    assert.equal(result.manifest.pages[1].status, 'extraction-failed');
+    assert.match(pdfImportNote(result.manifest), /PDF pages: 2/);
+  }
+  await assert.rejects(convertPdfPages(hash, 2, index => page(index, text('\uFFFD\uFFFD bad')),
+    new AbortController().signal, () => {}), IncompatiblePdfError);
 });
 
 test('no-text documents are incompatible; operational failures remain retryable errors', async () => {

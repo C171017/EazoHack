@@ -41,13 +41,14 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    const session=await backend<{access_token:string;refresh_token:string;expires_in:number}>('/auth/v1/token?grant_type=password',cloudConfig().key,{method:'POST',body:JSON.stringify(input)});
    await setSession(session);return json({ok:true});
   }
-  const user=await cloudUser();
   if(action==='logout') {
-   await backend('/auth/v1/logout',user.token,{method:'POST'});
-   const jar=await cookies();jar.delete('eazo-access');jar.delete('eazo-refresh');jar.delete('eazo-book');return json({ok:true});
+   const jar=await cookies();const token=jar.get('eazo-access')?.value;
+   try {if(token)await backend('/auth/v1/logout',token,{method:'POST'});}catch { /* Expired sessions must still sign out locally. */ }
+   jar.delete('eazo-access');jar.delete('eazo-refresh');jar.delete('eazo-book');return json({ok:true});
   }
+  const user=await cloudUser();
   if(action==='prepare') {
-   const input=z.object({localBookId:z.string().min(1).max(200),title:z.string().min(1).max(1000),fileHash:z.string().min(1).max(200),extractionVersion:z.string().min(1).max(160),sourceSha256:z.string().regex(/^[a-f0-9]{64}$/)}).parse(body);
+   const input=z.object({localBookId:z.string().min(1).max(200),title:z.string().min(1).max(1000),fileHash:z.string().regex(/^[a-f0-9]{64}$/),extractionVersion:z.string().min(1).max(160),sourceSha256:z.string().regex(/^[a-f0-9]{64}$/)}).parse(body);
    let books=await backend<{id:string}[]>(`/rest/v1/books?owner_id=eq.${user.id}&local_book_id=eq.${encodeURIComponent(input.localBookId)}&select=id`,user.token);
    if(!books.length)books=await backend('/rest/v1/books',user.token,{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({owner_id:user.id,local_book_id:input.localBookId,title:input.title,format:'txt'})});
    const book=books[0];let sources=await backend<Source[]>(`/rest/v1/book_sources?book_id=eq.${book.id}&file_hash=eq.${encodeURIComponent(input.fileHash)}&extraction_version=eq.${encodeURIComponent(input.extractionVersion)}`,user.token);

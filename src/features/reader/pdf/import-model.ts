@@ -1,6 +1,6 @@
 import { assessText, PDF_PIPELINE_VERSION, TextSourceSchema, type TextSource } from './model';
 
-export const PDF_IMPORT_VERSION = `pdf-import-embedded-v1:${PDF_PIPELINE_VERSION}`;
+export const PDF_IMPORT_VERSION = `pdf-import-embedded-v2:${PDF_PIPELINE_VERSION}`;
 export class IncompatiblePdfError extends Error {
   constructor(detail: string) {
     super(`This PDF isn’t compatible yet. ${detail} Try a text-based PDF or upload a TXT file.`);
@@ -11,7 +11,7 @@ export type ImportProgress = { percent: number; stage: string; completed?: numbe
 export type ImportState = ImportProgress & { title: string; status: 'processing' | 'ready' | 'failed' | 'cancelled'; error?: string; note?: string };
 export type ImportPage = {
   pageIndex: number;
-  status: 'text' | 'no-text-detected';
+  status: 'text' | 'no-text-detected' | 'damaged-text' | 'extraction-failed';
   method: 'embedded' | 'geometry';
   native: TextSource;
   source: TextSource;
@@ -28,20 +28,21 @@ export type PdfImportManifest = {
 };
 
 /** Missing embedded text is explicitly uncertain, never proof of a blank page.
- * Damaged textual content cannot be silently discarded. No OCR is attempted.
+ * Damaged pages retain their extraction evidence and explicit warnings. No OCR is attempted.
  */
 export function classifyImportPage(pageIndex: number, raw: TextSource, repaired: TextSource): Omit<ImportPage, 'startOffset' | 'endOffset'> {
   const source = TextSourceSchema.parse(repaired);
   const native = TextSourceSchema.parse(raw);
   const quality = assessText(source);
-  if (quality.status === 'damaged' || (quality.status === 'missing' && (
+  const damaged = quality.status === 'damaged' || (quality.status === 'missing' && Boolean(
     native.text.trim() || source.rawText?.trim()
-  ))) throw new IncompatiblePdfError(`We couldn’t extract reliable text from page ${pageIndex + 1}.`);
+  ));
   return {
-    pageIndex, status: quality.status === 'missing' ? 'no-text-detected' : 'text',
+    pageIndex, status: damaged ? 'damaged-text' : quality.status === 'missing' ? 'no-text-detected' : 'text',
     method: native.text === source.text ? 'embedded' : 'geometry',
     native, source,
-    warnings: quality.status === 'missing' ? ['No embedded text detected; page retained, not verified blank. OCR not attempted.']
+    warnings: damaged ? ['Unreliable text omitted from reader; original page retained. OCR not attempted.', ...quality.reasons]
+      : quality.status === 'missing' ? ['No embedded text detected; page retained, not verified blank. OCR not attempted.']
       : quality.ambiguousLayout ? ['Reading order may need review.'] : [],
   };
 }
@@ -59,7 +60,20 @@ export async function convertPdfPages(fileHash: string, pageCount: number,
   for (let pageIndex = 0; pageIndex < pageCount; pageIndex++) {
     signal.throwIfAborted();
     progress({ percent: Math.floor(pageIndex / pageCount * 95), stage: 'Extracting text', completed: pageIndex, total: pageCount });
-    const page = await extract(pageIndex, signal);
+    let page: Omit<ImportPage, 'startOffset' | 'endOffset'>;
+    try {
+      page = await extract(pageIndex, signal);
+    } catch (error) {
+      signal.throwIfAborted();
+      // PDF.js can wrap a page-local FormatError across its worker boundary.
+      // Unknown worker/network/programming failures must remain retryable errors.
+      if (!(error instanceof Error) || !(error.name === 'FormatError' ||
+        (error.name === 'UnknownErrorException' && 'details' in error &&
+          typeof error.details === 'string' && error.details.startsWith('FormatError:')))) throw error;
+      page = { pageIndex, status: 'extraction-failed', method: 'embedded',
+        native: { text: '', fragments: [] }, source: { text: '', fragments: [] },
+        warnings: [`Page extraction failed: ${error.message}`, 'Page omitted from reader; original page retained. OCR not attempted.'] };
+    }
     signal.throwIfAborted();
     if (page.pageIndex !== pageIndex) throw new Error('Page extraction returned a different page. Please retry.');
     if (page.status === 'text' && sourceText) sourceText += '\n\n';
@@ -68,14 +82,17 @@ export async function convertPdfPages(fileHash: string, pageCount: number,
     pages.push({ ...page, startOffset, endOffset: sourceText.length });
     progress({ percent: Math.floor((pageIndex + 1) / pageCount * 95), stage: 'Extracting text', completed: pageIndex + 1, total: pageCount });
   }
-  if (!sourceText.trim()) throw new IncompatiblePdfError('No readable embedded text was detected. Scanned PDFs need OCR, which is not supported during import.');
+  if (!sourceText.trim()) throw new IncompatiblePdfError('No readable embedded text was detected across the document. Pages may be scanned or damaged; OCR is not supported during import.');
   return { sourceText, manifest: { version: PDF_IMPORT_VERSION, fileHash, offsetUnit: 'UTF-16', nonTextContent: 'retained-in-original-pdf', pages } satisfies PdfImportManifest };
 }
 
 export function pdfImportNote(manifest: PdfImportManifest) {
   const omitted = manifest.pages.filter(page => page.status === 'no-text-detected').length;
+  const failed = manifest.pages.filter(page => page.status === 'damaged-text' || page.status === 'extraction-failed');
+  const pageNumbers = failed.slice(0, 20).map(page => page.pageIndex + 1).join(', ') + (failed.length > 20 ? ', …' : '');
   const review = manifest.pages.filter(page => page.status === 'text' && page.warnings.length).length;
   return ['Original PDF saved. Illustrations are not shown in the text reader.',
+    failed.length ? `Partial text: ${failed.length} ${failed.length === 1 ? 'page was' : 'pages were'} omitted because text could not be extracted reliably (PDF pages: ${pageNumbers}). These pages remain in the original PDF.` : '',
     omitted ? `${omitted} ${omitted === 1 ? 'page had' : 'pages had'} no embedded text. Those pages remain in the PDF; any scanned text on them is not included in this reader.` : '',
     review ? `Reading order may need review on ${review} ${review === 1 ? 'page' : 'pages'}.` : '',
   ].filter(Boolean).join(' ');
