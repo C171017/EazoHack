@@ -34,6 +34,7 @@ const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),
 export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId}:{preview:BookPreview;graph:MapBootstrap;initialTitle?:string;cloudSourceId?:string;cloudOwnerId?:string}) {
   const [uploaded, setUploaded] = useState<TextBook | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
+  const [reopenVersion, setReopenVersion] = useState(0);
   useEffect(() => {
     if (new URLSearchParams(window.location.search).get('library') === '1') {
       queueMicrotask(() => setLibraryOpen(true));
@@ -112,14 +113,14 @@ export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
   return <>
     <div className={libraryStyles.readerSurface} data-library-open={libraryOpen || undefined}>
-    <TextWorkspace covered={libraryOpen} cloudOwnerId={uploaded ? undefined : cloudOwnerId} analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={`${uploaded ? "guest" : cloudOwnerId ?? "guest"}:${uploaded?.bookId ?? cloudSourceId ?? graph.bookId}`} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
+    <TextWorkspace reopenVersion={reopenVersion} covered={libraryOpen} cloudOwnerId={uploaded ? undefined : cloudOwnerId} analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={`${uploaded ? "guest" : cloudOwnerId ?? "guest"}:${uploaded?.bookId ?? cloudSourceId ?? graph.bookId}`} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
     </div>
-    <BookLibrary onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
+    <BookLibrary onReopen={() => { setReopenVersion(value => value + 1); setLibraryOpen(false); setImportState(null); }} onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
       importState={importState} revision={libraryRevision} sampleEmblem={graph.bookId === 'plato-republic' ? graph.bookEmblem : undefined} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />
   </>;
 }
 
-function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSourceId, cloudOwnerId, analyzeUploaded, covered}: {covered:boolean;analyzeUploaded?:boolean;cloudSourceId?:string;cloudOwnerId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
+function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSourceId, cloudOwnerId, analyzeUploaded, covered, reopenVersion}: {reopenVersion:number;covered:boolean;analyzeUploaded?:boolean;cloudSourceId?:string;cloudOwnerId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
   const [mobileMapOpen, setMobileMapOpen] = useState(false);
   const mapActive = useMapActive(mobileMapOpen, covered);
   const analysis = useBookAnalysis(initialGraph.bookId, preview, !!analyzeUploaded);
@@ -163,6 +164,17 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
     }
   }, [recordFootprints, preview, bookId]);
   const sync = useReadingSync({ ownerId: cloudOwnerId, sourceId: cloudSourceId, bookId, preview, snapshot, restore: restoreReading });
+  const lastReopenVersion = useRef(reopenVersion);
+  useEffect(() => {
+    if (lastReopenVersion.current === reopenVersion) return;
+    lastReopenVersion.current = reopenVersion;
+    // The active book stays mounted behind the Library. Explicitly opening it
+    // again must apply the same bookmark as device/cloud hydration, using the
+    // live outputs so a just-finished generation does not wait for persistence.
+    const bookmark = readingBookmark(snapshot, { ...preview, bookId });
+    if (bookmark !== null) reader.current?.scrollToOffset(bookmark, 'instant');
+  }, [reopenVersion, snapshot, preview, bookId]);
+
 
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {

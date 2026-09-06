@@ -12,13 +12,14 @@ import type { ImportState } from './pdf/import-model';
 import styles from './book-library.module.css';
 import { CloudMenu } from './cloud-menu';
 
-export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, importState, revision, onCancel, onRetry, sampleEmblem, onRemoved }: {
+export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, onReopen, importState, revision, onCancel, onRetry, sampleEmblem, onRemoved }: {
   onRemoved: (id: string) => void;
   open: boolean;
   currentId: string;
   onSelect: (book: UploadedBook | null) => Promise<void>;
   onUpload: (file: File, placement?: ShelfPlacement) => Promise<void>;
   onClose: () => void;
+  onReopen: () => void;
   importState: ImportState | null;
   revision: number;
   onCancel: () => void;
@@ -179,9 +180,9 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
     if (busy || !open) return;
     setBusy(true); setError('');
     try {
+      if (id === currentId) { onReopen(); return; }
       if (sampleBook(id)) {
-        if (id === currentId) onClose();
-        else router.push(`/?book=${id}`);
+        router.push(`/?book=${id}`);
         return;
       }
       await onSelect(await bookLibrary.load(id));

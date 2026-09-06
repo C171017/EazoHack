@@ -39,3 +39,24 @@ test('bookmarks never navigate into another book or incompatible source', () => 
   saved.anchors[1].quote = 'wrong quote';
   assert.equal(readingBookmark(saved, source), 700);
 });
+
+test('guest reload and signed-in cloud hydration restore the latest enhancement', async () => {
+  const { ReadingSync } = await import('../src/features/cloud/sync-engine');
+  for (const remote of [false, true]) {
+    const saved = snapshot();
+    const positions: (number | null)[] = [];
+    const record = { key: 'book', writerId: 'device', revision: 1, current: saved, dirty: false, mutationId: 'saved', conflict: null };
+    const sync = new ReadingSync('book', {
+      load: async () => remote ? null : structuredClone(record),
+      save: async () => {}, archive: async () => {},
+      get: async () => ({ revision: 1, payload: structuredClone(saved) }),
+      put: async () => { throw new Error('Hydration must not overwrite saved reading'); },
+      validate: value => WorkspaceSnapshotSchema.parse(value),
+      restore: value => { positions.push(readingBookmark(value, source)); },
+      status: () => {}, uuid: () => 'new', online: () => true, remote,
+    });
+    await sync.start();
+    assert.deepEqual(positions, [100], remote ? 'signed-in cloud' : 'guest device');
+    sync.stop();
+  }
+});
