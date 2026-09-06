@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import type { BookPreview } from '../reader/book-preview';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
-type AnalysisState = { status: 'starting' | 'running' | 'ready' | 'failed' | 'idle'; stage: string; error?: string; key?: string; graph?: MapBootstrap; updatedAt?: number };
+type AnalysisState = { status: 'starting' | 'running' | 'ready' | 'failed' | 'idle' | 'unavailable'; stage: string; error?: string; key?: string; graph?: MapBootstrap; updatedAt?: number };
 export function useBookAnalysis(bookId: string, preview: BookPreview, enabled: boolean) {
   const [attempt, setAttempt] = useState(0);
   const [state, setState] = useState<AnalysisState>({status:'starting',stage:'Starting book map analysis'});
@@ -14,7 +14,7 @@ export function useBookAnalysis(bookId: string, preview: BookPreview, enabled: b
     async function request(url:string, body?:object) {
       const response=await fetch(url,{signal:controller.signal, ...(body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{})});
       const data=await response.json();
-      if(!response.ok)throw new Error(data.error?.message??'Could not check map analysis.');
+      if(!response.ok)throw Object.assign(new Error(data.error?.message??'Could not check map analysis.'),{status:response.status});
       return data as AnalysisState;
     }
     function accept(data:AnalysisState) {
@@ -23,7 +23,11 @@ export function useBookAnalysis(bookId: string, preview: BookPreview, enabled: b
       if(data.key) { try { localStorage.setItem(storageKey,data.key); } catch {} }
       if(data.key && (data.status==='running'||data.status==='ready'&&!data.graph)) timer=setTimeout(()=>void poll(data.key!),data.status==='ready'?0:3000);
     }
-    function failed(error:unknown) { if(active)setState({status:'failed',stage:'Could not check book map',error:`${error instanceof Error?error.message:'Connection failed.'} Analysis may still be running; retry to reconnect.`}); }
+    function failed(error:unknown) {
+      if(!active)return;
+      const status=error instanceof Error && 'status' in error ? error.status : undefined;
+      setState({status:status===503?'unavailable':'failed',stage:status===503?'Map analysis is unavailable here':'Could not check book map',error:`${error instanceof Error?error.message:'Connection failed.'}${status===undefined?' Analysis may still be running; retry to reconnect.':''}`});
+    }
     async function poll(key:string) { try { accept(await request(`/api/book-analysis?key=${key}`)); } catch(error){failed(error);} }
     async function start() {
       try {
