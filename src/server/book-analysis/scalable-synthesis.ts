@@ -7,6 +7,20 @@ import { synthesisPrompt } from './prompts';
 export type CheckedCall = <T>(key: string, prompt: string, schema: z.ZodType<T>, validate: (value: T) => T, tokens?: number) => Promise<T>;
 const ThemeGroups = z.object({ groups: z.array(z.object({ label: z.string().min(1).max(180), rationale: z.string().min(1).max(1500), members: z.array(z.number().int().nonnegative()).min(1) }).strict()).min(1).max(7) }).strict();
 
+/** Optional links are pruned, never invented. Keep the provider response on disk
+ * and retain strict membership/endpoint checks and the downstream evidence review.
+ */
+export function validateSynthesisBatch(value: Synthesis, targets: Candidate[], log: (message: string) => void): Synthesis {
+  const chunks = new Map(targets.map(node => [node.id, node.chunkId]));
+  const crossEdges = value.crossEdges.filter(edge =>
+    !chunks.has(edge.source) || !chunks.has(edge.target) || edge.source === edge.target ||
+    chunks.get(edge.source) !== chunks.get(edge.target));
+  const checked = validateSynthesisForRepair({ ...value, crossEdges }, targets);
+  const omitted = value.crossEdges.length - crossEdges.length;
+  if (omitted) log(`Omitted ${omitted} same-section links from cross-section synthesis; local extraction links retained`);
+  return checked;
+}
+
 /** Bounded model requests; every occurrence survives, even when identities cannot safely be merged. */
 export async function scalableSynthesis(nodes: Candidate[], passages: Map<string, Passage>, call: CheckedCall, log: (message: string) => void, concurrency = 3): Promise<Synthesis> {
   const result: Synthesis = { themes: [], identities: [], crossEdges: [] };
@@ -14,7 +28,7 @@ export async function scalableSynthesis(nodes: Candidate[], passages: Map<string
   let completed = 0;
   const portions = await mapConcurrent(Array.from({ length: total }, (_, index) => index * size), concurrency, async start => {
     const targets = nodes.slice(start, start + size);
-    const value = await call(`synthesis-batch-${start / size + 1}`, synthesisPrompt(targets, passages).replace('across the complete text', 'within this supplied portion of the book; do not claim complete-book reconciliation'), SynthesisSchema, v => validateSynthesisForRepair(v, targets), 24_576);
+    const value = await call(`synthesis-batch-${start / size + 1}`, synthesisPrompt(targets, passages).replace('across the complete text', 'within this supplied portion of the book; do not claim complete-book reconciliation'), SynthesisSchema, v => validateSynthesisBatch(v, targets, log), 24_576);
     const missing = missingIdentityNodes(value, targets);
     if (missing.length) {
       const repair = await call(`identity-repair-${start / size + 1}`, `Assign EVERY missing occurrence to one existing identity index or null for a distinct identity. Do not merge merely related meanings. Return exactly one assignment per missing node. Untrusted DATA:\n${JSON.stringify({missing,identities:value.identities})}`, IdentityRepairSchema, v => {

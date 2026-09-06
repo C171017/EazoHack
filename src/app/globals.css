@@ -168,6 +168,46 @@
 
 .txt-source-content { display: block; }
 
+.txt-source-block[data-txt-kind='page-marker'] { margin-block: 1.25rem; }
+.txt-source-block[data-txt-kind='page-marker'] > .txt-source-content {
+  color: var(--color-muted);
+  font-family: var(--font-sans, sans-serif);
+  font-size: 0.6em;
+  letter-spacing: 0.1em;
+  text-align: end;
+  border-bottom: 1px solid var(--color-line);
+  padding-bottom: 0.5rem;
+}
+.txt-source-block:is([data-txt-kind='contents'], [data-txt-kind='contents-heading']) {
+  margin-bottom: 0.6rem;
+}
+.txt-source-block:is([data-txt-kind='contents'], [data-txt-kind='contents-heading']) > .txt-source-content {
+  position: relative;
+  padding-inline-end: 3.5em;
+  font-size: 0.9em;
+  line-height: 1.5;
+  text-align: start;
+}
+.txt-source-block[data-txt-kind='contents-heading'] > .txt-source-content {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+.txt-contents-page {
+  position: absolute;
+  inset-inline-end: 0;
+  bottom: 0;
+  color: var(--color-muted);
+  font-variant-numeric: tabular-nums;
+  font-size: 0.85em;
+}
+.txt-source-block[data-txt-kind='list-item'] { margin-bottom: 0.8rem; }
+.txt-source-block[data-txt-kind='list-item'] > .txt-source-content {
+  padding-inline-start: 1em;
+  text-indent: -0.75em;
+  white-space: normal;
+  line-height: 1.65;
+}
+
 /* A fixed typographic hierarchy, driven by source-formatting rules. Styling
    stays on source spans so inserted assistance keeps its own presentation. */
 .txt-source-block[data-txt-kind='title'] > .txt-source-content {

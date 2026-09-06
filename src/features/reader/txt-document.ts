@@ -8,6 +8,7 @@ export type TxtBlock = {
   endOffset: number;
   continuation: boolean;
   kind: TxtBlockKind;
+  pageNumberStart?: number;
 };
 
 export type TxtRenderChunk = {
@@ -20,7 +21,7 @@ export type TxtRenderChunk = {
 function paragraphBlocks(text: string, targetSize: number, title?: string): TxtBlock[] {
   const blocks: TxtBlock[] = [];
 
-  function addBlock(blockStart: number, blockEnd: number, kind: TxtBlockKind) {
+  function addBlock(blockStart: number, blockEnd: number, kind: TxtBlockKind, pageNumberStart?: number) {
     let cursor = blockStart;
     let continuation = false;
     while (blockEnd - cursor > targetSize * 2) {
@@ -33,6 +34,7 @@ function paragraphBlocks(text: string, targetSize: number, title?: string): TxtB
         endOffset: split,
         continuation,
         kind,
+        ...(pageNumberStart !== undefined && pageNumberStart >= cursor && pageNumberStart < split ? { pageNumberStart } : {}),
       });
       cursor = split;
       continuation = true;
@@ -44,12 +46,13 @@ function paragraphBlocks(text: string, targetSize: number, title?: string): TxtB
         endOffset: blockEnd,
         continuation,
         kind,
+        ...(pageNumberStart !== undefined && pageNumberStart >= cursor && pageNumberStart < blockEnd ? { pageNumberStart } : {}),
       });
     }
   }
 
   for (const range of formatTxtRanges(text, title)) {
-    addBlock(range.startOffset, range.endOffset, range.kind);
+    addBlock(range.startOffset, range.endOffset, range.kind, range.pageNumberStart);
   }
   return blocks;
 }

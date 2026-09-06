@@ -7,6 +7,7 @@ import type { Generate, ModelReply } from './contracts';
 import { AXIS_PROMPT_VERSION, AXIS_SYSTEM, AxisBatchSchema, AxisReviewSchema, axisPrompt, axisReviewPrompt } from './axis-prompts';
 import { readJson, writeJson } from './json-store';
 import { ModelRequestError } from './vertex';
+import { mapConcurrent } from './work-pool';
 
 function preserveSource(result:Graph,base:Graph) {
   for(const key of ['bookId','fileHash','extractionVersion','sourceLength','anchors','identities','edges','territories'] as const) {
@@ -65,10 +66,8 @@ export async function assignBookAxes({graph,outputRoot,generate,model,log=()=>{}
   await writeJson(path.join(dir,'manifest.json'),{status:'running',version,sourceGraphVersion:graph.graphVersion,model,axisVersion:BOOK_AXIS_VERSION});
   try {
     const batches=Array.from({length:Math.ceil(graph.nodes.length/24)},(_,i)=>graph.nodes.slice(i*24,(i+1)*24));
-    const assignments:z.infer<typeof AxisBatchSchema>['assignments']=[];
-    for(let start=0;start<batches.length;start+=2) {
-      const results=await Promise.allSettled(batches.slice(start,start+2).map(async(targets,offset)=>{
-        const key=`axes-${start+offset+1}`;
+    const results=await mapConcurrent(batches,2,async(targets,index)=>{
+        const key=`axes-${index+1}`;
         let proposal=await call(key,axisPrompt(graph,targets),AxisBatchSchema,v=>validateAxisBatch(v,graph,targets));
         for(let revision=0;revision<3;revision++) {
           const review=await call(`${key}-review-${revision}`,axisReviewPrompt(graph,targets,proposal),AxisReviewSchema,v=>{
@@ -79,9 +78,8 @@ export async function assignBookAxes({graph,outputRoot,generate,model,log=()=>{}
           proposal=await call(`${key}-revision-${revision+1}`,axisReviewPrompt(graph,targets,proposal)+`\nNow return a COMPLETE CORRECTED ASSIGNMENT for every target, including unchanged valid ratings. Findings:\n${JSON.stringify(review)}`,AxisBatchSchema,v=>validateAxisBatch(v,graph,targets));
         }
         throw new Error('Axis review incomplete');
-      }));
-      for(const result of results) {if(result.status==='rejected')throw result.reason;assignments.push(...result.value);}
-    }
+      });
+    const assignments=results.flat();
     const byId=new Map(assignments.map(a=>[a.nodeId,a.assessment]));
     const result=GraphSchema.parse({...graph,graphVersion:version,axisVersion:BOOK_AXIS_VERSION,
       axisAnalysis:{model,promptVersion:AXIS_PROMPT_VERSION,sourceGraphVersion:graph.graphVersion,reviewStatus:'model_reviewed',completedAt:new Date().toISOString()},

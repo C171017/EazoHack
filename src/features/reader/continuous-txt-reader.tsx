@@ -57,15 +57,7 @@ const TxtChunk = memo(function TxtChunk({
       data-txt-kind={block.kind}
       className={`txt-source-block${block.continuation ? ' txt-source-block-continuation' : ''}`}>
       {splitSourceRange(block.startOffset, block.endOffset, slots.map(s=>s.offset)).map(part=>{
-      return <Fragment key={part.startOffset}><span
-        className="txt-source-content"
-        role={['title', 'heading', 'subheading'].includes(block.kind) ? 'heading' : undefined}
-        aria-level={block.kind === 'subheading' ? 3 : ['title', 'heading'].includes(block.kind) ? 2 : undefined}
-        data-txt-block
-        data-txt-start={part.startOffset}
-        data-txt-end={part.endOffset}
-      >
-        {highlightSegments(part.startOffset, part.endOffset, enhancements, highlight).map(segment => {
+        const renderText = (start: number, end: number) => highlightSegments(start, end, enhancements, highlight).map(segment => {
           const text = sourceText.slice(segment.startOffset, segment.endOffset);
           if (!segment.kinds.length && !segment.active) return text;
           const colors = segment.kinds.map(kind => ENHANCEMENTS[kind].ink);
@@ -75,7 +67,19 @@ const TxtChunk = memo(function TxtChunk({
           } : undefined;
           return <mark key={segment.startOffset} className="txt-passage-highlight" data-enhancements={segment.kinds.join(' ') || undefined}
             aria-label={segment.kinds.length ? segment.kinds.map(kind => ENHANCEMENTS[kind].label).join(' and ') : 'Selected passage'} style={style}>{text}</mark>;
-        })}
+        });
+        const pageStart = block.pageNumberStart === undefined ? part.endOffset
+          : Math.max(part.startOffset, Math.min(block.pageNumberStart, part.endOffset));
+      return <Fragment key={part.startOffset}><span
+        className="txt-source-content"
+        role={['title', 'heading', 'subheading'].includes(block.kind) ? 'heading' : undefined}
+        aria-level={block.kind === 'subheading' ? 3 : ['title', 'heading'].includes(block.kind) ? 2 : undefined}
+        data-txt-block
+        data-txt-start={part.startOffset}
+        data-txt-end={part.endOffset}
+      >
+        {renderText(part.startOffset, pageStart)}
+        {pageStart < part.endOffset && <span className="txt-contents-page">{renderText(pageStart, part.endOffset)}</span>}
       </span>{slots.filter(s=>s.offset===part.endOffset).map(slot=><aside key={slot.id} data-reader-artifact={slot.id} className="reader-artifact" aria-label="Passage assistance">{slot.content}</aside>)}</Fragment>;
     })}</div>)}
   </section>;

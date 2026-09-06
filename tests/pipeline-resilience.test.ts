@@ -78,3 +78,21 @@ test('cross-link repair identifies every invalid link in one response without we
   assert.doesNotThrow(() => validateSynthesis({ ...value, crossEdges: [{ ...value.crossEdges[0], target: 'c' }] }, nodes));
   assert.throws(() => validateSynthesis({ ...value, crossEdges: [{ ...value.crossEdges[0], target: 'unknown' }] }, nodes), /Invalid cross-edge/);
 });
+
+test('synthesis salvages valid partitions without publishing miscategorized links or mutating raw replies', async () => {
+  const { validateSynthesisBatch } = await import('../src/server/book-analysis/scalable-synthesis');
+  const nodes = [{ id: 'a', chunkId: 'one' }, { id: 'b', chunkId: 'one' }, { id: 'c', chunkId: 'two' }] as Parameters<typeof validateSynthesisBatch>[1];
+  const local = { source: 'a', target: 'b', type: 'supports' as const, rationale: 'Local.' };
+  const cross = { ...local, target: 'c' };
+  const value = { themes: [{ label: 'Theme', rationale: 'Grounded.', nodeIds: ['a', 'b', 'c'] }], identities: [{ label: 'Concept', nodeIds: ['a', 'b', 'c'] }], crossEdges: [local, cross] };
+  const logs: string[] = [];
+  const checked = validateSynthesisBatch(value, nodes, message => logs.push(message));
+  assert.deepEqual(checked.crossEdges, [cross]);
+  assert.equal(value.crossEdges.length, 2, 'raw response remains auditable');
+  assert.deepEqual(checked.themes, value.themes);
+  assert.deepEqual(checked.identities, value.identities);
+  assert.equal(logs.length, 1);
+  assert.throws(() => validateSynthesisBatch({ ...value, crossEdges: [{ ...local, target: 'unknown' }] }, nodes, () => {}));
+  assert.throws(() => validateSynthesisBatch({ ...value, crossEdges: [{ ...local, target: 'a' }] }, nodes, () => {}));
+  assert.throws(() => validateSynthesisBatch({ ...value, themes: [{ ...value.themes[0], nodeIds: ['a', 'a', 'c'] }] }, nodes, () => {}));
+});

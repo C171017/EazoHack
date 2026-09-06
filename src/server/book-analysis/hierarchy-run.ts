@@ -6,6 +6,7 @@ import { type Graph } from '../../shared/schemas';
 import { ZOOM_POLICY, leafEntry, clusterEntry, validateHierarchy, type MapEntry, type Hierarchy } from '../../shared/zoom-hierarchy';
 import type { Generate, ModelReply } from './contracts';
 import { HIERARCHY_PROMPT_VERSION, HIERARCHY_SYSTEM, hierarchyPrompt, hierarchyReviewPrompt } from './hierarchy-prompts';
+import { mapConcurrent } from './work-pool';
 const GroupSchema=z.object({groups:z.array(z.object({childIds:z.array(z.string()).min(1).max(ZOOM_POLICY.children),label:z.string().min(1).max(180),summary:z.string().min(1).max(1800),rationale:z.string().min(1).max(1500)}).strict()).min(1).max(24)}).strict();
 const ReviewSchema=z.object({rejected:z.array(z.object({index:z.number().int().nonnegative(),reason:z.string().min(1).max(1500)}).strict())}).strict();
 export function validateGroups(value:z.infer<typeof GroupSchema>,nodes:MapEntry[]) {
@@ -56,9 +57,8 @@ export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}
       level++;
       const batches=spatialBatches(frontier),next:MapEntry[]=[];
       // Two bounded concurrent provider calls; complete a whole level before the next.
-      for(let start=0;start<batches.length;start+=2) {
-        const results=await Promise.allSettled(batches.slice(start,start+2).map(async(nodes,offset)=>{
-          const batch=start+offset,key=`level-${level}-batch-${batch+1}`;
+        const results=await mapConcurrent(batches,2,async(nodes,batch)=>{
+          const key=`level-${level}-batch-${batch+1}`;
           // Higher levels use already reviewed child summaries, not all descendant text.
           // Every leaf still belongs to the hierarchy and retains exact source anchors.
           const evidence=nodes.map(entry=>{
@@ -73,10 +73,8 @@ export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}
             groups=await call(`${key}-revision-${revision+1}`,hierarchyPrompt(nodes,level,evidence)+`\nRejected proposal:\n${JSON.stringify(groups)}\nReview findings to correct:\n${JSON.stringify(review)}`,GroupSchema,v=>validateGroups(v,nodes));
           }
           throw new Error('Review incomplete');
-        }));
-        for(const result of results) {
-          if(result.status==='rejected')throw result.reason;
-          const {groups,key}=result.value;
+        });
+        for(const {groups,key} of results) {
           for(const [i,g] of groups.entries()) {
             if(g.childIds.length===1){next.push(entries.get(g.childIds[0])!);continue;}
             const id=`h-${key}-${i+1}`,members=g.childIds.map(id=>entries.get(id)!);
@@ -85,7 +83,6 @@ export async function buildHierarchy({graph,outputRoot,generate,model,log=()=>{}
             entries.set(id,parent);children[id]=g.childIds;leafIds.set(id,g.childIds.flatMap(id=>leafIds.get(id)!));next.push(parent);
           }
         }
-      }
       log(`Layer ${level}: ${frontier.length} → ${next.length} summaries; all ${graph.nodes.length} leaves retained.`);frontier=next;
     }
     const hierarchy:Hierarchy=validateHierarchy({version,graphVersion:graph.graphVersion,fileHash:graph.fileHash,extractionVersion:graph.extractionVersion,promptVersion:HIERARCHY_PROMPT_VERSION,model,createdAt:new Date().toISOString(),roots:frontier.map(n=>n.id),depth:Math.max(...frontier.map(n=>n.height)),entries:[...entries.values()],children,rationale:'LM chooses coherent groups in locked spatial neighbourhoods; code repeats until at most eight roots, with at most eight children per parent. Every parent passes a separate source-evidence model review.'},graph);

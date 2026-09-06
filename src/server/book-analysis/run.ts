@@ -35,6 +35,7 @@ export async function analyzeText(input: {
   const changedChunks = new Set(metadata.chunks.filter(c => previous?.chunks && JSON.stringify(previous.chunks.find(p => p.id === c.id)) !== JSON.stringify(c)).map(c => c.id));
   await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'running', phase: 'extracting' });
   const replies: { key: string; reply: ModelReply }[] = [];
+  let savedAttempts: Promise<string[]> | undefined;
   async function call<T>(key: string, prompt: string, schema: z.ZodType<T>, validate: (value: T) => T, tokens = 12_288, system = SYSTEM): Promise<T> {
     const file = path.join(root, `${key}.json`);
     const cached = await readJson(file) as ModelReply | null;
@@ -43,13 +44,11 @@ export async function analyzeText(input: {
     if (cached && !invalidated && cached.requestHash === requestHash) {
       if (cached.model !== input.model) throw new Error('Checkpoint model mismatch.');
       const value = validate(schema.parse(cached.value));
-      cached.requestHash = requestHash;
-      await writeJson(file, cached);
       replies.push({ key, reply: cached }); log(`${key}: restored`); return value;
     }
     // A complete provider reply may survive an interrupted write or a stricter
     // prior validator. Revalidate matching attempts before spending another call.
-    const attempts = await listJson(path.join(root, 'attempts'));
+    const attempts = await (savedAttempts ??= listJson(path.join(root, 'attempts')));
     for (const name of attempts.filter(n => n.startsWith(`${key}-`)).sort().reverse()) {
       const reply = await readJson(path.join(root, 'attempts', name)) as ModelReply;
       if (reply.requestHash !== requestHash || reply.model !== input.model || invalidated) continue;
