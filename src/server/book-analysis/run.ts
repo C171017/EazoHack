@@ -1,6 +1,5 @@
 import { calibrateBookAxes } from './axis-calibration';
 import { createHash } from 'node:crypto';
-import { readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { z } from 'zod';
 import { ExtractSchema, IdentityRepairSchema, PROMPT_VERSION, ReviewSchema, SynthesisSchema, type Candidate, type CandidateEdge, type Generate, type ModelReply, type Review } from './contracts';
@@ -11,16 +10,17 @@ import { ModelRequestError } from './vertex';
 import { BookEmblemSchema } from '../../shared/book-emblem';
 import { EMBLEM_SYSTEM, emblemPrompt } from './emblem';
 
-import { readJson, writeJson } from './json-store';
+import { readJson, writeJson, listJson } from './json-store';
 import { assignBookAxes } from './axis-run';
 export { readJson, writeJson } from './json-store';
 
 export async function analyzeText(input: {
   raw: Buffer; bookId: string; outputRoot: string; model: string; generate: Generate;
+  sourceIdentity?: { fileHash: string; extractionVersion: string };
   concurrency?: number; log?: (message: string) => void;
 }) {
   const text = input.raw.toString('utf8').replace(/\r\n?/g, '\n');
-  const fileHash = createHash('sha256').update(input.raw).digest('hex');
+  const fileHash = input.sourceIdentity?.fileHash ?? createHash('sha256').update(input.raw).digest('hex');
   const chunks = prepareText(text);
   // Keep this MVP within its explicit persisted graph contract, never silently truncate.
   if (chunks.length * 8 > 500) throw new Error(`Text exceeds this MVP's 500-occurrence analysis budget (${chunks.length} chunks).`);
@@ -48,7 +48,7 @@ export async function analyzeText(input: {
     }
     // A complete provider reply may survive an interrupted write or a stricter
     // prior validator. Revalidate matching attempts before spending another call.
-    const attempts = await readdir(path.join(root, 'attempts')).catch(() => [] as string[]);
+    const attempts = await listJson(path.join(root, 'attempts'));
     for (const name of attempts.filter(n => n.startsWith(`${key}-`)).sort().reverse()) {
       const reply = await readJson(path.join(root, 'attempts', name)) as ModelReply;
       if (reply.requestHash !== requestHash || reply.model !== input.model || invalidated) continue;
@@ -128,7 +128,7 @@ export async function analyzeText(input: {
         return value;
       });
     });
-    const baseGraph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
+    const baseGraph = assembleGraph({ nodes, edges, synthesis, reviews, passages, text, fileHash, extractionVersion: input.sourceIdentity?.extractionVersion, bookId: input.bookId, graphVersion: runId, model: input.model, totalChunks: chunks.length });
     // Summaries cover every analyzed section; the emblem has a reusable checkpoint.
     baseGraph.bookEmblem = await call('book-emblem', emblemPrompt({ title: input.bookId, excerpt: JSON.stringify(extracted.map((chunk, index) => ({ section: chunks[index].section, summary: chunk.summary }))) }), BookEmblemSchema, value => value, 2048, EMBLEM_SYSTEM);
     let graph = await assignBookAxes({graph:baseGraph,outputRoot:input.outputRoot,model:input.model,generate:input.generate,log});

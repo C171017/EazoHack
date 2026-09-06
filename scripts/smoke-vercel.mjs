@@ -35,6 +35,6 @@ await check('/api/pdf/assets/ocr/eng.traineddata.gz', 200);
 await check('/api/pdf/assets/package.json', 404);
 await check('/api/dev/models', 404);
 await check('/api/pdf/layout', 200);
-// Invalid input only: never call a paid model during this infrastructure smoke test.
-await check('/api/assist/all', 400, { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' });
+// Missing origin/session must be rejected before a paid model can be called.
+await check('/api/assist/all', 403, { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' });
 console.log('Read-only/invalid-input smoke checks passed. Browser, auth, cloud jobs, AI and Shanghai network tests remain separate.');

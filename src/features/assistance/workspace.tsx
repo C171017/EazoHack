@@ -1,4 +1,5 @@
 'use client';
+import { cloudRequest } from '../cloud/library';
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
@@ -11,7 +12,7 @@ import { bookLibrary, uploadedBookId } from '../reader/book-library-store';
 import { IncompatiblePdfError, PDF_IMPORT_VERSION, pdfImportNote, type ImportState } from '../reader/pdf/import-model';
 import { Button } from '@/ui/components/button';
 import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type RouteKind } from '@/shared/schemas';
-import type { WorkspaceSnapshot } from '../persistence';
+import { WorkspaceSnapshotSchema, type WorkspaceSnapshot } from '../persistence';
 import { recordSelectionActivity, selectionTimestamp } from '../persistence/selection-activity';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
 import { resolveTxtAnchor } from '../reader/source-anchor';
@@ -26,7 +27,7 @@ import { useReadingFootprints } from '../book-graph/use-reading-footprints';
 import { useHeatPlacement } from '../book-graph/use-heat-placement';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 
-export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstrap}) {
+export function Workspace({preview,graph,initialTitle,cloudSourceId}:{preview:BookPreview;graph:MapBootstrap;initialTitle?:string;cloudSourceId?:string}) {
   const [uploaded, setUploaded] = useState<TextBook | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(false);
   const [importState, setImportState] = useState<ImportState | null>(null);
@@ -97,14 +98,14 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
   return <>
     <div className={libraryStyles.readerSurface} data-library-open={libraryOpen || undefined}>
-    <TextWorkspace key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
+    <TextWorkspace cloudSourceId={uploaded ? undefined : cloudSourceId} key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
     </div>
     <BookLibrary open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
       importState={importState} revision={libraryRevision} sampleEmblem={graph.bookEmblem} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />
   </>;
 }
 
-function TextWorkspace({preview, graph, title, onLibrary}: {preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
+function TextWorkspace({preview, graph, title, onLibrary, cloudSourceId}: {cloudSourceId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
   const bookId = graph.bookId;
   const footprints = useReadingFootprints(bookId);
   const recordFootprints = footprints.record;
@@ -126,6 +127,22 @@ function TextWorkspace({preview, graph, title, onLibrary}: {preview: BookPreview
   const [notice,setNotice] = useState('Select a passage to begin.');
   const activeRequest = useRef(0);
   const sourceRequest = useRef(0);
+  async function saveCloudReading() {
+    try {
+      const device=localStorage.getItem('eazo-device')??crypto.randomUUID();localStorage.setItem('eazo-device',device);
+      await cloudRequest('snapshot',{source:cloudSourceId,device,payload:{schemaVersion:1,id:bookId,bookId,selections,anchors,artifacts,placements,interactionState,mapView,graphViewport:null,readerPosition:{fileHash:preview.fileHash,extractionVersion:preview.extractionVersion,startOffset:readingPosition},bookmarks:[],savedAt:new Date().toISOString()}});
+      setNotice('Reading saved to your private account.');
+    } catch(error){setNotice(error instanceof Error?error.message:'Could not save reading.');}
+  }
+  async function restoreCloudReading() {
+    try {
+      const value=await cloudRequest(`snapshot?source=${cloudSourceId}`);if(!value){setNotice('No saved reading yet.');return;}
+      const saved=WorkspaceSnapshotSchema.parse(value);
+      if(saved.bookId!==bookId||saved.anchors.some(a=>a.fileHash!==preview.fileHash||a.extractionVersion!==preview.extractionVersion))throw new Error('Saved reading belongs to a different source.');
+      setSelections(saved.selections);setAnchors(saved.anchors);dispatchEnhancements({type:'reset',state:saved});setMapView(saved.mapView);if(saved.readerPosition){if(saved.readerPosition.fileHash!==preview.fileHash||saved.readerPosition.extractionVersion!==preview.extractionVersion||saved.readerPosition.startOffset>preview.sourceText.length)throw new Error('Saved position does not match this source.');reader.current?.scrollToOffset(saved.readerPosition.startOffset);}setNotice('Saved reading restored.');
+    } catch(error){setNotice(error instanceof Error?error.message:'Could not restore reading.');}
+  }
+
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.defaultPrevented || event.isComposing || event.repeat || event.altKey || !(event.metaKey || event.ctrlKey)) return;
@@ -250,6 +267,7 @@ function TextWorkspace({preview, graph, title, onLibrary}: {preview: BookPreview
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
+        {cloudSourceId&&<div className="flex gap-4 px-6 py-2 text-sm"><button onClick={()=>void saveCloudReading()}>Save reading</button><button onClick={()=>void restoreCloudReading()}>Restore saved reading</button><a href="/cloud">Cloud library</a></div>}
         <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onLibrary={onLibrary} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
       <section className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">

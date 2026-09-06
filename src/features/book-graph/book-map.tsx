@@ -2,7 +2,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import type { MapView, SourceAnchor } from '@/shared/schemas';
 import { ZOOM_POLICY, type MapBootstrap, type MapEntry, type MapLink, type NodeDetail } from '@/shared/zoom-hierarchy';
-import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, placeLabels, placeClusterHandles, PROJECTIONS, type Point3 } from './projection';
+import { initialView, confineCamera, LEVELS, beginOrbit, advanceOrbit, type OrbitMotion, approachingProjection, orbitFrom, springProgress, orientation, PROJECTIONS, type Point3 } from './projection';
+import { useMapLayout } from './use-map-layout';
 import { confinePan, fitEntries, screenWorld, mapObstacles } from './map-framing';
 import { MapGrid, ORIGIN } from './map-grid';
 import { TimelineControl } from './timeline-control';
@@ -184,13 +185,13 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     const p=toScreen(item.position,current,size,range,readingProgress);
     // Clamping a marker to the viewport would pin it in place while reading
     // and give it a false source height. Let all markers leave the viewport.
-    if(p.x<0||p.y<0||p.x>size.width||p.y>size.height)return [];
+    // Keep nearby offscreen anchors so their labels clip naturally at the
+    // edge instead of disappearing as soon as the marker crosses it.
+    if(p.x< -240||p.y< -240||p.x>size.width+240||p.y>size.height+240)return [];
     return [{...item,id:item.node.id,label:item.node.label,x:p.x,y:p.y,cluster:item.node.kind==='cluster'}];
   });
-  const points=placeClusterHandles(projectedPoints,size.width,size.height,obstacles);
   const labelCap=Math.max(1,Math.min(ZOOM_POLICY.labels,Math.floor((size.width-16)/218)*Math.floor((size.height-80)/34)));
-  const labelPoints=[...points].filter(p=>!p.exiting).sort((a,b)=>Number(b.id===current.selectedNodeId)-Number(a.id===current.selectedNodeId)||Number(b.node.kind==='cluster')-Number(a.node.kind==='cluster')).slice(0,labelCap);
-  const labels=new Map(placeLabels(labelPoints,size.width,size.height,obstacles,points.map(p=>({...p,radius:p.radius*1.1}))).map(p=>[p.id,p]));
+  const {points,labels}=useMapLayout(projectedPoints,size.width,size.height,obstacles,labelCap,current.selectedNodeId,graph.version);
   const source=(anchor:SourceAnchor)=>{change({readerAnchorId:anchor.id});onSource(anchor);};
   return <div className="book-map" onKeyDown={e=>{
     if((e.target as HTMLElement).closest('input,select,textarea'))return;
@@ -250,7 +251,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
             <circle cx={p.x} cy={p.y} r={radius+9} fill={color} opacity=".08"/>
             <circle cx={p.x} cy={p.y} r={radius} fill={cluster?'#252C35':color} stroke={color} strokeWidth="1.2"/>
             {cluster&&<text x={p.x} y={p.y+3} textAnchor="middle" className="map-cluster-count">{p.node.leafCount}</text>}
-            {label&&<><rect x={label.labelX} y={label.labelY} width={label.width} height="26" rx="5"/><text x={label.labelX+8} y={label.labelY+17}>{p.label.length>31?`${p.label.slice(0,30)}…`:p.label}</text></>}
+            {label&&<><rect className="map-label-hit" x={label.labelX} y={label.labelY} width={label.width} height="26"/><text className="map-label-text" x={label.labelX+8} y={label.labelY+17}>{p.label.length>31?`${p.label.slice(0,30)}…`:p.label}</text></>}
           </g>
         </g>;})}
       </svg>

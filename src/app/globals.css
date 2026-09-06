@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../ui/tokens/theme.css";
+@import "../features/reader/reading-fonts.css";
 @import "../ui/styles/graph.css";
 
 .scrollbar-hidden {

@@ -109,6 +109,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
 
   return <dialog ref={dialog} className={styles.library} aria-label="Library" aria-busy={busy} inert={!open} onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
     <div className={styles.inner}>
+      <a href="/cloud" style={{position:"absolute",top:24,right:32,zIndex:5}} aria-label="Open cloud library">Cloud library</a>
       <div className={styles.shelfArea}>
         <div ref={shelf} className={styles.shelfViewport} role="region" aria-label="Bookshelf" tabIndex={0} onKeyDown={event => {
           if (event.target === event.currentTarget && ['ArrowLeft', 'ArrowRight'].includes(event.key)) { event.preventDefault(); moveShelf(event.key === 'ArrowRight' ? 1 : -1); }

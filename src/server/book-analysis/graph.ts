@@ -33,7 +33,7 @@ export function validateSynthesis(value: Synthesis, nodes: Candidate[]) {
 
 export function assembleGraph(input: {
   nodes: Candidate[]; edges: CandidateEdge[]; synthesis: Synthesis; reviews: Review[];
-  passages: Map<string, Passage>; text: string; fileHash: string; bookId: string;
+  passages: Map<string, Passage>; text: string; fileHash: string; extractionVersion?: string; bookId: string;
   graphVersion: string; model: string; totalChunks: number;
 }): Graph {
   const { synthesis, passages, text, fileHash, bookId, graphVersion, model, totalChunks } = input;
@@ -47,7 +47,7 @@ export function assembleGraph(input: {
   const anchors = [...used].map(id => {
     const p = passages.get(id);
     if (!p || text.slice(p.start, p.end) !== p.text) throw new Error(`Unresolved source anchor: ${id}`);
-    return { id, bookId, fileHash, extractionVersion: 'txt-lf-v1', locators: [{ kind: 'txt', startOffset: p.start, endOffset: p.end }], quote: p.text, prefix: text.slice(Math.max(0, p.start - 80), p.start), suffix: text.slice(p.end, p.end + 80), resolution: 'exact' };
+    return { id, bookId, fileHash, extractionVersion: input.extractionVersion ?? 'txt-lf-v1', locators: [{ kind: 'txt', startOffset: p.start, endOffset: p.end }], quote: p.text, prefix: text.slice(Math.max(0, p.start - 80), p.start), suffix: text.slice(p.end, p.end + 80), resolution: 'exact' };
   });
   const themeGroups = synthesis.themes.map(t => ({ ...t, nodeIds: t.nodeIds.filter(id => keptIds.has(id)) })).filter(t => t.nodeIds.length);
   const territories = themeGroups.map((t, i) => {
@@ -66,17 +66,17 @@ export function assembleGraph(input: {
     };
   }).sort((a, b) => a.position.z - b.position.z || a.id.localeCompare(b.id));
   const graph = GraphSchema.parse({
-    id: `${bookId}-map`, bookId, graphVersion, fileHash, extractionVersion: 'txt-lf-v1', sourceLength: text.length,
+    id: `${bookId}-map`, bookId, graphVersion, fileHash, extractionVersion: input.extractionVersion ?? 'txt-lf-v1', sourceLength: text.length,
     anchors, territories, identities, nodes,
     edges: edges.map(e => ({ id: e.id, source: e.source, target: e.target, type: e.type, evidenceAnchorIds: e.passageIds, rationale: e.rationale, provenance: 'model_inferred' })),
     analysis: { status: 'complete', provider: 'vertex_ai', model, promptVersion: PROMPT_VERSION, createdAt: new Date().toISOString(), completedChunks: totalChunks, totalChunks, processedCharacters: text.length, reviewStatus: 'model_reviewed', rejectedNodes: rejectedNodes.size, rejectedEdges: input.edges.length - edges.length },
   });
-  validateGraphSource(graph, text, fileHash);
+  validateGraphSource(graph, text, fileHash, input.extractionVersion);
   return graph;
 }
 
-export function validateGraphSource(graph: Graph, text: string, fileHash: string) {
-  if (graph.fileHash !== fileHash || graph.extractionVersion !== 'txt-lf-v1' || graph.sourceLength !== text.length) throw new Error('Saved analysis belongs to a different source version.');
+export function validateGraphSource(graph: Graph, text: string, fileHash: string, extractionVersion = 'txt-lf-v1') {
+  if (graph.fileHash !== fileHash || graph.extractionVersion !== extractionVersion || graph.sourceLength !== text.length) throw new Error('Saved analysis belongs to a different source version.');
   for (const anchor of graph.anchors) {
     const locator = anchor.locators[0];
     if (locator.kind !== 'txt' || anchor.resolution !== 'exact' || text.slice(locator.startOffset, locator.endOffset) !== anchor.quote) throw new Error(`Saved analysis has an invalid exact quote: ${anchor.id}`);

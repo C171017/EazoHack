@@ -1,3 +1,4 @@
+import { guardGeneration } from "@/server/cloud/backend";
 import { EmblemRequestSchema, generateBookEmblem } from '../../../server/book-analysis/emblem';
 import { generateStructured } from '../../../server/book-analysis/vertex';
 import { readJson, requestError } from '../../../server/http';
@@ -7,7 +8,8 @@ export const maxDuration = 60;
 
 export async function POST(request: Request) {
   let input;
-  try { input = EmblemRequestSchema.parse(await readJson(request)); }
+  try {
+    await guardGeneration(request); input = EmblemRequestSchema.parse(await readJson(request)); }
   catch (error) { return requestError(error); }
   try {
     const emblem = await generateBookEmblem(input, (system, prompt, schema, tokens) =>

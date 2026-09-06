@@ -21,10 +21,11 @@
 .map-edge{stroke:#ADB5C0;stroke-width:1;stroke-dasharray:4 5;opacity:.32}
 .map-edge.is-active{opacity:.9;stroke:#E2E5E9;stroke-width:1.4}
 .map-node{cursor:pointer}
-.map-node rect{fill:#191D23;fill-opacity:.96;stroke:#424955;stroke-width:1}
+.map-node .map-label-hit{fill:transparent;stroke:none}
 .map-node text{font:11px Arial,sans-serif;fill:#E0E3E7;pointer-events:none}
-.map-node:hover rect,.map-node:focus rect,.map-node.is-selected rect{stroke:#BFC7D3;fill:#29313C}
-.map-node.is-selected circle{stroke:#E5E8EE;stroke-width:1.5}
+.map-node .map-label-text{paint-order:stroke;stroke:#121519;stroke-width:3px;stroke-linejoin:round}
+.map-node:hover .map-label-text,.map-node:focus .map-label-text,.map-node.is-selected .map-label-text{fill:#fff}
+.map-node:hover circle,.map-node:focus circle,.map-node.is-selected circle{stroke:#E5E8EE;stroke-width:1.5}
 .map-detail{margin:0 30px;border:1px solid #424955;border-radius:10px;background:#191D23;max-height:230px;overflow:auto;padding:14px 16px;flex-shrink:0}
 .map-detail h3{font-family:var(--font-reading);font-size:19px;margin:5px 0 10px}
 .map-detail small{font-size:10px;color:#A9B1BD}

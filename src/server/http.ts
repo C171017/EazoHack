@@ -6,7 +6,7 @@ export class RequestBodyError extends Error {
 }
 
 /** Bound body reads before parsing; selections/configurations cannot grow without limit. */
-export async function readJson(request: Request): Promise<unknown> {
+export async function readJson(request: Request, maxBytes = MAX_JSON_BYTES): Promise<unknown> {
   if (!request.headers.get("content-type")?.toLowerCase().startsWith("application/json")) throw new RequestBodyError("Use application/json.", 415);
   const reader = request.body?.getReader();
   if (!reader) throw new RequestBodyError("A JSON request body is required.", 400);
@@ -18,9 +18,9 @@ export async function readJson(request: Request): Promise<unknown> {
       const { value, done } = await reader.read();
       if (done) break;
       size += value.byteLength;
-      if (size > MAX_JSON_BYTES) {
+      if (size > maxBytes) {
         await reader.cancel();
-        throw new RequestBodyError("Request exceeds the scaffold's 128 KiB input limit.", 413);
+        throw new RequestBodyError(`Request exceeds the ${Math.floor(maxBytes / 1024)} KiB input limit.`, 413);
       }
       text += decoder.decode(value, { stream: true });
     }

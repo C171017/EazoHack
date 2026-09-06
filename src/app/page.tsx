@@ -1,3 +1,5 @@
+import { selectedCloudBook } from '@/server/cloud/map';
+import { redirect } from 'next/navigation';
 import { getBookPreview } from '@/features/reader/book-preview';
 import { Workspace } from '@/features/assistance/workspace';
 import { connection } from 'next/server';
@@ -6,6 +8,8 @@ import { loadMapStore, mapBootstrap } from '@/server/book-map/store';
 
 export default async function Page() {
   await connection();
+  let cloud;try {cloud=await selectedCloudBook();} catch {redirect('/cloud');}
+  if(cloud)return <Workspace preview={cloud.preview} graph={cloud.graph} initialTitle={cloud.title} cloudSourceId={cloud.sourceId}/>;
   const preview = await getBookPreview();
   let graph:MapBootstrap;
   try { graph=mapBootstrap(await loadMapStore()); }

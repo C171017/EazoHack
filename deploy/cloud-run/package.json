@@ -1,0 +1,11 @@
+{
+  "name": "eazo-book-worker",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@vercel/oidc": "3.8.5",
+    "google-auth-library": "11.0.2",
+    "tsx": "4.23.13",
+    "zod": "4.5.4"
+  }
+}

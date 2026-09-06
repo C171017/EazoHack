@@ -43,14 +43,16 @@ export function worldPoint(node: Graph['nodes'][number], range: [number,number],
 }
 // Leader lines offset labels only; points always retain their semantic positions.
 export type LabelObstacle={x:number;y:number;width:number;height:number};
+export type MapOffset={x:number;y:number};
 // Cluster badges are navigation handles. A bounded offset keeps tied groups
 // clickable; callers draw the unchanged semantic anchor and its connector.
-export function placeClusterHandles<T extends {id:string;x:number;y:number;radius:number;cluster:boolean}>(points:T[],width:number,height:number,obstacles:LabelObstacle[]) {
+export function placeClusterHandles<T extends {id:string;x:number;y:number;radius:number;cluster:boolean}>(points:T[],width:number,height:number,obstacles:LabelObstacle[],previous:ReadonlyMap<string,MapOffset>=new Map()) {
   const occupied=points.filter(p=>!p.cluster).map(p=>({x:p.x,y:p.y,radius:p.radius}));
   const positions=new Map<string,{x:number;y:number}>();
-  for(const p of [...points].filter(p=>p.cluster).sort((a,b)=>a.id.localeCompare(b.id))) {
+  for(const p of [...points].filter(p=>p.cluster).sort((a,b)=>Number(previous.has(b.id))-Number(previous.has(a.id))||a.id.localeCompare(b.id))) {
     const radius=p.radius*1.1+5;
-    const candidates=[{x:p.x,y:p.y},...[32,48,64].flatMap(distance=>Array.from({length:12},(_,i)=>({x:p.x+distance*Math.cos(i*Math.PI/6),y:p.y+distance*Math.sin(i*Math.PI/6)})))];
+    const retained=previous.get(p.id);
+    const candidates=[...(retained?[{x:p.x+retained.x,y:p.y+retained.y}]:[]),{x:p.x,y:p.y},...[32,48,64].flatMap(distance=>Array.from({length:12},(_,i)=>({x:p.x+distance*Math.cos(i*Math.PI/6),y:p.y+distance*Math.sin(i*Math.PI/6)})))];
     const position=candidates.find(q=>q.x>=radius&&q.y>=radius&&q.x<=width-radius&&q.y<=height-radius
       &&!occupied.some(o=>Math.hypot(q.x-o.x,q.y-o.y)<radius+o.radius)
       &&!obstacles.some(o=>q.x+radius>o.x&&q.x-radius<o.x+o.width&&q.y+radius>o.y&&q.y-radius<o.y+o.height))??p;
@@ -58,27 +60,41 @@ export function placeClusterHandles<T extends {id:string;x:number;y:number;radiu
   }
   return points.map(p=>({...p,anchorX:p.x,anchorY:p.y,...positions.get(p.id)}));
 }
-export function placeLabels<T extends {id:string;x:number;y:number;label:string;radius?:number}>(points: T[], width:number,height:number,obstacles:LabelObstacle[]=[],markers: {x:number;y:number;radius?:number}[]=points) {
-  const boxes: LabelObstacle[] = [...obstacles,...markers.map(p=>({x:p.x-(p.radius??18)-5,y:p.y-(p.radius??18)-5,width:((p.radius??18)+5)*2,height:((p.radius??18)+5)*2}))];
-  return points.flatMap(p => {
-    const w = Math.min(Math.max(40,width-16),210,Math.max(100,Math.min(p.label.length,31)*6.1+18));
-    const clearance=(p.radius??18)+12;
-    const preferredX = Math.max(8,Math.min(width-w-8,p.x+clearance));
-    const preferredY = Math.max(12,Math.min(height-30,p.y-12));
-    const columns = Math.max(1,Math.floor((width-16)/218));
-    // Find the nearest free label slot anywhere in the scene. Only the labels
-    // move; source-derived points and the graph's XYZ values remain untouched.
-    const xs = [...new Set([preferredX,Math.max(8,Math.min(width-w-8,p.x-w-clearance)),...Array.from({length:columns},(_,i)=>8+i*218)])];
-    const ys = [...new Set([preferredY,...Array.from({length:Math.max(1,Math.floor((height-24)/30))},(_,i)=>12+i*30)])];
-    const slots=xs.flatMap(x=>ys.map(y=>({x,y,score:(x-preferredX)**2+(y-preferredY)**2}))).sort((a,b)=>a.score-b.score);
-    const slot=slots.find(({x,y})=>!boxes.some(b=>x < b.x+b.width+4 && x+w+4 > b.x && y < b.y+b.height+4 && y+26+4 > b.y));
-    // Omit a label when the pane has no safe slot; the focusable marker and
-    // its accessible name remain available. Never fall back to an overlap.
-    if(!slot)return [];
-    const {x,y}=slot;
-    boxes.push({x,y,width:w,height:26});
-    return [{...p,labelX:x,labelY:y,width:w}];
-  });
+export function placeLabels<T extends {id:string;x:number;y:number;label:string;radius?:number}>(points:T[],width:number,height:number,obstacles:LabelObstacle[]=[],markers:{x:number;y:number;radius?:number}[]=points,previous:ReadonlyMap<string,MapOffset>=new Map()) {
+  const boxes:LabelObstacle[]=[...obstacles,...markers.map(p=>({x:p.x-(p.radius??18)-5,y:p.y-(p.radius??18)-5,width:((p.radius??18)+5)*2,height:((p.radius??18)+5)*2}))];
+  const placed=new Map<string,T&{labelX:number;labelY:number;width:number}>();
+  const pending:T[]=[];
+  const labelWidth=(p:T)=>Math.min(Math.max(40,width-16),210,Math.max(100,Math.min(p.label.length,31)*6.1+18));
+  const free=(x:number,y:number,w:number,gap:number)=>x>=8&&y>=12&&x+w<=width-8&&y+26<=height-4
+    &&!boxes.some(b=>x<b.x+b.width+gap&&x+w+gap>b.x&&y<b.y+b.height+gap&&y+26+gap>b.y);
+  const reserve=(p:T,x:number,y:number,w:number)=>{
+    boxes.push({x,y,width:w,height:26});placed.set(p.id,{...p,labelX:x,labelY:y,width:w});
+  };
+  // Reserve valid old offsets first, so an entering node cannot steal a
+  // neighbour's label slot. Smaller retention clearance adds hysteresis.
+  for(const p of points) {
+    const offset=previous.get(p.id),w=labelWidth(p);
+    if(offset&&free(p.x+offset.x,p.y+offset.y,w,2))reserve(p,p.x+offset.x,p.y+offset.y,w);
+    else pending.push(p);
+  }
+  for(const p of pending) {
+    const w=labelWidth(p),clearance=(p.radius??18)*1.1+14;
+    // All slots follow the node, not a screen-aligned grid. Search all sides
+    // locally before considering longer leaders; use the pane's spare space.
+    const slots=[0,32,64,96,128,160].flatMap(extra=>{
+      const d=clearance+extra;
+      return [
+        {x:p.x+d,y:p.y-13},{x:p.x-w-d,y:p.y-13},
+        {x:p.x-w/2,y:p.y-26-d},{x:p.x-w/2,y:p.y+d},
+        {x:p.x+d,y:p.y-26-d},{x:p.x-w-d,y:p.y-26-d},
+        {x:p.x+d,y:p.y+d},{x:p.x-w-d,y:p.y+d},
+      ].map(slot=>({...slot,score:extra*10+Math.hypot(slot.x+w/2-width/2,slot.y+13-height/2)*.02}));
+    }).sort((a,b)=>a.score-b.score);
+    const slot=slots.find(({x,y})=>free(x,y,w,8));
+    // No unsafe fallback: the marker and its accessible name stay available.
+    if(slot)reserve(p,slot.x,slot.y,w);
+  }
+  return points.flatMap(p=>{const label=placed.get(p.id);return label?[label]:[];});
 }
 
 // A wide capture radius encourages flat views; direction decides whether to snap.
