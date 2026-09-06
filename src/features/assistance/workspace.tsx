@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import type { BookPreview } from '../reader/book-preview';
 import { readUploadedBook, type UploadedBook, type TextBook } from '../reader/upload-book';
 import { BookLibrary } from '../reader/book-library';
+import libraryStyles from '../reader/book-library.module.css';
 import { ensureBookEmblem } from '../reader/book-emblem-client';
 import type { ShelfPlacement } from '../reader/bookshelf-model';
 import { bookLibrary, uploadedBookId } from '../reader/book-library-store';
@@ -95,9 +96,11 @@ export function Workspace({preview,graph}:{preview:BookPreview;graph:MapBootstra
   }
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
   return <>
+    <div className={libraryStyles.readerSurface} data-library-open={libraryOpen || undefined}>
     <TextWorkspace key={uploaded?.bookId ?? graph.bookId} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
-    {libraryOpen && <BookLibrary currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
-      importState={importState} revision={libraryRevision} sampleEmblem={graph.bookEmblem} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />}
+    </div>
+    <BookLibrary open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
+      importState={importState} revision={libraryRevision} sampleEmblem={graph.bookEmblem} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />
   </>;
 }
 

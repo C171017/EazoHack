@@ -84,7 +84,6 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   },[]);
   useEffect(()=>()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();},[]);
   // Native non-passive listener is required for trackpad pinch (ctrl+wheel).
-  // Flat views use ordinary wheel/trackpad scrolling to pan in screen space.
   useEffect(()=>{
     const element=stage.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
@@ -93,7 +92,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       event.preventDefault();if(gesture)return;
       const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
       const pinch=event.ctrlKey||event.metaKey;
-      if(!pinch&&(latest.current.current.projection==='3d'||event.target.closest('.map-timeline-control')))return;
+      if(!pinch&&event.target.closest('.map-timeline-control'))return;
       if(frame.current!==null)cancelAnimationFrame(frame.current);
       navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
@@ -206,11 +205,11 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
         onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
         onBlur={()=>{keyboardOrbit.current=null;}}
         onPointerDown={e=>{
-          if(drag.current||(e.target as Element).closest('[data-node-id]')||![0,1,2].includes(e.button)||(latest.current.current.projection==='3d'&&(e.button!==0||e.shiftKey)))return;
+          if(drag.current||(e.target as Element).closest('[data-node-id]')||![0,1,2].includes(e.button))return;
           e.preventDefault();
           cancelMotion();keyboardOrbit.current=null;navigation.current?.abort();setNavigating(false);
           const view=latest.current.current;
-          drag.current={id:e.pointerId,mode:view.projection!=='3d'&&!e.altKey?'pan':'orbit',x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),moved:false};
+          drag.current={id:e.pointerId,mode:e.button===1||e.button===2?'pan':'orbit',x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),moved:false};
           e.currentTarget.setPointerCapture(e.pointerId);
         }}
         onPointerMove={e=>{
@@ -227,9 +226,9 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
           d.lastX=e.clientX;d.lastY=e.clientY;
           latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
         }}
-        onContextMenu={e=>{if(current.projection!=='3d')e.preventDefault();}}
+        onContextMenu={e=>e.preventDefault()}
         onPointerUp={e=>{if(drag.current?.id!==e.pointerId)return;finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
-        <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to zoom through the saved hierarchy. Activate a group to zoom into it; zoom out to return to broader groups. In flat views, scroll with two fingers or drag to pan; mouse wheel scrolls vertically and Shift-wheel horizontally. Alt-drag or Alt-arrow keys orbit; in 3D, drag to orbit within the three grid fences. Arrow keys pan flat views. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
+        <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to zoom through the saved hierarchy. Activate a group to zoom into it; zoom out to return to broader groups. Drag to rotate in every projection. Two-finger scroll pans and pinch zooms. Right or middle drag pans. Alt-arrow keys orbit. Arrow keys pan flat views. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#ADB5C0"/></marker></defs>
         <MapGrid size={size} projection={current.projection} screen={screen} axisVersion={graph.axisVersion} readingProgress={readingProgress}/>
         {heat&&<g data-heat-targets>{heatTargets.map(point=>{

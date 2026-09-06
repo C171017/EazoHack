@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev --webpack --hostname 127.0.0.1",
     "build": "next build --webpack",
+    "build:vercel": "node scripts/prepare-vercel-assets.mjs && next build --webpack && node scripts/check-vercel-build.mjs",
+    "check:vercel": "node scripts/check-vercel-build.mjs",
+    "smoke:vercel": "node scripts/smoke-vercel.mjs",
     "start": "next start --hostname 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
@@ -47,6 +50,6 @@
     "typescript": "^6.0.3"
   },
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=22.13.0 <23"
   }
 }

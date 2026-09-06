@@ -60,3 +60,4 @@
 
 /* Fade before the Z axis collapses in the top-down projection. */
 .map-timeline-control[data-hidden='true']{opacity:0;visibility:hidden;pointer-events:none;transform:translate(-50%,-50%) scale(.9);transition:opacity .2s ease,transform .2s ease,visibility 0s .2s}
+

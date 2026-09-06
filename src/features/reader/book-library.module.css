@@ -7,7 +7,9 @@
   margin: 0; padding: 0; border: 0; color: var(--shelf-ink); background: var(--shelf-paper) var(--paper-texture) repeat;
   background-size: 600px 600px; font-family: Arial, sans-serif; overflow: auto; color-scheme: light;
 }
-.library[open] { animation: arrive 450ms ease-out both; }
+.readerSurface { opacity: 1; transform: none; transition: opacity 420ms cubic-bezier(.22,1,.36,1), transform 420ms cubic-bezier(.22,1,.36,1); transform-origin: 50% 45%; }
+.readerSurface[data-library-open] { opacity: 0; transform: translateY(-8px) scale(.985); }
+.library[inert] { pointer-events: none; }
 .library::backdrop { background: #302d2730; }
 .library button { color: inherit; cursor: pointer; }
 .library button:disabled { cursor: default; }
@@ -79,7 +81,7 @@
 .cardActions button[type='submit'] { border-bottom: 1px solid #403a3180; }
 .cardActions button[type='submit'] span { margin-left: 10px; }
 .cardActions button:disabled { opacity: .4; }
-@keyframes arrive { from { opacity: 0; } to { opacity: 1; } }
+
 @media (max-width: 600px) {
   .inner { padding: 90px 16px 40px; }
   .shelfArea { margin-top: 0; }
@@ -87,7 +89,8 @@
   .titleCard { padding: 26px; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .library[open] { animation: none; }
+  .readerSurface { transition: none; }
+  .readerSurface[data-library-open] { transform: none; }
   .library *, .library *::after { transition: none !important; }
 }
 @media (forced-colors: active) {

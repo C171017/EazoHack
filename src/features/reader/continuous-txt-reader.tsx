@@ -395,8 +395,6 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     <header className="txt-reader-heading">
       <p className="txt-reader-eyebrow">{bookId === "plato-republic" ? "Plato · Translated by Benjamin Jowett" : "Your uploaded book"}</p>
       <h1>{title}</h1>
-      <p className="txt-reader-edition">{bookId === "plato-republic" ? "Third edition · Complete text" : bookId.startsWith('pdf-text:') ? 'Extracted text · Original PDF saved' : "Complete text"}</p>
-      <p className="txt-reader-hint">Select a passage to explore it.</p>
     </header>
     <div
       ref={documentRoot}

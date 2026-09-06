@@ -9,7 +9,8 @@ import type { UploadedBook } from './upload-book';
 import type { ImportState } from './pdf/import-model';
 import styles from './book-library.module.css';
 
-export function BookLibrary({ currentId, onSelect, onUpload, onClose, importState, revision, onCancel, onRetry, sampleEmblem }: {
+export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, importState, revision, onCancel, onRetry, sampleEmblem }: {
+  open: boolean;
   currentId: string;
   onSelect: (book: UploadedBook | null) => Promise<void>;
   onUpload: (file: File, placement?: ShelfPlacement) => Promise<void>;
@@ -38,9 +39,26 @@ export function BookLibrary({ currentId, onSelect, onUpload, onClose, importStat
 
   useEffect(() => {
     const element = dialog.current;
-    element?.showModal();
-    return () => element?.close();
-  }, []);
+    if (!element) return;
+    if (open && !element.open) element.showModal();
+    if (!element.open) return;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const timing = { duration: reduced ? 0 : 420, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'both' as const };
+    const fade = element.animate(open ? [{ opacity: 0 }, { opacity: 1 }] : [{ opacity: 1 }, { opacity: 0 }], timing);
+    const content = element.querySelector(`.${styles.inner}`);
+    const movement = content?.animate(open
+      ? [{ transform: 'translateY(20px) scale(.975)' }, { transform: 'translateY(0) scale(1)' }]
+      : [{ transform: 'translateY(0) scale(1)' }, { transform: 'translateY(-14px) scale(1.025)' }], timing);
+    let active = true;
+    void fade.finished.then(() => {
+      if (!active) return;
+      if (!open) element.close();
+      fade.cancel();
+      movement?.cancel();
+    }).catch(() => { /* A reversed transition cancels the previous animation. */ });
+    return () => { active = false; fade.cancel(); movement?.cancel(); };
+  }, [open]);
+  useEffect(() => () => dialog.current?.close(), []);
   useEffect(() => {
     let active = true;
     bookLibrary.list().then(entries => { if (active) setBooks(entries); })
@@ -71,6 +89,7 @@ export function BookLibrary({ currentId, onSelect, onUpload, onClose, importStat
   }, [slotCount]);
 
   async function openBook(id: string) {
+    if (busy || !open) return;
     setBusy(true); setError('');
     try { await onSelect(id === 'plato-republic' ? null : await bookLibrary.load(id)); }
     catch (reason) { setError(reason instanceof Error ? reason.message : 'Could not open this book.'); }
@@ -88,7 +107,7 @@ export function BookLibrary({ currentId, onSelect, onUpload, onClose, importStat
     finally { setBusy(false); }
   }
 
-  return <dialog ref={dialog} className={styles.library} aria-label="Library" onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
+  return <dialog ref={dialog} className={styles.library} aria-label="Library" aria-busy={busy} inert={!open} onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
     <div className={styles.inner}>
       <div className={styles.shelfArea}>
         <div ref={shelf} className={styles.shelfViewport} role="region" aria-label="Bookshelf" tabIndex={0} onKeyDown={event => {
