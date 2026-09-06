@@ -277,7 +277,7 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
       const selected=selections.find(s=>s.id===id),anchor=anchors.find(a=>selected?.anchorIds.includes(a.id));
       const locator=resolveTxtAnchor(anchor,{...preview,bookId});
       if(!locator||!selected)continue;
-      slots.push({id:`request-${id}`,offset:locator.endOffset,content:status.failed
+      slots.push({id:`request-${id}`,offset:locator.endOffset,centerUnder:status.failed ? undefined : locator,content:status.failed
         ? <div role="status" className="rounded-lg border border-line p-3 text-xs">{status.message}<Button disabled={busy} onClick={()=>void exercise(selected,status.routes)}>Retry failed routes</Button></div>
         : <div role="status" className="flex items-center py-3 text-ink">
             <span aria-hidden="true" className="size-5 animate-spin rounded-full border-2 border-current border-t-transparent motion-reduce:animate-none" />

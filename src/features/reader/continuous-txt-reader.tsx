@@ -30,9 +30,51 @@ export type ContinuousTxtReaderHandle = {
 };
 
 type HighlightRange = { startOffset: number; endOffset: number } | null;
-export type ReaderSlot = { id: string; offset: number; content: ReactNode };
+export type ReaderSlot = { id: string; offset: number; content: ReactNode; centerUnder?: { startOffset: number; endOffset: number } };
 const EMPTY_SLOTS: ReaderSlot[] = [];
 const EMPTY_HIGHLIGHTS: EnhancementHighlight[] = [];
+
+function ReaderArtifact({ slot }: { slot: ReaderSlot }) {
+  const element = useRef<HTMLElement>(null);
+  useLayoutEffect(() => {
+    const aside = element.current, selected = slot.centerUnder;
+    const root = aside?.closest('[data-testid="book-text"]');
+    if (!aside || !root || !selected) return;
+    const align = () => {
+      const rects: DOMRect[] = [];
+      // Measure only source text, excluding assistance inserted in the passage.
+      for (const span of root.querySelectorAll<HTMLElement>('[data-txt-block]')) {
+        const start = Number(span.dataset.txtStart), end = Number(span.dataset.txtEnd);
+        if (start >= selected.endOffset || end <= selected.startOffset) continue;
+        const walker = document.createTreeWalker(span, NodeFilter.SHOW_TEXT);
+        let offset = start;
+        for (let node = walker.nextNode(); node; node = walker.nextNode()) {
+          const length = node.textContent?.length ?? 0;
+          const from = Math.max(0, selected.startOffset - offset);
+          const to = Math.min(length, selected.endOffset - offset);
+          if (from < to) {
+            const range = document.createRange();
+            range.setStart(node, from); range.setEnd(node, to);
+            rects.push(...Array.from(range.getClientRects()).filter(rect => rect.width > 0));
+          }
+          offset += length;
+        }
+      }
+      if (!rects.length) return;
+      const center = (Math.min(...rects.map(rect => rect.left)) + Math.max(...rects.map(rect => rect.right))) / 2;
+      aside.style.setProperty('--selection-center', `${center - aside.getBoundingClientRect().left}px`);
+    };
+    align();
+    const observer = new ResizeObserver(align);
+    observer.observe(root);
+    let active = true;
+    void document.fonts.ready.then(() => { if (active) align(); });
+    return () => { active = false; observer.disconnect(); };
+  });
+  return <aside ref={element} data-reader-artifact={slot.id} className="reader-artifact" aria-label="Passage assistance">
+    {slot.centerUnder ? <div style={{ width: 'max-content', marginLeft: 'var(--selection-center, 50%)', transform: 'translateX(-50%)' }}>{slot.content}</div> : slot.content}
+  </aside>;
+}
 
 const TxtChunk = memo(function TxtChunk({
   chunk,
@@ -82,7 +124,7 @@ const TxtChunk = memo(function TxtChunk({
       >
         {renderText(part.startOffset, pageStart)}
         {pageStart < part.endOffset && <span className="txt-contents-page">{renderText(pageStart, part.endOffset)}</span>}
-      </span>{slots.filter(s=>s.offset===part.endOffset).map(slot=><aside key={slot.id} data-reader-artifact={slot.id} className="reader-artifact" aria-label="Passage assistance">{slot.content}</aside>)}</Fragment>;
+      </span>{slots.filter(s=>s.offset===part.endOffset).map(slot=><ReaderArtifact key={slot.id} slot={slot}/>)}</Fragment>;
     })}</div>)}
   </section>;
 });
