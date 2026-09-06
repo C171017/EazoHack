@@ -39,9 +39,27 @@ Synthesis now permits three independent portions at a time. Global identity reco
 
 ## Validation and completion
 
-In progress: follow the resumed real book through concept reconciliation, evidence review, axis assignment/consistency, and hierarchy publication, then validate exact anchors and bounded map loading. Do not treat `text ready`, extraction completion, or a worker heartbeat as map completion.
+Completed locally at **10:25:20 China time**. Final result: **720 occurrences, 438 identities, 745 links, 1,424 exact source anchors, six roots, five zoom levels, 972 hierarchy entries, and zero unknown coordinates**. Every one of the 720 graph leaves is present exactly once in the hierarchy; all 130 extracted-text chunks were processed. Exact anchors were independently checked against the saved source. These checks establish structural/source integrity, not human verification of every semantic interpretation.
 
-Automated checks: 202 tests passed, including network/proxy fault injection, cancellation, work-pool ordering/draining, and synthesis salvage boundaries. TypeScript and focused ESLint passed. A further 20 targeted integration tests passed after extending the pool to axes and hierarchy. The controlled worker termination was detected in the reader; retry resumed saved work. The real-book map outcome remains pending.
+The saved response history spans 09:40:12–10:25:20 (about 45 minutes), including work that predated this test, failed synthesis retries, and deliberate restarts. It must not be used as a clean optimized-runtime benchmark. There are 427 saved provider responses, including rejected attempts; interrupted calls without saved responses are not included.
+
+| Recorded stage | Saved responses | Response-time window (China time) | Notes |
+| --- | ---: | --- | --- |
+| Passage analysis, synthesis, reconciliation, evidence review | 230 | 09:40:12–10:06:54 | Includes earlier run, retries and resumptions |
+| Axis assignment and review | 67 | 10:06:54–10:15:36 | Includes one rejected response and restart |
+| Whole-book axis consistency | 36 | 10:15:36–10:21:27 | Four bounded passes plus chain closure |
+| Hierarchy generation and review | 94 | 10:21:28–10:25:20 | All leaves retained through five levels |
+
+Final API checks against the running local server:
+
+- Source/map validation and local store creation: 95 ms in the checking process.
+- Bootstrap: 6,033 bytes; full saved graph: approximately 5.6 MiB. Status including bootstrap: 6,196 bytes, measured at 30 ms and 9 ms. These are spot checks, not latency percentiles or an uncached production benchmark.
+- Child-group request: 2,487 bytes / 7 ms; occurrence detail: 5,581 bytes / 7 ms; locating a leaf with ancestor pages: 11,338 bytes / 6 ms.
+- Oversized child request correctly rejected with HTTP 400; stale map version correctly rejected with HTTP 409.
+- Browser displays the Economics map with its six generated top-level groups. Group activation loads deeper hierarchy content and generated summaries.
+- Controlled worker termination was detected in the reader; retry resumed saved work. Browser reload/reopen reconnected without re-extracting the PDF. Network/proxy errors and cancellation were also tested with fault-injected requests.
+
+Final validation run: **214 tests passed**, TypeScript passed, and focused ESLint passed. No production build was run alongside the active development server. Read-only API evidence is saved in `.local-dev/economics-map-validation.json`; response accounting is in `.local-dev/economics-pipeline-metrics.json`.
 
 ## Next priorities
 
