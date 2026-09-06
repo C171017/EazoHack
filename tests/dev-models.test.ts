@@ -16,7 +16,7 @@ test('production refuses both settings and local panel assets', async () => {
   Object.assign(process.env, { NODE_ENV: 'production' });
   try {
     assert.deepEqual(readDevModels(), DEFAULT_DEV_MODELS);
-    for (const kind of ['interactive_ui', 'concept_diagram', 'interactive_panel'] as const) assert.equal(routeProviderName(kind), 'inco');
+    for (const kind of ['interactive_ui', 'concept_diagram', 'interactive_panel'] as const) assert.equal(routeProviderName(kind), 'vertex_ai');
     assert.equal(analysisModel(), process.env.GEMINI_MODEL?.trim() || 'gemini-3.8-flash');
     assert.throws(() => saveDevModels(DEFAULT_DEV_MODELS));
     for (const url of ['http://localhost:3000/api/dev/models', 'http://localhost:3000/api/dev/models?asset=panel']) assert.equal((await GET(new Request(url))).status, 404);

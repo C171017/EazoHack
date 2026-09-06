@@ -149,6 +149,6 @@ test("HTTP handlers enforce schema, route identity and body-size limits", async 
   assert.equal((await planPost(json({ selection: fixtureSelection, routes: ["interactive_ui"], code: "run()" }))).status, 400);
   const realPlanResponse = await planPost(json({ selection: fixtureSelection, routes: ["interactive_ui"], mode: "real" }));
   assert.equal(realPlanResponse.status, 200);
-  assert.equal((await realPlanResponse.json()).provider, "inco");
+  assert.equal((await realPlanResponse.json()).provider, "vertex_ai");
   assert.equal((await planPost(json({ padding: "x".repeat(129 * 1024) }))).status, 413);
 });

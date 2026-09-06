@@ -235,7 +235,6 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
             <div className={styles.shelfEdge} aria-hidden="true"><svg viewBox="0 0 1200 24" preserveAspectRatio="none"><path d="M1 2Q300 0 600 2T1199 2L1194 18Q900 20 600 18T5 18Z M7 7Q300 5 600 7T1194 7 M22 10 27 16 M30 10 35 16 M38 10 43 16 M1158 10 1163 16 M1166 10 1171 16 M1174 10 1179 16"/></svg></div>
           </div>
         </div>
-        <p className={styles.hint}>Drag to rearrange. Toss past the window’s edge to say goodbye.</p>
         <div className={styles.shelfDetails}>
           {(scroll.left || scroll.right) && <div className={styles.scrollControls}><button type="button" aria-label="Scroll shelf left" disabled={!scroll.left} onClick={() => moveShelf(-1)}>←</button><button type="button" aria-label="Scroll shelf right" disabled={!scroll.right} onClick={() => moveShelf(1)}>→</button></div>}
         </div>
