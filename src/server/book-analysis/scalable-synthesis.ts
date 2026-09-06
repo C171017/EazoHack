@@ -1,4 +1,5 @@
 import { mergeBookIdentities } from './identity-merge';
+import { mapConcurrent } from './work-pool';
 import { z } from 'zod';
 import { SynthesisSchema, IdentityRepairSchema, type Candidate, type Passage, type Synthesis } from './contracts';
 import { validateSynthesis, validateSynthesisForRepair, missingIdentityNodes } from './graph';
@@ -7,10 +8,11 @@ export type CheckedCall = <T>(key: string, prompt: string, schema: z.ZodType<T>,
 const ThemeGroups = z.object({ groups: z.array(z.object({ label: z.string().min(1).max(180), rationale: z.string().min(1).max(1500), members: z.array(z.number().int().nonnegative()).min(1) }).strict()).min(1).max(7) }).strict();
 
 /** Bounded model requests; every occurrence survives, even when identities cannot safely be merged. */
-export async function scalableSynthesis(nodes: Candidate[], passages: Map<string, Passage>, call: CheckedCall, log: (message: string) => void): Promise<Synthesis> {
+export async function scalableSynthesis(nodes: Candidate[], passages: Map<string, Passage>, call: CheckedCall, log: (message: string) => void, concurrency = 3): Promise<Synthesis> {
   const result: Synthesis = { themes: [], identities: [], crossEdges: [] };
   const size = 48, total = Math.ceil(nodes.length / size);
-  for (let start = 0; start < nodes.length; start += size) {
+  let completed = 0;
+  const portions = await mapConcurrent(Array.from({ length: total }, (_, index) => index * size), concurrency, async start => {
     const targets = nodes.slice(start, start + size);
     const value = await call(`synthesis-batch-${start / size + 1}`, synthesisPrompt(targets, passages).replace('across the complete text', 'within this supplied portion of the book; do not claim complete-book reconciliation'), SynthesisSchema, v => validateSynthesisForRepair(v, targets), 24_576);
     const missing = missingIdentityNodes(value, targets);
@@ -26,10 +28,13 @@ export async function scalableSynthesis(nodes: Candidate[], passages: Map<string
       }
     }
     validateSynthesis(value,targets);
+    log(`Connecting passages: ${++completed} of ${total} sections complete`);
+    return value;
+  });
+  for (const value of portions) {
     result.themes.push(...value.themes);
     result.identities.push(...value.identities);
     result.crossEdges.push(...value.crossEdges);
-    log(`Connecting passages: ${start / size + 1} of ${total} sections complete`);
   }
   // Reduce only bounded summaries; membership is expanded by code, never emitted by the model.
   let level = 0;

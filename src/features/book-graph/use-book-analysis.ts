@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import type { BookPreview } from '../reader/book-preview';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
+import { analysisRequest } from './analysis-request';
 type AnalysisState = { status: 'starting' | 'running' | 'ready' | 'failed' | 'idle' | 'unavailable'; stage: string; error?: string; key?: string; graph?: MapBootstrap; updatedAt?: number };
 export function useBookAnalysis(bookId: string, preview: BookPreview, enabled: boolean) {
   const [attempt, setAttempt] = useState(0);
@@ -12,10 +13,9 @@ export function useBookAnalysis(bookId: string, preview: BookPreview, enabled: b
     const controller=new AbortController();
     const storageKey=`eazo-map-job:${bookId}:${preview.extractionVersion}`;
     async function request(url:string, body?:object) {
-      const response=await fetch(url,{signal:controller.signal, ...(body?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)}:{})});
-      const data=await response.json();
-      if(!response.ok)throw Object.assign(new Error(data.error?.message??'Could not check map analysis.'),{status:response.status});
-      return data as AnalysisState;
+      return analysisRequest<AnalysisState>(url, {signal:controller.signal,body,reconnect:()=>{
+        if(active)setState(previous=>({...previous,stage:'Connection interrupted. Reconnecting to your book analysis…'}));
+      }});
     }
     function accept(data:AnalysisState) {
       if(!active)return;

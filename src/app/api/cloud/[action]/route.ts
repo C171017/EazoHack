@@ -76,6 +76,13 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    if(payload.bookId!==book.local_book_id||payload.anchors.some(a=>a.fileHash!==source.file_hash||a.extractionVersion!==source.extraction_version))throw new RequestBodyError('Saved reading does not match this source.',400);
    await backend('/rest/v1/reading_snapshots',user.token,{method:'POST',body:JSON.stringify({owner_id:user.id,book_id:source.book_id,source_id:id,checkpoint_id:payload.id,device_id:device,payload})});return json({ok:true});
   }
+  if(action==='connection') {
+   // Authenticate both cloud identities without starting a job or making a model call.
+   const {vertexAccessToken}=await import('@/server/providers/vertex-gemini');
+   const {bookAnalysisAccessToken}=await import('@/server/book-analysis/cloud/invoke');
+   await Promise.all([vertexAccessToken(),bookAnalysisAccessToken()]);
+   return json({ok:true});
+  }
   if(action==='resume') {
    if(process.env.EAZO_ENABLE_ANALYSIS!=='1')throw new RequestBodyError('Hosted analysis is not enabled yet.',503);
    const {job:id}=z.object({job:uuid}).parse(body);

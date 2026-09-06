@@ -1,4 +1,5 @@
 import { scalableSynthesis } from './scalable-synthesis';
+import { mapConcurrent } from './work-pool';
 import { calibrateBookAxes } from './axis-calibration';
 import { createHash } from 'node:crypto';
 import path from 'node:path';
@@ -78,14 +79,7 @@ export async function analyzeText(input: {
     throw new Error('Analysis retry exhausted.');
   }
   async function batch<T, R>(items: T[], task: (item: T, index: number) => Promise<R>): Promise<R[]> {
-    const values: R[] = [];
-    for (let start = 0; start < items.length; start += concurrency) {
-      const results = await Promise.allSettled(items.slice(start, start + concurrency).map((item, index) => task(item, start + index)));
-      const failures = results.filter(r => r.status === 'rejected');
-      for (const result of results) if (result.status === 'fulfilled') values.push(result.value);
-      if (failures.length) throw new Error(failures.map(f => String(f.reason)).join('\n'));
-    }
-    return values;
+    return mapConcurrent(items, concurrency, task);
   }
   try {
     log(`Processing ${text.length.toLocaleString()} source characters across ${chunks.length} chunks; model ${input.model}.`);
@@ -99,7 +93,7 @@ export async function analyzeText(input: {
     if (!nodes.length) throw new Error('No meaningful occurrences extracted.');
     const edges: CandidateEdge[] = extracted.flatMap((value, i) => value.edges.map((e, j) => ({ id: `e-${i + 1}-${j + 1}`, source: `n-${i + 1}-${e.sourceIndex + 1}`, target: `n-${i + 1}-${e.targetIndex + 1}`, type: e.type, rationale: e.rationale, passageIds: [...new Set(e.passageIds)] })));
     await writeJson(path.join(root, 'manifest.json'), { ...metadata, status: 'running', phase: 'synthesizing', completedChunks: chunks.length });
-    const synthesis = await scalableSynthesis(nodes, passages, call, log);
+    const synthesis = await scalableSynthesis(nodes, passages, call, log, concurrency);
     await writeJson(path.join(root, 'synthesis-resolved.json'), synthesis);
     for (const [index, e] of synthesis.crossEdges.entries()) {
       if (edges.some(existing => existing.source === e.source && existing.target === e.target && existing.type === e.type)) continue;

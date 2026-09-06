@@ -24,10 +24,13 @@ export function validateSynthesis(value: Synthesis, nodes: Candidate[]) {
       throw new Error(`Every occurrence must have exactly one ${kind}. Missing: ${missing.join(', ')}. Duplicated: ${duplicate.join(', ')}. Unknown: ${unknown.join(', ')}.`);
     }
   }
+  const chunks = new Map(nodes.map(node => [node.id, node.chunkId]));
+  const localEdges: string[] = [];
   for (const edge of value.crossEdges) {
     if (!expected.has(edge.source) || !expected.has(edge.target) || edge.source === edge.target) throw new Error('Invalid cross-edge endpoints.');
-    if (nodes.find(n => n.id === edge.source)!.chunkId === nodes.find(n => n.id === edge.target)!.chunkId) throw new Error('Cross edges must connect different chunks.');
+    if (chunks.get(edge.source) === chunks.get(edge.target)) localEdges.push(`${edge.source}->${edge.target}`);
   }
+  if (localEdges.length) throw new Error(`Cross edges must connect different chunks. Remove ALL these same-chunk edges: ${localEdges.join(', ')}. Check chunkId for every edge. Empty crossEdges is valid. Preserve theme and identity assignments.`);
   return value;
 }
 
