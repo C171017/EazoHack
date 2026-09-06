@@ -27,6 +27,7 @@ import { placementsFor } from '../reader/artifact-placement';
 import { completedFootprints } from '../book-graph/reading-heat';
 import { useReadingFootprints } from '../book-graph/use-reading-footprints';
 import { useHeatPlacement } from '../book-graph/use-heat-placement';
+import { useMapActive } from '../book-graph/use-map-active';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 
 export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId}:{preview:BookPreview;graph:MapBootstrap;initialTitle?:string;cloudSourceId?:string;cloudOwnerId?:string}) {
@@ -110,22 +111,23 @@ export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
   return <>
     <div className={libraryStyles.readerSurface} data-library-open={libraryOpen || undefined}>
-    <TextWorkspace cloudOwnerId={uploaded ? undefined : cloudOwnerId} analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={`${uploaded ? "guest" : cloudOwnerId ?? "guest"}:${uploaded?.bookId ?? cloudSourceId ?? graph.bookId}`} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
+    <TextWorkspace covered={libraryOpen} cloudOwnerId={uploaded ? undefined : cloudOwnerId} analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={`${uploaded ? "guest" : cloudOwnerId ?? "guest"}:${uploaded?.bookId ?? cloudSourceId ?? graph.bookId}`} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
     </div>
     <BookLibrary onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
       importState={importState} revision={libraryRevision} sampleEmblem={graph.bookId === 'plato-republic' ? graph.bookEmblem : undefined} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />
   </>;
 }
 
-function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSourceId, cloudOwnerId, analyzeUploaded}: {analyzeUploaded?:boolean;cloudSourceId?:string;cloudOwnerId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
+function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSourceId, cloudOwnerId, analyzeUploaded, covered}: {covered:boolean;analyzeUploaded?:boolean;cloudSourceId?:string;cloudOwnerId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
   const [mobileMapOpen, setMobileMapOpen] = useState(false);
+  const mapActive = useMapActive(mobileMapOpen, covered);
   const analysis = useBookAnalysis(initialGraph.bookId, preview, !!analyzeUploaded);
   const graph = analysis.graph ?? initialGraph;
   const bookId = graph.bookId;
   const footprints = useReadingFootprints(bookId, cloudOwnerId);
   const recordFootprints = footprints.record;
   const heatSource = useMemo(() => ({ ...preview, bookId }), [preview, bookId]);
-  const heat = useHeatPlacement(graph.version, footprints.events, heatSource, !graph.unavailable);
+  const heat = useHeatPlacement(graph.version, footprints.events, heatSource, !graph.unavailable, mapActive);
   const [mapAnchor,setMapAnchor] = useState<SourceAnchor|null>(null);
   const [mapView,setMapView] = useState<WorkspaceSnapshot['mapView']>(null);
   const reader = useRef<ContinuousTxtReaderHandle>(null);
@@ -301,7 +303,7 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
           {(analysis.status==='unavailable' || cloudSourceId) && <a className="mt-4 block underline" href="/account">Open your account</a>}
           {bookId === 'hong-lou-meng' && <p className="mt-4 text-xs">Text from <a className="underline" href="https://zh.wikisource.org/zh-hans/紅樓夢" target="_blank" rel="noreferrer">Wikisource contributors</a> · <a className="underline" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>. Formatted for reading; editorial footnotes omitted.</p>}
           {!analyzeUploaded && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Check map again</button>}
-        </div>:<BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/>}</div>
+        </div>:mapActive ? <BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/> : null}</div>
 
       </section>
     </div>

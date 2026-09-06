@@ -336,8 +336,19 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       const bounds=scroller.current?.getBoundingClientRect();
       const rect=nativeRange?.getClientRects()[0];
       if(rect&&bounds){
-        const left=Math.max(bounds.left+8,Math.min(rect.left+rect.width/2-104,bounds.right-216,window.innerWidth-216));
-        const top=rect.top-62>Math.max(bounds.top+64,8)?rect.top-62:Math.min(rect.bottom+10,window.innerHeight-64);
+        // Fixed controls must fit the visible area after pinch zoom or opening
+        // the software keyboard, not merely the larger layout viewport.
+        const viewport = window.visualViewport;
+        const viewportLeft = viewport?.offsetLeft ?? 0, viewportTop = viewport?.offsetTop ?? 0;
+        const viewportRight = viewportLeft + (viewport?.width ?? window.innerWidth);
+        const viewportBottom = viewportTop + (viewport?.height ?? window.innerHeight);
+        const minLeft = Math.max(bounds.left, viewportLeft) + 8;
+        const maxLeft = Math.max(minLeft, Math.min(bounds.right, viewportRight) - 216);
+        const left = Math.max(minLeft, Math.min(rect.left + rect.width / 2 - 104, maxLeft));
+        const minTop = Math.max(bounds.top, viewportTop) + 8;
+        const maxTop = Math.max(minTop, Math.min(bounds.bottom, viewportBottom) - 64);
+        const preferredTop = rect.top - 62 > minTop + 56 ? rect.top - 62 : rect.bottom + 10;
+        const top = Math.max(minTop, Math.min(preferredTop, maxTop));
         setPickerPosition({left,top});
       }
       nativeSelection.current=saved;onSelection(range);
@@ -352,6 +363,9 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
     document.addEventListener('pointerdown', pointer);
     document.addEventListener('keydown', keyboard);
     window.addEventListener('resize', dismiss);
+    const viewport = window.visualViewport;
+    viewport?.addEventListener('resize', dismiss);
+    viewport?.addEventListener('scroll', dismiss);
     const scroll=scroller.current;
     scroll?.addEventListener('scroll',dismiss,{passive:true});
     window.addEventListener('scroll',dismiss,{passive:true});
@@ -359,6 +373,8 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
       document.removeEventListener('pointerdown', pointer);
       document.removeEventListener('keydown', keyboard);
       window.removeEventListener('resize', dismiss);
+      viewport?.removeEventListener('resize', dismiss);
+      viewport?.removeEventListener('scroll', dismiss);
       scroll?.removeEventListener('scroll',dismiss);
       window.removeEventListener('scroll',dismiss);
     };

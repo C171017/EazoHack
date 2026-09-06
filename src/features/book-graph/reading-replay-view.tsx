@@ -43,6 +43,7 @@ function ReplayScene({ visits, view, size, progress, onFinish }: {
 }) {
   const canvas = useRef<HTMLCanvasElement>(null);
   const started = useRef<number | null>(null);
+  const lastHeatUpdate = useRef(-Infinity);
   const [count, setCount] = useState(1);
   const allPoints = useMemo(() => replayHeat(visits, visits.length), [visits]);
   const fullField = useMemo(() => buildHeatVolume(allPoints, 'all')!, [allPoints]);
@@ -52,10 +53,12 @@ function ReplayScene({ visits, view, size, progress, onFinish }: {
     const element = canvas.current!, ctx = element.getContext('2d');
     if (!ctx) { const timer = setTimeout(onFinish, 0); return () => clearTimeout(timer); }
     const ratio = Math.min(window.devicePixelRatio || 1, 2);
-    element.width = Math.max(1, Math.round(size.width * ratio)); element.height = Math.max(1, Math.round(size.height * ratio));
-    ctx.scale(ratio, ratio);
+    const width = Math.max(1, Math.round(size.width * ratio)), height = Math.max(1, Math.round(size.height * ratio));
+    if (element.width !== width) element.width = width;
+    if (element.height !== height) element.height = height;
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let frame = 0, lastHeatUpdate = -Infinity;
+    let frame = 0;
     const draw = (now: number) => {
       started.current ??= now;
       const elapsed = now - started.current;
@@ -67,7 +70,7 @@ function ReplayScene({ visits, view, size, progress, onFinish }: {
         while (arrived < visits.length && curve.stops[arrived] <= distance) arrived++;
       } else arrived = state.count;
       // Heat uploads are capped at 8 Hz for long histories; the trail stays smooth.
-      if (now - lastHeatUpdate >= 125 || arrived === visits.length) { setCount(arrived); lastHeatUpdate = now; }
+      if (now - lastHeatUpdate.current >= 125 || arrived === visits.length) { setCount(arrived); lastHeatUpdate.current = now; }
       ctx.clearRect(0, 0, size.width, size.height);
       ctx.globalAlpha = state.opacity;
       if (curve.length > 0 && (reduced || distance > .01)) {

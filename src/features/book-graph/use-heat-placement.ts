@@ -4,12 +4,15 @@ import { HeatIndexPageSchema, placeFootprints, type HeatIndex } from './heat-pla
 import { readMap } from './map-data';
 import type { HeatSource, ReadingFootprint } from './reading-heat';
 
-export function useHeatPlacement(version: string, events: ReadingFootprint[], source: HeatSource, available: boolean) {
+const EMPTY_PLACEMENT: ReturnType<typeof placeFootprints> = { points: [], excluded: 0, unmapped: 0 };
+
+export function useHeatPlacement(version: string, events: ReadingFootprint[], source: HeatSource, available: boolean, active = true) {
   const [state, setState] = useState<{ version: string; index?: HeatIndex; error?: string }>({ version: '' });
   const [attempt, setAttempt] = useState(0);
-  const needed = available && events.length > 0;
+  const needed = active && available && events.length > 0;
+  const cached = state.version === version && !!state.index;
   useEffect(() => {
-    if (!needed) return;
+    if (!needed || cached) return;
     const controller = new AbortController();
     async function load() {
       try {
@@ -28,9 +31,9 @@ export function useHeatPlacement(version: string, events: ReadingFootprint[], so
     }
     void load();
     return () => controller.abort();
-  }, [version, needed, attempt]);
+  }, [version, needed, cached, attempt]);
   const index = state.version === version ? state.index ?? null : null;
-  const placed = useMemo(() => placeFootprints(events, source, index), [events, source, index]);
+  const placed = useMemo(() => active ? placeFootprints(events, source, index) : EMPTY_PLACEMENT, [active, events, source, index]);
   return { ...placed, loading: needed && state.version !== version,
     error: state.version === version ? state.error ?? null : null,
     retry: () => { setState({ version: '' }); setAttempt(n => n + 1); } };

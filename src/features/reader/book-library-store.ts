@@ -117,7 +117,7 @@ function placeLegacyEntries(entries: LibraryEntry[]) {
   return [...entries].sort((a, b) => Number(!a.shelf || a.shelf.slot < SAMPLE_SHELF_SIZE) - Number(!b.shelf || b.shelf.slot < SAMPLE_SHELF_SIZE) || a.addedAt.localeCompare(b.addedAt) || a.id.localeCompare(b.id)).map(entry => {
     const shelf = entry.shelf && !occupied.has(entry.shelf.slot) ? entry.shelf : nextShelfPosition(entry.id, occupied);
     occupied.add(shelf.slot);
-    return shelf === entry.shelf ? entry : { ...entry, shelf };
+    return (shelf === entry.shelf ? entry : { ...entry, shelf }) as LibraryEntry & { shelf: ShelfPosition };
   });
 }
 

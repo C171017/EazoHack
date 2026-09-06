@@ -39,32 +39,32 @@ export const generateStructured: Generate = async (system, prompt, schema, maxOu
   const signal = options.signal ? AbortSignal.any([timeout, options.signal]) : timeout;
   const token = await measurePipeline('auth', vertexAccessToken);
   const body = await measurePipeline('provider', async () => {
-  const response = await fetch(`https://aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`, {
-    method: 'POST', signal,
-    headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: system }] },
-      contents: [{ role: 'user', parts: [{ text: prompt }] }],
-      generationConfig: { responseMimeType: 'application/json', responseSchema: vertexSchema(schema), maxOutputTokens, thinkingConfig: { thinkingLevel: 'LOW' } },
-    }),
-  });
-  if (!response.ok) {
-    const error = await response.json().catch(() => ({})) as { error?: { message?: string }; usageMetadata?: unknown };
-    recordProviderUsage(error.usageMetadata);
-    throw new ModelRequestError(`Vertex request failed (${response.status}): ${error.error?.message?.slice(0, 1600) ?? 'No error detail.'}`, response.status === 429 || response.status >= 500);
-  }
-  const body = await response.json() as {
-    modelVersion?: string; responseId?: string; usageMetadata?: Record<string, number>;
-    candidates?: { finishReason?: string; content?: { parts?: { text?: string; thought?: boolean }[] } }[];
-  };
-  recordProviderUsage(body.usageMetadata);
-  return body;
+    const response = await fetch(`https://aiplatform.googleapis.com/v1/projects/${project}/locations/${location}/publishers/google/models/${model}:generateContent`, {
+      method: 'POST', signal,
+      headers: { authorization: `Bearer ${token}`, 'content-type': 'application/json' },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: system }] },
+        contents: [{ role: 'user', parts: [{ text: prompt }] }],
+        generationConfig: { responseMimeType: 'application/json', responseSchema: vertexSchema(schema), maxOutputTokens, thinkingConfig: { thinkingLevel: 'LOW' } },
+      }),
+    });
+    if (!response.ok) {
+      const error = await response.json().catch(() => ({})) as { error?: { message?: string }; usageMetadata?: unknown };
+      recordProviderUsage(error.usageMetadata);
+      throw new ModelRequestError(`Vertex request failed (${response.status}): ${error.error?.message?.slice(0, 1600) ?? 'No error detail.'}`, response.status === 429 || response.status >= 500);
+    }
+    const body = await response.json() as {
+      modelVersion?: string; responseId?: string; usageMetadata?: Record<string, number>;
+      candidates?: { finishReason?: string; content?: { parts?: { text?: string; thought?: boolean }[] } }[];
+    };
+    recordProviderUsage(body.usageMetadata);
+    return body;
   });
   return measureValidation(() => {
-  const candidate = body.candidates?.[0];
-  if (candidate?.finishReason !== 'STOP') throw new ModelRequestError(`Vertex did not finish a complete answer (${candidate?.finishReason ?? 'no candidate'}).`, candidate?.finishReason === 'MAX_TOKENS');
-  const raw = candidate.content?.parts?.filter(p => !p.thought).map(p => p.text ?? '').join('');
-  if (!raw) throw new ModelRequestError('Vertex returned no structured content.', true);
-  return { value: JSON.parse(raw), model, modelVersion: body.modelVersion ?? model, responseId: body.responseId, usage: body.usageMetadata ?? {}, durationMs: Date.now() - started };
+    const candidate = body.candidates?.[0];
+    if (candidate?.finishReason !== 'STOP') throw new ModelRequestError(`Vertex did not finish a complete answer (${candidate?.finishReason ?? 'no candidate'}).`, candidate?.finishReason === 'MAX_TOKENS');
+    const raw = candidate.content?.parts?.filter(p => !p.thought).map(p => p.text ?? '').join('');
+    if (!raw) throw new ModelRequestError('Vertex returned no structured content.', true);
+    return { value: JSON.parse(raw), model, modelVersion: body.modelVersion ?? model, responseId: body.responseId, usage: body.usageMetadata ?? {}, durationMs: Date.now() - started };
   });
 };

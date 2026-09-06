@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, type CSSProperties } from 'react';
+import { useEffect, useSyncExternalStore, type CSSProperties } from 'react';
 import type { RouteKind } from '@/shared/schemas';
 import { ENHANCEMENTS } from '@/shared/enhancements';
 import styles from './enhancement-picker.module.css';
@@ -13,12 +13,17 @@ export const enhancementOptions = [
 ] as const;
 
 export type PickerPosition = { left: number; top: number };
+const subscribePlatform = () => () => {};
+const appleKeyboard = () => /Mac|iPhone|iPad|iPod/.test(navigator.platform);
+const serverKeyboard = () => false;
 
 export function EnhancementPicker({ position, busy, onChoose }: {
   position: PickerPosition | null;
   busy: boolean;
   onChoose: (route: RouteKind) => void;
 }) {
+  // This detection changes a key label only; behavior always uses standard Alt.
+  const shortcut = useSyncExternalStore(subscribePlatform, appleKeyboard, serverKeyboard) ? '⌥' : 'Alt+';
   useEffect(() => {
     if (!position) return;
     const keyboard = (event: KeyboardEvent) => {
@@ -47,8 +52,8 @@ export function EnhancementPicker({ position, busy, onChoose }: {
         {option.id === 'interactive' && <><path d="m9 9 5 12 1.8-5.2L21 14Z"/><path d="M7 2v3M2 7h3M3 3l2 2M11 3l-1 2M3 11l2-1"/></>}
         {option.id === 'illustration' && <><path d="M12 3a9 9 0 1 0 0 18h1a2 2 0 0 0 1.4-3.4 1.8 1.8 0 0 1 1.3-3.1H17a4 4 0 0 0 4-4C21 6.4 17 3 12 3Z"/><circle cx="7.5" cy="10" r=".6"/><circle cx="10" cy="6.8" r=".6"/><circle cx="14" cy="6.8" r=".6"/><circle cx="17" cy="10" r=".6"/></>}
       </svg>
-      <kbd className={styles.shortcut} aria-hidden="true">⌥{index + 1}</kbd>
-      <span className={styles.tooltip}>{option.label} · ⌥{index + 1}{!option.route ? ' · Not connected yet' : busy ? ' · Generation in progress' : ' · Generate'}</span>
+      <kbd className={styles.shortcut} aria-hidden="true">{shortcut}{index + 1}</kbd>
+      <span className={styles.tooltip}>{option.label} · {shortcut}{index + 1}{!option.route ? ' · Not connected yet' : busy ? ' · Generation in progress' : ' · Generate'}</span>
     </button>)}
   </div>;
 }

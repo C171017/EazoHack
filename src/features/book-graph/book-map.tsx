@@ -17,6 +17,8 @@ import { edgeVisibility, useEdgeTransition } from './edge-transition';
 import { HeatInspector, type ReadingHeatData } from './reading-heat-view';
 import { heatCount } from './reading-heat';
 import { ReadingReplay } from './reading-replay-view';
+import { InputFrame } from './input-frame';
+import { MapPointerInput, SafariGestureInput, mapWheelMovement, type InputPoint } from './map-input';
 const COLORS=['#caaf7c','#84b7ad','#a398cb','#8baecc','#ba9a9c','#99b687','#b5ac83'];
 export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgress,onScrollSource,heat}:{
   graph:MapBootstrap;view:MapView|null;readingProgress:number;onScrollSource:(delta:number)=>void;
@@ -72,48 +74,61 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
   const animatedEdges=useEdgeTransition(edges.data?.links);
   const stage=useRef<HTMLDivElement>(null),svg=useRef<SVGSVGElement>(null),frame=useRef<number|null>(null);
   const latest=useRef({current,size}),navigation=useRef<AbortController|null>(null);
-  const drag=useRef<{id:number;mode:'pan'|'orbit';x:number;y:number;view:MapView;latest:MapView;motion:OrbitMotion;lastX:number;lastY:number;moved:boolean}|null>(null);
+  const pointers=useRef(new MapPointerInput()),safari=useRef(new SafariGestureInput()),stageTouches=useRef(new Set<number>());
+  const drag=useRef<{view:MapView;latest:MapView;motion:OrbitMotion}|null>(null);
+  const publishInput=useRef(onViewChange);
+  const updates=useMemo(()=>new InputFrame<MapView>(next=>publishInput.current(next),callback=>requestAnimationFrame(callback),id=>cancelAnimationFrame(id)),[]);
   const keyboardOrbit=useRef<MapView|null>(null);
   // A passive effect can run after the next native wheel event and replace its
   // newer camera with the previous frame. Synchronize before events/paint.
-  useLayoutEffect(()=>{latest.current={current,size};},[current,size]);
+  useLayoutEffect(()=>{publishInput.current=onViewChange;latest.current={current:updates.pending?latest.current.current:current,size};},[current,size,onViewChange,updates]);
   useEffect(()=>{const f=requestAnimationFrame(()=>setPreviousLevel(level));return()=>cancelAnimationFrame(f);},[level]);
   useEffect(()=>{
     const element=stage.current;if(!element)return;
     const observer=new ResizeObserver(entries=>{const {width,height}=entries[0].contentRect;setSize({width,height});});observer.observe(element);
     return()=>observer.disconnect();
   },[]);
-  useEffect(()=>()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();},[]);
+  useEffect(()=>{
+    const element=svg.current,input=pointers.current,gesture=safari.current;
+    const touches=stageTouches.current;
+    const cancel=()=>{const ids=input.ids;input.cancel();touches.clear();gesture.end();drag.current=null;updates.flush();for(const id of ids)if(element?.hasPointerCapture(id))element.releasePointerCapture(id);};
+    window.addEventListener('blur',cancel);
+    return()=>{window.removeEventListener('blur',cancel);input.cancel();touches.clear();gesture.end();drag.current=null;updates.dispose();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();};
+  },[updates]);
   // Native non-passive listener is required for trackpad pinch (ctrl+wheel).
   useEffect(()=>{
     const element=stage.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
+    const publish=(next:MapView)=>{const bounded=confinePan(next,latest.current.size);latest.current={...latest.current,current:bounded};updates.push(bounded);};
+    const interrupt=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;navigation.current?.abort();setNavigating(false);};
     const wheel=(event:WheelEvent)=>{
       if(!(event.target instanceof Element)||!event.target.closest('svg,.map-timeline-control'))return;
-      event.preventDefault();if(gesture)return;
-      const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
-      const pinch=event.ctrlKey||event.metaKey;
-      if(!pinch&&event.target.closest('.map-timeline-control'))return;
-      if(frame.current!==null)cancelAnimationFrame(frame.current);
-      navigation.current?.abort();setNavigating(false);
+      event.preventDefault();if(safari.current.ownsWheel||pointers.current.active||stageTouches.current.size)return;
+      const movement=mapWheelMovement(event,latest.current.size.height);if(!movement)return;
+      if(movement.kind==='pan'&&event.target.closest('.map-timeline-control'))return;
+      interrupt();
       const {current:view,size}=latest.current;
-      const next=pinch
-        ?zoomCentered(view,view.zoom*Math.exp(-Math.max(-100,Math.min(100,event.deltaY*unit))*.012),size,graph.roots,readingProgress)
-        :{...view,x:view.x-(event.shiftKey&&!event.deltaX?event.deltaY:event.deltaX)*unit,y:view.y-(event.shiftKey&&!event.deltaX?0:event.deltaY)*unit};
-      latest.current={current:confinePan(next,latest.current.size),size};onViewChange(next);
+      publish(movement.kind==='zoom'
+        ?zoomCentered(view,view.zoom*movement.scale,size,graph.roots,readingProgress)
+        :{...view,x:view.x+movement.dx,y:view.y+movement.dy});
     };
     const gestureStart=(event:Event)=>{
-      event.preventDefault();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();setNavigating(false);
-      const {current:view,size}=latest.current;
-      gesture={view,size};
+      event.preventDefault();
+      if(!safari.current.start(stageTouches.current.size>0)){gesture=null;return;}
+      interrupt();updates.flush();
+      const {current:view,size}=latest.current;gesture={view,size};
     };
-    const gestureChange=(event:Event)=>{event.preventDefault();if(!gesture)return;const scale=(event as Event&{scale:number}).scale;if(!Number.isFinite(scale)||scale<=0)return;const next=zoomCentered(gesture.view,gesture.view.zoom*scale,gesture.size,graph.roots,readingProgress);latest.current={current:confinePan(next,latest.current.size),size:gesture.size};onViewChange(next);};
-    const gestureEnd=(event:Event)=>{event.preventDefault();gesture=null;};
+    const gestureChange=(event:Event)=>{
+      event.preventDefault();if(!safari.current.change(stageTouches.current.size>0)||!gesture)return;
+      const scale=(event as Event&{scale:number}).scale;if(!Number.isFinite(scale)||scale<=0)return;
+      publish(zoomCentered(gesture.view,gesture.view.zoom*scale,gesture.size,graph.roots,readingProgress));
+    };
+    const gestureEnd=(event:Event)=>{gestureChange(event);event.preventDefault();gesture=null;safari.current.end();updates.flush();};
     element.addEventListener('wheel',wheel,{passive:false});
     element.addEventListener('gesturestart',gestureStart,{passive:false});element.addEventListener('gesturechange',gestureChange,{passive:false});element.addEventListener('gestureend',gestureEnd,{passive:false});
-    return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);};
-  },[onViewChange,graph.roots,readingProgress]);
-  const cancelMotion=()=>{if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
+    return()=>{element.removeEventListener('wheel',wheel);element.removeEventListener('gesturestart',gestureStart);element.removeEventListener('gesturechange',gestureChange);element.removeEventListener('gestureend',gestureEnd);safari.current.end();};
+  },[graph.roots,readingProgress,updates]);
+  const cancelMotion=()=>{updates.flush();if(frame.current!==null)cancelAnimationFrame(frame.current);frame.current=null;};
   const change=(patch:Partial<MapView>)=>{if('selectedNodeId' in patch){setSourceActivation(null);if(patch.selectedNodeId)setHeatSelection(null);}cancelMotion();navigation.current?.abort();setNavigating(false);const next={...latest.current.current,...patch};latest.current={...latest.current,current:confinePan(next,latest.current.size)};onViewChange(next);};
   function activateLeaf(id:string) {
     change({selectedNodeId:id});
@@ -131,11 +146,31 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       if(elapsed<520)frame.current=requestAnimationFrame(animate);else frame.current=null;
     };frame.current=requestAnimationFrame(animate);
   }
-  function finishDrag(){
-    const d=drag.current;drag.current=null;if(!d||!d.moved||d.mode==='pan')return;
+  function movePointer(event:InputPoint){
+    const movement=pointers.current.move(event);if(!movement)return false;
+    const {current:view,size}=latest.current;let next:MapView;
+    if(movement.kind==='pinch'){
+      const base=drag.current?.view??view;
+      const zoomed=movement.scale===1?base:zoomCentered(base,base.zoom*movement.scale,size,graph.roots,readingProgress);
+      next={...zoomed,x:zoomed.x+movement.dx,y:zoomed.y+movement.dy};
+    }else if(movement.kind==='pan')next={...view,x:view.x+movement.dx,y:view.y+movement.dy};
+    else {
+      const d=drag.current??{view,latest:view,motion:beginOrbit(view)};
+      d.motion=advanceOrbit(d.motion,movement.dx,movement.dy);
+      next={...view,projection:'3d',...d.motion.display};drag.current=d;
+    }
+    const bounded=confinePan(next,size);if(drag.current)drag.current.latest=bounded;
+    latest.current={current:bounded,size};updates.push(bounded);return true;
+  }
+  function finishPointer(id:number,cancelled=false){
+    const input=pointers.current;if(!input.has(id))return;
+    const d=drag.current,shouldSettle=!cancelled&&input.canSettle;
+    input.end(id,cancelled);updates.flush();
+    const view=latest.current.current;
+    drag.current=input.active?{view,latest:view,motion:beginOrbit(view)}:null;
+    if(!d||!shouldSettle)return;
     const target=approachingProjection(d.motion.previous,d.motion.raw);
-    // Align on entry; an intentional rotation within an already-flat view
-    // should not be undone on release.
+    // Preserve the existing single-pointer magnetic orbit release.
     if(target?.projection==='xy'&&d.view.projection==='xy'&&Math.abs(d.motion.raw.pitch-d.view.pitch)<1e-8)target.yaw=d.motion.raw.yaw;
     if(target)settle(d.latest,target);
   }
@@ -198,39 +233,36 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     const i=['1','2','3','4'].indexOf(e.key);if(i>=0){e.preventDefault();const projection=PROJECTIONS[i].id;settle(current,{projection,...orientation(projection)});}
     if(e.key==='+'||e.key==='='){e.preventDefault();zoom(1.35);}if(e.key==='-'){e.preventDefault();zoom(1/1.35);}
   }}>
-    <div ref={stage} className="map-stage">
+    <div ref={stage} className="map-stage"
+      onPointerDownCapture={e=>{if(e.pointerType==='touch'){stageTouches.current.add(e.pointerId);safari.current.touch();}}}
+      onPointerUpCapture={e=>stageTouches.current.delete(e.pointerId)}
+      onPointerCancelCapture={e=>stageTouches.current.delete(e.pointerId)}>
       {graph.unplaced>0&&<UnplacedNotes version={graph.version} count={graph.unplaced} onLocate={id=>void locate(id)}/>}
       {heat&&<ReadingReplay key={graph.version} points={heat.points} loading={heat.loading} error={heat.error} view={current} size={size}
         readingProgress={readingProgress}/>}
-      <svg style={{position:'relative'}} data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-x={current.x} data-camera-y={current.y} data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-fit-scale={current.framing?.scale??1} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
+      <svg style={{position:'relative',touchAction:'none'}} data-reading-progress={readingProgress} data-axis-version={graph.axisVersion??'legacy'} ref={svg} width="100%" height="100%" role="group" tabIndex={0} aria-label="Book map: pinch to explore layers" data-camera-x={current.x} data-camera-y={current.y} data-camera-yaw={current.yaw} data-camera-pitch={current.pitch} data-camera-zoom={current.zoom} data-fit-scale={current.framing?.scale??1} data-projection={current.projection} data-level={level} data-visible-count={windowed.nodes.length} data-cache-pages={data.pages.size} data-rendered-count={points.length}
         onKeyDown={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){e.preventDefault();const view=latest.current.current;if(view.projection!=='3d'&&!e.altKey){change({x:view.x+(e.key==='ArrowRight'?-40:e.key==='ArrowLeft'?40:0),y:view.y+(e.key==='ArrowDown'?-40:e.key==='ArrowUp'?40:0)});return;}keyboardOrbit.current??=view;change({...orbitFrom(view,e.key==='ArrowRight'?20:e.key==='ArrowLeft'?-20:0,e.key==='ArrowUp'?-20:e.key==='ArrowDown'?20:0),projection:'3d'});}}}
         onKeyUp={e=>{if(e.target===e.currentTarget&&e.key.startsWith('Arrow')){const from=keyboardOrbit.current;keyboardOrbit.current=null;const view=latest.current.current,target=from&&approachingProjection(from,view);if(target?.projection==='xy'&&from?.projection==='xy'&&Math.abs(view.pitch-from.pitch)<1e-8)target.yaw=view.yaw;if(target)settle(view,target);}}}
         onBlur={()=>{keyboardOrbit.current=null;}}
-        onPointerDown={e=>{
-          if(drag.current||(e.target as Element).closest('[data-node-id]')||![0,1,2].includes(e.button))return;
-          e.preventDefault();
+        onClickCapture={e=>{if(pointers.current.suppressClick(e.nativeEvent)){e.preventDefault();e.stopPropagation();}}}
+        onPointerDownCapture={e=>{
+          const onNode=!!(e.target as Element).closest('[data-node-id],[data-heat-leaf]');
+          if(!pointers.current.down(e,onNode))return;
+          // Leave a stationary node tap on its original target. Capture at the
+          // first drag movement; a second contact always suppresses activation.
+          if(!onNode){e.preventDefault();e.currentTarget.setPointerCapture(e.pointerId);}
+          if(e.pointerType==='touch')safari.current.touch();
           cancelMotion();keyboardOrbit.current=null;navigation.current?.abort();setNavigating(false);
-          const view=latest.current.current;
-          drag.current={id:e.pointerId,mode:e.button===1||e.button===2?'pan':'orbit',x:e.clientX,y:e.clientY,lastX:e.clientX,lastY:e.clientY,view,latest:view,motion:beginOrbit(view),moved:false};
-          e.currentTarget.setPointerCapture(e.pointerId);
+          const view=latest.current.current;drag.current={view,latest:view,motion:beginOrbit(view)};
         }}
         onPointerMove={e=>{
-          const d=drag.current;if(!d||d.id!==e.pointerId)return;
-          const dx=e.clientX-d.x,dy=e.clientY-d.y;
-          if(Math.hypot(dx,dy)<3&&!d.moved)return;
-          d.moved=true;
-          if(d.mode==='pan')d.latest=confinePan({...d.latest,x:d.latest.x+e.clientX-d.lastX,y:d.latest.y+e.clientY-d.lastY},latest.current.size);
-          else {
-            // Integrate incremental deltas so reversal at a pole responds immediately.
-            d.motion=advanceOrbit(d.motion,e.clientX-d.lastX,e.clientY-d.lastY);
-            d.latest={...d.view,projection:'3d',...d.motion.display};
-          }
-          d.lastX=e.clientX;d.lastY=e.clientY;
-          d.latest=confinePan(d.latest,latest.current.size);
-          latest.current={...latest.current,current:d.latest};onViewChange(d.latest);
+          if(!movePointer(e))return;
+          e.preventDefault();if(!e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.setPointerCapture(e.pointerId);
         }}
         onContextMenu={e=>e.preventDefault()}
-        onPointerUp={e=>{if(drag.current?.id!==e.pointerId)return;finishDrag();if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}} onPointerCancel={()=>{drag.current=null;}} onLostPointerCapture={()=>{drag.current=null;}}>
+        onPointerUp={e=>{if(!pointers.current.has(e.pointerId))return;movePointer(e);finishPointer(e.pointerId);if(e.currentTarget.hasPointerCapture(e.pointerId))e.currentTarget.releasePointerCapture(e.pointerId);}}
+        onPointerCancel={e=>finishPointer(e.pointerId,true)}
+        onLostPointerCapture={e=>{if(!e.currentTarget.hasPointerCapture(e.pointerId))finishPointer(e.pointerId,true);}}>
         <desc>Scroll over the Z origin control to skim the book. Scroll the text pane for normal reading. Earlier passages are higher; the horizontal plane marks your reading position. Pinch to zoom through the saved hierarchy. Activate a group to zoom into it; zoom out to return to broader groups. Drag to rotate in every projection. Two-finger scroll pans and pinch zooms. Right or middle drag pans. Alt-arrow keys orbit. Arrow keys pan flat views. Plus and minus zoom. Keys 1 to 4 switch projections. Larger circles summarize multiple notes. {graph.axisVersion?'Z is source progress; X increases with reasoning depth and Y with generality. These are interpretive ratings, not importance or truth.':'Legacy coordinates: X is topic and Y is structure.'}</desc>
         <defs><marker id="map-arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#ADB5C0"/></marker></defs>
         <MapGrid size={size} projection={current.projection} screen={screen} axisVersion={graph.axisVersion} readingProgress={readingProgress}/>

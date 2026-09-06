@@ -1,4 +1,4 @@
-import { withPipelineTelemetry } from '../src/server/book-analysis/telemetry';
+import { withPipelineTelemetry, countPipeline } from '../src/server/book-analysis/telemetry';
 import path from 'node:path';
 import { LocalSourceSchema, localJobRoot, type LocalJob } from '../src/server/book-analysis/local-jobs';
 import { readJson, writeJson } from '../src/server/book-analysis/json-store';
@@ -29,6 +29,7 @@ async function main() {
     stage = 'Book map ready';
     await report('ready');
   } catch (error) {
+    countPipeline('pipeline.failed');
     clearInterval(heartbeat);
     stage = 'Map analysis stopped';
     await report('failed', error instanceof Error ? error.message : 'Analysis failed. Retry to resume.');

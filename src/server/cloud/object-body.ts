@@ -4,7 +4,9 @@ import { RequestBodyError } from '../http';
 export async function readObjectBody(response: Response, maxBytes: number, oversizedMessage: string): Promise<Buffer> {
   if (!Number.isSafeInteger(maxBytes) || maxBytes <= 0) throw new Error('Invalid object byte limit');
   const declared = response.headers.get('content-length');
-  if (declared && /^\d+$/.test(declared) && Number(declared) > maxBytes) {
+  const encoding = response.headers.get('content-encoding');
+  // Fetch decodes compressed bodies; their encoded length is not our byte count.
+  if ((!encoding || encoding === 'identity') && declared && /^\d+$/.test(declared) && Number(declared) > maxBytes) {
     await response.body?.cancel().catch(() => {});
     throw new RequestBodyError(oversizedMessage, 400);
   }

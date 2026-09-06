@@ -3,7 +3,7 @@ import { randomUUID } from 'node:crypto';
 
 type Stage = 'analysis' | 'extraction' | 'synthesis' | 'review' | 'emblem' | 'axes' | 'calibration' | 'hierarchy';
 type Operation = 'auth' | 'provider' | 'validation' | 'storage.read' | 'storage.write' | 'storage.list' | `stage.${Stage}`;
-type Counter = 'storage.hit' | 'storage.miss' | 'checkpoint.hit' | 'checkpoint.recovered' | 'provider.reply.hit' | 'provider.reply.miss' | 'retry';
+type Counter = 'storage.hit' | 'storage.miss' | 'checkpoint.hit' | 'checkpoint.recovered' | 'provider.reply.hit' | 'provider.reply.miss' | 'retry' | 'pipeline.failed';
 const usageKeys = ['promptTokenCount', 'candidatesTokenCount', 'thoughtsTokenCount', 'cachedContentTokenCount', 'totalTokenCount'] as const;
 type Usage = Partial<Record<typeof usageKeys[number], number>>;
 export type PipelineEvent = {
@@ -37,7 +37,7 @@ export async function withPipelineTelemetry<T>(task: () => Promise<T>, options: 
     try { return await task(); }
     catch (error) { outcome = 'error'; throw error; }
     finally {
-      emit({ event: 'run', durationMs: duration(started), outcome, counts: run.counts, tokens: run.tokens, usageResponses: run.usageResponses, missingUsageResponses: run.missingUsageResponses });
+      emit({ event: 'run', durationMs: duration(started), outcome: run.counts['pipeline.failed'] ? 'error' : outcome, counts: run.counts, tokens: run.tokens, usageResponses: run.usageResponses, missingUsageResponses: run.missingUsageResponses });
       run.closed = true;
     }
   });

@@ -15,7 +15,7 @@ test('oversized declared objects are cancelled before pulling body bytes', async
 });
 
 test('missing or understated content length cannot bypass the streaming limit', async () => {
-  for (const headers of [{}, { 'content-length': '1' }]) {
+  for (const headers of [{}, { 'content-length': '1' }] as Record<string, string>[]) {
     let pulls = 0, cancelled = false;
     const body = new ReadableStream<Uint8Array>({
       pull(controller) { pulls++; controller.enqueue(new Uint8Array(6)); },
@@ -29,4 +29,5 @@ test('missing or understated content length cannot bypass the streaming limit', 
 test('an exact-limit object preserves every original byte', async () => {
   const bytes = Buffer.from('中文\ntext');
   assert.deepEqual(await readObjectBody(new Response(bytes), bytes.length, 'Too large'), bytes);
+  assert.deepEqual(await readObjectBody(new Response(bytes, { headers: { 'content-encoding': 'gzip', 'content-length': String(bytes.length + 20) } }), bytes.length, 'Too large'), bytes);
 });

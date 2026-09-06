@@ -1,7 +1,13 @@
+import { throwIfAborted, withRequestDeadline } from '../browser/abort';
+
 function wait(ms: number, signal: AbortSignal): Promise<void> {
-  signal.throwIfAborted();
+  throwIfAborted(signal);
   return new Promise((resolve, reject) => {
-    const abort = () => { clearTimeout(timer); reject(signal.reason); };
+    const abort = () => {
+      clearTimeout(timer);
+      signal.removeEventListener('abort', abort);
+      try { throwIfAborted(signal); } catch (error) { reject(error); }
+    };
     const timer = setTimeout(() => { signal.removeEventListener('abort', abort); resolve(); }, ms);
     signal.addEventListener('abort', abort, { once: true });
   });
@@ -14,19 +20,22 @@ export async function analysisRequest<T>(url: string, options: {
 }): Promise<T> {
   const serialized = options.body ? JSON.stringify(options.body) : undefined;
   for (let attempt = 0; ; attempt++) {
-    options.signal.throwIfAborted();
+    throwIfAborted(options.signal);
     try {
-      const response = await (options.fetch ?? fetch)(url, {
-        signal: AbortSignal.any([options.signal, AbortSignal.timeout(30_000)]),
-        ...(serialized ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: serialized } : {}),
-      });
-      if (!response.ok) {
-        const data = await response.json().catch(() => null);
-        throw Object.assign(new Error(data?.error?.message ?? `Could not check map analysis (${response.status}).`), { status: response.status });
-      }
-      return await response.json() as T;
+      return await withRequestDeadline(async signal => {
+        const response = await (options.fetch ?? fetch)(url, {
+          signal,
+          ...(serialized ? { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: serialized } : {}),
+        });
+        if (!response.ok) {
+          const data = await response.json().catch(() => null);
+          throw Object.assign(new Error(data?.error?.message ?? `Could not check map analysis (${response.status}).`), { status: response.status });
+        }
+        return await response.json() as T;
+      }, { signal: options.signal });
     } catch (error) {
-      options.signal.throwIfAborted();
+      throwIfAborted(options.signal);
+      if (error instanceof Error && error.name === 'AbortError') throw error;
       const status = error instanceof Error && 'status' in error ? error.status : undefined;
       // 503 on this endpoint means local analysis is disabled; do not loop on it.
       const transient = status === undefined || [408, 429, 500, 502, 504].includes(status as number);
