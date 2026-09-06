@@ -62,6 +62,8 @@ async function main() {
       validateGraphSource(graph, raw.toString('utf8').replace(/\r\n?/g, '\n'), job.file_hash, job.extraction_version);
       graph = await assignBookAxes({ graph, outputRoot: root, model: job.model, generate });
       graph = await calibrateBookAxes({ graph, outputRoot: root, model: job.model, generate });
+      // Each accepted job publishes a distinct version, while its phase checkpoints retain stable keys.
+      graph = {...graph, graphVersion: `${graph.graphVersion}-${job.id}`};
       const hierarchy = await buildHierarchy({ graph, outputRoot: root, model: job.model, generate });
       await writeJson(path.join(root, 'result.json'), { graph, hierarchy, sourceSha256: job.source_sha256, pipelineVersion: job.pipeline_version });
       assertLease();

@@ -76,6 +76,18 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    if(payload.bookId!==book.local_book_id||payload.anchors.some(a=>a.fileHash!==source.file_hash||a.extractionVersion!==source.extraction_version))throw new RequestBodyError('Saved reading does not match this source.',400);
    await backend('/rest/v1/reading_snapshots',user.token,{method:'POST',body:JSON.stringify({owner_id:user.id,book_id:source.book_id,source_id:id,checkpoint_id:payload.id,device_id:device,payload})});return json({ok:true});
   }
+  if(action==='resume') {
+   if(process.env.EAZO_ENABLE_ANALYSIS!=='1')throw new RequestBodyError('Hosted analysis is not enabled yet.',503);
+   const {job:id}=z.object({job:uuid}).parse(body);
+   const [job]=await backend<{id:string;status:string;attempt:number;lease_expires_at:string|null}[]>(`/rest/v1/analysis_jobs?id=eq.${id}`,user.token);
+   if(!job)throw new RequestBodyError('Job not found.',404);
+   if(job.attempt>=3||!['queued','running'].includes(job.status))throw new RequestBodyError('This job has finished its retries.',409);
+   if(job.status==='running'&&job.lease_expires_at&&Date.parse(job.lease_expires_at)>Date.now())return json({id,active:true});
+   const reserved=await backend<boolean>('/rest/v1/rpc/eazo_reserve_dispatch',serviceKey(),{method:'POST',body:JSON.stringify({p_job:id,p_owner:user.id})});
+   if(!reserved)return json({id,dispatchPending:true});
+   const operation=await invokeBookAnalysis(id);
+   await backend(`/rest/v1/analysis_jobs?id=eq.${id}`,serviceKey(),{method:'PATCH',body:JSON.stringify({execution_name:operation})});return json({id});
+  }
   if(action==='analyze') {
    if(process.env.EAZO_ENABLE_ANALYSIS!=='1')throw new RequestBodyError('Hosted analysis is not enabled yet.',503);
    const {source:id,key}=z.object({source:uuid,key:uuid}).parse(body);
@@ -85,6 +97,8 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    const pipeline=process.env.EAZO_PIPELINE_VERSION;if(!pipeline)throw new RequestBodyError('Worker is not configured.',503);
    const jobId=await backend<string>('/rest/v1/rpc/eazo_submit_job',serviceKey(),{method:'POST',body:JSON.stringify({p_owner:user.id,p_source:id,p_key:key,p_model:process.env.GEMINI_MODEL??'gemini-3.8-flash',p_pipeline:pipeline})});
    // A queued record survives a dispatch outage. Retrying with the same key retries dispatch.
+   const reserved=await backend<boolean>('/rest/v1/rpc/eazo_reserve_dispatch',serviceKey(),{method:'POST',body:JSON.stringify({p_job:jobId,p_owner:user.id})});
+   if(!reserved)return json({id:jobId,dispatchPending:true});
    const operation=await invokeBookAnalysis(jobId);
    await backend(`/rest/v1/analysis_jobs?id=eq.${jobId}`,serviceKey(),{method:'PATCH',body:JSON.stringify({execution_name:operation})});return json({id:jobId});
   }

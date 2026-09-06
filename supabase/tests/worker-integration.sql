@@ -9,6 +9,8 @@ select public.eazo_submit_job('11111111-1111-4111-8111-111111111111','bbbbbbbb-b
 select pg_temp.assert(public.eazo_submit_job('11111111-1111-4111-8111-111111111111','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb','test','model','pipeline')=:'job','idempotent submission');
 select pg_temp.denied($q$select public.eazo_submit_job('11111111-1111-4111-8111-111111111111','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb','test','different','pipeline')$q$);
 select pg_temp.denied($q$select public.eazo_submit_job('11111111-1111-4111-8111-111111111111','bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb','another','model','pipeline')$q$);
+select pg_temp.assert(public.eazo_reserve_dispatch(:'job','11111111-1111-4111-8111-111111111111'),'first dispatch reserved');
+select pg_temp.assert(not public.eazo_reserve_dispatch(:'job','11111111-1111-4111-8111-111111111111'),'duplicate dispatch rejected');
 select pg_temp.assert(public.eazo_worker('claim',:'job','cccccccc-cccc-4ccc-8ccc-cccccccccccc')->>'book_id'='txt:original-hash','source identity preserved');
 select pg_temp.assert(public.eazo_worker('claim',:'job','dddddddd-dddd-4ddd-8ddd-dddddddddddd')->>'busy'='true','duplicate claim busy');
 select public.eazo_worker('write',:'job','cccccccc-cccc-4ccc-8ccc-cccccccccccc',jsonb_build_object('key','phase/a.json','hash',repeat('a',64),'object','11111111-1111-4111-8111-111111111111/aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa/'||:'job'||'/checkpoints/'||repeat('a',64)||'.json'));
