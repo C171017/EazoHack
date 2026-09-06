@@ -7,7 +7,7 @@ import { backend, cloudConfig, cloudUser, sameOrigin, serviceKey, signOut, clear
 import { readJson, requestError, RequestBodyError } from '@/server/http';
 import { invokeBookAnalysis } from '@/server/book-analysis/cloud/invoke';
 import { type WorkspaceSnapshot } from '@/features/persistence';
-import { assertAccountActive, accountSummary, exportAccount, exportAccountFile, deleteAccount } from '@/server/cloud/account';
+import { assertAccountActive, accountSummary, exportAccount, exportAccountFile, deleteAccount, deleteBook } from '@/server/cloud/account';
 import { validateSnapshotSource } from '@/server/cloud/snapshot';
 import { sourceTextCache } from '@/server/cloud/source-cache';
 export const runtime='nodejs';
@@ -66,6 +66,14 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    sourceTextCache.clearOwner(user.id);await deleteAccount(user);await clearSession();return json({ok:true});
   }
   await assertAccountActive(user);
+  if(action==='delete-book') {
+   const {book}=z.object({book:uuid}).parse(body);
+   const sources=await deleteBook(user,book);
+   sourceTextCache.clearOwner(user.id);
+   const jar=await cookies();
+   if(sources.includes(jar.get('eazo-book')?.value??''))jar.delete('eazo-book');
+   return json({ok:true});
+  }
   if(action==='export-file'){
    const input=z.object({kind:z.enum(['source','original','manifest','graph','hierarchy','reading-image']),id:uuid,hash:z.string().regex(/^[a-f0-9]{64}$/).optional()}).parse(body);
    return json(await exportAccountFile(user,input));

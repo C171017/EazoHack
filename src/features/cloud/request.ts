@@ -8,7 +8,7 @@ export async function cloudRequest(action: string, body?: unknown, owner?: strin
   // Recursive deletion and analysis submission/resumption span multiple 30s backend hops.
   // Allow two minutes for their HTTP response (not the background analysis job).
   const actionName = action.split(/[?#]/, 1)[0];
-  const timeoutMs = options?.timeoutMs ?? (['delete-account', 'analyze', 'resume'].includes(actionName) ? 120_000 : 30_000);
+  const timeoutMs = options?.timeoutMs ?? (['delete-account', 'delete-book', 'analyze', 'resume'].includes(actionName) ? 120_000 : 30_000);
   return withRequestDeadline(async signal => {
     const response = await fetch('/api/cloud/' + action, {
       method: body === undefined ? 'GET' : 'POST', cache: 'no-store', signal,

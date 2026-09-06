@@ -105,3 +105,33 @@ test('reading illustration export is source-owned and cannot sign another accoun
  await assert.rejects(exportAccountFile(user,{kind:'reading-image',id:source,hash:'a'.repeat(64)}),/Book not found/);
  assert.equal(calls.length,1);assert.ok(calls[0].includes(`owner_id=eq.${user.id}`));
 });
+
+test('book deletion scopes row and storage cleanup to the authenticated owner and book', async t => {
+  configure(t);
+  const calls: { url: string; body: Record<string, unknown> }[] = [];
+  t.mock.method(globalThis, 'fetch', async (input: string | URL | Request, init?: RequestInit) => {
+    const url = String(input), body = JSON.parse(String(init?.body));
+    calls.push({ url, body });
+    return Response.json(url.includes('/rpc/') ? [source] : []);
+  });
+  const { deleteBook } = await import('../src/server/cloud/account');
+  assert.deepEqual(await deleteBook(user, source), [source]);
+  assert.deepEqual(calls[0].body, { p_owner: user.id, p_book: source });
+  assert.equal(calls.length, 4);
+  for (const call of calls.slice(1)) assert.equal(call.body.prefix, `${user.id}/${source}`);
+  assert.ok(calls.some(call => call.url.endsWith('/eazo-reading')));
+});
+
+test('book deletion does not touch storage when database authorization fails', async t => {
+  configure(t);
+  let calls = 0;
+  t.mock.method(globalThis, 'fetch', async () => {
+    calls++;
+    return Response.json({ message: 'book_not_found' }, { status: 403 });
+  });
+  const { deleteBook } = await import('../src/server/cloud/account');
+  await assert.rejects(deleteBook(user, source));
+  assert.equal(calls, 1);
+  await assert.rejects(deleteBook(user, '../another-book'));
+  assert.equal(calls, 1);
+});

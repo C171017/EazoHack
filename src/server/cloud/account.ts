@@ -120,3 +120,16 @@ export async function deleteAccount(user: AccountUser): Promise<void> {
   await backend('/rest/v1/rpc/eazo_delete_account_rows', key, { method: 'POST', body: JSON.stringify({ p_owner: user.id }) });
   await backend(`/auth/v1/admin/users/${user.id}`, key, { method: 'DELETE' });
 }
+
+/** Delete rows atomically, then clean only this owner's book folder. Safe to retry. */
+export async function deleteBook(user: AccountUser, book: string): Promise<string[]> {
+  z.uuid().parse(book);
+  const key = serviceKey();
+  const sources = await backend<string[]>('/rest/v1/rpc/eazo_delete_book_rows', key, {
+    method: 'POST', body: JSON.stringify({ p_owner: user.id, p_book: book }),
+  });
+  for (const bucket of ['eazo-sources', 'eazo-analysis', 'eazo-reading']) {
+    await emptyAccountFolder(bucket, `${user.id}/${book}`, key);
+  }
+  return sources;
+}

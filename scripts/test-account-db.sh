@@ -31,7 +31,7 @@ run_sql() {
 }
 run_sql "$repo_dir/supabase/tests/local-platform.sql"
 for migration in "$repo_dir"/supabase/migrations/*.sql; do run_sql "$migration"; done
-for check in access-controls worker-integration account-sync; do
+for check in access-controls worker-integration account-sync book-deletion; do
   run_sql "$repo_dir/supabase/tests/$check.sql"
   echo "PASS: $check"
 done

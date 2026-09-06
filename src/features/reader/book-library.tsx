@@ -12,6 +12,7 @@ import type { ImportState } from './pdf/import-model';
 import styles from './book-library.module.css';
 import { readShelf, type ShelfBook } from '../cloud/library';
 import { cloudRequest } from '../cloud/request';
+import { persistShelfMove, placeShelfBook } from '../cloud/shelf-move';
 import { CloudMenu } from './cloud-menu';
 
 export function BookLibrary({ initialOpen = false, open, currentId, onSelect, onUpload, onClose, onReopen, importState, revision, onCancel, onRetry, sampleEmblem, onRemoved }: {
@@ -36,6 +37,8 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
   const selectedSlot = useRef(1);
   const [draft, setDraft] = useState<{ file: File; slot: number } | null>(null);
   const [books, setBooks] = useState<ShelfBook[]>([]);
+  const shelfVersion = useRef(0);
+  const savingMove = useRef(false);
   const [owner, setOwner] = useState<string>();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -51,6 +54,15 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
   const router = useRouter();
   const lastSlot = Math.max(SAMPLE_SHELF_SIZE - 1, ...books.map(book => book.shelf?.slot ?? 0));
   const slotCount = Math.max(capacity, lastSlot + 2);
+
+  type Flight = { book: ShelfBook; x: number; y: number; startX: number; startY: number; left: number; top: number; width: number; height: number; moved: boolean; pointer: number };
+  const flightRef = useRef<Flight | null>(null);
+  const [flight, setFlight] = useState<Flight | null>(null);
+  const ghost = useRef<HTMLDivElement>(null);
+  const [thrown, setThrown] = useState<ShelfBook | null>(null);
+  const suppressClick = useRef(false);
+  const returning = useRef(false);
+
 
   useEffect(() => {
     const element = dialog.current;
@@ -84,13 +96,15 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
   useEffect(() => {
     let active = true, generation = 0;
     const refresh = async () => {
+      if (savingMove.current) return;
       const ticket = ++generation;
+      const version = shelfVersion.current;
       const result = await readShelf();
-      if (!active || ticket !== generation) return;
+      if (!active || ticket !== generation || version !== shelfVersion.current || savingMove.current) return;
       setBooks(result.books); setOwner(result.owner); setError(result.error ?? ''); setLoading(false);
     };
     const update = () => { void refresh().catch(reason => { if (active) { setError(reason.message); setLoading(false); } }); };
-    const changed = () => { generation++; setBooks(previous => previous.filter(book => !book.cloud && !book.deviceOwner)); setOwner(undefined); update(); };
+    const changed = () => { generation++; shelfVersion.current++; savingMove.current = false; setManipulating(false); flightRef.current = null; setFlight(null); setBooks(previous => previous.filter(book => !book.cloud && !book.deviceOwner)); setOwner(undefined); update(); };
     const storage = (event: StorageEvent) => { if (event.key === 'eazo-auth-change') changed(); };
     update();
     window.addEventListener('focus', update); window.addEventListener('online', update);
@@ -119,13 +133,6 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
     return () => { observer.disconnect(); element.removeEventListener('scroll', measure); element.removeEventListener('wheel', wheel); };
   }, [slotCount]);
 
-  type Flight = { book: ShelfBook; x: number; y: number; startX: number; startY: number; left: number; top: number; width: number; height: number; moved: boolean; pointer: number };
-  const flightRef = useRef<Flight | null>(null);
-  const [flight, setFlight] = useState<Flight | null>(null);
-  const ghost = useRef<HTMLDivElement>(null);
-  const [thrown, setThrown] = useState<ShelfBook | null>(null);
-  const suppressClick = useRef(false);
-  const returning = useRef(false);
 
   function startDrag(event: PointerEvent<HTMLDivElement>, book: ShelfBook) {
     if (busy || event.button !== 0 || !event.isPrimary) return;
@@ -174,15 +181,28 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
     requestAnimationFrame(() => shelf.current?.querySelector<HTMLButtonElement>(`[data-slot="${value?.book.shelf?.slot}"] button`)?.focus({ preventScroll: true }));
   }
   async function moveBook(book: ShelfBook, slot: number) {
+    if (savingMove.current) return;
+    const before = books;
+    const version = ++shelfVersion.current;
+    savingMove.current = true;
     setManipulating(true); setError('');
     try {
-      if (book.cloud && !book.localId && !sampleBook(book.id)) {
-        await cloudRequest('shelf', { book: book.cloud.book, slot }, book.cloud.owner);
-      } else await libraryForOwner(book.deviceOwner).move(book.localId ?? book.id, slot);
-      setBooks((await readShelf()).books); flightRef.current = null; setFlight(null);
+      const after = placeShelfBook(before, book.id, slot);
+      setBooks(after); flightRef.current = null; setFlight(null);
+      await persistShelfMove(before, after);
+      // No account/session round trip is needed to render a known local change.
     }
-    catch (reason) { setError(reason instanceof Error ? reason.message : 'The book missed its landing. Try again.'); await returnBook(); }
-    finally { setManipulating(false); }
+    catch (reason) {
+      if (version === shelfVersion.current) {
+        setBooks(before); flightRef.current = null; setFlight(null);
+        setError(reason instanceof Error ? reason.message : 'The book missed its landing. Try again.');
+        // Reconcile a possible partial swap on the next refresh, without delaying recovery.
+        setAttempt(value => value + 1);
+      }
+    }
+    finally {
+      if (version === shelfVersion.current) { savingMove.current = false; setManipulating(false); }
+    }
   }
   function endDrag(event: PointerEvent<HTMLDivElement>) {
     const value = flightRef.current;
@@ -195,10 +215,21 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
   }
   async function removeBook() {
     if (!thrown) return;
-    if (sampleBook(thrown.id) || thrown.cloud) { await returnBook(); return; }
+    if (opening) return;
+    if (sampleBook(thrown.id) && !thrown.cloud) { await returnBook(); return; }
     setBusy(true); setError('');
     try {
-      await libraryForOwner(thrown.deviceOwner).remove(thrown.id);
+      if (thrown.cloud) {
+        await cloudRequest('delete-book', { book: thrown.cloud.book }, thrown.cloud.owner);
+        for (const entry of books.filter(book => book.cloud?.book === thrown.cloud!.book)) {
+          if (entry.localId) await libraryForOwner(entry.deviceOwner).remove(entry.localId);
+          onRemoved(entry.id);
+        }
+        // Reload to release the deleted source and any active reading sync.
+        window.location.replace(new URL('/', window.location.origin).href);
+        return;
+      }
+      await libraryForOwner(thrown.deviceOwner).remove(thrown.localId ?? thrown.id);
       setBooks(previous => previous.filter(book => book.id !== thrown.id));
       onRemoved(thrown.id); setThrown(null); setFlight(null); flightRef.current = null; setManipulating(false);
     } catch (reason) { setError(reason instanceof Error ? reason.message : 'Could not remove this book.'); await returnBook(); }
@@ -323,7 +354,7 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
     {flight && <div ref={ghost} className={styles.flyingBook} aria-hidden="true" inert style={{ left: flight.left + flight.x - flight.startX, top: flight.top + flight.y - flight.startY, width: flight.width, height: flight.height }}>
       <BookSpine id={flight.book.id} title={cleanBookTitle(flight.book.title)} emblem={flight.book.id === 'plato-republic' ? sampleEmblem ?? REPUBLIC_EMBLEM : flight.book.emblem} variant={flight.book.shelf?.variant} onClick={() => {}}/>
     </div>}
-    {thrown && <ThrowCard cloud={!!thrown.cloud} example={!!sampleBook(thrown.id)} title={cleanBookTitle(thrown.title)} busy={opening} onReturn={() => void returnBook()} onThrow={() => void removeBook()}/>}
+    {thrown && <ThrowCard included={!!sampleBook(thrown.id)} cloud={!!thrown.cloud} example={!thrown.cloud && !!sampleBook(thrown.id)} title={cleanBookTitle(thrown.title)} busy={opening} onReturn={() => void returnBook()} onThrow={() => void removeBook()}/>}
     <input ref={input} hidden type="file" accept=".txt,text/plain,.pdf,application/pdf" onChange={event => {
       const file = event.target.files?.[0]; event.target.value = '';
       if (file && !busy) setDraft({ file, slot: selectedSlot.current });
@@ -353,13 +384,13 @@ function SpineTitleCard({ file, signedIn, onCancel, onPlace }: { file: File; sig
   </dialog>;
 }
 
-function ThrowCard({ title, cloud, example, busy, onReturn, onThrow }: { title: string; cloud: boolean; example: boolean; busy: boolean; onReturn: () => void; onThrow: () => void }) {
+function ThrowCard({ title, included, cloud, example, busy, onReturn, onThrow }: { title: string; included: boolean; cloud: boolean; example: boolean; busy: boolean; onReturn: () => void; onThrow: () => void }) {
   const card = useRef<HTMLDialogElement>(null);
   useEffect(() => { const element = card.current; element?.showModal(); return () => element?.close(); }, []);
   return <dialog ref={card} className={styles.titleCard} aria-labelledby="throw-heading" aria-describedby="throw-description" onCancel={event => { event.preventDefault(); event.stopPropagation(); if (!busy) onReturn(); }}>
     <svg className={styles.cardDrawing} viewBox="0 0 64 72" aria-hidden="true"><path d="M23 13 46 6 57 43 34 50Z M27 15 37 46 M9 28 20 25 M4 38 18 34 M12 46 23 43 M18 61Q30 54 43 59"/></svg>
-    <h2 id="throw-heading">{cloud ? 'This book is in your account.' : example ? 'Nice throw. Wrong book.' : 'A one-way flight?'}</h2>
-    <p id="throw-description">{cloud ? <>Your synced book and reading are kept in your account. Return it to the shelf to keep reading.</> : example ? <>“{title}” is an example book—it came with the shelf, and it’s staying. Consider it a very well-read boomerang.</> : <>“{title}” is about to leave your local library. No return ticket, no secret shelf: this copy will be deleted. Want it back later? You’ll need to upload it again.</>}</p>
-    <div className={styles.cardActions}><button type="button" autoFocus disabled={busy} onClick={onReturn}>{example ? 'All right, back you come.' : 'It was an accident!'}</button>{!example && !cloud && <button type="submit" disabled={busy} onClick={onThrow}>{busy ? 'Saying goodbye…' : 'Bon voyage, book ↗'}</button>}</div>
+    <h2 id="throw-heading">{cloud ? 'Throw away this account book?' : example ? 'Nice throw. Wrong book.' : 'A one-way flight?'}</h2>
+    <p id="throw-description">{cloud ? <>“{title}” is saved in the cloud in your account. Throwing it away permanently deletes the account book, all its versions, saved reading, and generated maps across your devices, plus its downloaded copy in this browser. You’ll need to upload it again to get it back.{included && " The included example will stay on your shelf."}</> : example ? <>“{title}” is an example book—it came with the shelf, and it’s staying. Consider it a very well-read boomerang.</> : <>“{title}” is saved locally in this browser, not in your cloud account. It is about to leave your local library. No return ticket, no secret shelf: this copy will be deleted. Want it back later? You’ll need to upload it again.</>}</p>
+    <div className={styles.cardActions}><button type="button" autoFocus disabled={busy} onClick={onReturn}>{example ? 'All right, back you come.' : 'It was an accident!'}</button>{!example && <button type="submit" disabled={busy} onClick={onThrow}>{busy ? 'Saying goodbye…' : 'Bon voyage, book ↗'}</button>}</div>
   </dialog>;
 }
