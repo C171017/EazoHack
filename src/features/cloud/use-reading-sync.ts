@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { WorkspaceSnapshotSchema, type WorkspaceSnapshot } from '../persistence';
 import { resolveTxtAnchor } from '../reader/source-anchor';
 import type { BookPreview } from '../reader/book-preview';
+import { createReadingImageTransport } from './reading-images';
 import { cloudRequest, CloudRequestError } from './request';
 import { ReadingSync, type SyncStatus } from './sync-engine';
 import { createSyncStore, readingStorageKey, type SnapshotHead } from './sync-store';
@@ -38,13 +39,18 @@ export function useReadingSync({ ownerId, sourceId, bookId, preview, snapshot, r
       setState({ status: 'signed-out', message: 'Your session changed. Opening sign in…' });
       window.location.replace('/cloud');
     }
+    const images = ownerId && sourceId ? createReadingImageTransport(ownerId, sourceId) : null;
     async function request(path: string, body?: unknown) {
-      try { return await cloudRequest(path, body, ownerId); }
+      try {
+        const result = await cloudRequest(path, body, ownerId);
+        if (path.startsWith('snapshot') && result.payload && images) result.payload = await images.unpack(result.payload);
+        return result;
+      }
       catch (error) {
         if (error instanceof CloudRequestError) {
           if (error.status === 401 || error.status === 403) expired();
           const value = error.details as { current?: SnapshotHead } | undefined;
-          if (error.status === 409 && value?.current) return { ...value.current, conflict: true };
+          if (error.status === 409 && value?.current) return { ...value.current, payload: value.current.payload && images ? await images.unpack(value.current.payload) : value.current.payload, conflict: true };
         }
         throw error;
       }
@@ -60,7 +66,7 @@ export function useReadingSync({ ownerId, sourceId, bookId, preview, snapshot, r
         await checkSession();
         let device = localStorage.getItem('eazo-device');
         if (!device) { device = crypto.randomUUID(); localStorage.setItem('eazo-device', device); }
-        return await request('snapshot', { source: sourceId, device, mutationId: record.mutationId, baseRevision: record.revision, payload: record.current });
+        return await request('snapshot', { source: sourceId, device, mutationId: record.mutationId, baseRevision: record.revision, payload: images ? await images.pack(record.current) : record.current });
       },
       validate: value => validateReadingSnapshot(value, bookId, preview),
       restore: value => { if (active) latestRestore.current(value); },

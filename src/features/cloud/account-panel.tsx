@@ -1,7 +1,7 @@
 'use client';
 import {useCallback,useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
-import {bookLibrary,type LibraryEntry} from '../reader/book-library-store';
+import {bookLibrary,libraryForOwner,type LibraryEntry} from '../reader/book-library-store';
 import {readUploadedBook,type TextBook} from '../reader/upload-book';
 import {clearAccountReading} from './sync-store';
 import {copyReadingToAccount} from './copy-reading';
@@ -26,7 +26,7 @@ export default function AccountPanel({session}:{session:Session}) {
   if(next.id!==session.id){window.location.replace(new URL('/',window.location.origin).href);return;}
   const summary=next.id?await cloudRequest('account',undefined,next.id):null;
   const active=next.id&&summary?.status!=='deleting';
-  const [localBooks,remoteBooks,remoteJobs]=await Promise.all([bookLibrary.list(),active?cloudRequest('books',undefined,next.id!):[],active?cloudRequest('jobs',undefined,next.id!):[]]);
+  const [localBooks,remoteBooks,remoteJobs]=await Promise.all([(async()=>{const guest=await bookLibrary.list();const own=next.id?await libraryForOwner(next.id).list():[];return [...new Map([...guest,...own.map(book=>({...book,deviceOwner:next.id!}))].map(book=>[book.id,book])).values()];})(),active?cloudRequest('books',undefined,next.id!):[],active?cloudRequest('jobs',undefined,next.id!):[]]);
   if(ticket!==generation.current)return;
   setLocal(localBooks);setBooks(remoteBooks);setJobs(remoteJobs);setAccount(summary);if(summary?.status==='deleting'){setDeleting(true);setMessage('Account deletion is in progress. Confirm deletion again below to finish removing remaining data.');}setReady(true);
  },[session.id]);
@@ -63,7 +63,7 @@ export default function AccountPanel({session}:{session:Session}) {
     </li>)}</ul><button className={styles.button} disabled={busy} onClick={()=>void run(refresh)}>Refresh library</button>
    </section>
    <section className={styles.card}><h2>Bring your local reading with you</h2><p className={styles.muted}>Copy a local book and its saved reading progress into this account. These local books belong to this browser; only copy the ones you want in your account. For PDFs, Eazo copies extracted text; original PDFs remain on this device.</p>
-    <ul className={styles.list}>{local.map(book=><li className={styles.item} key={book.id}><div className={styles.actions}><span>{book.title}</span><button className={styles.button} disabled={busy} onClick={()=>void run(async()=>{const value=await bookLibrary.load(book.id);if(value.kind!=='txt')throw new Error('Open this PDF in the reader first to extract its text.');await save(value);})}>Copy to this account</button></div></li>)}</ul>
+    <ul className={styles.list}>{local.map(book=><li className={styles.item} key={book.id}><div className={styles.actions}><span>{book.title}</span><button className={styles.button} disabled={busy} onClick={()=>void run(async()=>{const value=await libraryForOwner(book.deviceOwner).load(book.id);if(value.kind!=='txt')throw new Error('Open this PDF in the reader first to extract its text.');await save(value);})}>Copy to this account</button></div></li>)}</ul>
     <label>Upload a TXT file<input className={styles.field} disabled={busy} type="file" accept=".txt,text/plain" onChange={event=>{const file=event.target.files?.[0];event.target.value='';if(file)void run(async()=>{const book=await readUploadedBook(file);if(book.kind==='txt')await save(book);});}}/></label><p className={styles.muted}>TXT uploads can be up to 20 MiB. Local extracted text can be up to 50 MiB. Book-map generation currently supports text up to 1 MiB.</p>
    </section>
    <section className={styles.card}><h2>Account & data</h2><p className={styles.muted}>Download your saved account data or permanently delete your account and cloud library.</p><div className={styles.actions}><button className={styles.button} disabled={busy} onClick={()=>void run(downloadExport)}>Export account data</button><button className={`${styles.button} ${styles.danger}`} disabled={busy} onClick={()=>setDeleting(!deleting)}>{deleting?'Cancel deletion':'Delete account…'}</button></div>

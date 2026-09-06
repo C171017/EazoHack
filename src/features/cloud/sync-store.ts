@@ -1,3 +1,5 @@
+import { createFootprintRepository } from '../persistence/reading-footprints';
+import { mergeFootprints } from '../book-graph/reading-heat';
 import { createWorkspaceRepository, WorkspaceSnapshotSchema, type WorkspaceSnapshot } from '../persistence';
 
 export type SnapshotHead = { revision: number; payload: WorkspaceSnapshot | null };
@@ -88,16 +90,29 @@ export function createSyncStore(factory?: IDBFactory) {
 }
 export async function loadGuestReading(bookId: string) {
   const store = createSyncStore();
+  let snapshot: WorkspaceSnapshot | null = null;
+  try { snapshot = (await store.load(readingStorageKey(undefined, bookId)))?.current ?? null; }
+  finally { await store.close(); }
+  if (!snapshot) {
+    const legacy = createWorkspaceRepository();
+    try { snapshot = await legacy.load(bookId); } finally { await legacy.close(); }
+  }
+  const footprints = createFootprintRepository();
   try {
-    const saved = await store.load(readingStorageKey(undefined, bookId));
-    if (saved) return saved.current;
-  } finally { await store.close(); }
-  const legacy = createWorkspaceRepository();
-  try { return await legacy.load(bookId); } finally { await legacy.close(); }
+    const events = await footprints.list(bookId);
+    if (!snapshot && !events.length) return null;
+    return WorkspaceSnapshotSchema.parse({ schemaVersion: 1, id: bookId, bookId, savedAt: new Date().toISOString(), ...snapshot, footprints: mergeFootprints(snapshot?.footprints ?? [], events) });
+  } finally { await footprints.close(); }
 }
 
 /** Remove this account's cached reading and recovery copies, preserving guest and other accounts. */
 export async function clearAccountReading(ownerId: string) {
+  await new Promise<void>((resolve, reject) => {
+    const request = indexedDB.deleteDatabase(`eazo-book-library:account:${ownerId}`);
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error);
+    request.onblocked = () => reject(new Error('Close other Eazo tabs to clear this account’s cached books.'));
+  });
   const store = createSyncStore();
   try { await store.clearOwner(ownerId); } finally { await store.close(); }
   for (const name of [`eazo-reading-footprints:account:${ownerId}`, `eazo-selection-activity:account:${ownerId}`]) {

@@ -4,7 +4,7 @@ import { pdfImportNote } from './pdf/import-model';
 import { nextShelfPosition, type ShelfPosition } from './bookshelf-model';
 import { BookEmblemSchema, type BookEmblem } from '@/shared/book-emblem';
 
-export type LibraryEntry = { id: string; title: string; kind: UploadedBook['kind']; addedAt: string; ready?: boolean; note?: string; shelf?: ShelfPosition; emblem?: BookEmblem };
+export type LibraryEntry = { deviceOwner?: string; sourceBookId?: string; extractionVersion?: string; id: string; title: string; kind: UploadedBook['kind']; addedAt: string; ready?: boolean; note?: string; shelf?: ShelfPosition; emblem?: BookEmblem };
 export const uploadedBookId = (book: UploadedBook) => book.kind === 'pdf' ? `pdf:${book.hash}` : book.originalPdf ? `pdf:${book.originalPdf.hash}` : book.bookId;
 
 /** Keep the catalogue separate so browsing never loads every book's contents. */
@@ -48,7 +48,7 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
           // Conversion and duplicate uploads retain their original place and emblem.
           const shelf = previous?.shelf ?? nextShelfPosition(id, new Set(entries.map(entry => entry.shelf!.slot)), requestedSlot);
           tx.objectStore('books').put(book, id);
-          catalogue.put({ ...previous, id, title: book.title, kind: book.kind === 'pdf' || book.originalPdf ? 'pdf' : 'txt', ready: book.kind === 'txt', addedAt: previous?.addedAt ?? new Date().toISOString(), shelf,
+          catalogue.put({ ...previous, ...(book.kind === 'txt' ? { sourceBookId: book.bookId, extractionVersion: book.preview.extractionVersion } : {}), id, title: book.title, kind: book.kind === 'pdf' || book.originalPdf ? 'pdf' : 'txt', ready: book.kind === 'txt', addedAt: previous?.addedAt ?? new Date().toISOString(), shelf,
             ...(book.kind === 'txt' && book.originalPdf ? { note: pdfImportNote(book.originalPdf.manifest) } : {}),
           } satisfies LibraryEntry);
         };
@@ -131,3 +131,6 @@ function putChangedEntries(store: IDBObjectStore, before: LibraryEntry[], after:
   for (const entry of after) if (entry.id !== skipId && entry !== originals.get(entry.id)) store.put(entry);
 }
 export const bookLibrary = createBookLibrary();
+
+/** Private account source caches never share the guest catalogue. */
+export function libraryForOwner(owner?: string) { return owner ? createBookLibrary(undefined, `eazo-book-library:account:${owner}`) : bookLibrary; }

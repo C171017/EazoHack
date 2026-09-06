@@ -1,8 +1,9 @@
+import {readingImageHashes} from './reading-images';
 import {Zip,ZipPassThrough} from 'fflate';
 import {cloudRequest,CloudRequestError} from './request';
 
 type ExportPage={table:string;records:Record<string,unknown>[];nextCursor:string|null;complete:boolean;account:unknown;exportedAt:string};
-type FileRequest={kind:'source'|'original'|'manifest'|'graph'|'hierarchy';id:string};
+type FileRequest={kind:'source'|'original'|'manifest'|'graph'|'hierarchy'|'reading-image';id:string;hash?:string};
 
 /** Stream each authorized download into an uncompressed ZIP, without base64 expansion. */
 export async function downloadAccountArchive(owner:string,notice:(value:string)=>void) {
@@ -12,12 +13,14 @@ export async function downloadAccountArchive(owner:string,notice:(value:string)=
  const encoder=new TextEncoder();
  const add=(name:string,bytes:Uint8Array)=>{const file=new ZipPassThrough(name);zip.add(file);file.push(bytes,true);};
  let cursor:string|undefined;
+ const imageFiles=new Set<string>();
  let index=0;const files:FileRequest[]=[];const missing:FileRequest[]=[];
  do {
   notice(`Preparing account data (${++index})…`);
   const page:ExportPage=await cloudRequest('export'+(cursor?'?cursor='+encodeURIComponent(cursor):''),undefined,owner);
   if(index===1)add('account.json',encoder.encode(JSON.stringify({account:page.account,exportedAt:page.exportedAt,schema:'eazo-account-archive-v1'},null,2)));
   add(`data/${String(index).padStart(6,'0')}-${page.table}.json`,encoder.encode(JSON.stringify(page.records)));
+  if(page.table==='reading_snapshots')for(const record of page.records)for(const hash of readingImageHashes(record.payload)){const key=String(record.source_id)+hash;if(!imageFiles.has(key)){imageFiles.add(key);files.push({kind:'reading-image',id:String(record.source_id),hash});}}
   if(page.table==='book_sources')for(const record of page.records){files.push({kind:'source',id:String(record.id)});if(record.original_object)files.push({kind:'original',id:String(record.id)});}
   if(page.table==='graph_versions')for(const record of page.records)for(const kind of ['manifest','graph','hierarchy'] as const)files.push({kind,id:String(record.id)});
   cursor=page.nextCursor??undefined;
@@ -37,7 +40,7 @@ export async function downloadAccountArchive(owner:string,notice:(value:string)=
   if(zipError)throw zipError;
  }
  if(missing.length)add('missing-files.json',encoder.encode(JSON.stringify(missing,null,2)));
- add('README.txt',encoder.encode('Eazo account export\n\naccount.json identifies the account. data/ contains paginated database records, including saved reading revisions and current heads. files/ contains original source text and published map files at the paths referenced by those records. missing-files.json, when present, lists registered files whose upload is missing. This archive contains private reading data.\n'));
+ add('README.txt',encoder.encode('Eazo account export\n\naccount.json identifies the account. data/ contains paginated database records, including saved reading revisions and current heads. files/ contains original source text, private reading illustrations, and published map files at the paths referenced by those records. missing-files.json, when present, lists registered files whose upload is missing. This archive contains private reading data.\n'));
  zip.end();if(zipError)throw zipError;
  const url=URL.createObjectURL(new Blob(chunks,{type:'application/zip'}));
  const link=document.createElement('a');link.href=url;link.download='eazo-account.zip';link.click();

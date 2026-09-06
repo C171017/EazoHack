@@ -3,15 +3,16 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { createFootprintRepository } from '../persistence/reading-footprints';
 import { mergeFootprints, type ReadingFootprint } from './reading-heat';
 
-export function useReadingFootprints(bookId: string, ownerId?: string) {
+export function useReadingFootprints(bookId: string, ownerId?: string, source?: { fileHash: string; extractionVersion: string }) {
   const repository = useMemo(() => createFootprintRepository(ownerId ? { databaseName: `eazo-reading-footprints:account:${ownerId}` } : {}), [ownerId]);
   const [events, setEvents] = useState<ReadingFootprint[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const pending = useRef(new Map<string, ReadingFootprint>());
+  const fileHash = source?.fileHash, extractionVersion = source?.extractionVersion;
   const refresh = useCallback(() => repository.list(bookId).then(saved => {
-    setEvents(current => mergeFootprints(saved, current)); setLoading(false);
-  }).catch(() => { setError('Saved footprints could not be loaded.'); setLoading(false); }), [bookId, repository]);
+    setEvents(current => mergeFootprints(saved.filter(event => !fileHash || event.anchors.every(anchor => anchor.fileHash === fileHash && anchor.extractionVersion === extractionVersion)), current)); setLoading(false);
+  }).catch(() => { setError('Saved footprints could not be loaded.'); setLoading(false); }), [bookId, repository, fileHash, extractionVersion]);
   useEffect(() => {
     void refresh();
     window.addEventListener('focus', refresh);

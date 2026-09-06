@@ -1,6 +1,6 @@
 import { bookSeed } from '@/shared/book-emblem';
 
-export type ShelfPlacement = { slot: number; title: string };
+export type ShelfPlacement = { slot: number; title: string; localOnly?: boolean };
 export type ShelfPosition = { slot: number; variant: number };
 
 export function nextShelfPosition(id: string, occupied: Set<number>, requested?: number): ShelfPosition {

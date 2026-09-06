@@ -1,5 +1,8 @@
 'use client';
 import { useBookAnalysis } from '../book-graph/use-book-analysis';
+import { sampleBook } from '@/shared/sample-books';
+import { copyReadingToAccount } from '../cloud/copy-reading';
+import type { CloudBook } from '../cloud/library';
 import { cloudRequest } from '../cloud/request';
 import { useReadingSync } from '../cloud/use-reading-sync';
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
@@ -10,7 +13,7 @@ import { BookLibrary } from '../reader/book-library';
 import libraryStyles from '../reader/book-library.module.css';
 import { ensureBookEmblem } from '../reader/book-emblem-client';
 import type { ShelfPlacement } from '../reader/bookshelf-model';
-import { bookLibrary, uploadedBookId } from '../reader/book-library-store';
+import { libraryForOwner, uploadedBookId } from '../reader/book-library-store';
 import { IncompatiblePdfError, PDF_IMPORT_VERSION, pdfImportNote, type ImportState } from '../reader/pdf/import-model';
 import { Button } from '@/ui/components/button';
 import { SelectionSchema, SourceAnchorSchema, ArtifactSchema, RouteRunSchema, type Selection, type SourceAnchor, type RouteKind } from '@/shared/schemas';
@@ -34,6 +37,25 @@ const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),
 const libraryGraph: MapBootstrap = { bookId: '', graphVersion: 'library', version: 'library', roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true };
 
 export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSourceId,cloudOwnerId,initialLibraryOpen = false}:{preview?:BookPreview;graph?:MapBootstrap;initialTitle?:string;cloudSourceId?:string;cloudOwnerId?:string;initialLibraryOpen?:boolean}) {
+  const [uploadedCloud, setUploadedCloud] = useState<{ owner: string; source?: string } | null>(null);
+  const [sampleCloud, setSampleCloud] = useState<{ owner: string; source: string } | null>(null);
+  const [sampleStatus, setSampleStatus] = useState<'checking' | 'ready' | 'error'>(preview && sampleBook(graph.bookId) && !cloudOwnerId ? 'checking' : 'ready');
+  const [sampleError, setSampleError] = useState('');
+  const [sampleAttempt, setSampleAttempt] = useState(0);
+  useEffect(() => {
+    if (!preview || !sampleBook(graph.bookId) || cloudOwnerId) return;
+    let active = true;
+    async function connect() {
+      const session = await cloudRequest('session');
+      if (!session.id) { if (active) setSampleStatus('ready'); return; }
+      const books: CloudBook[] = await cloudRequest('books', undefined, session.id);
+      const source = books.find(book => book.local_book_id === graph.bookId)?.book_sources.find(source => source.file_hash === preview!.fileHash && source.extraction_version === preview!.extractionVersion);
+      const sourceId = source?.id ?? (await copyReadingToAccount({ kind: 'txt', bookId: graph.bookId, preview: preview!, title: initialTitle ?? sampleBook(graph.bookId)!.title }, session.id, undefined, false)).sourceId;
+      if (active) { setSampleCloud({ owner: session.id, source: sourceId }); setSampleStatus('ready'); }
+    }
+    void connect().catch(error => { if (active) { setSampleError(error.message); setSampleStatus('error'); } });
+    return () => { active = false; };
+  }, [preview, graph.bookId, cloudOwnerId, initialTitle, sampleAttempt]);
   const [uploaded, setUploaded] = useState<TextBook | null>(null);
   const [libraryOpen, setLibraryOpen] = useState(initialLibraryOpen);
   const [reopenVersion, setReopenVersion] = useState(0);
@@ -41,13 +63,15 @@ export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSource
   const [libraryRevision, setLibraryRevision] = useState(0);
   const importing = useRef<AbortController | null>(null);
   const retryInput = useRef<File | UploadedBook | null>(null);
+  const retryOwner = useRef<string | undefined>(undefined);
   const retryPlacement = useRef<ShelfPlacement | undefined>(undefined);
   useEffect(() => () => importing.current?.abort(), []);
-  async function processBook(input: File | UploadedBook, placement?: ShelfPlacement) {
+  async function processBook(input: File | UploadedBook, placement?: ShelfPlacement, ownerHint?: string) {
     if (importing.current) return;
     const controller = new AbortController();
     importing.current = controller;
     retryInput.current = input;
+    retryOwner.current = ownerHint;
     retryPlacement.current = placement;
     const title = placement?.title ?? (input instanceof File ? input.name : input.title);
     setLibraryOpen(true);
@@ -56,6 +80,9 @@ export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSource
       if (!controller.signal.aborted) setImportState({ ...progress, title, status: 'processing' });
     };
     try {
+      const session = input instanceof File && !placement?.localOnly ? await cloudRequest('session') : null;
+      const owner: string | undefined = session?.id ?? ownerHint;
+      const sourceLibrary = libraryForOwner(owner);
       let book = input instanceof File ? await readUploadedBook(input) : input;
       if (placement) book = { ...book, title: placement.title };
       if (book.kind === 'txt' && book.originalPdf && book.originalPdf.manifest.version !== PDF_IMPORT_VERSION) {
@@ -65,11 +92,11 @@ export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSource
       if (book.kind === 'pdf') {
         // Save the original before conversion, including on failed/cancelled imports.
         // Avoid replacing an existing ready conversion on a duplicate upload.
-        const saved = await bookLibrary.load(uploadedBookId(book)).catch(() => null);
+        const saved = await sourceLibrary.load(uploadedBookId(book)).catch(() => null);
         controller.signal.throwIfAborted();
         if (saved?.kind === 'txt' && saved.originalPdf?.manifest.version === PDF_IMPORT_VERSION) book = saved;
         else {
-          await bookLibrary.save(book, placement?.slot);
+          await sourceLibrary.save(book, placement?.slot);
           setLibraryRevision(value => value + 1);
           const { importPdfBook } = await import('../reader/pdf/import-book');
           book = await importPdfBook(book, controller.signal, update);
@@ -78,12 +105,19 @@ export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSource
       controller.signal.throwIfAborted();
       update({ percent: 99, stage: 'Saving book' });
       if (placement) book = { ...book, title: placement.title };
-      await bookLibrary.save(book, placement?.slot);
+      await sourceLibrary.save(book, placement?.slot);
       controller.signal.throwIfAborted();
-      setUploaded(book);
-      setImportState({ title, status: 'ready', percent: 100, stage: 'Text ready · 100%', note: [book.originalPdf ? pdfImportNote(book.originalPdf.manifest) : '', 'You can read now. Book map analysis runs separately; open the book to see its progress.'].filter(Boolean).join(' ') });
+      let accountCopy: { owner: string; source: string } | null = null;
+      if (owner) {
+          update({ percent: 99, stage: 'Saving book and reading to your account' });
+          const result = await copyReadingToAccount(book, owner);
+          controller.signal.throwIfAborted();
+          accountCopy = { owner, source: result.sourceId };
+      }
+      setUploadedCloud(accountCopy); setUploaded(book);
+      setImportState({ title, status: 'ready', percent: 100, stage: 'Text ready · 100%', note: [book.originalPdf ? pdfImportNote(book.originalPdf.manifest) : '', accountCopy ? 'Book, enhanced reading, and heatmap activity sync with your account.' : 'Saved on this device. Add it to your account to sync reading across devices.'].filter(Boolean).join(' ') });
       setLibraryRevision(value => value + 1);
-      void ensureBookEmblem(book).then(() => setLibraryRevision(value => value + 1)).catch(() => {
+      if (!owner) void ensureBookEmblem(book).then(() => setLibraryRevision(value => value + 1)).catch(() => {
         // The built-in line emblem remains usable if the provider is unavailable.
       });
     } catch (error) {
@@ -97,24 +131,28 @@ export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSource
   async function upload(file: File, placement?: ShelfPlacement) {
     await processBook(file, placement);
   }
-  async function selectBook(book: UploadedBook | null) {
+  async function selectBook(book: UploadedBook | null, owner?: string) {
     if (importing.current) return;
     if (!book && cloudSourceId) {
       await cloudRequest('open', {source: null});
       window.location.replace(new URL('/?book=plato-republic', window.location.origin).href);
       return;
     }
-    if (book?.kind === 'pdf' || (book?.originalPdf && book.originalPdf.manifest.version !== PDF_IMPORT_VERSION)) { await processBook(book); return; }
-    setUploaded(book); setLibraryOpen(false); setImportState(null);
+    if (book?.kind === 'pdf' || (book?.originalPdf && book.originalPdf.manifest.version !== PDF_IMPORT_VERSION)) { await processBook(book, undefined, owner); return; }
+    setUploadedCloud(owner ? { owner } : null); setUploaded(book); setLibraryOpen(false); setImportState(null);
   }
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
   const activePreview = uploaded?.preview ?? preview;
+  const activeOwner = uploaded ? uploadedCloud?.owner : cloudOwnerId ?? sampleCloud?.owner;
+  const activeSource = uploaded ? uploadedCloud?.source : cloudSourceId ?? sampleCloud?.source;
   return <>
     <div className={libraryStyles.readerSurface} data-library-open={libraryOpen || undefined}>
-    {activePreview && <TextWorkspace reopenVersion={reopenVersion} covered={libraryOpen} cloudOwnerId={uploaded ? undefined : cloudOwnerId} analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={`${uploaded ? "guest" : cloudOwnerId ?? "guest"}:${uploaded?.bookId ?? cloudSourceId ?? graph.bookId}`} preview={activePreview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />}
+    {!uploaded && sampleStatus === 'checking' && <p role="status" className="p-8">Opening your saved reading…</p>}
+    {!uploaded && sampleStatus === 'error' && <div role="alert" className="p-8"><p>{sampleError}</p><button onClick={() => { setSampleStatus('checking'); setSampleAttempt(value => value + 1); }}>Retry account sync</button> · <button onClick={() => setSampleStatus('ready')}>Read on this device only</button></div>}
+    {activePreview && (uploaded || sampleStatus === 'ready') && <TextWorkspace reopenVersion={reopenVersion} covered={libraryOpen} cloudOwnerId={activeOwner} analyzeUploaded={!!uploaded} cloudSourceId={activeSource} key={`${activeOwner ?? "guest"}:${activeSource ?? uploaded?.bookId ?? graph.bookId}`} preview={activePreview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />}
     </div>
-    <BookLibrary initialOpen={initialLibraryOpen} onReopen={() => { setReopenVersion(value => value + 1); setLibraryOpen(false); setImportState(null); }} onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current && activePreview) { setLibraryOpen(false); setImportState(null); } }}
-      importState={importState} revision={libraryRevision} sampleEmblem={graph.bookId === 'plato-republic' ? graph.bookEmblem : undefined} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />
+    <BookLibrary initialOpen={initialLibraryOpen} onReopen={() => { setReopenVersion(value => value + 1); setLibraryOpen(false); setImportState(null); }} onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={activeSource ? `cloud:${activeSource}` : uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current && activePreview) { setLibraryOpen(false); setImportState(null); } }}
+      importState={importState} revision={libraryRevision} sampleEmblem={graph.bookId === 'plato-republic' ? graph.bookEmblem : undefined} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current, retryOwner.current); }} />
   </>;
 }
 
@@ -125,7 +163,7 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
   const analysis = useBookAnalysis(initialGraph.bookId, preview, analyzing && !!initialGraph.unavailable, title, cloudSourceId);
   const graph = analysis.graph ?? initialGraph;
   const bookId = graph.bookId;
-  const footprints = useReadingFootprints(bookId, cloudOwnerId);
+  const footprints = useReadingFootprints(bookId, cloudOwnerId, preview);
   const recordFootprints = footprints.record;
   const heatSource = useMemo(() => ({ ...preview, bookId }), [preview, bookId]);
   const heat = useHeatPlacement(graph.version, footprints.events, heatSource, !graph.unavailable, mapActive);
@@ -304,6 +342,10 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
         {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
+        <div className="px-6 py-2 text-xs" role="status">
+          {sync.status === 'saved' ? 'Reading saved to your account' : sync.status === 'saving' ? 'Saving reading…' : sync.status === 'local' ? 'Reading saved on this device' : sync.status === 'offline' ? 'Offline · Reading saved on this device; sync resumes when connected' : sync.status === 'loading' ? 'Loading saved reading…' : null}
+          {sync.status === 'error' && <>{sync.message ?? 'Reading could not be synced.'} <button className="underline" onClick={sync.retry}>Retry</button> · <button className="underline" onClick={sync.download}>Download reading backup</button></>}
+        </div>
         {sync.status === 'conflict' && <div className="mx-6 mb-3 rounded border border-line p-3 text-sm" role="alert">
           <p>Both versions are kept. Choose which reading to continue; the other version is saved as a recovery copy on this device.</p>
           <div className="mt-2 flex flex-wrap gap-3"><button className="underline" onClick={() => sync.resolve('device')}>Continue this device’s reading</button><button className="underline" onClick={() => sync.resolve('cloud')}>Use cloud reading</button><button className="underline" onClick={sync.download}>Download both versions</button></div>

@@ -65,7 +65,9 @@ export function useBookAnalysis(bookId: string, preview: BookPreview, enabled: b
       }catch(error){failed(error);}
     }
     // Production imports use the authenticated worker, never the development-only endpoint.
-    if(process.env.NODE_ENV==='production'||cloudSourceId)void hosted();else void start();
+    if (process.env.NODE_ENV === 'production' && !cloudSourceId) {
+      queueMicrotask(() => { if (active) setState({ status: 'unavailable', stage: 'Add this book to your account to build a synced map.' }); });
+    } else if (cloudSourceId) void hosted(); else void start();
     return()=>{active=false;controller.abort();clearTimeout(timer);};
   },[bookId,preview,enabled,attempt,title,cloudSourceId]);
   return { ...state, retry:()=>{setState({status:'starting',stage:'Reconnecting to book analysis'});setAttempt(value=>value+1);} };

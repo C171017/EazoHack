@@ -93,3 +93,15 @@ test('failed storage deletion leaves identity available for a retry', async t =>
   assert.equal(paths.some(path => path.startsWith('/auth/v1/admin/')), false);
   assert.equal(paths.some(path => path.endsWith('eazo_delete_account_rows')), false);
 });
+
+test('reading illustration export is source-owned and cannot sign another account source', async t => {
+ configure(t);
+ const calls:string[]=[];
+ t.mock.method(globalThis,'fetch',async(input:RequestInfo|URL)=>{
+  calls.push(String(input));
+  if(String(input).includes('/rest/v1/book_sources'))return Response.json([]);
+  throw new Error('Must not sign a missing source');
+ });
+ await assert.rejects(exportAccountFile(user,{kind:'reading-image',id:source,hash:'a'.repeat(64)}),/Book not found/);
+ assert.equal(calls.length,1);assert.ok(calls[0].includes(`owner_id=eq.${user.id}`));
+});

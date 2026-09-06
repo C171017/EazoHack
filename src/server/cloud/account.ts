@@ -1,3 +1,4 @@
+import { readingImagePath, signedReadingImage } from './reading-images';
 import { backend, cloudConfig, serviceKey } from './backend';
 import { RequestBodyError } from '../http';
 import { z } from 'zod';
@@ -66,10 +67,11 @@ export async function exportAccount(user: AccountUser, cursor?: string) {
   };
 }
 
-export type ExportFileInput = { kind: 'source' | 'original' | 'manifest' | 'graph' | 'hierarchy'; id: string };
+export type ExportFileInput = { kind: 'source' | 'original' | 'manifest' | 'graph' | 'hierarchy' | 'reading-image'; id: string; hash?: string };
 /** Only exact source paths or the three published graph objects are exportable. */
 export async function exportAccountFile(user: AccountUser, input: ExportFileInput) {
   if (!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(input.id)) throw new RequestBodyError('Invalid export file.', 400);
+  if (input.kind === 'reading-image') return signedReadingImage(await readingImagePath(input.id, input.hash ?? '', user), user.token);
   let path: string | null;
   let bucket: string;
   if (input.kind === 'source' || input.kind === 'original') {
@@ -114,6 +116,7 @@ export async function deleteAccount(user: AccountUser): Promise<void> {
   await backend('/rest/v1/rpc/eazo_begin_account_deletion', key, { method: 'POST', body: JSON.stringify({ p_owner: user.id }) });
   await emptyAccountFolder('eazo-sources', user.id, key);
   await emptyAccountFolder('eazo-analysis', user.id, key);
+  await emptyAccountFolder('eazo-reading', user.id, key);
   await backend('/rest/v1/rpc/eazo_delete_account_rows', key, { method: 'POST', body: JSON.stringify({ p_owner: user.id }) });
   await backend(`/auth/v1/admin/users/${user.id}`, key, { method: 'DELETE' });
 }

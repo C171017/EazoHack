@@ -1,10 +1,12 @@
+import { validateReadingEnvelope } from '@/features/cloud/reading-images';
+import { ReadingImageInput, readingImagePath, signedReadingImage, verifyReadingImages } from '@/server/cloud/reading-images';
 import { cookies } from 'next/headers';
 import { z } from 'zod';
 import { createHash } from 'node:crypto';
 import { backend, cloudConfig, cloudUser, sameOrigin, serviceKey, signOut, clearSession } from '@/server/cloud/backend';
 import { readJson, requestError, RequestBodyError } from '@/server/http';
 import { invokeBookAnalysis } from '@/server/book-analysis/cloud/invoke';
-import { WorkspaceSnapshotSchema, type WorkspaceSnapshot } from '@/features/persistence';
+import { type WorkspaceSnapshot } from '@/features/persistence';
 import { assertAccountActive, accountSummary, exportAccount, exportAccountFile, deleteAccount } from '@/server/cloud/account';
 import { validateSnapshotSource } from '@/server/cloud/snapshot';
 import { sourceTextCache } from '@/server/cloud/source-cache';
@@ -33,6 +35,11 @@ export async function GET(request:Request,context:{params:Promise<{action:string
    const [job]=await backend<{id:string;status:string;error_code:string|null}[]>(`/rest/v1/analysis_jobs?source_id=eq.${source}&select=id,status,error_code&order=created_at.desc&limit=1`,user.token);
    return json({status:job?.status??'idle',jobId:job?.id,...(job?.error_code?{error:`Book analysis failed (${job.error_code}). Retry to reconnect.`}:{})});
   }
+  if(action==='reading-image') {
+   const query=new URL(request.url).searchParams;
+   const input=ReadingImageInput.parse({source:query.get('source'),hash:query.get('hash')});
+   return json(await signedReadingImage(await readingImagePath(input.source,input.hash,user),user.token));
+  }
   if(action==='books')return json(await backend('/rest/v1/books?select=*,book_sources(*)&order=created_at.desc&limit=100',user.token));
   if(action==='jobs')return json(await backend('/rest/v1/analysis_jobs?select=id,book_id,status,attempt,error_code,created_at&order=created_at.desc&limit=50',user.token));
   if(action==='snapshot') {
@@ -60,8 +67,23 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
   }
   await assertAccountActive(user);
   if(action==='export-file'){
-   const input=z.object({kind:z.enum(['source','original','manifest','graph','hierarchy']),id:uuid}).parse(body);
+   const input=z.object({kind:z.enum(['source','original','manifest','graph','hierarchy','reading-image']),id:uuid,hash:z.string().regex(/^[a-f0-9]{64}$/).optional()}).parse(body);
    return json(await exportAccountFile(user,input));
+  }
+  if(action==='reading-image') {
+   const {source,hash}=ReadingImageInput.parse(body);
+   const path=await readingImagePath(source,hash,user);
+   try {await signedReadingImage(path,user.token);return json({alreadyUploaded:true});}
+   catch(error){if(!(error instanceof RequestBodyError)||error.status!==404)throw error;}
+   const upload=await backend<{url:string}>(`/storage/v1/object/upload/sign/eazo-reading/${path}`,user.token,{method:'POST',body:'{}'});
+   return json({uploadUrl:cloudConfig().url+'/storage/v1'+upload.url});
+  }
+  if(action==='shelf') {
+   const {book,slot}=z.object({book:uuid,slot:z.number().int().min(0).max(9999)}).parse(body);
+   const [owned]=await backend<{metadata:Record<string,unknown>}[]>(`/rest/v1/books?id=eq.${book}&select=metadata`,user.token);
+   if(!owned)throw new RequestBodyError('Book not found.',404);
+   await backend(`/rest/v1/books?id=eq.${book}`,user.token,{method:'PATCH',body:JSON.stringify({metadata:{...owned.metadata,shelf:{slot,variant:0}}})});
+   return json({ok:true});
   }
   if(action==='prepare') {
    const input=z.object({localBookId:z.string().min(1).max(200),title:z.string().min(1).max(1000),fileHash:z.string().regex(/^[a-f0-9]{64}$/),extractionVersion:z.string().min(1).max(160),sourceSha256:z.string().regex(/^[a-f0-9]{64}$/),sourceBytes:z.number().int().positive().max(50*1024*1024)}).parse(body);
@@ -94,12 +116,14 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    return json({url:cloudConfig().url+'/storage/v1'+result.signedURL,source:sources[0]});
   }
   if(action==='snapshot') {
-   const {source:id,payload,device,baseRevision,mutationId}=z.object({source:uuid,payload:WorkspaceSnapshotSchema,device:uuid,baseRevision:z.number().int().nonnegative(),mutationId:uuid}).parse(body);
+   const {source:id,payload,device,baseRevision,mutationId}=z.object({source:uuid,payload:z.unknown(),device:uuid,baseRevision:z.number().int().nonnegative(),mutationId:uuid}).parse(body);
    const [source]=await backend<Source[]>(`/rest/v1/book_sources?id=eq.${id}`,user.token);if(!source)throw new RequestBodyError('Book not found.',404);
    const [book]=await backend<{local_book_id:string}[]>(`/rest/v1/books?id=eq.${source.book_id}&select=local_book_id`,user.token);
    const {downloadSource}=await import('@/server/cloud/map');
    const sourceText=await sourceTextCache.get({ownerId:user.id,sourceId:source.id,fileHash:source.file_hash,extractionVersion:source.extraction_version,sourceSha256:source.manifest.sourceSha256},()=>downloadSource(source.source_object,user.token));
-   validateSnapshotSource(payload,{bookId:book.local_book_id,fileHash:source.file_hash,extractionVersion:source.extraction_version,sourceText});
+   const validated=validateReadingEnvelope(payload);
+   await verifyReadingImages(payload,id,user);
+   validateSnapshotSource(validated,{bookId:book.local_book_id,fileHash:source.file_hash,extractionVersion:source.extraction_version,sourceText});
    const result=await backend<{status:'saved'|'conflict';revision:number;payload:WorkspaceSnapshot|null}>('/rest/v1/rpc/eazo_save_snapshot',user.token,{method:'POST',body:JSON.stringify({p_source:id,p_device:device,p_mutation:mutationId,p_base_revision:baseRevision,p_payload:payload})});
    if(result.status==='conflict')return Response.json({error:{code:'snapshot_conflict',message:'This book changed on another device. Both versions have been kept.'},current:{revision:result.revision,payload:result.payload}},{status:409,headers:{'Cache-Control':'private, no-store'}});
    return json({revision:result.revision,payload:result.payload});

@@ -104,3 +104,33 @@
 .flyingBook { position: fixed; z-index: 20; pointer-events: none; transform: rotate(-8deg); filter: drop-shadow(10px 16px 8px #403a3125); }
 .flyingBook .spine { transform: none; }
 .cardDrawing { display: block; }
+
+/* A quiet ink-and-paper interlude, tied to actual navigation pending state. */
+.inner[data-opening] { opacity: 0; pointer-events: none; }
+.openingScene { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shelf-paper) var(--paper-texture) repeat; background-size: 600px 600px; animation: openingArrive 320ms ease-out both; }
+.openingDrawing { width: clamp(180px, 24vw, 260px); overflow: visible; color: var(--shelf-ink); stroke: currentColor; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
+.openingVolume { fill: var(--shelf-paper); }
+.openingUnderlay { stroke-opacity: .35; }
+.openingDetails { fill: none; stroke-opacity: .45; stroke-width: .65; }
+.openingShadow { fill: currentColor; fill-opacity: .045; stroke: none; }
+.turningLeaf { transform-origin: 120px 90px; animation: leafTurn 3.6s cubic-bezier(.45,0,.25,1) infinite; }
+.turningLeaf:nth-last-child(2) { animation-delay: -1.2s; }
+.turningLeaf:last-child { animation-delay: -2.4s; }
+.openingRule { stroke-opacity: .13; }
+.openingSweep { stroke-width: 1.4; stroke-dasharray: 22 78; animation: inkTravel 2.4s ease-in-out infinite; }
+@keyframes openingArrive { from { opacity: 0; } to { opacity: 1; } }
+@keyframes leafTurn { 0%, 12% { transform: scaleX(1); opacity: 0; } 20% { opacity: 1; } 48% { transform: scaleX(.03) translateY(-7px); opacity: 1; } 78% { transform: scaleX(-1); opacity: 1; } 90%, 100% { transform: scaleX(-1); opacity: 0; } }
+@keyframes inkTravel { 0% { stroke-dashoffset: 24; opacity: .2; } 50% { opacity: .65; } 100% { stroke-dashoffset: -100; opacity: .2; } }
+@media (prefers-reduced-motion: reduce) {
+  .openingScene, .turningLeaf, .openingSweep { animation: none; }
+  .turningLeaf { display: none; }
+  .openingSweep { stroke-dasharray: none; opacity: .5; }
+}
+@media (forced-colors: active) {
+  .openingScene { background: Canvas; }
+  .openingVolume { fill: Canvas; }
+  .openingDrawing { color: CanvasText; }
+}
+
+.titleCard .saveChoice { display: flex; align-items: center; gap: 8px; }
+.titleCard .saveChoice input { width: auto; }
