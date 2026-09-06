@@ -134,11 +134,12 @@ test('refresh route clears rejected refresh cookies and cannot redirect into its
   assert.equal(result.cookies.get('eazo-book')?.value,'');
 });
 
-test('page proxy uses relative refresh location even behind an internal hostname', async () => {
+test('page proxy uses an absolute public refresh location behind an internal hostname', async t => {
+  configure(t, async () => { throw new Error('Proxy must not call the auth backend'); });
   const [next,,,,,,,, proxy] = await runtime;
   const request = new next.NextRequest('http://internal:3107/?book=test',{headers:{host:'eazo.example',cookie:'eazo-refresh=needs-renewal'}});
   const result = proxy.proxy(request);
-  assert.equal(result.headers.get('location'),'/auth/refresh?next=%2F%3Fbook%3Dtest');
+  assert.equal(result.headers.get('location'),'https://eazo.example/auth/refresh?next=%2F%3Fbook%3Dtest');
 });
 
 test('sign-out clears browser cookies even when remote revocation is unavailable', async t => {
@@ -185,13 +186,14 @@ test('a foreign or missing snapshot source becomes a private-safe 404', async t 
   assert.ok(!JSON.stringify(body).includes('private source-owner details'));
 });
 
-test('account page cookie renewal happens in the proxy before server rendering', async () => {
+test('account page cookie renewal happens in the proxy before server rendering', async t => {
+  configure(t, async () => { throw new Error('Proxy must not call the auth backend'); });
   const [next,,,,,,,, proxy] = await runtime;
   assert.ok(proxy.config.matcher.includes('/account'));
   const request = new next.NextRequest('http://internal:3107/account', { headers: { host: 'eazo.example', cookie: 'eazo-access=expired;eazo-refresh=account-renewal' } });
   const response = proxy.proxy(request);
   assert.equal(response.status, 307);
-  assert.equal(response.headers.get('location'), '/auth/refresh?next=%2Faccount');
+  assert.equal(response.headers.get('location'), 'https://eazo.example/auth/refresh?next=%2Faccount');
   assert.equal(response.headers.get('cache-control'), 'private, no-store');
 });
 
