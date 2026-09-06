@@ -10,6 +10,7 @@ async function copy(source, destination) {
   await copyFile(source, target);
 }
 await copy('node_modules/pdfjs-dist/build/pdf.worker.min.mjs', 'assets/pdf.worker.mjs');
+await copy('node_modules/pdfjs-dist/legacy/build/pdf.worker.min.mjs', 'assets/pdf.legacy.worker.mjs');
 await copy('node_modules/tesseract.js/dist/worker.min.js', 'assets/ocr/worker.min.js');
 await copy('node_modules/@tesseract.js-data/eng/4.0.0_best_int/eng.traineddata.gz', 'assets/ocr/eng.traineddata.gz');
 for (const directory of ['cmaps', 'standard_fonts', 'wasm']) {

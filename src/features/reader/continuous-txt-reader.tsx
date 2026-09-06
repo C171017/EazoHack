@@ -159,7 +159,18 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   onEnhance: (route: RouteKind) => void;
   enhancementBusy: boolean;
 }>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onLibrary, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
-  const chunks = useMemo(() => createTxtRenderChunks(sourceText, undefined, title), [sourceText, title]);
+  const chunks = useMemo(() => {
+    const sourceChunks = createTxtRenderChunks(sourceText, undefined, title);
+    if (bookId !== 'plato-republic') return sourceChunks;
+    const preface = sourceChunks.flatMap(chunk => chunk.blocks).find(block =>
+      sourceText.slice(block.startOffset, block.endOffset).trim() === 'PREFACE.');
+    if (!preface) return sourceChunks;
+    // Hide this edition's redundant title pages without shifting source anchors.
+    return sourceChunks.flatMap(chunk => {
+      const blocks = chunk.blocks.filter(block => block.startOffset >= preface.startOffset);
+      return blocks.length ? [{ ...chunk, startOffset: blocks[0].startOffset, blocks }] : [];
+    });
+  }, [sourceText, title, bookId]);
   const readingLanguage = useMemo(() => detectReadingLanguage(sourceText), [sourceText]);
   const chunkEnhancements = useMemo(() => chunks.map(chunk => {
     const matches = enhancements.filter(h => h.startOffset < chunk.endOffset && h.endOffset > chunk.startOffset);

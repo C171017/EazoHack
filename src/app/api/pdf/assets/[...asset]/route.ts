@@ -9,6 +9,7 @@ export async function GET(_request: Request, context: { params: Promise<{ asset:
   const name = asset.join('/');
   let file: string | null = null;
   if (name === 'pdf.worker.mjs') file = 'pdfjs-dist/build/pdf.worker.min.mjs';
+  if (name === 'pdf.legacy.worker.mjs') file = 'pdfjs-dist/legacy/build/pdf.worker.min.mjs';
   if (name === 'ocr/worker.min.js') file = 'tesseract.js/dist/worker.min.js';
   if (name === 'ocr/eng.traineddata.gz') file = '@tesseract.js-data/eng/4.0.0_best_int/eng.traineddata.gz';
   if (asset.length === 2 && asset[0] === 'ocr' && /^tesseract-core[\w-]*\.wasm(?:\.js)?$/.test(asset[1])) file = `tesseract.js-core/${asset[1]}`;

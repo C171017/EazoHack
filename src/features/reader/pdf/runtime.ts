@@ -3,11 +3,20 @@ import type { TextContent, TextItem } from 'pdfjs-dist/types/src/display/api';
 import type { PageViewport } from 'pdfjs-dist/types/src/display/page_viewport';
 import type { Worker as OcrWorker } from 'tesseract.js';
 import type { Rect, TextSource } from './model';
+import { supportsModernPdfRuntime } from './runtime-features';
 
-export async function loadPdfRuntime() {
-  const pdfjs = await import('pdfjs-dist');
-  pdfjs.GlobalWorkerOptions.workerSrc = '/api/pdf/assets/pdf.worker.mjs';
-  return pdfjs;
+let runtime: Promise<typeof import('pdfjs-dist')> | undefined;
+export function loadPdfRuntime() {
+  // Remember the choice: the compatibility module supplies built-ins, so a
+  // later feature check must not switch an already-open document's worker.
+  runtime ??= (async () => {
+    const modern = supportsModernPdfRuntime();
+    const pdfjs = modern ? await import('pdfjs-dist') : await import('pdfjs-dist/legacy/build/pdf.mjs');
+    const worker = modern ? 'pdf.worker.mjs' : 'pdf.legacy.worker.mjs';
+    pdfjs.GlobalWorkerOptions.workerSrc = `/api/pdf/assets/${worker}?v=${pdfjs.version}`;
+    return pdfjs;
+  })().catch(error => { runtime = undefined; throw error; });
+  return runtime;
 }
 
 const clamp = (x: number) => Math.max(0, Math.min(1, x));
