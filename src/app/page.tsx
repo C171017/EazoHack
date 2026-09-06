@@ -6,9 +6,10 @@ import { connection } from 'next/server';
 import type { MapBootstrap } from '@/shared/zoom-hierarchy';
 import { loadMapStore, mapBootstrap } from '@/server/book-map/store';
 
-export default async function Page({ searchParams }: { searchParams: Promise<{ book?: string }> }) {
+export default async function Page({ searchParams }: { searchParams: Promise<{ book?: string; library?: string }> }) {
   await connection();
-  const { book } = await searchParams;
+  const { book, library } = await searchParams;
+  if (!book || library === '1') return <Workspace key="library" initialLibraryOpen />;
   if (book === 'hong-lou-meng') {
     const preview = await getChineseBookPreview();
     let graph: MapBootstrap;

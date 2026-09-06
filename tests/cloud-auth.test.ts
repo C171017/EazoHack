@@ -32,7 +32,7 @@ test('Google flow binds a random verifier, state, expiry and safe return documen
 });
 
 test('OAuth returns cannot escape origin or loop through auth routes', () => {
-  for (const path of ['https://evil.example', '//evil.example', '/\\evil.example', '/%2f%2fevil.example', '/%5cevil.example', '/\nevil', '/auth/refresh', '/%61uth/refresh', '/x/../auth/refresh', '/api/cloud/logout', '/%zz']) assert.equal(safeReturnPath(path), '/cloud', path);
+  for (const path of ['https://evil.example', '//evil.example', '/\\evil.example', '/%2f%2fevil.example', '/%5cevil.example', '/\nevil', '/auth/refresh', '/%61uth/refresh', '/x/../auth/refresh', '/api/cloud/logout', '/%zz']) assert.equal(safeReturnPath(path), '/', path);
   assert.equal(safeReturnPath('/?book=one#passage'), '/?book=one#passage');
 });
 
@@ -102,4 +102,10 @@ test('same account renewal preserves selected book, malformed or expiring tokens
   assert.equal(accessNeedsRefresh(token(Date.now() / 1000 + 10)), true);
   assert.equal(accessNeedsRefresh('corrupt'), true);
   assert.equal(accessNeedsRefresh(undefined), true);
+});
+
+test('sign-in without a return path lands directly in the Library', () => {
+  const flow = createGoogleFlow('https://project.supabase.co', 'https://eazo.example');
+  const cookie = JSON.parse(flow.cookie);
+  assert.equal(readGoogleFlow(flow.cookie, cookie.state).next, '/');
 });

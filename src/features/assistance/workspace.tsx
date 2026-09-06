@@ -31,15 +31,12 @@ import { useHeatPlacement } from '../book-graph/use-heat-placement';
 import { useMapActive } from '../book-graph/use-map-active';
 const BookMap = dynamic(()=>import('../book-graph/book-map').then(m=>m.BookMap),{ssr:false});
 
-export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId}:{preview:BookPreview;graph:MapBootstrap;initialTitle?:string;cloudSourceId?:string;cloudOwnerId?:string}) {
+const libraryGraph: MapBootstrap = { bookId: '', graphVersion: 'library', version: 'library', roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true };
+
+export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSourceId,cloudOwnerId,initialLibraryOpen = false}:{preview?:BookPreview;graph?:MapBootstrap;initialTitle?:string;cloudSourceId?:string;cloudOwnerId?:string;initialLibraryOpen?:boolean}) {
   const [uploaded, setUploaded] = useState<TextBook | null>(null);
-  const [libraryOpen, setLibraryOpen] = useState(false);
+  const [libraryOpen, setLibraryOpen] = useState(initialLibraryOpen);
   const [reopenVersion, setReopenVersion] = useState(0);
-  useEffect(() => {
-    if (new URLSearchParams(window.location.search).get('library') === '1') {
-      queueMicrotask(() => setLibraryOpen(true));
-    }
-  }, []);
   const [importState, setImportState] = useState<ImportState | null>(null);
   const [libraryRevision, setLibraryRevision] = useState(0);
   const importing = useRef<AbortController | null>(null);
@@ -104,18 +101,19 @@ export function Workspace({preview,graph,initialTitle,cloudSourceId,cloudOwnerId
     if (importing.current) return;
     if (!book && cloudSourceId) {
       await cloudRequest('open', {source: null});
-      window.location.replace(new URL('/', window.location.origin).href);
+      window.location.replace(new URL('/?book=plato-republic', window.location.origin).href);
       return;
     }
     if (book?.kind === 'pdf' || (book?.originalPdf && book.originalPdf.manifest.version !== PDF_IMPORT_VERSION)) { await processBook(book); return; }
     setUploaded(book); setLibraryOpen(false); setImportState(null);
   }
   const activeGraph: MapBootstrap = uploaded?.kind === 'txt' ? { bookId: uploaded.bookId, graphVersion: uploaded.bookId, version: uploaded.bookId, roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true } : graph;
+  const activePreview = uploaded?.preview ?? preview;
   return <>
     <div className={libraryStyles.readerSurface} data-library-open={libraryOpen || undefined}>
-    <TextWorkspace reopenVersion={reopenVersion} covered={libraryOpen} cloudOwnerId={uploaded ? undefined : cloudOwnerId} analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={`${uploaded ? "guest" : cloudOwnerId ?? "guest"}:${uploaded?.bookId ?? cloudSourceId ?? graph.bookId}`} preview={uploaded?.preview ?? preview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />
+    {activePreview && <TextWorkspace reopenVersion={reopenVersion} covered={libraryOpen} cloudOwnerId={uploaded ? undefined : cloudOwnerId} analyzeUploaded={!!uploaded} cloudSourceId={uploaded ? undefined : cloudSourceId} key={`${uploaded ? "guest" : cloudOwnerId ?? "guest"}:${uploaded?.bookId ?? cloudSourceId ?? graph.bookId}`} preview={activePreview} graph={activeGraph} title={uploaded?.title ?? initialTitle ?? 'The Republic of Plato.'} onLibrary={() => setLibraryOpen(true)} />}
     </div>
-    <BookLibrary onReopen={() => { setReopenVersion(value => value + 1); setLibraryOpen(false); setImportState(null); }} onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current) { setLibraryOpen(false); setImportState(null); } }}
+    <BookLibrary initialOpen={initialLibraryOpen} onReopen={() => { setReopenVersion(value => value + 1); setLibraryOpen(false); setImportState(null); }} onRemoved={id => { if (uploaded && uploadedBookId(uploaded) === id) setUploaded(null); setImportState(null); }} open={libraryOpen} currentId={uploaded ? uploadedBookId(uploaded) : graph.bookId} onUpload={upload} onSelect={selectBook} onClose={() => { if (!importing.current && activePreview) { setLibraryOpen(false); setImportState(null); } }}
       importState={importState} revision={libraryRevision} sampleEmblem={graph.bookId === 'plato-republic' ? graph.bookEmblem : undefined} onCancel={() => importing.current?.abort()} onRetry={() => { if (retryInput.current) void processBook(retryInput.current, retryPlacement.current); }} />
   </>;
 }

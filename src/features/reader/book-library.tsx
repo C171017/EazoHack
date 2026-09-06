@@ -12,8 +12,9 @@ import type { ImportState } from './pdf/import-model';
 import styles from './book-library.module.css';
 import { CloudMenu } from './cloud-menu';
 
-export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, onReopen, importState, revision, onCancel, onRetry, sampleEmblem, onRemoved }: {
+export function BookLibrary({ initialOpen = false, open, currentId, onSelect, onUpload, onClose, onReopen, importState, revision, onCancel, onRetry, sampleEmblem, onRemoved }: {
   onRemoved: (id: string) => void;
+  initialOpen?: boolean;
   open: boolean;
   currentId: string;
   onSelect: (book: UploadedBook | null) => Promise<void>;
@@ -27,6 +28,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, onRe
   sampleEmblem?: BookEmblem;
 }) {
   const dialog = useRef<HTMLDialogElement>(null);
+  const firstDisplay = useRef(initialOpen);
   const input = useRef<HTMLInputElement>(null);
   const shelf = useRef<HTMLDivElement>(null);
   const selectedSlot = useRef(1);
@@ -47,6 +49,13 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, onRe
   useEffect(() => {
     const element = dialog.current;
     if (!element) return;
+    if (firstDisplay.current) {
+      firstDisplay.current = false;
+      // The Library is already visible in server HTML; promote it without a fade.
+      element.close();
+      if (open) element.showModal();
+      return;
+    }
     if (open && !element.open) element.showModal();
     if (!element.open) return;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -202,7 +211,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, onRe
     finally { setBusy(false); }
   }
 
-  return <dialog ref={dialog} className={styles.library} aria-label="Library" aria-busy={busy} inert={!open} onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
+  return <dialog open={initialOpen} ref={dialog} className={styles.library} aria-label="Library" aria-busy={busy} inert={!open} onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
     <div className={styles.inner}>
       <CloudMenu key={String(open)} />
       <div className={styles.shelfArea}>

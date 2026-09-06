@@ -45,7 +45,7 @@ export function CloudMenu() {
     setBusy(true); setMessage('');
     try {
       await cloudRequest('logout', {}, session.id); announceAccountChange();
-      window.location.replace(new URL('/?book=plato-republic&library=1', window.location.origin).href);
+      window.location.replace(new URL('/', window.location.origin).href);
     } catch (error) { setMessage(error instanceof Error ? error.message : 'Sign-out did not finish. Please try again.'); }
     finally { setBusy(false); }
   }
@@ -81,7 +81,7 @@ export function CloudMenu() {
         <button type="button" className={styles.google} disabled={busy} onClick={() => void signOut()} aria-label="Sign out">
           <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H4v16h6M9 12h12m-4-4 4 4-4 4"/></svg>
         </button>
-      </> : <a className={styles.google} href="/auth/google?next=%2F%3Fbook%3Dplato-republic%26library%3D1" aria-label="Sign in with Google">
+      </> : <a className={styles.google} href="/auth/google?next=%2F" aria-label="Sign in with Google">
         <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 12.2c0-.7-.1-1.4-.2-2.1H12v3.8h4.8a4.4 4.4 0 0 1-4.8 3.6 5.5 5.5 0 1 1 3.9-9.4l2.8-2.8A9.4 9.4 0 1 0 12 21.4c5.4 0 8.5-3.8 8.5-9.2Z"/></svg>
       </a>}
     </div>

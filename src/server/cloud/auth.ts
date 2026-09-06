@@ -15,14 +15,14 @@ export const cookieOptions = (): CookieOptions => ({ httpOnly: true, secure: pro
 
 /** Accept only local document paths, including after URL normalization. */
 export function safeReturnPath(value: string | null | undefined) {
-  if (!value || value.length > 2048 || !value.startsWith('/') || value.startsWith('//') || /[\\\x00-\x20]/.test(value)) return '/cloud';
+  if (!value || value.length > 2048 || !value.startsWith('/') || value.startsWith('//') || /[\\\x00-\x20]/.test(value)) return '/';
   try {
     const decoded = decodeURIComponent(value);
-    if (decoded.startsWith('//') || /[\\\x00-\x20]/.test(decoded)) return '/cloud';
+    if (decoded.startsWith('//') || /[\\\x00-\x20]/.test(decoded)) return '/';
     const url = new URL(value, 'https://eazo.invalid');
-    if (url.origin !== 'https://eazo.invalid' || /^\/(?:auth|api)(?:\/|$)/.test(new URL(decoded, 'https://eazo.invalid').pathname)) return '/cloud';
+    if (url.origin !== 'https://eazo.invalid' || /^\/(?:auth|api)(?:\/|$)/.test(new URL(decoded, 'https://eazo.invalid').pathname)) return '/';
     return url.pathname + url.search + url.hash;
-  } catch { return '/cloud'; }
+  } catch { return '/'; }
 }
 
 /** Never construct OAuth redirect targets from arbitrary forwarded headers. */

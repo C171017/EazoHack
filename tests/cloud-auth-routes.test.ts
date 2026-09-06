@@ -68,7 +68,7 @@ test('Google route starts PKCE; callback changes identity and clears previous se
   assert.equal(provider.searchParams.get('scopes'),'openid');
   const result = await invoke('callback',`https://eazo.example/auth/callback?state=${state}&code=one-use-code`,{'eazo-oauth':flow,'eazo-account':'account-a','eazo-book':'account-a-book'});
   assert.equal(result.response.status,303);
-  assert.equal(result.response.headers.get('location'),'https://eazo.example/cloud');
+  assert.equal(result.response.headers.get('location'),'https://eazo.example/');
   assert.equal(result.cookies.get('eazo-account')?.value,'account-b');
   assert.equal(result.cookies.get('eazo-access')?.value,jwt);
   assert.equal(result.cookies.get('eazo-refresh')?.value,'refresh-b');

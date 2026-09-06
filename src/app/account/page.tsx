@@ -9,6 +9,6 @@ export default async function AccountPage() {
   catch (error) {
     if (!(error instanceof RequestBodyError) || error.status !== 401) throw error;
   }
-  if (!user) redirect('/?book=plato-republic&library=1');
+  if (!user) redirect('/');
   return <AccountPanel session={{ id: user.id, email: user.email }} />;
 }
