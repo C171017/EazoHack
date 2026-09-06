@@ -8,8 +8,10 @@ export async function copyReadingToAccount(book:TextBook,owner:string,current?:W
  if(bytes.length>50*1024*1024)throw new Error('Cloud text files can be up to 50 MiB.');
  const digest=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
  const prepared=await cloudRequest('prepare',{localBookId:book.bookId,title:book.title,fileHash:book.preview.fileHash,extractionVersion:book.preview.extractionVersion,sourceSha256:digest,sourceBytes:bytes.length},owner);
- const response=await fetch(prepared.uploadUrl,{method:'PUT',headers:{'Content-Type':'text/plain'},body:bytes});
- if(!response.ok&&response.status!==409)throw new Error('Upload failed. Your local book is unchanged; try saving again.');
+ if(!prepared.alreadyUploaded) {
+  const response=await fetch(prepared.uploadUrl,{method:'PUT',headers:{'Content-Type':'text/plain'},body:bytes});
+  if(!response.ok&&response.status!==409)throw new Error('Upload failed. Your local book is unchanged; try saving again.');
+ }
  const saved=current??await loadGuestReading(book.bookId);
  let message='Book saved to your private library.';
  if(saved){

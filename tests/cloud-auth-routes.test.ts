@@ -194,3 +194,64 @@ test('account page cookie renewal happens in the proxy before server rendering',
   assert.equal(response.headers.get('location'), '/auth/refresh?next=%2Faccount');
   assert.equal(response.headers.get('cache-control'), 'private, no-store');
 });
+
+test('hosted status checks source ownership before exposing jobs or maps', async t => {
+  configure(t, async input => {
+    const url=String(input);
+    if(url.endsWith('/auth/v1/user'))return Response.json({id:'account-b'});
+    if(url.includes('/rest/v1/account_state?'))return Response.json([]);
+    assert.ok(url.includes('/rest/v1/book_sources?id=eq.'));
+    return Response.json([]);
+  });
+  const result=await invoke('cloud','https://eazo.example/api/cloud/analysis-status?source=bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',{'eazo-access':access()},'analysis-status');
+  assert.equal(result.response.status,404);
+});
+
+test('hosted status is source-version-specific and private, including job failures', async t => {
+  const source='bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb';
+  configure(t, async input => {
+    const url=String(input);
+    if(url.endsWith('/auth/v1/user'))return Response.json({id:'account-b'});
+    if(url.includes('/rest/v1/account_state?'))return Response.json([]);
+    if(url.includes('/book_sources?'))return Response.json([{id:source}]);
+    assert.ok(url.includes(`source_id=eq.${source}`));
+    if(url.includes('/graph_versions?'))return Response.json([]);
+    assert.ok(url.includes('/analysis_jobs?'));
+    return Response.json([{id:'job',status:'failed',error_code:'worker_failed'}]);
+  });
+  const result=await invoke('cloud',`https://eazo.example/api/cloud/analysis-status?source=${source}`,{'eazo-access':access()},'analysis-status');
+  assert.equal(result.response.status,200);
+  assert.equal(result.response.headers.get('cache-control'),'private, no-store');
+  assert.deepEqual(await result.response.json(),{status:'failed',jobId:'job',error:'Book analysis failed (worker_failed). Retry to reconnect.'});
+});
+
+test('prepare reuses an existing uploaded object rather than signing another upload', async t => {
+  const source={id:'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',source_object:'owner/book/source/source.txt',manifest:{sourceSha256:'a'.repeat(64)}};
+  const paths:string[]=[];
+  configure(t,async input=>{
+    const url=String(input);paths.push(url);
+    if(url.endsWith('/auth/v1/user'))return Response.json({id:'account-b'});
+    if(url.includes('/rest/v1/account_state?'))return Response.json([]);
+    if(url.includes('/rest/v1/books?'))return Response.json([{id:'book'}]);
+    if(url.includes('/rest/v1/book_sources?'))return Response.json([source]);
+    assert.ok(url.includes('/storage/v1/object/sign/'));return Response.json({signedURL:'/existing-source'});
+  });
+  const result=await invoke('cloud','https://eazo.example/api/cloud/prepare',{'eazo-access':access()},'prepare',{method:'POST',headers:{origin:'https://eazo.example','content-type':'application/json'},body:JSON.stringify({localBookId:'txt:demo',title:'孔乙己',fileHash:'b'.repeat(64),extractionVersion:'txt-lf-v1',sourceSha256:'a'.repeat(64),sourceBytes:8000})});
+  assert.equal(result.response.status,200);assert.deepEqual(await result.response.json(),{source,alreadyUploaded:true});
+  assert.ok(!paths.some(path=>path.includes('/upload/sign/')));
+});
+
+test('prepare resumes an interrupted upload when its source row has no storage object', async t => {
+  const source={id:'bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb',source_object:'owner/book/source/source.txt',manifest:{sourceSha256:'a'.repeat(64)}};
+  configure(t,async input=>{
+    const url=String(input);
+    if(url.endsWith('/auth/v1/user'))return Response.json({id:'account-b'});
+    if(url.includes('/rest/v1/account_state?'))return Response.json([]);
+    if(url.includes('/rest/v1/books?'))return Response.json([{id:'book'}]);
+    if(url.includes('/rest/v1/book_sources?'))return Response.json([source]);
+    if(url.includes('/storage/v1/object/sign/'))return Response.json({error:'not_found',message:'Object not found'},{status:404});
+    assert.ok(url.includes('/storage/v1/object/upload/sign/'));return Response.json({url:'/object/upload/sign/retry'});
+  });
+  const result=await invoke('cloud','https://eazo.example/api/cloud/prepare',{'eazo-access':access()},'prepare',{method:'POST',headers:{origin:'https://eazo.example','content-type':'application/json'},body:JSON.stringify({localBookId:'txt:demo',title:'孔乙己',fileHash:'b'.repeat(64),extractionVersion:'txt-lf-v1',sourceSha256:'a'.repeat(64),sourceBytes:8000})});
+  assert.equal(result.response.status,200);assert.deepEqual(await result.response.json(),{source,uploadUrl:'https://auth-test.supabase.co/storage/v1/object/upload/sign/retry'});
+});

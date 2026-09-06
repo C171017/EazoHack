@@ -121,7 +121,8 @@ export function Workspace({preview,graph = libraryGraph,initialTitle,cloudSource
 function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSourceId, cloudOwnerId, analyzeUploaded, covered, reopenVersion}: {reopenVersion:number;covered:boolean;analyzeUploaded?:boolean;cloudSourceId?:string;cloudOwnerId?:string;preview: BookPreview; graph: MapBootstrap; title: string; onLibrary: () => void}) {
   const [mobileMapOpen, setMobileMapOpen] = useState(false);
   const mapActive = useMapActive(mobileMapOpen, covered);
-  const analysis = useBookAnalysis(initialGraph.bookId, preview, !!analyzeUploaded);
+  const analyzing = !!analyzeUploaded || !!cloudSourceId;
+  const analysis = useBookAnalysis(initialGraph.bookId, preview, analyzing && !!initialGraph.unavailable, title, cloudSourceId);
   const graph = analysis.graph ?? initialGraph;
   const bookId = graph.bookId;
   const footprints = useReadingFootprints(bookId, cloudOwnerId);
@@ -312,12 +313,12 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
       <section id="reading-exploration-space" className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
         <div className="absolute inset-0 overflow-auto">{graph.unavailable?<div className="mx-auto max-w-xl p-8 text-sm text-muted" role="status" aria-live="polite">
           <p className="mb-3 text-xs uppercase tracking-widest">Text ready to read</p>
-          <h2 className="mb-3 font-reading text-xl text-ink">{analyzeUploaded ? analysis.status === 'unavailable' ? 'Book map unavailable' : analysis.status === 'failed' ? 'Book map needs attention' : analysis.status === 'ready' ? 'Opening book map' : 'Building your book map' : cloudSourceId ? 'Book map pending' : 'Map is unavailable'}</h2>
-          <p>{analyzeUploaded ? analysis.stage : cloudSourceId ? 'Check your account for this book’s analysis status. You can keep reading here.' : 'The saved map could not be loaded. Reading and passage enhancements are available.'}</p>
-          {analyzeUploaded && (analysis.status==='running'||analysis.status==='starting') && <><progress aria-label="Book map analysis in progress" className="my-5 w-full"/><p>Extraction is complete. We’re now finding concepts, checking source evidence, and arranging the map. Long books can take a while. You can keep reading; the map opens automatically when ready.</p><p className="mt-3">Analysis continues on this computer if you close the reader. Reopen this book to reconnect.</p></>}
-          {analysis.error && analyzeUploaded && <p className="mt-4" role="alert">{analysis.error}</p>}
-          {analyzeUploaded && (analysis.status==='failed'||analysis.status==='idle') && <button className="mt-4 underline" onClick={analysis.retry}>Retry book map</button>}
-          {(analysis.status==='unavailable' || cloudSourceId) && <a className="mt-4 block underline" href="/account">Open your account</a>}
+          <h2 className="mb-3 font-reading text-xl text-ink">{analyzing ? analysis.status === 'unavailable' ? 'Book map unavailable' : analysis.status === 'failed' ? 'Book map needs attention' : analysis.status === 'ready' ? 'Opening book map' : 'Building your book map' : cloudSourceId ? 'Book map pending' : 'Map is unavailable'}</h2>
+          <p>{analyzing ? analysis.stage : cloudSourceId ? 'Check your account for this book’s analysis status. You can keep reading here.' : 'The saved map could not be loaded. Reading and passage enhancements are available.'}</p>
+          {analyzing && (analysis.status==='running'||analysis.status==='starting') && <><progress aria-label="Book map analysis in progress" className="my-5 w-full"/><p>Extraction is complete. We’re now finding concepts, checking source evidence, and arranging the map. Long books can take a while. You can keep reading; the map opens automatically when ready.</p><p className="mt-3">{process.env.NODE_ENV === 'production' || cloudSourceId ? 'Analysis continues in your account if you close the reader. Reopen this book to reconnect.' : 'Analysis continues on this computer if you close the reader. Reopen this book to reconnect.'}</p></>}
+          {analysis.error && analyzing && <p className="mt-4" role="alert">{analysis.error}</p>}
+          {analyzing && (analysis.status==='failed'||analysis.status==='idle'||analysis.status==='unavailable') && <button className="mt-4 underline" onClick={analysis.retry}>Retry book map</button>}
+          {(analysis.status==='unavailable' || analysis.status==='failed' || cloudSourceId) && <a className="mt-4 block underline" href="/account">Open your account</a>}
           {bookId === 'hong-lou-meng' && <p className="mt-4 text-xs">Text from <a className="underline" href="https://zh.wikisource.org/zh-hans/紅樓夢" target="_blank" rel="noreferrer">Wikisource contributors</a> · <a className="underline" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">CC BY-SA 4.0</a>. Formatted for reading; editorial footnotes omitted.</p>}
           {!analyzeUploaded && <button className="mt-4 underline" onClick={()=>window.location.reload()}>Check map again</button>}
         </div>:mapActive ? <BookMap key={graph.version} graph={graph} view={mapView} heat={{...heat,error:footprints.error??heat.error,loading:footprints.loading||heat.loading,retry:()=>{void footprints.retry();heat.retry();}}} readingProgress={readingPosition / Math.max(1, preview.sourceText.length)} onScrollSource={scrollReader} onViewChange={setMapView} onSource={readMapSource}/> : null}</div>

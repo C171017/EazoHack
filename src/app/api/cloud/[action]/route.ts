@@ -24,6 +24,15 @@ export async function GET(request:Request,context:{params:Promise<{action:string
   if(action==='account')return json(await accountSummary(user));
   if(action==='export')return Response.json(await exportAccount(user,new URL(request.url).searchParams.get('cursor')??undefined),{headers:{'Cache-Control':'private, no-store','Content-Disposition':'attachment; filename="eazo-account.json"'}});
   await assertAccountActive(user);
+  if(action==='analysis-status') {
+   const source=uuid.parse(new URL(request.url).searchParams.get('source'));
+   const [owned]=await backend<Source[]>(`/rest/v1/book_sources?id=eq.${source}`,user.token);
+   if(!owned)throw new RequestBodyError('Book not found.',404);
+   const [version]=await backend<{id:string}[]>(`/rest/v1/graph_versions?source_id=eq.${source}&select=id&limit=1`,user.token);
+   if(version)return json({status:'ready'});
+   const [job]=await backend<{id:string;status:string;error_code:string|null}[]>(`/rest/v1/analysis_jobs?source_id=eq.${source}&select=id,status,error_code&order=created_at.desc&limit=1`,user.token);
+   return json({status:job?.status??'idle',jobId:job?.id,...(job?.error_code?{error:`Book analysis failed (${job.error_code}). Retry to reconnect.`}:{})});
+  }
   if(action==='books')return json(await backend('/rest/v1/books?select=*,book_sources(*)&order=created_at.desc&limit=100',user.token));
   if(action==='jobs')return json(await backend('/rest/v1/analysis_jobs?select=id,book_id,status,attempt,error_code,created_at&order=created_at.desc&limit=50',user.token));
   if(action==='snapshot') {
@@ -61,6 +70,14 @@ export async function POST(request:Request,context:{params:Promise<{action:strin
    const book=books[0];let sources=await backend<Source[]>(`/rest/v1/book_sources?book_id=eq.${book.id}&file_hash=eq.${encodeURIComponent(input.fileHash)}&extraction_version=eq.${encodeURIComponent(input.extractionVersion)}`,user.token);
    if(!sources.length){const id=crypto.randomUUID();sources=await backend('/rest/v1/book_sources',user.token,{method:'POST',headers:{Prefer:'return=representation'},body:JSON.stringify({id,owner_id:user.id,book_id:book.id,file_hash:input.fileHash,extraction_version:input.extractionVersion,source_object:`${user.id}/${book.id}/${id}/source.txt`,manifest:{sourceSha256:input.sourceSha256,sourceBytes:input.sourceBytes}})});}
    const source=sources[0];if(source.manifest.sourceSha256!==input.sourceSha256)throw new RequestBodyError('Source identity conflicts with an existing version.',409);
+   // A completed immutable upload can be reused. Source rows may also survive an
+   // interrupted upload, so verify the object exists rather than trusting the row.
+   try {
+    await backend(`/storage/v1/object/sign/eazo-sources/${source.source_object}`,user.token,{method:'POST',body:JSON.stringify({expiresIn:60})});
+    return json({source,alreadyUploaded:true});
+   } catch(error) {
+    if(!(error instanceof RequestBodyError)||error.status!==404)throw error;
+   }
    const upload=await backend<{url:string}>(`/storage/v1/object/upload/sign/eazo-sources/${source.source_object}`,user.token,{method:'POST',body:'{}'});
    return json({source,uploadUrl:cloudConfig().url+'/storage/v1'+upload.url});
   }
