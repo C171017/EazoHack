@@ -19,7 +19,7 @@ function headingKind(text: string): 'heading' | 'subheading' | null {
   if (/^\d+(?:\.\d+){1,3}\s+\p{Lu}[^.!?]{0,90}$/u.test(value)) return 'subheading';
   if (/^(preface|foreword|introduction(?: and analysis)?|prologue|epilogue|afterword|contents|table of contents|acknowledg(?:e)?ments|appendix|index|notes|序言|前言|序章|引言|目录|目錄|后记|後記|附录|附錄)[.。:]?$/i.test(value)) return 'heading';
   if (/^(book|part|chapter|section|appendix)\s+(?:[IVXLCDM]+|\d+|one|two|three|four|five|six|seven|eight|nine|ten)(?:[.:—–-]\s*[^.!?]+|[.:]?)$/i.test(value)
-    || /^第[一二三四五六七八九十百零〇两兩\d]+[卷部篇章节章節](?:\s+.{1,60})?$/.test(value)) return 'heading';
+    || /^第[一二三四五六七八九十百零〇两兩\d]+[卷部篇章节章節回](?:\s+.{1,60})?$/.test(value)) return 'heading';
   return null;
 }
 

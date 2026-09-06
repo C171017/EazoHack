@@ -32,6 +32,8 @@
 .map-detail .map-title-row>button{font-size:22px;align-self:flex-start;padding:0 5px}
 .map-detail-body{display:grid;grid-template-columns:1fr 1fr;gap:18px;font-size:10px;line-height:1.7}
 .map-detail blockquote{border-left:1px solid #9099A6;padding-left:12px;max-height:100px;overflow:auto;font-family:var(--font-reading);font-size:12px;color:#DADEE4}
+.map-detail,.map-detail blockquote{scrollbar-width:none}
+.map-detail::-webkit-scrollbar,.map-detail blockquote::-webkit-scrollbar{display:none}
 .map-source-button{color:#D6DEE9;margin-bottom:8px;text-decoration:underline;text-underline-offset:3px}
 .map-related{display:flex;gap:8px;flex-wrap:wrap;color:#C4CFDD;margin:6px 0}
 .map-detail details{color:#ADB6C3}.map-detail summary{cursor:pointer}.map-detail details p{margin-top:8px}

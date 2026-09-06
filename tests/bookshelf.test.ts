@@ -39,7 +39,7 @@ test('existing catalogues migrate without losing source bytes or changing positi
     };
   });
   const entries = await library.list();
-  assert.equal(entries[0].shelf?.slot, 1);
+  assert.equal(entries[0].shelf?.slot, 2);
   assert.deepEqual(await library.list(), entries);
   assert.deepEqual(await library.load(uploadedBookId(book)), book);
 });

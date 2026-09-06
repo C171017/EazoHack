@@ -1,6 +1,7 @@
 'use client';
 import {useEffect,useState} from 'react';
 import Link from 'next/link';
+import { SAMPLE_BOOKS } from '@/shared/sample-books';
 import {useRouter} from 'next/navigation';
 import {bookLibrary,type LibraryEntry} from '../reader/book-library-store';
 import {readUploadedBook,type TextBook} from '../reader/upload-book';
@@ -39,7 +40,7 @@ export default function CloudLibrary() {
  <h2 className="text-xl">Save text from this device</h2><p className="text-sm">Choose a local book to copy its extracted text to your private account. Original PDFs remain on this device.</p>
  <ul className="space-y-2">{local.map(book=><li key={book.id}><button className="underline" disabled={busy} onClick={()=>void run(async()=>{const value=await bookLibrary.load(book.id);if(value.kind!=='txt')throw new Error('Open this PDF in the reader first to extract its text.');await save(value);})}>{book.title}</button></li>)}</ul>
  <label className="block">Or save a TXT file<input disabled={busy} type="file" accept=".txt,text/plain" className="block mt-2" onChange={e=>{const file=e.target.files?.[0];e.target.value='';if(file)void run(async()=>{const book=await readUploadedBook(file);if(book.kind==='txt'){await bookLibrary.save(book);await save(book);}});}}/></label>
- <button disabled={busy} className="underline" onClick={()=>void run(async()=>{await cloudRequest('open',{source:null});router.push('/');router.refresh();})}>Open the sample book</button>
+ <div className="flex gap-4" aria-label="Example books">{SAMPLE_BOOKS.map(book => <Link className="underline" key={book.id} href={`/?book=${book.id}`}>{book.title}</Link>)}</div>
  </>}
  </main>;
 }

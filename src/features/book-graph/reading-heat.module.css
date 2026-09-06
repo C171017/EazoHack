@@ -8,5 +8,7 @@
 .event { margin-top: 12px; border-top: 1px solid #3b4553; padding-top: 10px; }
 .event summary { cursor: pointer; color: #e2ebf6; }
 .event blockquote { max-height: 110px; overflow: auto; border-left: 2px solid #619fc7; padding-left: 10px; margin: 12px 0 6px; white-space: pre-wrap; }
+.inspector, .event blockquote { scrollbar-width: none; }
+.inspector::-webkit-scrollbar, .event blockquote::-webkit-scrollbar { display: none; }
 .event article { margin-top: 12px; }
 .link { text-decoration: underline; text-underline-offset: 3px; padding: 4px 0; }

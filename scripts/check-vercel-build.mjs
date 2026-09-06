@@ -18,6 +18,7 @@ for (const trace of ['.next/server/app/page.js.nft.json', '.next/server/app/api/
   if (trace.includes('book-map') || trace.endsWith('/page.js.nft.json')) {
     for (const file of required) assert(files.has(path.resolve(file)), `${trace} is missing ${file}`);
   }
+  if (trace.endsWith('/page.js.nft.json')) assert(files.has(path.resolve('data/books/hong-lou-meng/derived/hong-lou-meng-reading.txt')), 'Chinese example missing from production trace');
   let size = 0;
   for (const file of files) {
     assert(!/[/\\]\.env(?:[./\\]|$)/.test(file), 'Environment file found in function trace');

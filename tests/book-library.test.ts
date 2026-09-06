@@ -32,12 +32,12 @@ test('moves persist, occupied spaces swap, and deletion removes source and catal
   const first = await readUploadedBook(new File(['One'], 'One.txt'));
   const second = await readUploadedBook(new File(['Two'], 'Two.txt'));
   const a = uploadedBookId(first), b = uploadedBookId(second);
-  await library.save(first, 1);
-  await library.save(second, 2);
-  await library.move(a, 2);
+  await library.save(first, 2);
+  await library.save(second, 3);
+  await library.move(a, 3);
   let entries = await createBookLibrary(storage).list();
-  assert.equal(entries.find(entry => entry.id === a)?.shelf?.slot, 2);
-  assert.equal(entries.find(entry => entry.id === b)?.shelf?.slot, 1);
+  assert.equal(entries.find(entry => entry.id === a)?.shelf?.slot, 3);
+  assert.equal(entries.find(entry => entry.id === b)?.shelf?.slot, 2);
   await library.move(a, 5);
   await library.save(first); // Reupload must retain the rearranged slot.
   entries = await library.list();

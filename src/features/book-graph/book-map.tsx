@@ -7,7 +7,7 @@ import { useMapLayout } from './use-map-layout';
 import { confinePan, fitEntries, screenWorld, mapObstacles } from './map-framing';
 import { MapGrid, ORIGIN } from './map-grid';
 import { TimelineControl } from './timeline-control';
-import { axisValue, axisRange, coordinateRating } from '../../shared/book-axes';
+import { axisValue } from '../../shared/book-axes';
 import { AxisDetails } from './axis-details';
 import { UnplacedNotes } from './unplaced-notes';
 import { semanticWindow, toScreen, zoomCentered, zoomIntoGroup, zoomLevel } from './semantic-window';
@@ -90,7 +90,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     const element=stage.current;if(!element)return;
     let gesture:{view:MapView;size:typeof size}|null=null;
     const wheel=(event:WheelEvent)=>{
-      if(event.target instanceof Element&&event.target.closest('[data-reading-replay]'))return;
+      if(element.querySelector('[data-reading-replay]'))return;
       if(!(event.target instanceof Element)||!event.target.closest('svg,.map-timeline-control'))return;
       event.preventDefault();if(gesture)return;
       const unit=event.deltaMode===1?16:event.deltaMode===2?latest.current.size.height:1;
@@ -105,7 +105,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
       latest.current={current:confinePan(next,latest.current.size),size};onViewChange(next);
     };
     const gestureStart=(event:Event)=>{
-      if(element.querySelector('[data-reading-replay]')){event.preventDefault();return;}
+      if(element.querySelector('[data-reading-replay]')){event.preventDefault();gesture=null;return;}
       event.preventDefault();if(frame.current!==null)cancelAnimationFrame(frame.current);navigation.current?.abort();setNavigating(false);
       const {current:view,size}=latest.current;
       gesture={view,size};
@@ -269,7 +269,7 @@ export function BookMap({graph,view,onViewChange:saveView,onSource,readingProgre
     {heat&&selectedHeat&&!current.selectedNodeId&&<HeatInspector key={selectedHeat.leaf.id} point={selectedHeat} filter="all" onClose={()=>setHeatSelection(null)} onSource={source} onLocate={id=>{setHeatSelection(null);void locate(id);}}/>}
     {current.selectedNodeId&&<section className="map-detail" aria-label={selectedEntry?.kind==='cluster'?'Selected group':'Selected occurrence'}>
       <div className="map-title-row"><div><small>{selectedEntry?.kind==='cluster'?`${selectedEntry.leafCount} notes · generated summary`:selected?.node.sourceLabel??'Source occurrence'}</small><h3>{selectedEntry?.label??selected?.node.label??'Loading note…'}</h3></div><button aria-label="Close node details" onClick={()=>change({selectedNodeId:null})}>×</button></div>
-      {selectedEntry?.kind==='cluster'?<><p>{selectedEntry.summary}</p><button className="map-source-button" onClick={()=>void openCluster(selectedEntry)}>Explore this group ↗</button><small> Grouping summarizes its children; it is not a new source passage.</small>{graph.axisVersion&&selectedEntry.bounds&&<p className="map-axis-range">Child range · Reasoning depth {axisRange(coordinateRating(selectedEntry.bounds.min.x,'x',graph.axisVersion),coordinateRating(selectedEntry.bounds.max.x,'x',graph.axisVersion),graph.axisVersion)} · Generality {axisRange(coordinateRating(selectedEntry.bounds.min.y,'y',graph.axisVersion),coordinateRating(selectedEntry.bounds.max.y,'y',graph.axisVersion),graph.axisVersion)}. The anchor represents a child position. Badges may shift slightly for readability; their connecting dots retain the exact position.</p>}</>:detail.error?<p role="alert">{detail.error} <button onClick={detail.retry}>Retry</button></p>:selected?<div className="map-detail-body"><div><blockquote>{selected.anchors.find(a=>a.id===selected.node.anchorIds[0])?.quote}</blockquote>{selected.node.axisAssessment?<p>X · Reasoning depth: {axisValue(selected.node.axisAssessment.reasoningDepth.value,graph.axisVersion)}<br/>Y · Generality: {axisValue(selected.node.axisAssessment.generality.value,graph.axisVersion)}</p>:<p>Legacy structure: {selected.node.structuralLevel===null?'Unclassified':LEVELS[selected.node.structuralLevel]}</p>}</div><div><p>{selected.node.summary}</p>{selected.node.anchorIds.map((id,i)=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>{i?'Additional evidence':'Read this passage'} ↗ </button>:null;})}
+      {selectedEntry?.kind==='cluster'?<><p>{selectedEntry.summary}</p></>:detail.error?<p role="alert">{detail.error} <button onClick={detail.retry}>Retry</button></p>:selected?<div className="map-detail-body"><div><blockquote>{selected.anchors.find(a=>a.id===selected.node.anchorIds[0])?.quote}</blockquote>{selected.node.axisAssessment?<p>X · Reasoning depth: {axisValue(selected.node.axisAssessment.reasoningDepth.value,graph.axisVersion)}<br/>Y · Generality: {axisValue(selected.node.axisAssessment.generality.value,graph.axisVersion)}</p>:<p>Legacy structure: {selected.node.structuralLevel===null?'Unclassified':LEVELS[selected.node.structuralLevel]}</p>}</div><div><p>{selected.node.summary}</p>{selected.node.anchorIds.map((id,i)=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>{i?'Additional evidence':'Read this passage'} ↗ </button>:null;})}
         <p>Shared concept: {selected.identity.label}</p><div className="map-related">{selected.identity.occurrenceIds.filter(id=>id!==selected.node.id).map(id=><button key={id} onClick={()=>void locate(id)}>{selected.neighbours.find(n=>n.id===id)?.label} ↗</button>)}</div>
         <AxisDetails axisVersion={graph.axisVersion} detail={selected} onSource={source} onLocate={id=>void locate(id)}/><details><summary>Position & relation evidence</summary><p>{selected.node.evidence.rationale}</p>{selected.edges.map(e=><p key={e.id}><button onClick={()=>void locate(e.source===selected.node.id?e.target:e.source)}>{selected.neighbours.find(n=>n.id===e.source)?.label} → {e.type} → {selected.neighbours.find(n=>n.id===e.target)?.label}</button><br/>{e.rationale}{e.evidenceAnchorIds.map(id=>{const a=selected.anchors.find(a=>a.id===id);return a?<button className="map-source-button" key={id} onClick={()=>source(a)}>Relation evidence ↗ </button>:null;})}</p>)}</details></div></div>:<p>Loading source evidence…</p>}
     </section>}

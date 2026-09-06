@@ -1,5 +1,6 @@
 'use client';
 
+import { SAMPLE_BOOKS, SAMPLE_SHELF_SIZE, sampleBook } from '@/shared/sample-books';
 import { useEffect, useRef, useState, type PointerEvent, type FormEvent } from 'react';
 import { REPUBLIC_EMBLEM, type BookEmblem } from '@/shared/book-emblem';
 import { bookLibrary, type LibraryEntry } from './book-library-store';
@@ -36,7 +37,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
   const [attempt, setAttempt] = useState(0);
   const [capacity, setCapacity] = useState(2);
   const [scroll, setScroll] = useState({ left: false, right: false });
-  const lastSlot = Math.max(0, ...books.map(book => book.shelf?.slot ?? 0));
+  const lastSlot = Math.max(SAMPLE_SHELF_SIZE - 1, ...books.map(book => book.shelf?.slot ?? 0));
   const slotCount = Math.max(capacity, lastSlot + 2);
 
   useEffect(() => {
@@ -156,7 +157,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
     if (!value.moved) { flightRef.current = null; return; }
     const slot = document.elementsFromPoint(event.clientX, event.clientY).map(element => element.closest<HTMLElement>('[data-slot]')).find(Boolean);
     const target = Number(slot?.dataset.slot);
-    if (slot && target > 0 && target !== value.book.shelf?.slot) void moveBook(value.book, target);
+    if (slot && target >= SAMPLE_SHELF_SIZE && target !== value.book.shelf?.slot) void moveBook(value.book, target);
     else void returnBook();
   }
   async function removeBook() {
@@ -173,7 +174,10 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
   async function openBook(id: string) {
     if (busy || !open) return;
     setBusy(true); setError('');
-    try { await onSelect(id === 'plato-republic' ? null : await bookLibrary.load(id)); }
+    try {
+      if (sampleBook(id)) { window.location.assign(`/?book=${id}`); return; }
+      await onSelect(await bookLibrary.load(id));
+    }
     catch (reason) { setError(reason instanceof Error ? reason.message : 'Could not open this book.'); }
     finally { setBusy(false); }
   }
@@ -200,6 +204,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
             <div className={styles.slots}>
               {Array.from({ length: slotCount }, (_, slot) => {
                 const book = books.find(entry => entry.shelf?.slot === slot);
+                const sample = SAMPLE_BOOKS.find(entry => entry.slot === slot);
                 return <div className={styles.slot} key={slot} data-slot={slot} data-dragging={flight?.book.id === book?.id && !!book || undefined}
                   onPointerDown={event => { if (book) startDrag(event, book); else suppressClick.current = false; }} onPointerMove={drag} onPointerUp={endDrag}
                   onPointerCancel={() => { if (!thrown) void returnBook(); }}
@@ -207,9 +212,9 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
                   onKeyDown={event => {
                     if (!book || busy) return;
                     if (event.key === 'Delete' || event.key === 'Backspace') { event.preventDefault(); setThrown(book); setManipulating(true); }
-                    if (event.altKey && ['ArrowLeft', 'ArrowRight'].includes(event.key)) { event.preventDefault(); void moveBook(book, Math.max(1, slot + (event.key === 'ArrowRight' ? 1 : -1))); }
+                    if (event.altKey && ['ArrowLeft', 'ArrowRight'].includes(event.key)) { event.preventDefault(); void moveBook(book, Math.max(SAMPLE_SHELF_SIZE, slot + (event.key === 'ArrowRight' ? 1 : -1))); }
                   }}>
-                  {slot === 0 ? <BookSpine id="plato-republic" title="The Republic of Plato" emblem={sampleEmblem ?? REPUBLIC_EMBLEM} variant={0} current={currentId === 'plato-republic'} disabled={busy} note="Plato · Included in your library" onClick={() => void openBook('plato-republic')}/>
+                  {sample ? <BookSpine id={sample.id} title={sample.title} emblem={sample.id === 'plato-republic' ? sampleEmblem ?? REPUBLIC_EMBLEM : undefined} variant={sample.variant} current={currentId === sample.id} disabled={busy} note={`${sample.byline} · Included in your library`} onClick={() => void openBook(sample.id)}/>
                     : book ? <BookSpine id={book.id} title={cleanBookTitle(book.title)} emblem={book.emblem} variant={book.shelf?.variant} current={currentId === book.id} disabled={busy} note={book.note ?? (book.kind === 'pdf' && !book.ready ? 'Convert PDF to text' : undefined)} onClick={() => void openBook(book.id)}/>
                       : <button type="button" className={styles.emptySlot} disabled={busy || loading || !!error} aria-label={`Add a book in space ${slot + 1}`} onClick={() => { selectedSlot.current = slot; input.current?.click(); }}>
                         <svg className={styles.emptyOutline} viewBox="0 0 72 302" preserveAspectRatio="none" aria-hidden="true"><path d="M1 20V5Q1 1 5 1H20 M52 1H67Q71 1 71 5V20 M1 282V297Q1 301 5 301H20 M52 301H67Q71 301 71 297V282"/></svg>

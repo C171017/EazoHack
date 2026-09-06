@@ -1,5 +1,6 @@
 'use client';
 
+import { sampleBook } from '@/shared/sample-books';
 import { Fragment, forwardRef, memo, useEffect, useImperativeHandle, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type ReactNode } from 'react';
 import { readingLine, readingOffset } from './reading-position';
 import { splitSourceRange } from './artifact-placement';
@@ -11,6 +12,7 @@ import { EnhancementPicker, type PickerPosition } from './enhancement-picker';
 import type { RouteKind, SourceAnchor } from '@/shared/schemas';
 import { createTxtRenderChunks, findTxtBlock, type TxtRenderChunk } from './txt-document';
 import { ReadingMenu } from './reading-menu';
+import { detectReadingLanguage } from './reading-language';
 import { chineseFonts, defaultReadingFonts, englishFonts, parseReadingFonts, type ReadingFonts } from './reading-fonts';
 
 export type TxtSelectionRange = {
@@ -158,6 +160,7 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   enhancementBusy: boolean;
 }>(function ContinuousTxtReader({ title = "The Republic of Plato.", bookId = "plato-republic", onLibrary, sourceText, fileHash, extractionVersion, activeAnchor, onSelection, onEnhance, enhancementBusy, slots=EMPTY_SLOTS, enhancements=EMPTY_HIGHLIGHTS, onReadingPosition }, ref) {
   const chunks = useMemo(() => createTxtRenderChunks(sourceText, undefined, title), [sourceText, title]);
+  const readingLanguage = useMemo(() => detectReadingLanguage(sourceText), [sourceText]);
   const chunkEnhancements = useMemo(() => chunks.map(chunk => {
     const matches = enhancements.filter(h => h.startOffset < chunk.endOffset && h.endOffset > chunk.startOffset);
     return matches.length ? matches : EMPTY_HIGHLIGHTS;
@@ -393,11 +396,11 @@ const ContinuousTxtReaderInner = forwardRef<ContinuousTxtReaderHandle, {
   >
     <EnhancementPicker position={pickerPosition} busy={enhancementBusy} onChoose={route=>{setPickerPosition(null);nativeSelection.current=null;window.getSelection()?.removeAllRanges();onEnhance(route);}}/>
     <div className="txt-reader-masthead">
-      <ReadingMenu fonts={fonts} onChange={changeFonts} onLibrary={onLibrary}/>
+      <ReadingMenu key={bookId} language={readingLanguage} fonts={fonts} onChange={changeFonts} onLibrary={onLibrary}/>
     </div>
     <div className="txt-reader-page">
     <header className="txt-reader-heading">
-      <p className="txt-reader-eyebrow">{bookId === "plato-republic" ? "Plato · Translated by Benjamin Jowett" : "Your uploaded book"}</p>
+      <p className="txt-reader-eyebrow">{sampleBook(bookId)?.byline ?? "Your uploaded book"}</p>
       <h1>{title}</h1>
     </header>
     <div

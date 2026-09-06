@@ -4,6 +4,7 @@ const config: NextConfig = {
   // The PDF asset handler reads these at runtime; keep them in traced deployments.
   outputFileTracingIncludes: {
     '/': [
+      './data/books/hong-lou-meng/derived/hong-lou-meng-reading.txt',
       './data/books/plato-republic/raw/republic-jowett-3rd-edition.txt',
       './data/books/plato-republic/analysis/current-map.json',
       './data/books/plato-republic/analysis/semantic-hierarchy-*/graph.json',

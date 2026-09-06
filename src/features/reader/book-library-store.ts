@@ -1,3 +1,4 @@
+import { SAMPLE_BOOKS, SAMPLE_SHELF_SIZE } from '@/shared/sample-books';
 import type { UploadedBook } from './upload-book';
 import { pdfImportNote } from './pdf/import-model';
 import { nextShelfPosition, type ShelfPosition } from './bookshelf-model';
@@ -45,7 +46,7 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
           for (const entry of entries) catalogue.put(entry);
           const previous = entries.find(entry => entry.id === id);
           // Conversion and duplicate uploads retain their original place and emblem.
-          const shelf = previous?.shelf ?? nextShelfPosition(id, new Set([0, ...entries.map(entry => entry.shelf!.slot)]), requestedSlot);
+          const shelf = previous?.shelf ?? nextShelfPosition(id, new Set([...SAMPLE_BOOKS.map(book => book.slot), ...entries.map(entry => entry.shelf!.slot)]), requestedSlot);
           tx.objectStore('books').put(book, id);
           catalogue.put({ ...previous, id, title: book.title, kind: book.kind === 'pdf' || book.originalPdf ? 'pdf' : 'txt', ready: book.kind === 'txt', addedAt: previous?.addedAt ?? new Date().toISOString(), shelf,
             ...(book.kind === 'txt' && book.originalPdf ? { note: pdfImportNote(book.originalPdf.manifest) } : {}),
@@ -73,7 +74,7 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
       });
     },
     async move(id: string, slot: number) {
-      if (!Number.isSafeInteger(slot) || slot < 1 || slot >= 10000) throw new Error('Choose an available shelf space.');
+      if (!Number.isSafeInteger(slot) || slot < SAMPLE_SHELF_SIZE || slot >= 10000) throw new Error('Choose an available shelf space.');
       await transaction('readwrite', tx => {
         const catalogue = tx.objectStore('catalogue');
         const request = catalogue.getAll() as IDBRequest<LibraryEntry[]>;
@@ -105,8 +106,8 @@ export function createBookLibrary(factory?: IDBFactory, name = 'eazo-book-librar
 
 /** Upgrade the lightweight catalogue in place without reading source files. */
 function placeLegacyEntries(entries: LibraryEntry[]) {
-  const occupied = new Set<number>([0]); // The bundled Republic has its own place.
-  return [...entries].sort((a, b) => Number(!a.shelf) - Number(!b.shelf) || a.addedAt.localeCompare(b.addedAt) || a.id.localeCompare(b.id)).map(entry => {
+  const occupied = new Set<number>(SAMPLE_BOOKS.map(book => book.slot)); // Reserve both public examples.
+  return [...entries].sort((a, b) => Number(!a.shelf || a.shelf.slot < SAMPLE_SHELF_SIZE) - Number(!b.shelf || b.shelf.slot < SAMPLE_SHELF_SIZE) || a.addedAt.localeCompare(b.addedAt) || a.id.localeCompare(b.id)).map(entry => {
     const shelf = entry.shelf && !occupied.has(entry.shelf.slot) ? entry.shelf : nextShelfPosition(entry.id, occupied);
     occupied.add(shelf.slot);
     return { ...entry, shelf };

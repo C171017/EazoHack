@@ -16,6 +16,7 @@ Local job key: `5fe99903ca5d2c3ab51d971c8bcf10bdde8df4e01b6bc6e971396664b7d3c311
 - Two omitted pages: one without embedded text and PDF page 566 rejected for damaged character mappings. Visual inspection of page 566 shows readable prose, tables, and equations; its extracted text was 2,204 characters. The whole-page rejection threshold can lose useful prose because of problematic mathematical glyphs.
 - Import flagged potentially ambiguous reading order on 793 pages. This is a heuristic warning, not proof that all those pages are misordered. The current text-only pipeline does not interpret the textbook's diagrams or faithfully reconstruct tables.
 - Segmentation recognizes Republic-specific headings. All 130 economics chunks receive the `Front matter` hint. Of 732 candidates, 359 were labeled commentary and 373 paratext. These are model classifications, not validated descriptions of this textbook; general nonfiction needs an appropriate source-role vocabulary and heading detection.
+- Evidence review retained 720 of 732 candidate occurrences. Synthesis salvaging omitted seven same-chunk optional links from the accepted raw responses.
 - The pre-existing run failed at synthesis batch 11 after repeated same-chunk links were returned in `crossEdges`. A resumed run failed similarly at batch 13 even with detailed corrective feedback. Every unrelated valid theme/identity assignment was previously discarded with the invalid optional links.
 - A single status-fetch failure previously stopped browser polling permanently until manual retry. The detached worker could still be running.
 - Extraction/review scheduling previously waited for each fixed batch's slowest call. Synthesis portions were sequential.
@@ -24,7 +25,7 @@ Local job key: `5fe99903ca5d2c3ab51d971c8bcf10bdde8df4e01b6bc6e971396664b7d3c311
 
 ## Changes
 
-1. Bounded work pool for extraction, evidence review, and synthesis. Slots refill as requests finish; output order remains source order. On failure, active requests finish saving checkpoints and no further tasks start.
+1. Bounded work pool for extraction, evidence review, synthesis, axis assignment/review, and hierarchy generation. Slots refill as requests finish; output order remains source order. On failure, active requests finish saving checkpoints and no further tasks start.
 2. Status requests have a 30-second timeout and automatic exponential retry for network errors and HTTP 408/429/500/502/504. Retries retain the same request body/job identity; cancellation stops them. Eight total attempts maximum; authorization and local-unavailable errors remain explicit.
 3. Synthesis removes only same-chunk links from the optional cross-chunk list. It retains raw responses for audit, valid theme/identity partitions, and local extraction links. Unknown/self endpoints, invalid partitions, and downstream evidence checks remain strict. Saved failed responses can be revalidated without another model call.
 4. Retry validation messages enumerate all offending same-chunk links instead of reporting only a generic failure.
@@ -34,18 +35,19 @@ Local job key: `5fe99903ca5d2c3ab51d971c8bcf10bdde8df4e01b6bc6e971396664b7d3c311
 
 Replaying the 130 successful extraction-call durations as a scheduling calculation gives 532.403 seconds with the old batches of three versus 470.544 seconds with a three-slot pool: **11.6% estimated stage-level saving**. This excludes retries, provider contention, disk/network overhead and other stages; it is not a measured overall speedup.
 
-Synthesis now permits three independent portions at a time. Global identity reconciliation remains sequential because later matching depends on earlier merged identities. Axis assignment/review and hierarchical grouping still have their own conservative concurrency and evidence-review loops.
+Synthesis now permits three independent portions at a time. Global identity reconciliation remains sequential because later matching depends on earlier merged identities. Axis assignment/review and hierarchical grouping retain their two-request concurrency limits and evidence-review loops, but no longer idle one slot behind the slower request in a fixed pair.
 
 ## Validation and completion
 
 In progress: follow the resumed real book through concept reconciliation, evidence review, axis assignment/consistency, and hierarchy publication, then validate exact anchors and bounded map loading. Do not treat `text ready`, extraction completion, or a worker heartbeat as map completion.
 
-Automated checks so far: all 201 tests passed before the additional synthesis-salvage case; targeted suites including that case passed. Final check results and actual map outcome will be recorded after the real run finishes or encounters a concrete blocker.
+Automated checks: 202 tests passed, including network/proxy fault injection, cancellation, work-pool ordering/draining, and synthesis salvage boundaries. TypeScript and focused ESLint passed. A further 20 targeted integration tests passed after extending the pool to axes and hierarchy. The controlled worker termination was detected in the reader; retry resumed saved work. The real-book map outcome remains pending.
 
 ## Next priorities
 
 - General nonfiction chapter boundaries and source roles, replacing the Republic-specific assumptions before judging map quality.
 - Preserve trustworthy text blocks on a partly damaged page; keep excluded material and layout uncertainty explicit. Evaluate table/diagram handling separately from text-only analysis.
 - Resumable/chunked hosted source upload, consistent size limits and durable background jobs before claiming support for this book in Cloud.
+- Consolidate provider retry behavior: extraction uses exponential delay, while axis/hierarchy calls have separate retry loops. Add consistent timeout/backoff handling and recovery of saved raw attempts without bypassing validation.
 - Reader-friendly phase progress with completed/total counts and elapsed time; distinguish reconnecting from failed analysis.
 - Consider a separately labeled early overview while full evidence review continues. Never present a partial/unreviewed map as the final validated graph.
