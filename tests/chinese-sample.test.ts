@@ -9,10 +9,13 @@ import { readUploadedBook } from '../src/features/reader/upload-book';
 
 test('Chinese sample preserves the entire source body and exact render offsets', async () => {
   const preview = await getChineseBookPreview();
-  const raw = await readFile('data/books/hong-lou-meng/raw/hong-lou-meng-gutenberg-24264.txt', 'utf8');
-  const body = raw.slice(raw.indexOf('第一回　'), raw.indexOf('*** END OF THE PROJECT GUTENBERG EBOOK'));
+  const body = await readFile('data/books/hong-lou-meng/raw/hong-lou-meng-wikisource-120.txt', 'utf8');
+  const manifest = JSON.parse(await readFile('data/books/hong-lou-meng/source-manifest.json', 'utf8'));
+  assert.deepEqual(manifest.chapters.map((c: {chapter: number}) => c.chapter), Array.from({length: 120}, (_, i) => i + 1));
+  assert.equal(preview.fileHash, manifest.sha256);
+  assert.ok(!/回目录|cite_note|慫級\*/.test(preview.sourceText));
   assert.equal(preview.sourceText.replace(/\s/g, ''), body.replace(/\s/g, ''));
-  assert.ok(preview.sourceText.includes('第一二零回'));
+  assert.ok(/第[一百二十零]+回[^\n]*贾雨村归结红楼梦/.test(preview.sourceText));
   const chunks = createTxtRenderChunks(preview.sourceText, 16000, '红楼梦');
   assert.equal(chunks.flatMap(c => c.blocks).map(b => preview.sourceText.slice(b.startOffset, b.endOffset)).join(''), preview.sourceText);
   assert.ok(chunks.flatMap(c => c.blocks).some(b => b.kind === 'heading' && preview.sourceText.slice(b.startOffset,b.endOffset).startsWith('第一回')));

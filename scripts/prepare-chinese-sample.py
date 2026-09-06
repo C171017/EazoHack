@@ -18,7 +18,7 @@ class Text(HTMLParser):
         if not self.skip and tag == 'br': self.parts.append('\n')
     def handle_endtag(self, tag):
         if tag in ('sup', 'style', 'script'): self.skip -= 1
-        if not self.skip and tag in ('p', 'div'): self.parts.append('\n\n')
+        if not self.skip and tag in ('p', 'div', 'center'): self.parts.append('\n\n')
     def handle_data(self, data):
         if not self.skip: self.parts.append(data.replace('\n', ''))
 
@@ -35,8 +35,8 @@ def chapter(n):
                 if attempt == 3: raise
                 time.sleep(2 ** (attempt + 1))
     html = gzip.decompress(file.read_bytes()).decode('utf-8')
-    content = html[html.index('class="mw-parser-output"'):]
-    start = re.search(r'<div class="center"[^>]*>\s*<b>', content)
+    content = html[html.index('id="mw-content-text"'):]
+    start = re.search(r'<b>第', content)
     if not start: raise ValueError(f'Chapter {n}: missing title')
     content = content[start.start():]
     end = re.search(r'<(?:hr\b|div class="mw-heading|div class="printfooter)', content)

@@ -18,3 +18,18 @@ The IndexedDB catalogue stores each book's slot, binding variant, and optional e
 179 tests passed, including shelf persistence, legacy migration, concurrent placement, duplicate uploads, PDF conversion, unsafe emblem rejection, and analysis checkpoint reuse. TypeScript and targeted ESLint checks passed.
 
 An isolated production build passed using the project's existing cached Google Font CSS and font files through Next's font test harness; live font fetching was unavailable. Browser checks on that build verified TXT and PDF uploads, custom English and Chinese titles, placement in the chosen space, reading navigation, persistence after reload, real Gemini-generated emblems, viewport-width empty shelves, overflow after placing a book at the edge, and phone-size horizontal navigation. Test uploads used a separate local origin and did not enter the user's main library.
+
+
+## Public examples (2026-09-06)
+
+The permanent shelf entries are The Republic of Plato (slot 0) and 红楼梦 (slot 1).
+Open them with `/?book=plato-republic` and `/?book=hong-lou-meng`; explicit sample
+links take precedence over the selected private cloud source. Existing uploads
+are migrated out of reserved slots without loading or changing source bytes.
+
+红楼梦 uses the full 120-chapter simplified-Chinese Wikisource text. Source HTML
+snapshots, chapter revision records, TXT, and the historical reference PDF are in
+`data/books/hong-lou-meng/`; see its SOURCE.md for edition differences and licensing.
+Only the reading TXT is included in the production page trace. The 71 MB reference
+PDF is stored locally and never loaded with the reader. Passage assistance is
+available; a prepared semantic map for this book is not yet included.

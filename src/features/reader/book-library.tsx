@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { SAMPLE_BOOKS, SAMPLE_SHELF_SIZE, sampleBook } from '@/shared/sample-books';
 import { useEffect, useRef, useState, type PointerEvent, type FormEvent } from 'react';
 import { REPUBLIC_EMBLEM, type BookEmblem } from '@/shared/book-emblem';
@@ -37,6 +38,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
   const [attempt, setAttempt] = useState(0);
   const [capacity, setCapacity] = useState(2);
   const [scroll, setScroll] = useState({ left: false, right: false });
+  const router = useRouter();
   const lastSlot = Math.max(SAMPLE_SHELF_SIZE - 1, ...books.map(book => book.shelf?.slot ?? 0));
   const slotCount = Math.max(capacity, lastSlot + 2);
 
@@ -175,7 +177,11 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
     if (busy || !open) return;
     setBusy(true); setError('');
     try {
-      if (sampleBook(id)) { window.location.assign(`/?book=${id}`); return; }
+      if (sampleBook(id)) {
+        if (id === currentId) onClose();
+        else router.push(`/?book=${id}`);
+        return;
+      }
       await onSelect(await bookLibrary.load(id));
     }
     catch (reason) { setError(reason instanceof Error ? reason.message : 'Could not open this book.'); }

@@ -12,10 +12,10 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ b
   if (book === 'hong-lou-meng') {
     const preview = await getChineseBookPreview();
     const graph: MapBootstrap = {bookId: 'hong-lou-meng', graphVersion: 'sample-pending', version: 'sample-pending', roots: [], depth: 0, totalNodes: 0, unplaced: 0, territories: [], unavailable: true};
-    return <Workspace preview={preview} graph={graph} initialTitle="红楼梦"/>;
+    return <Workspace key="hong-lou-meng" preview={preview} graph={graph} initialTitle="红楼梦"/>;
   }
   let cloud;try {cloud=book === 'plato-republic' ? null : await selectedCloudBook();} catch {redirect('/cloud');}
-  if(cloud)return <Workspace preview={cloud.preview} graph={cloud.graph} initialTitle={cloud.title} cloudSourceId={cloud.sourceId}/>;
+  if(cloud)return <Workspace key={cloud.sourceId} preview={cloud.preview} graph={cloud.graph} initialTitle={cloud.title} cloudSourceId={cloud.sourceId}/>;
   const preview = await getBookPreview();
   let graph:MapBootstrap;
   try { graph=mapBootstrap(await loadMapStore()); }
@@ -23,5 +23,5 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ b
     console.error('Book map unavailable:',error instanceof Error?error.message:'Unknown map error');
     graph={bookId:'plato-republic',graphVersion:'map-unavailable',version:'map-unavailable',roots:[],depth:0,totalNodes:0,unplaced:0,territories:[],unavailable:true};
   }
-  return <Workspace preview={preview} graph={graph} />;
+  return <Workspace key="plato-republic" preview={preview} graph={graph} />;
 }
