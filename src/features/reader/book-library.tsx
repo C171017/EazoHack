@@ -14,6 +14,7 @@ import { readShelf, type ShelfBook } from '../cloud/library';
 import { cloudRequest } from '../cloud/request';
 import { persistShelfMove, placeShelfBook } from '../cloud/shelf-move';
 import { CloudMenu } from './cloud-menu';
+import { ShelfLoading } from './shelf-loading';
 
 export function BookLibrary({ initialOpen = false, open, currentId, onSelect, onUpload, onClose, onReopen, importState, revision, onCancel, onRetry, sampleEmblem, onRemoved }: {
   onRemoved: (id: string) => void;
@@ -104,7 +105,7 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
       setBooks(result.books); setOwner(result.owner); setError(result.error ?? ''); setLoading(false);
     };
     const update = () => { void refresh().catch(reason => { if (active) { setError(reason.message); setLoading(false); } }); };
-    const changed = () => { generation++; shelfVersion.current++; savingMove.current = false; setManipulating(false); flightRef.current = null; setFlight(null); setBooks(previous => previous.filter(book => !book.cloud && !book.deviceOwner)); setOwner(undefined); update(); };
+    const changed = () => { generation++; shelfVersion.current++; savingMove.current = false; setLoading(true); setManipulating(false); flightRef.current = null; setFlight(null); setBooks(previous => previous.filter(book => !book.cloud && !book.deviceOwner)); setOwner(undefined); update(); };
     const storage = (event: StorageEvent) => { if (event.key === 'eazo-auth-change') changed(); };
     update();
     window.addEventListener('focus', update); window.addEventListener('online', update);
@@ -277,8 +278,8 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
     finally { setBusy(false); }
   }
 
-  return <dialog open={initialOpen} ref={dialog} className={styles.library} aria-label="Library" aria-busy={busy} inert={!open} onCancel={event => { event.preventDefault(); if (!busy) onClose(); }}>
-    <div className={styles.inner} data-opening={turningPages || undefined} inert={turningPages}>
+  return <dialog open={initialOpen} ref={dialog} className={styles.library} aria-label="Library" aria-busy={busy || loading} inert={!open} onCancel={event => { event.preventDefault(); if (!busy && !loading) onClose(); }}>
+    <div className={styles.inner} data-loading={loading || undefined} data-opening={turningPages || undefined} inert={turningPages || loading}>
       <CloudMenu key={String(open)} />
       <div className={styles.shelfArea}>
         <div ref={shelf} className={styles.shelfViewport} role="region" aria-label="Bookshelf" tabIndex={0} onKeyDown={event => {
@@ -314,7 +315,6 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
           {(scroll.left || scroll.right) && <div className={styles.scrollControls}><button type="button" aria-label="Scroll shelf left" disabled={!scroll.left} onClick={() => moveShelf(-1)}>←</button><button type="button" aria-label="Scroll shelf right" disabled={!scroll.right} onClick={() => moveShelf(1)}>→</button></div>}
         </div>
         {owner && books.some(book => book.localId && !book.cloud) && <p className={styles.hint}>Some books are saved only on this device. <a href="/account">Add them to your account</a> to sync their reading.</p>}
-        {loading && <p className={styles.hint} role="status">Opening your shelf…</p>}
       </div>
       {importState && <section className={styles.processing} aria-label={`Import ${importState.title}`}>
         <div className={styles.progressRing} role="progressbar" aria-label="Book processing progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={importState.percent} aria-valuetext={`${importState.stage}, ${importState.percent}% complete`}>
@@ -336,6 +336,7 @@ export function BookLibrary({ initialOpen = false, open, currentId, onSelect, on
       </section>}
       {error && <p role="alert" className={styles.error}>{error} <button type="button" onClick={() => { setError(''); setLoading(true); setAttempt(value => value + 1); }}>Retry library</button></p>}
     </div>
+    {loading && !turningPages && <ShelfLoading />}
     {turningPages && <div className={styles.openingScene} role="progressbar" aria-label="Opening book" aria-valuetext="Preparing the reader">
       <svg className={styles.openingDrawing} viewBox="0 0 240 180" fill="none" aria-hidden="true">
         <ellipse className={styles.openingShadow} cx="120" cy="148" rx="72" ry="5"/>

@@ -106,6 +106,8 @@
 .cardDrawing { display: block; }
 
 /* A quiet ink-and-paper interlude, tied to actual navigation pending state. */
+.inner { transition: opacity 420ms ease-out; }
+.inner[data-loading] { opacity: 0; pointer-events: none; }
 .inner[data-opening] { opacity: 0; pointer-events: none; }
 .openingScene { position: fixed; inset: 0; display: grid; place-items: center; background: var(--shelf-paper) var(--paper-texture) repeat; background-size: 600px 600px; animation: openingArrive 320ms ease-out both; }
 .openingDrawing { width: clamp(180px, 24vw, 260px); overflow: visible; color: var(--shelf-ink); stroke: currentColor; stroke-width: 1; stroke-linecap: round; stroke-linejoin: round; }
@@ -118,17 +120,29 @@
 .turningLeaf:last-child { animation-delay: -2.4s; }
 .openingRule { stroke-opacity: .13; }
 .openingSweep { stroke-width: 1.4; stroke-dasharray: 22 78; animation: inkTravel 2.4s ease-in-out infinite; }
+.shelfLoading {
+  --shelf-ink: #403a31;
+  --shelf-paper: #f6f2e6;
+  --paper-texture: url('/textures/warm-book-v1-1200.webp');
+  /* Keep the paper opaque from the first server-rendered frame. */
+  animation: none;
+}
+.shelvingBook { fill: var(--shelf-paper); animation: shelfSettle 3.6s cubic-bezier(.45,0,.25,1) infinite; }
+.shelvingBook:nth-of-type(2) { animation-delay: -.3s; }
+.shelvingBook:nth-of-type(3) { animation-delay: -.6s; }
+.shelvingBook:nth-of-type(4) { animation-delay: -.9s; }
+@keyframes shelfSettle { 0%, 65%, 100% { transform: translateY(0); opacity: 1; } 28% { transform: translateY(-7px); opacity: .45; } }
 @keyframes openingArrive { from { opacity: 0; } to { opacity: 1; } }
 @keyframes leafTurn { 0%, 12% { transform: scaleX(1); opacity: 0; } 20% { opacity: 1; } 48% { transform: scaleX(.03) translateY(-7px); opacity: 1; } 78% { transform: scaleX(-1); opacity: 1; } 90%, 100% { transform: scaleX(-1); opacity: 0; } }
 @keyframes inkTravel { 0% { stroke-dashoffset: 24; opacity: .2; } 50% { opacity: .65; } 100% { stroke-dashoffset: -100; opacity: .2; } }
 @media (prefers-reduced-motion: reduce) {
-  .openingScene, .turningLeaf, .openingSweep { animation: none; }
+  .openingScene, .turningLeaf, .openingSweep, .shelvingBook { animation: none; }
   .turningLeaf { display: none; }
   .openingSweep { stroke-dasharray: none; opacity: .5; }
 }
 @media (forced-colors: active) {
   .openingScene { background: Canvas; }
-  .openingVolume { fill: Canvas; }
+  .openingVolume, .shelvingBook { fill: Canvas; }
   .openingDrawing { color: CanvasText; }
 }
 
