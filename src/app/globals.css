@@ -328,7 +328,9 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: minmax(0, 1fr) minmax(0, 0fr);
-    transition: grid-template-rows 280ms ease;
+    /* Mount the scene at its final size. Animating these tracks repeatedly
+       resizes/reprojects the map and can save its first camera fit against a
+       nearly collapsed viewport, causing flashes during mobile expansion. */
   }
 
   .reading-workspace[data-mobile-map-open='true'] .reading-workspace-panes {
@@ -397,10 +399,6 @@
     outline-offset: -2px;
     border-radius: 6px;
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .reading-workspace-panes { transition: none; }
 }
 
 @media (min-width: 64rem) {
