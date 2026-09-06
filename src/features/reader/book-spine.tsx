@@ -28,7 +28,7 @@ export function BookSpine({ id, title, emblem, variant, current, disabled, note,
   }, [title]);
   return <button type="button" className={styles.book} data-variant={look.variant} data-current={current || undefined}
     style={{ '--book-height': `${look.height}px`, '--book-width': `${look.width}px`, '--book-tilt': `${look.tilt}deg` } as CSSProperties}
-    disabled={disabled} onClick={onClick} aria-label={`Open ${title}${current ? ', currently reading' : ''}`} title={`${title}${note ? ` · ${note}` : ''}`}>
+    disabled={disabled} onClick={onClick} aria-label={`Open ${title}${current ? ', currently reading' : ''}${note ? ` · ${note}` : ''}`}>
     <span className={styles.spine}>
       <svg className={styles.binding} viewBox="0 0 80 340" preserveAspectRatio="none" aria-hidden="true">
         <path className={styles.outline} d="M8 3Q37 1 72 4Q77 4 77 9L77 330Q77 335 71 336L8 337Q3 336 3 331L3 10Q3 4 8 3Z"/>

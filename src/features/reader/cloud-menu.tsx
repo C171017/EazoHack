@@ -75,13 +75,13 @@ export function CloudMenu() {
     </button>
     <div id={panelId} className={styles.options} inert={!open} aria-hidden={!open}>
       {session ? <>
-        <a className={styles.google} href="/account" aria-label="Account settings" title="Account settings">
+        <a className={styles.google} href="/account" aria-label="Account settings">
           <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="9" r="3"/><path d="M5.7 18.4a6.5 6.5 0 0 1 12.6 0"/></svg>
         </a>
-        <button type="button" className={styles.google} disabled={busy} onClick={() => void signOut()} aria-label="Sign out" title="Sign out">
+        <button type="button" className={styles.google} disabled={busy} onClick={() => void signOut()} aria-label="Sign out">
           <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4H4v16h6M9 12h12m-4-4 4 4-4 4"/></svg>
         </button>
-      </> : <a className={styles.google} href="/auth/google?next=%2F%3Fbook%3Dplato-republic%26library%3D1" aria-label="Sign in with Google" title="Sign in with Google">
+      </> : <a className={styles.google} href="/auth/google?next=%2F%3Fbook%3Dplato-republic%26library%3D1" aria-label="Sign in with Google">
         <svg className={styles.icon} viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 12.2c0-.7-.1-1.4-.2-2.1H12v3.8h4.8a4.4 4.4 0 0 1-4.8 3.6 5.5 5.5 0 1 1 3.9-9.4l2.8-2.8A9.4 9.4 0 1 0 12 21.4c5.4 0 8.5-3.8 8.5-9.2Z"/></svg>
       </a>}
     </div>

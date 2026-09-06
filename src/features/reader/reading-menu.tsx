@@ -41,12 +41,20 @@ export function ReadingMenu({ language, fonts, onChange, onLibrary }: { language
     onBlur={event => {
       if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false);
     }}>
-    <button ref={trigger} type="button" aria-label="Font" title="Font" className={styles.trigger} aria-expanded={open} aria-controls={group ? panelId : undefined}
+    <button ref={trigger} type="button" aria-label="Font" className={styles.trigger} aria-expanded={open} aria-controls={group ? panelId : undefined}
       onPointerEnter={event => { if (event.pointerType !== 'touch') setOpen(true); }}
       onFocus={event => { if (!restoringFocus.current && event.currentTarget.matches(':focus-visible')) setOpen(true); }}
       onKeyDown={event => { if (['Enter', ' ', 'ArrowDown'].includes(event.key)) { event.preventDefault(); setOpen(true); } }}
       onPointerDown={event => { if (event.pointerType === 'touch') setOpen(current => !current); }}><svg className={styles.icon} viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M5 10V5h22v5M16 5v22m-5 0h10M7 5h18"/><path d="M18 7v18" opacity=".3"/></svg></button>
-    <button type="button" aria-label="Library" title="Library" className={styles.trigger} onClick={() => { setOpen(false); onLibrary(); }}><svg className={styles.icon} viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="4" y="6" width="6" height="21" rx="1"/><path d="M10 6h6v21h-6M6 11h2m4 0h2M19 8l5-2 7 19-5 2z"/></svg></button>
+    <button type="button" aria-label="Library" className={`${styles.trigger} ${styles.libraryTrigger}`} onClick={() => { setOpen(false); onLibrary(); }}>
+      <svg className={styles.icon} viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <g className={styles.libraryBooks}><rect x="4" y="6" width="6" height="21" rx="1"/><path d="M10 6h6v21h-6M6 11h2m4 0h2M19 8l5-2 7 19-5 2z"/></g>
+        <g className={styles.libraryEntrance}>
+          <path d="M14 11V5h13v22H14v-6"/>
+          <path className={styles.entranceArrow} d="M4 16h16m-5-5 5 5-5 5"/>
+        </g>
+      </svg>
+    </button>
     {group && <div id={panelId} className={styles.options} inert={!open} aria-hidden={!open}>
       <div className={styles.content}>
         <div role="group" aria-label={`${group.label} font`} key={group.key} className={styles.group}>

@@ -20,13 +20,13 @@ export function ReadingReplay({ points, loading, error, view, size, readingProgr
   const active = run?.visits === visits ? run : null;
   const restingField = useMemo(() => buildHeatVolume(points, 'all'), [points]);
   const finish = useMemo(() => () => setRun(null), []);
-  const title = active ? 'Replaying reading trajectory' : loading ? 'Loading reading history…'
+  const description = active ? 'Replaying reading trajectory' : loading ? 'Loading reading history…'
     : error ? 'Reading history is unavailable' : visits.length ? 'Replay reading trajectory · oldest to newest'
     : 'Complete an enhanced reading to replay your trajectory';
   return <>
     {!active && restingField && <SpatialHeat field={restingField} view={view} size={size} readingProgress={readingProgress} />}
     {active && <ReplayScene visits={active.visits} view={view} size={size} progress={readingProgress} onFinish={finish} />}
-    <button className={styles.control} type="button" aria-label="Replay reading trajectory" title={title}
+    <button className={styles.control} type="button" aria-label={`Replay reading trajectory. ${description}`}
       data-playing={!!active} disabled={!!active || !visits.length || loading || !!error}
       onClick={() => { setRun({ visits }); }}>
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
