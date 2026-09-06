@@ -44,6 +44,7 @@ await check('/api/pdf/source', 206, { headers: { range: 'bytes=0-1023' } }, asyn
   assert.equal((await response.arrayBuffer()).byteLength, 1024);
 });
 await check('/api/pdf/assets/pdf.worker.mjs', 200, {}, async response => assert.match(response.headers.get('content-type') || '', /javascript/));
+await check('/api/pdf/assets/pdf.legacy.worker.mjs', 200, {}, async response => assert.match(response.headers.get('content-type') || '', /javascript/));
 await check('/api/pdf/assets/ocr/tesseract-core.wasm.js', 200, {}, async response => assert((await response.arrayBuffer()).byteLength > 4_500_000));
 await check('/api/pdf/assets/ocr/eng.traineddata.gz', 200);
 await check('/api/pdf/assets/package.json', 404);

@@ -2,6 +2,7 @@ import type { PdfBook, TextBook } from '../upload-book';
 import { repairNativeSpacing } from './geometry';
 import { classifyImportPage, convertPdfPages, IncompatiblePdfError, PDF_IMPORT_VERSION, type ImportProgress } from './import-model';
 import { extractNative, loadPdfRuntime, nativeItems } from './runtime';
+import { readPdfTextContent } from './text-content';
 
 /** Browser-only import. The PDF renderer remains in the repository but is not
  * part of the active reader route. Copy bytes because PDF.js transfers buffers.
@@ -29,7 +30,7 @@ export async function importPdfBook(book: PdfBook, signal: AbortSignal, progress
       const page = await doc.getPage(index + 1);
       try {
         pageSignal.throwIfAborted();
-        const content = await page.getTextContent();
+        const content = await readPdfTextContent(page, pageSignal);
         const raw = extractNative(content, page);
         const native = repairNativeSpacing(raw, nativeItems(content));
         pageSignal.throwIfAborted();
