@@ -3,7 +3,7 @@ import {useCallback,useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import {bookLibrary,libraryForOwner,type LibraryEntry} from '../reader/book-library-store';
 import {readUploadedBook,type TextBook} from '../reader/upload-book';
-import {clearAccountReading} from './sync-store';
+import {clearAccountReading,loadDeviceReading} from './sync-store';
 import {copyReadingToAccount} from './copy-reading';
 import {cloudRequest,CloudRequestError,announceAccountChange} from './request';
 import styles from './account-panel.module.css';
@@ -39,9 +39,10 @@ export default function AccountPanel({session}:{session:Session}) {
   return()=>{invalidate();window.removeEventListener('focus',update);window.removeEventListener('eazo-auth-changed',changed);window.removeEventListener('storage',storage);};
  },[refresh]);
  async function run(task:()=>Promise<void>){setBusy(true);setMessage('');try{await task();}catch(error){setMessage(error instanceof Error?error.message:'Please try again.');if(error instanceof CloudRequestError&&[401,403].includes(error.status)){setBooks([]);setJobs([]);setAccount(null);window.location.replace(new URL('/',window.location.origin).href);}}finally{setBusy(false);}}
- async function save(book:TextBook) {
+ async function save(book:TextBook,deviceOwner?:string) {
   if(!session.id)throw new Error('Sign in first.');
-  const result=await copyReadingToAccount(book,session.id);
+  const current=deviceOwner?await loadDeviceReading(book.bookId,deviceOwner):undefined;
+  const result=await copyReadingToAccount(book,session.id,current??undefined,!deviceOwner);
   await refresh();setMessage(result.message);
  }
  async function signOut(){await cloudRequest('logout',{},session.id??undefined);announceAccountChange();window.location.replace(new URL('/',window.location.origin).href);}
@@ -63,7 +64,7 @@ export default function AccountPanel({session}:{session:Session}) {
     </li>)}</ul><button className={styles.button} disabled={busy} onClick={()=>void run(refresh)}>Refresh library</button>
    </section>
    <section className={styles.card}><h2>Bring your local reading with you</h2><p className={styles.muted}>Copy a local book and its saved reading progress into this account. These local books belong to this browser; only copy the ones you want in your account. For PDFs, Eazo copies extracted text; original PDFs remain on this device.</p>
-    <ul className={styles.list}>{local.map(book=><li className={styles.item} key={book.id}><div className={styles.actions}><span>{book.title}</span><button className={styles.button} disabled={busy} onClick={()=>void run(async()=>{const value=await libraryForOwner(book.deviceOwner).load(book.id);if(value.kind!=='txt')throw new Error('Open this PDF in the reader first to extract its text.');await save(value);})}>Copy to this account</button></div></li>)}</ul>
+    <ul className={styles.list}>{local.map(book=><li className={styles.item} key={book.id}><div className={styles.actions}><span>{book.title}</span><button className={styles.button} disabled={busy} onClick={()=>void run(async()=>{const value=await libraryForOwner(book.deviceOwner).load(book.id);if(value.kind!=='txt')throw new Error('Open this PDF in the reader first to extract its text.');await save(value,book.deviceOwner);})}>Copy to this account</button></div></li>)}</ul>
     <label>Upload a TXT file<input className={styles.field} disabled={busy} type="file" accept=".txt,text/plain" onChange={event=>{const file=event.target.files?.[0];event.target.value='';if(file)void run(async()=>{const book=await readUploadedBook(file);if(book.kind==='txt')await save(book);});}}/></label><p className={styles.muted}>TXT uploads can be up to 20 MiB. Local extracted text can be up to 50 MiB. Book-map generation currently supports text up to 1 MiB.</p>
    </section>
    <section className={styles.card}><h2>Account & data</h2><p className={styles.muted}>Download your saved account data or permanently delete your account and cloud library.</p><div className={styles.actions}><button className={styles.button} disabled={busy} onClick={()=>void run(downloadExport)}>Export account data</button><button className={`${styles.button} ${styles.danger}`} disabled={busy} onClick={()=>setDeleting(!deleting)}>{deleting?'Cancel deletion':'Delete account…'}</button></div>

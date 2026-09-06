@@ -34,3 +34,11 @@ test('account-only device caches cannot appear in guest or another account shelf
  assert.ok(!combineLibrary([...local,privateCache],[],'bob').some(book=>book.id==='private-cache'));
  assert.ok(combineLibrary([...local,privateCache],[],'alice').some(book=>book.id==='private-cache'));
 });
+
+test('guest and private device caches with overlapping shelf positions both remain visible', () => {
+ const cache:LibraryEntry={id:'account-cache',title:'Private',kind:'txt',addedAt:'',deviceOwner:'alice',shelf:{slot:2,variant:0}};
+ const shelf=combineLibrary([...local,cache],[],'alice');
+ assert.equal(new Set(shelf.map(book=>book.shelf?.slot)).size,4);
+ assert.equal(shelf.find(book=>book.id==='account-cache')?.shelf?.slot,3);
+ assert.equal(local[2].shelf?.slot,2);
+});

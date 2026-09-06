@@ -8,8 +8,12 @@ export type ShelfBook = LibraryEntry & { cloud?: { owner: string; book: string; 
 
 /** Account records only enter the visible shelf after a fresh authenticated request. */
 export function combineLibrary(local: LibraryEntry[], remote: CloudBook[], owner?: string): ShelfBook[] {
-  const result: ShelfBook[] = local.filter(book => !book.deviceOwner || book.deviceOwner === owner).map(book => ({ ...book, localId: sampleBook(book.id) ? undefined : book.id }));
-  const occupied = new Set(result.map(book => book.shelf!.slot));
+  const occupied = new Set<number>();
+  const result: ShelfBook[] = local.filter(book => !book.deviceOwner || book.deviceOwner === owner).map(book => {
+    const shelf = book.shelf && !occupied.has(book.shelf.slot) ? book.shelf : nextShelfPosition(book.id, occupied, book.shelf?.slot);
+    occupied.add(shelf.slot);
+    return { ...book, shelf, localId: sampleBook(book.id) ? undefined : book.id };
+  });
   if (!owner) return result;
   for (const book of remote) {
     for (const source of [...book.book_sources].sort((a, b) => (b.created_at ?? '').localeCompare(a.created_at ?? ''))) {

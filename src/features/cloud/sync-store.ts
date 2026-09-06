@@ -88,22 +88,24 @@ export function createSyncStore(factory?: IDBFactory) {
     async close() { if (connection) (await connection).close(); connection = undefined; },
   };
 }
-export async function loadGuestReading(bookId: string) {
+export async function loadDeviceReading(bookId: string, ownerId?: string) {
   const store = createSyncStore();
   let snapshot: WorkspaceSnapshot | null = null;
-  try { snapshot = (await store.load(readingStorageKey(undefined, bookId)))?.current ?? null; }
+  try { snapshot = (await store.load(readingStorageKey(ownerId, bookId)))?.current ?? null; }
   finally { await store.close(); }
-  if (!snapshot) {
+  if (!snapshot && !ownerId) {
     const legacy = createWorkspaceRepository();
     try { snapshot = await legacy.load(bookId); } finally { await legacy.close(); }
   }
-  const footprints = createFootprintRepository();
+  const footprints = createFootprintRepository(ownerId ? { databaseName: `eazo-reading-footprints:account:${ownerId}` } : {});
   try {
     const events = await footprints.list(bookId);
     if (!snapshot && !events.length) return null;
     return WorkspaceSnapshotSchema.parse({ schemaVersion: 1, id: bookId, bookId, savedAt: new Date().toISOString(), ...snapshot, footprints: mergeFootprints(snapshot?.footprints ?? [], events) });
   } finally { await footprints.close(); }
 }
+
+export const loadGuestReading = (bookId: string) => loadDeviceReading(bookId);
 
 /** Remove this account's cached reading and recovery copies, preserving guest and other accounts. */
 export async function clearAccountReading(ownerId: string) {
