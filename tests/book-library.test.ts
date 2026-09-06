@@ -42,7 +42,7 @@ test('moves persist, occupied spaces swap, and deletion removes source and catal
   await library.save(first); // Reupload must retain the rearranged slot.
   entries = await library.list();
   assert.equal(entries.find(entry => entry.id === a)?.shelf?.slot, 5);
-  await assert.rejects(library.move(a, 0), /shelf space/);
+  await assert.rejects(library.move(a, -1), /shelf space/);
   await library.remove(a);
   assert.deepEqual((await library.list()).map(entry => entry.id), [b]);
   await assert.rejects(library.load(a), /no longer available/);
@@ -99,4 +99,25 @@ test('legacy placement repair writes only outdated records and runs once', async
   assert.deepEqual(repaired.find(entry => entry.id === entries[1].id), entries[1]);
   assert.deepEqual(await library.list(), repaired);
   assert.equal(writes.length, 1);
+});
+
+test('example books move, swap with uploads, persist, and cannot be removed', async () => {
+  const storage = new IDBFactory(), library = createBookLibrary(storage);
+  const book = await readUploadedBook(new File(['Private source'], 'Private.txt'));
+  await library.save(book, 2);
+  await library.move('plato-republic', 2);
+  await library.move('hong-lou-meng', 5);
+  const reopened = createBookLibrary(storage);
+  const shelf = await reopened.list(true);
+  assert.equal(shelf.find(entry => entry.id === 'plato-republic')?.shelf?.slot, 2);
+  assert.equal(shelf.find(entry => entry.id === 'hong-lou-meng')?.shelf?.slot, 5);
+  assert.equal(shelf.find(entry => entry.id === uploadedBookId(book))?.shelf?.slot, 0);
+  assert.equal((await reopened.list()).length, 1, 'cloud upload catalogue excludes examples');
+  await assert.rejects(reopened.remove('plato-republic'), /permanent residents/);
+  await assert.rejects(reopened.remove('hong-lou-meng'), /permanent residents/);
+  assert.deepEqual(await reopened.list(true), shelf);
+  assert.deepEqual(await reopened.load(uploadedBookId(book)), book);
+  const next = await readUploadedBook(new File(['Next source'], 'Next.txt'));
+  await reopened.save(next, 1);
+  assert.equal((await reopened.list()).find(entry => entry.id === uploadedBookId(next))?.shelf?.slot, 1);
 });

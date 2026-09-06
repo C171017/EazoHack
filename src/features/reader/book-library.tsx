@@ -1,7 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
-import { SAMPLE_BOOKS, SAMPLE_SHELF_SIZE, sampleBook } from '@/shared/sample-books';
+import { SAMPLE_SHELF_SIZE, sampleBook } from '@/shared/sample-books';
 import { useEffect, useRef, useState, type PointerEvent, type FormEvent } from 'react';
 import { REPUBLIC_EMBLEM, type BookEmblem } from '@/shared/book-emblem';
 import { bookLibrary, type LibraryEntry } from './book-library-store';
@@ -67,7 +67,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
   useEffect(() => () => dialog.current?.close(), []);
   useEffect(() => {
     let active = true;
-    bookLibrary.list().then(entries => { if (active) setBooks(entries); })
+    bookLibrary.list(true).then(entries => { if (active) setBooks(entries); })
       .catch(reason => { if (active) setError(reason instanceof Error ? reason.message : 'Could not load your library.'); })
       .finally(() => { if (active) setLoading(false); });
     return () => { active = false; };
@@ -150,7 +150,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
   }
   async function moveBook(book: LibraryEntry, slot: number) {
     setManipulating(true); setError('');
-    try { await bookLibrary.move(book.id, slot); setBooks(await bookLibrary.list()); flightRef.current = null; setFlight(null); }
+    try { await bookLibrary.move(book.id, slot); setBooks(await bookLibrary.list(true)); flightRef.current = null; setFlight(null); }
     catch (reason) { setError(reason instanceof Error ? reason.message : 'The book missed its landing. Try again.'); await returnBook(); }
     finally { setManipulating(false); }
   }
@@ -160,11 +160,12 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
     if (!value.moved) { flightRef.current = null; return; }
     const slot = document.elementsFromPoint(event.clientX, event.clientY).map(element => element.closest<HTMLElement>('[data-slot]')).find(Boolean);
     const target = Number(slot?.dataset.slot);
-    if (slot && target >= SAMPLE_SHELF_SIZE && target !== value.book.shelf?.slot) void moveBook(value.book, target);
+    if (slot && target >= 0 && target !== value.book.shelf?.slot) void moveBook(value.book, target);
     else void returnBook();
   }
   async function removeBook() {
     if (!thrown) return;
+    if (sampleBook(thrown.id)) { await returnBook(); return; }
     setBusy(true); setError('');
     try {
       await bookLibrary.remove(thrown.id);
@@ -211,7 +212,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
             <div className={styles.slots}>
               {Array.from({ length: slotCount }, (_, slot) => {
                 const book = books.find(entry => entry.shelf?.slot === slot);
-                const sample = SAMPLE_BOOKS.find(entry => entry.slot === slot);
+                const sample = book && sampleBook(book.id);
                 return <div className={styles.slot} key={slot} data-slot={slot} data-dragging={flight?.book.id === book?.id && !!book || undefined}
                   onPointerDown={event => { if (book) startDrag(event, book); else suppressClick.current = false; }} onPointerMove={drag} onPointerUp={endDrag}
                   onPointerCancel={() => { if (!thrown) void returnBook(); }}
@@ -219,7 +220,7 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
                   onKeyDown={event => {
                     if (!book || busy) return;
                     if (event.key === 'Delete' || event.key === 'Backspace') { event.preventDefault(); setThrown(book); setManipulating(true); }
-                    if (event.altKey && ['ArrowLeft', 'ArrowRight'].includes(event.key)) { event.preventDefault(); void moveBook(book, Math.max(SAMPLE_SHELF_SIZE, slot + (event.key === 'ArrowRight' ? 1 : -1))); }
+                    if (event.altKey && ['ArrowLeft', 'ArrowRight'].includes(event.key)) { event.preventDefault(); void moveBook(book, Math.max(0, slot + (event.key === 'ArrowRight' ? 1 : -1))); }
                   }}>
                   {sample ? <BookSpine id={sample.id} title={sample.title} emblem={sample.id === 'plato-republic' ? sampleEmblem ?? REPUBLIC_EMBLEM : undefined} variant={sample.variant} current={currentId === sample.id} disabled={busy} note={`${sample.byline} · Included in your library`} onClick={() => void openBook(sample.id)}/>
                     : book ? <BookSpine id={book.id} title={cleanBookTitle(book.title)} emblem={book.emblem} variant={book.shelf?.variant} current={currentId === book.id} disabled={busy} note={book.note ?? (book.kind === 'pdf' && !book.ready ? 'Convert PDF to text' : undefined)} onClick={() => void openBook(book.id)}/>
@@ -261,9 +262,9 @@ export function BookLibrary({ open, currentId, onSelect, onUpload, onClose, impo
       {error && <p role="alert" className={styles.error}>{error} <button type="button" onClick={() => { setError(''); setLoading(true); setAttempt(value => value + 1); }}>Retry library</button></p>}
     </div>
     {flight && <div ref={ghost} className={styles.flyingBook} aria-hidden="true" inert style={{ left: flight.left + flight.x - flight.startX, top: flight.top + flight.y - flight.startY, width: flight.width, height: flight.height }}>
-      <BookSpine id={flight.book.id} title={cleanBookTitle(flight.book.title)} emblem={flight.book.emblem} variant={flight.book.shelf?.variant} onClick={() => {}}/>
+      <BookSpine id={flight.book.id} title={cleanBookTitle(flight.book.title)} emblem={flight.book.id === 'plato-republic' ? sampleEmblem ?? REPUBLIC_EMBLEM : flight.book.emblem} variant={flight.book.shelf?.variant} onClick={() => {}}/>
     </div>}
-    {thrown && <ThrowCard title={cleanBookTitle(thrown.title)} busy={opening} onReturn={() => void returnBook()} onThrow={() => void removeBook()}/>}
+    {thrown && <ThrowCard example={!!sampleBook(thrown.id)} title={cleanBookTitle(thrown.title)} busy={opening} onReturn={() => void returnBook()} onThrow={() => void removeBook()}/>}
     <input ref={input} hidden type="file" accept=".txt,text/plain,.pdf,application/pdf" onChange={event => {
       const file = event.target.files?.[0]; event.target.value = '';
       if (file && !busy) setDraft({ file, slot: selectedSlot.current });
@@ -290,13 +291,13 @@ function SpineTitleCard({ file, onCancel, onPlace }: { file: File; onCancel: () 
   </dialog>;
 }
 
-function ThrowCard({ title, busy, onReturn, onThrow }: { title: string; busy: boolean; onReturn: () => void; onThrow: () => void }) {
+function ThrowCard({ title, example, busy, onReturn, onThrow }: { title: string; example: boolean; busy: boolean; onReturn: () => void; onThrow: () => void }) {
   const card = useRef<HTMLDialogElement>(null);
   useEffect(() => { const element = card.current; element?.showModal(); return () => element?.close(); }, []);
   return <dialog ref={card} className={styles.titleCard} aria-labelledby="throw-heading" aria-describedby="throw-description" onCancel={event => { event.preventDefault(); event.stopPropagation(); if (!busy) onReturn(); }}>
     <svg className={styles.cardDrawing} viewBox="0 0 64 72" aria-hidden="true"><path d="M23 13 46 6 57 43 34 50Z M27 15 37 46 M9 28 20 25 M4 38 18 34 M12 46 23 43 M18 61Q30 54 43 59"/></svg>
-    <h2 id="throw-heading">A one-way flight?</h2>
-    <p id="throw-description">“{title}” is about to leave your local library. No return ticket, no secret shelf: this copy will be deleted. Want it back later? You’ll need to upload it again.</p>
-    <div className={styles.cardActions}><button type="button" autoFocus disabled={busy} onClick={onReturn}>It was an accident!</button><button type="submit" disabled={busy} onClick={onThrow}>{busy ? 'Saying goodbye…' : 'Bon voyage, book ↗'}</button></div>
+    <h2 id="throw-heading">{example ? 'Nice throw. Wrong book.' : 'A one-way flight?'}</h2>
+    <p id="throw-description">{example ? <>“{title}” is an example book—it came with the shelf, and it’s staying. Consider it a very well-read boomerang.</> : <>“{title}” is about to leave your local library. No return ticket, no secret shelf: this copy will be deleted. Want it back later? You’ll need to upload it again.</>}</p>
+    <div className={styles.cardActions}><button type="button" autoFocus disabled={busy} onClick={onReturn}>{example ? 'All right, back you come.' : 'It was an accident!'}</button>{!example && <button type="submit" disabled={busy} onClick={onThrow}>{busy ? 'Saying goodbye…' : 'Bon voyage, book ↗'}</button>}</div>
   </dialog>;
 }
