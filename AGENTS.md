@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Reader layout stability
+
+Follow [docs/reading-layout-stability.md](docs/reading-layout-stability.md) for every reader UI change. The user's reading position and composition must remain stable: background notices, errors, progress, and recovery UI must use out-of-flow overlays (prefer `ReaderNoticeLayer`), never push or resize the reader. Preserve the visible source anchor for asynchronous content changes; verify desktop and mobile at a nonzero reading offset.

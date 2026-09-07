@@ -1,0 +1,54 @@
+/* Absolute placement is a structural requirement, not a cosmetic choice. */
+.layer {
+  position: absolute;
+  inset: auto 0 max(3.5rem, env(safe-area-inset-bottom));
+  z-index: 20;
+  padding-inline: max(1rem, 7%);
+  pointer-events: none;
+}
+.surface {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
+  color: var(--color-ink);
+  font-family: Arial, sans-serif;
+}
+.surface:empty { display: none; }
+/* Match the controls' feathered outer 4px / inner 12px backdrop blur.
+   Blur the backdrop only so text and keyboard focus remain crisp. */
+.surface::before, .surface::after {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  --blur-fade: 28px;
+  mask-image:
+    linear-gradient(to right, transparent, #0002 calc(var(--blur-fade) * .25), #0008 calc(var(--blur-fade) * .5), #000e calc(var(--blur-fade) * .75), #000 var(--blur-fade), #000 calc(100% - var(--blur-fade)), #000e calc(100% - var(--blur-fade) * .75), #0008 calc(100% - var(--blur-fade) * .5), #0002 calc(100% - var(--blur-fade) * .25), transparent),
+    linear-gradient(to bottom, transparent, #0002 calc(var(--blur-fade) * .25), #0008 calc(var(--blur-fade) * .5), #000e calc(var(--blur-fade) * .75), #000 var(--blur-fade), #000 calc(100% - var(--blur-fade)), #000e calc(100% - var(--blur-fade) * .75), #0008 calc(100% - var(--blur-fade) * .5), #0002 calc(100% - var(--blur-fade) * .25), transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+.surface::before {
+  --blur-fade: 36px;
+  inset: -20px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.surface::after {
+  inset: -10px;
+  background: color-mix(in srgb, var(--color-paper) 55%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.surface > * {
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+  max-height: 30svh;
+  overflow: auto;
+  overscroll-behavior: contain;
+  overflow-wrap: anywhere;
+  padding: 12px;
+}
+.surface button { min-height: 36px; cursor: pointer; }
+.surface button:focus-visible { outline: 2px solid #69764d; outline-offset: 3px; }

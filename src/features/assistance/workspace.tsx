@@ -4,6 +4,7 @@ import { sampleBook } from '@/shared/sample-books';
 import { copyReadingToAccount } from '../cloud/copy-reading';
 import type { CloudBook } from '../cloud/library';
 import { cloudRequest } from '../cloud/request';
+import { ReaderNoticeLayer } from '../reader/reader-notice-layer';
 import { useReadingSync } from '../cloud/use-reading-sync';
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -340,15 +341,17 @@ function TextWorkspace({preview, graph: initialGraph, title, onLibrary, cloudSou
   return <main data-mobile-map-open={mobileMapOpen} onPointerDownCapture={sync.interact} onWheelCapture={sync.interact} onKeyDownCapture={sync.interact} onTouchStartCapture={sync.interact} className="reading-workspace flex min-h-screen flex-col lg:h-screen lg:overflow-hidden">
     <div className="reading-workspace-panes flex min-h-0 flex-1 flex-col lg:flex-row">
       <section data-timeline-navigation={!graph.unavailable} className="txt-reader-pane flex min-h-0 flex-col border-b border-line lg:w-[45%] lg:border-r lg:border-b-0" aria-label="Book reader">
-        {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
         <p role="status" className="sr-only">{notice}</p>
-        {sync.status === 'error' && <div className="px-6 py-2 text-xs" role="alert">
-          {sync.message ?? 'Reading could not be synced.'} <button className="underline" onClick={sync.retry}>Retry</button> · <button className="underline" onClick={sync.download}>Download reading backup</button>
-        </div>}
-        {sync.status === 'conflict' && <div className="mx-6 mb-3 rounded border border-line p-3 text-sm" role="alert">
-          <p>Both versions are kept. Choose which reading to continue; the other version is saved as a recovery copy on this device.</p>
-          <div className="mt-2 flex flex-wrap gap-3"><button className="underline" onClick={() => sync.resolve('device')}>Continue this device’s reading</button><button className="underline" onClick={() => sync.resolve('cloud')}>Use cloud reading</button><button className="underline" onClick={sync.download}>Download both versions</button></div>
-        </div>}
+        <ReaderNoticeLayer>
+          {!!unresolvedArtifacts.length&&<details className="p-4 text-xs"><summary>{unresolvedArtifacts.length} results could not be placed in this source version</summary>{unresolvedArtifacts.map(artifact=><ArtifactView key={artifact.id} artifact={artifact} state={interactionState[artifact.id]??{}} onStateChange={state=>setInteractionState(current=>({...current,[artifact.id]:state}))}/>)}</details>}
+          {sync.status === 'error' && <div className="text-xs" role="alert">
+            {sync.message ?? 'Reading could not be synced.'} <button className="underline" onClick={sync.retry}>Retry</button> · <button className="underline" onClick={sync.download}>Download reading backup</button>
+          </div>}
+          {sync.status === 'conflict' && <div className="text-sm" role="alert">
+            <p>Both versions are kept. Choose which reading to continue; the other version is saved as a recovery copy on this device.</p>
+            <div className="mt-2 flex flex-wrap gap-3"><button className="underline" onClick={() => sync.resolve('device')}>Continue this device’s reading</button><button className="underline" onClick={() => sync.resolve('cloud')}>Use cloud reading</button><button className="underline" onClick={sync.download}>Download both versions</button></div>
+          </div>}
+        </ReaderNoticeLayer>
         <ContinuousTxtReader ref={reader} onReadingPosition={setReadingPosition} title={title} bookId={bookId} onLibrary={onLibrary} sourceText={preview.sourceText} fileHash={preview.fileHash} extractionVersion={preview.extractionVersion} activeAnchor={activeAnchor??null} onSelection={captureSelection} onEnhance={enhanceSelection} enhancementBusy={busy} slots={slots} enhancements={enhancements}/>
       </section>
       <section id="reading-exploration-space" className="exploration-space relative min-h-[960px] flex-1 overflow-hidden lg:min-h-0" aria-label="Exploration workspace">
