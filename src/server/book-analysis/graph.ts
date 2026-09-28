@@ -72,7 +72,7 @@ export function assembleGraph(input: {
     id: `${bookId}-map`, bookId, graphVersion, fileHash, extractionVersion: input.extractionVersion ?? 'txt-lf-v1', sourceLength: text.length,
     anchors, territories, identities, nodes,
     edges: edges.map(e => ({ id: e.id, source: e.source, target: e.target, type: e.type, evidenceAnchorIds: e.passageIds, rationale: e.rationale, provenance: 'model_inferred' })),
-    analysis: { status: 'complete', provider: 'vertex_ai', model, promptVersion: PROMPT_VERSION, createdAt: new Date().toISOString(), completedChunks: totalChunks, totalChunks, processedCharacters: text.length, reviewStatus: 'model_reviewed', rejectedNodes: rejectedNodes.size, rejectedEdges: input.edges.length - edges.length },
+    analysis: { status: 'complete', provider: model.startsWith('primalabs-ai/') ? 'primalabs' : 'vertex_ai', model, promptVersion: PROMPT_VERSION, createdAt: new Date().toISOString(), completedChunks: totalChunks, totalChunks, processedCharacters: text.length, reviewStatus: 'model_reviewed', rejectedNodes: rejectedNodes.size, rejectedEdges: input.edges.length - edges.length },
   });
   validateGraphSource(graph, text, fileHash, input.extractionVersion);
   return graph;

@@ -41,7 +41,8 @@ export async function assignBookAxes(input: Parameters<typeof assignBookAxesImpl
 async function assignBookAxesImpl({graph,outputRoot,generate,model,log=()=>{}}:{graph:Graph;outputRoot:string;generate:Generate;model:string;log?:(message:string)=>void}):Promise<Graph> {
   graph=GraphSchema.parse(graph);
   if(graph.axisVersion===BOOK_AXIS_VERSION && graph.axisAnalysis?.promptVersion===AXIS_PROMPT_VERSION && graph.axisAnalysis.model===model) return graph;
-  const fingerprint=createHash('sha256').update(JSON.stringify({graph:{...graph,analysis:graph.analysis?{...graph.analysis,createdAt:undefined}:undefined},model,system:AXIS_SYSTEM,prompt:AXIS_PROMPT_VERSION,schema:z.toJSONSchema(AxisBatchSchema)})).digest('hex').slice(0,16);
+  const batchSize=model.startsWith('primalabs-ai/')?8:24;
+  const fingerprint=createHash('sha256').update(JSON.stringify({graph:{...graph,analysis:graph.analysis?{...graph.analysis,createdAt:undefined}:undefined},model,system:AXIS_SYSTEM,prompt:AXIS_PROMPT_VERSION,batchSize,schema:z.toJSONSchema(AxisBatchSchema)})).digest('hex').slice(0,16);
   const version=`${AXIS_PROMPT_VERSION}-${fingerprint}`,dir=path.join(outputRoot,version);
   const completed=await readJson(path.join(dir,'graph.json'));
   if(completed) { const saved=preserveSource(GraphSchema.parse(completed),graph); if(saved.graphVersion!==version||saved.axisVersion!==BOOK_AXIS_VERSION)throw new Error('Axis checkpoint version mismatch'); countPipeline('checkpoint.hit');log(`${version}: restored`);return saved; }
@@ -51,10 +52,11 @@ async function assignBookAxesImpl({graph,outputRoot,generate,model,log=()=>{}}:{
     const file=path.join(dir,`${key}.json`),cached=await readJson(file) as ModelReply|null;
     if(cached?.requestHash===requestHash && cached.model===model) { const value=measureValidation(() => validate(schema.parse(cached.value)));calls.push({key,usage:cached.usage,durationMs:cached.durationMs,modelVersion:cached.modelVersion});countPipeline('checkpoint.hit');log(`${key}: restored`);return value; }
     let failure='';
+    let attemptTokens=16_384;
     for(let attempt=1;attempt<=3;attempt++) {
       if (attempt > 1) countPipeline('retry');
       try {
-        const reply=await generate(AXIS_SYSTEM,prompt+(failure?`\nCorrect the previous validation failure: ${failure}`:''),schema,16_384);
+        const reply=await generate(AXIS_SYSTEM,prompt+(failure?`\nCorrect the previous validation failure: ${failure}`:''),schema,attemptTokens);
         reply.requestHash=requestHash;
         await writeJson(path.join(dir,'attempts',`${key}-${Date.now()}-${attempt}.json`),reply);
         const value=measureValidation(() => validate(schema.parse(reply.value)));await writeJson(file,reply);
@@ -65,13 +67,14 @@ async function assignBookAxesImpl({graph,outputRoot,generate,model,log=()=>{}}:{
         await writeJson(path.join(dir,'errors',`${key}-${Date.now()}-${attempt}.json`),{error:failure});
         if(error instanceof ModelRequestError&&!error.retryable)throw error;
         if(attempt===3)throw new Error(`${key}: ${failure}`);
+        if(error instanceof ModelRequestError&&failure.includes('complete answer (length)'))attemptTokens=Math.min(attemptTokens*2,65_536);
       }
     }
     throw new Error('Axis retries exhausted');
   }
   await writeJson(path.join(dir,'manifest.json'),{status:'running',version,sourceGraphVersion:graph.graphVersion,model,axisVersion:BOOK_AXIS_VERSION});
   try {
-    const batches=Array.from({length:Math.ceil(graph.nodes.length/24)},(_,i)=>graph.nodes.slice(i*24,(i+1)*24));
+    const batches=Array.from({length:Math.ceil(graph.nodes.length/batchSize)},(_,i)=>graph.nodes.slice(i*batchSize,(i+1)*batchSize));
     const results=await mapConcurrent(batches,2,async(targets,index)=>{
         const key=`axes-${index+1}`;
         let proposal=await call(key,axisPrompt(graph,targets),AxisBatchSchema,v=>validateAxisBatch(v,graph,targets));

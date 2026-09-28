@@ -107,7 +107,7 @@ export const GraphSchema = z.object({
   axisAnalysis: z.object({model: ShortText, promptVersion: Id, sourceGraphVersion: Id, reviewStatus: z.literal('model_reviewed'), consistencyVersion:z.literal('axis-consistency-v1').optional(), completedAt: IsoDate}).strict().optional(),
   sourceLength: z.number().int().positive(),
   analysis: z.object({
-    status: z.literal('complete'), provider: z.literal('vertex_ai'), model: ShortText,
+    status: z.literal('complete'), provider: z.enum(['vertex_ai', 'primalabs']), model: ShortText,
     promptVersion: Id, createdAt: IsoDate, completedChunks: z.number().int().positive(),
     totalChunks: z.number().int().positive(), processedCharacters: z.number().int().positive(),
     reviewStatus: z.literal('model_reviewed'), rejectedNodes: z.number().int().nonnegative(),

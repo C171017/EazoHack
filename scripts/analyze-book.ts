@@ -10,7 +10,7 @@ import { analyzeText } from '../src/server/book-analysis/run';
 import { buildHierarchy } from '../src/server/book-analysis/hierarchy-run';
 import { GraphSchema } from '../src/shared/schemas';
 import { prepareText } from '../src/server/book-analysis/source';
-import { analysisModel, generateStructured } from '../src/server/book-analysis/vertex';
+import { analysisModel, generateStructured } from '../src/server/book-analysis/primalabs';
 
 async function main() {
   // Optional custom text: --input /path/book.txt --book-id example --output /path/results
