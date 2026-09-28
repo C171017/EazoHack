@@ -8,8 +8,8 @@ const headers = { 'Cache-Control': 'no-store' };
 function state() {
   return {
     settings: readDevModels(),
-    defaults: { text: process.env.GEMINI_MODEL || 'gemini-3.8-flash', vertex: process.env.GEMINI_MODEL || 'gemini-3.8-flash', image: process.env.IMAGE_PROVIDER === 'bfl' ? 'FLUX.2 [klein] 9B' : 'Z-Image Turbo' },
-    available: { vertex_ai: true, inco: Boolean(process.env.INCO_API_KEY), bfl: Boolean(process.env.BFL_API_KEY), fal: Boolean(process.env.FAL_KEY) },
+    defaults: { text: process.env.PRIMALABS_MODEL || 'primalabs-ai/MiMo-V2.6-Pro-RL', vertex: process.env.GEMINI_MODEL || 'gemini-3.8-flash', image: process.env.IMAGE_PROVIDER === 'bfl' ? 'FLUX.2 [klein] 9B' : 'Z-Image Turbo' },
+    available: { primalabs: Boolean(process.env.PRIMALABS_API_KEY), vertex_ai: true, inco: Boolean(process.env.INCO_API_KEY), bfl: Boolean(process.env.BFL_API_KEY), fal: Boolean(process.env.FAL_KEY) },
   };
 }
 export async function GET(request: Request) {

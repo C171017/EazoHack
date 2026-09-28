@@ -10,11 +10,12 @@ import { devModelChoice } from "./dev-models";
 import { createBflImageProvider } from "./bfl-klein";
 import { createFalImageProvider } from "./fal-z-image";
 import { createVertexGeminiProvider } from "./vertex-gemini";
+import { createPrimaLabsProvider } from "./primalabs";
 
 export type ProviderMode = "mock" | "real";
 export type ProviderError = RunError;
 export type ProviderResult<T> = {
-  provenance: { provider: "mock" | "vertex_ai" | "inco" | "fal" | "bfl" | "not_configured"; label: string };
+  provenance: { provider: "mock" | "vertex_ai" | "primalabs" | "inco" | "fal" | "bfl" | "not_configured"; label: string };
   timing: { startedAt: string; durationMs: number };
 } & ({ ok: true; payload: T } | { ok: false; error: ProviderError });
 
@@ -33,7 +34,11 @@ export function createProvider(
   kind: RouteKind,
   mode: ProviderMode,
 ): Provider<Selection, Artifact> {
-  if (mode === "real") return kind === "generated_image" ? (imageProviderName() === "bfl" ? createBflImageProvider() : createFalImageProvider()) : (routeProviderName(kind) === "inco" ? createIncoProvider(kind) : createVertexGeminiProvider(kind));
+  if (mode === "real") {
+    if (kind === "generated_image") return imageProviderName() === "bfl" ? createBflImageProvider() : createFalImageProvider();
+    const provider = routeProviderName(kind);
+    return provider === "primalabs" ? createPrimaLabsProvider(kind) : provider === "inco" ? createIncoProvider(kind) : createVertexGeminiProvider(kind);
+  }
   return {
     async run(selection, context) {
       const startedAt = new Date().toISOString();
@@ -59,7 +64,7 @@ export function createProvider(
 }
 
 /** A dispatch may combine independent text and image providers. */
-export function dispatchProvider(mode: ProviderMode, routes: RouteKind[]): "mock" | "vertex_ai" | "inco" | "fal" | "bfl" | "mixed" {
+export function dispatchProvider(mode: ProviderMode, routes: RouteKind[]): "mock" | "vertex_ai" | "primalabs" | "inco" | "fal" | "bfl" | "mixed" {
   if (mode === "mock") return "mock";
   const providers = new Set(routes.map(routeProviderName));
   return providers.size === 1 ? [...providers][0] : "mixed";
@@ -71,9 +76,12 @@ export function imageProviderName(): "fal" | "bfl" {
   return (override ?? process.env.IMAGE_PROVIDER) === "bfl" ? "bfl" : "fal";
 }
 
-export function routeProviderName(kind: RouteKind): "vertex_ai" | "inco" | "bfl" | "fal" {
+export function routeProviderName(kind: RouteKind): "vertex_ai" | "primalabs" | "inco" | "bfl" | "fal" {
   if (kind === "generated_image") return imageProviderName();
   const override = devModelChoice(kind);
-  if (override === "vertex_ai" || override === "inco") return override;
+  if (override === "vertex_ai" || override === "inco" || override === "primalabs") return override;
+  if (kind === "interactive_ui" || kind === "concept_diagram" || kind === "interactive_panel") {
+    return process.env.PRIMALABS_API_KEY?.trim() ? "primalabs" : "vertex_ai";
+  }
   return "vertex_ai";
 }

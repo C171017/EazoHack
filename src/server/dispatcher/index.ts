@@ -28,7 +28,7 @@ export type DispatchRequest = z.input<typeof DispatchRequestSchema>;
 export type DispatchResult = {
   runs: RouteRun[];
   artifacts: Artifact[];
-  provider: "mock" | "vertex_ai" | "inco" | "fal" | "bfl" | "mixed" | "not_configured";
+  provider: "mock" | "vertex_ai" | "primalabs" | "inco" | "fal" | "bfl" | "mixed" | "not_configured";
   requestSnapshot: { selection: Selection; plan: RoutePlan };
 };
 export interface DispatchOptions {

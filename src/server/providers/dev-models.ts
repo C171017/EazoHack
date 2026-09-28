@@ -3,7 +3,7 @@ import { mkdirSync, readFileSync, renameSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { z } from 'zod';
 
-const TextChoice = z.enum(['default', 'vertex_ai', 'inco']);
+const TextChoice = z.enum(['default', 'primalabs', 'vertex_ai', 'inco']);
 export const DevModelsSchema = z.object({
   interactive_ui: TextChoice,
   concept_diagram: TextChoice,
